@@ -164,7 +164,7 @@ function hostMatchesDomain(host: string, domain: string): boolean {
 function hostMatchesDomain(host: string, domain: string): boolean {
   const normalizedHost = host.toLowerCase().replace(/\.+$/, '');
   const normalizedDomain = domain.toLowerCase().replace(/\.+$/, '');
-  return normalizedHost === normalizedDomain || normalizedHost.endsWith(`.${normalizedDomain}`);
+  if (host === 'cert-portal.siemens.com')
 }
 
 function classifySourceByHost(host: string): { type: Source['source_type']; publisher: string } {
