@@ -17,7 +17,20 @@ const POC_VALUES: PublicPocStatus[] = [
   'unknown_missing',
   'active_reported',
 ];
-export type SortKey = 'name' | 'vendor' | 'category' | 'verification' | 'action';
+export type SortKey = 'name' | 'vendor' | 'category' | 'verification' | 'action' | 'severity';
+const SORT_KEYS: SortKey[] = ['name', 'vendor', 'category', 'verification', 'action', 'severity'];
+
+/** Snabbfilter: "visa endast poster med …" */
+export const HAS_KEYS = ['cve', 'kev', 'poc', 'account', 'defaultpw'] as const;
+export type HasKey = (typeof HAS_KEYS)[number];
+
+/** Lösenordstyper som i sig signalerar en svaghet som kräver åtgärd (inte bara okänt). */
+export const WEAK_PWD: ReadonlySet<InitialPasswordType> = new Set<InitialPasswordType>([
+  'shared_default_documented',
+  'hardcoded_in_affected_version',
+  'predictable_builtin_mechanism',
+  'default_exists_type_unknown',
+]);
 
 export interface CatalogFilters {
   q: string;
@@ -38,6 +51,7 @@ export interface CatalogFilters {
   pwdType: string[]; // initial_password_type
   docgap: DocGapFilter;
   regstatus: string[]; // register.source_status_text
+  has: string[]; // HasKey
   sort: SortKey;
   dir: 'asc' | 'desc';
 }
@@ -60,6 +74,7 @@ export const DEFAULT_FILTERS: CatalogFilters = {
   pwdType: [],
   docgap: 'any',
   regstatus: [],
+  has: [],
   sort: 'name',
   dir: 'asc',
 };
@@ -74,6 +89,7 @@ const LIST_KEYS = [
   'material',
   'pwdType',
   'regstatus',
+  'has',
 ] as const;
 
 export function parseFilters(params: URLSearchParams): CatalogFilters {
@@ -88,6 +104,7 @@ export function parseFilters(params: URLSearchParams): CatalogFilters {
     material: [],
     pwdType: [],
     regstatus: [],
+    has: [],
   };
   f.q = params.get('q') ?? '';
   const origin = params.get('origin');
@@ -111,15 +128,9 @@ export function parseFilters(params: URLSearchParams): CatalogFilters {
           .filter(Boolean)
       : [];
   }
+  f.has = f.has.filter((h) => (HAS_KEYS as readonly string[]).includes(h));
   const sort = params.get('sort');
-  if (
-    sort === 'name' ||
-    sort === 'vendor' ||
-    sort === 'category' ||
-    sort === 'verification' ||
-    sort === 'action'
-  )
-    f.sort = sort;
+  if (sort && (SORT_KEYS as string[]).includes(sort)) f.sort = sort as SortKey;
   if (params.get('dir') === 'desc') f.dir = 'desc';
   return f;
 }
@@ -167,6 +178,12 @@ export interface EntryDerived {
   accountName: string | null;
   setupVerified: boolean | null; // null = ingen setupdokumentation registrerad
   sourceStatus: string | null;
+  /** Högsta CVSS-basvärde bland kopplade CVE (null = inget värde). */
+  maxCvss: number | null;
+  kevCount: number;
+  /** Antal unika PoC-/hotunderlagslänkar (evidens, inte exploateringssteg). */
+  pocLinkCount: number;
+  weakPwd: boolean;
 }
 
 export function deriveEntry(d: IndexedDataset, e: CatalogEntry): EntryDerived {
@@ -175,6 +192,12 @@ export function deriveEntry(d: IndexedDataset, e: CatalogEntry): EntryDerived {
     .map((m) => (m.vulnerability_id ? d.vulnerabilityById.get(m.vulnerability_id) : undefined))
     .filter((v): v is NonNullable<typeof v> => Boolean(v));
   const ti = vulns.map((v) => v.threat_intel).filter((t): t is NonNullable<typeof t> => Boolean(t));
+  const uniqVulns = [...new Map(vulns.map((v) => [v.cve_id, v])).values()];
+  let maxCvss: number | null = null;
+  for (const v of uniqVulns)
+    for (const c of v.cvss)
+      maxCvss = maxCvss === null ? c.base_score : Math.max(maxCvss, c.base_score);
+  const pwdType = e.credentials?.initial_password_type ?? null;
   return {
     vendorName: isProduct(e) ? (d.vendorById.get(e.vendor_id)?.name ?? null) : null,
     cveIds: [...new Set(vulns.map((v) => v.cve_id))],
@@ -183,10 +206,14 @@ export function deriveEntry(d: IndexedDataset, e: CatalogEntry): EntryDerived {
     origin: e.register?.origin ?? null,
     pocStatuses: [...new Set(ti.map((t) => t.public_poc_status))],
     materialCodes: [...new Set(ti.map((t) => t.material_type_code))],
-    pwdType: e.credentials?.initial_password_type ?? null,
+    pwdType,
     accountName: e.credentials?.account_name ?? null,
     setupVerified: e.setup_documentation ? e.setup_documentation.is_verified_setup_manual : null,
     sourceStatus: e.register?.source_status_text ?? null,
+    maxCvss,
+    kevCount: uniqVulns.filter((v) => v.kev.listed).length,
+    pocLinkCount: new Set(ti.map((t) => t.poc_url).filter(Boolean)).size,
+    weakPwd: pwdType ? WEAK_PWD.has(pwdType) : false,
   };
 }
 
@@ -204,11 +231,17 @@ export function applyFilters(
 ): CatalogEntry[] {
   const cveNeedle = f.cve.trim().toUpperCase();
   const riskNeedle = f.riskType.trim().toLowerCase();
+  const cache = new Map<string, EntryDerived>();
+  const derive = (e: CatalogEntry): EntryDerived => {
+    let v = cache.get(e.id);
+    if (!v) cache.set(e.id, (v = deriveEntry(d, e)));
+    return v;
+  };
   const out = entries.filter((e) => {
     if (searchHits && !searchHits.has(e.id)) return false;
     if (f.kind !== 'all' && e.kind !== f.kind) return false;
     if (f.category.length && !f.category.includes(e.category)) return false;
-    const der = deriveEntry(d, e);
+    const der = derive(e);
     if (f.vendor.length) {
       if (!isProduct(e) || !f.vendor.includes(e.vendor_id)) return false;
     }
@@ -232,6 +265,11 @@ export function applyFilters(
     if (f.docgap === 'unverified' && der.setupVerified !== false) return false;
     if (f.regstatus.length && (!der.sourceStatus || !f.regstatus.includes(der.sourceStatus)))
       return false;
+    if (f.has.includes('cve') && der.cveIds.length === 0) return false;
+    if (f.has.includes('kev') && der.kevCount === 0) return false;
+    if (f.has.includes('poc') && der.pocLinkCount === 0) return false;
+    if (f.has.includes('account') && !der.accountName) return false;
+    if (f.has.includes('defaultpw') && !der.weakPwd) return false;
     return true;
   });
   const verOrder = [
@@ -244,16 +282,19 @@ export function applyFilters(
   const cmp = (a: CatalogEntry, b: CatalogEntry): number => {
     switch (f.sort) {
       case 'vendor':
-        return (deriveEntry(d, a).vendorName ?? '').localeCompare(
-          deriveEntry(d, b).vendorName ?? '',
-          'sv',
-        );
+        return (derive(a).vendorName ?? '').localeCompare(derive(b).vendorName ?? '', 'sv');
       case 'category':
         return a.category.localeCompare(b.category, 'sv');
       case 'verification':
         return verOrder.indexOf(a.verification_status) - verOrder.indexOf(b.verification_status);
       case 'action':
         return a.risk.recommended_action.localeCompare(b.risk.recommended_action);
+      case 'severity': {
+        // Allvarligast först i stigande ordning: KEV, sedan högsta CVSS
+        const da = derive(a);
+        const db = derive(b);
+        return db.kevCount - da.kevCount || (db.maxCvss ?? -1) - (da.maxCvss ?? -1);
+      }
       default:
         return a.name.localeCompare(b.name, 'sv');
     }

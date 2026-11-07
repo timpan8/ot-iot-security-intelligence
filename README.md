@@ -168,11 +168,17 @@ signaler (offentlig PoC, daterat SSVC-råvärde, aktiv exploatering, materialtyp
 sammanställer kontonamn och lösenordstyp per post. Datakvalitetsvyn listar länkkontroller och
 registerkonflikter. Kontrollera faktiska filnamn under `src/features/`.
 
-Vyn `/oversikt` (_Snabböversikt per produkt_) ger en rad per post med allt dokumenterat samlat:
-verifierade CVE-kopplingar med KEV-/PoC-status, dokumenterat standardkonto och typ av
-initiallösenord (aldrig lösenordsvärden), upptäcktsheuristik (Shodan-sökord, för egen auktoriserad
-inventering), PoC-/hotunderlag som evidensnivå och rekommenderad åtgärd. Snabbfilter för CVE, KEV,
-PoC-länk, namngivet konto och svag standarduppgift; sortering KEV/CVSS först.
+Katalogen (`/katalog`) har en filterkolumn och en tät tabell. Klicka på en rad för att fälla ut
+allt dokumenterat om posten utan att lämna listan: verifierade CVE-kopplingar med KEV-/PoC-status,
+dokumenterat standardkonto och typ av initiallösenord (aldrig lösenordsvärden),
+setupdokumentation, upptäcktsheuristik (för egen auktoriserad inventering), PoC-/hotunderlag som
+evidensnivå och rekommenderad åtgärd. Snabbfiltret `has=` (`kev`, `poc`, `cve`, `defaultpw`,
+`account`) och `sort=severity` (KEV först, sedan högsta CVSS) speglas i adressen. Den tidigare
+vyn `/oversikt` är sammanslagen med katalogen; gamla länkar omdirigeras dit med motsvarande filter.
+
+Formspråket följer ISA-101 (”high-performance HMI”): grå neutral bas, färg endast för avvikelser
+(rött för KEV/aktiv exploatering och hårdkodade uppgifter, gult för rapporterad PoC och svaga
+standarduppgifter). Typsnitten (IBM Plex) är självhostade eftersom CSP:n bara tillåter `'self'`.
 
 ## Publicering på GitHub Pages
 

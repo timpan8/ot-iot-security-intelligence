@@ -13,8 +13,8 @@ export function Section({
   description?: string;
 }) {
   return (
-    <section id={id} aria-labelledby={id ? `${id}-h` : undefined} className="card p-4 sm:p-5">
-      <h2 id={id ? `${id}-h` : undefined} className="text-lg font-semibold">
+    <section id={id} aria-labelledby={id ? `${id}-h` : undefined} className="card p-4">
+      <h2 id={id ? `${id}-h` : undefined} className="text-base font-semibold">
         {title}
       </h2>
       {description ? <p className="mt-1 text-sm text-muted">{description}</p> : null}
@@ -67,7 +67,7 @@ export function Callout({
     ok: 'bg-ok-bg text-ok border-ok/40',
   }[tone];
   return (
-    <div role="note" className={`rounded-lg border p-3 text-sm ${cls}`}>
+    <div role="note" className={`rounded-[4px] border p-3 text-sm ${cls}`}>
       <p className="font-semibold">{title}</p>
       <div className="mt-1">{children}</div>
     </div>
@@ -84,9 +84,9 @@ export function StatTile({
   hint?: string;
 }) {
   return (
-    <div className="card p-4">
+    <div className="card p-3">
       <p className="text-sm text-muted">{label}</p>
-      <p className="mt-1 text-2xl font-semibold tabular-nums">{value}</p>
+      <p className="num mt-0.5 text-2xl font-semibold">{value}</p>
       {hint ? <p className="mt-1 text-xs text-muted">{hint}</p> : null}
     </div>
   );
@@ -94,16 +94,16 @@ export function StatTile({
 
 export function PageHeader({ title, lead }: { title: string; lead?: ReactNode }) {
   return (
-    <header className="mb-5">
-      <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">{title}</h1>
-      {lead ? <div className="mt-2 max-w-3xl text-sm text-muted">{lead}</div> : null}
+    <header className="mb-4">
+      <h1 className="text-2xl font-semibold sm:text-[1.75rem]">{title}</h1>
+      {lead ? <div className="mt-1 max-w-3xl text-sm text-muted">{lead}</div> : null}
     </header>
   );
 }
 
 export function EmptyState({ children }: { children: ReactNode }) {
   return (
-    <p className="rounded-lg border border-dashed border-border p-4 text-sm text-muted">
+    <p className="rounded-[4px] border border-dashed border-border p-4 text-sm text-muted">
       {children}
     </p>
   );

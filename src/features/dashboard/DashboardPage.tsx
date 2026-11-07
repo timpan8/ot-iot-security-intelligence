@@ -1,61 +1,179 @@
+import { useMemo, type ReactNode } from 'react';
 import { Link } from 'react-router';
 import { useDataset } from '@/data/DatasetContext';
 import { isProduct } from '@/data/loader';
-import { Callout, PageHeader, Section, StatTile } from '@/components/ui';
-import { PocBadge, PwdTypeBadge, VerificationBadge } from '@/components/Badge';
-import { flagLabel } from '@/lib/labels';
-import { pct } from '@/lib/format';
-import type {
-  DataQualityFlag,
-  InitialPasswordType,
-  PublicPocStatus,
+import { Badge, PocBadge } from '@/components/Badge';
+import { PageHeader } from '@/components/ui';
+import { applyFilters, DEFAULT_FILTERS, deriveEntry, strongestPoc } from '@/lib/filters';
+import {
+  actionLabel,
+  flagLabel,
+  pocStatusShort,
+  pwdTypeLabel,
+  verificationLabel,
+} from '@/lib/labels';
+import { fmtScore, pct } from '@/lib/format';
+import {
+  RecommendedAction,
   VerificationStatus,
+  type DataQualityFlag,
+  type InitialPasswordType,
+  type PublicPocStatus,
 } from '@schemas/index';
 
-const STATUSES: VerificationStatus[] = [
-  'verified_primary',
-  'corroborated_secondary',
-  'needs_review',
-  'unknown',
-  'disputed',
-];
+type Tone = 'danger' | 'warn' | null;
+
+/** En rad i larmlistan. Hela raden är en länk till det filtrerade urvalet. */
+function AlarmRow({
+  n,
+  tone,
+  to,
+  children,
+}: {
+  n: number;
+  tone: Tone;
+  to: string;
+  children: ReactNode;
+}) {
+  return (
+    <li>
+      <Link
+        to={to}
+        className={`grid grid-cols-[3.5rem_1fr] items-baseline gap-3 px-4 py-2.5 text-text no-underline hover:bg-surface-2 ${
+          tone === 'danger' ? 'bar-danger' : tone === 'warn' ? 'bar-warn' : ''
+        }`}
+      >
+        <span
+          className={`num text-right text-[1.75rem] leading-none font-semibold ${
+            n === 0 ? 'text-muted' : tone === 'danger' ? 'text-danger' : ''
+          }`}
+        >
+          {n}
+        </span>
+        <span className="text-sm">{children}</span>
+      </Link>
+    </li>
+  );
+}
+
+/** Horisontell stapellista. Neutral fyllnad – färg är förbehållen avvikelser. */
+function BarList({
+  items,
+  total,
+}: {
+  items: Array<{ key: string; label: ReactNode; n: number; to?: string; tone?: Tone }>;
+  total: number;
+}) {
+  const max = Math.max(1, ...items.map((i) => i.n));
+  return (
+    <ul className="space-y-1">
+      {items.map((i) => {
+        const inner = (
+          <>
+            <span className="min-w-0 truncate">{i.label}</span>
+            <span className="num shrink-0 text-muted">
+              {i.n}
+              <span className="ml-1.5 inline-block w-9 text-right text-xs">{pct(i.n, total)}</span>
+            </span>
+            <span
+              aria-hidden="true"
+              className="absolute inset-x-2 bottom-0 h-[3px] rounded-full bg-surface-2"
+            >
+              <span
+                className={`block h-full rounded-full ${
+                  i.tone === 'danger'
+                    ? 'bg-danger-bar'
+                    : i.tone === 'warn'
+                      ? 'bg-warn-bar'
+                      : 'bg-muted/50'
+                }`}
+                style={{ width: `${(i.n / max) * 100}%` }}
+              />
+            </span>
+          </>
+        );
+        const cls = 'relative flex items-center justify-between gap-3 px-2 pt-1 pb-2 text-sm';
+        return (
+          <li key={i.key}>
+            {i.to ? (
+              <Link to={i.to} className={`${cls} text-text no-underline hover:underline`}>
+                {inner}
+              </Link>
+            ) : (
+              <div className={cls}>{inner}</div>
+            )}
+          </li>
+        );
+      })}
+    </ul>
+  );
+}
+
+function Panel({
+  title,
+  more,
+  children,
+  className = '',
+}: {
+  title: string;
+  more?: { to: string; label: string };
+  children: ReactNode;
+  className?: string;
+}) {
+  return (
+    <section className={`card min-w-0 ${className}`}>
+      <div className="flex items-baseline justify-between gap-3 border-b border-rule px-4 py-2.5">
+        <h2 className="text-base font-semibold">{title}</h2>
+        {more ? (
+          <Link to={more.to} className="text-sm">
+            {more.label}
+          </Link>
+        ) : null}
+      </div>
+      {children}
+    </section>
+  );
+}
+
+const PWD_TONE: Partial<Record<InitialPasswordType, Tone>> = {
+  hardcoded_in_affected_version: 'danger',
+  predictable_builtin_mechanism: 'danger',
+  shared_default_documented: 'warn',
+  default_exists_type_unknown: 'warn',
+};
 
 export function DashboardPage() {
   const d = useDataset();
   const total = d.entries.length;
-  const categories = new Set(d.entries.map((e) => e.category)).size;
-  const withCve = d.product_families.filter((p) =>
-    (d.matchesByProduct.get(p.id) ?? []).some((m) => m.vulnerability_id),
+  const der = useMemo(() => new Map(d.entries.map((e) => [e.id, deriveEntry(d, e)])), [d]);
+  const all = [...der.values()];
+
+  const kev = all.filter((x) => x.kevCount > 0).length;
+  const active = all.filter((x) => x.pocStatuses.includes('active_reported')).length;
+  const pocReported = all.filter((x) => x.pocStatuses.includes('poc_reported')).length;
+  const weak = all.filter((x) => x.weakPwd).length;
+  const eol = d.entries.filter(
+    (e) => e.risk.recommended_action === 'replace_or_isolate_eol',
   ).length;
-  const kevVulns = d.vulnerabilities.filter((v) => v.kev.listed).length;
-  const statusCounts = STATUSES.map(
-    (s) => [s, d.entries.filter((e) => e.verification_status === s).length] as const,
+  const withCve = d.product_families.filter((p) => (der.get(p.id)?.cveIds.length ?? 0) > 0).length;
+
+  const worst = useMemo(
+    () =>
+      applyFilters(d, d.entries, { ...DEFAULT_FILTERS, sort: 'severity' }, null)
+        .filter((e) => (der.get(e.id)?.maxCvss ?? 0) > 0)
+        .slice(0, 8),
+    [d, der],
   );
-  const unknownFields = d.claims.filter((c) => c.status === 'unknown').length;
-  const reviewClaims = d.claims.filter(
-    (c) => c.status === 'needs_review' || c.status === 'disputed',
-  ).length;
-  const sourcesToReview = d.sources.filter((s) => s.availability !== 'ok' || !s.is_primary).length;
-  const primarySources = d.sources.filter((s) => s.is_primary).length;
 
-  const flagCounts = new Map<DataQualityFlag, number>();
-  for (const e of d.entries)
-    for (const f of e.data_quality_flags) flagCounts.set(f, (flagCounts.get(f) ?? 0) + 1);
-  const topFlags = [...flagCounts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 6);
+  const actionItems = RecommendedAction.options
+    .map((a) => ({
+      key: a,
+      label: actionLabel[a],
+      n: d.entries.filter((e) => e.risk.recommended_action === a).length,
+      to: `/katalog?action=${a}&sort=severity`,
+    }))
+    .sort((a, b) => b.n - a.n);
 
-  const catCounts = new Map<string, number>();
-  for (const e of d.entries) catCounts.set(e.category, (catCounts.get(e.category) ?? 0) + 1);
-
-  // Registerimport (125-postregistret)
-  const mc = d.manifest.counts;
-  const hasRegister = mc.register_entries > 0;
-  const pocCounts = new Map<PublicPocStatus, number>();
-  for (const v of d.vulnerabilities)
-    if (v.threat_intel)
-      pocCounts.set(
-        v.threat_intel.public_poc_status,
-        (pocCounts.get(v.threat_intel.public_poc_status) ?? 0) + 1,
-      );
   const pwdCounts = new Map<InitialPasswordType, number>();
   for (const e of d.entries)
     if (e.credentials)
@@ -63,16 +181,62 @@ export function DashboardPage() {
         e.credentials.initial_password_type,
         (pwdCounts.get(e.credentials.initial_password_type) ?? 0) + 1,
       );
-  const setupUnverified = d.entries.filter(
-    (e) => e.setup_documentation && !e.setup_documentation.is_verified_setup_manual,
-  ).length;
-  const setupMissing = d.entries.filter((e) => isProduct(e) && !e.setup_documentation).length;
+  const pwdItems = [...pwdCounts.entries()]
+    .sort((a, b) => b[1] - a[1])
+    .map(([t, n]) => ({
+      key: t,
+      label: pwdTypeLabel[t],
+      n,
+      to: `/konton?pwdType=${t}`,
+      tone: PWD_TONE[t] ?? null,
+    }));
+
+  const pocCounts = new Map<PublicPocStatus, number>();
+  for (const v of d.vulnerabilities)
+    if (v.threat_intel)
+      pocCounts.set(
+        v.threat_intel.public_poc_status,
+        (pocCounts.get(v.threat_intel.public_poc_status) ?? 0) + 1,
+      );
+  const pocTotal = [...pocCounts.values()].reduce((a, b) => a + b, 0);
+  const pocItems = (
+    [
+      'active_reported',
+      'poc_reported',
+      'none_reported_at_assessment',
+      'unknown_missing',
+    ] as PublicPocStatus[]
+  ).map((s) => ({
+    key: s,
+    label: pocStatusShort[s],
+    n: pocCounts.get(s) ?? 0,
+    to: `/katalog?poc=${s}&sort=severity`,
+    tone: (s === 'active_reported' ? 'danger' : s === 'poc_reported' ? 'warn' : null) as Tone,
+  }));
+
+  const verItems = VerificationStatus.options.map((s) => ({
+    key: s,
+    label: verificationLabel[s],
+    n: d.entries.filter((e) => e.verification_status === s).length,
+    to: `/katalog?verification=${s}`,
+  }));
+
+  const flagCounts = new Map<DataQualityFlag, number>();
+  for (const e of d.entries)
+    for (const f of e.data_quality_flags) flagCounts.set(f, (flagCounts.get(f) ?? 0) + 1);
+  const flagItems = [...flagCounts.entries()]
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 6)
+    .map(([f, n]) => ({ key: f, label: flagLabel[f], n, to: `/katalog?flags=${f}` }));
+
+  const catCounts = new Map<string, number>();
+  for (const e of d.entries) catCounts.set(e.category, (catCounts.get(e.category) ?? 0) + 1);
+
+  const mc = d.manifest.counts;
   const linkOk = d.sources.filter(
     (s) => s.availability === 'ok' || s.availability === 'redirected',
   ).length;
-  const linkBlocked = d.sources.filter((s) => s.availability === 'blocked').length;
   const linkBroken = d.sources.filter((s) => s.availability === 'broken').length;
-  const linkUnchecked = d.sources.filter((s) => s.availability === 'unchecked').length;
 
   return (
     <>
@@ -80,249 +244,203 @@ export function DashboardPage() {
         title="Översikt"
         lead={
           <>
-            Kunskapsbasen beskriver <strong>produktfamiljer och protokoll</strong>, inte
-            installerade enheter. Siffrorna nedan gäller katalogposter och verifierade källor,
-            aldrig faktiska anläggningar.
+            Läget i kunskapsbasen för {d.product_families.length} produktfamiljer och{' '}
+            {d.protocol_services.length} protokoll. Siffrorna gäller produktfamiljer, aldrig
+            installerade enheter. Klicka på en rad för att se posterna.
           </>
         }
       />
-      <div className="mb-6 grid grid-cols-2 gap-3 md:grid-cols-4">
-        <StatTile
-          label="Katalogposter"
-          value={total}
-          hint={`${d.manifest.counts.product_families} produktfamiljer + ${d.manifest.counts.protocol_services} tjänster`}
-        />
-        <StatTile label="Produktfamiljer" value={d.product_families.length} />
-        <StatTile
-          label="Protokoll / tjänster"
-          value={d.protocol_services.length}
-          hint="Protokoll tilldelas aldrig produkt-CVE"
-        />
-        <StatTile label="Kategorier" value={categories} />
-        <StatTile
-          label="Poster med verifierad CVE-koppling"
-          value={withCve}
-          hint={`${pct(withCve, d.product_families.length)} av produktfamiljerna`}
-        />
-        <StatTile
-          label="CVE-poster"
-          value={d.vulnerabilities.length}
-          hint={`${kevVulns} i CISA KEV`}
-        />
-        <StatTile label="Bulletiner" value={d.advisories.length} />
-        <StatTile
-          label="Källor"
-          value={d.sources.length}
-          hint={`${primarySources} primära · ${sourcesToReview} att granska`}
-        />
+
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
+        <Panel title="Produktfamiljer som kräver uppmärksamhet">
+          <ul className="divide-y divide-rule py-1">
+            <AlarmRow n={kev} tone="danger" to="/katalog?has=kev&sort=severity">
+              har en CVE i <strong>CISA KEV</strong>, alltså bekräftat utnyttjad
+            </AlarmRow>
+            <AlarmRow n={active} tone="danger" to="/katalog?poc=active_reported&sort=severity">
+              har rapporterad <strong>aktiv exploatering</strong> enligt CISA SSVC
+            </AlarmRow>
+            <AlarmRow n={pocReported} tone="warn" to="/katalog?poc=poc_reported&sort=severity">
+              har en <strong>publik PoC</strong> rapporterad för minst en CVE
+            </AlarmRow>
+            <AlarmRow n={weak} tone="warn" to="/katalog?has=defaultpw&sort=severity">
+              har <strong>svag standarduppgift</strong>: gemensamt, hårdkodat eller förutsägbart
+              lösenord
+            </AlarmRow>
+            <AlarmRow n={eol} tone="warn" to="/katalog?action=replace_or_isolate_eol">
+              bör <strong>bytas ut eller isoleras</strong> (livscykel)
+            </AlarmRow>
+            <AlarmRow n={withCve} tone={null} to="/katalog?has=cve&sort=severity">
+              av {d.product_families.length} produktfamiljer har minst en verifierad CVE-koppling (
+              {pct(withCve, d.product_families.length)})
+            </AlarmRow>
+          </ul>
+        </Panel>
+
+        <Panel
+          title="Allvarligast just nu"
+          more={{ to: '/katalog?sort=severity&has=cve', label: 'Alla i katalogen' }}
+        >
+          <table className="table">
+            <thead className="sr-only">
+              <tr>
+                <th scope="col">Produkt</th>
+                <th scope="col">Kategori</th>
+                <th scope="col">CVE</th>
+                <th scope="col" className="hidden sm:table-cell">
+                  Signal
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {worst.map((e) => {
+                const x = der.get(e.id)!;
+                const p = strongestPoc(x.pocStatuses);
+                return (
+                  <tr key={e.id}>
+                    <td className={x.kevCount > 0 ? 'bar-danger' : ''}>
+                      <Link
+                        to={isProduct(e) ? `/produkt/${e.id}` : `/protokoll/${e.id}`}
+                        className="font-medium"
+                      >
+                        {e.name}
+                      </Link>
+                      <span className="ml-2 text-xs text-muted">{x.vendorName}</span>
+                    </td>
+                    <td className="hidden text-xs text-muted sm:table-cell">{e.category}</td>
+                    <td className="num whitespace-nowrap">
+                      {x.cveIds.length} CVE ·{' '}
+                      <span className={(x.maxCvss ?? 0) >= 9 ? 'font-semibold text-danger' : ''}>
+                        {fmtScore(x.maxCvss ?? 0)}
+                      </span>
+                    </td>
+                    <td className="hidden whitespace-nowrap sm:table-cell">
+                      {x.kevCount > 0 ? <Badge tone="danger">KEV</Badge> : null}{' '}
+                      {p === 'active_reported' || p === 'poc_reported' ? (
+                        <PocBadge status={p} short />
+                      ) : null}
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </Panel>
       </div>
 
-      {hasRegister ? (
-        <Section
-          title="Utökat register (125 poster)"
-          id="register"
-          description="Importerat från OT_IoT_125_poster_losenordsstatus.xlsx med källmanifest (SHA-256), hotunderlag, konto-/lösenordsstatus och länkkontroll. Siffrorna gäller katalogposter och CVE-poster, inte installerade enheter."
-        >
-          <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
-            <StatTile
-              label="Registerposter"
-              value={mc.register_entries}
-              hint={`${mc.register_original} original · ${mc.register_new} nya`}
-            />
-            <StatTile
-              label="Unika CVE i registret"
-              value={mc.register_cve_unique}
-              hint={`${mc.register_relations} produkt–CVE-relationer`}
-            />
-            <StatTile
-              label="CVE med hotunderlag"
-              value={mc.threat_intel}
-              hint="PoC, SSVC, aktiv exploatering, materialtyp"
-            />
-            <StatTile
-              label="Länkar kontrollerade i registret"
-              value={mc.link_checks}
-              hint={`källor: ${linkOk} ok · ${linkBlocked} blockerade · ${linkBroken} trasiga · ${linkUnchecked} ej kontrollerade`}
-            />
+      <div className="mt-4 grid grid-cols-1 items-start gap-4 md:grid-cols-2 xl:grid-cols-3">
+        <Panel title="Rekommenderad åtgärd" more={{ to: '/prioritering', label: 'Prioritering' }}>
+          <div className="p-3">
+            <BarList items={actionItems} total={total} />
           </div>
-          <div className="mt-4 grid gap-4 lg:grid-cols-3">
-            <div>
-              <h3 className="text-sm font-semibold">PoC-/exploateringsstatus per CVE</h3>
-              <p className="text-xs text-muted">
-                Enligt CISA SSVC vid respektive bedömningsdatum. ”Ingen PoC uppgiven” är inte
-                frånvarobevis.
-              </p>
-              <ul className="mt-2 space-y-1 text-sm">
-                {(
-                  [
-                    'active_reported',
-                    'poc_reported',
-                    'none_reported_at_assessment',
-                    'unknown_missing',
-                  ] as PublicPocStatus[]
-                ).map((s) => (
-                  <li key={s} className="flex items-center justify-between gap-2">
-                    <Link to={`/katalog?poc=${s}`} className="no-underline">
-                      <PocBadge status={s} short />
-                    </Link>
-                    <span className="tabular-nums text-muted">{pocCounts.get(s) ?? 0}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-sm font-semibold">Typ av initiallösenord per post</h3>
-              <p className="text-xs text-muted">
-                Inga lösenordsvärden i underlaget. ”Okänt” betyder inte ”säkert”.
-              </p>
-              <ul className="mt-2 space-y-1 text-sm">
-                {[...pwdCounts.entries()]
-                  .sort((a, b) => b[1] - a[1])
-                  .map(([t, n]) => (
-                    <li key={t} className="flex items-center justify-between gap-2">
-                      <Link to={`/konton?pwdType=${t}`} className="no-underline">
-                        <PwdTypeBadge type={t} />
-                      </Link>
-                      <span className="tabular-nums text-muted">{n}</span>
-                    </li>
-                  ))}
-              </ul>
-              <p className="mt-2 text-sm">
-                <Link to="/konton">Till kontosammanställningen</Link>
-              </p>
-            </div>
-            <div>
-              <h3 className="text-sm font-semibold">Dokumentationsluckor</h3>
-              <ul className="mt-2 space-y-1 text-sm">
-                <li className="flex justify-between gap-2">
-                  <Link to="/katalog?docgap=unverified">Setupmanual ej verifierad</Link>
-                  <span className="tabular-nums text-muted">{setupUnverified}</span>
-                </li>
-                <li className="flex justify-between gap-2">
-                  <span>Produkter utan setupdokument i registret</span>
-                  <span className="tabular-nums text-muted">{setupMissing}</span>
-                </li>
-                <li className="flex justify-between gap-2">
-                  <Link to="/katalog?flags=account_name_unverified">Kontonamn ej verifierat</Link>
-                  <span className="tabular-nums text-muted">
-                    {flagCounts.get('account_name_unverified') ?? 0}
-                  </span>
-                </li>
-                <li className="flex justify-between gap-2">
-                  <Link to="/katalog?flags=register_conflict">Konflikt register/projektdata</Link>
-                  <span className="tabular-nums text-muted">
-                    {flagCounts.get('register_conflict') ?? 0}
-                  </span>
-                </li>
-              </ul>
-              <p className="mt-2 text-sm">
-                <Link to="/katalog?origin=new">Visa de {mc.register_new} nya posterna</Link>
-              </p>
-            </div>
+        </Panel>
+        <Panel title="Initiallösenord per post" more={{ to: '/konton', label: 'Konton' }}>
+          <div className="p-3">
+            <BarList items={pwdItems} total={total} />
+            <p className="mt-2 px-2 text-xs text-muted">
+              Underlaget innehåller inga lösenordsvärden. ”Okänt” betyder inte ”säkert”.
+            </p>
           </div>
-        </Section>
-      ) : null}
-
-      <div className="mt-6 grid gap-4 lg:grid-cols-2">
-        <Section
-          title="Verifieringsgrad per katalogpost"
-          description="Andel poster per högsta sammanvägda verifieringsstatus."
+        </Panel>
+        <Panel
+          title={`PoC-status för ${pocTotal} CVE`}
+          more={{ to: '/sarbarheter', label: 'Sårbarheter' }}
         >
-          <ul className="space-y-2">
-            {statusCounts.map(([s, n]) => (
-              <li key={s} className="flex items-center justify-between gap-3 text-sm">
-                <VerificationBadge status={s} />
-                <span className="tabular-nums">
-                  {n} <span className="text-muted">({pct(n, total)})</span>
-                </span>
-              </li>
-            ))}
-          </ul>
-        </Section>
-
-        <Section title="Okända uppgifter och granskningsbehov">
-          <dl className="grid grid-cols-2 gap-3 text-sm">
-            <div className="card p-3">
-              <dt className="text-muted">Påståenden med status okänd</dt>
-              <dd className="text-xl font-semibold">{unknownFields}</dd>
-            </div>
-            <div className="card p-3">
-              <dt className="text-muted">Påståenden som behöver granskning</dt>
-              <dd className="text-xl font-semibold">{reviewClaims}</dd>
-            </div>
-          </dl>
-          <ul className="mt-3 space-y-1 text-sm">
-            {topFlags.map(([f, n]) => (
-              <li key={f} className="flex justify-between gap-2">
-                <Link to={`/katalog?flags=${f}`}>{flagLabel[f]}</Link>
-                <span className="tabular-nums text-muted">{n}</span>
-              </li>
-            ))}
-          </ul>
-          <p className="mt-3 text-sm">
-            <Link to="/datakvalitet">Till datakvalitetsvyn</Link>
-          </p>
-        </Section>
-
-        <Section title="Kategorier">
-          <ul className="grid grid-cols-2 gap-1 text-sm sm:grid-cols-3">
+          <div className="p-3">
+            <BarList items={pocItems} total={pocTotal} />
+            <p className="mt-2 px-2 text-xs text-muted">
+              Enligt CISA SSVC vid bedömningsdatum. ”Ingen PoC uppgiven” är inte ett frånvarobevis.
+            </p>
+          </div>
+        </Panel>
+        <Panel title="Verifieringsgrad">
+          <div className="p-3">
+            <BarList items={verItems} total={total} />
+          </div>
+        </Panel>
+        <Panel
+          title="Vanligaste luckorna i underlaget"
+          more={{ to: '/datakvalitet', label: 'Datakvalitet' }}
+        >
+          <div className="p-3">
+            <BarList items={flagItems} total={total} />
+          </div>
+        </Panel>
+        <Panel title={`${catCounts.size} kategorier`}>
+          <ul className="flex flex-wrap gap-1 p-3">
             {[...catCounts.entries()]
-              .sort((a, b) => b[1] - a[1])
+              .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'sv'))
               .map(([c, n]) => (
-                <li
-                  key={c}
-                  className="flex justify-between gap-2 rounded px-2 py-1 hover:bg-surface-2"
-                >
-                  <Link to={`/katalog?category=${encodeURIComponent(c)}`}>{c}</Link>
-                  <span className="tabular-nums text-muted">{n}</span>
+                <li key={c}>
+                  <Link className="chip" to={`/katalog?category=${encodeURIComponent(c)}`}>
+                    {c} <span className="n">{n}</span>
+                  </Link>
                 </li>
               ))}
           </ul>
-        </Section>
-
-        <Callout tone="info" title="Varför visas inte antal ”sårbara installationer”?">
-          <p>
-            Katalogen innehåller produktfamiljer och protokoll, inte inventerade tillgångar. Om en
-            installation är sårbar beror på exakt modell, komponent, firmware, konfiguration och
-            exponering – uppgifter som bara finns i en behörig anläggningsinventering. En sådan
-            modul kräver separat autentiserad arkitektur och ingår inte i den publika webbplatsen.
-          </p>
-          <p className="mt-2">
-            Arbetsbokens ”P1 vid publik åtkomst” på samtliga poster är en villkorlig
-            inventeringssignal, inte en bedömning av faktisk exponering. Se{' '}
-            <Link to="/prioritering">prioriteringsvyn</Link>.
-          </p>
-        </Callout>
+        </Panel>
       </div>
 
-      <Section title="Snabbval" id="snabbval">
-        <div className="flex flex-wrap gap-2 text-sm">
-          <Link className="btn" to="/katalog?kev=yes">
-            Poster med KEV-listad CVE
-          </Link>
-          <Link className="btn" to="/katalog?verification=needs_review,disputed">
-            Behöver granskning
-          </Link>
-          <Link className="btn" to="/katalog?kind=protocol_service">
-            Alla protokoll
-          </Link>
-          <Link className="btn" to="/katalog?flags=industry_guide_only">
-            Endast branschguide
-          </Link>
-          <Link className="btn" to="/sarbarheter">
-            Alla CVE-poster
-          </Link>
-        </div>
-        <p className="mt-3 text-xs text-muted">
-          {
-            d.entries.filter(
-              (e) =>
-                isProduct(e) && e.lifecycle.status !== 'unknown' && e.lifecycle.status !== 'active',
-            ).length
-          }{' '}
-          produktfamiljer har livscykelmarkering (EOL/blandad).
-        </p>
-      </Section>
+      <section aria-labelledby="underlag-h" className="mt-6 border-t border-border pt-4 text-sm">
+        <h2 id="underlag-h" className="text-base font-semibold">
+          Om underlaget
+        </h2>
+        <dl className="mt-2 grid grid-cols-2 gap-x-6 gap-y-2 sm:grid-cols-3 lg:grid-cols-6">
+          {(
+            [
+              [
+                'Katalogposter',
+                total,
+                `${d.product_families.length} produktfamiljer, ${d.protocol_services.length} protokoll`,
+              ],
+              [
+                'CVE-poster',
+                d.vulnerabilities.length,
+                `${mc.register_relations} produktkopplingar`,
+              ],
+              ['Bulletiner', d.advisories.length, 'CISA, leverantörer'],
+              ['Källor', d.sources.length, `${linkOk} nåbara, ${linkBroken} trasiga`],
+              [
+                'Registerposter',
+                mc.register_entries,
+                `${mc.register_original} original, ${mc.register_new} nya`,
+              ],
+              [
+                'Påståenden att granska',
+                d.claims.filter((c) => c.status === 'needs_review' || c.status === 'disputed')
+                  .length,
+                `${d.claims.filter((c) => c.status === 'unknown').length} med okänd status`,
+              ],
+            ] as Array<[string, number, string]>
+          ).map(([k, v, h]) => (
+            <div key={k}>
+              <dt className="text-muted">{k}</dt>
+              <dd>
+                <span className="num text-lg font-semibold">{v}</span>
+                <span className="block text-xs text-muted">{h}</span>
+              </dd>
+            </div>
+          ))}
+        </dl>
+        <details className="mt-4 max-w-3xl">
+          <summary className="cursor-pointer font-medium">
+            Varför visas inte antal ”sårbara installationer”?
+          </summary>
+          <div className="mt-2 space-y-2 pl-4 text-muted">
+            <p>
+              Katalogen innehåller produktfamiljer och protokoll, inte inventerade tillgångar. Om en
+              installation är sårbar beror på exakt modell, komponent, firmware, konfiguration och
+              exponering – uppgifter som bara finns i en behörig anläggningsinventering. En sådan
+              modul kräver separat autentiserad arkitektur och ingår inte i den publika webbplatsen.
+            </p>
+            <p>
+              Arbetsbokens ”P1 vid publik åtkomst” på samtliga poster är en villkorlig
+              inventeringssignal, inte en bedömning av faktisk exponering. Se{' '}
+              <Link to="/prioritering">prioriteringsvyn</Link>.
+            </p>
+          </div>
+        </details>
+      </section>
     </>
   );
 }
