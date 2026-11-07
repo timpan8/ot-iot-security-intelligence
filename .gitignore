@@ -1,0 +1,16 @@
+node_modules/
+dist/
+coverage/
+.vite/
+*.log
+.env
+.env.*
+!.env.example
+test-results/
+playwright-report/
+.DS_Store
+
+# Körartefakter från data-update (regenereras av scripts/enrich)
+sources/enrichment/diff-report.md
+sources/enrichment/diff-report.json
+sources/enrichment/last-run.json
