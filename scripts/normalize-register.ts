@@ -117,6 +117,32 @@ export const slug = (s: string): string =>
     .replace(/^-+|-+$/g, '');
 const isSha = (s: string | null): s is string => Boolean(s && /^[a-f0-9]{64}$/.test(s));
 
+/** Exakt värdnamn eller sub-domän av en känd domän (ingen substringmatchning). */
+export function hostMatchesDomain(host: string, domain: string): boolean {
+  const h = host.toLowerCase().replace(/\.$/, '');
+  const d = domain.toLowerCase().replace(/\.$/, '');
+  return h === d || h.endsWith(`.${d}`);
+}
+/** Värdnamn ur URL, eller null om URL:en inte kan tolkas. */
+export function hostnameOf(url: string): string | null {
+  try {
+    return new URL(url).hostname.toLowerCase();
+  } catch {
+    return null;
+  }
+}
+const RESEARCH_DOMAINS = [
+  'github.com',
+  'armis.com',
+  'dragos.com',
+  'claroty.com',
+  'nozominetworks.com',
+  'forescout.com',
+  'medium.com',
+  'exploit-db.com',
+];
+const DATABASE_DOMAINS = ['cve.org', 'nist.gov', 'mitre.org'];
+
 function shortHash(s: string): string {
   // deterministisk FNV-1a 32-bit – räcker som ID-suffix
   let h = 0x811c9dc5;
@@ -205,12 +231,7 @@ function classifyManifest(
     return { type: 'primary_government', publisher: 'CISA KEV', isPrimary: true };
   if (f.includes('cve'))
     return { type: 'database', publisher: 'CVE Program (CNA + CISA ADP)', isPrimary: true };
-  let host = 'leverantör';
-  try {
-    host = new URL(url).hostname.replace(/^www\./, '');
-  } catch {
-    /* ignore */
-  }
+  const host = (hostnameOf(url) ?? 'leverantör').replace(/^www\./, '');
   return { type: 'primary_vendor', publisher: host, isPrimary: true };
 }
 
@@ -382,16 +403,9 @@ export function addRegisterSources(
       byUrl.set(norm, sourcesByUrl.get(norm)!.id);
       continue;
     }
-    let host = 'unknown-host';
-    try {
-      host = new URL(a.url).hostname.toLowerCase();
-    } catch {
-      continue;
-    }
-    const isResearch =
-      /github\.com|armis\.com|dragos\.com|claroty|nozomi|forescout|medium\.com|exploit-db/.test(
-        host,
-      );
+    const host = hostnameOf(a.url);
+    if (!host) continue;
+    const isResearch = RESEARCH_DOMAINS.some((d) => hostMatchesDomain(host, d));
     const s = baseSource(
       `src-reg-url-${host.replace(/[^a-z0-9.]/g, '-')}-${shortHash(norm)}`,
       a.url,
@@ -400,9 +414,9 @@ export function addRegisterSources(
     s.publisher = host.replace(/^www\./, '');
     s.source_type = isResearch
       ? 'secondary_research'
-      : host.endsWith('cisa.gov')
+      : hostMatchesDomain(host, 'cisa.gov')
         ? 'primary_government'
-        : host.endsWith('cve.org') || host.endsWith('nist.gov') || host.endsWith('mitre.org')
+        : DATABASE_DOMAINS.some((d) => hostMatchesDomain(host, d))
           ? 'database'
           : 'primary_vendor';
     s.is_primary = !isResearch;
