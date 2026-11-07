@@ -4,15 +4,18 @@ name: CI
 
 on:
   push:
-    branches: ['**']
+    branches: [main]
   pull_request:
+  workflow_dispatch:
 
 permissions:
   contents: read
 
+# cancel-in-progress är avstängt: med flera jobb i kedja (needs) kunde GitHub avbryta den egna
+# körningen ("higher priority waiting request") när nästa jobb köades.
 concurrency:
   group: ci-${{ github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   quality:
