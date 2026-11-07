@@ -1,0 +1,38 @@
+[
+  {
+    "id": "obs-danfoss-storeview-se-2026",
+    "title": "Andel AK-SM 800A med firmware ≥ 4.3.1 bland publikt observerade svenska StoreView-värdar",
+    "subject_ids": [
+      "pf-danfoss-ak-sm-800a"
+    ],
+    "method": {
+      "value": null,
+      "status": "unknown",
+      "source_ids": [
+        "src-workbook"
+      ],
+      "reviewed_at": "2026-11-07",
+      "note": "Arbetsboken anger inte hur värdarna identifierades eller hur versionen fastställdes."
+    },
+    "period": {
+      "value": null,
+      "status": "unknown",
+      "source_ids": [
+        "src-workbook"
+      ],
+      "reviewed_at": "2026-11-07",
+      "note": "Observationsdatum saknas i arbetsboken."
+    },
+    "sample_size": 50,
+    "value_text": "58 % (29 av 50) uppgavs ha version ≥ 4.3.1",
+    "uncertainty": "Litet urval, okänd metod, okänt observationsdatum och okänd identifieringsheuristik. Siffran kan inte generaliseras till installerad bas i Sverige eller marknaden.",
+    "representative": false,
+    "caveat": "Ej representativ statistik. Får inte presenteras som marknadsandel eller patchningsgrad för produkten. Bevaras enbart som ursprunglig inventeringsuppgift med spårbarhet till arbetsboken (rad 3, kolumn J).",
+    "source_ids": [
+      "src-workbook"
+    ],
+    "verification_status": "needs_review",
+    "observed_at": null,
+    "notes": "Arbetsbokens blad 'Läs först' anger själv: 'Danfoss 58 % gäller liten observationspopulation'."
+  }
+]

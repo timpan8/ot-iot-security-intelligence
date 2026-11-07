@@ -1,0 +1,1561 @@
+{
+  "_comment": "Kuraterade (handskrivna) källor. Arbetsbokens egna URL:er genereras automatiskt av normalize.ts och dedupliceras mot denna lista på URL. last_verified_at = datum då innehållet faktiskt lästes i denna session; availability speglar HTTP-svar från sessionens nätverk 2026-11-07.",
+  "sources": [
+    {
+      "id": "src-workbook",
+      "url": "https://github.com/timpan8/ot-iot-security-intelligence/blob/main/sources/original/OT_IoT_sarbarhetsoversikt_66_system_2026-11-07.xlsx",
+      "title": "OT/IoT sårbarhetsöversikt, 66 system (arbetsbok 2026-11-07)",
+      "publisher": "Projektets ursprungliga inventering",
+      "source_type": "internal_workbook",
+      "is_primary": false,
+      "published_at": "2026-11-07",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": "2026-11-07",
+      "availability": "ok",
+      "http_status": null,
+      "supports_claims": [],
+      "access_note": null,
+      "notes": "Alla 66 poster och originalfält härstammar härifrån (sha256 1a09ad42eb3590bdb6be2f79b61a84b617657228e2ff678d2e932ca8a3242d0d)."
+    },
+    {
+      "id": "src-nvd-cve-2025-41450",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-41450",
+      "title": "NVD: CVE-2025-41450",
+      "publisher": "NIST NVD (CNA: Danfoss)",
+      "source_type": "database",
+      "is_primary": true,
+      "published_at": "2025-05-08",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": "2026-11-07",
+      "availability": "ok",
+      "http_status": 200,
+      "supports_claims": [
+        {
+          "entity_id": "cve-2025-41450",
+          "field": "*",
+          "note": "Hämtad via NVD CVE API 2.0"
+        }
+      ],
+      "access_note": null,
+      "notes": "lastModified 2026-10-19; status Deferred."
+    },
+    {
+      "id": "src-nvd-cve-2025-41451",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-41451",
+      "title": "NVD: CVE-2025-41451",
+      "publisher": "NIST NVD (CNA: Danfoss)",
+      "source_type": "database",
+      "is_primary": true,
+      "published_at": "2025-08-22",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": "2026-11-07",
+      "availability": "ok",
+      "http_status": 200,
+      "supports_claims": [
+        {
+          "entity_id": "cve-2025-41451",
+          "field": "*",
+          "note": null
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-nvd-cve-2025-41452",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-41452",
+      "title": "NVD: CVE-2025-41452",
+      "publisher": "NIST NVD (CNA: Danfoss)",
+      "source_type": "database",
+      "is_primary": true,
+      "published_at": "2025-08-22",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": "2026-11-07",
+      "availability": "ok",
+      "http_status": 200,
+      "supports_claims": [
+        {
+          "entity_id": "cve-2025-41452",
+          "field": "*",
+          "note": null
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-nvd-cve-2026-34223",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34223",
+      "title": "NVD: CVE-2026-34223",
+      "publisher": "NIST NVD (CNA: Siemens ProductCERT)",
+      "source_type": "database",
+      "is_primary": true,
+      "published_at": "2026-09-08",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": "2026-11-07",
+      "availability": "ok",
+      "http_status": 200,
+      "supports_claims": [
+        {
+          "entity_id": "cve-2026-34223",
+          "field": "*",
+          "note": "Beskrivningstexten räknar upp alla produkter i bulletinen; berörd/ej berörd avgörs av CSAF product_status."
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-nvd-cve-2026-21718",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21718",
+      "title": "NVD: CVE-2026-21718",
+      "publisher": "NIST NVD (CNA: CISA)",
+      "source_type": "database",
+      "is_primary": true,
+      "published_at": "2026-02-27",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": "2026-11-07",
+      "availability": "ok",
+      "http_status": 200,
+      "supports_claims": [
+        {
+          "entity_id": "cve-2026-21718",
+          "field": "*",
+          "note": null
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-nvd-cve-2025-52551",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-52551",
+      "title": "NVD: CVE-2025-52551",
+      "publisher": "NIST NVD (CNA: Armis)",
+      "source_type": "database",
+      "is_primary": true,
+      "published_at": "2025-09-02",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": "2026-11-07",
+      "availability": "ok",
+      "http_status": 200,
+      "supports_claims": [
+        {
+          "entity_id": "cve-2025-52551",
+          "field": "*",
+          "note": null
+        }
+      ],
+      "access_note": null,
+      "notes": "Ingen CPE/versionsavgränsning i NVD (Deferred)."
+    },
+    {
+      "id": "src-nvd-cve-2025-6519",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-6519",
+      "title": "NVD: CVE-2025-6519",
+      "publisher": "NIST NVD (CNA: Armis)",
+      "source_type": "database",
+      "is_primary": true,
+      "published_at": "2025-09-02",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": "2026-11-07",
+      "availability": "ok",
+      "http_status": 200,
+      "supports_claims": [
+        {
+          "entity_id": "cve-2025-6519",
+          "field": "*",
+          "note": null
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-nvd-cve-2025-52543",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-52543",
+      "title": "NVD: CVE-2025-52543",
+      "publisher": "NIST NVD (CNA: Armis)",
+      "source_type": "database",
+      "is_primary": true,
+      "published_at": "2025-09-02",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": "2026-11-07",
+      "availability": "ok",
+      "http_status": 200,
+      "supports_claims": [
+        {
+          "entity_id": "cve-2025-52543",
+          "field": "*",
+          "note": null
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-nvd-cve-2025-52544",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-52544",
+      "title": "NVD: CVE-2025-52544",
+      "publisher": "NIST NVD (CNA: Armis)",
+      "source_type": "database",
+      "is_primary": true,
+      "published_at": "2025-09-02",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": "2026-11-07",
+      "availability": "ok",
+      "http_status": 200,
+      "supports_claims": [
+        {
+          "entity_id": "cve-2025-52544",
+          "field": "*",
+          "note": null
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-nvd-cve-2025-52545",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-52545",
+      "title": "NVD: CVE-2025-52545",
+      "publisher": "NIST NVD (CNA: Armis)",
+      "source_type": "database",
+      "is_primary": true,
+      "published_at": "2025-09-02",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": "2026-11-07",
+      "availability": "ok",
+      "http_status": 200,
+      "supports_claims": [
+        {
+          "entity_id": "cve-2025-52545",
+          "field": "*",
+          "note": null
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-nvd-cve-2025-52546",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-52546",
+      "title": "NVD: CVE-2025-52546",
+      "publisher": "NIST NVD (CNA: Armis)",
+      "source_type": "database",
+      "is_primary": true,
+      "published_at": "2025-09-02",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": "2026-11-07",
+      "availability": "ok",
+      "http_status": 200,
+      "supports_claims": [
+        {
+          "entity_id": "cve-2025-52546",
+          "field": "*",
+          "note": null
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-nvd-cve-2025-52547",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-52547",
+      "title": "NVD: CVE-2025-52547",
+      "publisher": "NIST NVD (CNA: Armis)",
+      "source_type": "database",
+      "is_primary": true,
+      "published_at": "2025-09-02",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": "2026-11-07",
+      "availability": "ok",
+      "http_status": 200,
+      "supports_claims": [
+        {
+          "entity_id": "cve-2025-52547",
+          "field": "*",
+          "note": null
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-nvd-cve-2025-52548",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-52548",
+      "title": "NVD: CVE-2025-52548",
+      "publisher": "NIST NVD (CNA: Armis)",
+      "source_type": "database",
+      "is_primary": true,
+      "published_at": "2025-09-02",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": "2026-11-07",
+      "availability": "ok",
+      "http_status": 200,
+      "supports_claims": [
+        {
+          "entity_id": "cve-2025-52548",
+          "field": "*",
+          "note": null
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-nvd-cve-2025-52549",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-52549",
+      "title": "NVD: CVE-2025-52549",
+      "publisher": "NIST NVD (CNA: Armis)",
+      "source_type": "database",
+      "is_primary": true,
+      "published_at": "2025-09-02",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": "2026-11-07",
+      "availability": "ok",
+      "http_status": 200,
+      "supports_claims": [
+        {
+          "entity_id": "cve-2025-52549",
+          "field": "*",
+          "note": null
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-nvd-cve-2025-52550",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-52550",
+      "title": "NVD: CVE-2025-52550",
+      "publisher": "NIST NVD (CNA: Armis)",
+      "source_type": "database",
+      "is_primary": true,
+      "published_at": "2025-09-02",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": "2026-11-07",
+      "availability": "ok",
+      "http_status": 200,
+      "supports_claims": [
+        {
+          "entity_id": "cve-2025-52550",
+          "field": "*",
+          "note": null
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-nvd-cve-2023-6448",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-6448",
+      "title": "NVD: CVE-2023-6448",
+      "publisher": "NIST NVD (CNA: CISA)",
+      "source_type": "database",
+      "is_primary": true,
+      "published_at": "2023-12-05",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": "2026-11-07",
+      "availability": "ok",
+      "http_status": 200,
+      "supports_claims": [
+        {
+          "entity_id": "cve-2023-6448",
+          "field": "*",
+          "note": "Inkl. cisaExploitAdd 2023-12-11"
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-nvd-cve-2024-1480",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-1480",
+      "title": "NVD: CVE-2024-1480",
+      "publisher": "NIST NVD (CNA: Dragos)",
+      "source_type": "database",
+      "is_primary": true,
+      "published_at": "2024-04-19",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": "2026-11-07",
+      "availability": "ok",
+      "http_status": 200,
+      "supports_claims": [
+        {
+          "entity_id": "cve-2024-1480",
+          "field": "*",
+          "note": null
+        }
+      ],
+      "access_note": null,
+      "notes": "Deferred; ingen CPE."
+    },
+    {
+      "id": "src-nvd-cve-2025-2595",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-2595",
+      "title": "NVD: CVE-2025-2595",
+      "publisher": "NIST NVD (CNA: CERT@VDE)",
+      "source_type": "database",
+      "is_primary": true,
+      "published_at": "2025-04-23",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": "2026-11-07",
+      "availability": "ok",
+      "http_status": 200,
+      "supports_claims": [
+        {
+          "entity_id": "cve-2025-2595",
+          "field": "*",
+          "note": "Gäller CODESYS Visualization, inte ABB-specifikt i NVD"
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-nvd-cve-2025-41659",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-41659",
+      "title": "NVD: CVE-2025-41659",
+      "publisher": "NIST NVD (CNA: CERT@VDE)",
+      "source_type": "database",
+      "is_primary": true,
+      "published_at": "2025-08-04",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": "2026-11-07",
+      "availability": "ok",
+      "http_status": 200,
+      "supports_claims": [
+        {
+          "entity_id": "cve-2025-41659",
+          "field": "*",
+          "note": null
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-nvd-cve-2025-41691",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-41691",
+      "title": "NVD: CVE-2025-41691",
+      "publisher": "NIST NVD (CNA: CERT@VDE)",
+      "source_type": "database",
+      "is_primary": true,
+      "published_at": "2025-08-04",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": "2026-11-07",
+      "availability": "ok",
+      "http_status": 200,
+      "supports_claims": [
+        {
+          "entity_id": "cve-2025-41691",
+          "field": "*",
+          "note": null
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-nvd-cve-2022-38465",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-38465",
+      "title": "NVD: CVE-2022-38465",
+      "publisher": "NIST NVD (CNA: Siemens ProductCERT)",
+      "source_type": "database",
+      "is_primary": true,
+      "published_at": "2022-10-11",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": "2026-11-07",
+      "availability": "ok",
+      "http_status": 200,
+      "supports_claims": [
+        {
+          "entity_id": "cve-2022-38465",
+          "field": "*",
+          "note": null
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-siemens-ssa-330084-csaf",
+      "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-330084.json",
+      "title": "SSA-330084 (CSAF 2.0): Client Code Execution Vulnerability in Desigo CC Product Family",
+      "publisher": "Siemens ProductCERT",
+      "source_type": "primary_vendor",
+      "is_primary": true,
+      "published_at": "2026-09-08",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": "2026-11-07",
+      "availability": "ok",
+      "http_status": 200,
+      "supports_claims": [
+        {
+          "entity_id": "adv-siemens-ssa-330084",
+          "field": "*",
+          "note": "product_status known_affected/known_not_affected lästa maskinellt"
+        }
+      ],
+      "access_note": null,
+      "notes": "Version 1, status interim."
+    },
+    {
+      "id": "src-siemens-ssa-330084-html",
+      "url": "https://cert-portal.siemens.com/productcert/html/ssa-330084.html",
+      "title": "SSA-330084 (HTML)",
+      "publisher": "Siemens ProductCERT",
+      "source_type": "primary_vendor",
+      "is_primary": true,
+      "published_at": "2026-09-08",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": null,
+      "availability": "ok",
+      "http_status": 200,
+      "supports_claims": [
+        {
+          "entity_id": "adv-siemens-ssa-330084",
+          "field": "url",
+          "note": "Arbetsbokens källänk (rad 22)"
+        }
+      ],
+      "access_note": null,
+      "notes": "HTML-versionen nåddes; innehållet verifierades via CSAF-dokumentet."
+    },
+    {
+      "id": "src-siemens-ssa-568427-csaf",
+      "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-568427.json",
+      "title": "SSA-568427 (CSAF 2.0): Weak Key Protection Vulnerability in SIMATIC S7-1200 and S7-1500 CPU Families",
+      "publisher": "Siemens ProductCERT",
+      "source_type": "primary_vendor",
+      "is_primary": true,
+      "published_at": "2022-10-11",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": "2026-11-07",
+      "availability": "ok",
+      "http_status": 200,
+      "supports_claims": [
+        {
+          "entity_id": "adv-siemens-ssa-568427",
+          "field": "*",
+          "note": null
+        }
+      ],
+      "access_note": null,
+      "notes": "Version 1, status final."
+    },
+    {
+      "id": "src-siemens-ssa-568427-html",
+      "url": "https://cert-portal.siemens.com/productcert/html/ssa-568427.html",
+      "title": "SSA-568427 (HTML)",
+      "publisher": "Siemens ProductCERT",
+      "source_type": "primary_vendor",
+      "is_primary": true,
+      "published_at": "2022-10-11",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": null,
+      "availability": "ok",
+      "http_status": 200,
+      "supports_claims": [
+        {
+          "entity_id": "adv-siemens-ssa-568427",
+          "field": "url",
+          "note": "Arbetsbokens källänk (rad 12 och 47)"
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-danfoss-dsa-2025-03-01",
+      "url": "https://www.danfoss.com/en/service-and-support/coordinated-vulnerability-disclosure/danfoss-security-advisories/dsa-2025-03-01",
+      "title": "Danfoss Security Advisory DSA-2025-03-01",
+      "publisher": "Danfoss",
+      "source_type": "primary_vendor",
+      "is_primary": true,
+      "published_at": null,
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": null,
+      "availability": "blocked",
+      "http_status": 403,
+      "supports_claims": [
+        {
+          "entity_id": "adv-danfoss-dsa-2025-03-01",
+          "field": "cve_ids",
+          "note": "Kopplingen DSA-2025-03-01 ↔ CVE-2025-41450 stöds av NVD-postens referenslista (CNA Danfoss)."
+        }
+      ],
+      "access_note": "Sidan svarade 403 för automatiserad hämtning (bot-skydd); innehållet kunde inte läsas i denna session.",
+      "notes": null
+    },
+    {
+      "id": "src-danfoss-dsa-2025-08-01",
+      "url": "https://www.danfoss.com/en/service-and-support/coordinated-vulnerability-disclosure/danfoss-security-advisories/dsa-2025-08-01",
+      "title": "Danfoss Security Advisory DSA-2025-08-01",
+      "publisher": "Danfoss",
+      "source_type": "primary_vendor",
+      "is_primary": true,
+      "published_at": null,
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": null,
+      "availability": "blocked",
+      "http_status": 403,
+      "supports_claims": [
+        {
+          "entity_id": "adv-danfoss-dsa-2025-08-01",
+          "field": "cve_ids",
+          "note": "Arbetsbokens källänk (rad 3). NVD-posterna för CVE-2025-41451/41452 refererar till produktens nedladdningssida, inte denna DSA-sida; kopplingen är därför needs_review."
+        }
+      ],
+      "access_note": "Sidan svarade 403 för automatiserad hämtning (bot-skydd).",
+      "notes": null
+    },
+    {
+      "id": "src-danfoss-ak-sm-800a-downloads",
+      "url": "https://www.danfoss.com/en/service-and-support/downloads/dcs/adap-kool-software/ak-sm-800a/",
+      "title": "Danfoss AK-SM 800A – programvara, nedladdningar och cybersäkerhetsråd",
+      "publisher": "Danfoss",
+      "source_type": "primary_vendor",
+      "is_primary": true,
+      "published_at": null,
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": null,
+      "availability": "unchecked",
+      "http_status": null,
+      "supports_claims": [
+        {
+          "entity_id": "pf-danfoss-ak-sm-800a",
+          "field": "documentation",
+          "note": "Arbetsbokens dokumentationslänk (rad 2–4); refereras också av NVD för CVE-2025-41451/41452."
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-cisa-icsa-26-057-10-csaf",
+      "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2026/icsa-26-057-10.json",
+      "title": "ICSA-26-057-10 (CSAF): Copeland XWEB and XWEB Pro",
+      "publisher": "CISA",
+      "source_type": "primary_government",
+      "is_primary": true,
+      "published_at": "2026-02-26",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": "2026-11-07",
+      "availability": "ok",
+      "http_status": 200,
+      "supports_claims": [
+        {
+          "entity_id": "adv-cisa-icsa-26-057-10",
+          "field": "*",
+          "note": "22 CVE, XWEB 300D/500D/500B PRO ≤1.12.1, fix: uppdatera till senaste version (ingen versionssiffra angiven)"
+        }
+      ],
+      "access_note": null,
+      "notes": "Status final, release 2026-02-26."
+    },
+    {
+      "id": "src-cisa-icsa-26-057-10",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-057-10",
+      "title": "ICSA-26-057-10: Copeland XWEB and XWEB Pro (webb)",
+      "publisher": "CISA",
+      "source_type": "primary_government",
+      "is_primary": true,
+      "published_at": "2026-02-26",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": null,
+      "availability": "blocked",
+      "http_status": 403,
+      "supports_claims": [
+        {
+          "entity_id": "adv-cisa-icsa-26-057-10",
+          "field": "url",
+          "note": "Arbetsbokens källänk (rad 5); innehållet verifierat via CSAF-filen."
+        }
+      ],
+      "access_note": "www.cisa.gov svarade 403 för automatiserad hämtning.",
+      "notes": null
+    },
+    {
+      "id": "src-cisa-kev",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+      "title": "CISA Known Exploited Vulnerabilities Catalog",
+      "publisher": "CISA",
+      "source_type": "primary_government",
+      "is_primary": true,
+      "published_at": null,
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": "2026-11-07",
+      "availability": "ok",
+      "http_status": 200,
+      "supports_claims": [
+        {
+          "entity_id": "cve-2023-6448",
+          "field": "kev",
+          "note": "catalogVersion 2026.11.06; JSON-feed hämtad"
+        }
+      ],
+      "access_note": "JSON-feed: https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
+      "notes": null
+    },
+    {
+      "id": "src-first-epss",
+      "url": "https://api.first.org/data/v1/epss",
+      "title": "FIRST EPSS API (data v1)",
+      "publisher": "FIRST.org",
+      "source_type": "database",
+      "is_primary": true,
+      "published_at": null,
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": "2026-11-07",
+      "availability": "ok",
+      "http_status": 200,
+      "supports_claims": [
+        {
+          "entity_id": "*",
+          "field": "epss",
+          "note": "EPSS-värden daterade 2026-11-07"
+        }
+      ],
+      "access_note": null,
+      "notes": "EPSS är en statistisk sannolikhetsindikator, inte bevis för exploatering."
+    },
+    {
+      "id": "src-unitronics-advisory-2023-001",
+      "url": "https://downloads.unitronicsplc.com/Sites/plc/Technical_Library/Unitronics-Cybersecurity-Advisory-2023-001-CVE-2023-6448.pdf",
+      "title": "Unitronics Cybersecurity Advisory 2023-001 (CVE-2023-6448)",
+      "publisher": "Unitronics",
+      "source_type": "primary_vendor",
+      "is_primary": true,
+      "published_at": null,
+      "last_checked_at": null,
+      "last_verified_at": null,
+      "availability": "unchecked",
+      "http_status": null,
+      "supports_claims": [
+        {
+          "entity_id": "adv-unitronics-2023-001",
+          "field": "url",
+          "note": "URL från NVD-referens (tag Vendor Advisory) och KEV-noter"
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-cisa-alert-unitronics-2023-11-28",
+      "url": "https://www.cisa.gov/news-events/alerts/2023/11/28/exploitation-unitronics-plcs-used-water-and-wastewater-systems",
+      "title": "CISA Alert: Exploitation of Unitronics PLCs used in Water and Wastewater Systems",
+      "publisher": "CISA",
+      "source_type": "primary_government",
+      "is_primary": true,
+      "published_at": "2023-11-28",
+      "last_checked_at": null,
+      "last_verified_at": null,
+      "availability": "unchecked",
+      "http_status": null,
+      "supports_claims": [
+        {
+          "entity_id": "cve-2023-6448",
+          "field": "exploitation_evidence",
+          "note": "URL från NVD-referens"
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-cisa-icsa-24-109-01",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-24-109-01",
+      "title": "ICSA-24-109-01: Unitronics Vision Standard",
+      "publisher": "CISA",
+      "source_type": "primary_government",
+      "is_primary": true,
+      "published_at": null,
+      "last_checked_at": null,
+      "last_verified_at": null,
+      "availability": "unchecked",
+      "http_status": null,
+      "supports_claims": [
+        {
+          "entity_id": "adv-cisa-icsa-24-109-01",
+          "field": "url",
+          "note": "URL från NVD-referens för CVE-2024-1480"
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-dragos-unitronics-vision-standard",
+      "url": "https://www.dragos.com/advisory/unitronics-vision-standard/",
+      "title": "Dragos advisory: Unitronics Vision Standard",
+      "publisher": "Dragos",
+      "source_type": "secondary_research",
+      "is_primary": false,
+      "published_at": null,
+      "last_checked_at": null,
+      "last_verified_at": null,
+      "availability": "unchecked",
+      "http_status": null,
+      "supports_claims": [
+        {
+          "entity_id": "cve-2024-1480",
+          "field": "references",
+          "note": "Dragos är CNA för CVE-2024-1480"
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-armis-frostbyte10",
+      "url": "https://www.armis.com/research/frostbyte10/",
+      "title": "Armis Research: Frostbyte10 (Copeland E2/E3)",
+      "publisher": "Armis",
+      "source_type": "secondary_research",
+      "is_primary": false,
+      "published_at": null,
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": null,
+      "availability": "unchecked",
+      "http_status": null,
+      "supports_claims": [
+        {
+          "entity_id": "adv-armis-frostbyte10",
+          "field": "*",
+          "note": "Arbetsbokens källänk (rad 7–8). Armis är CNA för CVE-posterna, vilket ger NVD-posterna primär status; själva rapporten klassas som sekundär forskning."
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-copeland-xweb-update-page",
+      "url": "https://webapps.copeland.com/Dixell/Pages/SystemSoftwareUpdate",
+      "title": "Copeland/Dixell XWEB Pro – System Software Update",
+      "publisher": "Copeland",
+      "source_type": "primary_vendor",
+      "is_primary": true,
+      "published_at": null,
+      "last_checked_at": null,
+      "last_verified_at": null,
+      "availability": "unchecked",
+      "http_status": null,
+      "supports_claims": [
+        {
+          "entity_id": "match-copeland-xweb-pro-cve-2026-21718",
+          "field": "fix",
+          "note": "Angiven av CISA som uppdateringskälla; versionsnummer ej läst"
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-github-fromagegate",
+      "url": "https://github.com/msuiche/fromagegate",
+      "title": "fromagegate (forskningsrepo refererat av NVD för Danfoss AK-SM 8xxA)",
+      "publisher": "Tredjepartsforskare (GitHub)",
+      "source_type": "secondary_research",
+      "is_primary": false,
+      "published_at": null,
+      "last_checked_at": null,
+      "last_verified_at": null,
+      "availability": "unchecked",
+      "http_status": null,
+      "supports_claims": [
+        {
+          "entity_id": "cve-2025-41450",
+          "field": "references",
+          "note": "Endast referens; innehållet ej granskat och används inte som faktakälla."
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-certvde-2025-027",
+      "url": "https://certvde.com/en/advisories/VDE-2025-027",
+      "title": "VDE-2025-027 (CODESYS Visualization)",
+      "publisher": "CERT@VDE",
+      "source_type": "primary_government",
+      "is_primary": true,
+      "published_at": null,
+      "last_checked_at": null,
+      "last_verified_at": null,
+      "availability": "unchecked",
+      "http_status": null,
+      "supports_claims": [
+        {
+          "entity_id": "adv-certvde-2025-027",
+          "field": "url",
+          "note": "URL från NVD-referens"
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-certvde-2025-051",
+      "url": "https://certvde.com/de/advisories/VDE-2025-051",
+      "title": "VDE-2025-051 (CODESYS Control runtime)",
+      "publisher": "CERT@VDE",
+      "source_type": "primary_government",
+      "is_primary": true,
+      "published_at": null,
+      "last_checked_at": null,
+      "last_verified_at": null,
+      "availability": "unchecked",
+      "http_status": null,
+      "supports_claims": [
+        {
+          "entity_id": "adv-certvde-2025-051",
+          "field": "url",
+          "note": "URL från NVD-referens"
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-certvde-2025-070",
+      "url": "https://certvde.com/de/advisories/VDE-2025-070",
+      "title": "VDE-2025-070 (CODESYS Control runtime)",
+      "publisher": "CERT@VDE",
+      "source_type": "primary_government",
+      "is_primary": true,
+      "published_at": null,
+      "last_checked_at": null,
+      "last_verified_at": null,
+      "availability": "unchecked",
+      "http_status": null,
+      "supports_claims": [
+        {
+          "entity_id": "adv-certvde-2025-070",
+          "field": "url",
+          "note": "URL från NVD-referens"
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-nist-sp800-82r3",
+      "url": "https://csrc.nist.gov/pubs/sp/800/82/r3/final",
+      "title": "NIST SP 800-82 Rev. 3 – Guide to Operational Technology (OT) Security (fastställd)",
+      "publisher": "NIST",
+      "source_type": "primary_standard",
+      "is_primary": true,
+      "published_at": "2023-09-28",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": null,
+      "availability": "unchecked",
+      "http_status": null,
+      "supports_claims": [
+        {
+          "entity_id": "*",
+          "field": "controls",
+          "note": "Branschguide använd som generell referens i arbetsboken (12 rader)"
+        }
+      ],
+      "access_note": null,
+      "notes": "Publiceringsdatum enligt NIST:s publikationssida (ej omläst i denna session)."
+    },
+    {
+      "id": "src-nist-sp800-82r4-ipd",
+      "url": "https://csrc.nist.gov/pubs/sp/800/82/r4/ipd",
+      "title": "NIST SP 800-82 Rev. 4 – Initial Public Draft (utkast)",
+      "publisher": "NIST",
+      "source_type": "primary_standard",
+      "is_primary": true,
+      "published_at": null,
+      "last_checked_at": null,
+      "last_verified_at": null,
+      "availability": "unchecked",
+      "http_status": null,
+      "supports_claims": [
+        {
+          "entity_id": "*",
+          "field": "methodology",
+          "note": "Per 2026-11-07 ett offentligt utkast, inte fastställd vägledning"
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-cisa-ssvc-guide",
+      "url": "https://www.cisa.gov/sites/default/files/publications/cisa-ssvc-guide%20508c.pdf",
+      "title": "CISA Stakeholder-Specific Vulnerability Categorization (SSVC) Guide",
+      "publisher": "CISA",
+      "source_type": "primary_government",
+      "is_primary": true,
+      "published_at": null,
+      "last_checked_at": null,
+      "last_verified_at": null,
+      "availability": "unchecked",
+      "http_status": null,
+      "supports_claims": [
+        {
+          "entity_id": "*",
+          "field": "methodology",
+          "note": "Inspirationskälla för riskfaktorer; projektets metod är inte officiell SSVC"
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-ncsc-cybersakerhetslagen",
+      "url": "https://www.ncsc.se/sv/radgivning-och-stod/cybersakerhetslagen-nis2/sakerhetsatgarder-enligt-cybersakerhetslagen/",
+      "title": "NCSC: Säkerhetsåtgärder enligt cybersäkerhetslagen (NIS2)",
+      "publisher": "NCSC Sverige",
+      "source_type": "primary_government",
+      "is_primary": true,
+      "published_at": null,
+      "last_checked_at": null,
+      "last_verified_at": null,
+      "availability": "unchecked",
+      "http_status": null,
+      "supports_claims": [
+        {
+          "entity_id": "*",
+          "field": "methodology",
+          "note": "Generella krav på riskhantering, tillgångsinventering, incidenthantering, leveranskedja, kontinuitet"
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-cisa-remote-access-ics",
+      "url": "https://www.cisa.gov/sites/default/files/2023-01/RP_Managing_Remote_Access_S508NC.pdf",
+      "title": "CISA: Managing Remote Access for Industrial Control Systems",
+      "publisher": "CISA",
+      "source_type": "primary_government",
+      "is_primary": true,
+      "published_at": null,
+      "last_checked_at": null,
+      "last_verified_at": null,
+      "availability": "unchecked",
+      "http_status": null,
+      "supports_claims": [
+        {
+          "entity_id": "ctl-secure-remote-access",
+          "field": "*",
+          "note": "Refererad i arbetsbokens blad 'Läs först' och rad 67"
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-iana-ports",
+      "url": "https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml",
+      "title": "IANA Service Name and Transport Protocol Port Number Registry",
+      "publisher": "IANA",
+      "source_type": "primary_standard",
+      "is_primary": true,
+      "published_at": null,
+      "last_checked_at": null,
+      "last_verified_at": null,
+      "availability": "unchecked",
+      "http_status": null,
+      "supports_claims": [
+        {
+          "entity_id": "*",
+          "field": "default_ports",
+          "note": "Standardportar för protokoll/tjänster; registret ej omläst i denna session (status corroborated_secondary)."
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-nvd-cve-2026-25085",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25085",
+      "title": "NVD: CVE-2026-25085",
+      "publisher": "NIST NVD (CNA: CISA)",
+      "source_type": "database",
+      "is_primary": true,
+      "published_at": "2026-02-27",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": "2026-11-07",
+      "availability": "ok",
+      "http_status": 200,
+      "supports_claims": [
+        {
+          "entity_id": "cve-2026-25085",
+          "field": "*",
+          "note": "Hämtad via NVD CVE API 2.0 (ICSA-26-057-10)"
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-nvd-cve-2026-24663",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24663",
+      "title": "NVD: CVE-2026-24663",
+      "publisher": "NIST NVD (CNA: CISA)",
+      "source_type": "database",
+      "is_primary": true,
+      "published_at": "2026-02-27",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": "2026-11-07",
+      "availability": "ok",
+      "http_status": 200,
+      "supports_claims": [
+        {
+          "entity_id": "cve-2026-24663",
+          "field": "*",
+          "note": "Hämtad via NVD CVE API 2.0 (ICSA-26-057-10)"
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-nvd-cve-2026-21389",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21389",
+      "title": "NVD: CVE-2026-21389",
+      "publisher": "NIST NVD (CNA: CISA)",
+      "source_type": "database",
+      "is_primary": true,
+      "published_at": "2026-02-27",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": "2026-11-07",
+      "availability": "ok",
+      "http_status": 200,
+      "supports_claims": [
+        {
+          "entity_id": "cve-2026-21389",
+          "field": "*",
+          "note": "Hämtad via NVD CVE API 2.0 (ICSA-26-057-10)"
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-nvd-cve-2026-25111",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25111",
+      "title": "NVD: CVE-2026-25111",
+      "publisher": "NIST NVD (CNA: CISA)",
+      "source_type": "database",
+      "is_primary": true,
+      "published_at": "2026-02-27",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": "2026-11-07",
+      "availability": "ok",
+      "http_status": 200,
+      "supports_claims": [
+        {
+          "entity_id": "cve-2026-25111",
+          "field": "*",
+          "note": "Hämtad via NVD CVE API 2.0 (ICSA-26-057-10)"
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-nvd-cve-2026-20742",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20742",
+      "title": "NVD: CVE-2026-20742",
+      "publisher": "NIST NVD (CNA: CISA)",
+      "source_type": "database",
+      "is_primary": true,
+      "published_at": "2026-02-27",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": "2026-11-07",
+      "availability": "ok",
+      "http_status": 200,
+      "supports_claims": [
+        {
+          "entity_id": "cve-2026-20742",
+          "field": "*",
+          "note": "Hämtad via NVD CVE API 2.0 (ICSA-26-057-10)"
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-nvd-cve-2026-24517",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24517",
+      "title": "NVD: CVE-2026-24517",
+      "publisher": "NIST NVD (CNA: CISA)",
+      "source_type": "database",
+      "is_primary": true,
+      "published_at": "2026-02-27",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": "2026-11-07",
+      "availability": "ok",
+      "http_status": 200,
+      "supports_claims": [
+        {
+          "entity_id": "cve-2026-24517",
+          "field": "*",
+          "note": "Hämtad via NVD CVE API 2.0 (ICSA-26-057-10)"
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-nvd-cve-2026-25195",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25195",
+      "title": "NVD: CVE-2026-25195",
+      "publisher": "NIST NVD (CNA: CISA)",
+      "source_type": "database",
+      "is_primary": true,
+      "published_at": "2026-02-27",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": "2026-11-07",
+      "availability": "ok",
+      "http_status": 200,
+      "supports_claims": [
+        {
+          "entity_id": "cve-2026-25195",
+          "field": "*",
+          "note": "Hämtad via NVD CVE API 2.0 (ICSA-26-057-10)"
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-nvd-cve-2026-20910",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20910",
+      "title": "NVD: CVE-2026-20910",
+      "publisher": "NIST NVD (CNA: CISA)",
+      "source_type": "database",
+      "is_primary": true,
+      "published_at": "2026-02-27",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": "2026-11-07",
+      "availability": "ok",
+      "http_status": 200,
+      "supports_claims": [
+        {
+          "entity_id": "cve-2026-20910",
+          "field": "*",
+          "note": "Hämtad via NVD CVE API 2.0 (ICSA-26-057-10)"
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-nvd-cve-2026-24689",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24689",
+      "title": "NVD: CVE-2026-24689",
+      "publisher": "NIST NVD (CNA: CISA)",
+      "source_type": "database",
+      "is_primary": true,
+      "published_at": "2026-02-27",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": "2026-11-07",
+      "availability": "ok",
+      "http_status": 200,
+      "supports_claims": [
+        {
+          "entity_id": "cve-2026-24689",
+          "field": "*",
+          "note": "Hämtad via NVD CVE API 2.0 (ICSA-26-057-10)"
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-nvd-cve-2026-25109",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25109",
+      "title": "NVD: CVE-2026-25109",
+      "publisher": "NIST NVD (CNA: CISA)",
+      "source_type": "database",
+      "is_primary": true,
+      "published_at": "2026-02-27",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": "2026-11-07",
+      "availability": "ok",
+      "http_status": 200,
+      "supports_claims": [
+        {
+          "entity_id": "cve-2026-25109",
+          "field": "*",
+          "note": "Hämtad via NVD CVE API 2.0 (ICSA-26-057-10)"
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-nvd-cve-2026-20902",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20902",
+      "title": "NVD: CVE-2026-20902",
+      "publisher": "NIST NVD (CNA: CISA)",
+      "source_type": "database",
+      "is_primary": true,
+      "published_at": "2026-02-27",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": "2026-11-07",
+      "availability": "ok",
+      "http_status": 200,
+      "supports_claims": [
+        {
+          "entity_id": "cve-2026-20902",
+          "field": "*",
+          "note": "Hämtad via NVD CVE API 2.0 (ICSA-26-057-10)"
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-nvd-cve-2026-24695",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24695",
+      "title": "NVD: CVE-2026-24695",
+      "publisher": "NIST NVD (CNA: CISA)",
+      "source_type": "database",
+      "is_primary": true,
+      "published_at": "2026-02-27",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": "2026-11-07",
+      "availability": "ok",
+      "http_status": 200,
+      "supports_claims": [
+        {
+          "entity_id": "cve-2026-24695",
+          "field": "*",
+          "note": "Hämtad via NVD CVE API 2.0 (ICSA-26-057-10)"
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-nvd-cve-2026-25105",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25105",
+      "title": "NVD: CVE-2026-25105",
+      "publisher": "NIST NVD (CNA: CISA)",
+      "source_type": "database",
+      "is_primary": true,
+      "published_at": "2026-02-27",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": "2026-11-07",
+      "availability": "ok",
+      "http_status": 200,
+      "supports_claims": [
+        {
+          "entity_id": "cve-2026-25105",
+          "field": "*",
+          "note": "Hämtad via NVD CVE API 2.0 (ICSA-26-057-10)"
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-nvd-cve-2026-24452",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24452",
+      "title": "NVD: CVE-2026-24452",
+      "publisher": "NIST NVD (CNA: CISA)",
+      "source_type": "database",
+      "is_primary": true,
+      "published_at": "2026-02-27",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": "2026-11-07",
+      "availability": "ok",
+      "http_status": 200,
+      "supports_claims": [
+        {
+          "entity_id": "cve-2026-24452",
+          "field": "*",
+          "note": "Hämtad via NVD CVE API 2.0 (ICSA-26-057-10)"
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-nvd-cve-2026-23702",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23702",
+      "title": "NVD: CVE-2026-23702",
+      "publisher": "NIST NVD (CNA: CISA)",
+      "source_type": "database",
+      "is_primary": true,
+      "published_at": "2026-02-27",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": "2026-11-07",
+      "availability": "ok",
+      "http_status": 200,
+      "supports_claims": [
+        {
+          "entity_id": "cve-2026-23702",
+          "field": "*",
+          "note": "Hämtad via NVD CVE API 2.0 (ICSA-26-057-10)"
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-nvd-cve-2026-25721",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25721",
+      "title": "NVD: CVE-2026-25721",
+      "publisher": "NIST NVD (CNA: CISA)",
+      "source_type": "database",
+      "is_primary": true,
+      "published_at": "2026-02-27",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": "2026-11-07",
+      "availability": "ok",
+      "http_status": 200,
+      "supports_claims": [
+        {
+          "entity_id": "cve-2026-25721",
+          "field": "*",
+          "note": "Hämtad via NVD CVE API 2.0 (ICSA-26-057-10)"
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-nvd-cve-2026-20764",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20764",
+      "title": "NVD: CVE-2026-20764",
+      "publisher": "NIST NVD (CNA: CISA)",
+      "source_type": "database",
+      "is_primary": true,
+      "published_at": "2026-02-27",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": "2026-11-07",
+      "availability": "ok",
+      "http_status": 200,
+      "supports_claims": [
+        {
+          "entity_id": "cve-2026-20764",
+          "field": "*",
+          "note": "Hämtad via NVD CVE API 2.0 (ICSA-26-057-10)"
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-nvd-cve-2026-25196",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25196",
+      "title": "NVD: CVE-2026-25196",
+      "publisher": "NIST NVD (CNA: CISA)",
+      "source_type": "database",
+      "is_primary": true,
+      "published_at": "2026-02-27",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": "2026-11-07",
+      "availability": "ok",
+      "http_status": 200,
+      "supports_claims": [
+        {
+          "entity_id": "cve-2026-25196",
+          "field": "*",
+          "note": "Hämtad via NVD CVE API 2.0 (ICSA-26-057-10)"
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-nvd-cve-2026-25037",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25037",
+      "title": "NVD: CVE-2026-25037",
+      "publisher": "NIST NVD (CNA: CISA)",
+      "source_type": "database",
+      "is_primary": true,
+      "published_at": "2026-02-27",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": "2026-11-07",
+      "availability": "ok",
+      "http_status": 200,
+      "supports_claims": [
+        {
+          "entity_id": "cve-2026-25037",
+          "field": "*",
+          "note": "Hämtad via NVD CVE API 2.0 (ICSA-26-057-10)"
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-nvd-cve-2026-22877",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-22877",
+      "title": "NVD: CVE-2026-22877",
+      "publisher": "NIST NVD (CNA: CISA)",
+      "source_type": "database",
+      "is_primary": true,
+      "published_at": "2026-02-27",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": "2026-11-07",
+      "availability": "ok",
+      "http_status": 200,
+      "supports_claims": [
+        {
+          "entity_id": "cve-2026-22877",
+          "field": "*",
+          "note": "Hämtad via NVD CVE API 2.0 (ICSA-26-057-10)"
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-nvd-cve-2026-20797",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20797",
+      "title": "NVD: CVE-2026-20797",
+      "publisher": "NIST NVD (CNA: CISA)",
+      "source_type": "database",
+      "is_primary": true,
+      "published_at": "2026-02-27",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": "2026-11-07",
+      "availability": "ok",
+      "http_status": 200,
+      "supports_claims": [
+        {
+          "entity_id": "cve-2026-20797",
+          "field": "*",
+          "note": "Hämtad via NVD CVE API 2.0 (ICSA-26-057-10)"
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    },
+    {
+      "id": "src-nvd-cve-2026-3037",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3037",
+      "title": "NVD: CVE-2026-3037",
+      "publisher": "NIST NVD (CNA: CISA)",
+      "source_type": "database",
+      "is_primary": true,
+      "published_at": "2026-02-27",
+      "last_checked_at": "2026-11-07",
+      "last_verified_at": "2026-11-07",
+      "availability": "ok",
+      "http_status": 200,
+      "supports_claims": [
+        {
+          "entity_id": "cve-2026-3037",
+          "field": "*",
+          "note": "Hämtad via NVD CVE API 2.0 (ICSA-26-057-10)"
+        }
+      ],
+      "access_note": null,
+      "notes": null
+    }
+  ]
+}

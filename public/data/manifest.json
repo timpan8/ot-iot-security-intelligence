@@ -1,0 +1,52 @@
+{
+  "dataset_tier": "public",
+  "schema_version": "1.0.0",
+  "generated_at": "2026-11-07T21:00:24.096Z",
+  "workbook": {
+    "filename": "OT_IoT_sarbarhetsoversikt_66_system_2026-11-07.xlsx",
+    "sha256": "1a09ad42eb3590bdb6be2f79b61a84b617657228e2ff678d2e932ca8a3242d0d",
+    "sheets": [
+      "66 system och tjänster",
+      "Läs först",
+      "Sammanställning"
+    ],
+    "data_sheet": "66 system och tjänster",
+    "header_row": 1,
+    "data_rows": 66
+  },
+  "counts": {
+    "total_entries": 66,
+    "product_families": 55,
+    "protocol_services": 11,
+    "categories": 18,
+    "vendors": 40,
+    "vulnerabilities": 43,
+    "advisories": 11,
+    "matches": 51,
+    "controls": 20,
+    "sources": 118,
+    "observations": 1,
+    "claims": 37,
+    "entries_with_cve_reference": 8,
+    "entries_with_security_source_url": 10,
+    "kev_listed_vulnerabilities": 1
+  },
+  "files": {
+    "manifest": "manifest.json",
+    "vendors": "vendors.json",
+    "product_families": "product_families.json",
+    "protocol_services": "protocol_services.json",
+    "vulnerabilities": "vulnerabilities.json",
+    "advisories": "advisories.json",
+    "matches": "product_vulnerability_matches.json",
+    "controls": "controls.json",
+    "sources": "sources.json",
+    "observations": "observations.json",
+    "claims": "claims.json"
+  },
+  "notes": [
+    "Publik produkt- och hotkunskapsbas. Innehåller inga anläggningsunika uppgifter.",
+    "Frånvaro av CVE-referens är inte bevis för frånvaro av sårbarheter.",
+    "\"P1 vid publik åtkomst\" i arbetsboken är en villkorlig inventeringssignal, inte en verifierad exponering."
+  ]
+}

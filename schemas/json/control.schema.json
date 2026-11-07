@@ -1,0 +1,174 @@
+{
+  "$id": "https://timpan8.github.io/ot-iot-security-intelligence/schemas/control.schema.json",
+  "title": "control",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9.]+)*$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "goal": {
+      "type": "string",
+      "minLength": 1
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "effect": {
+      "type": "string",
+      "minLength": 1
+    },
+    "limitations": {
+      "type": "string",
+      "minLength": 1
+    },
+    "ot_suitability": {
+      "type": "string",
+      "enum": [
+        "high",
+        "medium",
+        "low",
+        "depends"
+      ]
+    },
+    "requires_operational_approval": {
+      "type": "boolean"
+    },
+    "order_hint": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 99
+    },
+    "depends_on_control_ids": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9.]+)*$"
+      }
+    },
+    "category_scope": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "BMS",
+          "DCS",
+          "Energi",
+          "Gateway",
+          "HMI",
+          "IoT",
+          "Kamera",
+          "Kraft",
+          "Kyla",
+          "NAS",
+          "OPC",
+          "PLC",
+          "PLC/HMI",
+          "Passer",
+          "RTU",
+          "SCADA",
+          "Tjänst",
+          "Ventilation"
+        ]
+      }
+    },
+    "protocol_scope": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9.]+)*$"
+      }
+    },
+    "vendor_guide_url": {
+      "default": null,
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "uri"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "framework_refs": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "framework": {
+            "type": "string",
+            "enum": [
+              "IEC 62443",
+              "NIST CSF 2.0",
+              "NIST SP 800-82r3",
+              "CISA",
+              "Cybersäkerhetslagen"
+            ]
+          },
+          "reference": {
+            "type": "string",
+            "minLength": 1
+          },
+          "note": {
+            "default": null,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "mapped_reference",
+              "informational"
+            ]
+          }
+        },
+        "required": [
+          "framework",
+          "reference",
+          "note",
+          "status"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "source_ids": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9.]+)*$"
+      }
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "goal",
+    "description",
+    "effect",
+    "limitations",
+    "ot_suitability",
+    "requires_operational_approval",
+    "order_hint",
+    "depends_on_control_ids",
+    "category_scope",
+    "protocol_scope",
+    "vendor_guide_url",
+    "framework_refs",
+    "source_ids"
+  ],
+  "additionalProperties": false
+}

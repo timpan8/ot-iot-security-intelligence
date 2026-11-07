@@ -1,0 +1,1227 @@
+{
+  "_comment": "Radvisa kuraterade kompletteringar per Excel-rad (blad '66 system och tjänster'). Nyckel = radnummer. Fält som saknas fylls med regler i normalize.ts. Inga anläggningsdata. doc_level: product_manual|hardening_guide|security_guidance|bulletin_portal|vendor_support|industry_guide|standard|other.",
+  "rows": {
+    "2": {
+      "id": "pf-danfoss-ak-sm-800",
+      "vendor_id": "vendor-danfoss",
+      "aliases": ["AK-SM 800", "AK-SM 820", "AK-SM 850", "AK-SM 880"],
+      "lifecycle": {
+        "status": "eol",
+        "eol_date": null,
+        "eol_status": "needs_review",
+        "note": "Arbetsboken: 'Utgången enhet' – EOL-datum ej verifierat mot Danfoss."
+      },
+      "ot_role": "Överordnad kylstyrning (systemmanager) för butikskyla",
+      "ot_consequence": "Manipulation kan påverka kylkedja, livsmedelssäkerhet och energiförbrukning; larmhantering kan slås ut.",
+      "protocol_service_ids": ["svc-modbus-tcp", "svc-web-hmi-scada"],
+      "doc_level": "security_guidance",
+      "doc_product_specific": false,
+      "ot_impact": { "level": "high", "basis": "Kylkedja och larmhantering för livsmedel." },
+      "control_ids": ["ctl-eol-replacement"]
+    },
+    "3": {
+      "id": "pf-danfoss-ak-sm-800a",
+      "vendor_id": "vendor-danfoss",
+      "aliases": [
+        "AK-SM 800A",
+        "AK-SM 820A",
+        "AK-SM 850A",
+        "AK-SM 880A",
+        "AK-SM 8xxA",
+        "StoreView"
+      ],
+      "lifecycle": { "status": "active", "eol_date": null, "eol_status": "unknown", "note": null },
+      "ot_role": "Överordnad kylstyrning (systemmanager) med webbgränssnittet StoreView",
+      "ot_consequence": "Fjärrkodkörning eller DoS kan påverka kylreglering, larm och energistyrning för hela butiken.",
+      "protocol_service_ids": ["svc-modbus-tcp", "svc-web-hmi-scada"],
+      "doc_level": "security_guidance",
+      "doc_product_specific": true,
+      "ot_impact": { "level": "high", "basis": "Kylkedja och larmhantering för livsmedel." },
+      "control_ids": ["ctl-https-strict-mode"],
+      "claims": [
+        {
+          "id": "claim-pf-danfoss-ak-sm-800a-latest-fw",
+          "field": "risk_summary.fix_text",
+          "text": "Arbetsboken anger 'senast angiven 5.3.x (okt 2026)' som senaste firmware. Uppgiften är inte verifierad mot Danfoss nedladdningssida.",
+          "status": "needs_review",
+          "source_ids": ["src-workbook", "src-danfoss-ak-sm-800a-downloads"]
+        },
+        {
+          "id": "claim-pf-danfoss-ak-sm-800a-cve-split",
+          "field": "advisory_ids",
+          "text": "CVE-2025-41450 hör till DSA-2025-03-01 (bekräftat via NVD-referens); CVE-2025-41451 och CVE-2025-41452 anges tillhöra DSA-2025-08-01 enligt arbetsboken men sidan kunde inte läsas.",
+          "status": "needs_review",
+          "source_ids": ["src-nvd-cve-2025-41450", "src-danfoss-dsa-2025-08-01"]
+        }
+      ]
+    },
+    "4": {
+      "id": "pf-danfoss-ak-sc-355",
+      "vendor_id": "vendor-danfoss",
+      "aliases": ["AK-SC 355"],
+      "lifecycle": {
+        "status": "eol",
+        "eol_date": null,
+        "eol_status": "needs_review",
+        "note": "Arbetsboken: 'Äldre styrenhet', 'Planera utbyte' – EOL ej verifierat."
+      },
+      "ot_role": "Äldre kylsystemstyrning",
+      "ot_consequence": "Påverkan på kylreglering och larm.",
+      "protocol_service_ids": ["svc-modbus-tcp"],
+      "doc_level": "security_guidance",
+      "doc_product_specific": false,
+      "ot_impact": { "level": "high", "basis": "Kylkedja." },
+      "control_ids": ["ctl-eol-replacement"]
+    },
+    "5": {
+      "id": "pf-copeland-xweb-pro",
+      "vendor_id": "vendor-copeland",
+      "aliases": ["XWEB PRO", "XWEB 300D PRO", "XWEB 500D PRO", "XWEB 500B PRO", "Dixell XWEB"],
+      "lifecycle": { "status": "active", "eol_date": null, "eol_status": "unknown", "note": null },
+      "ot_role": "Kylövervakning och -styrning (gateway till Dixell-regulatorer)",
+      "ot_consequence": "Oautentiserad kodkörning kan ge kontroll över övervakning och anslutna kylregulatorer.",
+      "protocol_service_ids": ["svc-modbus-tcp", "svc-web-hmi-scada"],
+      "doc_level": "product_manual",
+      "doc_product_specific": true,
+      "ot_impact": { "level": "high", "basis": "Kylkedja; gateway till många regulatorer." },
+      "control_ids": [],
+      "claims": [
+        {
+          "id": "claim-pf-copeland-xweb-pro-fix-1-13",
+          "field": "risk_summary.fix_text",
+          "text": "Arbetsboken: 'Åtgärdad version 1.13 enligt tidigare verifiering'. CISA ICSA-26-057-10 anger att fix finns men ingen versionssiffra. Uppgiften hålls overifierad tills Copelands uppdateringssida bekräftar versionen.",
+          "status": "needs_review",
+          "source_ids": [
+            "src-workbook",
+            "src-cisa-icsa-26-057-10-csaf",
+            "src-copeland-xweb-update-page"
+          ]
+        }
+      ]
+    },
+    "6": {
+      "id": "pf-carel-pcoweb",
+      "vendor_id": "vendor-carel",
+      "aliases": ["pCOWeb", "pCO Web"],
+      "lifecycle": { "status": "unknown", "eol_date": null, "eol_status": "unknown", "note": null },
+      "ot_role": "Kommunikationskort/gateway för CAREL pCO-regulatorer (kyla/HVAC)",
+      "ot_consequence": "Åtkomst till regulatorparametrar och övervakning.",
+      "protocol_service_ids": ["svc-modbus-tcp", "svc-bacnet-ip", "svc-web-hmi-scada"],
+      "doc_level": "industry_guide",
+      "doc_product_specific": false,
+      "ot_impact": { "level": "medium", "basis": "Kyla/HVAC-reglering via OEM-system." },
+      "control_ids": ["ctl-vendor-hardening-guide"],
+      "claims": [
+        {
+          "id": "claim-pf-carel-pcoweb-oem-cves",
+          "field": "risk_summary.explanation_text",
+          "text": "Arbetsboken: tidigare rapporterade CVE gäller särskilda OEM-konfigurationer och får inte överföras till alla pCOWeb. Inga CVE-ID:n angivna; ingen matchning skapad.",
+          "status": "unknown",
+          "source_ids": ["src-workbook"]
+        }
+      ]
+    },
+    "7": {
+      "id": "pf-copeland-e2",
+      "vendor_id": "vendor-copeland",
+      "aliases": ["E2 Facility Management System", "Emerson E2", "E2 RX/BX/CX"],
+      "lifecycle": {
+        "status": "eol",
+        "eol_date": "2024-10",
+        "eol_status": "needs_review",
+        "note": "Arbetsboken: 'E2E EOL oktober 2024; migrering till E3' – ej verifierat mot Copeland."
+      },
+      "ot_role": "Central kyl- och byggnadsstyrning (supervisory controller)",
+      "ot_consequence": "Oautentiserade filoperationer kan ge kontroll över styrning av kyla, belysning och HVAC.",
+      "protocol_service_ids": ["svc-modbus-tcp", "svc-bacnet-ip"],
+      "doc_level": "vendor_support",
+      "doc_product_specific": false,
+      "ot_impact": { "level": "high", "basis": "Kylkedja och byggnadsstyrning; EOL utan fix." },
+      "control_ids": ["ctl-eol-replacement"]
+    },
+    "8": {
+      "id": "pf-copeland-e3",
+      "vendor_id": "vendor-copeland",
+      "aliases": ["E3 Site Supervisor", "E3 Supervisory Controller"],
+      "lifecycle": { "status": "active", "eol_date": null, "eol_status": "unknown", "note": null },
+      "ot_role": "Central kyl- och byggnadsstyrning (supervisory controller)",
+      "ot_consequence": "Förutsägbart administratörslösenord och kedjor av brister kan ge full kontroll över styrning.",
+      "protocol_service_ids": ["svc-modbus-tcp", "svc-bacnet-ip", "svc-web-hmi-scada"],
+      "doc_level": "product_manual",
+      "doc_product_specific": true,
+      "ot_impact": { "level": "high", "basis": "Kylkedja och byggnadsstyrning." },
+      "control_ids": ["ctl-change-default-credentials"],
+      "unexpanded_cve_ranges": [
+        {
+          "text": "CVE-2025-52543–52550",
+          "start": "CVE-2025-52543",
+          "end": "CVE-2025-52550",
+          "expanded": true,
+          "verified_ids": [
+            "cve-2025-52543",
+            "cve-2025-52544",
+            "cve-2025-52545",
+            "cve-2025-52546",
+            "cve-2025-52547",
+            "cve-2025-52548",
+            "cve-2025-52549",
+            "cve-2025-52550"
+          ],
+          "note": "Intervallet i arbetsboken expanderades först efter att varje ID verifierats separat mot NVD (2026-11-07). Samtliga avser E3 Site Supervisor < 2.31F01."
+        }
+      ]
+    },
+    "9": {
+      "id": "pf-tridium-niagara",
+      "vendor_id": "vendor-tridium",
+      "aliases": ["Niagara 4", "Niagara AX", "JACE"],
+      "lifecycle": {
+        "status": "mixed",
+        "eol_date": null,
+        "eol_status": "needs_review",
+        "note": "Arbetsboken: Niagara AX är utfasad; Niagara 4 aktiv. Datum ej verifierade."
+      },
+      "ot_role": "Fastighetsautomationsplattform/integrationsserver",
+      "ot_consequence": "Kontroll över BMS-integration, stationer och anslutna fältbussar.",
+      "protocol_service_ids": ["svc-bacnet-ip", "svc-modbus-tcp", "svc-web-hmi-scada"],
+      "doc_level": "hardening_guide",
+      "doc_product_specific": true,
+      "ot_impact": { "level": "high", "basis": "Integrationsplattform för många undersystem." },
+      "control_ids": ["ctl-vendor-hardening-guide"]
+    },
+    "10": {
+      "id": "pf-johnson-controls-metasys",
+      "vendor_id": "vendor-johnson-controls",
+      "aliases": ["Metasys", "NAE", "ADS/ADX"],
+      "lifecycle": { "status": "unknown", "eol_date": null, "eol_status": "unknown", "note": null },
+      "ot_role": "Central fastighetsautomation (BMS-server och nätverksmotorer)",
+      "ot_consequence": "Påverkan på HVAC-styrning, larm och behörigheter i hela fastighetsbeståndet.",
+      "protocol_service_ids": ["svc-bacnet-ip", "svc-web-hmi-scada"],
+      "doc_level": "security_guidance",
+      "doc_product_specific": true,
+      "ot_impact": { "level": "high", "basis": "Central BMS." },
+      "control_ids": ["ctl-vendor-hardening-guide"]
+    },
+    "11": {
+      "id": "pf-automated-logic-webctrl",
+      "vendor_id": "vendor-automated-logic",
+      "aliases": ["WebCTRL"],
+      "lifecycle": { "status": "unknown", "eol_date": null, "eol_status": "unknown", "note": null },
+      "ot_role": "Fastighetsstyrserver (BMS)",
+      "ot_consequence": "Påverkan på HVAC-styrning och användarbehörigheter.",
+      "protocol_service_ids": ["svc-bacnet-ip", "svc-web-hmi-scada"],
+      "doc_level": "industry_guide",
+      "doc_product_specific": false,
+      "ot_impact": { "level": "medium", "basis": "BMS-server." },
+      "control_ids": []
+    },
+    "12": {
+      "id": "pf-siemens-s7-1200",
+      "vendor_id": "vendor-siemens",
+      "aliases": ["SIMATIC S7-1200", "S7-1200 CPU"],
+      "lifecycle": { "status": "active", "eol_date": null, "eol_status": "unknown", "note": null },
+      "ot_role": "Kompakt industri-PLC",
+      "ot_consequence": "Manipulation av styrlogik kan påverka processintegritet, maskinsäkerhet och drift.",
+      "protocol_service_ids": ["svc-s7comm", "svc-modbus-tcp", "svc-opc-ua", "svc-web-hmi-scada"],
+      "doc_level": "security_guidance",
+      "doc_product_specific": true,
+      "ot_impact": { "level": "high", "basis": "Direkt processtyrning." },
+      "control_ids": ["ctl-protect-engineering-access"]
+    },
+    "13": {
+      "id": "pf-schneider-modicon-m241-m251",
+      "vendor_id": "vendor-schneider-electric",
+      "aliases": ["Modicon M241", "Modicon M251", "Modicon M262", "Modicon M258"],
+      "lifecycle": { "status": "unknown", "eol_date": null, "eol_status": "unknown", "note": null },
+      "ot_role": "Industri-PLC (maskin-/processtyrning)",
+      "ot_consequence": "Processintegritet och drift.",
+      "protocol_service_ids": [
+        "svc-modbus-tcp",
+        "svc-ethernet-ip-cip",
+        "svc-opc-ua",
+        "svc-web-hmi-scada"
+      ],
+      "doc_level": "security_guidance",
+      "doc_product_specific": true,
+      "ot_impact": { "level": "high", "basis": "Direkt processtyrning." },
+      "control_ids": ["ctl-disable-unused-services", "ctl-protect-engineering-access"]
+    },
+    "14": {
+      "id": "pf-rockwell-compactlogix",
+      "vendor_id": "vendor-rockwell-automation",
+      "aliases": ["CompactLogix 5370", "CompactLogix 5380", "Allen-Bradley CompactLogix"],
+      "lifecycle": { "status": "unknown", "eol_date": null, "eol_status": "unknown", "note": null },
+      "ot_role": "Industri-PLC/PAC",
+      "ot_consequence": "Processintegritet och drift.",
+      "protocol_service_ids": ["svc-ethernet-ip-cip"],
+      "doc_level": "product_manual",
+      "doc_product_specific": true,
+      "ot_impact": { "level": "high", "basis": "Direkt processtyrning." },
+      "control_ids": ["ctl-secure-protocol-features", "ctl-protect-engineering-access"]
+    },
+    "15": {
+      "id": "pf-rockwell-micro850",
+      "vendor_id": "vendor-rockwell-automation",
+      "aliases": ["Micro850", "Micro800", "2080-LC50", "2080-L50E"],
+      "lifecycle": { "status": "unknown", "eol_date": null, "eol_status": "unknown", "note": null },
+      "ot_role": "Kompakt PLC",
+      "ot_consequence": "Styrningsstörning/DoS.",
+      "protocol_service_ids": ["svc-ethernet-ip-cip", "svc-modbus-tcp"],
+      "doc_level": "industry_guide",
+      "doc_product_specific": false,
+      "ot_impact": { "level": "medium", "basis": "Kompakt PLC, ofta mindre processer." },
+      "control_ids": []
+    },
+    "16": {
+      "id": "pf-unitronics-vision",
+      "vendor_id": "vendor-unitronics",
+      "aliases": ["Vision", "Vision Standard", "Vision Enhanced", "Samba", "VisiLogic", "PCOM"],
+      "lifecycle": {
+        "status": "mixed",
+        "eol_date": null,
+        "eol_status": "needs_review",
+        "note": "Arbetsboken: 'Legacy-modeller'."
+      },
+      "ot_role": "PLC med integrerad HMI",
+      "ot_consequence": "Obehörig styrning via PCOM; KEV-listad standardlösenordsbrist exploaterad i vatten-/avloppssektorn enligt CISA.",
+      "protocol_service_ids": ["svc-modbus-tcp"],
+      "doc_level": "security_guidance",
+      "doc_product_specific": true,
+      "ot_impact": {
+        "level": "high",
+        "basis": "PLC/HMI i samhällsviktig infrastruktur (vatten) enligt CISA-alert."
+      },
+      "control_ids": ["ctl-change-default-credentials"]
+    },
+    "17": {
+      "id": "pf-weintek-cmt",
+      "vendor_id": "vendor-weintek",
+      "aliases": ["cMT", "cMT X", "EasyWeb", "EasyAccess"],
+      "lifecycle": { "status": "unknown", "eol_date": null, "eol_status": "unknown", "note": null },
+      "ot_role": "Industriell HMI",
+      "ot_consequence": "Konfigurations- och filåtkomst; indirekt påverkan på styrning via HMI.",
+      "protocol_service_ids": ["svc-web-hmi-scada", "svc-modbus-tcp"],
+      "doc_level": "security_guidance",
+      "doc_product_specific": true,
+      "ot_impact": { "level": "medium", "basis": "HMI med skrivåtkomst mot PLC." },
+      "control_ids": ["ctl-https-strict-mode"]
+    },
+    "18": {
+      "id": "pf-johnson-controls-istar",
+      "vendor_id": "vendor-johnson-controls",
+      "aliases": ["iSTAR Ultra", "iSTAR Edge", "iSTAR Pro", "Software House iSTAR", "C•CURE"],
+      "lifecycle": {
+        "status": "mixed",
+        "eol_date": null,
+        "eol_status": "unknown",
+        "note": "Arbetsboken: Ultra/SE/G2 skiljer sig."
+      },
+      "ot_role": "Dörr- och passerkontrollenhet",
+      "ot_consequence": "Fysisk säkerhet: dörrar kan öppnas/låsas eller larm manipuleras.",
+      "protocol_service_ids": ["svc-web-hmi-scada"],
+      "doc_level": "bulletin_portal",
+      "doc_product_specific": false,
+      "ot_impact": { "level": "high", "basis": "Fysisk åtkomstkontroll." },
+      "control_ids": []
+    },
+    "19": {
+      "id": "pf-regin-corrigo-exo",
+      "vendor_id": "vendor-regin",
+      "aliases": ["Corrigo", "EXOcompact", "EXOflex", "EXO"],
+      "lifecycle": { "status": "unknown", "eol_date": null, "eol_status": "unknown", "note": null },
+      "ot_role": "Ventilations- och värmeregulator",
+      "ot_consequence": "Börvärdesmanipulation kan påverka inomhusklimat och energi.",
+      "protocol_service_ids": ["svc-bacnet-ip", "svc-modbus-tcp", "svc-web-hmi-scada"],
+      "doc_level": "product_manual",
+      "doc_product_specific": true,
+      "ot_impact": { "level": "medium", "basis": "Inomhusklimat/energi." },
+      "control_ids": []
+    },
+    "20": {
+      "id": "pf-swegon-gold-iqlogic",
+      "vendor_id": "vendor-swegon",
+      "aliases": ["GOLD", "IQlogic", "IQnavigator"],
+      "lifecycle": { "status": "unknown", "eol_date": null, "eol_status": "unknown", "note": null },
+      "ot_role": "Ventilationsaggregat med integrerad styrning",
+      "ot_consequence": "Inomhusklimat, energi, eventuellt brandgasfunktioner.",
+      "protocol_service_ids": ["svc-bacnet-ip", "svc-modbus-tcp", "svc-web-hmi-scada"],
+      "doc_level": "vendor_support",
+      "doc_product_specific": false,
+      "ot_impact": { "level": "medium", "basis": "Ventilation." },
+      "control_ids": []
+    },
+    "21": {
+      "id": "pf-systemair-save-connect",
+      "vendor_id": "vendor-systemair",
+      "aliases": ["SAVE", "SAVE CONNECT", "SAVE Touch"],
+      "lifecycle": { "status": "unknown", "eol_date": null, "eol_status": "unknown", "note": null },
+      "ot_role": "Bostadsventilation med molnanslutning",
+      "ot_consequence": "Begränsad: inomhusklimat i bostad.",
+      "protocol_service_ids": ["svc-modbus-tcp", "svc-web-hmi-scada"],
+      "doc_level": "product_manual",
+      "doc_product_specific": true,
+      "ot_impact": { "level": "low", "basis": "Bostadsventilation." },
+      "control_ids": ["ctl-cloud-not-inbound"]
+    },
+    "22": {
+      "id": "pf-siemens-desigo-cc-pxc",
+      "vendor_id": "vendor-siemens",
+      "aliases": [
+        "Desigo CC",
+        "Desigo PXC",
+        "PXC4",
+        "PXC5",
+        "PXC7",
+        "Desigo CC Flex Client",
+        "Desigo CC ClickOnce Client",
+        "Desigo CC Installed Client"
+      ],
+      "lifecycle": { "status": "unknown", "eol_date": null, "eol_status": "unknown", "note": null },
+      "ot_role": "Byggnadsautomation: Desigo CC är överordnat managementsystem; PXC är automationsstationer/regulatorer",
+      "ot_consequence": "Klientkodkörning kan kompromettera operatörsdatorer och ge lateral rörelse; PXC-styrning påverkar HVAC direkt.",
+      "protocol_service_ids": ["svc-bacnet-ip", "svc-web-hmi-scada"],
+      "doc_level": "security_guidance",
+      "doc_product_specific": true,
+      "ot_impact": { "level": "high", "basis": "Central BMS + regulatorer." },
+      "control_ids": [],
+      "claims": [
+        {
+          "id": "claim-pf-siemens-desigo-cc-pxc-not-pxc",
+          "field": "match_ids",
+          "text": "SSA-330084/CVE-2026-34223 gäller Desigo CC-klientvarianter. PXC-styrenheter förekommer inte i bulletinens produktträd och får inte antas berörda.",
+          "status": "verified_primary",
+          "source_ids": ["src-siemens-ssa-330084-csaf"]
+        },
+        {
+          "id": "claim-pf-siemens-desigo-cc-pxc-nvd-text-conflict",
+          "field": "match_ids",
+          "text": "NVD:s beskrivning för CVE-2026-34223 räknar upp Desigo CC family V8/V9 och Flex Client V6/V7, medan Siemens CSAF product_status anger dem som known_not_affected. Projektet följer CSAF; posten markeras disputed tills NVD-texten eventuellt korrigeras.",
+          "status": "disputed",
+          "source_ids": ["src-nvd-cve-2026-34223", "src-siemens-ssa-330084-csaf"],
+          "conflict_note": "Beskrivningstext (NVD) vs. strukturerad produktstatus (Siemens CSAF)."
+        }
+      ]
+    },
+    "23": {
+      "id": "pf-schneider-ecostruxure-building-operation",
+      "vendor_id": "vendor-schneider-electric",
+      "aliases": ["EcoStruxure Building Operation", "EBO", "SmartX", "AS-P"],
+      "lifecycle": { "status": "unknown", "eol_date": null, "eol_status": "unknown", "note": null },
+      "ot_role": "BMS-plattform (servrar och automationsservrar)",
+      "ot_consequence": "Central BMS.",
+      "protocol_service_ids": ["svc-bacnet-ip", "svc-modbus-tcp", "svc-web-hmi-scada"],
+      "doc_level": "security_guidance",
+      "doc_product_specific": true,
+      "ot_impact": { "level": "high", "basis": "Central BMS." },
+      "control_ids": []
+    },
+    "24": {
+      "id": "pf-axis-ip-cameras",
+      "vendor_id": "vendor-axis",
+      "aliases": ["AXIS", "AXIS OS", "Axis Camera Station"],
+      "lifecycle": { "status": "unknown", "eol_date": null, "eol_status": "unknown", "note": null },
+      "ot_role": "Videoövervakning (nätverkskameror)",
+      "ot_consequence": "Åtkomst till video och kamerakonfiguration; kameror kan användas som språngbräda.",
+      "protocol_service_ids": ["svc-web-hmi-scada"],
+      "doc_level": "hardening_guide",
+      "doc_product_specific": false,
+      "ot_impact": {
+        "level": "medium",
+        "basis": "Integritet/övervakning; sällan processpåverkan."
+      },
+      "control_ids": ["ctl-vendor-hardening-guide"]
+    },
+    "25": {
+      "id": "pf-hikvision-ip-cameras-nvr",
+      "vendor_id": "vendor-hikvision",
+      "aliases": ["Hikvision", "HikCentral", "DS-"],
+      "lifecycle": { "status": "unknown", "eol_date": null, "eol_status": "unknown", "note": null },
+      "ot_role": "Videoövervakning (kameror och inspelare)",
+      "ot_consequence": "Åtkomst till video/konfiguration; språngbräda.",
+      "protocol_service_ids": ["svc-web-hmi-scada"],
+      "doc_level": "hardening_guide",
+      "doc_product_specific": true,
+      "ot_impact": { "level": "medium", "basis": "Övervakning." },
+      "control_ids": ["ctl-vendor-hardening-guide"]
+    },
+    "26": {
+      "id": "pf-dahua-ip-cameras-nvr",
+      "vendor_id": "vendor-dahua",
+      "aliases": ["Dahua", "DH-"],
+      "lifecycle": { "status": "unknown", "eol_date": null, "eol_status": "unknown", "note": null },
+      "ot_role": "Videoövervakning (kameror och inspelare)",
+      "ot_consequence": "Åtkomst till video/konfiguration; språngbräda.",
+      "protocol_service_ids": ["svc-web-hmi-scada"],
+      "doc_level": "industry_guide",
+      "doc_product_specific": false,
+      "ot_impact": { "level": "medium", "basis": "Övervakning." },
+      "control_ids": []
+    },
+    "27": {
+      "id": "pf-rco-r-card-m5",
+      "vendor_id": "vendor-rco",
+      "aliases": ["R-CARD M5", "R-CARD", "RCO M5"],
+      "lifecycle": { "status": "unknown", "eol_date": null, "eol_status": "unknown", "note": null },
+      "ot_role": "Passerkontrollserver",
+      "ot_consequence": "Fysisk åtkomstkontroll och behörighetsdata.",
+      "protocol_service_ids": ["svc-web-hmi-scada", "svc-historian-sql"],
+      "doc_level": "product_manual",
+      "doc_product_specific": true,
+      "ot_impact": { "level": "high", "basis": "Fysisk åtkomstkontroll." },
+      "control_ids": []
+    },
+    "28": {
+      "id": "pf-assa-abloy-arx",
+      "vendor_id": "vendor-assa-abloy",
+      "aliases": ["ARX", "ASSA ARX"],
+      "lifecycle": { "status": "unknown", "eol_date": null, "eol_status": "unknown", "note": null },
+      "ot_role": "Passerkontrollsystem",
+      "ot_consequence": "Fysisk åtkomstkontroll.",
+      "protocol_service_ids": ["svc-web-hmi-scada"],
+      "doc_level": "vendor_support",
+      "doc_product_specific": false,
+      "ot_impact": { "level": "high", "basis": "Fysisk åtkomstkontroll." },
+      "control_ids": []
+    },
+    "29": {
+      "id": "pf-assa-abloy-aptus",
+      "vendor_id": "vendor-assa-abloy",
+      "aliases": ["Aptus", "Aptus Logga", "Aptus Port"],
+      "lifecycle": { "status": "unknown", "eol_date": null, "eol_status": "unknown", "note": null },
+      "ot_role": "Passer- och porttelefonisystem (flerbostadshus)",
+      "ot_consequence": "Fysisk åtkomst till fastigheter, boendedata.",
+      "protocol_service_ids": ["svc-web-hmi-scada"],
+      "doc_level": "vendor_support",
+      "doc_product_specific": false,
+      "ot_impact": { "level": "high", "basis": "Fysisk åtkomstkontroll." },
+      "control_ids": []
+    },
+    "30": {
+      "id": "pf-2n-ip-verso-force",
+      "vendor_id": "vendor-2n",
+      "aliases": ["2N IP Verso", "2N IP Force", "2N IP Style", "2N Helios"],
+      "lifecycle": { "status": "unknown", "eol_date": null, "eol_status": "unknown", "note": null },
+      "ot_role": "IP-porttelefon med dörrrelä",
+      "ot_consequence": "Dörröppning via relä, avlyssning via SIP/kamera.",
+      "protocol_service_ids": ["svc-web-hmi-scada"],
+      "doc_level": "product_manual",
+      "doc_product_specific": true,
+      "ot_impact": { "level": "high", "basis": "Dörrstyrning." },
+      "control_ids": []
+    },
+    "31": {
+      "id": "pf-nibe-s-f-series",
+      "vendor_id": "vendor-nibe",
+      "aliases": ["NIBE S-serien", "NIBE F-serien", "myUplink", "NIBE Uplink"],
+      "lifecycle": { "status": "unknown", "eol_date": null, "eol_status": "unknown", "note": null },
+      "ot_role": "Värmepump med molnanslutning (myUplink)",
+      "ot_consequence": "Värme/varmvatten i fastighet; begränsad räckvidd.",
+      "protocol_service_ids": ["svc-modbus-tcp"],
+      "doc_level": "industry_guide",
+      "doc_product_specific": false,
+      "ot_impact": { "level": "low", "basis": "Enskild värmeanläggning." },
+      "control_ids": ["ctl-cloud-not-inbound"]
+    },
+    "32": {
+      "id": "pf-sma-sunny-webbox",
+      "vendor_id": "vendor-sma",
+      "aliases": ["Sunny WebBox"],
+      "lifecycle": {
+        "status": "eol",
+        "eol_date": null,
+        "eol_status": "needs_review",
+        "note": "Arbetsboken: 'EOL/äldre webbgränssnitt' – ej verifierat mot SMA."
+      },
+      "ot_role": "Solcellsövervakning/datalogger (äldre)",
+      "ot_consequence": "Övervakning och parametrar för växelriktare.",
+      "protocol_service_ids": ["svc-modbus-tcp", "svc-web-hmi-scada"],
+      "doc_level": "industry_guide",
+      "doc_product_specific": false,
+      "ot_impact": { "level": "medium", "basis": "Energiproduktion (lokal)." },
+      "control_ids": ["ctl-eol-replacement"]
+    },
+    "33": {
+      "id": "pf-fronius-datamanager",
+      "vendor_id": "vendor-fronius",
+      "aliases": ["Datamanager 2.0", "Fronius Solar.web"],
+      "lifecycle": { "status": "unknown", "eol_date": null, "eol_status": "unknown", "note": null },
+      "ot_role": "Datalogger/gateway för växelriktare",
+      "ot_consequence": "Påverkan på växelriktarinställningar och effektstyrning.",
+      "protocol_service_ids": ["svc-modbus-tcp", "svc-web-hmi-scada"],
+      "doc_level": "product_manual",
+      "doc_product_specific": true,
+      "ot_impact": { "level": "medium", "basis": "Energiproduktion (lokal)." },
+      "control_ids": ["ctl-cloud-not-inbound"],
+      "claims": [
+        {
+          "id": "claim-pf-fronius-datamanager-no-portforward",
+          "field": "risk_summary.explanation_text",
+          "text": "Arbetsboken: Fronius avråder uttryckligen från portforwarding till växelriktare. Uppgiften är hämtad från tillverkarens manual enligt arbetsboken men inte omläst i denna session.",
+          "status": "needs_review",
+          "source_ids": ["src-workbook"]
+        }
+      ]
+    },
+    "34": {
+      "id": "pf-solar-log-datalogger",
+      "vendor_id": "vendor-solar-log",
+      "aliases": ["Solar-Log", "Solar-Log Base"],
+      "lifecycle": {
+        "status": "mixed",
+        "eol_date": null,
+        "eol_status": "unknown",
+        "note": "Arbetsboken: EOL-/versionsgränser varierar med modell."
+      },
+      "ot_role": "Solcellsövervakning/datalogger",
+      "ot_consequence": "Övervakning och eventuell effektstyrning.",
+      "protocol_service_ids": ["svc-modbus-tcp", "svc-web-hmi-scada"],
+      "doc_level": "vendor_support",
+      "doc_product_specific": true,
+      "ot_impact": { "level": "medium", "basis": "Energiproduktion (lokal)." },
+      "control_ids": []
+    },
+    "35": {
+      "id": "pf-sungrow-winet-logger1000",
+      "vendor_id": "vendor-sungrow",
+      "aliases": ["WiNet-S", "WiNet-S2", "Logger1000", "iSolarCloud"],
+      "lifecycle": { "status": "unknown", "eol_date": null, "eol_status": "unknown", "note": null },
+      "ot_role": "Kommunikationsmodul/datalogger för solkraft",
+      "ot_consequence": "Växelriktarstyrning och övervakning.",
+      "protocol_service_ids": ["svc-modbus-tcp", "svc-mqtt"],
+      "doc_level": "product_manual",
+      "doc_product_specific": true,
+      "ot_impact": { "level": "medium", "basis": "Energiproduktion (lokal)." },
+      "control_ids": ["ctl-cloud-not-inbound"]
+    },
+    "36": {
+      "id": "pf-teltonika-rut",
+      "vendor_id": "vendor-teltonika",
+      "aliases": ["RUT", "RUT240", "RUT955", "RUTX", "RutOS"],
+      "lifecycle": { "status": "unknown", "eol_date": null, "eol_status": "unknown", "note": null },
+      "ot_role": "4G/5G-router för OT-fjärranslutning",
+      "ot_consequence": "Komprometterad router ger ingång till hela bakomliggande OT-nät.",
+      "protocol_service_ids": [
+        "svc-ot-remote-admin",
+        "svc-web-hmi-scada",
+        "svc-mqtt",
+        "svc-modbus-tcp"
+      ],
+      "doc_level": "security_guidance",
+      "doc_product_specific": true,
+      "ot_impact": { "level": "high", "basis": "Nätverksgräns mot OT." },
+      "control_ids": ["ctl-disable-unused-services", "ctl-monitor-remote-service"]
+    },
+    "37": {
+      "id": "pf-hms-ewon-cosy-flexy",
+      "vendor_id": "vendor-hms-networks",
+      "aliases": ["Ewon Cosy", "Ewon Cosy+", "Ewon Flexy", "Talk2M"],
+      "lifecycle": { "status": "unknown", "eol_date": null, "eol_status": "unknown", "note": null },
+      "ot_role": "Industriell fjärrservicegateway (VPN-tunnel via molntjänst)",
+      "ot_consequence": "Fjärrservicetunnel ger åtkomst till maskinnät; risk via WAN eller komprometterat molnkonto.",
+      "protocol_service_ids": ["svc-ot-remote-admin", "svc-modbus-tcp"],
+      "doc_level": "security_guidance",
+      "doc_product_specific": true,
+      "ot_impact": { "level": "high", "basis": "Fjärråtkomst till maskinnät." },
+      "control_ids": ["ctl-monitor-remote-service"]
+    },
+    "38": {
+      "id": "pf-apc-network-management-card",
+      "vendor_id": "vendor-schneider-electric",
+      "aliases": ["APC NMC", "NMC2", "NMC3", "AP9630", "AP9640", "AP9641"],
+      "lifecycle": {
+        "status": "mixed",
+        "eol_date": null,
+        "eol_status": "unknown",
+        "note": "Arbetsboken: CVE och senaste firmware kräver NMC-generation (NMC2 vs NMC3)."
+      },
+      "ot_role": "Nätverkskort för UPS-administration",
+      "ot_consequence": "Obehörig åtkomst kan stänga av eller störa strömförsörjning till kritisk utrustning.",
+      "protocol_service_ids": ["svc-web-hmi-scada", "svc-modbus-tcp"],
+      "doc_level": "security_guidance",
+      "doc_product_specific": true,
+      "ot_impact": { "level": "high", "basis": "Strömstyrning." },
+      "control_ids": []
+    },
+    "39": {
+      "id": "pf-synology-dsm",
+      "vendor_id": "vendor-synology",
+      "aliases": ["DSM", "DiskStation", "Synology NAS"],
+      "lifecycle": { "status": "unknown", "eol_date": null, "eol_status": "unknown", "note": null },
+      "ot_role": "NAS för backup/filer (ofta i OT-/fastighetsnät)",
+      "ot_consequence": "Ransomware/dataförlust; förlust av backup försvårar återställning av styrsystem.",
+      "protocol_service_ids": ["svc-web-hmi-scada", "svc-ot-remote-admin"],
+      "doc_level": "security_guidance",
+      "doc_product_specific": true,
+      "ot_impact": { "level": "medium", "basis": "Backup/återställning." },
+      "control_ids": ["ctl-backup-restore"]
+    },
+    "40": {
+      "id": "pf-qnap-qts-quts",
+      "vendor_id": "vendor-qnap",
+      "aliases": ["QTS", "QuTS hero", "QNAP NAS"],
+      "lifecycle": { "status": "unknown", "eol_date": null, "eol_status": "unknown", "note": null },
+      "ot_role": "NAS för backup/filer",
+      "ot_consequence": "Ransomware/dataförlust.",
+      "protocol_service_ids": ["svc-web-hmi-scada", "svc-ot-remote-admin"],
+      "doc_level": "security_guidance",
+      "doc_product_specific": true,
+      "ot_impact": { "level": "medium", "basis": "Backup/återställning." },
+      "control_ids": ["ctl-backup-restore"]
+    },
+    "41": {
+      "id": "pf-home-assistant",
+      "vendor_id": "vendor-home-assistant",
+      "aliases": ["Home Assistant OS", "HASS", "Nabu Casa Cloud"],
+      "lifecycle": { "status": "active", "eol_date": null, "eol_status": "unknown", "note": null },
+      "ot_role": "Hem-/byggnadsautomation (öppen källkod)",
+      "ot_consequence": "Styrning av anslutna enheter; beroende av tillägg och integrationer.",
+      "protocol_service_ids": ["svc-web-hmi-scada", "svc-mqtt", "svc-modbus-tcp"],
+      "doc_level": "security_guidance",
+      "doc_product_specific": true,
+      "ot_impact": {
+        "level": "low",
+        "basis": "Hemautomation; högre om styr fastighetsfunktioner."
+      },
+      "control_ids": ["ctl-cloud-not-inbound"]
+    },
+    "42": {
+      "id": "pf-abb-ac500-v3",
+      "vendor_id": "vendor-abb",
+      "aliases": ["AC500 V3", "AC500-eCo V3", "PM56xx", "Automation Builder"],
+      "lifecycle": { "status": "active", "eol_date": null, "eol_status": "unknown", "note": null },
+      "ot_role": "Industri-PLC (CODESYS-baserad runtime)",
+      "ot_consequence": "Processintegritet och drift; komponentsårbarheter via CODESYS.",
+      "protocol_service_ids": [
+        "svc-modbus-tcp",
+        "svc-opc-ua",
+        "svc-iec-104-dnp3",
+        "svc-web-hmi-scada"
+      ],
+      "doc_level": "bulletin_portal",
+      "doc_product_specific": false,
+      "ot_impact": { "level": "high", "basis": "Direkt processtyrning (inkl. energi)." },
+      "control_ids": ["ctl-supply-chain-vendor-risk"],
+      "claims": [
+        {
+          "id": "claim-pf-abb-ac500-v3-version-boundary",
+          "field": "risk_summary.affected_firmware_text",
+          "text": "Arbetsboken: '<3.9.0 för tidigare angiven bulletin (behöver kontrolleras mot ABB)'. De tre CVE:erna är verifierade som CODESYS-sårbarheter (CERT@VDE) men ABB:s mappning till AC500 V3-firmware är inte verifierad.",
+          "status": "needs_review",
+          "source_ids": [
+            "src-workbook",
+            "src-nvd-cve-2025-2595",
+            "src-nvd-cve-2025-41659",
+            "src-nvd-cve-2025-41691"
+          ]
+        }
+      ]
+    },
+    "43": {
+      "id": "pf-abb-system-800xa",
+      "vendor_id": "vendor-abb",
+      "aliases": ["800xA", "System 800xA", "AC 800M"],
+      "lifecycle": { "status": "unknown", "eol_date": null, "eol_status": "unknown", "note": null },
+      "ot_role": "DCS för processindustri",
+      "ot_consequence": "Processintegritet, säkerhet och tillgänglighet för hela anläggningen.",
+      "protocol_service_ids": ["svc-opc-ua", "svc-historian-sql", "svc-ot-remote-admin"],
+      "doc_level": "bulletin_portal",
+      "doc_product_specific": false,
+      "ot_impact": { "level": "high", "basis": "DCS – anläggningsomfattande." },
+      "control_ids": ["ctl-supply-chain-vendor-risk"]
+    },
+    "44": {
+      "id": "pf-beckhoff-cx-twincat-3",
+      "vendor_id": "vendor-beckhoff",
+      "aliases": ["TwinCAT 3", "Beckhoff CX", "ADS", "Secure ADS"],
+      "lifecycle": { "status": "unknown", "eol_date": null, "eol_status": "unknown", "note": null },
+      "ot_role": "PC-baserad automation/PLC",
+      "ot_consequence": "Processintegritet; oskyddad ADS ger bred åtkomst.",
+      "protocol_service_ids": ["svc-opc-ua", "svc-modbus-tcp", "svc-ethernet-ip-cip"],
+      "doc_level": "security_guidance",
+      "doc_product_specific": true,
+      "ot_impact": { "level": "high", "basis": "Direkt processtyrning." },
+      "control_ids": ["ctl-secure-protocol-features"]
+    },
+    "45": {
+      "id": "pf-wago-pfc100-pfc200-cc100",
+      "vendor_id": "vendor-wago",
+      "aliases": ["PFC100", "PFC200", "CC100", "WAGO 750/753"],
+      "lifecycle": { "status": "unknown", "eol_date": null, "eol_status": "unknown", "note": null },
+      "ot_role": "Industri-/energistyrning (Linux-baserad PLC)",
+      "ot_consequence": "Processintegritet; energistyrning.",
+      "protocol_service_ids": [
+        "svc-modbus-tcp",
+        "svc-opc-ua",
+        "svc-mqtt",
+        "svc-bacnet-ip",
+        "svc-web-hmi-scada"
+      ],
+      "doc_level": "security_guidance",
+      "doc_product_specific": true,
+      "ot_impact": { "level": "high", "basis": "Direkt processtyrning." },
+      "control_ids": ["ctl-disable-unused-services"]
+    },
+    "46": {
+      "id": "pf-phoenix-contact-plcnext-axc",
+      "vendor_id": "vendor-phoenix-contact",
+      "aliases": ["PLCnext", "AXC F 2152", "AXC F 3152", "PLCnext Engineer"],
+      "lifecycle": { "status": "unknown", "eol_date": null, "eol_status": "unknown", "note": null },
+      "ot_role": "PLCnext-styrning (öppen PLC-plattform)",
+      "ot_consequence": "Processintegritet.",
+      "protocol_service_ids": ["svc-modbus-tcp", "svc-opc-ua", "svc-web-hmi-scada"],
+      "doc_level": "security_guidance",
+      "doc_product_specific": true,
+      "ot_impact": { "level": "high", "basis": "Direkt processtyrning." },
+      "control_ids": []
+    },
+    "47": {
+      "id": "pf-siemens-s7-1500",
+      "vendor_id": "vendor-siemens",
+      "aliases": ["SIMATIC S7-1500", "S7-1500 CPU", "ET 200SP CPU"],
+      "lifecycle": { "status": "active", "eol_date": null, "eol_status": "unknown", "note": null },
+      "ot_role": "Industri-PLC för större anläggningar",
+      "ot_consequence": "Processintegritet, maskinsäkerhet och drift.",
+      "protocol_service_ids": ["svc-s7comm", "svc-opc-ua", "svc-modbus-tcp", "svc-web-hmi-scada"],
+      "doc_level": "security_guidance",
+      "doc_product_specific": true,
+      "ot_impact": { "level": "high", "basis": "Direkt processtyrning." },
+      "control_ids": ["ctl-protect-engineering-access"]
+    },
+    "48": {
+      "id": "pf-rockwell-controllogix",
+      "vendor_id": "vendor-rockwell-automation",
+      "aliases": ["ControlLogix 5570", "ControlLogix 5580", "GuardLogix", "1756-EN2T"],
+      "lifecycle": { "status": "unknown", "eol_date": null, "eol_status": "unknown", "note": null },
+      "ot_role": "Industriell PAC (processtyrning)",
+      "ot_consequence": "Processintegritet; både CPU och kommunikationsmodul relevanta.",
+      "protocol_service_ids": ["svc-ethernet-ip-cip"],
+      "doc_level": "security_guidance",
+      "doc_product_specific": true,
+      "ot_impact": { "level": "high", "basis": "Direkt processtyrning." },
+      "control_ids": ["ctl-secure-protocol-features", "ctl-protect-engineering-access"]
+    },
+    "49": {
+      "id": "pf-mitsubishi-melsec-iq-r-iq-f",
+      "vendor_id": "vendor-mitsubishi-electric",
+      "aliases": ["MELSEC iQ-R", "MELSEC iQ-F", "GX Works3", "SLMP"],
+      "lifecycle": { "status": "unknown", "eol_date": null, "eol_status": "unknown", "note": null },
+      "ot_role": "Industri-PLC",
+      "ot_consequence": "Processintegritet.",
+      "protocol_service_ids": ["svc-modbus-tcp", "svc-opc-ua", "svc-ethernet-ip-cip"],
+      "doc_level": "security_guidance",
+      "doc_product_specific": true,
+      "ot_impact": { "level": "high", "basis": "Direkt processtyrning." },
+      "control_ids": ["ctl-protect-engineering-access"]
+    },
+    "50": {
+      "id": "pf-omron-nx-nj",
+      "vendor_id": "vendor-omron",
+      "aliases": ["NX1", "NX7", "NJ", "Sysmac", "FINS"],
+      "lifecycle": { "status": "unknown", "eol_date": null, "eol_status": "unknown", "note": null },
+      "ot_role": "Industri-PLC (Sysmac)",
+      "ot_consequence": "Processintegritet.",
+      "protocol_service_ids": ["svc-ethernet-ip-cip", "svc-opc-ua", "svc-modbus-tcp"],
+      "doc_level": "bulletin_portal",
+      "doc_product_specific": false,
+      "ot_impact": { "level": "high", "basis": "Direkt processtyrning." },
+      "control_ids": ["ctl-protect-engineering-access"]
+    },
+    "51": {
+      "id": "pf-inductive-automation-ignition",
+      "vendor_id": "vendor-inductive-automation",
+      "aliases": ["Ignition", "Ignition Gateway", "Ignition Perspective"],
+      "lifecycle": { "status": "active", "eol_date": null, "eol_status": "unknown", "note": null },
+      "ot_role": "SCADA/HMI-gateway och integrationsplattform",
+      "ot_consequence": "Kontroll över visualisering, tagdata och skrivningar mot PLC.",
+      "protocol_service_ids": ["svc-web-hmi-scada", "svc-opc-ua", "svc-mqtt", "svc-historian-sql"],
+      "doc_level": "hardening_guide",
+      "doc_product_specific": true,
+      "ot_impact": { "level": "high", "basis": "SCADA med skrivåtkomst." },
+      "control_ids": ["ctl-vendor-hardening-guide"]
+    },
+    "52": {
+      "id": "pf-siemens-wincc-unified",
+      "vendor_id": "vendor-siemens",
+      "aliases": ["WinCC", "WinCC Unified", "WinCC V7", "WinCC Professional"],
+      "lifecycle": {
+        "status": "mixed",
+        "eol_date": null,
+        "eol_status": "unknown",
+        "note": "Arbetsboken: olika WinCC-generationer."
+      },
+      "ot_role": "SCADA/HMI",
+      "ot_consequence": "Kontroll över visualisering och operatörskommandon.",
+      "protocol_service_ids": [
+        "svc-web-hmi-scada",
+        "svc-s7comm",
+        "svc-opc-ua",
+        "svc-historian-sql"
+      ],
+      "doc_level": "security_guidance",
+      "doc_product_specific": false,
+      "ot_impact": { "level": "high", "basis": "SCADA med skrivåtkomst." },
+      "control_ids": []
+    },
+    "53": {
+      "id": "pf-aveva-intouch-plant-scada",
+      "vendor_id": "vendor-aveva",
+      "aliases": ["InTouch", "Plant SCADA", "Citect SCADA", "System Platform"],
+      "lifecycle": { "status": "unknown", "eol_date": null, "eol_status": "unknown", "note": null },
+      "ot_role": "SCADA/HMI",
+      "ot_consequence": "Kontroll över visualisering och operatörskommandon.",
+      "protocol_service_ids": ["svc-web-hmi-scada", "svc-opc-ua", "svc-historian-sql"],
+      "doc_level": "security_guidance",
+      "doc_product_specific": true,
+      "ot_impact": { "level": "high", "basis": "SCADA med skrivåtkomst." },
+      "control_ids": []
+    },
+    "54": {
+      "id": "pf-ptc-kepware-kepserverex",
+      "vendor_id": "vendor-ptc",
+      "aliases": ["KEPServerEX", "Kepware Server", "ThingWorx Kepware"],
+      "lifecycle": { "status": "active", "eol_date": null, "eol_status": "unknown", "note": null },
+      "ot_role": "OPC-/kommunikationsserver mellan PLC och IT/SCADA",
+      "ot_consequence": "Manipulation av tagdata mot många PLC; konfigurations-API kan exponera känsliga data.",
+      "protocol_service_ids": [
+        "svc-opc-ua",
+        "svc-modbus-tcp",
+        "svc-ethernet-ip-cip",
+        "svc-s7comm",
+        "svc-mqtt",
+        "svc-web-hmi-scada"
+      ],
+      "doc_level": "security_guidance",
+      "doc_product_specific": true,
+      "ot_impact": { "level": "high", "basis": "Nav mellan många PLC och IT." },
+      "control_ids": ["ctl-disable-unused-services", "ctl-secure-protocol-features"],
+      "claims": [
+        {
+          "id": "claim-pf-ptc-kepware-http-api",
+          "field": "risk_summary.explanation_text",
+          "text": "Arbetsboken: PTC varnar uttryckligen att HTTP Configuration API kan exponera känsliga data (käll-URL till PTC:s dokumentation, rad 54). Sidan ej omläst i denna session.",
+          "status": "needs_review",
+          "source_ids": ["src-workbook"]
+        }
+      ]
+    },
+    "55": {
+      "id": "pf-moxa-nport-edr",
+      "vendor_id": "vendor-moxa",
+      "aliases": ["NPort 5000", "NPort 6000", "EDR-810", "EDR-G902", "EDR-G903"],
+      "lifecycle": {
+        "status": "mixed",
+        "eol_date": null,
+        "eol_status": "unknown",
+        "note": "Arbetsboken: produktfamiljer varierar."
+      },
+      "ot_role": "Serie-till-IP-server respektive industriell router/brandvägg",
+      "ot_consequence": "Åtkomst till seriella fältenheter eller nätgräns.",
+      "protocol_service_ids": ["svc-web-hmi-scada", "svc-ot-remote-admin", "svc-modbus-tcp"],
+      "doc_level": "product_manual",
+      "doc_product_specific": false,
+      "ot_impact": { "level": "high", "basis": "Nätgräns/fältbussåtkomst." },
+      "control_ids": ["ctl-disable-unused-services"]
+    },
+    "56": {
+      "id": "pf-schneider-easergy-saitel",
+      "vendor_id": "vendor-schneider-electric",
+      "aliases": ["Easergy", "Saitel DP", "Saitel DR", "Easergy T300"],
+      "lifecycle": { "status": "unknown", "eol_date": null, "eol_status": "unknown", "note": null },
+      "ot_role": "Elkraft-RTU (ställverk/nätstationer)",
+      "ot_consequence": "Fjärrmanövrering av brytare och eldistribution.",
+      "protocol_service_ids": ["svc-iec-104-dnp3", "svc-iec-61850-mms", "svc-modbus-tcp"],
+      "doc_level": "industry_guide",
+      "doc_product_specific": false,
+      "ot_impact": { "level": "high", "basis": "Elförsörjning." },
+      "control_ids": []
+    },
+
+    "57": {
+      "id": "svc-modbus-tcp",
+      "aliases": ["Modbus/TCP", "Modbus"],
+      "typical_use": "Register-/spoleåtkomst mot PLC, energimätare, växelriktare, kylregulatorer.",
+      "default_ports": [
+        {
+          "port": 502,
+          "transport": "tcp",
+          "note": "IANA-registrerad (mbap)",
+          "status": "corroborated_secondary",
+          "source_ids": ["src-iana-ports", "src-workbook"]
+        }
+      ],
+      "authentication": "none",
+      "encryption": "none",
+      "security_notes": "Klassisk Modbus/TCP saknar autentisering och kryptering; Modbus/TCP Security (TLS, port 802) finns men har begränsat stöd.",
+      "allowed_zones": "Endast inom styrsystemszon eller via protokollmedveten brandvägg från övervakningszon; aldrig från internet.",
+      "doc_level": "industry_guide",
+      "doc_product_specific": false,
+      "ot_impact": { "level": "high", "basis": "Skrivkommandon mot styrenheter." },
+      "control_ids": ["ctl-protocol-firewall-allowlist"]
+    },
+    "58": {
+      "id": "svc-ethernet-ip-cip",
+      "aliases": ["EtherNet/IP", "CIP", "ENIP"],
+      "typical_use": "PLC-, I/O- och SCADA-kommunikation i Rockwell/ODVA-miljöer.",
+      "default_ports": [
+        {
+          "port": 44818,
+          "transport": "tcp/udp",
+          "note": "Explicit messaging (IANA: EtherNet/IP-1)",
+          "status": "corroborated_secondary",
+          "source_ids": ["src-iana-ports", "src-workbook"]
+        },
+        {
+          "port": 2222,
+          "transport": "udp",
+          "note": "Implicit I/O messaging",
+          "status": "corroborated_secondary",
+          "source_ids": ["src-iana-ports"]
+        }
+      ],
+      "authentication": "optional",
+      "encryption": "optional",
+      "security_notes": "Utan CIP Security saknas autentisering/kryptering; CIP Security (TLS/DTLS) kräver stöd i både styrenhet och moduler.",
+      "allowed_zones": "Styrsystemszon; engineering/SCADA via kontrollerad conduit.",
+      "doc_level": "security_guidance",
+      "doc_product_specific": false,
+      "ot_impact": { "level": "high", "basis": "Styr- och I/O-trafik." },
+      "control_ids": ["ctl-protocol-firewall-allowlist", "ctl-secure-protocol-features"]
+    },
+    "59": {
+      "id": "svc-s7comm",
+      "aliases": ["S7comm", "S7comm-plus", "ISO-on-TCP", "RFC 1006"],
+      "typical_use": "PG/PC- och HMI-kommunikation med Siemens SIMATIC-PLC.",
+      "default_ports": [
+        {
+          "port": 102,
+          "transport": "tcp",
+          "note": "ISO-TSAP (RFC 1006); delas med IEC 61850 MMS",
+          "status": "corroborated_secondary",
+          "source_ids": ["src-iana-ports", "src-workbook"]
+        }
+      ],
+      "authentication": "depends",
+      "encryption": "depends",
+      "security_notes": "Legacy-läge har svagt skydd (se SSA-568427); nyare CPU-firmware stöder TLS-skyddad PG/PC-/HMI-kommunikation som måste aktiveras.",
+      "allowed_zones": "Endast styrsystemszon och engineering-zon.",
+      "doc_level": "security_guidance",
+      "doc_product_specific": false,
+      "ot_impact": { "level": "high", "basis": "Programmerings- och HMI-åtkomst till PLC." },
+      "control_ids": ["ctl-secure-plc-communication", "ctl-protect-engineering-access"]
+    },
+    "60": {
+      "id": "svc-opc-ua",
+      "aliases": ["OPC UA", "OPC Unified Architecture"],
+      "typical_use": "Integrationsdata mellan OT och IT/SCADA/MES.",
+      "default_ports": [
+        {
+          "port": 4840,
+          "transport": "tcp",
+          "note": "IANA-registrerad (opcua-tcp)",
+          "status": "corroborated_secondary",
+          "source_ids": ["src-iana-ports", "src-workbook"]
+        }
+      ],
+      "authentication": "optional",
+      "encryption": "optional",
+      "security_notes": "OPC UA har inbyggd säkerhetsmodell (certifikat, signering, kryptering, användarroller) men 'None'-policy och anonym inloggning är vanliga felkonfigurationer.",
+      "allowed_zones": "DMZ/integrationszon med certifikatförtroende; aldrig öppen mot internet.",
+      "doc_level": "standard",
+      "doc_product_specific": true,
+      "ot_impact": { "level": "medium", "basis": "Beror på om skrivning tillåts." },
+      "control_ids": ["ctl-secure-protocol-features"]
+    },
+    "61": {
+      "id": "svc-bacnet-ip",
+      "aliases": ["BACnet/IP", "BACnet", "BACnet/SC"],
+      "typical_use": "Fastighetsautomation (HVAC, belysning, mätare).",
+      "default_ports": [
+        {
+          "port": 47808,
+          "transport": "udp",
+          "note": "0xBAC0 (IANA: bacnet)",
+          "status": "corroborated_secondary",
+          "source_ids": ["src-iana-ports", "src-workbook"]
+        }
+      ],
+      "authentication": "none",
+      "encryption": "none",
+      "security_notes": "Klassisk BACnet/IP saknar autentisering/kryptering; BACnet/SC (Secure Connect) ger TLS men kräver stöd i enheter.",
+      "allowed_zones": "Fastighetsautomationszon; ingen routing från internet.",
+      "doc_level": "industry_guide",
+      "doc_product_specific": false,
+      "ot_impact": { "level": "medium", "basis": "Byggnadsstyrning." },
+      "control_ids": ["ctl-protocol-firewall-allowlist", "ctl-secure-protocol-features"]
+    },
+    "62": {
+      "id": "svc-iec-104-dnp3",
+      "aliases": ["IEC 60870-5-104", "IEC 104", "DNP3"],
+      "typical_use": "Fjärrstyrning av RTU:er i el- och vattennät.",
+      "default_ports": [
+        {
+          "port": 2404,
+          "transport": "tcp",
+          "note": "IEC 60870-5-104 (IANA: iec-104)",
+          "status": "corroborated_secondary",
+          "source_ids": ["src-iana-ports", "src-workbook"]
+        },
+        {
+          "port": 20000,
+          "transport": "tcp",
+          "note": "DNP3 (IANA: dnp)",
+          "status": "corroborated_secondary",
+          "source_ids": ["src-iana-ports", "src-workbook"]
+        }
+      ],
+      "authentication": "optional",
+      "encryption": "optional",
+      "security_notes": "Grundprotokollen saknar skydd; DNP3 Secure Authentication och IEC 62351 finns som utökningar med varierande stöd.",
+      "allowed_zones": "Dedikerad SCADA/RTU-zon med kontrollerade conduits (ofta egna WAN-länkar/VPN).",
+      "doc_level": "industry_guide",
+      "doc_product_specific": false,
+      "ot_impact": { "level": "high", "basis": "El- och vattenförsörjning." },
+      "control_ids": ["ctl-protocol-firewall-allowlist", "ctl-secure-protocol-features"]
+    },
+    "63": {
+      "id": "svc-iec-61850-mms",
+      "aliases": ["IEC 61850", "MMS", "GOOSE"],
+      "typical_use": "Kommunikation i elstationer (IED, skydd, reläer).",
+      "default_ports": [
+        {
+          "port": 102,
+          "transport": "tcp",
+          "note": "MMS över ISO-TSAP; delas med S7comm",
+          "status": "corroborated_secondary",
+          "source_ids": ["src-iana-ports", "src-workbook"]
+        }
+      ],
+      "authentication": "optional",
+      "encryption": "optional",
+      "security_notes": "Säkerhet via IEC 62351 där stöd finns; annars nätzonering och åtkomstlistor.",
+      "allowed_zones": "Stationsbuss/processbuss, strikt isolerat.",
+      "doc_level": "industry_guide",
+      "doc_product_specific": false,
+      "ot_impact": { "level": "high", "basis": "Elstationsskydd och -styrning." },
+      "control_ids": ["ctl-protocol-firewall-allowlist", "ctl-secure-protocol-features"]
+    },
+    "64": {
+      "id": "svc-mqtt",
+      "aliases": ["MQTT", "MQTT over TLS", "MQTTS"],
+      "typical_use": "Telemetri/broker för IoT och OT-integration (t.ex. Sparkplug).",
+      "default_ports": [
+        {
+          "port": 1883,
+          "transport": "tcp",
+          "note": "MQTT utan TLS (IANA: mqtt)",
+          "status": "corroborated_secondary",
+          "source_ids": ["src-iana-ports", "src-workbook"]
+        },
+        {
+          "port": 8883,
+          "transport": "tcp",
+          "note": "MQTT över TLS (IANA: secure-mqtt)",
+          "status": "corroborated_secondary",
+          "source_ids": ["src-iana-ports", "src-workbook"]
+        }
+      ],
+      "authentication": "optional",
+      "encryption": "optional",
+      "security_notes": "Risken ligger i brokerkonfiguration: anonym åtkomst, breda topic-ACL:er och avsaknad av TLS/klientcertifikat.",
+      "allowed_zones": "Broker i DMZ/integrationszon; klienter autentiserade.",
+      "doc_level": "industry_guide",
+      "doc_product_specific": false,
+      "ot_impact": { "level": "medium", "basis": "Beror på om kommandon skickas via topics." },
+      "control_ids": ["ctl-secure-protocol-features", "ctl-least-privilege-accounts"]
+    },
+    "65": {
+      "id": "svc-web-hmi-scada",
+      "aliases": ["Webb-HMI", "Web SCADA", "HTTP/HTTPS-administration"],
+      "typical_use": "Operatörs- och driftpaneler samt administrationsgränssnitt över HTTP/HTTPS.",
+      "default_ports": [
+        {
+          "port": 80,
+          "transport": "tcp",
+          "note": "HTTP",
+          "status": "corroborated_secondary",
+          "source_ids": ["src-iana-ports"]
+        },
+        {
+          "port": 443,
+          "transport": "tcp",
+          "note": "HTTPS",
+          "status": "corroborated_secondary",
+          "source_ids": ["src-iana-ports"]
+        }
+      ],
+      "authentication": "depends",
+      "encryption": "depends",
+      "security_notes": "HTTP-titeln 'HMI' är en osäker produktsignatur; många tekniker möjliga. Risker: svag autentisering, sessionshantering, exponerad panel.",
+      "allowed_zones": "Åtkomst via skyddad fjärråtkomst eller intern zon; aldrig direkt från internet.",
+      "doc_level": "hardening_guide",
+      "doc_product_specific": false,
+      "ot_impact": { "level": "high", "basis": "Operatörskommandon." },
+      "control_ids": ["ctl-https-strict-mode", "ctl-secure-remote-access"]
+    },
+    "66": {
+      "id": "svc-historian-sql",
+      "aliases": ["Historian", "MSSQL", "SQL Server", "Processhistorik"],
+      "typical_use": "Processhistorik, databaser för SCADA/MES.",
+      "default_ports": [
+        {
+          "port": 1433,
+          "transport": "tcp",
+          "note": "Microsoft SQL Server (IANA: ms-sql-s)",
+          "status": "corroborated_secondary",
+          "source_ids": ["src-iana-ports", "src-workbook"]
+        }
+      ],
+      "authentication": "required",
+      "encryption": "optional",
+      "security_notes": "Port 1433 kan vara MSSQL men säger inget om applikationens innehåll; risker: svaga konton, publik SQL, otillräcklig kryptering.",
+      "allowed_zones": "Data-/DMZ-zon; ingen direkt internetexponering.",
+      "doc_level": "security_guidance",
+      "doc_product_specific": true,
+      "ot_impact": {
+        "level": "medium",
+        "basis": "Dataintegritet och spårbarhet; sällan direkt styrning."
+      },
+      "control_ids": ["ctl-backup-restore", "ctl-least-privilege-accounts"]
+    },
+    "67": {
+      "id": "svc-ot-remote-admin",
+      "aliases": ["RDP", "VNC", "SSH", "Fjärradministration"],
+      "typical_use": "Drift, service och engineering via fjärrskrivbord/skal.",
+      "default_ports": [
+        {
+          "port": 3389,
+          "transport": "tcp",
+          "note": "RDP (IANA: ms-wbt-server)",
+          "status": "corroborated_secondary",
+          "source_ids": ["src-iana-ports", "src-workbook"]
+        },
+        {
+          "port": 5900,
+          "transport": "tcp",
+          "note": "VNC (IANA: rfb)",
+          "status": "corroborated_secondary",
+          "source_ids": ["src-iana-ports", "src-workbook"]
+        },
+        {
+          "port": 22,
+          "transport": "tcp",
+          "note": "SSH",
+          "status": "corroborated_secondary",
+          "source_ids": ["src-iana-ports", "src-workbook"]
+        }
+      ],
+      "authentication": "required",
+      "encryption": "depends",
+      "security_notes": "Tjänsten kan tillhöra gateway, engineering-system eller annat; inte automatiskt OT. Risker: gissningsbara uppgifter, direkt admin, stulna konton.",
+      "allowed_zones": "Endast via jump host/VPN med MFA; aldrig direkt från internet.",
+      "doc_level": "security_guidance",
+      "doc_product_specific": true,
+      "ot_impact": { "level": "high", "basis": "Administrativ åtkomst till OT-system." },
+      "control_ids": ["ctl-secure-remote-access", "ctl-monitor-remote-service"]
+    }
+  }
+}

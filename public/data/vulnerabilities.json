@@ -1,0 +1,3906 @@
+[
+  {
+    "id": "cve-2022-38465",
+    "cve_id": "CVE-2022-38465",
+    "cve_status": "published",
+    "nvd_status": "Modified",
+    "summary": "A vulnerability has been identified in SIMATIC Drive Controller family (All versions < V2.9.2), SIMATIC ET 200SP Open Controller CPU 1515SP PC (incl. SIPLUS variants) (All versions), SIMATIC ET 200SP Open Controller CPU 1515SP PC2 (incl. SIPLUS variants) (All versions < V21.9), SIMATIC S7-1200 CPU family (incl. SIPLUS variants) (All versions < V4.5.0), SIMATIC S7-1500 CPU family (incl. related ET200 CPUs and SIPLUS variants) (All versions < V2.9.2), SIMATIC S7-1500 Software Controller (All versions < V21.9), SIMATIC S7-PLCSIM Advanced (All versions < V4.0), SINUMERIK MC (All versions < V6.21), SINUMERIK ONE (All versions < V6.21). Affected products protect the built-in global private key in a way that cannot be considered sufficient any longer. The key is used for the legacy protection of confidential configuration data and the legacy PG/PC and HMI communication. This could allow attackers to discover the private key of a CPU product family by an offline attack against a single CPU of the family. Attackers could then use this knowledge to extract confidential configuration data from projects that are protected by that key or to perform attacks against legacy PG/PC and HMI communication.",
+    "summary_sv": "SIMATIC S7-1200/S7-1500 m.fl.: otillräckligt skydd av inbyggd global privat nyckel; offline-angrepp mot en CPU kan ge nyckeln för hela produktfamiljen och möjliggöra utvinning av skyddad konfiguration eller angrepp mot legacy PG/PC- och HMI-kommunikation (CWE-522; CVSS 3.1: 9.3 CRITICAL med temporal E:P/RL:O/RC:C enligt Siemens).",
+    "cwe_ids": [
+      "CWE-522"
+    ],
+    "cvss": [
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+        "base_score": 9.3,
+        "base_severity": "CRITICAL",
+        "source": "productcert@siemens.com",
+        "type": "Secondary"
+      },
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+        "base_score": 7.8,
+        "base_severity": "HIGH",
+        "source": "nvd@nist.gov",
+        "type": "Primary"
+      }
+    ],
+    "epss": {
+      "score": 0.00241,
+      "percentile": 0.15328,
+      "date": "2026-11-07",
+      "fetched_at": "2026-11-07T20:59:08.891Z"
+    },
+    "kev": {
+      "listed": false,
+      "date_added": null,
+      "due_date": null,
+      "known_ransomware_use": null,
+      "vulnerability_name": null,
+      "catalog_version": "2026.11.06",
+      "checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "exploitation_evidence": [
+      {
+        "type": "none_reported",
+        "description": "Ej i CISA KEV (katalog 2026.11.06).",
+        "date": "2026-11-07",
+        "source_ids": [
+          "src-cisa-kev"
+        ],
+        "status": "verified_primary"
+      }
+    ],
+    "cna": "productcert@siemens.com",
+    "published_at": "2022-10-11T11:15:10.357Z",
+    "last_modified_at": "2026-06-17T04:56:40.753Z",
+    "references": [
+      {
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-568427.pdf",
+        "tags": [
+          "Vendor Advisory"
+        ]
+      },
+      {
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-568428.pdf",
+        "tags": []
+      }
+    ],
+    "advisory_ids": [
+      "adv-siemens-ssa-568427"
+    ],
+    "source_ids": [
+      "src-nvd-cve-2022-38465",
+      "src-first-epss"
+    ],
+    "verification_status": "verified_primary",
+    "enrichment": {
+      "nvd_fetched_at": "2026-11-07T20:25:53.966Z",
+      "epss_fetched_at": "2026-11-07T20:59:08.891Z",
+      "kev_checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [],
+      "history": []
+    }
+  },
+  {
+    "id": "cve-2023-6448",
+    "cve_id": "CVE-2023-6448",
+    "cve_status": "published",
+    "nvd_status": "Analyzed",
+    "summary": "Unitronics VisiLogic before version 9.9.00, used in Vision and Samba PLCs and HMIs, uses a default administrative password. An unauthenticated attacker with network access can take administrative control of a vulnerable system.",
+    "summary_sv": "Unitronics VisiLogic före 9.9.00 (Vision- och Samba-PLC/HMI) använder ett standardadministratörslösenord; oautentiserad angripare med nätverksåtkomst kan ta administrativ kontroll (CWE-798; CVSS 3.1: 9.8 CRITICAL). Upptagen i CISA KEV 2023-12-11.",
+    "cwe_ids": [
+      "CWE-1188",
+      "CWE-798"
+    ],
+    "cvss": [
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "base_score": 9.8,
+        "base_severity": "CRITICAL",
+        "source": "9119a7d8-5eab-497f-8521-727c672e3725",
+        "type": "Secondary"
+      },
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "base_score": 9.8,
+        "base_severity": "CRITICAL",
+        "source": "nvd@nist.gov",
+        "type": "Primary"
+      }
+    ],
+    "epss": {
+      "score": 0.02089,
+      "percentile": 0.81714,
+      "date": "2026-11-07",
+      "fetched_at": "2026-11-07T20:59:08.891Z"
+    },
+    "kev": {
+      "listed": true,
+      "date_added": "2023-12-11",
+      "due_date": "2023-12-18",
+      "known_ransomware_use": "Unknown",
+      "vulnerability_name": "Unitronics Vision PLC and HMI Insecure Default Password Vulnerability",
+      "catalog_version": "2026.11.06",
+      "checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "exploitation_evidence": [
+      {
+        "type": "kev",
+        "description": "CISA KEV: 'Unitronics Vision PLC and HMI Insecure Default Password Vulnerability', tillagd 2023-12-11, åtgärdsdatum 2023-12-18, ransomware-användning: Unknown.",
+        "date": "2023-12-11",
+        "source_ids": [
+          "src-cisa-kev"
+        ],
+        "status": "verified_primary"
+      },
+      {
+        "type": "cert_report",
+        "description": "CISA-alert 2023-11-28 om exploatering av Unitronics-PLC:er i vatten-/avloppssystem (refererad av NVD; ej omläst i sessionen).",
+        "date": "2023-11-28",
+        "source_ids": [
+          "src-cisa-alert-unitronics-2023-11-28"
+        ],
+        "status": "corroborated_secondary"
+      }
+    ],
+    "cna": "9119a7d8-5eab-497f-8521-727c672e3725",
+    "published_at": "2023-12-05T18:15:12.643Z",
+    "last_modified_at": "2026-06-17T06:50:46.670Z",
+    "references": [
+      {
+        "url": "https://downloads.unitronicsplc.com/Sites/plc/Technical_Library/Unitronics-Cybersecurity-Advisory-2023-001-CVE-2023-6448.pdf",
+        "tags": [
+          "Vendor Advisory"
+        ]
+      },
+      {
+        "url": "https://downloads.unitronicsplc.com/Sites/plc/Visilogic/Version_Changes-Bug_Reports/VisiLogic%209.9.00%20Version%20changes.pdf",
+        "tags": [
+          "Release Notes"
+        ]
+      },
+      {
+        "url": "https://www.cisa.gov/news-events/alerts/2023/11/28/exploitation-unitronics-plcs-used-water-and-wastewater-systems",
+        "tags": [
+          "Third Party Advisory",
+          "US Government Resource"
+        ]
+      },
+      {
+        "url": "https://www.unitronicsplc.com/cyber_security_vision-samba/",
+        "tags": [
+          "Product"
+        ]
+      },
+      {
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2023-6448",
+        "tags": [
+          "US Government Resource"
+        ]
+      }
+    ],
+    "advisory_ids": [
+      "adv-unitronics-2023-001"
+    ],
+    "source_ids": [
+      "src-nvd-cve-2023-6448",
+      "src-cisa-kev",
+      "src-first-epss"
+    ],
+    "verification_status": "verified_primary",
+    "enrichment": {
+      "nvd_fetched_at": "2026-11-07T20:25:53.966Z",
+      "epss_fetched_at": "2026-11-07T20:59:08.891Z",
+      "kev_checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [],
+      "history": []
+    }
+  },
+  {
+    "id": "cve-2024-1480",
+    "cve_id": "CVE-2024-1480",
+    "cve_status": "published",
+    "nvd_status": "Deferred",
+    "summary": "Unitronics Vision Standard line of controllers allow the Information Mode password to be retrieved without authentication.",
+    "summary_sv": "Unitronics Vision Standard: lösenordet för Information Mode kan hämtas utan autentisering (CWE-257; CVSS 3.1: 7.5 HIGH enligt Dragos). Ingen versionsavgränsning i NVD (status Deferred).",
+    "cwe_ids": [
+      "CWE-257"
+    ],
+    "cvss": [
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+        "base_score": 7.5,
+        "base_severity": "HIGH",
+        "source": "ot-cert@dragos.com",
+        "type": "Secondary"
+      }
+    ],
+    "epss": {
+      "score": 0.00503,
+      "percentile": 0.43284,
+      "date": "2026-11-07",
+      "fetched_at": "2026-11-07T20:59:08.891Z"
+    },
+    "kev": {
+      "listed": false,
+      "date_added": null,
+      "due_date": null,
+      "known_ransomware_use": null,
+      "vulnerability_name": null,
+      "catalog_version": "2026.11.06",
+      "checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "exploitation_evidence": [
+      {
+        "type": "none_reported",
+        "description": "Ej i CISA KEV (katalog 2026.11.06).",
+        "date": "2026-11-07",
+        "source_ids": [
+          "src-cisa-kev"
+        ],
+        "status": "verified_primary"
+      }
+    ],
+    "cna": "ot-cert@dragos.com",
+    "published_at": "2024-04-19T22:15:07.513Z",
+    "last_modified_at": "2026-06-17T07:04:20.070Z",
+    "references": [
+      {
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-24-109-01",
+        "tags": []
+      },
+      {
+        "url": "https://www.dragos.com/advisory/unitronics-vision-standard/",
+        "tags": []
+      }
+    ],
+    "advisory_ids": [
+      "adv-cisa-icsa-24-109-01"
+    ],
+    "source_ids": [
+      "src-nvd-cve-2024-1480",
+      "src-first-epss"
+    ],
+    "verification_status": "verified_primary",
+    "enrichment": {
+      "nvd_fetched_at": "2026-11-07T20:25:53.966Z",
+      "epss_fetched_at": "2026-11-07T20:59:08.891Z",
+      "kev_checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [],
+      "history": []
+    }
+  },
+  {
+    "id": "cve-2025-2595",
+    "cve_id": "CVE-2025-2595",
+    "cve_status": "published",
+    "nvd_status": "Deferred",
+    "summary": "An unauthenticated remote attacker can bypass the user management in CODESYS Visualization and read visualization template files or static elements by means of forced browsing.",
+    "summary_sv": "CODESYS Visualization: oautentiserad angripare kan kringgå användarhanteringen och läsa visualiseringsmallar via forced browsing (CWE-425; CVSS 3.1: 5.3 MEDIUM). Komponentsårbarhet – ABB AC500-relevans ej verifierad.",
+    "cwe_ids": [
+      "CWE-425"
+    ],
+    "cvss": [
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+        "base_score": 5.3,
+        "base_severity": "MEDIUM",
+        "source": "info@cert.vde.com",
+        "type": "Secondary"
+      }
+    ],
+    "epss": {
+      "score": 0.00464,
+      "percentile": 0.40421,
+      "date": "2026-11-07",
+      "fetched_at": "2026-11-07T20:59:08.891Z"
+    },
+    "kev": {
+      "listed": false,
+      "date_added": null,
+      "due_date": null,
+      "known_ransomware_use": null,
+      "vulnerability_name": null,
+      "catalog_version": "2026.11.06",
+      "checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "exploitation_evidence": [],
+    "cna": "info@cert.vde.com",
+    "published_at": "2025-04-23T08:15:14.023Z",
+    "last_modified_at": "2026-06-17T09:07:15.153Z",
+    "references": [
+      {
+        "url": "https://certvde.com/en/advisories/VDE-2025-027",
+        "tags": []
+      }
+    ],
+    "advisory_ids": [
+      "adv-certvde-2025-027"
+    ],
+    "source_ids": [
+      "src-nvd-cve-2025-2595",
+      "src-first-epss"
+    ],
+    "verification_status": "verified_primary",
+    "enrichment": {
+      "nvd_fetched_at": "2026-11-07T20:25:53.966Z",
+      "epss_fetched_at": "2026-11-07T20:59:08.891Z",
+      "kev_checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [
+        "Arbetsboken kopplar CVE:t till ABB AC500 V3 (< 3.9.0); ABB-bulletin ej identifierad i sessionen."
+      ],
+      "history": []
+    }
+  },
+  {
+    "id": "cve-2025-41450",
+    "cve_id": "CVE-2025-41450",
+    "cve_status": "published",
+    "nvd_status": "Deferred",
+    "summary": "Improper Authentication vulnerability in Danfoss AKSM8xxA Series.This issue affects Danfoss AK-SM 8xxA Series prior to version 4.2",
+    "summary_sv": "Felaktig autentisering (CWE-305) i Danfoss AK-SM 8xxA-serien före version 4.2; kan röja känslig information (CVSS 3.1: 8.2 HIGH, AV:N/AC:H/PR:N/UI:R).",
+    "cwe_ids": [
+      "CWE-305"
+    ],
+    "cvss": [
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:L/A:H",
+        "base_score": 8.2,
+        "base_severity": "HIGH",
+        "source": "d7ff35af-cf88-454c-bab9-af60602f10f8",
+        "type": "Secondary"
+      }
+    ],
+    "epss": {
+      "score": 0.00949,
+      "percentile": 0.61427,
+      "date": "2026-11-07",
+      "fetched_at": "2026-11-07T20:59:08.891Z"
+    },
+    "kev": {
+      "listed": false,
+      "date_added": null,
+      "due_date": null,
+      "known_ransomware_use": null,
+      "vulnerability_name": null,
+      "catalog_version": "2026.11.06",
+      "checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "exploitation_evidence": [
+      {
+        "type": "none_reported",
+        "description": "Ej i CISA KEV (katalog 2026.11.06). Publikt forskningsrepo refereras av NVD men har inte granskats.",
+        "date": "2026-11-07",
+        "source_ids": [
+          "src-cisa-kev",
+          "src-github-fromagegate"
+        ],
+        "status": "verified_primary"
+      }
+    ],
+    "cna": "d7ff35af-cf88-454c-bab9-af60602f10f8",
+    "published_at": "2025-05-08T10:15:18.380Z",
+    "last_modified_at": "2026-10-19T20:17:34.987Z",
+    "references": [
+      {
+        "url": "https://www.danfoss.com/en/service-and-support/coordinated-vulnerability-disclosure/danfoss-security-advisories/dsa-2025-03-01/",
+        "tags": []
+      },
+      {
+        "url": "https://github.com/msuiche/fromagegate",
+        "tags": []
+      }
+    ],
+    "advisory_ids": [
+      "adv-danfoss-dsa-2025-03-01"
+    ],
+    "source_ids": [
+      "src-nvd-cve-2025-41450",
+      "src-first-epss"
+    ],
+    "verification_status": "verified_primary",
+    "enrichment": {
+      "nvd_fetched_at": "2026-11-07T20:25:53.966Z",
+      "epss_fetched_at": "2026-11-07T20:59:08.891Z",
+      "kev_checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [
+        "Arbetsbokens riskförklaring använde trunkerat ID 'CVE-41450'; fullständigt ID bekräftat via NVD."
+      ],
+      "history": []
+    }
+  },
+  {
+    "id": "cve-2025-41451",
+    "cve_id": "CVE-2025-41451",
+    "cve_status": "published",
+    "nvd_status": "Deferred",
+    "summary": "Improper neutralization of alarm-to-mail configuration fields used in an OS shell Command ('Command Injection') in Danfoss AK-SM8xxA Series prior to version 4.3.1, leading to a potential post-authenticated remote code execution on an attacked system.",
+    "summary_sv": "Kommandoinjektion (CWE-77) via alarm-till-e-post-konfigurationsfält i AK-SM 8xxA före 4.3.1; kräver autentisering (PR:H) och kan ge fjärrkodkörning efter inloggning (CVSS 4.0: 8.7 HIGH).",
+    "cwe_ids": [
+      "CWE-77"
+    ],
+    "cvss": [
+      {
+        "version": "4.0",
+        "vector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:H/UI:A/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+        "base_score": 8.7,
+        "base_severity": "HIGH",
+        "source": "d7ff35af-cf88-454c-bab9-af60602f10f8",
+        "type": "Secondary"
+      }
+    ],
+    "epss": {
+      "score": 0.04462,
+      "percentile": 0.91496,
+      "date": "2026-11-07",
+      "fetched_at": "2026-11-07T20:59:08.891Z"
+    },
+    "kev": {
+      "listed": false,
+      "date_added": null,
+      "due_date": null,
+      "known_ransomware_use": null,
+      "vulnerability_name": null,
+      "catalog_version": "2026.11.06",
+      "checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "exploitation_evidence": [
+      {
+        "type": "none_reported",
+        "description": "Ej i CISA KEV (katalog 2026.11.06).",
+        "date": "2026-11-07",
+        "source_ids": [
+          "src-cisa-kev"
+        ],
+        "status": "verified_primary"
+      }
+    ],
+    "cna": "d7ff35af-cf88-454c-bab9-af60602f10f8",
+    "published_at": "2025-08-22T03:15:29.980Z",
+    "last_modified_at": "2026-10-19T20:17:35.543Z",
+    "references": [
+      {
+        "url": "https://www.danfoss.com/en/service-and-support/downloads/dcs/adap-kool-software/ak-sm-800a/#tab-overview",
+        "tags": []
+      },
+      {
+        "url": "https://github.com/msuiche/fromagegate",
+        "tags": []
+      }
+    ],
+    "advisory_ids": [
+      "adv-danfoss-dsa-2025-08-01"
+    ],
+    "source_ids": [
+      "src-nvd-cve-2025-41451",
+      "src-first-epss"
+    ],
+    "verification_status": "verified_primary",
+    "enrichment": {
+      "nvd_fetched_at": "2026-11-07T20:25:53.966Z",
+      "epss_fetched_at": "2026-11-07T20:59:08.891Z",
+      "kev_checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [],
+      "history": []
+    }
+  },
+  {
+    "id": "cve-2025-41452",
+    "cve_id": "CVE-2025-41452",
+    "cve_status": "published",
+    "nvd_status": "Deferred",
+    "summary": "Post-authenticated external control of system web interface configuration setting vulnerability in Danfoss AK-SM8xxA Series prior to 4.3.1, which could allow for a denial of service attack induced by improper handling of exceptional conditions",
+    "summary_sv": "Extern styrning av webbgränssnittets konfiguration efter autentisering (CWE-15) i AK-SM 8xxA före 4.3.1; kan ge DoS (CVSS 4.0: 6.8 MEDIUM).",
+    "cwe_ids": [
+      "CWE-15"
+    ],
+    "cvss": [
+      {
+        "version": "4.0",
+        "vector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:H/UI:A/VC:N/VI:N/VA:H/SC:N/SI:N/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+        "base_score": 6.8,
+        "base_severity": "MEDIUM",
+        "source": "d7ff35af-cf88-454c-bab9-af60602f10f8",
+        "type": "Secondary"
+      }
+    ],
+    "epss": {
+      "score": 0.00925,
+      "percentile": 0.60655,
+      "date": "2026-11-07",
+      "fetched_at": "2026-11-07T20:59:08.891Z"
+    },
+    "kev": {
+      "listed": false,
+      "date_added": null,
+      "due_date": null,
+      "known_ransomware_use": null,
+      "vulnerability_name": null,
+      "catalog_version": "2026.11.06",
+      "checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "exploitation_evidence": [
+      {
+        "type": "none_reported",
+        "description": "Ej i CISA KEV (katalog 2026.11.06).",
+        "date": "2026-11-07",
+        "source_ids": [
+          "src-cisa-kev"
+        ],
+        "status": "verified_primary"
+      }
+    ],
+    "cna": "d7ff35af-cf88-454c-bab9-af60602f10f8",
+    "published_at": "2025-08-22T03:15:30.207Z",
+    "last_modified_at": "2026-10-19T20:17:35.673Z",
+    "references": [
+      {
+        "url": "https://www.danfoss.com/en/service-and-support/downloads/dcs/adap-kool-software/ak-sm-800a/#tab-overview",
+        "tags": []
+      },
+      {
+        "url": "https://github.com/msuiche/fromagegate",
+        "tags": []
+      }
+    ],
+    "advisory_ids": [
+      "adv-danfoss-dsa-2025-08-01"
+    ],
+    "source_ids": [
+      "src-nvd-cve-2025-41452",
+      "src-first-epss"
+    ],
+    "verification_status": "verified_primary",
+    "enrichment": {
+      "nvd_fetched_at": "2026-11-07T20:25:53.966Z",
+      "epss_fetched_at": "2026-11-07T20:59:08.891Z",
+      "kev_checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [],
+      "history": []
+    }
+  },
+  {
+    "id": "cve-2025-41659",
+    "cve_id": "CVE-2025-41659",
+    "cve_status": "published",
+    "nvd_status": "Deferred",
+    "summary": "A low-privileged attacker can remotely access the PKI folder of the CODESYS Control runtime system and thus read and write certificates and its keys. This allows sensitive data to be extracted or to accept certificates as trusted. Although all services remain available, only unencrypted communication is possible if the certificates are deleted.",
+    "summary_sv": "CODESYS Control runtime: lågprivilegierad angripare kan fjärråtkomma PKI-katalogen och läsa/skriva certifikat och nycklar (CWE-732; CVSS 3.1: 8.3 HIGH). Komponentsårbarhet.",
+    "cwe_ids": [
+      "CWE-732"
+    ],
+    "cvss": [
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L",
+        "base_score": 8.3,
+        "base_severity": "HIGH",
+        "source": "info@cert.vde.com",
+        "type": "Secondary"
+      }
+    ],
+    "epss": {
+      "score": 0.00259,
+      "percentile": 0.17648,
+      "date": "2026-11-07",
+      "fetched_at": "2026-11-07T20:59:08.891Z"
+    },
+    "kev": {
+      "listed": false,
+      "date_added": null,
+      "due_date": null,
+      "known_ransomware_use": null,
+      "vulnerability_name": null,
+      "catalog_version": "2026.11.06",
+      "checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "exploitation_evidence": [],
+    "cna": "info@cert.vde.com",
+    "published_at": "2025-08-04T08:15:48.173Z",
+    "last_modified_at": "2026-06-17T09:22:54.780Z",
+    "references": [
+      {
+        "url": "https://certvde.com/de/advisories/VDE-2025-051",
+        "tags": []
+      }
+    ],
+    "advisory_ids": [
+      "adv-certvde-2025-051"
+    ],
+    "source_ids": [
+      "src-nvd-cve-2025-41659",
+      "src-first-epss"
+    ],
+    "verification_status": "verified_primary",
+    "enrichment": {
+      "nvd_fetched_at": "2026-11-07T20:25:53.966Z",
+      "epss_fetched_at": "2026-11-07T20:59:08.891Z",
+      "kev_checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [],
+      "history": []
+    }
+  },
+  {
+    "id": "cve-2025-41691",
+    "cve_id": "CVE-2025-41691",
+    "cve_status": "published",
+    "nvd_status": "Deferred",
+    "summary": "An unauthenticated remote attacker may trigger a NULL pointer dereference in the affected CODESYS Control runtime systems by sending specially crafted communication requests, potentially leading to a denial-of-service (DoS) condition.",
+    "summary_sv": "CODESYS Control runtime: oautentiserad NULL pointer dereference via specialutformade förfrågningar kan ge DoS (CWE-476; CVSS 3.1: 7.5 HIGH). Komponentsårbarhet.",
+    "cwe_ids": [
+      "CWE-476"
+    ],
+    "cvss": [
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "base_score": 7.5,
+        "base_severity": "HIGH",
+        "source": "info@cert.vde.com",
+        "type": "Secondary"
+      }
+    ],
+    "epss": {
+      "score": 0.00639,
+      "percentile": 0.50867,
+      "date": "2026-11-07",
+      "fetched_at": "2026-11-07T20:59:08.891Z"
+    },
+    "kev": {
+      "listed": false,
+      "date_added": null,
+      "due_date": null,
+      "known_ransomware_use": null,
+      "vulnerability_name": null,
+      "catalog_version": "2026.11.06",
+      "checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "exploitation_evidence": [],
+    "cna": "info@cert.vde.com",
+    "published_at": "2025-08-04T08:15:48.353Z",
+    "last_modified_at": "2026-06-17T09:22:58.030Z",
+    "references": [
+      {
+        "url": "https://certvde.com/de/advisories/VDE-2025-070",
+        "tags": []
+      }
+    ],
+    "advisory_ids": [
+      "adv-certvde-2025-070"
+    ],
+    "source_ids": [
+      "src-nvd-cve-2025-41691",
+      "src-first-epss"
+    ],
+    "verification_status": "verified_primary",
+    "enrichment": {
+      "nvd_fetched_at": "2026-11-07T20:25:53.966Z",
+      "epss_fetched_at": "2026-11-07T20:59:08.891Z",
+      "kev_checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [],
+      "history": []
+    }
+  },
+  {
+    "id": "cve-2025-52543",
+    "cve_id": "CVE-2025-52543",
+    "cve_status": "published",
+    "nvd_status": "Analyzed",
+    "summary": "E3 Site Supervisor Control (firmware version < 2.31F01) application services (MGW and RCI) uses client side hashing for authentication. An attacker can authenticate by obtaining only the password hash.",
+    "summary_sv": "E3 Site Supervisor (< 2.31F01): applikationstjänsterna MGW och RCI använder klientbaserad hashning, så enbart lösenordshashen räcker för autentisering (CWE-836; CVSS 3.1: 7.5 HIGH).",
+    "cwe_ids": [
+      "CWE-836"
+    ],
+    "cvss": [
+      {
+        "version": "4.0",
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+        "base_score": 5.3,
+        "base_severity": "MEDIUM",
+        "source": "dd59f033-460c-4b88-a075-d4d3fedb6191",
+        "type": "Secondary"
+      },
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+        "base_score": 7.5,
+        "base_severity": "HIGH",
+        "source": "nvd@nist.gov",
+        "type": "Primary"
+      }
+    ],
+    "epss": {
+      "score": 0.00307,
+      "percentile": 0.23676,
+      "date": "2026-11-07",
+      "fetched_at": "2026-11-07T20:59:08.891Z"
+    },
+    "kev": {
+      "listed": false,
+      "date_added": null,
+      "due_date": null,
+      "known_ransomware_use": null,
+      "vulnerability_name": null,
+      "catalog_version": "2026.11.06",
+      "checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "exploitation_evidence": [],
+    "cna": "dd59f033-460c-4b88-a075-d4d3fedb6191",
+    "published_at": "2025-09-02T12:15:36.453Z",
+    "last_modified_at": "2026-10-23T22:10:00.160Z",
+    "references": [
+      {
+        "url": "https://www.armis.com/research/frostbyte10/",
+        "tags": [
+          "Mitigation",
+          "Third Party Advisory"
+        ]
+      }
+    ],
+    "advisory_ids": [
+      "adv-armis-frostbyte10"
+    ],
+    "source_ids": [
+      "src-nvd-cve-2025-52543",
+      "src-first-epss"
+    ],
+    "verification_status": "verified_primary",
+    "enrichment": {
+      "nvd_fetched_at": "2026-11-07T20:25:53.966Z",
+      "epss_fetched_at": "2026-11-07T20:59:08.891Z",
+      "kev_checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [],
+      "history": []
+    }
+  },
+  {
+    "id": "cve-2025-52544",
+    "cve_id": "CVE-2025-52544",
+    "cve_status": "published",
+    "nvd_status": "Analyzed",
+    "summary": "E3 Site Supervisor Control (firmware version < 2.31F01) has a floor plan feature that allows for an unauthenticated attacker to upload floor plan files. By uploading a specially crafted floor plan file, an attacker can access any file from the E3 file system.",
+    "summary_sv": "E3 Site Supervisor (< 2.31F01): planritningsfunktionen tillåter oautentiserad uppladdning av specialutformade filer (CWE-20; CVSS 3.1: 7.5 HIGH).",
+    "cwe_ids": [
+      "CWE-20"
+    ],
+    "cvss": [
+      {
+        "version": "4.0",
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+        "base_score": 8.8,
+        "base_severity": "HIGH",
+        "source": "dd59f033-460c-4b88-a075-d4d3fedb6191",
+        "type": "Secondary"
+      },
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+        "base_score": 7.5,
+        "base_severity": "HIGH",
+        "source": "nvd@nist.gov",
+        "type": "Primary"
+      }
+    ],
+    "epss": {
+      "score": 0.00358,
+      "percentile": 0.29736,
+      "date": "2026-11-07",
+      "fetched_at": "2026-11-07T20:59:08.891Z"
+    },
+    "kev": {
+      "listed": false,
+      "date_added": null,
+      "due_date": null,
+      "known_ransomware_use": null,
+      "vulnerability_name": null,
+      "catalog_version": "2026.11.06",
+      "checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "exploitation_evidence": [],
+    "cna": "dd59f033-460c-4b88-a075-d4d3fedb6191",
+    "published_at": "2025-09-02T12:15:36.677Z",
+    "last_modified_at": "2026-10-23T22:10:00.160Z",
+    "references": [
+      {
+        "url": "https://www.armis.com/research/frostbyte10/",
+        "tags": [
+          "Mitigation",
+          "Third Party Advisory"
+        ]
+      }
+    ],
+    "advisory_ids": [
+      "adv-armis-frostbyte10"
+    ],
+    "source_ids": [
+      "src-nvd-cve-2025-52544",
+      "src-first-epss"
+    ],
+    "verification_status": "verified_primary",
+    "enrichment": {
+      "nvd_fetched_at": "2026-11-07T20:25:53.966Z",
+      "epss_fetched_at": "2026-11-07T20:59:08.891Z",
+      "kev_checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [],
+      "history": []
+    }
+  },
+  {
+    "id": "cve-2025-52545",
+    "cve_id": "CVE-2025-52545",
+    "cve_status": "published",
+    "nvd_status": "Analyzed",
+    "summary": "E3 Site Supervisor Control (firmware version < 2.31F01) RCI service contains an API call to read users info, which returns all usernames and password hashes for the application services.",
+    "summary_sv": "E3 Site Supervisor (< 2.31F01): RCI-tjänstens API returnerar alla användarnamn och lösenordshashar (CWE-522; CVSS 3.1: 7.5 HIGH).",
+    "cwe_ids": [
+      "CWE-522"
+    ],
+    "cvss": [
+      {
+        "version": "4.0",
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+        "base_score": 7.7,
+        "base_severity": "HIGH",
+        "source": "dd59f033-460c-4b88-a075-d4d3fedb6191",
+        "type": "Secondary"
+      },
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+        "base_score": 7.5,
+        "base_severity": "HIGH",
+        "source": "nvd@nist.gov",
+        "type": "Primary"
+      }
+    ],
+    "epss": {
+      "score": 0.00264,
+      "percentile": 0.18404,
+      "date": "2026-11-07",
+      "fetched_at": "2026-11-07T20:59:08.891Z"
+    },
+    "kev": {
+      "listed": false,
+      "date_added": null,
+      "due_date": null,
+      "known_ransomware_use": null,
+      "vulnerability_name": null,
+      "catalog_version": "2026.11.06",
+      "checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "exploitation_evidence": [],
+    "cna": "dd59f033-460c-4b88-a075-d4d3fedb6191",
+    "published_at": "2025-09-02T12:15:36.860Z",
+    "last_modified_at": "2026-10-23T22:10:00.160Z",
+    "references": [
+      {
+        "url": "https://www.armis.com/research/frostbyte10/",
+        "tags": [
+          "Mitigation",
+          "Third Party Advisory"
+        ]
+      }
+    ],
+    "advisory_ids": [
+      "adv-armis-frostbyte10"
+    ],
+    "source_ids": [
+      "src-nvd-cve-2025-52545",
+      "src-first-epss"
+    ],
+    "verification_status": "verified_primary",
+    "enrichment": {
+      "nvd_fetched_at": "2026-11-07T20:25:53.966Z",
+      "epss_fetched_at": "2026-11-07T20:59:08.891Z",
+      "kev_checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [],
+      "history": []
+    }
+  },
+  {
+    "id": "cve-2025-52546",
+    "cve_id": "CVE-2025-52546",
+    "cve_status": "published",
+    "nvd_status": "Analyzed",
+    "summary": "E3 Site Supervisor Control (firmware version < 2.31F01) has a floor plan feature that allows for an unauthenticated attacker to upload floor plan files. By uploading a specially crafted floor plan file, an attacker can inject a stored XSS to the floorplan web page.",
+    "summary_sv": "E3 Site Supervisor (< 2.31F01): oautentiserad uppladdning av planritningsfiler med farlig filtyp (CWE-434).",
+    "cwe_ids": [
+      "CWE-434"
+    ],
+    "cvss": [
+      {
+        "version": "4.0",
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+        "base_score": 5.1,
+        "base_severity": "MEDIUM",
+        "source": "dd59f033-460c-4b88-a075-d4d3fedb6191",
+        "type": "Secondary"
+      },
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+        "base_score": 6.1,
+        "base_severity": "MEDIUM",
+        "source": "nvd@nist.gov",
+        "type": "Primary"
+      }
+    ],
+    "epss": {
+      "score": 0.00203,
+      "percentile": 0.10335,
+      "date": "2026-11-07",
+      "fetched_at": "2026-11-07T20:59:08.891Z"
+    },
+    "kev": {
+      "listed": false,
+      "date_added": null,
+      "due_date": null,
+      "known_ransomware_use": null,
+      "vulnerability_name": null,
+      "catalog_version": "2026.11.06",
+      "checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "exploitation_evidence": [],
+    "cna": "dd59f033-460c-4b88-a075-d4d3fedb6191",
+    "published_at": "2025-09-02T12:15:37.057Z",
+    "last_modified_at": "2026-10-23T23:10:00.157Z",
+    "references": [
+      {
+        "url": "https://www.armis.com/research/frostbyte10/",
+        "tags": [
+          "Mitigation",
+          "Third Party Advisory"
+        ]
+      }
+    ],
+    "advisory_ids": [
+      "adv-armis-frostbyte10"
+    ],
+    "source_ids": [
+      "src-nvd-cve-2025-52546",
+      "src-first-epss"
+    ],
+    "verification_status": "verified_primary",
+    "enrichment": {
+      "nvd_fetched_at": "2026-11-07T20:25:53.967Z",
+      "epss_fetched_at": "2026-11-07T20:59:08.891Z",
+      "kev_checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [],
+      "history": []
+    }
+  },
+  {
+    "id": "cve-2025-52547",
+    "cve_id": "CVE-2025-52547",
+    "cve_status": "published",
+    "nvd_status": "Analyzed",
+    "summary": "E3 Site Supervisor Control (firmware version < 2.31F01) MGW contains an API call that lacks input validation. An attacker can use this command to continuously crash the application services.",
+    "summary_sv": "E3 Site Supervisor (< 2.31F01): MGW-API-anrop utan indatavalidering kan krascha applikationstjänsterna upprepat (CWE-20).",
+    "cwe_ids": [
+      "CWE-20"
+    ],
+    "cvss": [
+      {
+        "version": "4.0",
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+        "base_score": 8.7,
+        "base_severity": "HIGH",
+        "source": "dd59f033-460c-4b88-a075-d4d3fedb6191",
+        "type": "Secondary"
+      },
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "base_score": 7.5,
+        "base_severity": "HIGH",
+        "source": "nvd@nist.gov",
+        "type": "Primary"
+      }
+    ],
+    "epss": {
+      "score": 0.00335,
+      "percentile": 0.26994,
+      "date": "2026-11-07",
+      "fetched_at": "2026-11-07T20:59:08.891Z"
+    },
+    "kev": {
+      "listed": false,
+      "date_added": null,
+      "due_date": null,
+      "known_ransomware_use": null,
+      "vulnerability_name": null,
+      "catalog_version": "2026.11.06",
+      "checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "exploitation_evidence": [],
+    "cna": "dd59f033-460c-4b88-a075-d4d3fedb6191",
+    "published_at": "2025-09-02T12:15:37.227Z",
+    "last_modified_at": "2026-10-23T23:10:00.157Z",
+    "references": [
+      {
+        "url": "https://www.armis.com/research/frostbyte10/",
+        "tags": [
+          "Third Party Advisory"
+        ]
+      }
+    ],
+    "advisory_ids": [
+      "adv-armis-frostbyte10"
+    ],
+    "source_ids": [
+      "src-nvd-cve-2025-52547",
+      "src-first-epss"
+    ],
+    "verification_status": "verified_primary",
+    "enrichment": {
+      "nvd_fetched_at": "2026-11-07T20:25:53.967Z",
+      "epss_fetched_at": "2026-11-07T20:59:08.891Z",
+      "kev_checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [],
+      "history": []
+    }
+  },
+  {
+    "id": "cve-2025-52548",
+    "cve_id": "CVE-2025-52548",
+    "cve_status": "published",
+    "nvd_status": "Analyzed",
+    "summary": "E3 Site Supervisor Control (firmware version < 2.31F01) contains a hidden API call in the application services that enables SSH and Shellinabox, which exist but are disabled by default. An attacker with admin access to the application services can utilize this API to enable remote access to the underlying OS.",
+    "summary_sv": "E3 Site Supervisor (< 2.31F01): dolt API-anrop aktiverar SSH och Shellinabox (CWE-1242); kräver administratörsåtkomst.",
+    "cwe_ids": [
+      "CWE-1242"
+    ],
+    "cvss": [
+      {
+        "version": "4.0",
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+        "base_score": 6.9,
+        "base_severity": "MEDIUM",
+        "source": "dd59f033-460c-4b88-a075-d4d3fedb6191",
+        "type": "Secondary"
+      },
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:N",
+        "base_score": 4.9,
+        "base_severity": "MEDIUM",
+        "source": "nvd@nist.gov",
+        "type": "Primary"
+      }
+    ],
+    "epss": {
+      "score": 0.00357,
+      "percentile": 0.2968,
+      "date": "2026-11-07",
+      "fetched_at": "2026-11-07T20:59:08.891Z"
+    },
+    "kev": {
+      "listed": false,
+      "date_added": null,
+      "due_date": null,
+      "known_ransomware_use": null,
+      "vulnerability_name": null,
+      "catalog_version": "2026.11.06",
+      "checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "exploitation_evidence": [],
+    "cna": "dd59f033-460c-4b88-a075-d4d3fedb6191",
+    "published_at": "2025-09-02T12:15:37.393Z",
+    "last_modified_at": "2026-10-05T15:10:00.590Z",
+    "references": [
+      {
+        "url": "https://www.armis.com/research/frostbyte10/",
+        "tags": [
+          "Mitigation",
+          "Third Party Advisory"
+        ]
+      }
+    ],
+    "advisory_ids": [
+      "adv-armis-frostbyte10"
+    ],
+    "source_ids": [
+      "src-nvd-cve-2025-52548",
+      "src-first-epss"
+    ],
+    "verification_status": "verified_primary",
+    "enrichment": {
+      "nvd_fetched_at": "2026-11-07T20:25:53.967Z",
+      "epss_fetched_at": "2026-11-07T20:59:08.891Z",
+      "kev_checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [],
+      "history": []
+    }
+  },
+  {
+    "id": "cve-2025-52549",
+    "cve_id": "CVE-2025-52549",
+    "cve_status": "published",
+    "nvd_status": "Analyzed",
+    "summary": "E3 Site Supervisor Control (firmware version < 2.31F01) generates the root linux password on each boot. An attacker can generate the root linux password for a vulnerable device based on known or easy to fetch parameters.",
+    "summary_sv": "E3 Site Supervisor (< 2.31F01): Linux-rootlösenordet genereras vid varje start utifrån kända eller lättåtkomliga parametrar (CWE-522).",
+    "cwe_ids": [
+      "CWE-522"
+    ],
+    "cvss": [
+      {
+        "version": "4.0",
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+        "base_score": 9.2,
+        "base_severity": "CRITICAL",
+        "source": "dd59f033-460c-4b88-a075-d4d3fedb6191",
+        "type": "Secondary"
+      },
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "base_score": 9.8,
+        "base_severity": "CRITICAL",
+        "source": "nvd@nist.gov",
+        "type": "Primary"
+      }
+    ],
+    "epss": {
+      "score": 0.00485,
+      "percentile": 0.42004,
+      "date": "2026-11-07",
+      "fetched_at": "2026-11-07T20:59:08.891Z"
+    },
+    "kev": {
+      "listed": false,
+      "date_added": null,
+      "due_date": null,
+      "known_ransomware_use": null,
+      "vulnerability_name": null,
+      "catalog_version": "2026.11.06",
+      "checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "exploitation_evidence": [],
+    "cna": "dd59f033-460c-4b88-a075-d4d3fedb6191",
+    "published_at": "2025-09-02T12:15:37.563Z",
+    "last_modified_at": "2026-06-17T09:36:39.360Z",
+    "references": [
+      {
+        "url": "https://www.armis.com/research/frostbyte10/",
+        "tags": [
+          "Mitigation",
+          "Third Party Advisory"
+        ]
+      }
+    ],
+    "advisory_ids": [
+      "adv-armis-frostbyte10"
+    ],
+    "source_ids": [
+      "src-nvd-cve-2025-52549",
+      "src-first-epss"
+    ],
+    "verification_status": "verified_primary",
+    "enrichment": {
+      "nvd_fetched_at": "2026-11-07T20:25:53.967Z",
+      "epss_fetched_at": "2026-11-07T20:59:08.891Z",
+      "kev_checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [],
+      "history": []
+    }
+  },
+  {
+    "id": "cve-2025-52550",
+    "cve_id": "CVE-2025-52550",
+    "cve_status": "published",
+    "nvd_status": "Analyzed",
+    "summary": "E3 Site Supervisor Control (firmware version < 2.31F01) firmware upgrade packages are unsigned. An attacker can forge malicious firmware upgrade packages. An attacker with admin access to the application services can install a malicious firmware upgrade.",
+    "summary_sv": "E3 Site Supervisor (< 2.31F01): osignerade firmware-uppgraderingspaket kan förfalskas; kräver administratörsåtkomst (CWE-347; CVSS 3.1: 7.2 HIGH).",
+    "cwe_ids": [
+      "CWE-347"
+    ],
+    "cvss": [
+      {
+        "version": "4.0",
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+        "base_score": 8.6,
+        "base_severity": "HIGH",
+        "source": "dd59f033-460c-4b88-a075-d4d3fedb6191",
+        "type": "Secondary"
+      },
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+        "base_score": 7.2,
+        "base_severity": "HIGH",
+        "source": "nvd@nist.gov",
+        "type": "Primary"
+      }
+    ],
+    "epss": {
+      "score": 0.00224,
+      "percentile": 0.13117,
+      "date": "2026-11-07",
+      "fetched_at": "2026-11-07T20:59:08.891Z"
+    },
+    "kev": {
+      "listed": false,
+      "date_added": null,
+      "due_date": null,
+      "known_ransomware_use": null,
+      "vulnerability_name": null,
+      "catalog_version": "2026.11.06",
+      "checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "exploitation_evidence": [],
+    "cna": "dd59f033-460c-4b88-a075-d4d3fedb6191",
+    "published_at": "2025-09-02T12:15:37.747Z",
+    "last_modified_at": "2026-06-17T09:36:39.490Z",
+    "references": [
+      {
+        "url": "https://www.armis.com/research/frostbyte10/",
+        "tags": [
+          "Mitigation",
+          "Third Party Advisory"
+        ]
+      }
+    ],
+    "advisory_ids": [
+      "adv-armis-frostbyte10"
+    ],
+    "source_ids": [
+      "src-nvd-cve-2025-52550",
+      "src-first-epss"
+    ],
+    "verification_status": "verified_primary",
+    "enrichment": {
+      "nvd_fetched_at": "2026-11-07T20:25:53.967Z",
+      "epss_fetched_at": "2026-11-07T20:59:08.891Z",
+      "kev_checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [],
+      "history": []
+    }
+  },
+  {
+    "id": "cve-2025-52551",
+    "cve_id": "CVE-2025-52551",
+    "cve_status": "published",
+    "nvd_status": "Deferred",
+    "summary": "E2 Facility Management Systems use a proprietary protocol that allows for unauthenticated file operations on any file in the file system.",
+    "summary_sv": "Copeland E2 Facility Management Systems använder ett proprietärt protokoll som tillåter oautentiserade filoperationer på godtyckliga filer (CWE-306; CVSS 4.0: 9.3 CRITICAL). Ingen versionsavgränsning i NVD.",
+    "cwe_ids": [
+      "CWE-306"
+    ],
+    "cvss": [
+      {
+        "version": "4.0",
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+        "base_score": 9.3,
+        "base_severity": "CRITICAL",
+        "source": "dd59f033-460c-4b88-a075-d4d3fedb6191",
+        "type": "Secondary"
+      }
+    ],
+    "epss": {
+      "score": 0.00347,
+      "percentile": 0.28465,
+      "date": "2026-11-07",
+      "fetched_at": "2026-11-07T20:59:08.891Z"
+    },
+    "kev": {
+      "listed": false,
+      "date_added": null,
+      "due_date": null,
+      "known_ransomware_use": null,
+      "vulnerability_name": null,
+      "catalog_version": "2026.11.06",
+      "checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "exploitation_evidence": [
+      {
+        "type": "none_reported",
+        "description": "Ej i CISA KEV (katalog 2026.11.06).",
+        "date": "2026-11-07",
+        "source_ids": [
+          "src-cisa-kev"
+        ],
+        "status": "verified_primary"
+      }
+    ],
+    "cna": "dd59f033-460c-4b88-a075-d4d3fedb6191",
+    "published_at": "2025-09-02T12:15:37.927Z",
+    "last_modified_at": "2026-06-17T09:36:39.610Z",
+    "references": [
+      {
+        "url": "https://www.armis.com/research/frostbyte10/",
+        "tags": []
+      }
+    ],
+    "advisory_ids": [
+      "adv-armis-frostbyte10"
+    ],
+    "source_ids": [
+      "src-nvd-cve-2025-52551",
+      "src-first-epss"
+    ],
+    "verification_status": "verified_primary",
+    "enrichment": {
+      "nvd_fetched_at": "2026-11-07T20:25:53.967Z",
+      "epss_fetched_at": "2026-11-07T20:59:08.891Z",
+      "kev_checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [
+        "NVD-status Deferred; endast sekundär rapport som referens."
+      ],
+      "history": []
+    }
+  },
+  {
+    "id": "cve-2025-6519",
+    "cve_id": "CVE-2025-6519",
+    "cve_status": "published",
+    "nvd_status": "Analyzed",
+    "summary": "E3 Site Supervisor (firmware version < 2.31F01) has a default admin user \"ONEDAY\" with a daily generated password. An attacker can predictably generate the password for ONEDAY. The oneday user cannot be deleted or modified by any user.",
+    "summary_sv": "Copeland E3 Site Supervisor (firmware < 2.31F01) har ett inbyggt administratörskonto 'ONEDAY' med dagligen genererat, förutsägbart lösenord; kontot kan inte tas bort (CWE-522; CVSS 3.1: 9.8 CRITICAL).",
+    "cwe_ids": [
+      "CWE-522"
+    ],
+    "cvss": [
+      {
+        "version": "4.0",
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+        "base_score": 9.3,
+        "base_severity": "CRITICAL",
+        "source": "dd59f033-460c-4b88-a075-d4d3fedb6191",
+        "type": "Secondary"
+      },
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "base_score": 9.8,
+        "base_severity": "CRITICAL",
+        "source": "nvd@nist.gov",
+        "type": "Primary"
+      }
+    ],
+    "epss": {
+      "score": 0.00539,
+      "percentile": 0.45583,
+      "date": "2026-11-07",
+      "fetched_at": "2026-11-07T20:59:08.891Z"
+    },
+    "kev": {
+      "listed": false,
+      "date_added": null,
+      "due_date": null,
+      "known_ransomware_use": null,
+      "vulnerability_name": null,
+      "catalog_version": "2026.11.06",
+      "checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "exploitation_evidence": [
+      {
+        "type": "none_reported",
+        "description": "Ej i CISA KEV (katalog 2026.11.06).",
+        "date": "2026-11-07",
+        "source_ids": [
+          "src-cisa-kev"
+        ],
+        "status": "verified_primary"
+      }
+    ],
+    "cna": "dd59f033-460c-4b88-a075-d4d3fedb6191",
+    "published_at": "2025-09-02T12:15:38.607Z",
+    "last_modified_at": "2026-10-23T22:10:00.160Z",
+    "references": [
+      {
+        "url": "https://www.armis.com/research/frostbyte10/",
+        "tags": [
+          "Third Party Advisory"
+        ]
+      }
+    ],
+    "advisory_ids": [
+      "adv-armis-frostbyte10"
+    ],
+    "source_ids": [
+      "src-nvd-cve-2025-6519",
+      "src-first-epss"
+    ],
+    "verification_status": "verified_primary",
+    "enrichment": {
+      "nvd_fetched_at": "2026-11-07T20:25:53.967Z",
+      "epss_fetched_at": "2026-11-07T20:59:08.891Z",
+      "kev_checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [],
+      "history": []
+    }
+  },
+  {
+    "id": "cve-2026-20742",
+    "cve_id": "CVE-2026-20742",
+    "cve_status": "published",
+    "nvd_status": "Analyzed",
+    "summary": "An OS command injection vulnerability exists in XWEB Pro version 1.12.1 and prior, enabling an authenticated attacker to achieve remote code execution on the system by injecting malicious input into requests sent to the templates route.",
+    "summary_sv": null,
+    "cwe_ids": [
+      "CWE-78"
+    ],
+    "cvss": [
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+        "base_score": 8,
+        "base_severity": "HIGH",
+        "source": "ics-cert@hq.dhs.gov",
+        "type": "Secondary"
+      },
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+        "base_score": 8.8,
+        "base_severity": "HIGH",
+        "source": "nvd@nist.gov",
+        "type": "Primary"
+      }
+    ],
+    "epss": {
+      "score": 0.01709,
+      "percentile": 0.77471,
+      "date": "2026-11-07",
+      "fetched_at": "2026-11-07T20:59:08.891Z"
+    },
+    "kev": {
+      "listed": false,
+      "date_added": null,
+      "due_date": null,
+      "known_ransomware_use": null,
+      "vulnerability_name": null,
+      "catalog_version": "2026.11.06",
+      "checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "exploitation_evidence": [
+      {
+        "type": "cert_report",
+        "description": "CISA ICSA-26-057-10: ingen känd publik exploatering rapporterad vid publicering (2026-02-26). Ej i KEV (katalog 2026.11.06).",
+        "date": "2026-02-26",
+        "source_ids": [
+          "src-cisa-icsa-26-057-10-csaf",
+          "src-cisa-kev"
+        ],
+        "status": "verified_primary"
+      }
+    ],
+    "cna": "ics-cert@hq.dhs.gov",
+    "published_at": "2026-02-27T01:16:17.317Z",
+    "last_modified_at": "2026-06-17T10:17:45.257Z",
+    "references": [
+      {
+        "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-057-10.json",
+        "tags": [
+          "Third Party Advisory"
+        ]
+      },
+      {
+        "url": "https://webapps.copeland.com/Dixell/Pages/SystemSoftwareUpdate",
+        "tags": [
+          "Product"
+        ]
+      },
+      {
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-057-10",
+        "tags": [
+          "Third Party Advisory",
+          "US Government Resource"
+        ]
+      }
+    ],
+    "advisory_ids": [
+      "adv-cisa-icsa-26-057-10"
+    ],
+    "source_ids": [
+      "src-nvd-cve-2026-20742",
+      "src-first-epss"
+    ],
+    "verification_status": "verified_primary",
+    "enrichment": {
+      "nvd_fetched_at": "2026-11-07T20:56:37.683Z",
+      "epss_fetched_at": "2026-11-07T20:59:08.891Z",
+      "kev_checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [
+        "Importerad från bulletinens CVE-lista; svensk sammanfattning saknas (backlog)."
+      ],
+      "history": []
+    }
+  },
+  {
+    "id": "cve-2026-20764",
+    "cve_id": "CVE-2026-20764",
+    "cve_status": "published",
+    "nvd_status": "Analyzed",
+    "summary": "An OS command injection vulnerability exists in XWEB Pro version 1.12.1 and prior, enabling an authenticated attacker to achieve remote code execution on the system by providing malicious input via the device hostname configuration which is later processed during system setup, resulting in remote code execution.",
+    "summary_sv": null,
+    "cwe_ids": [
+      "CWE-78"
+    ],
+    "cvss": [
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+        "base_score": 8,
+        "base_severity": "HIGH",
+        "source": "ics-cert@hq.dhs.gov",
+        "type": "Secondary"
+      },
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+        "base_score": 8.8,
+        "base_severity": "HIGH",
+        "source": "nvd@nist.gov",
+        "type": "Primary"
+      }
+    ],
+    "epss": {
+      "score": 0.02135,
+      "percentile": 0.82107,
+      "date": "2026-11-07",
+      "fetched_at": "2026-11-07T20:59:08.891Z"
+    },
+    "kev": {
+      "listed": false,
+      "date_added": null,
+      "due_date": null,
+      "known_ransomware_use": null,
+      "vulnerability_name": null,
+      "catalog_version": "2026.11.06",
+      "checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "exploitation_evidence": [
+      {
+        "type": "cert_report",
+        "description": "CISA ICSA-26-057-10: ingen känd publik exploatering rapporterad vid publicering (2026-02-26). Ej i KEV (katalog 2026.11.06).",
+        "date": "2026-02-26",
+        "source_ids": [
+          "src-cisa-icsa-26-057-10-csaf",
+          "src-cisa-kev"
+        ],
+        "status": "verified_primary"
+      }
+    ],
+    "cna": "ics-cert@hq.dhs.gov",
+    "published_at": "2026-02-27T02:16:18.140Z",
+    "last_modified_at": "2026-06-17T10:17:46.403Z",
+    "references": [
+      {
+        "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-057-10.json",
+        "tags": [
+          "Third Party Advisory"
+        ]
+      },
+      {
+        "url": "https://webapps.copeland.com/Dixell/Pages/SystemSoftwareUpdate",
+        "tags": [
+          "Product"
+        ]
+      },
+      {
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-057-10",
+        "tags": [
+          "Third Party Advisory",
+          "US Government Resource"
+        ]
+      }
+    ],
+    "advisory_ids": [
+      "adv-cisa-icsa-26-057-10"
+    ],
+    "source_ids": [
+      "src-nvd-cve-2026-20764",
+      "src-first-epss"
+    ],
+    "verification_status": "verified_primary",
+    "enrichment": {
+      "nvd_fetched_at": "2026-11-07T20:56:44.115Z",
+      "epss_fetched_at": "2026-11-07T20:59:08.891Z",
+      "kev_checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [
+        "Importerad från bulletinens CVE-lista; svensk sammanfattning saknas (backlog)."
+      ],
+      "history": []
+    }
+  },
+  {
+    "id": "cve-2026-20797",
+    "cve_id": "CVE-2026-20797",
+    "cve_status": "published",
+    "nvd_status": "Modified",
+    "summary": "A stack based buffer overflow exists in an API route of XWEB Pro version 1.12.1 and prior, enabling unauthenticated attackers to cause stack corruption and a termination of the program.",
+    "summary_sv": null,
+    "cwe_ids": [
+      "CWE-787",
+      "CWE-121"
+    ],
+    "cvss": [
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+        "base_score": 4.3,
+        "base_severity": "MEDIUM",
+        "source": "ics-cert@hq.dhs.gov",
+        "type": "Secondary"
+      },
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "base_score": 9.8,
+        "base_severity": "CRITICAL",
+        "source": "nvd@nist.gov",
+        "type": "Primary"
+      }
+    ],
+    "epss": {
+      "score": 0.00825,
+      "percentile": 0.57641,
+      "date": "2026-11-07",
+      "fetched_at": "2026-11-07T20:59:08.891Z"
+    },
+    "kev": {
+      "listed": false,
+      "date_added": null,
+      "due_date": null,
+      "known_ransomware_use": null,
+      "vulnerability_name": null,
+      "catalog_version": "2026.11.06",
+      "checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "exploitation_evidence": [
+      {
+        "type": "cert_report",
+        "description": "CISA ICSA-26-057-10: ingen känd publik exploatering rapporterad vid publicering (2026-02-26). Ej i KEV (katalog 2026.11.06).",
+        "date": "2026-02-26",
+        "source_ids": [
+          "src-cisa-icsa-26-057-10-csaf",
+          "src-cisa-kev"
+        ],
+        "status": "verified_primary"
+      }
+    ],
+    "cna": "ics-cert@hq.dhs.gov",
+    "published_at": "2026-02-27T02:16:18.343Z",
+    "last_modified_at": "2026-06-17T10:17:48.100Z",
+    "references": [
+      {
+        "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-057-10.json",
+        "tags": [
+          "Third Party Advisory"
+        ]
+      },
+      {
+        "url": "https://webapps.copeland.com/Dixell/Pages/SystemSoftwareUpdate",
+        "tags": [
+          "Product"
+        ]
+      },
+      {
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-057-10",
+        "tags": [
+          "Third Party Advisory",
+          "US Government Resource"
+        ]
+      }
+    ],
+    "advisory_ids": [
+      "adv-cisa-icsa-26-057-10"
+    ],
+    "source_ids": [
+      "src-nvd-cve-2026-20797",
+      "src-first-epss"
+    ],
+    "verification_status": "verified_primary",
+    "enrichment": {
+      "nvd_fetched_at": "2026-11-07T20:56:50.607Z",
+      "epss_fetched_at": "2026-11-07T20:59:08.891Z",
+      "kev_checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [
+        "Importerad från bulletinens CVE-lista; svensk sammanfattning saknas (backlog)."
+      ],
+      "history": []
+    }
+  },
+  {
+    "id": "cve-2026-20902",
+    "cve_id": "CVE-2026-20902",
+    "cve_status": "published",
+    "nvd_status": "Analyzed",
+    "summary": "An OS command injection vulnerability exists in XWEB Pro version 1.12.1 and prior, enabling an authenticated attacker to achieve remote code execution on the system by injecting malicious input into the map filename field during the map upload action of the parameters route.",
+    "summary_sv": null,
+    "cwe_ids": [
+      "CWE-78"
+    ],
+    "cvss": [
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+        "base_score": 8,
+        "base_severity": "HIGH",
+        "source": "ics-cert@hq.dhs.gov",
+        "type": "Secondary"
+      },
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+        "base_score": 8.8,
+        "base_severity": "HIGH",
+        "source": "nvd@nist.gov",
+        "type": "Primary"
+      }
+    ],
+    "epss": {
+      "score": 0.01695,
+      "percentile": 0.77278,
+      "date": "2026-11-07",
+      "fetched_at": "2026-11-07T20:59:08.891Z"
+    },
+    "kev": {
+      "listed": false,
+      "date_added": null,
+      "due_date": null,
+      "known_ransomware_use": null,
+      "vulnerability_name": null,
+      "catalog_version": "2026.11.06",
+      "checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "exploitation_evidence": [
+      {
+        "type": "cert_report",
+        "description": "CISA ICSA-26-057-10: ingen känd publik exploatering rapporterad vid publicering (2026-02-26). Ej i KEV (katalog 2026.11.06).",
+        "date": "2026-02-26",
+        "source_ids": [
+          "src-cisa-icsa-26-057-10-csaf",
+          "src-cisa-kev"
+        ],
+        "status": "verified_primary"
+      }
+    ],
+    "cna": "ics-cert@hq.dhs.gov",
+    "published_at": "2026-02-27T01:16:17.520Z",
+    "last_modified_at": "2026-06-17T10:18:00.603Z",
+    "references": [
+      {
+        "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-057-10.json",
+        "tags": [
+          "Third Party Advisory"
+        ]
+      },
+      {
+        "url": "https://webapps.copeland.com/Dixell/Pages/SystemSoftwareUpdate",
+        "tags": [
+          "Product"
+        ]
+      },
+      {
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-057-10",
+        "tags": [
+          "Third Party Advisory",
+          "US Government Resource"
+        ]
+      }
+    ],
+    "advisory_ids": [
+      "adv-cisa-icsa-26-057-10"
+    ],
+    "source_ids": [
+      "src-nvd-cve-2026-20902",
+      "src-first-epss"
+    ],
+    "verification_status": "verified_primary",
+    "enrichment": {
+      "nvd_fetched_at": "2026-11-07T20:56:57.143Z",
+      "epss_fetched_at": "2026-11-07T20:59:08.891Z",
+      "kev_checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [
+        "Importerad från bulletinens CVE-lista; svensk sammanfattning saknas (backlog)."
+      ],
+      "history": []
+    }
+  },
+  {
+    "id": "cve-2026-20910",
+    "cve_id": "CVE-2026-20910",
+    "cve_status": "published",
+    "nvd_status": "Modified",
+    "summary": "An OS command injection vulnerability exists in XWEB Pro version 1.12.1 and prior, enabling an authenticated attacker to achieve remote code execution on the system by injecting malicious input into the devices field of the firmware update action to achieve remote code execution.",
+    "summary_sv": null,
+    "cwe_ids": [
+      "CWE-78"
+    ],
+    "cvss": [
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+        "base_score": 8,
+        "base_severity": "HIGH",
+        "source": "ics-cert@hq.dhs.gov",
+        "type": "Secondary"
+      },
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+        "base_score": 8.8,
+        "base_severity": "HIGH",
+        "source": "nvd@nist.gov",
+        "type": "Primary"
+      }
+    ],
+    "epss": {
+      "score": 0.01695,
+      "percentile": 0.77278,
+      "date": "2026-11-07",
+      "fetched_at": "2026-11-07T20:59:08.891Z"
+    },
+    "kev": {
+      "listed": false,
+      "date_added": null,
+      "due_date": null,
+      "known_ransomware_use": null,
+      "vulnerability_name": null,
+      "catalog_version": "2026.11.06",
+      "checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "exploitation_evidence": [
+      {
+        "type": "cert_report",
+        "description": "CISA ICSA-26-057-10: ingen känd publik exploatering rapporterad vid publicering (2026-02-26). Ej i KEV (katalog 2026.11.06).",
+        "date": "2026-02-26",
+        "source_ids": [
+          "src-cisa-icsa-26-057-10-csaf",
+          "src-cisa-kev"
+        ],
+        "status": "verified_primary"
+      }
+    ],
+    "cna": "ics-cert@hq.dhs.gov",
+    "published_at": "2026-02-27T01:16:17.707Z",
+    "last_modified_at": "2026-06-17T10:18:00.977Z",
+    "references": [
+      {
+        "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-057-10.json",
+        "tags": [
+          "Third Party Advisory"
+        ]
+      },
+      {
+        "url": "https://webapps.copeland.com/Dixell/Pages/SystemSoftwareUpdate",
+        "tags": [
+          "Product"
+        ]
+      },
+      {
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-057-10",
+        "tags": [
+          "Third Party Advisory",
+          "US Government Resource"
+        ]
+      }
+    ],
+    "advisory_ids": [
+      "adv-cisa-icsa-26-057-10"
+    ],
+    "source_ids": [
+      "src-nvd-cve-2026-20910",
+      "src-first-epss"
+    ],
+    "verification_status": "verified_primary",
+    "enrichment": {
+      "nvd_fetched_at": "2026-11-07T20:57:03.599Z",
+      "epss_fetched_at": "2026-11-07T20:59:08.891Z",
+      "kev_checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [
+        "Importerad från bulletinens CVE-lista; svensk sammanfattning saknas (backlog)."
+      ],
+      "history": []
+    }
+  },
+  {
+    "id": "cve-2026-21389",
+    "cve_id": "CVE-2026-21389",
+    "cve_status": "published",
+    "nvd_status": "Analyzed",
+    "summary": "An OS command injection vulnerability exists in XWEB Pro version 1.12.1 and prior, enabling an authenticated attacker to achieve remote code execution on the system by injecting malicious input into the request body sent to the contacts import route.",
+    "summary_sv": null,
+    "cwe_ids": [
+      "CWE-78"
+    ],
+    "cvss": [
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+        "base_score": 8,
+        "base_severity": "HIGH",
+        "source": "ics-cert@hq.dhs.gov",
+        "type": "Secondary"
+      },
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+        "base_score": 8.8,
+        "base_severity": "HIGH",
+        "source": "nvd@nist.gov",
+        "type": "Primary"
+      }
+    ],
+    "epss": {
+      "score": 0.01695,
+      "percentile": 0.77278,
+      "date": "2026-11-07",
+      "fetched_at": "2026-11-07T20:59:08.891Z"
+    },
+    "kev": {
+      "listed": false,
+      "date_added": null,
+      "due_date": null,
+      "known_ransomware_use": null,
+      "vulnerability_name": null,
+      "catalog_version": "2026.11.06",
+      "checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "exploitation_evidence": [
+      {
+        "type": "cert_report",
+        "description": "CISA ICSA-26-057-10: ingen känd publik exploatering rapporterad vid publicering (2026-02-26). Ej i KEV (katalog 2026.11.06).",
+        "date": "2026-02-26",
+        "source_ids": [
+          "src-cisa-icsa-26-057-10-csaf",
+          "src-cisa-kev"
+        ],
+        "status": "verified_primary"
+      }
+    ],
+    "cna": "ics-cert@hq.dhs.gov",
+    "published_at": "2026-02-27T01:16:17.890Z",
+    "last_modified_at": "2026-06-17T10:18:37.010Z",
+    "references": [
+      {
+        "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-057-10.json",
+        "tags": [
+          "Third Party Advisory"
+        ]
+      },
+      {
+        "url": "https://webapps.copeland.com/Dixell/Pages/SystemSoftwareUpdate",
+        "tags": [
+          "Product"
+        ]
+      },
+      {
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-057-10",
+        "tags": [
+          "Third Party Advisory",
+          "US Government Resource"
+        ]
+      }
+    ],
+    "advisory_ids": [
+      "adv-cisa-icsa-26-057-10"
+    ],
+    "source_ids": [
+      "src-nvd-cve-2026-21389",
+      "src-first-epss"
+    ],
+    "verification_status": "verified_primary",
+    "enrichment": {
+      "nvd_fetched_at": "2026-11-07T20:57:10.111Z",
+      "epss_fetched_at": "2026-11-07T20:59:08.891Z",
+      "kev_checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [
+        "Importerad från bulletinens CVE-lista; svensk sammanfattning saknas (backlog)."
+      ],
+      "history": []
+    }
+  },
+  {
+    "id": "cve-2026-21718",
+    "cve_id": "CVE-2026-21718",
+    "cve_status": "published",
+    "nvd_status": "Analyzed",
+    "summary": "An authentication bypass vulnerability exists in Copeland XWEB Pro version 1.12.1 and prior, enabling any attackers to bypass the authentication requirement and achieve pre-authenticated code execution on the system.",
+    "summary_sv": "Autentiseringsförbigång i Copeland XWEB Pro version 1.12.1 och tidigare som medger kodkörning utan föregående autentisering (CVSS 3.1: 10.0 CRITICAL enligt CISA, 9.8 enligt NVD). Berörda modeller enligt CPE/CSAF: XWEB 300D PRO, 500D PRO, 500B PRO.",
+    "cwe_ids": [
+      "CWE-327",
+      "NVD-CWE-noinfo"
+    ],
+    "cvss": [
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+        "base_score": 10,
+        "base_severity": "CRITICAL",
+        "source": "ics-cert@hq.dhs.gov",
+        "type": "Secondary"
+      },
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "base_score": 9.8,
+        "base_severity": "CRITICAL",
+        "source": "nvd@nist.gov",
+        "type": "Primary"
+      }
+    ],
+    "epss": {
+      "score": 0.00692,
+      "percentile": 0.53101,
+      "date": "2026-11-07",
+      "fetched_at": "2026-11-07T20:59:08.891Z"
+    },
+    "kev": {
+      "listed": false,
+      "date_added": null,
+      "due_date": null,
+      "known_ransomware_use": null,
+      "vulnerability_name": null,
+      "catalog_version": "2026.11.06",
+      "checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "exploitation_evidence": [
+      {
+        "type": "cert_report",
+        "description": "CISA ICSA-26-057-10: ingen känd publik exploatering rapporterad vid publicering (2026-02-26). Ej i KEV (katalog 2026.11.06).",
+        "date": "2026-02-26",
+        "source_ids": [
+          "src-cisa-icsa-26-057-10-csaf",
+          "src-cisa-kev"
+        ],
+        "status": "verified_primary"
+      }
+    ],
+    "cna": "ics-cert@hq.dhs.gov",
+    "published_at": "2026-02-27T01:16:18.073Z",
+    "last_modified_at": "2026-06-17T10:18:57.993Z",
+    "references": [
+      {
+        "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-057-10.json",
+        "tags": [
+          "Third Party Advisory"
+        ]
+      },
+      {
+        "url": "https://webapps.copeland.com/Dixell/Pages/SystemSoftwareUpdate",
+        "tags": [
+          "Product"
+        ]
+      },
+      {
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-057-10",
+        "tags": [
+          "Third Party Advisory",
+          "US Government Resource"
+        ]
+      }
+    ],
+    "advisory_ids": [
+      "adv-cisa-icsa-26-057-10"
+    ],
+    "source_ids": [
+      "src-nvd-cve-2026-21718",
+      "src-first-epss"
+    ],
+    "verification_status": "verified_primary",
+    "enrichment": {
+      "nvd_fetched_at": "2026-11-07T20:25:53.967Z",
+      "epss_fetched_at": "2026-11-07T20:59:08.891Z",
+      "kev_checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [],
+      "history": []
+    }
+  },
+  {
+    "id": "cve-2026-22877",
+    "cve_id": "CVE-2026-22877",
+    "cve_status": "published",
+    "nvd_status": "Analyzed",
+    "summary": "An arbitrary file-read vulnerability exists in XWEB Pro version 1.12.1 and prior, enabling unauthenticated attackers to read arbitrary files on the system, and potentially causing a denial-of-service attack.",
+    "summary_sv": null,
+    "cwe_ids": [
+      "CWE-22",
+      "NVD-CWE-noinfo"
+    ],
+    "cvss": [
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+        "base_score": 3.7,
+        "base_severity": "LOW",
+        "source": "ics-cert@hq.dhs.gov",
+        "type": "Secondary"
+      },
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+        "base_score": 9.1,
+        "base_severity": "CRITICAL",
+        "source": "nvd@nist.gov",
+        "type": "Primary"
+      }
+    ],
+    "epss": {
+      "score": 0.00614,
+      "percentile": 0.49656,
+      "date": "2026-11-07",
+      "fetched_at": "2026-11-07T20:59:08.891Z"
+    },
+    "kev": {
+      "listed": false,
+      "date_added": null,
+      "due_date": null,
+      "known_ransomware_use": null,
+      "vulnerability_name": null,
+      "catalog_version": "2026.11.06",
+      "checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "exploitation_evidence": [
+      {
+        "type": "cert_report",
+        "description": "CISA ICSA-26-057-10: ingen känd publik exploatering rapporterad vid publicering (2026-02-26). Ej i KEV (katalog 2026.11.06).",
+        "date": "2026-02-26",
+        "source_ids": [
+          "src-cisa-icsa-26-057-10-csaf",
+          "src-cisa-kev"
+        ],
+        "status": "verified_primary"
+      }
+    ],
+    "cna": "ics-cert@hq.dhs.gov",
+    "published_at": "2026-02-27T02:16:18.507Z",
+    "last_modified_at": "2026-06-17T10:20:33.030Z",
+    "references": [
+      {
+        "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-057-10.json",
+        "tags": [
+          "Third Party Advisory"
+        ]
+      },
+      {
+        "url": "https://webapps.copeland.com/Dixell/Pages/SystemSoftwareUpdate",
+        "tags": [
+          "Product"
+        ]
+      },
+      {
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-057-10",
+        "tags": [
+          "Third Party Advisory",
+          "US Government Resource"
+        ]
+      }
+    ],
+    "advisory_ids": [
+      "adv-cisa-icsa-26-057-10"
+    ],
+    "source_ids": [
+      "src-nvd-cve-2026-22877",
+      "src-first-epss"
+    ],
+    "verification_status": "verified_primary",
+    "enrichment": {
+      "nvd_fetched_at": "2026-11-07T20:57:16.683Z",
+      "epss_fetched_at": "2026-11-07T20:59:08.891Z",
+      "kev_checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [
+        "Importerad från bulletinens CVE-lista; svensk sammanfattning saknas (backlog)."
+      ],
+      "history": []
+    }
+  },
+  {
+    "id": "cve-2026-23702",
+    "cve_id": "CVE-2026-23702",
+    "cve_status": "published",
+    "nvd_status": "Analyzed",
+    "summary": "An OS command injection vulnerability exists in XWEB Pro version 1.12.1 and prior, enabling an authenticated attacker to achieve remote code execution on the system by sending malicious input injected into the server username field of the import preconfiguration action in the API V1 route.",
+    "summary_sv": null,
+    "cwe_ids": [
+      "CWE-78"
+    ],
+    "cvss": [
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+        "base_score": 8,
+        "base_severity": "HIGH",
+        "source": "ics-cert@hq.dhs.gov",
+        "type": "Secondary"
+      },
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+        "base_score": 8.8,
+        "base_severity": "HIGH",
+        "source": "nvd@nist.gov",
+        "type": "Primary"
+      }
+    ],
+    "epss": {
+      "score": 0.02094,
+      "percentile": 0.81764,
+      "date": "2026-11-07",
+      "fetched_at": "2026-11-07T20:59:08.891Z"
+    },
+    "kev": {
+      "listed": false,
+      "date_added": null,
+      "due_date": null,
+      "known_ransomware_use": null,
+      "vulnerability_name": null,
+      "catalog_version": "2026.11.06",
+      "checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "exploitation_evidence": [
+      {
+        "type": "cert_report",
+        "description": "CISA ICSA-26-057-10: ingen känd publik exploatering rapporterad vid publicering (2026-02-26). Ej i KEV (katalog 2026.11.06).",
+        "date": "2026-02-26",
+        "source_ids": [
+          "src-cisa-icsa-26-057-10-csaf",
+          "src-cisa-kev"
+        ],
+        "status": "verified_primary"
+      }
+    ],
+    "cna": "ics-cert@hq.dhs.gov",
+    "published_at": "2026-02-27T02:16:18.700Z",
+    "last_modified_at": "2026-06-17T10:21:58.347Z",
+    "references": [
+      {
+        "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-057-10.json",
+        "tags": [
+          "Third Party Advisory"
+        ]
+      },
+      {
+        "url": "https://webapps.copeland.com/Dixell/Pages/SystemSoftwareUpdate",
+        "tags": [
+          "Product"
+        ]
+      },
+      {
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-057-10",
+        "tags": [
+          "Third Party Advisory",
+          "US Government Resource"
+        ]
+      }
+    ],
+    "advisory_ids": [
+      "adv-cisa-icsa-26-057-10"
+    ],
+    "source_ids": [
+      "src-nvd-cve-2026-23702",
+      "src-first-epss"
+    ],
+    "verification_status": "verified_primary",
+    "enrichment": {
+      "nvd_fetched_at": "2026-11-07T20:57:23.139Z",
+      "epss_fetched_at": "2026-11-07T20:59:08.891Z",
+      "kev_checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [
+        "Importerad från bulletinens CVE-lista; svensk sammanfattning saknas (backlog)."
+      ],
+      "history": []
+    }
+  },
+  {
+    "id": "cve-2026-24452",
+    "cve_id": "CVE-2026-24452",
+    "cve_status": "published",
+    "nvd_status": "Analyzed",
+    "summary": "An OS command injection vulnerability exists in XWEB Pro version 1.12.1 and prior, enabling an authenticated attacker to achieve remote code execution on the system by supplying a crafted template file to the devices route.",
+    "summary_sv": null,
+    "cwe_ids": [
+      "CWE-78"
+    ],
+    "cvss": [
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+        "base_score": 8,
+        "base_severity": "HIGH",
+        "source": "ics-cert@hq.dhs.gov",
+        "type": "Secondary"
+      },
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+        "base_score": 8.8,
+        "base_severity": "HIGH",
+        "source": "nvd@nist.gov",
+        "type": "Primary"
+      }
+    ],
+    "epss": {
+      "score": 0.02094,
+      "percentile": 0.81765,
+      "date": "2026-11-07",
+      "fetched_at": "2026-11-07T20:59:08.891Z"
+    },
+    "kev": {
+      "listed": false,
+      "date_added": null,
+      "due_date": null,
+      "known_ransomware_use": null,
+      "vulnerability_name": null,
+      "catalog_version": "2026.11.06",
+      "checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "exploitation_evidence": [
+      {
+        "type": "cert_report",
+        "description": "CISA ICSA-26-057-10: ingen känd publik exploatering rapporterad vid publicering (2026-02-26). Ej i KEV (katalog 2026.11.06).",
+        "date": "2026-02-26",
+        "source_ids": [
+          "src-cisa-icsa-26-057-10-csaf",
+          "src-cisa-kev"
+        ],
+        "status": "verified_primary"
+      }
+    ],
+    "cna": "ics-cert@hq.dhs.gov",
+    "published_at": "2026-02-27T02:16:18.897Z",
+    "last_modified_at": "2026-06-17T10:23:05.880Z",
+    "references": [
+      {
+        "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-057-10.json",
+        "tags": [
+          "Third Party Advisory"
+        ]
+      },
+      {
+        "url": "https://webapps.copeland.com/Dixell/Pages/SystemSoftwareUpdate",
+        "tags": [
+          "Product"
+        ]
+      },
+      {
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-057-10",
+        "tags": [
+          "Third Party Advisory",
+          "US Government Resource"
+        ]
+      }
+    ],
+    "advisory_ids": [
+      "adv-cisa-icsa-26-057-10"
+    ],
+    "source_ids": [
+      "src-nvd-cve-2026-24452",
+      "src-first-epss"
+    ],
+    "verification_status": "verified_primary",
+    "enrichment": {
+      "nvd_fetched_at": "2026-11-07T20:57:29.647Z",
+      "epss_fetched_at": "2026-11-07T20:59:08.891Z",
+      "kev_checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [
+        "Importerad från bulletinens CVE-lista; svensk sammanfattning saknas (backlog)."
+      ],
+      "history": []
+    }
+  },
+  {
+    "id": "cve-2026-24517",
+    "cve_id": "CVE-2026-24517",
+    "cve_status": "published",
+    "nvd_status": "Analyzed",
+    "summary": "An OS command injection vulnerability exists in XWEB Pro version 1.12.1 and prior, enabling an authenticated attacker to achieve remote code execution on the system by injecting malicious input into requests sent to the firmware update route.",
+    "summary_sv": null,
+    "cwe_ids": [
+      "CWE-78"
+    ],
+    "cvss": [
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+        "base_score": 8,
+        "base_severity": "HIGH",
+        "source": "ics-cert@hq.dhs.gov",
+        "type": "Secondary"
+      },
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+        "base_score": 7.2,
+        "base_severity": "HIGH",
+        "source": "nvd@nist.gov",
+        "type": "Primary"
+      }
+    ],
+    "epss": {
+      "score": 0.01809,
+      "percentile": 0.78735,
+      "date": "2026-11-07",
+      "fetched_at": "2026-11-07T20:59:08.891Z"
+    },
+    "kev": {
+      "listed": false,
+      "date_added": null,
+      "due_date": null,
+      "known_ransomware_use": null,
+      "vulnerability_name": null,
+      "catalog_version": "2026.11.06",
+      "checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "exploitation_evidence": [
+      {
+        "type": "cert_report",
+        "description": "CISA ICSA-26-057-10: ingen känd publik exploatering rapporterad vid publicering (2026-02-26). Ej i KEV (katalog 2026.11.06).",
+        "date": "2026-02-26",
+        "source_ids": [
+          "src-cisa-icsa-26-057-10-csaf",
+          "src-cisa-kev"
+        ],
+        "status": "verified_primary"
+      }
+    ],
+    "cna": "ics-cert@hq.dhs.gov",
+    "published_at": "2026-02-27T01:16:18.597Z",
+    "last_modified_at": "2026-06-17T10:23:10.930Z",
+    "references": [
+      {
+        "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-057-10.json",
+        "tags": [
+          "Third Party Advisory"
+        ]
+      },
+      {
+        "url": "https://webapps.copeland.com/Dixell/Pages/SystemSoftwareUpdate",
+        "tags": [
+          "Product"
+        ]
+      },
+      {
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-057-10",
+        "tags": [
+          "Third Party Advisory",
+          "US Government Resource"
+        ]
+      }
+    ],
+    "advisory_ids": [
+      "adv-cisa-icsa-26-057-10"
+    ],
+    "source_ids": [
+      "src-nvd-cve-2026-24517",
+      "src-first-epss"
+    ],
+    "verification_status": "verified_primary",
+    "enrichment": {
+      "nvd_fetched_at": "2026-11-07T20:57:36.071Z",
+      "epss_fetched_at": "2026-11-07T20:59:08.891Z",
+      "kev_checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [
+        "Importerad från bulletinens CVE-lista; svensk sammanfattning saknas (backlog)."
+      ],
+      "history": []
+    }
+  },
+  {
+    "id": "cve-2026-24663",
+    "cve_id": "CVE-2026-24663",
+    "cve_status": "published",
+    "nvd_status": "Analyzed",
+    "summary": "An OS command injection vulnerability exists in XWEB Pro version 1.12.1 and prior, enabling an unauthenticated attacker to achieve remote code execution on the system by sending a crafted request to the libraries installation route and injecting malicious input into the request body.",
+    "summary_sv": null,
+    "cwe_ids": [
+      "CWE-78"
+    ],
+    "cvss": [
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+        "base_score": 9,
+        "base_severity": "CRITICAL",
+        "source": "ics-cert@hq.dhs.gov",
+        "type": "Secondary"
+      },
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "base_score": 9.8,
+        "base_severity": "CRITICAL",
+        "source": "nvd@nist.gov",
+        "type": "Primary"
+      }
+    ],
+    "epss": {
+      "score": 0.03691,
+      "percentile": 0.89777,
+      "date": "2026-11-07",
+      "fetched_at": "2026-11-07T20:59:08.891Z"
+    },
+    "kev": {
+      "listed": false,
+      "date_added": null,
+      "due_date": null,
+      "known_ransomware_use": null,
+      "vulnerability_name": null,
+      "catalog_version": "2026.11.06",
+      "checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "exploitation_evidence": [
+      {
+        "type": "cert_report",
+        "description": "CISA ICSA-26-057-10: ingen känd publik exploatering rapporterad vid publicering (2026-02-26). Ej i KEV (katalog 2026.11.06).",
+        "date": "2026-02-26",
+        "source_ids": [
+          "src-cisa-icsa-26-057-10-csaf",
+          "src-cisa-kev"
+        ],
+        "status": "verified_primary"
+      }
+    ],
+    "cna": "ics-cert@hq.dhs.gov",
+    "published_at": "2026-02-27T01:16:18.790Z",
+    "last_modified_at": "2026-06-17T10:23:22.800Z",
+    "references": [
+      {
+        "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-057-10.json",
+        "tags": [
+          "Third Party Advisory"
+        ]
+      },
+      {
+        "url": "https://webapps.copeland.com/Dixell/Pages/SystemSoftwareUpdate",
+        "tags": [
+          "Product"
+        ]
+      },
+      {
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-057-10",
+        "tags": [
+          "Third Party Advisory",
+          "US Government Resource"
+        ]
+      }
+    ],
+    "advisory_ids": [
+      "adv-cisa-icsa-26-057-10"
+    ],
+    "source_ids": [
+      "src-nvd-cve-2026-24663",
+      "src-first-epss"
+    ],
+    "verification_status": "verified_primary",
+    "enrichment": {
+      "nvd_fetched_at": "2026-11-07T20:57:42.639Z",
+      "epss_fetched_at": "2026-11-07T20:59:08.891Z",
+      "kev_checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [
+        "Importerad från bulletinens CVE-lista; svensk sammanfattning saknas (backlog)."
+      ],
+      "history": []
+    }
+  },
+  {
+    "id": "cve-2026-24689",
+    "cve_id": "CVE-2026-24689",
+    "cve_status": "published",
+    "nvd_status": "Analyzed",
+    "summary": "An OS command injection vulnerability exists in XWEB Pro version 1.12.1 and prior, enabling an authenticated attacker to achieve remote code execution on the system by injecting malicious input into the devices field of the firmware update apply action.",
+    "summary_sv": null,
+    "cwe_ids": [
+      "CWE-78"
+    ],
+    "cvss": [
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+        "base_score": 8,
+        "base_severity": "HIGH",
+        "source": "ics-cert@hq.dhs.gov",
+        "type": "Secondary"
+      },
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+        "base_score": 8.8,
+        "base_severity": "HIGH",
+        "source": "nvd@nist.gov",
+        "type": "Primary"
+      }
+    ],
+    "epss": {
+      "score": 0.01728,
+      "percentile": 0.777,
+      "date": "2026-11-07",
+      "fetched_at": "2026-11-07T20:59:08.891Z"
+    },
+    "kev": {
+      "listed": false,
+      "date_added": null,
+      "due_date": null,
+      "known_ransomware_use": null,
+      "vulnerability_name": null,
+      "catalog_version": "2026.11.06",
+      "checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "exploitation_evidence": [
+      {
+        "type": "cert_report",
+        "description": "CISA ICSA-26-057-10: ingen känd publik exploatering rapporterad vid publicering (2026-02-26). Ej i KEV (katalog 2026.11.06).",
+        "date": "2026-02-26",
+        "source_ids": [
+          "src-cisa-icsa-26-057-10-csaf",
+          "src-cisa-kev"
+        ],
+        "status": "verified_primary"
+      }
+    ],
+    "cna": "ics-cert@hq.dhs.gov",
+    "published_at": "2026-02-27T01:16:18.983Z",
+    "last_modified_at": "2026-06-17T10:23:25.707Z",
+    "references": [
+      {
+        "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-057-10.json",
+        "tags": [
+          "Third Party Advisory"
+        ]
+      },
+      {
+        "url": "https://webapps.copeland.com/Dixell/Pages/SystemSoftwareUpdate",
+        "tags": [
+          "Product"
+        ]
+      },
+      {
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-057-10",
+        "tags": [
+          "Third Party Advisory",
+          "US Government Resource"
+        ]
+      }
+    ],
+    "advisory_ids": [
+      "adv-cisa-icsa-26-057-10"
+    ],
+    "source_ids": [
+      "src-nvd-cve-2026-24689",
+      "src-first-epss"
+    ],
+    "verification_status": "verified_primary",
+    "enrichment": {
+      "nvd_fetched_at": "2026-11-07T20:57:49.135Z",
+      "epss_fetched_at": "2026-11-07T20:59:08.891Z",
+      "kev_checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [
+        "Importerad från bulletinens CVE-lista; svensk sammanfattning saknas (backlog)."
+      ],
+      "history": []
+    }
+  },
+  {
+    "id": "cve-2026-24695",
+    "cve_id": "CVE-2026-24695",
+    "cve_status": "published",
+    "nvd_status": "Analyzed",
+    "summary": "An OS command injection vulnerability exists in XWEB Pro version 1.12.1 and prior, enabling an authenticated attacker to achieve remote code execution on the system by injecting malicious input into OpenSSL argument fields within requests sent to the utility route, leading to remote code execution.",
+    "summary_sv": null,
+    "cwe_ids": [
+      "CWE-78"
+    ],
+    "cvss": [
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+        "base_score": 8,
+        "base_severity": "HIGH",
+        "source": "ics-cert@hq.dhs.gov",
+        "type": "Secondary"
+      },
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+        "base_score": 8.8,
+        "base_severity": "HIGH",
+        "source": "nvd@nist.gov",
+        "type": "Primary"
+      }
+    ],
+    "epss": {
+      "score": 0.01728,
+      "percentile": 0.777,
+      "date": "2026-11-07",
+      "fetched_at": "2026-11-07T20:59:08.891Z"
+    },
+    "kev": {
+      "listed": false,
+      "date_added": null,
+      "due_date": null,
+      "known_ransomware_use": null,
+      "vulnerability_name": null,
+      "catalog_version": "2026.11.06",
+      "checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "exploitation_evidence": [
+      {
+        "type": "cert_report",
+        "description": "CISA ICSA-26-057-10: ingen känd publik exploatering rapporterad vid publicering (2026-02-26). Ej i KEV (katalog 2026.11.06).",
+        "date": "2026-02-26",
+        "source_ids": [
+          "src-cisa-icsa-26-057-10-csaf",
+          "src-cisa-kev"
+        ],
+        "status": "verified_primary"
+      }
+    ],
+    "cna": "ics-cert@hq.dhs.gov",
+    "published_at": "2026-02-27T01:16:19.180Z",
+    "last_modified_at": "2026-06-17T10:23:26.050Z",
+    "references": [
+      {
+        "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-057-10.json",
+        "tags": [
+          "Third Party Advisory"
+        ]
+      },
+      {
+        "url": "https://webapps.copeland.com/Dixell/Pages/SystemSoftwareUpdate",
+        "tags": [
+          "Product"
+        ]
+      },
+      {
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-057-10",
+        "tags": [
+          "Third Party Advisory",
+          "US Government Resource"
+        ]
+      }
+    ],
+    "advisory_ids": [
+      "adv-cisa-icsa-26-057-10"
+    ],
+    "source_ids": [
+      "src-nvd-cve-2026-24695",
+      "src-first-epss"
+    ],
+    "verification_status": "verified_primary",
+    "enrichment": {
+      "nvd_fetched_at": "2026-11-07T20:57:55.603Z",
+      "epss_fetched_at": "2026-11-07T20:59:08.891Z",
+      "kev_checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [
+        "Importerad från bulletinens CVE-lista; svensk sammanfattning saknas (backlog)."
+      ],
+      "history": []
+    }
+  },
+  {
+    "id": "cve-2026-25037",
+    "cve_id": "CVE-2026-25037",
+    "cve_status": "published",
+    "nvd_status": "Analyzed",
+    "summary": "An OS command injection vulnerability exists in XWEB Pro version 1.12.1 and prior, enabling an authenticated attacker to achieve remote code execution on the system by configuring a maliciously crafted LCD state which is later processed during system setup, enabling remote code execution.",
+    "summary_sv": null,
+    "cwe_ids": [
+      "CWE-78"
+    ],
+    "cvss": [
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+        "base_score": 8,
+        "base_severity": "HIGH",
+        "source": "ics-cert@hq.dhs.gov",
+        "type": "Secondary"
+      },
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+        "base_score": 8.8,
+        "base_severity": "HIGH",
+        "source": "nvd@nist.gov",
+        "type": "Primary"
+      }
+    ],
+    "epss": {
+      "score": 0.02094,
+      "percentile": 0.81765,
+      "date": "2026-11-07",
+      "fetched_at": "2026-11-07T20:59:08.891Z"
+    },
+    "kev": {
+      "listed": false,
+      "date_added": null,
+      "due_date": null,
+      "known_ransomware_use": null,
+      "vulnerability_name": null,
+      "catalog_version": "2026.11.06",
+      "checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "exploitation_evidence": [
+      {
+        "type": "cert_report",
+        "description": "CISA ICSA-26-057-10: ingen känd publik exploatering rapporterad vid publicering (2026-02-26). Ej i KEV (katalog 2026.11.06).",
+        "date": "2026-02-26",
+        "source_ids": [
+          "src-cisa-icsa-26-057-10-csaf",
+          "src-cisa-kev"
+        ],
+        "status": "verified_primary"
+      }
+    ],
+    "cna": "ics-cert@hq.dhs.gov",
+    "published_at": "2026-02-27T02:16:19.603Z",
+    "last_modified_at": "2026-06-17T10:24:01.467Z",
+    "references": [
+      {
+        "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-057-10.json",
+        "tags": [
+          "Third Party Advisory"
+        ]
+      },
+      {
+        "url": "https://webapps.copeland.com/Dixell/Pages/SystemSoftwareUpdate",
+        "tags": [
+          "Product"
+        ]
+      },
+      {
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-057-10",
+        "tags": [
+          "Third Party Advisory",
+          "US Government Resource"
+        ]
+      }
+    ],
+    "advisory_ids": [
+      "adv-cisa-icsa-26-057-10"
+    ],
+    "source_ids": [
+      "src-nvd-cve-2026-25037",
+      "src-first-epss"
+    ],
+    "verification_status": "verified_primary",
+    "enrichment": {
+      "nvd_fetched_at": "2026-11-07T20:58:02.131Z",
+      "epss_fetched_at": "2026-11-07T20:59:08.891Z",
+      "kev_checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [
+        "Importerad från bulletinens CVE-lista; svensk sammanfattning saknas (backlog)."
+      ],
+      "history": []
+    }
+  },
+  {
+    "id": "cve-2026-25085",
+    "cve_id": "CVE-2026-25085",
+    "cve_status": "published",
+    "nvd_status": "Analyzed",
+    "summary": "A vulnerability exists in Copeland XWEB Pro version 1.12.1 and prior, in which an unexpected return value from the authentication routine is later on processed as a legitimate value, resulting in an authentication bypass.",
+    "summary_sv": null,
+    "cwe_ids": [
+      "CWE-394"
+    ],
+    "cvss": [
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:L",
+        "base_score": 8.6,
+        "base_severity": "HIGH",
+        "source": "ics-cert@hq.dhs.gov",
+        "type": "Secondary"
+      },
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "base_score": 9.8,
+        "base_severity": "CRITICAL",
+        "source": "nvd@nist.gov",
+        "type": "Primary"
+      }
+    ],
+    "epss": {
+      "score": 0.00756,
+      "percentile": 0.55404,
+      "date": "2026-11-07",
+      "fetched_at": "2026-11-07T20:59:08.891Z"
+    },
+    "kev": {
+      "listed": false,
+      "date_added": null,
+      "due_date": null,
+      "known_ransomware_use": null,
+      "vulnerability_name": null,
+      "catalog_version": "2026.11.06",
+      "checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "exploitation_evidence": [
+      {
+        "type": "cert_report",
+        "description": "CISA ICSA-26-057-10: ingen känd publik exploatering rapporterad vid publicering (2026-02-26). Ej i KEV (katalog 2026.11.06).",
+        "date": "2026-02-26",
+        "source_ids": [
+          "src-cisa-icsa-26-057-10-csaf",
+          "src-cisa-kev"
+        ],
+        "status": "verified_primary"
+      }
+    ],
+    "cna": "ics-cert@hq.dhs.gov",
+    "published_at": "2026-02-27T01:16:19.367Z",
+    "last_modified_at": "2026-06-17T10:24:05.720Z",
+    "references": [
+      {
+        "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-057-10.json",
+        "tags": [
+          "Third Party Advisory"
+        ]
+      },
+      {
+        "url": "https://webapps.copeland.com/Dixell/Pages/SystemSoftwareUpdate",
+        "tags": [
+          "Product"
+        ]
+      },
+      {
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-057-10",
+        "tags": [
+          "Third Party Advisory",
+          "US Government Resource"
+        ]
+      }
+    ],
+    "advisory_ids": [
+      "adv-cisa-icsa-26-057-10"
+    ],
+    "source_ids": [
+      "src-nvd-cve-2026-25085",
+      "src-first-epss"
+    ],
+    "verification_status": "verified_primary",
+    "enrichment": {
+      "nvd_fetched_at": "2026-11-07T20:58:08.603Z",
+      "epss_fetched_at": "2026-11-07T20:59:08.891Z",
+      "kev_checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [
+        "Importerad från bulletinens CVE-lista; svensk sammanfattning saknas (backlog)."
+      ],
+      "history": []
+    }
+  },
+  {
+    "id": "cve-2026-25105",
+    "cve_id": "CVE-2026-25105",
+    "cve_status": "published",
+    "nvd_status": "Analyzed",
+    "summary": "An OS command injection vulnerability exists in XWEB Pro version 1.12.1 and prior, enabling an authenticated attacker to achieve remote code execution on the system by injecting malicious input into parameters of the Modbus command tool in the debug route.",
+    "summary_sv": null,
+    "cwe_ids": [
+      "CWE-78"
+    ],
+    "cvss": [
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+        "base_score": 8,
+        "base_severity": "HIGH",
+        "source": "ics-cert@hq.dhs.gov",
+        "type": "Secondary"
+      },
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+        "base_score": 8.8,
+        "base_severity": "HIGH",
+        "source": "nvd@nist.gov",
+        "type": "Primary"
+      }
+    ],
+    "epss": {
+      "score": 0.02094,
+      "percentile": 0.81764,
+      "date": "2026-11-07",
+      "fetched_at": "2026-11-07T20:59:08.891Z"
+    },
+    "kev": {
+      "listed": false,
+      "date_added": null,
+      "due_date": null,
+      "known_ransomware_use": null,
+      "vulnerability_name": null,
+      "catalog_version": "2026.11.06",
+      "checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "exploitation_evidence": [
+      {
+        "type": "cert_report",
+        "description": "CISA ICSA-26-057-10: ingen känd publik exploatering rapporterad vid publicering (2026-02-26). Ej i KEV (katalog 2026.11.06).",
+        "date": "2026-02-26",
+        "source_ids": [
+          "src-cisa-icsa-26-057-10-csaf",
+          "src-cisa-kev"
+        ],
+        "status": "verified_primary"
+      }
+    ],
+    "cna": "ics-cert@hq.dhs.gov",
+    "published_at": "2026-02-27T02:16:19.800Z",
+    "last_modified_at": "2026-06-17T10:24:06.947Z",
+    "references": [
+      {
+        "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-057-10.json",
+        "tags": [
+          "Third Party Advisory"
+        ]
+      },
+      {
+        "url": "https://webapps.copeland.com/Dixell/Pages/SystemSoftwareUpdate",
+        "tags": [
+          "Product"
+        ]
+      },
+      {
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-057-10",
+        "tags": [
+          "Third Party Advisory",
+          "US Government Resource"
+        ]
+      }
+    ],
+    "advisory_ids": [
+      "adv-cisa-icsa-26-057-10"
+    ],
+    "source_ids": [
+      "src-nvd-cve-2026-25105",
+      "src-first-epss"
+    ],
+    "verification_status": "verified_primary",
+    "enrichment": {
+      "nvd_fetched_at": "2026-11-07T20:58:15.171Z",
+      "epss_fetched_at": "2026-11-07T20:59:08.891Z",
+      "kev_checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [
+        "Importerad från bulletinens CVE-lista; svensk sammanfattning saknas (backlog)."
+      ],
+      "history": []
+    }
+  },
+  {
+    "id": "cve-2026-25109",
+    "cve_id": "CVE-2026-25109",
+    "cve_status": "published",
+    "nvd_status": "Modified",
+    "summary": "An OS command injection vulnerability exists in XWEB Pro version 1.12.1 and prior, enabling an authenticated attacker to achieve remote code execution on the system by injecting malicious input into the devices field when accessing the get setup route.",
+    "summary_sv": null,
+    "cwe_ids": [
+      "CWE-78"
+    ],
+    "cvss": [
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+        "base_score": 8,
+        "base_severity": "HIGH",
+        "source": "ics-cert@hq.dhs.gov",
+        "type": "Secondary"
+      },
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+        "base_score": 8.8,
+        "base_severity": "HIGH",
+        "source": "nvd@nist.gov",
+        "type": "Primary"
+      }
+    ],
+    "epss": {
+      "score": 0.01728,
+      "percentile": 0.77699,
+      "date": "2026-11-07",
+      "fetched_at": "2026-11-07T20:59:08.891Z"
+    },
+    "kev": {
+      "listed": false,
+      "date_added": null,
+      "due_date": null,
+      "known_ransomware_use": null,
+      "vulnerability_name": null,
+      "catalog_version": "2026.11.06",
+      "checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "exploitation_evidence": [
+      {
+        "type": "cert_report",
+        "description": "CISA ICSA-26-057-10: ingen känd publik exploatering rapporterad vid publicering (2026-02-26). Ej i KEV (katalog 2026.11.06).",
+        "date": "2026-02-26",
+        "source_ids": [
+          "src-cisa-icsa-26-057-10-csaf",
+          "src-cisa-kev"
+        ],
+        "status": "verified_primary"
+      }
+    ],
+    "cna": "ics-cert@hq.dhs.gov",
+    "published_at": "2026-02-27T01:16:19.560Z",
+    "last_modified_at": "2026-06-17T10:24:07.310Z",
+    "references": [
+      {
+        "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-057-10.json",
+        "tags": [
+          "Third Party Advisory"
+        ]
+      },
+      {
+        "url": "https://webapps.copeland.com/Dixell/Pages/SystemSoftwareUpdate",
+        "tags": [
+          "Product"
+        ]
+      },
+      {
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-057-10",
+        "tags": [
+          "Third Party Advisory",
+          "US Government Resource"
+        ]
+      }
+    ],
+    "advisory_ids": [
+      "adv-cisa-icsa-26-057-10"
+    ],
+    "source_ids": [
+      "src-nvd-cve-2026-25109",
+      "src-first-epss"
+    ],
+    "verification_status": "verified_primary",
+    "enrichment": {
+      "nvd_fetched_at": "2026-11-07T20:58:21.635Z",
+      "epss_fetched_at": "2026-11-07T20:59:08.891Z",
+      "kev_checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [
+        "Importerad från bulletinens CVE-lista; svensk sammanfattning saknas (backlog)."
+      ],
+      "history": []
+    }
+  },
+  {
+    "id": "cve-2026-25111",
+    "cve_id": "CVE-2026-25111",
+    "cve_status": "published",
+    "nvd_status": "Analyzed",
+    "summary": "An OS command injection vulnerability exists in XWEB Pro version 1.12.1 and prior, enabling an authenticated attacker to achieve remote code execution on the system by injecting malicious input into requests sent to the restore route.",
+    "summary_sv": null,
+    "cwe_ids": [
+      "CWE-78"
+    ],
+    "cvss": [
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+        "base_score": 8,
+        "base_severity": "HIGH",
+        "source": "ics-cert@hq.dhs.gov",
+        "type": "Secondary"
+      },
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+        "base_score": 8.8,
+        "base_severity": "HIGH",
+        "source": "nvd@nist.gov",
+        "type": "Primary"
+      }
+    ],
+    "epss": {
+      "score": 0.01728,
+      "percentile": 0.777,
+      "date": "2026-11-07",
+      "fetched_at": "2026-11-07T20:59:08.891Z"
+    },
+    "kev": {
+      "listed": false,
+      "date_added": null,
+      "due_date": null,
+      "known_ransomware_use": null,
+      "vulnerability_name": null,
+      "catalog_version": "2026.11.06",
+      "checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "exploitation_evidence": [
+      {
+        "type": "cert_report",
+        "description": "CISA ICSA-26-057-10: ingen känd publik exploatering rapporterad vid publicering (2026-02-26). Ej i KEV (katalog 2026.11.06).",
+        "date": "2026-02-26",
+        "source_ids": [
+          "src-cisa-icsa-26-057-10-csaf",
+          "src-cisa-kev"
+        ],
+        "status": "verified_primary"
+      }
+    ],
+    "cna": "ics-cert@hq.dhs.gov",
+    "published_at": "2026-02-27T01:16:19.747Z",
+    "last_modified_at": "2026-06-17T10:24:07.537Z",
+    "references": [
+      {
+        "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-057-10.json",
+        "tags": [
+          "Third Party Advisory"
+        ]
+      },
+      {
+        "url": "https://webapps.copeland.com/Dixell/Pages/SystemSoftwareUpdate",
+        "tags": [
+          "Product"
+        ]
+      },
+      {
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-057-10",
+        "tags": [
+          "Third Party Advisory",
+          "US Government Resource"
+        ]
+      }
+    ],
+    "advisory_ids": [
+      "adv-cisa-icsa-26-057-10"
+    ],
+    "source_ids": [
+      "src-nvd-cve-2026-25111",
+      "src-first-epss"
+    ],
+    "verification_status": "verified_primary",
+    "enrichment": {
+      "nvd_fetched_at": "2026-11-07T20:58:28.143Z",
+      "epss_fetched_at": "2026-11-07T20:59:08.891Z",
+      "kev_checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [
+        "Importerad från bulletinens CVE-lista; svensk sammanfattning saknas (backlog)."
+      ],
+      "history": []
+    }
+  },
+  {
+    "id": "cve-2026-25195",
+    "cve_id": "CVE-2026-25195",
+    "cve_status": "published",
+    "nvd_status": "Analyzed",
+    "summary": "An OS command injection vulnerability exists in XWEB Pro version 1.12.1 and prior, enabling an authenticated attacker to achieve remote code execution on the system by supplying a crafted firmware update file via the firmware update route.",
+    "summary_sv": null,
+    "cwe_ids": [
+      "CWE-78"
+    ],
+    "cvss": [
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+        "base_score": 8,
+        "base_severity": "HIGH",
+        "source": "ics-cert@hq.dhs.gov",
+        "type": "Secondary"
+      },
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H",
+        "base_score": 6.6,
+        "base_severity": "MEDIUM",
+        "source": "nvd@nist.gov",
+        "type": "Primary"
+      }
+    ],
+    "epss": {
+      "score": 0.01647,
+      "percentile": 0.7661,
+      "date": "2026-11-07",
+      "fetched_at": "2026-11-07T20:59:08.891Z"
+    },
+    "kev": {
+      "listed": false,
+      "date_added": null,
+      "due_date": null,
+      "known_ransomware_use": null,
+      "vulnerability_name": null,
+      "catalog_version": "2026.11.06",
+      "checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "exploitation_evidence": [
+      {
+        "type": "cert_report",
+        "description": "CISA ICSA-26-057-10: ingen känd publik exploatering rapporterad vid publicering (2026-02-26). Ej i KEV (katalog 2026.11.06).",
+        "date": "2026-02-26",
+        "source_ids": [
+          "src-cisa-icsa-26-057-10-csaf",
+          "src-cisa-kev"
+        ],
+        "status": "verified_primary"
+      }
+    ],
+    "cna": "ics-cert@hq.dhs.gov",
+    "published_at": "2026-02-27T01:16:19.937Z",
+    "last_modified_at": "2026-06-17T10:24:17.347Z",
+    "references": [
+      {
+        "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-057-10.json",
+        "tags": [
+          "Third Party Advisory"
+        ]
+      },
+      {
+        "url": "https://webapps.copeland.com/Dixell/Pages/SystemSoftwareUpdate",
+        "tags": [
+          "Product"
+        ]
+      },
+      {
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-057-10",
+        "tags": [
+          "Third Party Advisory",
+          "US Government Resource"
+        ]
+      }
+    ],
+    "advisory_ids": [
+      "adv-cisa-icsa-26-057-10"
+    ],
+    "source_ids": [
+      "src-nvd-cve-2026-25195",
+      "src-first-epss"
+    ],
+    "verification_status": "verified_primary",
+    "enrichment": {
+      "nvd_fetched_at": "2026-11-07T20:58:34.647Z",
+      "epss_fetched_at": "2026-11-07T20:59:08.891Z",
+      "kev_checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [
+        "Importerad från bulletinens CVE-lista; svensk sammanfattning saknas (backlog)."
+      ],
+      "history": []
+    }
+  },
+  {
+    "id": "cve-2026-25196",
+    "cve_id": "CVE-2026-25196",
+    "cve_status": "published",
+    "nvd_status": "Analyzed",
+    "summary": "An OS command injection vulnerability exists in XWEB Pro version 1.12.1 and prior, enabling an authenticated attacker to achieve remote code execution on the system by injecting malicious input into the Wi-Fi SSID and/or password fields can lead to remote code execution when the configuration is processed.",
+    "summary_sv": null,
+    "cwe_ids": [
+      "CWE-78"
+    ],
+    "cvss": [
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+        "base_score": 8,
+        "base_severity": "HIGH",
+        "source": "ics-cert@hq.dhs.gov",
+        "type": "Secondary"
+      },
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+        "base_score": 8.8,
+        "base_severity": "HIGH",
+        "source": "nvd@nist.gov",
+        "type": "Primary"
+      }
+    ],
+    "epss": {
+      "score": 0.02094,
+      "percentile": 0.81764,
+      "date": "2026-11-07",
+      "fetched_at": "2026-11-07T20:59:08.891Z"
+    },
+    "kev": {
+      "listed": false,
+      "date_added": null,
+      "due_date": null,
+      "known_ransomware_use": null,
+      "vulnerability_name": null,
+      "catalog_version": "2026.11.06",
+      "checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "exploitation_evidence": [
+      {
+        "type": "cert_report",
+        "description": "CISA ICSA-26-057-10: ingen känd publik exploatering rapporterad vid publicering (2026-02-26). Ej i KEV (katalog 2026.11.06).",
+        "date": "2026-02-26",
+        "source_ids": [
+          "src-cisa-icsa-26-057-10-csaf",
+          "src-cisa-kev"
+        ],
+        "status": "verified_primary"
+      }
+    ],
+    "cna": "ics-cert@hq.dhs.gov",
+    "published_at": "2026-02-27T02:16:20.000Z",
+    "last_modified_at": "2026-06-17T10:24:17.470Z",
+    "references": [
+      {
+        "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-057-10.json",
+        "tags": [
+          "Third Party Advisory"
+        ]
+      },
+      {
+        "url": "https://webapps.copeland.com/Dixell/Pages/SystemSoftwareUpdate",
+        "tags": [
+          "Product"
+        ]
+      },
+      {
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-057-10",
+        "tags": [
+          "Third Party Advisory",
+          "US Government Resource"
+        ]
+      }
+    ],
+    "advisory_ids": [
+      "adv-cisa-icsa-26-057-10"
+    ],
+    "source_ids": [
+      "src-nvd-cve-2026-25196",
+      "src-first-epss"
+    ],
+    "verification_status": "verified_primary",
+    "enrichment": {
+      "nvd_fetched_at": "2026-11-07T20:58:41.163Z",
+      "epss_fetched_at": "2026-11-07T20:59:08.891Z",
+      "kev_checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [
+        "Importerad från bulletinens CVE-lista; svensk sammanfattning saknas (backlog)."
+      ],
+      "history": []
+    }
+  },
+  {
+    "id": "cve-2026-25721",
+    "cve_id": "CVE-2026-25721",
+    "cve_status": "published",
+    "nvd_status": "Analyzed",
+    "summary": "An OS command injection vulnerability exists in XWEB Pro version 1.12.1 and prior, enabling an authenticated attacker to achieve remote code execution on the system by injecting malicious input into the server username and/or password fields of the restore action in the API V1 route.",
+    "summary_sv": null,
+    "cwe_ids": [
+      "CWE-78"
+    ],
+    "cvss": [
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+        "base_score": 8,
+        "base_severity": "HIGH",
+        "source": "ics-cert@hq.dhs.gov",
+        "type": "Secondary"
+      },
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+        "base_score": 8.8,
+        "base_severity": "HIGH",
+        "source": "nvd@nist.gov",
+        "type": "Primary"
+      }
+    ],
+    "epss": {
+      "score": 0.02094,
+      "percentile": 0.81765,
+      "date": "2026-11-07",
+      "fetched_at": "2026-11-07T20:59:08.891Z"
+    },
+    "kev": {
+      "listed": false,
+      "date_added": null,
+      "due_date": null,
+      "known_ransomware_use": null,
+      "vulnerability_name": null,
+      "catalog_version": "2026.11.06",
+      "checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "exploitation_evidence": [
+      {
+        "type": "cert_report",
+        "description": "CISA ICSA-26-057-10: ingen känd publik exploatering rapporterad vid publicering (2026-02-26). Ej i KEV (katalog 2026.11.06).",
+        "date": "2026-02-26",
+        "source_ids": [
+          "src-cisa-icsa-26-057-10-csaf",
+          "src-cisa-kev"
+        ],
+        "status": "verified_primary"
+      }
+    ],
+    "cna": "ics-cert@hq.dhs.gov",
+    "published_at": "2026-02-27T02:16:20.170Z",
+    "last_modified_at": "2026-06-17T10:25:06.103Z",
+    "references": [
+      {
+        "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-057-10.json",
+        "tags": [
+          "Third Party Advisory"
+        ]
+      },
+      {
+        "url": "https://webapps.copeland.com/Dixell/Pages/SystemSoftwareUpdate",
+        "tags": [
+          "Product"
+        ]
+      },
+      {
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-057-10",
+        "tags": [
+          "Third Party Advisory",
+          "US Government Resource"
+        ]
+      }
+    ],
+    "advisory_ids": [
+      "adv-cisa-icsa-26-057-10"
+    ],
+    "source_ids": [
+      "src-nvd-cve-2026-25721",
+      "src-first-epss"
+    ],
+    "verification_status": "verified_primary",
+    "enrichment": {
+      "nvd_fetched_at": "2026-11-07T20:58:47.647Z",
+      "epss_fetched_at": "2026-11-07T20:59:08.891Z",
+      "kev_checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [
+        "Importerad från bulletinens CVE-lista; svensk sammanfattning saknas (backlog)."
+      ],
+      "history": []
+    }
+  },
+  {
+    "id": "cve-2026-3037",
+    "cve_id": "CVE-2026-3037",
+    "cve_status": "published",
+    "nvd_status": "Analyzed",
+    "summary": "An OS command injection vulnerability exists in XWEB Pro version 1.12.1 and prior, enabling an authenticated attacker to achieve remote code execution on the system by modifying malicious input injected into the MBird SMS service URL and/or code via the utility route which is later processed during system setup, leading to remote code execution.",
+    "summary_sv": null,
+    "cwe_ids": [
+      "CWE-78"
+    ],
+    "cvss": [
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+        "base_score": 8,
+        "base_severity": "HIGH",
+        "source": "ics-cert@hq.dhs.gov",
+        "type": "Secondary"
+      },
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+        "base_score": 8.8,
+        "base_severity": "HIGH",
+        "source": "nvd@nist.gov",
+        "type": "Primary"
+      }
+    ],
+    "epss": {
+      "score": 0.02135,
+      "percentile": 0.82107,
+      "date": "2026-11-07",
+      "fetched_at": "2026-11-07T20:59:08.891Z"
+    },
+    "kev": {
+      "listed": false,
+      "date_added": null,
+      "due_date": null,
+      "known_ransomware_use": null,
+      "vulnerability_name": null,
+      "catalog_version": "2026.11.06",
+      "checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "exploitation_evidence": [
+      {
+        "type": "cert_report",
+        "description": "CISA ICSA-26-057-10: ingen känd publik exploatering rapporterad vid publicering (2026-02-26). Ej i KEV (katalog 2026.11.06).",
+        "date": "2026-02-26",
+        "source_ids": [
+          "src-cisa-icsa-26-057-10-csaf",
+          "src-cisa-kev"
+        ],
+        "status": "verified_primary"
+      }
+    ],
+    "cna": "ics-cert@hq.dhs.gov",
+    "published_at": "2026-02-27T02:16:20.330Z",
+    "last_modified_at": "2026-06-17T10:42:55.060Z",
+    "references": [
+      {
+        "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-057-10.json",
+        "tags": [
+          "Third Party Advisory"
+        ]
+      },
+      {
+        "url": "https://webapps.copeland.com/Dixell/Pages/SystemSoftwareUpdate",
+        "tags": [
+          "Product"
+        ]
+      },
+      {
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-057-10",
+        "tags": [
+          "Third Party Advisory",
+          "US Government Resource"
+        ]
+      }
+    ],
+    "advisory_ids": [
+      "adv-cisa-icsa-26-057-10"
+    ],
+    "source_ids": [
+      "src-nvd-cve-2026-3037",
+      "src-first-epss"
+    ],
+    "verification_status": "verified_primary",
+    "enrichment": {
+      "nvd_fetched_at": "2026-11-07T20:58:54.159Z",
+      "epss_fetched_at": "2026-11-07T20:59:08.891Z",
+      "kev_checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [
+        "Importerad från bulletinens CVE-lista; svensk sammanfattning saknas (backlog)."
+      ],
+      "history": []
+    }
+  },
+  {
+    "id": "cve-2026-34223",
+    "cve_id": "CVE-2026-34223",
+    "cve_status": "published",
+    "nvd_status": "Deferred",
+    "summary": "A vulnerability has been identified in Desigo CC ClickOnce Client V6 (All versions), Desigo CC ClickOnce Client V7 (All versions), Desigo CC family V8 (All versions), Desigo CC family V9 (All versions), Desigo CC Flex Client V6 (All versions), Desigo CC Flex Client V7 (All versions), Desigo CC Installed Client V6 (All versions), Desigo CC Installed Client V7 (All versions). The affected application is vulnerable to Client Code Execution (CCE) due to insufficient input validation when handling scripts embedded within user-defined graphics documents. Specifically, when the script within a graphics document is designed or modified by an attacker to include malicious commands. When a user opens a compromised graphics document, the embedded script is executed on the client application instance, allowing an attacker to write arbitrary files to the client's operating system. Successful exploitation requires an attacker to craft a malicious graphics document and entice a user with sufficient privileges to display it. This could lead to compromise of the client operating system and potential lateral movement within the organization.",
+    "summary_sv": "Klientkodkörning (CWE-94) i Desigo CC-klienter genom otillräcklig indatavalidering av skript i användardefinierade grafikdokument; kräver lokal åtkomst, låga privilegier och användarinteraktion (CVSS 3.1: 8.2 HIGH; CVSS 4.0: 8.6 HIGH). Berörda/ej berörda varianter avgörs av SSA-330084.",
+    "cwe_ids": [
+      "CWE-94"
+    ],
+    "cvss": [
+      {
+        "version": "4.0",
+        "vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:A/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+        "base_score": 8.6,
+        "base_severity": "HIGH",
+        "source": "productcert@siemens.com",
+        "type": "Secondary"
+      },
+      {
+        "version": "3.1",
+        "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+        "base_score": 8.2,
+        "base_severity": "HIGH",
+        "source": "productcert@siemens.com",
+        "type": "Secondary"
+      }
+    ],
+    "epss": {
+      "score": 0.00194,
+      "percentile": 0.09126,
+      "date": "2026-11-07",
+      "fetched_at": "2026-11-07T20:59:08.891Z"
+    },
+    "kev": {
+      "listed": false,
+      "date_added": null,
+      "due_date": null,
+      "known_ransomware_use": null,
+      "vulnerability_name": null,
+      "catalog_version": "2026.11.06",
+      "checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "exploitation_evidence": [
+      {
+        "type": "none_reported",
+        "description": "Ej i CISA KEV (katalog 2026.11.06).",
+        "date": "2026-11-07",
+        "source_ids": [
+          "src-cisa-kev"
+        ],
+        "status": "verified_primary"
+      }
+    ],
+    "cna": "productcert@siemens.com",
+    "published_at": "2026-09-08T09:18:00.373Z",
+    "last_modified_at": "2026-09-14T14:17:07.503Z",
+    "references": [
+      {
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-330084.html",
+        "tags": []
+      }
+    ],
+    "advisory_ids": [
+      "adv-siemens-ssa-330084"
+    ],
+    "source_ids": [
+      "src-nvd-cve-2026-34223",
+      "src-first-epss"
+    ],
+    "verification_status": "verified_primary",
+    "enrichment": {
+      "nvd_fetched_at": "2026-11-07T20:25:53.967Z",
+      "epss_fetched_at": "2026-11-07T20:59:08.891Z",
+      "kev_checked_at": "2026-11-07T20:59:09.436Z"
+    },
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [
+        "Konflikt: NVD:s beskrivningstext nämner Desigo CC family V8/V9 och Flex Client V6/V7, som CSAF product_status klassar som known_not_affected. CSAF-fältet är auktoritativt; se claim."
+      ],
+      "history": []
+    }
+  }
+]

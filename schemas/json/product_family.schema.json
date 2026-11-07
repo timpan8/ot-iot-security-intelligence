@@ -1,0 +1,883 @@
+{
+  "$id": "https://timpan8.github.io/ot-iot-security-intelligence/schemas/product_family.schema.json",
+  "title": "product_family",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9.]+)*$"
+    },
+    "kind": {
+      "type": "string",
+      "const": "product_family"
+    },
+    "vendor_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9.]+)*$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "aliases": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "BMS",
+        "DCS",
+        "Energi",
+        "Gateway",
+        "HMI",
+        "IoT",
+        "Kamera",
+        "Kraft",
+        "Kyla",
+        "NAS",
+        "OPC",
+        "PLC",
+        "PLC/HMI",
+        "Passer",
+        "RTU",
+        "SCADA",
+        "Tjänst",
+        "Ventilation"
+      ]
+    },
+    "function_text": {
+      "type": "string",
+      "minLength": 1
+    },
+    "description": {
+      "default": null,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "documentation": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "level": {
+            "type": "string",
+            "enum": [
+              "product_manual",
+              "hardening_guide",
+              "security_guidance",
+              "bulletin_portal",
+              "vendor_support",
+              "industry_guide",
+              "standard",
+              "other"
+            ]
+          },
+          "level_text": {
+            "type": "string",
+            "minLength": 1
+          },
+          "product_specific": {
+            "type": "boolean"
+          },
+          "source_id": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9.]+)*$"
+          }
+        },
+        "required": [
+          "url",
+          "level",
+          "level_text",
+          "product_specific",
+          "source_id"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "discovery_heuristic": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "caveat": {
+          "type": "string",
+          "minLength": 1
+        },
+        "purpose": {
+          "type": "string",
+          "const": "authorized_inventory_only"
+        }
+      },
+      "required": [
+        "query",
+        "caveat",
+        "purpose"
+      ],
+      "additionalProperties": false
+    },
+    "risk_summary": {
+      "type": "object",
+      "properties": {
+        "type_text": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "explanation_text": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "cve_text": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "affected_firmware_text": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "fix_text": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "patch_level_text": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "control_text": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "legacy_priority_text": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "type_text",
+        "explanation_text",
+        "cve_text",
+        "affected_firmware_text",
+        "fix_text",
+        "patch_level_text",
+        "control_text",
+        "legacy_priority_text"
+      ],
+      "additionalProperties": false
+    },
+    "control_ids": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9.]+)*$"
+      }
+    },
+    "advisory_ids": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9.]+)*$"
+      }
+    },
+    "match_ids": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9.]+)*$"
+      }
+    },
+    "observation_ids": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9.]+)*$"
+      }
+    },
+    "claim_ids": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9.]+)*$"
+      }
+    },
+    "risk": {
+      "type": "object",
+      "properties": {
+        "threat": {
+          "type": "object",
+          "properties": {
+            "level": {
+              "type": "string",
+              "enum": [
+                "high",
+                "medium",
+                "low",
+                "unknown"
+              ]
+            },
+            "basis": {
+              "type": "string",
+              "minLength": 1
+            },
+            "source_ids": {
+              "default": [],
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[a-z0-9]+(?:-[a-z0-9.]+)*$"
+              }
+            }
+          },
+          "required": [
+            "level",
+            "basis",
+            "source_ids"
+          ],
+          "additionalProperties": false
+        },
+        "severity": {
+          "type": "object",
+          "properties": {
+            "level": {
+              "type": "string",
+              "enum": [
+                "high",
+                "medium",
+                "low",
+                "unknown"
+              ]
+            },
+            "basis": {
+              "type": "string",
+              "minLength": 1
+            },
+            "source_ids": {
+              "default": [],
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[a-z0-9]+(?:-[a-z0-9.]+)*$"
+              }
+            }
+          },
+          "required": [
+            "level",
+            "basis",
+            "source_ids"
+          ],
+          "additionalProperties": false
+        },
+        "relevance": {
+          "type": "object",
+          "properties": {
+            "level": {
+              "type": "string",
+              "enum": [
+                "high",
+                "medium",
+                "low",
+                "unknown"
+              ]
+            },
+            "basis": {
+              "type": "string",
+              "minLength": 1
+            },
+            "source_ids": {
+              "default": [],
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[a-z0-9]+(?:-[a-z0-9.]+)*$"
+              }
+            }
+          },
+          "required": [
+            "level",
+            "basis",
+            "source_ids"
+          ],
+          "additionalProperties": false
+        },
+        "exposure": {
+          "type": "object",
+          "properties": {
+            "level": {
+              "type": "string",
+              "const": "unknown"
+            },
+            "basis": {
+              "type": "string",
+              "minLength": 1
+            },
+            "source_ids": {
+              "default": [],
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[a-z0-9]+(?:-[a-z0-9.]+)*$"
+              }
+            }
+          },
+          "required": [
+            "level",
+            "basis",
+            "source_ids"
+          ],
+          "additionalProperties": false
+        },
+        "ot_impact": {
+          "type": "object",
+          "properties": {
+            "level": {
+              "type": "string",
+              "enum": [
+                "high",
+                "medium",
+                "low",
+                "unknown"
+              ]
+            },
+            "basis": {
+              "type": "string",
+              "minLength": 1
+            },
+            "source_ids": {
+              "default": [],
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[a-z0-9]+(?:-[a-z0-9.]+)*$"
+              }
+            }
+          },
+          "required": [
+            "level",
+            "basis",
+            "source_ids"
+          ],
+          "additionalProperties": false
+        },
+        "mitigation_feasibility": {
+          "type": "object",
+          "properties": {
+            "level": {
+              "type": "string",
+              "enum": [
+                "high",
+                "medium",
+                "low",
+                "unknown"
+              ]
+            },
+            "basis": {
+              "type": "string",
+              "minLength": 1
+            },
+            "source_ids": {
+              "default": [],
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[a-z0-9]+(?:-[a-z0-9.]+)*$"
+              }
+            }
+          },
+          "required": [
+            "level",
+            "basis",
+            "source_ids"
+          ],
+          "additionalProperties": false
+        },
+        "data_quality": {
+          "type": "object",
+          "properties": {
+            "level": {
+              "type": "string",
+              "enum": [
+                "high",
+                "medium",
+                "low",
+                "unknown"
+              ]
+            },
+            "basis": {
+              "type": "string",
+              "minLength": 1
+            },
+            "source_ids": {
+              "default": [],
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[a-z0-9]+(?:-[a-z0-9.]+)*$"
+              }
+            }
+          },
+          "required": [
+            "level",
+            "basis",
+            "source_ids"
+          ],
+          "additionalProperties": false
+        },
+        "recommended_action": {
+          "type": "string",
+          "enum": [
+            "verify_model_and_version",
+            "mitigate_if_exposed",
+            "apply_vendor_fix",
+            "replace_or_isolate_eol",
+            "harden_configuration",
+            "monitor"
+          ]
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1
+        },
+        "method_version": {
+          "type": "string",
+          "const": "risk-method-1.0"
+        }
+      },
+      "required": [
+        "threat",
+        "severity",
+        "relevance",
+        "exposure",
+        "ot_impact",
+        "mitigation_feasibility",
+        "data_quality",
+        "recommended_action",
+        "rationale",
+        "method_version"
+      ],
+      "additionalProperties": false
+    },
+    "data_quality_flags": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "missing_primary_source",
+          "missing_cve_reference",
+          "unknown_version_boundary",
+          "unverified_fix_version",
+          "possibly_outdated",
+          "needs_human_review",
+          "generic_control_text",
+          "industry_guide_only",
+          "conditional_priority_only",
+          "patch_level_unknown",
+          "unexpanded_cve_range",
+          "conflicting_sources",
+          "broken_link"
+        ]
+      }
+    },
+    "provenance": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "sheet": {
+            "type": "string",
+            "minLength": 1
+          },
+          "row": {
+            "type": "integer",
+            "exclusiveMinimum": 0,
+            "maximum": 9007199254740991
+          },
+          "column": {
+            "type": "string",
+            "pattern": "^[A-Z]{1,2}$"
+          },
+          "header": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "sheet",
+          "row",
+          "column",
+          "header"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "original": {
+      "type": "object",
+      "properties": {
+        "sheet": {
+          "type": "string",
+          "minLength": 1
+        },
+        "row": {
+          "type": "integer",
+          "exclusiveMinimum": 0,
+          "maximum": 9007199254740991
+        },
+        "values": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string"
+          },
+          "additionalProperties": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      },
+      "required": [
+        "sheet",
+        "row",
+        "values"
+      ],
+      "additionalProperties": false
+    },
+    "verification_status": {
+      "type": "string",
+      "enum": [
+        "verified_primary",
+        "corroborated_secondary",
+        "needs_review",
+        "unknown",
+        "disputed"
+      ]
+    },
+    "source_ids": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9.]+)*$"
+      }
+    },
+    "review": {
+      "type": "object",
+      "properties": {
+        "reviewed_at": {
+          "default": null,
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date",
+              "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "reviewer": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "notes": {
+          "default": [],
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "history": {
+          "default": [],
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "date": {
+                "type": "string",
+                "format": "date",
+                "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$"
+              },
+              "status": {
+                "default": null,
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "verified_primary",
+                      "corroborated_secondary",
+                      "needs_review",
+                      "unknown",
+                      "disputed"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "summary": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "date",
+              "status",
+              "summary"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "reviewed_at",
+        "reviewer",
+        "notes",
+        "history"
+      ],
+      "additionalProperties": false
+    },
+    "hardware_revisions": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "lifecycle": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "active",
+            "eol_announced",
+            "eol",
+            "mixed",
+            "unknown"
+          ]
+        },
+        "eol_date": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "status": {
+              "type": "string",
+              "enum": [
+                "verified_primary",
+                "corroborated_secondary",
+                "needs_review",
+                "unknown",
+                "disputed"
+              ]
+            },
+            "source_ids": {
+              "default": [],
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[a-z0-9]+(?:-[a-z0-9.]+)*$"
+              }
+            },
+            "reviewed_at": {
+              "default": null,
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "date",
+                  "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "note": {
+              "default": null,
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "value",
+            "status",
+            "source_ids",
+            "reviewed_at",
+            "note"
+          ],
+          "additionalProperties": false
+        },
+        "note": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "status",
+        "eol_date",
+        "note"
+      ],
+      "additionalProperties": false
+    },
+    "ot_role": {
+      "default": null,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ot_consequence": {
+      "default": null,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "secure_configuration_notes": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "unexpanded_cve_ranges": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string",
+            "minLength": 1
+          },
+          "start": {
+            "type": "string",
+            "pattern": "^CVE-\\d{4}-\\d{4,}$"
+          },
+          "end": {
+            "type": "string",
+            "pattern": "^CVE-\\d{4}-\\d{4,}$"
+          },
+          "expanded": {
+            "type": "boolean"
+          },
+          "verified_ids": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z0-9]+(?:-[a-z0-9.]+)*$"
+            }
+          },
+          "note": {
+            "default": null,
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "text",
+          "start",
+          "end",
+          "expanded",
+          "verified_ids",
+          "note"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "protocol_service_ids": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9.]+)*$"
+      }
+    }
+  },
+  "required": [
+    "id",
+    "kind",
+    "vendor_id",
+    "name",
+    "aliases",
+    "category",
+    "function_text",
+    "description",
+    "documentation",
+    "discovery_heuristic",
+    "risk_summary",
+    "control_ids",
+    "advisory_ids",
+    "match_ids",
+    "observation_ids",
+    "claim_ids",
+    "risk",
+    "data_quality_flags",
+    "provenance",
+    "original",
+    "verification_status",
+    "source_ids",
+    "review",
+    "hardware_revisions",
+    "lifecycle",
+    "ot_role",
+    "ot_consequence",
+    "secure_configuration_notes",
+    "unexpanded_cve_ranges",
+    "protocol_service_ids"
+  ],
+  "additionalProperties": false
+}

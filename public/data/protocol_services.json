@@ -1,0 +1,2525 @@
+[
+  {
+    "id": "svc-modbus-tcp",
+    "kind": "protocol_service",
+    "name": "Modbus TCP",
+    "aliases": [
+      "Modbus/TCP",
+      "Modbus"
+    ],
+    "category": "Tjänst",
+    "function_text": "PLC, energi, mätare",
+    "description": null,
+    "documentation": [
+      {
+        "url": "https://csrc.nist.gov/pubs/sp/800/82/r3/final",
+        "level": "industry_guide",
+        "level_text": "Branschstandard för OT-arkitektur",
+        "product_specific": false,
+        "source_id": "src-nist-sp800-82r3"
+      }
+    ],
+    "discovery_heuristic": {
+      "query": "port:502",
+      "caveat": "Sökord är heuristik för egen/auktoriserad inventering (komplettera med net:DITT-EGET-IP-INTERVALL). Träffar är inte enhetsbevis och kan vara falska; portträffar identifierar protokollmöjlighet, inte specifik produkt. Plattformen utför inga sökningar.",
+      "purpose": "authorized_inventory_only"
+    },
+    "risk_summary": {
+      "type_text": "Protokoll utan inbyggd autentisering/kryptering",
+      "explanation_text": "Publik Modbus-tjänst kan exponera styr-/mätfunktioner; beror på tillåten funktionsuppsättning.",
+      "cve_text": null,
+      "affected_firmware_text": null,
+      "fix_text": null,
+      "patch_level_text": "Uppgift saknas",
+      "control_text": "Ingen publik direktadministration; VPN/MFA där möjligt; nätsegmentering; loggning; uppdatera.",
+      "legacy_priority_text": "P1 vid publik åtkomst"
+    },
+    "control_ids": [
+      "ctl-asset-version-verification",
+      "ctl-no-public-admin",
+      "ctl-network-segmentation",
+      "ctl-protocol-firewall-allowlist",
+      "ctl-secure-remote-access",
+      "ctl-vendor-firmware-update",
+      "ctl-logging-monitoring",
+      "ctl-vendor-hardening-guide"
+    ],
+    "advisory_ids": [],
+    "match_ids": [],
+    "observation_ids": [],
+    "claim_ids": [],
+    "risk": {
+      "threat": {
+        "level": "unknown",
+        "basis": "Protokoll/tjänst: hotet beror på konfiguration och bakomliggande produkter, inte på egna CVE:er.",
+        "source_ids": []
+      },
+      "severity": {
+        "level": "unknown",
+        "basis": "Ingen CVSS tillgänglig (inga bekräftade matchningar).",
+        "source_ids": []
+      },
+      "relevance": {
+        "level": "unknown",
+        "basis": "Ingen CVE-matchning; versionsuppgift saknas.",
+        "source_ids": []
+      },
+      "exposure": {
+        "level": "unknown",
+        "basis": "Publik katalog saknar asset-data. Exponering kan bara bedömas per inventerad tillgång i en separat, skyddad modul. \"P1 vid publik åtkomst\" i arbetsboken är villkorlig.",
+        "source_ids": []
+      },
+      "ot_impact": {
+        "level": "high",
+        "basis": "Skrivkommandon mot styrenheter. Generell bedömning per produkttyp; faktisk konsekvens beror på anläggning.",
+        "source_ids": []
+      },
+      "mitigation_feasibility": {
+        "level": "medium",
+        "basis": "Generella härdningsåtgärder (segmentering, ingen publik exponering, skyddad fjärråtkomst) är tillämpliga.",
+        "source_ids": []
+      },
+      "data_quality": {
+        "level": "low",
+        "basis": "Endast arbetsbok/branschguide som underlag. Låg datakvalitet betyder inte låg risk – verifiera.",
+        "source_ids": [
+          "src-workbook"
+        ]
+      },
+      "recommended_action": "harden_configuration",
+      "rationale": "Protokoll/tjänst: risken styrs av zonering, filtrering och protokollets säkerhetsfunktioner, inte av produkt-CVE.",
+      "method_version": "risk-method-1.0"
+    },
+    "data_quality_flags": [
+      "generic_control_text",
+      "industry_guide_only",
+      "conditional_priority_only",
+      "patch_level_unknown",
+      "missing_primary_source"
+    ],
+    "provenance": [
+      {
+        "sheet": "66 system och tjänster",
+        "row": 57,
+        "column": "A",
+        "header": "Kategori"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 57,
+        "column": "B",
+        "header": "System / produktfamilj"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 57,
+        "column": "C",
+        "header": "Funktion"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 57,
+        "column": "D",
+        "header": "Shodan-sökord (komplettera med net:...)"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 57,
+        "column": "E",
+        "header": "Sårbarhetstyp / klass"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 57,
+        "column": "F",
+        "header": "Vad risktypen innebär (ej exploitinstruktion)"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 57,
+        "column": "J",
+        "header": "Patchningsgrad / urval"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 57,
+        "column": "K",
+        "header": "Rekommenderad defensiv kontroll"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 57,
+        "column": "L",
+        "header": "Konfigurationsdokumentation (URL)"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 57,
+        "column": "M",
+        "header": "Dokumentnivå / begränsning"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 57,
+        "column": "O",
+        "header": "Prio vid publik exponering"
+      }
+    ],
+    "original": {
+      "sheet": "66 system och tjänster",
+      "row": 57,
+      "values": {
+        "Kategori": "Tjänst",
+        "System / produktfamilj": "Modbus TCP",
+        "Funktion": "PLC, energi, mätare",
+        "Shodan-sökord (komplettera med net:...)": "port:502",
+        "Sårbarhetstyp / klass": "Protokoll utan inbyggd autentisering/kryptering",
+        "Vad risktypen innebär (ej exploitinstruktion)": "Publik Modbus-tjänst kan exponera styr-/mätfunktioner; beror på tillåten funktionsuppsättning.",
+        "CVE / bulletin (urval)": null,
+        "Berörd firmware / modell": null,
+        "Fix / senaste offentlig uppgift": null,
+        "Patchningsgrad / urval": "Uppgift saknas",
+        "Rekommenderad defensiv kontroll": "Ingen publik direktadministration; VPN/MFA där möjligt; nätsegmentering; loggning; uppdatera.",
+        "Konfigurationsdokumentation (URL)": "https://csrc.nist.gov/pubs/sp/800/82/r3/final",
+        "Dokumentnivå / begränsning": "Branschstandard för OT-arkitektur",
+        "Källa till CVE/säkerhetsuppgift (URL)": null,
+        "Prio vid publik exponering": "P1 vid publik åtkomst"
+      }
+    },
+    "verification_status": "corroborated_secondary",
+    "source_ids": [
+      "src-workbook",
+      "src-nist-sp800-82r3",
+      "src-iana-ports"
+    ],
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [],
+      "history": [
+        {
+          "date": "2026-11-07",
+          "status": null,
+          "summary": "Migrerad från arbetsboken (2026-11-07) med bevarade originalfält."
+        }
+      ]
+    },
+    "typical_use": "Register-/spoleåtkomst mot PLC, energimätare, växelriktare, kylregulatorer.",
+    "default_ports": [
+      {
+        "port": 502,
+        "transport": "tcp",
+        "note": "IANA-registrerad (mbap)",
+        "status": "corroborated_secondary",
+        "source_ids": [
+          "src-iana-ports",
+          "src-workbook"
+        ]
+      }
+    ],
+    "authentication": "none",
+    "encryption": "none",
+    "security_notes": "Klassisk Modbus/TCP saknar autentisering och kryptering; Modbus/TCP Security (TLS, port 802) finns men har begränsat stöd.",
+    "allowed_zones": "Endast inom styrsystemszon eller via protokollmedveten brandvägg från övervakningszon; aldrig från internet."
+  },
+  {
+    "id": "svc-ethernet-ip-cip",
+    "kind": "protocol_service",
+    "name": "EtherNet/IP (CIP)",
+    "aliases": [
+      "EtherNet/IP",
+      "CIP",
+      "ENIP"
+    ],
+    "category": "Tjänst",
+    "function_text": "PLC/I-O/SCADA",
+    "description": null,
+    "documentation": [
+      {
+        "url": "https://www.rockwellautomation.com/en-us/docs/technical/logix5000/_online/1756-um900/controllogix-5590-controller-user-manual-ditamap/develop-secure-applications.html",
+        "level": "security_guidance",
+        "level_text": "Tillverkarens CIP-/systemsäkert innehåll",
+        "product_specific": false,
+        "source_id": "src-wb-www.rockwellautomation.com-99d4a550"
+      }
+    ],
+    "discovery_heuristic": {
+      "query": "port:44818",
+      "caveat": "Sökord är heuristik för egen/auktoriserad inventering (komplettera med net:DITT-EGET-IP-INTERVALL). Träffar är inte enhetsbevis och kan vara falska; portträffar identifierar protokollmöjlighet, inte specifik produkt. Plattformen utför inga sökningar.",
+      "purpose": "authorized_inventory_only"
+    },
+    "risk_summary": {
+      "type_text": "Oskyddad CIP-kommunikation vid avsaknad av CIP Security",
+      "explanation_text": "Portträff identifierar protokollmöjlighet, inte specifik PLC.",
+      "cve_text": null,
+      "affected_firmware_text": null,
+      "fix_text": null,
+      "patch_level_text": "Uppgift saknas",
+      "control_text": "Ingen publik direktadministration; VPN/MFA där möjligt; nätsegmentering; loggning; uppdatera.",
+      "legacy_priority_text": "P1 vid publik åtkomst"
+    },
+    "control_ids": [
+      "ctl-asset-version-verification",
+      "ctl-no-public-admin",
+      "ctl-network-segmentation",
+      "ctl-protocol-firewall-allowlist",
+      "ctl-secure-remote-access",
+      "ctl-vendor-firmware-update",
+      "ctl-secure-protocol-features",
+      "ctl-logging-monitoring",
+      "ctl-vendor-hardening-guide"
+    ],
+    "advisory_ids": [],
+    "match_ids": [],
+    "observation_ids": [],
+    "claim_ids": [],
+    "risk": {
+      "threat": {
+        "level": "unknown",
+        "basis": "Protokoll/tjänst: hotet beror på konfiguration och bakomliggande produkter, inte på egna CVE:er.",
+        "source_ids": []
+      },
+      "severity": {
+        "level": "unknown",
+        "basis": "Ingen CVSS tillgänglig (inga bekräftade matchningar).",
+        "source_ids": []
+      },
+      "relevance": {
+        "level": "unknown",
+        "basis": "Ingen CVE-matchning; versionsuppgift saknas.",
+        "source_ids": []
+      },
+      "exposure": {
+        "level": "unknown",
+        "basis": "Publik katalog saknar asset-data. Exponering kan bara bedömas per inventerad tillgång i en separat, skyddad modul. \"P1 vid publik åtkomst\" i arbetsboken är villkorlig.",
+        "source_ids": []
+      },
+      "ot_impact": {
+        "level": "high",
+        "basis": "Styr- och I/O-trafik. Generell bedömning per produkttyp; faktisk konsekvens beror på anläggning.",
+        "source_ids": []
+      },
+      "mitigation_feasibility": {
+        "level": "medium",
+        "basis": "Generella härdningsåtgärder (segmentering, ingen publik exponering, skyddad fjärråtkomst) är tillämpliga.",
+        "source_ids": []
+      },
+      "data_quality": {
+        "level": "low",
+        "basis": "Endast arbetsbok/branschguide som underlag. Låg datakvalitet betyder inte låg risk – verifiera.",
+        "source_ids": [
+          "src-workbook"
+        ]
+      },
+      "recommended_action": "harden_configuration",
+      "rationale": "Protokoll/tjänst: risken styrs av zonering, filtrering och protokollets säkerhetsfunktioner, inte av produkt-CVE.",
+      "method_version": "risk-method-1.0"
+    },
+    "data_quality_flags": [
+      "generic_control_text",
+      "conditional_priority_only",
+      "patch_level_unknown",
+      "missing_primary_source"
+    ],
+    "provenance": [
+      {
+        "sheet": "66 system och tjänster",
+        "row": 58,
+        "column": "A",
+        "header": "Kategori"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 58,
+        "column": "B",
+        "header": "System / produktfamilj"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 58,
+        "column": "C",
+        "header": "Funktion"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 58,
+        "column": "D",
+        "header": "Shodan-sökord (komplettera med net:...)"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 58,
+        "column": "E",
+        "header": "Sårbarhetstyp / klass"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 58,
+        "column": "F",
+        "header": "Vad risktypen innebär (ej exploitinstruktion)"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 58,
+        "column": "J",
+        "header": "Patchningsgrad / urval"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 58,
+        "column": "K",
+        "header": "Rekommenderad defensiv kontroll"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 58,
+        "column": "L",
+        "header": "Konfigurationsdokumentation (URL)"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 58,
+        "column": "M",
+        "header": "Dokumentnivå / begränsning"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 58,
+        "column": "O",
+        "header": "Prio vid publik exponering"
+      }
+    ],
+    "original": {
+      "sheet": "66 system och tjänster",
+      "row": 58,
+      "values": {
+        "Kategori": "Tjänst",
+        "System / produktfamilj": "EtherNet/IP (CIP)",
+        "Funktion": "PLC/I-O/SCADA",
+        "Shodan-sökord (komplettera med net:...)": "port:44818",
+        "Sårbarhetstyp / klass": "Oskyddad CIP-kommunikation vid avsaknad av CIP Security",
+        "Vad risktypen innebär (ej exploitinstruktion)": "Portträff identifierar protokollmöjlighet, inte specifik PLC.",
+        "CVE / bulletin (urval)": null,
+        "Berörd firmware / modell": null,
+        "Fix / senaste offentlig uppgift": null,
+        "Patchningsgrad / urval": "Uppgift saknas",
+        "Rekommenderad defensiv kontroll": "Ingen publik direktadministration; VPN/MFA där möjligt; nätsegmentering; loggning; uppdatera.",
+        "Konfigurationsdokumentation (URL)": "https://www.rockwellautomation.com/en-us/docs/technical/logix5000/_online/1756-um900/controllogix-5590-controller-user-manual-ditamap/develop-secure-applications.html",
+        "Dokumentnivå / begränsning": "Tillverkarens CIP-/systemsäkert innehåll",
+        "Källa till CVE/säkerhetsuppgift (URL)": null,
+        "Prio vid publik exponering": "P1 vid publik åtkomst"
+      }
+    },
+    "verification_status": "corroborated_secondary",
+    "source_ids": [
+      "src-workbook",
+      "src-wb-www.rockwellautomation.com-99d4a550",
+      "src-iana-ports"
+    ],
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [],
+      "history": [
+        {
+          "date": "2026-11-07",
+          "status": null,
+          "summary": "Migrerad från arbetsboken (2026-11-07) med bevarade originalfält."
+        }
+      ]
+    },
+    "typical_use": "PLC-, I/O- och SCADA-kommunikation i Rockwell/ODVA-miljöer.",
+    "default_ports": [
+      {
+        "port": 44818,
+        "transport": "tcp/udp",
+        "note": "Explicit messaging (IANA: EtherNet/IP-1)",
+        "status": "corroborated_secondary",
+        "source_ids": [
+          "src-iana-ports",
+          "src-workbook"
+        ]
+      },
+      {
+        "port": 2222,
+        "transport": "udp",
+        "note": "Implicit I/O messaging",
+        "status": "corroborated_secondary",
+        "source_ids": [
+          "src-iana-ports"
+        ]
+      }
+    ],
+    "authentication": "optional",
+    "encryption": "optional",
+    "security_notes": "Utan CIP Security saknas autentisering/kryptering; CIP Security (TLS/DTLS) kräver stöd i både styrenhet och moduler.",
+    "allowed_zones": "Styrsystemszon; engineering/SCADA via kontrollerad conduit."
+  },
+  {
+    "id": "svc-s7comm",
+    "kind": "protocol_service",
+    "name": "S7comm (ISO-on-TCP)",
+    "aliases": [
+      "S7comm",
+      "S7comm-plus",
+      "ISO-on-TCP",
+      "RFC 1006"
+    ],
+    "category": "Tjänst",
+    "function_text": "Siemens PLC-anslutning",
+    "description": null,
+    "documentation": [
+      {
+        "url": "https://docs.tia.siemens.cloud/r/simatic_s7_1200_manual_collection_enus_20/device-configuration/protection-security",
+        "level": "security_guidance",
+        "level_text": "Siemens säkerhetskonfiguration",
+        "product_specific": false,
+        "source_id": "src-wb-docs.tia.siemens.cloud-1bb5baef"
+      }
+    ],
+    "discovery_heuristic": {
+      "query": "port:102",
+      "caveat": "Sökord är heuristik för egen/auktoriserad inventering (komplettera med net:DITT-EGET-IP-INTERVALL). Träffar är inte enhetsbevis och kan vara falska; portträffar identifierar protokollmöjlighet, inte specifik produkt. Plattformen utför inga sökningar.",
+      "purpose": "authorized_inventory_only"
+    },
+    "risk_summary": {
+      "type_text": "Äldre/otillräckligt skyddad PG/HMI-åtkomst",
+      "explanation_text": "Port 102 används också av IEC 61850 MMS; Shodan-sökning är inte enhetsbevis.",
+      "cve_text": null,
+      "affected_firmware_text": null,
+      "fix_text": null,
+      "patch_level_text": "Uppgift saknas",
+      "control_text": "Ingen publik direktadministration; VPN/MFA där möjligt; nätsegmentering; loggning; uppdatera.",
+      "legacy_priority_text": "P1 vid publik åtkomst"
+    },
+    "control_ids": [
+      "ctl-asset-version-verification",
+      "ctl-no-public-admin",
+      "ctl-network-segmentation",
+      "ctl-protocol-firewall-allowlist",
+      "ctl-secure-remote-access",
+      "ctl-vendor-firmware-update",
+      "ctl-secure-plc-communication",
+      "ctl-protect-engineering-access",
+      "ctl-logging-monitoring",
+      "ctl-vendor-hardening-guide"
+    ],
+    "advisory_ids": [],
+    "match_ids": [],
+    "observation_ids": [],
+    "claim_ids": [],
+    "risk": {
+      "threat": {
+        "level": "unknown",
+        "basis": "Protokoll/tjänst: hotet beror på konfiguration och bakomliggande produkter, inte på egna CVE:er.",
+        "source_ids": []
+      },
+      "severity": {
+        "level": "unknown",
+        "basis": "Ingen CVSS tillgänglig (inga bekräftade matchningar).",
+        "source_ids": []
+      },
+      "relevance": {
+        "level": "unknown",
+        "basis": "Ingen CVE-matchning; versionsuppgift saknas.",
+        "source_ids": []
+      },
+      "exposure": {
+        "level": "unknown",
+        "basis": "Publik katalog saknar asset-data. Exponering kan bara bedömas per inventerad tillgång i en separat, skyddad modul. \"P1 vid publik åtkomst\" i arbetsboken är villkorlig.",
+        "source_ids": []
+      },
+      "ot_impact": {
+        "level": "high",
+        "basis": "Programmerings- och HMI-åtkomst till PLC. Generell bedömning per produkttyp; faktisk konsekvens beror på anläggning.",
+        "source_ids": []
+      },
+      "mitigation_feasibility": {
+        "level": "medium",
+        "basis": "Generella härdningsåtgärder (segmentering, ingen publik exponering, skyddad fjärråtkomst) är tillämpliga.",
+        "source_ids": []
+      },
+      "data_quality": {
+        "level": "low",
+        "basis": "Endast arbetsbok/branschguide som underlag. Låg datakvalitet betyder inte låg risk – verifiera.",
+        "source_ids": [
+          "src-workbook"
+        ]
+      },
+      "recommended_action": "harden_configuration",
+      "rationale": "Protokoll/tjänst: risken styrs av zonering, filtrering och protokollets säkerhetsfunktioner, inte av produkt-CVE.",
+      "method_version": "risk-method-1.0"
+    },
+    "data_quality_flags": [
+      "generic_control_text",
+      "conditional_priority_only",
+      "patch_level_unknown",
+      "missing_primary_source"
+    ],
+    "provenance": [
+      {
+        "sheet": "66 system och tjänster",
+        "row": 59,
+        "column": "A",
+        "header": "Kategori"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 59,
+        "column": "B",
+        "header": "System / produktfamilj"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 59,
+        "column": "C",
+        "header": "Funktion"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 59,
+        "column": "D",
+        "header": "Shodan-sökord (komplettera med net:...)"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 59,
+        "column": "E",
+        "header": "Sårbarhetstyp / klass"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 59,
+        "column": "F",
+        "header": "Vad risktypen innebär (ej exploitinstruktion)"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 59,
+        "column": "J",
+        "header": "Patchningsgrad / urval"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 59,
+        "column": "K",
+        "header": "Rekommenderad defensiv kontroll"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 59,
+        "column": "L",
+        "header": "Konfigurationsdokumentation (URL)"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 59,
+        "column": "M",
+        "header": "Dokumentnivå / begränsning"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 59,
+        "column": "O",
+        "header": "Prio vid publik exponering"
+      }
+    ],
+    "original": {
+      "sheet": "66 system och tjänster",
+      "row": 59,
+      "values": {
+        "Kategori": "Tjänst",
+        "System / produktfamilj": "S7comm (ISO-on-TCP)",
+        "Funktion": "Siemens PLC-anslutning",
+        "Shodan-sökord (komplettera med net:...)": "port:102",
+        "Sårbarhetstyp / klass": "Äldre/otillräckligt skyddad PG/HMI-åtkomst",
+        "Vad risktypen innebär (ej exploitinstruktion)": "Port 102 används också av IEC 61850 MMS; Shodan-sökning är inte enhetsbevis.",
+        "CVE / bulletin (urval)": null,
+        "Berörd firmware / modell": null,
+        "Fix / senaste offentlig uppgift": null,
+        "Patchningsgrad / urval": "Uppgift saknas",
+        "Rekommenderad defensiv kontroll": "Ingen publik direktadministration; VPN/MFA där möjligt; nätsegmentering; loggning; uppdatera.",
+        "Konfigurationsdokumentation (URL)": "https://docs.tia.siemens.cloud/r/simatic_s7_1200_manual_collection_enus_20/device-configuration/protection-security",
+        "Dokumentnivå / begränsning": "Siemens säkerhetskonfiguration",
+        "Källa till CVE/säkerhetsuppgift (URL)": null,
+        "Prio vid publik exponering": "P1 vid publik åtkomst"
+      }
+    },
+    "verification_status": "corroborated_secondary",
+    "source_ids": [
+      "src-workbook",
+      "src-wb-docs.tia.siemens.cloud-1bb5baef",
+      "src-iana-ports"
+    ],
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [],
+      "history": [
+        {
+          "date": "2026-11-07",
+          "status": null,
+          "summary": "Migrerad från arbetsboken (2026-11-07) med bevarade originalfält."
+        }
+      ]
+    },
+    "typical_use": "PG/PC- och HMI-kommunikation med Siemens SIMATIC-PLC.",
+    "default_ports": [
+      {
+        "port": 102,
+        "transport": "tcp",
+        "note": "ISO-TSAP (RFC 1006); delas med IEC 61850 MMS",
+        "status": "corroborated_secondary",
+        "source_ids": [
+          "src-iana-ports",
+          "src-workbook"
+        ]
+      }
+    ],
+    "authentication": "depends",
+    "encryption": "depends",
+    "security_notes": "Legacy-läge har svagt skydd (se SSA-568427); nyare CPU-firmware stöder TLS-skyddad PG/PC-/HMI-kommunikation som måste aktiveras.",
+    "allowed_zones": "Endast styrsystemszon och engineering-zon."
+  },
+  {
+    "id": "svc-opc-ua",
+    "kind": "protocol_service",
+    "name": "OPC UA",
+    "aliases": [
+      "OPC UA",
+      "OPC Unified Architecture"
+    ],
+    "category": "Tjänst",
+    "function_text": "SCADA/OT-integrationsdata",
+    "description": null,
+    "documentation": [
+      {
+        "url": "https://reference.opcfoundation.org/specs/OPC-10000-2/1",
+        "level": "standard",
+        "level_text": "OPC Foundation Security Model",
+        "product_specific": true,
+        "source_id": "src-wb-reference.opcfoundation.org-84dc16b3"
+      }
+    ],
+    "discovery_heuristic": {
+      "query": "port:4840",
+      "caveat": "Sökord är heuristik för egen/auktoriserad inventering (komplettera med net:DITT-EGET-IP-INTERVALL). Träffar är inte enhetsbevis och kan vara falska; portträffar identifierar protokollmöjlighet, inte specifik produkt. Plattformen utför inga sökningar.",
+      "purpose": "authorized_inventory_only"
+    },
+    "risk_summary": {
+      "type_text": "Konfigurerad utan lämplig signering/kryptering eller roller",
+      "explanation_text": "OPC UA har starka säkerhetsfunktioner men de måste konfigureras.",
+      "cve_text": null,
+      "affected_firmware_text": null,
+      "fix_text": null,
+      "patch_level_text": "Uppgift saknas",
+      "control_text": "Ingen publik direktadministration; VPN/MFA där möjligt; nätsegmentering; loggning; uppdatera.",
+      "legacy_priority_text": "P1 vid publik åtkomst"
+    },
+    "control_ids": [
+      "ctl-asset-version-verification",
+      "ctl-no-public-admin",
+      "ctl-network-segmentation",
+      "ctl-protocol-firewall-allowlist",
+      "ctl-secure-remote-access",
+      "ctl-vendor-firmware-update",
+      "ctl-secure-protocol-features",
+      "ctl-logging-monitoring",
+      "ctl-vendor-hardening-guide"
+    ],
+    "advisory_ids": [],
+    "match_ids": [],
+    "observation_ids": [],
+    "claim_ids": [],
+    "risk": {
+      "threat": {
+        "level": "unknown",
+        "basis": "Protokoll/tjänst: hotet beror på konfiguration och bakomliggande produkter, inte på egna CVE:er.",
+        "source_ids": []
+      },
+      "severity": {
+        "level": "unknown",
+        "basis": "Ingen CVSS tillgänglig (inga bekräftade matchningar).",
+        "source_ids": []
+      },
+      "relevance": {
+        "level": "unknown",
+        "basis": "Ingen CVE-matchning; versionsuppgift saknas.",
+        "source_ids": []
+      },
+      "exposure": {
+        "level": "unknown",
+        "basis": "Publik katalog saknar asset-data. Exponering kan bara bedömas per inventerad tillgång i en separat, skyddad modul. \"P1 vid publik åtkomst\" i arbetsboken är villkorlig.",
+        "source_ids": []
+      },
+      "ot_impact": {
+        "level": "medium",
+        "basis": "Beror på om skrivning tillåts. Generell bedömning per produkttyp; faktisk konsekvens beror på anläggning.",
+        "source_ids": []
+      },
+      "mitigation_feasibility": {
+        "level": "medium",
+        "basis": "Generella härdningsåtgärder (segmentering, ingen publik exponering, skyddad fjärråtkomst) är tillämpliga.",
+        "source_ids": []
+      },
+      "data_quality": {
+        "level": "medium",
+        "basis": "Delvis primärkällor; vissa uppgifter kräver granskning eller saknar versionsgräns.",
+        "source_ids": []
+      },
+      "recommended_action": "harden_configuration",
+      "rationale": "Protokoll/tjänst: risken styrs av zonering, filtrering och protokollets säkerhetsfunktioner, inte av produkt-CVE.",
+      "method_version": "risk-method-1.0"
+    },
+    "data_quality_flags": [
+      "generic_control_text",
+      "conditional_priority_only",
+      "patch_level_unknown",
+      "missing_primary_source"
+    ],
+    "provenance": [
+      {
+        "sheet": "66 system och tjänster",
+        "row": 60,
+        "column": "A",
+        "header": "Kategori"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 60,
+        "column": "B",
+        "header": "System / produktfamilj"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 60,
+        "column": "C",
+        "header": "Funktion"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 60,
+        "column": "D",
+        "header": "Shodan-sökord (komplettera med net:...)"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 60,
+        "column": "E",
+        "header": "Sårbarhetstyp / klass"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 60,
+        "column": "F",
+        "header": "Vad risktypen innebär (ej exploitinstruktion)"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 60,
+        "column": "J",
+        "header": "Patchningsgrad / urval"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 60,
+        "column": "K",
+        "header": "Rekommenderad defensiv kontroll"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 60,
+        "column": "L",
+        "header": "Konfigurationsdokumentation (URL)"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 60,
+        "column": "M",
+        "header": "Dokumentnivå / begränsning"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 60,
+        "column": "O",
+        "header": "Prio vid publik exponering"
+      }
+    ],
+    "original": {
+      "sheet": "66 system och tjänster",
+      "row": 60,
+      "values": {
+        "Kategori": "Tjänst",
+        "System / produktfamilj": "OPC UA",
+        "Funktion": "SCADA/OT-integrationsdata",
+        "Shodan-sökord (komplettera med net:...)": "port:4840",
+        "Sårbarhetstyp / klass": "Konfigurerad utan lämplig signering/kryptering eller roller",
+        "Vad risktypen innebär (ej exploitinstruktion)": "OPC UA har starka säkerhetsfunktioner men de måste konfigureras.",
+        "CVE / bulletin (urval)": null,
+        "Berörd firmware / modell": null,
+        "Fix / senaste offentlig uppgift": null,
+        "Patchningsgrad / urval": "Uppgift saknas",
+        "Rekommenderad defensiv kontroll": "Ingen publik direktadministration; VPN/MFA där möjligt; nätsegmentering; loggning; uppdatera.",
+        "Konfigurationsdokumentation (URL)": "https://reference.opcfoundation.org/specs/OPC-10000-2/1",
+        "Dokumentnivå / begränsning": "OPC Foundation Security Model",
+        "Källa till CVE/säkerhetsuppgift (URL)": null,
+        "Prio vid publik exponering": "P1 vid publik åtkomst"
+      }
+    },
+    "verification_status": "corroborated_secondary",
+    "source_ids": [
+      "src-workbook",
+      "src-wb-reference.opcfoundation.org-84dc16b3",
+      "src-iana-ports"
+    ],
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [],
+      "history": [
+        {
+          "date": "2026-11-07",
+          "status": null,
+          "summary": "Migrerad från arbetsboken (2026-11-07) med bevarade originalfält."
+        }
+      ]
+    },
+    "typical_use": "Integrationsdata mellan OT och IT/SCADA/MES.",
+    "default_ports": [
+      {
+        "port": 4840,
+        "transport": "tcp",
+        "note": "IANA-registrerad (opcua-tcp)",
+        "status": "corroborated_secondary",
+        "source_ids": [
+          "src-iana-ports",
+          "src-workbook"
+        ]
+      }
+    ],
+    "authentication": "optional",
+    "encryption": "optional",
+    "security_notes": "OPC UA har inbyggd säkerhetsmodell (certifikat, signering, kryptering, användarroller) men 'None'-policy och anonym inloggning är vanliga felkonfigurationer.",
+    "allowed_zones": "DMZ/integrationszon med certifikatförtroende; aldrig öppen mot internet."
+  },
+  {
+    "id": "svc-bacnet-ip",
+    "kind": "protocol_service",
+    "name": "BACnet/IP",
+    "aliases": [
+      "BACnet/IP",
+      "BACnet",
+      "BACnet/SC"
+    ],
+    "category": "Tjänst",
+    "function_text": "Fastighetsautomation",
+    "description": null,
+    "documentation": [
+      {
+        "url": "https://csrc.nist.gov/pubs/sp/800/82/r3/final",
+        "level": "industry_guide",
+        "level_text": "Branschguide – BACnet/SC ej detaljmanual",
+        "product_specific": false,
+        "source_id": "src-nist-sp800-82r3"
+      }
+    ],
+    "discovery_heuristic": {
+      "query": "port:47808",
+      "caveat": "Sökord är heuristik för egen/auktoriserad inventering (komplettera med net:DITT-EGET-IP-INTERVALL). Träffar är inte enhetsbevis och kan vara falska; portträffar identifierar protokollmöjlighet, inte specifik produkt. Plattformen utför inga sökningar.",
+      "purpose": "authorized_inventory_only"
+    },
+    "risk_summary": {
+      "type_text": "Brist på inbyggt skydd i klassisk BACnet/IP",
+      "explanation_text": "Utan skyddad nätzon kan styr- och statusdata exponeras.",
+      "cve_text": null,
+      "affected_firmware_text": null,
+      "fix_text": null,
+      "patch_level_text": "Uppgift saknas",
+      "control_text": "Ingen publik direktadministration; VPN/MFA där möjligt; nätsegmentering; loggning; uppdatera.",
+      "legacy_priority_text": "P1 vid publik åtkomst"
+    },
+    "control_ids": [
+      "ctl-asset-version-verification",
+      "ctl-no-public-admin",
+      "ctl-network-segmentation",
+      "ctl-protocol-firewall-allowlist",
+      "ctl-secure-remote-access",
+      "ctl-vendor-firmware-update",
+      "ctl-secure-protocol-features",
+      "ctl-logging-monitoring",
+      "ctl-vendor-hardening-guide"
+    ],
+    "advisory_ids": [],
+    "match_ids": [],
+    "observation_ids": [],
+    "claim_ids": [],
+    "risk": {
+      "threat": {
+        "level": "unknown",
+        "basis": "Protokoll/tjänst: hotet beror på konfiguration och bakomliggande produkter, inte på egna CVE:er.",
+        "source_ids": []
+      },
+      "severity": {
+        "level": "unknown",
+        "basis": "Ingen CVSS tillgänglig (inga bekräftade matchningar).",
+        "source_ids": []
+      },
+      "relevance": {
+        "level": "unknown",
+        "basis": "Ingen CVE-matchning; versionsuppgift saknas.",
+        "source_ids": []
+      },
+      "exposure": {
+        "level": "unknown",
+        "basis": "Publik katalog saknar asset-data. Exponering kan bara bedömas per inventerad tillgång i en separat, skyddad modul. \"P1 vid publik åtkomst\" i arbetsboken är villkorlig.",
+        "source_ids": []
+      },
+      "ot_impact": {
+        "level": "medium",
+        "basis": "Byggnadsstyrning. Generell bedömning per produkttyp; faktisk konsekvens beror på anläggning.",
+        "source_ids": []
+      },
+      "mitigation_feasibility": {
+        "level": "medium",
+        "basis": "Generella härdningsåtgärder (segmentering, ingen publik exponering, skyddad fjärråtkomst) är tillämpliga.",
+        "source_ids": []
+      },
+      "data_quality": {
+        "level": "low",
+        "basis": "Endast arbetsbok/branschguide som underlag. Låg datakvalitet betyder inte låg risk – verifiera.",
+        "source_ids": [
+          "src-workbook"
+        ]
+      },
+      "recommended_action": "harden_configuration",
+      "rationale": "Protokoll/tjänst: risken styrs av zonering, filtrering och protokollets säkerhetsfunktioner, inte av produkt-CVE.",
+      "method_version": "risk-method-1.0"
+    },
+    "data_quality_flags": [
+      "generic_control_text",
+      "industry_guide_only",
+      "conditional_priority_only",
+      "patch_level_unknown",
+      "missing_primary_source"
+    ],
+    "provenance": [
+      {
+        "sheet": "66 system och tjänster",
+        "row": 61,
+        "column": "A",
+        "header": "Kategori"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 61,
+        "column": "B",
+        "header": "System / produktfamilj"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 61,
+        "column": "C",
+        "header": "Funktion"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 61,
+        "column": "D",
+        "header": "Shodan-sökord (komplettera med net:...)"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 61,
+        "column": "E",
+        "header": "Sårbarhetstyp / klass"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 61,
+        "column": "F",
+        "header": "Vad risktypen innebär (ej exploitinstruktion)"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 61,
+        "column": "J",
+        "header": "Patchningsgrad / urval"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 61,
+        "column": "K",
+        "header": "Rekommenderad defensiv kontroll"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 61,
+        "column": "L",
+        "header": "Konfigurationsdokumentation (URL)"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 61,
+        "column": "M",
+        "header": "Dokumentnivå / begränsning"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 61,
+        "column": "O",
+        "header": "Prio vid publik exponering"
+      }
+    ],
+    "original": {
+      "sheet": "66 system och tjänster",
+      "row": 61,
+      "values": {
+        "Kategori": "Tjänst",
+        "System / produktfamilj": "BACnet/IP",
+        "Funktion": "Fastighetsautomation",
+        "Shodan-sökord (komplettera med net:...)": "port:47808",
+        "Sårbarhetstyp / klass": "Brist på inbyggt skydd i klassisk BACnet/IP",
+        "Vad risktypen innebär (ej exploitinstruktion)": "Utan skyddad nätzon kan styr- och statusdata exponeras.",
+        "CVE / bulletin (urval)": null,
+        "Berörd firmware / modell": null,
+        "Fix / senaste offentlig uppgift": null,
+        "Patchningsgrad / urval": "Uppgift saknas",
+        "Rekommenderad defensiv kontroll": "Ingen publik direktadministration; VPN/MFA där möjligt; nätsegmentering; loggning; uppdatera.",
+        "Konfigurationsdokumentation (URL)": "https://csrc.nist.gov/pubs/sp/800/82/r3/final",
+        "Dokumentnivå / begränsning": "Branschguide – BACnet/SC ej detaljmanual",
+        "Källa till CVE/säkerhetsuppgift (URL)": null,
+        "Prio vid publik exponering": "P1 vid publik åtkomst"
+      }
+    },
+    "verification_status": "corroborated_secondary",
+    "source_ids": [
+      "src-workbook",
+      "src-nist-sp800-82r3",
+      "src-iana-ports"
+    ],
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [],
+      "history": [
+        {
+          "date": "2026-11-07",
+          "status": null,
+          "summary": "Migrerad från arbetsboken (2026-11-07) med bevarade originalfält."
+        }
+      ]
+    },
+    "typical_use": "Fastighetsautomation (HVAC, belysning, mätare).",
+    "default_ports": [
+      {
+        "port": 47808,
+        "transport": "udp",
+        "note": "0xBAC0 (IANA: bacnet)",
+        "status": "corroborated_secondary",
+        "source_ids": [
+          "src-iana-ports",
+          "src-workbook"
+        ]
+      }
+    ],
+    "authentication": "none",
+    "encryption": "none",
+    "security_notes": "Klassisk BACnet/IP saknar autentisering/kryptering; BACnet/SC (Secure Connect) ger TLS men kräver stöd i enheter.",
+    "allowed_zones": "Fastighetsautomationszon; ingen routing från internet."
+  },
+  {
+    "id": "svc-iec-104-dnp3",
+    "kind": "protocol_service",
+    "name": "IEC 60870-5-104 / DNP3",
+    "aliases": [
+      "IEC 60870-5-104",
+      "IEC 104",
+      "DNP3"
+    ],
+    "category": "Tjänst",
+    "function_text": "El/vatten-RTU-fjärrstyrning",
+    "description": null,
+    "documentation": [
+      {
+        "url": "https://csrc.nist.gov/pubs/sp/800/82/r3/final",
+        "level": "industry_guide",
+        "level_text": "Branschguide – protokollspecifik konfiguration skiljer",
+        "product_specific": false,
+        "source_id": "src-nist-sp800-82r3"
+      }
+    ],
+    "discovery_heuristic": {
+      "query": "port:2404 OR port:20000",
+      "caveat": "Sökord är heuristik för egen/auktoriserad inventering (komplettera med net:DITT-EGET-IP-INTERVALL). Träffar är inte enhetsbevis och kan vara falska; portträffar identifierar protokollmöjlighet, inte specifik produkt. Plattformen utför inga sökningar.",
+      "purpose": "authorized_inventory_only"
+    },
+    "risk_summary": {
+      "type_text": "OT-protokoll med begränsade ursprungliga skydd",
+      "explanation_text": "Kontrollera om autentiserade säkerhetsutökningar finns och nätet är zonerat.",
+      "cve_text": null,
+      "affected_firmware_text": null,
+      "fix_text": null,
+      "patch_level_text": "Uppgift saknas",
+      "control_text": "Ingen publik direktadministration; VPN/MFA där möjligt; nätsegmentering; loggning; uppdatera.",
+      "legacy_priority_text": "P1 vid publik åtkomst"
+    },
+    "control_ids": [
+      "ctl-asset-version-verification",
+      "ctl-no-public-admin",
+      "ctl-network-segmentation",
+      "ctl-protocol-firewall-allowlist",
+      "ctl-secure-remote-access",
+      "ctl-vendor-firmware-update",
+      "ctl-secure-protocol-features",
+      "ctl-logging-monitoring",
+      "ctl-vendor-hardening-guide"
+    ],
+    "advisory_ids": [],
+    "match_ids": [],
+    "observation_ids": [],
+    "claim_ids": [],
+    "risk": {
+      "threat": {
+        "level": "unknown",
+        "basis": "Protokoll/tjänst: hotet beror på konfiguration och bakomliggande produkter, inte på egna CVE:er.",
+        "source_ids": []
+      },
+      "severity": {
+        "level": "unknown",
+        "basis": "Ingen CVSS tillgänglig (inga bekräftade matchningar).",
+        "source_ids": []
+      },
+      "relevance": {
+        "level": "unknown",
+        "basis": "Ingen CVE-matchning; versionsuppgift saknas.",
+        "source_ids": []
+      },
+      "exposure": {
+        "level": "unknown",
+        "basis": "Publik katalog saknar asset-data. Exponering kan bara bedömas per inventerad tillgång i en separat, skyddad modul. \"P1 vid publik åtkomst\" i arbetsboken är villkorlig.",
+        "source_ids": []
+      },
+      "ot_impact": {
+        "level": "high",
+        "basis": "El- och vattenförsörjning. Generell bedömning per produkttyp; faktisk konsekvens beror på anläggning.",
+        "source_ids": []
+      },
+      "mitigation_feasibility": {
+        "level": "medium",
+        "basis": "Generella härdningsåtgärder (segmentering, ingen publik exponering, skyddad fjärråtkomst) är tillämpliga.",
+        "source_ids": []
+      },
+      "data_quality": {
+        "level": "low",
+        "basis": "Endast arbetsbok/branschguide som underlag. Låg datakvalitet betyder inte låg risk – verifiera.",
+        "source_ids": [
+          "src-workbook"
+        ]
+      },
+      "recommended_action": "harden_configuration",
+      "rationale": "Protokoll/tjänst: risken styrs av zonering, filtrering och protokollets säkerhetsfunktioner, inte av produkt-CVE.",
+      "method_version": "risk-method-1.0"
+    },
+    "data_quality_flags": [
+      "generic_control_text",
+      "industry_guide_only",
+      "conditional_priority_only",
+      "patch_level_unknown",
+      "missing_primary_source"
+    ],
+    "provenance": [
+      {
+        "sheet": "66 system och tjänster",
+        "row": 62,
+        "column": "A",
+        "header": "Kategori"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 62,
+        "column": "B",
+        "header": "System / produktfamilj"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 62,
+        "column": "C",
+        "header": "Funktion"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 62,
+        "column": "D",
+        "header": "Shodan-sökord (komplettera med net:...)"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 62,
+        "column": "E",
+        "header": "Sårbarhetstyp / klass"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 62,
+        "column": "F",
+        "header": "Vad risktypen innebär (ej exploitinstruktion)"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 62,
+        "column": "J",
+        "header": "Patchningsgrad / urval"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 62,
+        "column": "K",
+        "header": "Rekommenderad defensiv kontroll"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 62,
+        "column": "L",
+        "header": "Konfigurationsdokumentation (URL)"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 62,
+        "column": "M",
+        "header": "Dokumentnivå / begränsning"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 62,
+        "column": "O",
+        "header": "Prio vid publik exponering"
+      }
+    ],
+    "original": {
+      "sheet": "66 system och tjänster",
+      "row": 62,
+      "values": {
+        "Kategori": "Tjänst",
+        "System / produktfamilj": "IEC 60870-5-104 / DNP3",
+        "Funktion": "El/vatten-RTU-fjärrstyrning",
+        "Shodan-sökord (komplettera med net:...)": "port:2404 OR port:20000",
+        "Sårbarhetstyp / klass": "OT-protokoll med begränsade ursprungliga skydd",
+        "Vad risktypen innebär (ej exploitinstruktion)": "Kontrollera om autentiserade säkerhetsutökningar finns och nätet är zonerat.",
+        "CVE / bulletin (urval)": null,
+        "Berörd firmware / modell": null,
+        "Fix / senaste offentlig uppgift": null,
+        "Patchningsgrad / urval": "Uppgift saknas",
+        "Rekommenderad defensiv kontroll": "Ingen publik direktadministration; VPN/MFA där möjligt; nätsegmentering; loggning; uppdatera.",
+        "Konfigurationsdokumentation (URL)": "https://csrc.nist.gov/pubs/sp/800/82/r3/final",
+        "Dokumentnivå / begränsning": "Branschguide – protokollspecifik konfiguration skiljer",
+        "Källa till CVE/säkerhetsuppgift (URL)": null,
+        "Prio vid publik exponering": "P1 vid publik åtkomst"
+      }
+    },
+    "verification_status": "corroborated_secondary",
+    "source_ids": [
+      "src-workbook",
+      "src-nist-sp800-82r3",
+      "src-iana-ports"
+    ],
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [],
+      "history": [
+        {
+          "date": "2026-11-07",
+          "status": null,
+          "summary": "Migrerad från arbetsboken (2026-11-07) med bevarade originalfält."
+        }
+      ]
+    },
+    "typical_use": "Fjärrstyrning av RTU:er i el- och vattennät.",
+    "default_ports": [
+      {
+        "port": 2404,
+        "transport": "tcp",
+        "note": "IEC 60870-5-104 (IANA: iec-104)",
+        "status": "corroborated_secondary",
+        "source_ids": [
+          "src-iana-ports",
+          "src-workbook"
+        ]
+      },
+      {
+        "port": 20000,
+        "transport": "tcp",
+        "note": "DNP3 (IANA: dnp)",
+        "status": "corroborated_secondary",
+        "source_ids": [
+          "src-iana-ports",
+          "src-workbook"
+        ]
+      }
+    ],
+    "authentication": "optional",
+    "encryption": "optional",
+    "security_notes": "Grundprotokollen saknar skydd; DNP3 Secure Authentication och IEC 62351 finns som utökningar med varierande stöd.",
+    "allowed_zones": "Dedikerad SCADA/RTU-zon med kontrollerade conduits (ofta egna WAN-länkar/VPN)."
+  },
+  {
+    "id": "svc-iec-61850-mms",
+    "kind": "protocol_service",
+    "name": "IEC 61850 MMS",
+    "aliases": [
+      "IEC 61850",
+      "MMS",
+      "GOOSE"
+    ],
+    "category": "Tjänst",
+    "function_text": "Elstationskommunikation",
+    "description": null,
+    "documentation": [
+      {
+        "url": "https://csrc.nist.gov/pubs/sp/800/82/r3/final",
+        "level": "industry_guide",
+        "level_text": "Branschguide – protokollspecifik konfiguration skiljer",
+        "product_specific": false,
+        "source_id": "src-nist-sp800-82r3"
+      }
+    ],
+    "discovery_heuristic": {
+      "query": "port:102",
+      "caveat": "Sökord är heuristik för egen/auktoriserad inventering (komplettera med net:DITT-EGET-IP-INTERVALL). Träffar är inte enhetsbevis och kan vara falska; portträffar identifierar protokollmöjlighet, inte specifik produkt. Plattformen utför inga sökningar.",
+      "purpose": "authorized_inventory_only"
+    },
+    "risk_summary": {
+      "type_text": "Oskyddade anläggningsprotokoll/åtkomstlistor",
+      "explanation_text": "Port 102 delas med S7comm; kräver ytterligare produktverifiering.",
+      "cve_text": null,
+      "affected_firmware_text": null,
+      "fix_text": null,
+      "patch_level_text": "Uppgift saknas",
+      "control_text": "Ingen publik direktadministration; VPN/MFA där möjligt; nätsegmentering; loggning; uppdatera.",
+      "legacy_priority_text": "P1 vid publik åtkomst"
+    },
+    "control_ids": [
+      "ctl-asset-version-verification",
+      "ctl-no-public-admin",
+      "ctl-network-segmentation",
+      "ctl-protocol-firewall-allowlist",
+      "ctl-secure-remote-access",
+      "ctl-vendor-firmware-update",
+      "ctl-secure-protocol-features",
+      "ctl-logging-monitoring",
+      "ctl-vendor-hardening-guide"
+    ],
+    "advisory_ids": [],
+    "match_ids": [],
+    "observation_ids": [],
+    "claim_ids": [],
+    "risk": {
+      "threat": {
+        "level": "unknown",
+        "basis": "Protokoll/tjänst: hotet beror på konfiguration och bakomliggande produkter, inte på egna CVE:er.",
+        "source_ids": []
+      },
+      "severity": {
+        "level": "unknown",
+        "basis": "Ingen CVSS tillgänglig (inga bekräftade matchningar).",
+        "source_ids": []
+      },
+      "relevance": {
+        "level": "unknown",
+        "basis": "Ingen CVE-matchning; versionsuppgift saknas.",
+        "source_ids": []
+      },
+      "exposure": {
+        "level": "unknown",
+        "basis": "Publik katalog saknar asset-data. Exponering kan bara bedömas per inventerad tillgång i en separat, skyddad modul. \"P1 vid publik åtkomst\" i arbetsboken är villkorlig.",
+        "source_ids": []
+      },
+      "ot_impact": {
+        "level": "high",
+        "basis": "Elstationsskydd och -styrning. Generell bedömning per produkttyp; faktisk konsekvens beror på anläggning.",
+        "source_ids": []
+      },
+      "mitigation_feasibility": {
+        "level": "medium",
+        "basis": "Generella härdningsåtgärder (segmentering, ingen publik exponering, skyddad fjärråtkomst) är tillämpliga.",
+        "source_ids": []
+      },
+      "data_quality": {
+        "level": "low",
+        "basis": "Endast arbetsbok/branschguide som underlag. Låg datakvalitet betyder inte låg risk – verifiera.",
+        "source_ids": [
+          "src-workbook"
+        ]
+      },
+      "recommended_action": "harden_configuration",
+      "rationale": "Protokoll/tjänst: risken styrs av zonering, filtrering och protokollets säkerhetsfunktioner, inte av produkt-CVE.",
+      "method_version": "risk-method-1.0"
+    },
+    "data_quality_flags": [
+      "generic_control_text",
+      "industry_guide_only",
+      "conditional_priority_only",
+      "patch_level_unknown",
+      "missing_primary_source"
+    ],
+    "provenance": [
+      {
+        "sheet": "66 system och tjänster",
+        "row": 63,
+        "column": "A",
+        "header": "Kategori"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 63,
+        "column": "B",
+        "header": "System / produktfamilj"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 63,
+        "column": "C",
+        "header": "Funktion"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 63,
+        "column": "D",
+        "header": "Shodan-sökord (komplettera med net:...)"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 63,
+        "column": "E",
+        "header": "Sårbarhetstyp / klass"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 63,
+        "column": "F",
+        "header": "Vad risktypen innebär (ej exploitinstruktion)"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 63,
+        "column": "J",
+        "header": "Patchningsgrad / urval"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 63,
+        "column": "K",
+        "header": "Rekommenderad defensiv kontroll"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 63,
+        "column": "L",
+        "header": "Konfigurationsdokumentation (URL)"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 63,
+        "column": "M",
+        "header": "Dokumentnivå / begränsning"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 63,
+        "column": "O",
+        "header": "Prio vid publik exponering"
+      }
+    ],
+    "original": {
+      "sheet": "66 system och tjänster",
+      "row": 63,
+      "values": {
+        "Kategori": "Tjänst",
+        "System / produktfamilj": "IEC 61850 MMS",
+        "Funktion": "Elstationskommunikation",
+        "Shodan-sökord (komplettera med net:...)": "port:102",
+        "Sårbarhetstyp / klass": "Oskyddade anläggningsprotokoll/åtkomstlistor",
+        "Vad risktypen innebär (ej exploitinstruktion)": "Port 102 delas med S7comm; kräver ytterligare produktverifiering.",
+        "CVE / bulletin (urval)": null,
+        "Berörd firmware / modell": null,
+        "Fix / senaste offentlig uppgift": null,
+        "Patchningsgrad / urval": "Uppgift saknas",
+        "Rekommenderad defensiv kontroll": "Ingen publik direktadministration; VPN/MFA där möjligt; nätsegmentering; loggning; uppdatera.",
+        "Konfigurationsdokumentation (URL)": "https://csrc.nist.gov/pubs/sp/800/82/r3/final",
+        "Dokumentnivå / begränsning": "Branschguide – protokollspecifik konfiguration skiljer",
+        "Källa till CVE/säkerhetsuppgift (URL)": null,
+        "Prio vid publik exponering": "P1 vid publik åtkomst"
+      }
+    },
+    "verification_status": "corroborated_secondary",
+    "source_ids": [
+      "src-workbook",
+      "src-nist-sp800-82r3",
+      "src-iana-ports"
+    ],
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [],
+      "history": [
+        {
+          "date": "2026-11-07",
+          "status": null,
+          "summary": "Migrerad från arbetsboken (2026-11-07) med bevarade originalfält."
+        }
+      ]
+    },
+    "typical_use": "Kommunikation i elstationer (IED, skydd, reläer).",
+    "default_ports": [
+      {
+        "port": 102,
+        "transport": "tcp",
+        "note": "MMS över ISO-TSAP; delas med S7comm",
+        "status": "corroborated_secondary",
+        "source_ids": [
+          "src-iana-ports",
+          "src-workbook"
+        ]
+      }
+    ],
+    "authentication": "optional",
+    "encryption": "optional",
+    "security_notes": "Säkerhet via IEC 62351 där stöd finns; annars nätzonering och åtkomstlistor.",
+    "allowed_zones": "Stationsbuss/processbuss, strikt isolerat."
+  },
+  {
+    "id": "svc-mqtt",
+    "kind": "protocol_service",
+    "name": "MQTT / MQTT-TLS",
+    "aliases": [
+      "MQTT",
+      "MQTT over TLS",
+      "MQTTS"
+    ],
+    "category": "Tjänst",
+    "function_text": "IoT-/OT-telemetribroker",
+    "description": null,
+    "documentation": [
+      {
+        "url": "https://csrc.nist.gov/pubs/sp/800/82/r3/final",
+        "level": "industry_guide",
+        "level_text": "Branschguide – broker-manual krävs för exakta steg",
+        "product_specific": false,
+        "source_id": "src-nist-sp800-82r3"
+      }
+    ],
+    "discovery_heuristic": {
+      "query": "port:1883 OR port:8883",
+      "caveat": "Sökord är heuristik för egen/auktoriserad inventering (komplettera med net:DITT-EGET-IP-INTERVALL). Träffar är inte enhetsbevis och kan vara falska; portträffar identifierar protokollmöjlighet, inte specifik produkt. Plattformen utför inga sökningar.",
+      "purpose": "authorized_inventory_only"
+    },
+    "risk_summary": {
+      "type_text": "Anonym publicering / breda topic-behörigheter / avsaknad av TLS",
+      "explanation_text": "Risk beror på brokerkonfiguration och klientbehörigheter, inte porten i sig.",
+      "cve_text": null,
+      "affected_firmware_text": null,
+      "fix_text": null,
+      "patch_level_text": "Uppgift saknas",
+      "control_text": "Ingen publik direktadministration; VPN/MFA där möjligt; nätsegmentering; loggning; uppdatera.",
+      "legacy_priority_text": "P1 vid publik åtkomst"
+    },
+    "control_ids": [
+      "ctl-asset-version-verification",
+      "ctl-no-public-admin",
+      "ctl-network-segmentation",
+      "ctl-protocol-firewall-allowlist",
+      "ctl-secure-remote-access",
+      "ctl-least-privilege-accounts",
+      "ctl-vendor-firmware-update",
+      "ctl-secure-protocol-features",
+      "ctl-logging-monitoring",
+      "ctl-vendor-hardening-guide"
+    ],
+    "advisory_ids": [],
+    "match_ids": [],
+    "observation_ids": [],
+    "claim_ids": [],
+    "risk": {
+      "threat": {
+        "level": "unknown",
+        "basis": "Protokoll/tjänst: hotet beror på konfiguration och bakomliggande produkter, inte på egna CVE:er.",
+        "source_ids": []
+      },
+      "severity": {
+        "level": "unknown",
+        "basis": "Ingen CVSS tillgänglig (inga bekräftade matchningar).",
+        "source_ids": []
+      },
+      "relevance": {
+        "level": "unknown",
+        "basis": "Ingen CVE-matchning; versionsuppgift saknas.",
+        "source_ids": []
+      },
+      "exposure": {
+        "level": "unknown",
+        "basis": "Publik katalog saknar asset-data. Exponering kan bara bedömas per inventerad tillgång i en separat, skyddad modul. \"P1 vid publik åtkomst\" i arbetsboken är villkorlig.",
+        "source_ids": []
+      },
+      "ot_impact": {
+        "level": "medium",
+        "basis": "Beror på om kommandon skickas via topics. Generell bedömning per produkttyp; faktisk konsekvens beror på anläggning.",
+        "source_ids": []
+      },
+      "mitigation_feasibility": {
+        "level": "medium",
+        "basis": "Generella härdningsåtgärder (segmentering, ingen publik exponering, skyddad fjärråtkomst) är tillämpliga.",
+        "source_ids": []
+      },
+      "data_quality": {
+        "level": "low",
+        "basis": "Endast arbetsbok/branschguide som underlag. Låg datakvalitet betyder inte låg risk – verifiera.",
+        "source_ids": [
+          "src-workbook"
+        ]
+      },
+      "recommended_action": "harden_configuration",
+      "rationale": "Protokoll/tjänst: risken styrs av zonering, filtrering och protokollets säkerhetsfunktioner, inte av produkt-CVE.",
+      "method_version": "risk-method-1.0"
+    },
+    "data_quality_flags": [
+      "generic_control_text",
+      "industry_guide_only",
+      "conditional_priority_only",
+      "patch_level_unknown",
+      "missing_primary_source"
+    ],
+    "provenance": [
+      {
+        "sheet": "66 system och tjänster",
+        "row": 64,
+        "column": "A",
+        "header": "Kategori"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 64,
+        "column": "B",
+        "header": "System / produktfamilj"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 64,
+        "column": "C",
+        "header": "Funktion"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 64,
+        "column": "D",
+        "header": "Shodan-sökord (komplettera med net:...)"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 64,
+        "column": "E",
+        "header": "Sårbarhetstyp / klass"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 64,
+        "column": "F",
+        "header": "Vad risktypen innebär (ej exploitinstruktion)"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 64,
+        "column": "J",
+        "header": "Patchningsgrad / urval"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 64,
+        "column": "K",
+        "header": "Rekommenderad defensiv kontroll"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 64,
+        "column": "L",
+        "header": "Konfigurationsdokumentation (URL)"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 64,
+        "column": "M",
+        "header": "Dokumentnivå / begränsning"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 64,
+        "column": "O",
+        "header": "Prio vid publik exponering"
+      }
+    ],
+    "original": {
+      "sheet": "66 system och tjänster",
+      "row": 64,
+      "values": {
+        "Kategori": "Tjänst",
+        "System / produktfamilj": "MQTT / MQTT-TLS",
+        "Funktion": "IoT-/OT-telemetribroker",
+        "Shodan-sökord (komplettera med net:...)": "port:1883 OR port:8883",
+        "Sårbarhetstyp / klass": "Anonym publicering / breda topic-behörigheter / avsaknad av TLS",
+        "Vad risktypen innebär (ej exploitinstruktion)": "Risk beror på brokerkonfiguration och klientbehörigheter, inte porten i sig.",
+        "CVE / bulletin (urval)": null,
+        "Berörd firmware / modell": null,
+        "Fix / senaste offentlig uppgift": null,
+        "Patchningsgrad / urval": "Uppgift saknas",
+        "Rekommenderad defensiv kontroll": "Ingen publik direktadministration; VPN/MFA där möjligt; nätsegmentering; loggning; uppdatera.",
+        "Konfigurationsdokumentation (URL)": "https://csrc.nist.gov/pubs/sp/800/82/r3/final",
+        "Dokumentnivå / begränsning": "Branschguide – broker-manual krävs för exakta steg",
+        "Källa till CVE/säkerhetsuppgift (URL)": null,
+        "Prio vid publik exponering": "P1 vid publik åtkomst"
+      }
+    },
+    "verification_status": "corroborated_secondary",
+    "source_ids": [
+      "src-workbook",
+      "src-nist-sp800-82r3",
+      "src-iana-ports"
+    ],
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [],
+      "history": [
+        {
+          "date": "2026-11-07",
+          "status": null,
+          "summary": "Migrerad från arbetsboken (2026-11-07) med bevarade originalfält."
+        }
+      ]
+    },
+    "typical_use": "Telemetri/broker för IoT och OT-integration (t.ex. Sparkplug).",
+    "default_ports": [
+      {
+        "port": 1883,
+        "transport": "tcp",
+        "note": "MQTT utan TLS (IANA: mqtt)",
+        "status": "corroborated_secondary",
+        "source_ids": [
+          "src-iana-ports",
+          "src-workbook"
+        ]
+      },
+      {
+        "port": 8883,
+        "transport": "tcp",
+        "note": "MQTT över TLS (IANA: secure-mqtt)",
+        "status": "corroborated_secondary",
+        "source_ids": [
+          "src-iana-ports",
+          "src-workbook"
+        ]
+      }
+    ],
+    "authentication": "optional",
+    "encryption": "optional",
+    "security_notes": "Risken ligger i brokerkonfiguration: anonym åtkomst, breda topic-ACL:er och avsaknad av TLS/klientcertifikat.",
+    "allowed_zones": "Broker i DMZ/integrationszon; klienter autentiserade."
+  },
+  {
+    "id": "svc-web-hmi-scada",
+    "kind": "protocol_service",
+    "name": "Webbaserad HMI/SCADA",
+    "aliases": [
+      "Webb-HMI",
+      "Web SCADA",
+      "HTTP/HTTPS-administration"
+    ],
+    "category": "Tjänst",
+    "function_text": "Operatörs- och driftpaneler",
+    "description": null,
+    "documentation": [
+      {
+        "url": "https://inductiveautomation.com/resources/article/ignition-security-hardening-guide",
+        "level": "hardening_guide",
+        "level_text": "Exempelmanual för Ignition – ej alla HMI:er",
+        "product_specific": false,
+        "source_id": "src-wb-inductiveautomation.com-d2d8e128"
+      }
+    ],
+    "discovery_heuristic": {
+      "query": "http.title:\"HMI\"",
+      "caveat": "Sökord är heuristik för egen/auktoriserad inventering (komplettera med net:DITT-EGET-IP-INTERVALL). Träffar är inte enhetsbevis och kan vara falska; portträffar identifierar protokollmöjlighet, inte specifik produkt. Plattformen utför inga sökningar.",
+      "purpose": "authorized_inventory_only"
+    },
+    "risk_summary": {
+      "type_text": "Autentisering / session / exponerad webbpanel",
+      "explanation_text": "HTTP-titel är osäker produktsignatur; flera tekniker möjliga.",
+      "cve_text": null,
+      "affected_firmware_text": null,
+      "fix_text": null,
+      "patch_level_text": "Uppgift saknas",
+      "control_text": "Ingen publik direktadministration; VPN/MFA där möjligt; nätsegmentering; loggning; uppdatera.",
+      "legacy_priority_text": "P1 vid publik åtkomst"
+    },
+    "control_ids": [
+      "ctl-asset-version-verification",
+      "ctl-no-public-admin",
+      "ctl-network-segmentation",
+      "ctl-protocol-firewall-allowlist",
+      "ctl-secure-remote-access",
+      "ctl-vendor-firmware-update",
+      "ctl-https-strict-mode",
+      "ctl-logging-monitoring",
+      "ctl-vendor-hardening-guide"
+    ],
+    "advisory_ids": [],
+    "match_ids": [],
+    "observation_ids": [],
+    "claim_ids": [],
+    "risk": {
+      "threat": {
+        "level": "unknown",
+        "basis": "Protokoll/tjänst: hotet beror på konfiguration och bakomliggande produkter, inte på egna CVE:er.",
+        "source_ids": []
+      },
+      "severity": {
+        "level": "unknown",
+        "basis": "Ingen CVSS tillgänglig (inga bekräftade matchningar).",
+        "source_ids": []
+      },
+      "relevance": {
+        "level": "unknown",
+        "basis": "Ingen CVE-matchning; versionsuppgift saknas.",
+        "source_ids": []
+      },
+      "exposure": {
+        "level": "unknown",
+        "basis": "Publik katalog saknar asset-data. Exponering kan bara bedömas per inventerad tillgång i en separat, skyddad modul. \"P1 vid publik åtkomst\" i arbetsboken är villkorlig.",
+        "source_ids": []
+      },
+      "ot_impact": {
+        "level": "high",
+        "basis": "Operatörskommandon. Generell bedömning per produkttyp; faktisk konsekvens beror på anläggning.",
+        "source_ids": []
+      },
+      "mitigation_feasibility": {
+        "level": "medium",
+        "basis": "Generella härdningsåtgärder (segmentering, ingen publik exponering, skyddad fjärråtkomst) är tillämpliga.",
+        "source_ids": []
+      },
+      "data_quality": {
+        "level": "low",
+        "basis": "Endast arbetsbok/branschguide som underlag. Låg datakvalitet betyder inte låg risk – verifiera.",
+        "source_ids": [
+          "src-workbook"
+        ]
+      },
+      "recommended_action": "harden_configuration",
+      "rationale": "Protokoll/tjänst: risken styrs av zonering, filtrering och protokollets säkerhetsfunktioner, inte av produkt-CVE.",
+      "method_version": "risk-method-1.0"
+    },
+    "data_quality_flags": [
+      "generic_control_text",
+      "conditional_priority_only",
+      "patch_level_unknown",
+      "missing_primary_source"
+    ],
+    "provenance": [
+      {
+        "sheet": "66 system och tjänster",
+        "row": 65,
+        "column": "A",
+        "header": "Kategori"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 65,
+        "column": "B",
+        "header": "System / produktfamilj"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 65,
+        "column": "C",
+        "header": "Funktion"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 65,
+        "column": "D",
+        "header": "Shodan-sökord (komplettera med net:...)"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 65,
+        "column": "E",
+        "header": "Sårbarhetstyp / klass"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 65,
+        "column": "F",
+        "header": "Vad risktypen innebär (ej exploitinstruktion)"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 65,
+        "column": "J",
+        "header": "Patchningsgrad / urval"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 65,
+        "column": "K",
+        "header": "Rekommenderad defensiv kontroll"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 65,
+        "column": "L",
+        "header": "Konfigurationsdokumentation (URL)"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 65,
+        "column": "M",
+        "header": "Dokumentnivå / begränsning"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 65,
+        "column": "O",
+        "header": "Prio vid publik exponering"
+      }
+    ],
+    "original": {
+      "sheet": "66 system och tjänster",
+      "row": 65,
+      "values": {
+        "Kategori": "Tjänst",
+        "System / produktfamilj": "Webbaserad HMI/SCADA",
+        "Funktion": "Operatörs- och driftpaneler",
+        "Shodan-sökord (komplettera med net:...)": "http.title:\"HMI\"",
+        "Sårbarhetstyp / klass": "Autentisering / session / exponerad webbpanel",
+        "Vad risktypen innebär (ej exploitinstruktion)": "HTTP-titel är osäker produktsignatur; flera tekniker möjliga.",
+        "CVE / bulletin (urval)": null,
+        "Berörd firmware / modell": null,
+        "Fix / senaste offentlig uppgift": null,
+        "Patchningsgrad / urval": "Uppgift saknas",
+        "Rekommenderad defensiv kontroll": "Ingen publik direktadministration; VPN/MFA där möjligt; nätsegmentering; loggning; uppdatera.",
+        "Konfigurationsdokumentation (URL)": "https://inductiveautomation.com/resources/article/ignition-security-hardening-guide",
+        "Dokumentnivå / begränsning": "Exempelmanual för Ignition – ej alla HMI:er",
+        "Källa till CVE/säkerhetsuppgift (URL)": null,
+        "Prio vid publik exponering": "P1 vid publik åtkomst"
+      }
+    },
+    "verification_status": "corroborated_secondary",
+    "source_ids": [
+      "src-workbook",
+      "src-wb-inductiveautomation.com-d2d8e128",
+      "src-iana-ports"
+    ],
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [],
+      "history": [
+        {
+          "date": "2026-11-07",
+          "status": null,
+          "summary": "Migrerad från arbetsboken (2026-11-07) med bevarade originalfält."
+        }
+      ]
+    },
+    "typical_use": "Operatörs- och driftpaneler samt administrationsgränssnitt över HTTP/HTTPS.",
+    "default_ports": [
+      {
+        "port": 80,
+        "transport": "tcp",
+        "note": "HTTP",
+        "status": "corroborated_secondary",
+        "source_ids": [
+          "src-iana-ports"
+        ]
+      },
+      {
+        "port": 443,
+        "transport": "tcp",
+        "note": "HTTPS",
+        "status": "corroborated_secondary",
+        "source_ids": [
+          "src-iana-ports"
+        ]
+      }
+    ],
+    "authentication": "depends",
+    "encryption": "depends",
+    "security_notes": "HTTP-titeln 'HMI' är en osäker produktsignatur; många tekniker möjliga. Risker: svag autentisering, sessionshantering, exponerad panel.",
+    "allowed_zones": "Åtkomst via skyddad fjärråtkomst eller intern zon; aldrig direkt från internet."
+  },
+  {
+    "id": "svc-historian-sql",
+    "kind": "protocol_service",
+    "name": "Historian / SQL",
+    "aliases": [
+      "Historian",
+      "MSSQL",
+      "SQL Server",
+      "Processhistorik"
+    ],
+    "category": "Tjänst",
+    "function_text": "Processhistorik, databaser",
+    "description": null,
+    "documentation": [
+      {
+        "url": "https://learn.microsoft.com/en-us/sql/relational-databases/security/secure-sql-server?view=sql-server-ver17",
+        "level": "security_guidance",
+        "level_text": "Microsoft SQL Server Security Guide",
+        "product_specific": true,
+        "source_id": "src-wb-learn.microsoft.com-ded8fec8"
+      }
+    ],
+    "discovery_heuristic": {
+      "query": "port:1433",
+      "caveat": "Sökord är heuristik för egen/auktoriserad inventering (komplettera med net:DITT-EGET-IP-INTERVALL). Träffar är inte enhetsbevis och kan vara falska; portträffar identifierar protokollmöjlighet, inte specifik produkt. Plattformen utför inga sökningar.",
+      "purpose": "authorized_inventory_only"
+    },
+    "risk_summary": {
+      "type_text": "Svaga konton / publik SQL / otillräcklig kryptering",
+      "explanation_text": "Port 1433 kan vara MSSQL men säger inget om applikationens innehåll.",
+      "cve_text": null,
+      "affected_firmware_text": null,
+      "fix_text": null,
+      "patch_level_text": "Uppgift saknas",
+      "control_text": "Ingen publik direktadministration; VPN/MFA där möjligt; nätsegmentering; loggning; uppdatera.",
+      "legacy_priority_text": "P1 vid publik åtkomst"
+    },
+    "control_ids": [
+      "ctl-asset-version-verification",
+      "ctl-no-public-admin",
+      "ctl-network-segmentation",
+      "ctl-protocol-firewall-allowlist",
+      "ctl-secure-remote-access",
+      "ctl-least-privilege-accounts",
+      "ctl-vendor-firmware-update",
+      "ctl-logging-monitoring",
+      "ctl-backup-restore",
+      "ctl-vendor-hardening-guide"
+    ],
+    "advisory_ids": [],
+    "match_ids": [],
+    "observation_ids": [],
+    "claim_ids": [],
+    "risk": {
+      "threat": {
+        "level": "unknown",
+        "basis": "Protokoll/tjänst: hotet beror på konfiguration och bakomliggande produkter, inte på egna CVE:er.",
+        "source_ids": []
+      },
+      "severity": {
+        "level": "unknown",
+        "basis": "Ingen CVSS tillgänglig (inga bekräftade matchningar).",
+        "source_ids": []
+      },
+      "relevance": {
+        "level": "unknown",
+        "basis": "Ingen CVE-matchning; versionsuppgift saknas.",
+        "source_ids": []
+      },
+      "exposure": {
+        "level": "unknown",
+        "basis": "Publik katalog saknar asset-data. Exponering kan bara bedömas per inventerad tillgång i en separat, skyddad modul. \"P1 vid publik åtkomst\" i arbetsboken är villkorlig.",
+        "source_ids": []
+      },
+      "ot_impact": {
+        "level": "medium",
+        "basis": "Dataintegritet och spårbarhet; sällan direkt styrning. Generell bedömning per produkttyp; faktisk konsekvens beror på anläggning.",
+        "source_ids": []
+      },
+      "mitigation_feasibility": {
+        "level": "medium",
+        "basis": "Generella härdningsåtgärder (segmentering, ingen publik exponering, skyddad fjärråtkomst) är tillämpliga.",
+        "source_ids": []
+      },
+      "data_quality": {
+        "level": "medium",
+        "basis": "Delvis primärkällor; vissa uppgifter kräver granskning eller saknar versionsgräns.",
+        "source_ids": []
+      },
+      "recommended_action": "harden_configuration",
+      "rationale": "Protokoll/tjänst: risken styrs av zonering, filtrering och protokollets säkerhetsfunktioner, inte av produkt-CVE.",
+      "method_version": "risk-method-1.0"
+    },
+    "data_quality_flags": [
+      "generic_control_text",
+      "conditional_priority_only",
+      "patch_level_unknown",
+      "missing_primary_source"
+    ],
+    "provenance": [
+      {
+        "sheet": "66 system och tjänster",
+        "row": 66,
+        "column": "A",
+        "header": "Kategori"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 66,
+        "column": "B",
+        "header": "System / produktfamilj"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 66,
+        "column": "C",
+        "header": "Funktion"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 66,
+        "column": "D",
+        "header": "Shodan-sökord (komplettera med net:...)"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 66,
+        "column": "E",
+        "header": "Sårbarhetstyp / klass"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 66,
+        "column": "F",
+        "header": "Vad risktypen innebär (ej exploitinstruktion)"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 66,
+        "column": "J",
+        "header": "Patchningsgrad / urval"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 66,
+        "column": "K",
+        "header": "Rekommenderad defensiv kontroll"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 66,
+        "column": "L",
+        "header": "Konfigurationsdokumentation (URL)"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 66,
+        "column": "M",
+        "header": "Dokumentnivå / begränsning"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 66,
+        "column": "O",
+        "header": "Prio vid publik exponering"
+      }
+    ],
+    "original": {
+      "sheet": "66 system och tjänster",
+      "row": 66,
+      "values": {
+        "Kategori": "Tjänst",
+        "System / produktfamilj": "Historian / SQL",
+        "Funktion": "Processhistorik, databaser",
+        "Shodan-sökord (komplettera med net:...)": "port:1433",
+        "Sårbarhetstyp / klass": "Svaga konton / publik SQL / otillräcklig kryptering",
+        "Vad risktypen innebär (ej exploitinstruktion)": "Port 1433 kan vara MSSQL men säger inget om applikationens innehåll.",
+        "CVE / bulletin (urval)": null,
+        "Berörd firmware / modell": null,
+        "Fix / senaste offentlig uppgift": null,
+        "Patchningsgrad / urval": "Uppgift saknas",
+        "Rekommenderad defensiv kontroll": "Ingen publik direktadministration; VPN/MFA där möjligt; nätsegmentering; loggning; uppdatera.",
+        "Konfigurationsdokumentation (URL)": "https://learn.microsoft.com/en-us/sql/relational-databases/security/secure-sql-server?view=sql-server-ver17",
+        "Dokumentnivå / begränsning": "Microsoft SQL Server Security Guide",
+        "Källa till CVE/säkerhetsuppgift (URL)": null,
+        "Prio vid publik exponering": "P1 vid publik åtkomst"
+      }
+    },
+    "verification_status": "corroborated_secondary",
+    "source_ids": [
+      "src-workbook",
+      "src-wb-learn.microsoft.com-ded8fec8",
+      "src-iana-ports"
+    ],
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [],
+      "history": [
+        {
+          "date": "2026-11-07",
+          "status": null,
+          "summary": "Migrerad från arbetsboken (2026-11-07) med bevarade originalfält."
+        }
+      ]
+    },
+    "typical_use": "Processhistorik, databaser för SCADA/MES.",
+    "default_ports": [
+      {
+        "port": 1433,
+        "transport": "tcp",
+        "note": "Microsoft SQL Server (IANA: ms-sql-s)",
+        "status": "corroborated_secondary",
+        "source_ids": [
+          "src-iana-ports",
+          "src-workbook"
+        ]
+      }
+    ],
+    "authentication": "required",
+    "encryption": "optional",
+    "security_notes": "Port 1433 kan vara MSSQL men säger inget om applikationens innehåll; risker: svaga konton, publik SQL, otillräcklig kryptering.",
+    "allowed_zones": "Data-/DMZ-zon; ingen direkt internetexponering."
+  },
+  {
+    "id": "svc-ot-remote-admin",
+    "kind": "protocol_service",
+    "name": "OT-fjärradministration (RDP/VNC/SSH)",
+    "aliases": [
+      "RDP",
+      "VNC",
+      "SSH",
+      "Fjärradministration"
+    ],
+    "category": "Tjänst",
+    "function_text": "Drift, service och engineering",
+    "description": null,
+    "documentation": [
+      {
+        "url": "https://www.cisa.gov/sites/default/files/2023-01/RP_Managing_Remote_Access_S508NC.pdf",
+        "level": "security_guidance",
+        "level_text": "CISA: Managing Remote Access for ICS",
+        "product_specific": true,
+        "source_id": "src-cisa-remote-access-ics"
+      }
+    ],
+    "discovery_heuristic": {
+      "query": "port:3389 OR port:5900 OR port:22",
+      "caveat": "Sökord är heuristik för egen/auktoriserad inventering (komplettera med net:DITT-EGET-IP-INTERVALL). Träffar är inte enhetsbevis och kan vara falska; portträffar identifierar protokollmöjlighet, inte specifik produkt. Plattformen utför inga sökningar.",
+      "purpose": "authorized_inventory_only"
+    },
+    "risk_summary": {
+      "type_text": "Gissningsbara uppgifter / direkt admin / stulna konton",
+      "explanation_text": "Tjänsten kan tillhöra gateway, engineeringsystem eller annat; inte automatiskt OT.",
+      "cve_text": null,
+      "affected_firmware_text": null,
+      "fix_text": null,
+      "patch_level_text": "Uppgift saknas",
+      "control_text": "Ingen publik direktadministration; VPN/MFA där möjligt; nätsegmentering; loggning; uppdatera.",
+      "legacy_priority_text": "P1 vid publik åtkomst"
+    },
+    "control_ids": [
+      "ctl-asset-version-verification",
+      "ctl-no-public-admin",
+      "ctl-network-segmentation",
+      "ctl-protocol-firewall-allowlist",
+      "ctl-secure-remote-access",
+      "ctl-vendor-firmware-update",
+      "ctl-logging-monitoring",
+      "ctl-monitor-remote-service",
+      "ctl-vendor-hardening-guide"
+    ],
+    "advisory_ids": [],
+    "match_ids": [],
+    "observation_ids": [],
+    "claim_ids": [],
+    "risk": {
+      "threat": {
+        "level": "unknown",
+        "basis": "Protokoll/tjänst: hotet beror på konfiguration och bakomliggande produkter, inte på egna CVE:er.",
+        "source_ids": []
+      },
+      "severity": {
+        "level": "unknown",
+        "basis": "Ingen CVSS tillgänglig (inga bekräftade matchningar).",
+        "source_ids": []
+      },
+      "relevance": {
+        "level": "unknown",
+        "basis": "Ingen CVE-matchning; versionsuppgift saknas.",
+        "source_ids": []
+      },
+      "exposure": {
+        "level": "unknown",
+        "basis": "Publik katalog saknar asset-data. Exponering kan bara bedömas per inventerad tillgång i en separat, skyddad modul. \"P1 vid publik åtkomst\" i arbetsboken är villkorlig.",
+        "source_ids": []
+      },
+      "ot_impact": {
+        "level": "high",
+        "basis": "Administrativ åtkomst till OT-system. Generell bedömning per produkttyp; faktisk konsekvens beror på anläggning.",
+        "source_ids": []
+      },
+      "mitigation_feasibility": {
+        "level": "medium",
+        "basis": "Generella härdningsåtgärder (segmentering, ingen publik exponering, skyddad fjärråtkomst) är tillämpliga.",
+        "source_ids": []
+      },
+      "data_quality": {
+        "level": "medium",
+        "basis": "Delvis primärkällor; vissa uppgifter kräver granskning eller saknar versionsgräns.",
+        "source_ids": []
+      },
+      "recommended_action": "harden_configuration",
+      "rationale": "Protokoll/tjänst: risken styrs av zonering, filtrering och protokollets säkerhetsfunktioner, inte av produkt-CVE.",
+      "method_version": "risk-method-1.0"
+    },
+    "data_quality_flags": [
+      "generic_control_text",
+      "conditional_priority_only",
+      "patch_level_unknown",
+      "missing_primary_source"
+    ],
+    "provenance": [
+      {
+        "sheet": "66 system och tjänster",
+        "row": 67,
+        "column": "A",
+        "header": "Kategori"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 67,
+        "column": "B",
+        "header": "System / produktfamilj"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 67,
+        "column": "C",
+        "header": "Funktion"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 67,
+        "column": "D",
+        "header": "Shodan-sökord (komplettera med net:...)"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 67,
+        "column": "E",
+        "header": "Sårbarhetstyp / klass"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 67,
+        "column": "F",
+        "header": "Vad risktypen innebär (ej exploitinstruktion)"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 67,
+        "column": "J",
+        "header": "Patchningsgrad / urval"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 67,
+        "column": "K",
+        "header": "Rekommenderad defensiv kontroll"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 67,
+        "column": "L",
+        "header": "Konfigurationsdokumentation (URL)"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 67,
+        "column": "M",
+        "header": "Dokumentnivå / begränsning"
+      },
+      {
+        "sheet": "66 system och tjänster",
+        "row": 67,
+        "column": "O",
+        "header": "Prio vid publik exponering"
+      }
+    ],
+    "original": {
+      "sheet": "66 system och tjänster",
+      "row": 67,
+      "values": {
+        "Kategori": "Tjänst",
+        "System / produktfamilj": "OT-fjärradministration (RDP/VNC/SSH)",
+        "Funktion": "Drift, service och engineering",
+        "Shodan-sökord (komplettera med net:...)": "port:3389 OR port:5900 OR port:22",
+        "Sårbarhetstyp / klass": "Gissningsbara uppgifter / direkt admin / stulna konton",
+        "Vad risktypen innebär (ej exploitinstruktion)": "Tjänsten kan tillhöra gateway, engineeringsystem eller annat; inte automatiskt OT.",
+        "CVE / bulletin (urval)": null,
+        "Berörd firmware / modell": null,
+        "Fix / senaste offentlig uppgift": null,
+        "Patchningsgrad / urval": "Uppgift saknas",
+        "Rekommenderad defensiv kontroll": "Ingen publik direktadministration; VPN/MFA där möjligt; nätsegmentering; loggning; uppdatera.",
+        "Konfigurationsdokumentation (URL)": "https://www.cisa.gov/sites/default/files/2023-01/RP_Managing_Remote_Access_S508NC.pdf",
+        "Dokumentnivå / begränsning": "CISA: Managing Remote Access for ICS",
+        "Källa till CVE/säkerhetsuppgift (URL)": null,
+        "Prio vid publik exponering": "P1 vid publik åtkomst"
+      }
+    },
+    "verification_status": "corroborated_secondary",
+    "source_ids": [
+      "src-workbook",
+      "src-cisa-remote-access-ics",
+      "src-iana-ports"
+    ],
+    "review": {
+      "reviewed_at": "2026-11-07",
+      "reviewer": "projektgranskning",
+      "notes": [],
+      "history": [
+        {
+          "date": "2026-11-07",
+          "status": null,
+          "summary": "Migrerad från arbetsboken (2026-11-07) med bevarade originalfält."
+        }
+      ]
+    },
+    "typical_use": "Drift, service och engineering via fjärrskrivbord/skal.",
+    "default_ports": [
+      {
+        "port": 3389,
+        "transport": "tcp",
+        "note": "RDP (IANA: ms-wbt-server)",
+        "status": "corroborated_secondary",
+        "source_ids": [
+          "src-iana-ports",
+          "src-workbook"
+        ]
+      },
+      {
+        "port": 5900,
+        "transport": "tcp",
+        "note": "VNC (IANA: rfb)",
+        "status": "corroborated_secondary",
+        "source_ids": [
+          "src-iana-ports",
+          "src-workbook"
+        ]
+      },
+      {
+        "port": 22,
+        "transport": "tcp",
+        "note": "SSH",
+        "status": "corroborated_secondary",
+        "source_ids": [
+          "src-iana-ports",
+          "src-workbook"
+        ]
+      }
+    ],
+    "authentication": "required",
+    "encryption": "depends",
+    "security_notes": "Tjänsten kan tillhöra gateway, engineering-system eller annat; inte automatiskt OT. Risker: gissningsbara uppgifter, direkt admin, stulna konton.",
+    "allowed_zones": "Endast via jump host/VPN med MFA; aldrig direkt från internet."
+  }
+]

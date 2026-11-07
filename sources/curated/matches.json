@@ -1,0 +1,2045 @@
+{
+  "_comment": "Explicita produkt–sårbarhetskopplingar. cve_id mappas av normalize.ts till vulnerability_id (cve-<id lowercase>). status: affected | not_affected | unknown | under_investigation. Alla uppgifter har källor; fix.status anger hur väl fixversionen är belagd.",
+  "matches": [
+    {
+      "id": "match-danfoss-ak-sm-800a-cve-2025-41450",
+      "product_family_id": "pf-danfoss-ak-sm-800a",
+      "cve_id": "CVE-2025-41450",
+      "advisory_id": "adv-danfoss-dsa-2025-03-01",
+      "component": "AK-SM 8xxA Series (webbgränssnitt)",
+      "affected_versions_text": "AK-SM 8xxA före version 4.2",
+      "version_rule": {
+        "type": "lt",
+        "version": "4.2",
+        "version_end": null,
+        "text": "< 4.2"
+      },
+      "status": "affected",
+      "attack_prerequisites": "Nätverksåtkomst till webbgränssnittet; hög attackkomplexitet och användarinteraktion enligt CVSS-vektorn.",
+      "attack_vector": "network",
+      "authentication_required": "none",
+      "user_interaction": "required",
+      "fix": {
+        "available": "yes",
+        "version": "4.2",
+        "text": "Berörd 'prior to version 4.2' enligt NVD (CNA Danfoss); fixversion härledd ur versionsgränsen. Arbetsbokens uppgift 'senast angiven 5.3.x (okt 2026)' är inte verifierad mot primärkälla.",
+        "status": "corroborated_secondary",
+        "source_ids": ["src-nvd-cve-2025-41450"]
+      },
+      "mitigation_control_ids": [
+        "ctl-no-public-admin",
+        "ctl-secure-remote-access",
+        "ctl-network-segmentation",
+        "ctl-vendor-firmware-update",
+        "ctl-https-strict-mode"
+      ],
+      "mitigation_text": "Senaste kompatibla firmware; Strict Mode; HTTPS; isolera bakom VPN/brandvägg (arbetsbokens rekommendation).",
+      "evidence": "NVD CVE-2025-41450 (CNA Danfoss): 'affects Danfoss AK-SM 8xxA Series prior to version 4.2'; NVD-referens pekar på DSA-2025-03-01.",
+      "source_ids": ["src-nvd-cve-2025-41450", "src-danfoss-dsa-2025-03-01"],
+      "verification_status": "verified_primary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": [],
+        "history": []
+      }
+    },
+    {
+      "id": "match-danfoss-ak-sm-800a-cve-2025-41451",
+      "product_family_id": "pf-danfoss-ak-sm-800a",
+      "cve_id": "CVE-2025-41451",
+      "advisory_id": "adv-danfoss-dsa-2025-08-01",
+      "component": "AK-SM 8xxA Series (alarm-till-e-post-konfiguration)",
+      "affected_versions_text": "AK-SM 8xxA före version 4.3.1",
+      "version_rule": {
+        "type": "lt",
+        "version": "4.3.1",
+        "version_end": null,
+        "text": "< 4.3.1"
+      },
+      "status": "affected",
+      "attack_prerequisites": "Autentiserad användare med höga privilegier (PR:H) och användarinteraktion; hög attackkomplexitet enligt CVSS 4.0-vektorn.",
+      "attack_vector": "network",
+      "authentication_required": "high",
+      "user_interaction": "required",
+      "fix": {
+        "available": "yes",
+        "version": "4.3.1",
+        "text": "Berörd 'prior to version 4.3.1' enligt NVD (CNA Danfoss).",
+        "status": "corroborated_secondary",
+        "source_ids": ["src-nvd-cve-2025-41451"]
+      },
+      "mitigation_control_ids": [
+        "ctl-no-public-admin",
+        "ctl-secure-remote-access",
+        "ctl-least-privilege-accounts",
+        "ctl-vendor-firmware-update"
+      ],
+      "mitigation_text": "Uppdatera; begränsa administratörskonton; ingen publik administration.",
+      "evidence": "NVD CVE-2025-41451 (CNA Danfoss). Bulletinkoppling DSA-2025-08-01 enligt arbetsboken (needs_review).",
+      "source_ids": ["src-nvd-cve-2025-41451", "src-danfoss-dsa-2025-08-01"],
+      "verification_status": "verified_primary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": ["Arbetsboken beskriver korrekt att CVE:t kräver autentisering."],
+        "history": []
+      }
+    },
+    {
+      "id": "match-danfoss-ak-sm-800a-cve-2025-41452",
+      "product_family_id": "pf-danfoss-ak-sm-800a",
+      "cve_id": "CVE-2025-41452",
+      "advisory_id": "adv-danfoss-dsa-2025-08-01",
+      "component": "AK-SM 8xxA Series (webbgränssnittets konfiguration)",
+      "affected_versions_text": "AK-SM 8xxA före version 4.3.1",
+      "version_rule": {
+        "type": "lt",
+        "version": "4.3.1",
+        "version_end": null,
+        "text": "< 4.3.1"
+      },
+      "status": "affected",
+      "attack_prerequisites": "Autentiserad användare med höga privilegier (PR:H) och användarinteraktion.",
+      "attack_vector": "network",
+      "authentication_required": "high",
+      "user_interaction": "required",
+      "fix": {
+        "available": "yes",
+        "version": "4.3.1",
+        "text": "Berörd 'prior to 4.3.1' enligt NVD (CNA Danfoss).",
+        "status": "corroborated_secondary",
+        "source_ids": ["src-nvd-cve-2025-41452"]
+      },
+      "mitigation_control_ids": [
+        "ctl-no-public-admin",
+        "ctl-secure-remote-access",
+        "ctl-vendor-firmware-update"
+      ],
+      "mitigation_text": "Uppdatera; ingen publik administration.",
+      "evidence": "NVD CVE-2025-41452 (CNA Danfoss).",
+      "source_ids": ["src-nvd-cve-2025-41452", "src-danfoss-dsa-2025-08-01"],
+      "verification_status": "verified_primary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": [],
+        "history": []
+      }
+    },
+    {
+      "id": "match-copeland-xweb-pro-cve-2026-21718",
+      "product_family_id": "pf-copeland-xweb-pro",
+      "cve_id": "CVE-2026-21718",
+      "advisory_id": "adv-cisa-icsa-26-057-10",
+      "component": "XWEB 300D PRO, XWEB 500D PRO, XWEB 500B PRO",
+      "affected_versions_text": "Version 1.12.1 och tidigare",
+      "version_rule": {
+        "type": "lte",
+        "version": "1.12.1",
+        "version_end": null,
+        "text": "≤ 1.12.1"
+      },
+      "status": "affected",
+      "attack_prerequisites": "Nätverksåtkomst; ingen autentisering eller användarinteraktion krävs (AV:N/AC:L/PR:N/UI:N).",
+      "attack_vector": "network",
+      "authentication_required": "none",
+      "user_interaction": "none",
+      "fix": {
+        "available": "yes",
+        "version": null,
+        "text": "CISA ICSA-26-057-10: Copeland har släppt fix och rekommenderar uppdatering till senaste version via uppdateringssidan eller menyn SYSTEM → Updates | Network. Ingen specifik versionssiffra anges i bulletinen. Arbetsbokens uppgift 'åtgärdad version 1.13 enligt tidigare verifiering' är INTE bekräftad av primärkälla och hålls som needs_review.",
+        "status": "needs_review",
+        "source_ids": ["src-cisa-icsa-26-057-10-csaf", "src-copeland-xweb-update-page"]
+      },
+      "mitigation_control_ids": [
+        "ctl-no-public-admin",
+        "ctl-vendor-firmware-update",
+        "ctl-network-segmentation",
+        "ctl-least-privilege-accounts"
+      ],
+      "mitigation_text": "Blockera internetexponering; uppdatera; begränsa servicekonton (arbetsboken) – i linje med CISA:s rekommendationer.",
+      "evidence": "NVD CVE-2026-21718 (CNA CISA) med CPE versionEndIncluding 1.12.1 för xweb_300d_pro/500d_pro/500b_pro; CISA CSAF product_status known_affected '<=1.12.1'.",
+      "source_ids": ["src-nvd-cve-2026-21718", "src-cisa-icsa-26-057-10-csaf"],
+      "verification_status": "verified_primary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": [
+          "Bulletinen omfattar ytterligare 22 CVE för samma modeller/versioner som inte är importerade som egna poster (se advisory)."
+        ],
+        "history": []
+      }
+    },
+    {
+      "id": "match-copeland-e2-cve-2025-52551",
+      "product_family_id": "pf-copeland-e2",
+      "cve_id": "CVE-2025-52551",
+      "advisory_id": "adv-armis-frostbyte10",
+      "component": "E2 Facility Management System (proprietärt protokoll)",
+      "affected_versions_text": "Ingen versionsavgränsning angiven i NVD; produkten är enligt arbetsboken EOL (oktober 2024, ej verifierat).",
+      "version_rule": {
+        "type": "unknown",
+        "version": null,
+        "version_end": null,
+        "text": "versionsgräns okänd"
+      },
+      "status": "affected",
+      "attack_prerequisites": "Nätverksåtkomst till protokollet; ingen autentisering (CWE-306).",
+      "attack_vector": "network",
+      "authentication_required": "none",
+      "user_interaction": "none",
+      "fix": {
+        "available": "unknown",
+        "version": null,
+        "text": "Arbetsboken: 'E2E EOL oktober 2024; migrering till E3'. EOL-datum och eventuell fix ej verifierade mot Copeland.",
+        "status": "needs_review",
+        "source_ids": ["src-workbook"]
+      },
+      "mitigation_control_ids": [
+        "ctl-network-segmentation",
+        "ctl-no-public-admin",
+        "ctl-eol-replacement",
+        "ctl-monitor-remote-service"
+      ],
+      "mitigation_text": "Isolera; avveckla EOL; övervaka fjärrservice (arbetsboken).",
+      "evidence": "NVD CVE-2025-52551 (CNA Armis), status Deferred, utan CPE.",
+      "source_ids": ["src-nvd-cve-2025-52551", "src-armis-frostbyte10"],
+      "verification_status": "corroborated_secondary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": ["Verifiera EOL-datum och berörda E2-versioner mot Copeland."],
+        "history": []
+      }
+    },
+    {
+      "id": "match-copeland-e3-cve-2025-6519",
+      "product_family_id": "pf-copeland-e3",
+      "cve_id": "CVE-2025-6519",
+      "advisory_id": "adv-armis-frostbyte10",
+      "component": "E3 Site Supervisor Control (firmware)",
+      "affected_versions_text": "Firmware före 2.31F01",
+      "version_rule": {
+        "type": "lt",
+        "version": "2.31F01",
+        "version_end": null,
+        "text": "< 2.31F01"
+      },
+      "status": "affected",
+      "attack_prerequisites": "Nätverksåtkomst; ingen autentisering (förutsägbart lösenord för inbyggt konto).",
+      "attack_vector": "network",
+      "authentication_required": "none",
+      "user_interaction": "none",
+      "fix": {
+        "available": "yes",
+        "version": "2.31F01",
+        "text": "NVD CPE versionEndExcluding 2.31f01 (status Analyzed). Arbetsboken: 'Fix 2.31F01 (senaste ej verifierad)'. Senare versioner ej kontrollerade.",
+        "status": "corroborated_secondary",
+        "source_ids": ["src-nvd-cve-2025-6519"]
+      },
+      "mitigation_control_ids": [
+        "ctl-vendor-firmware-update",
+        "ctl-least-privilege-accounts",
+        "ctl-network-segmentation",
+        "ctl-logging-monitoring"
+      ],
+      "mitigation_text": "Uppdatera, unika konton, separerat OT-nät; loggar (arbetsboken).",
+      "evidence": "NVD CVE-2025-6519 (CNA Armis) med CPE e3_supervisory_controller_firmware < 2.31f01.",
+      "source_ids": ["src-nvd-cve-2025-6519", "src-armis-frostbyte10"],
+      "verification_status": "verified_primary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": [],
+        "history": []
+      }
+    },
+    {
+      "id": "match-copeland-e3-cve-2025-52543",
+      "product_family_id": "pf-copeland-e3",
+      "cve_id": "CVE-2025-52543",
+      "advisory_id": "adv-armis-frostbyte10",
+      "component": "E3 Site Supervisor Control (MGW/RCI)",
+      "affected_versions_text": "Firmware före 2.31F01",
+      "version_rule": {
+        "type": "lt",
+        "version": "2.31F01",
+        "version_end": null,
+        "text": "< 2.31F01"
+      },
+      "status": "affected",
+      "attack_prerequisites": "Tillgång till lösenordshash (CWE-836).",
+      "attack_vector": "network",
+      "authentication_required": "low",
+      "user_interaction": "none",
+      "fix": {
+        "available": "yes",
+        "version": "2.31F01",
+        "text": "NVD CPE versionEndExcluding 2.31f01.",
+        "status": "corroborated_secondary",
+        "source_ids": ["src-nvd-cve-2025-52543"]
+      },
+      "mitigation_control_ids": ["ctl-vendor-firmware-update", "ctl-network-segmentation"],
+      "mitigation_text": null,
+      "evidence": "NVD CVE-2025-52543 (CNA Armis), CPE < 2.31f01.",
+      "source_ids": ["src-nvd-cve-2025-52543"],
+      "verification_status": "verified_primary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": [
+          "Ingår i arbetsbokens intervall CVE-2025-52543–52550; varje ID verifierat separat mot NVD."
+        ],
+        "history": []
+      }
+    },
+    {
+      "id": "match-copeland-e3-cve-2025-52544",
+      "product_family_id": "pf-copeland-e3",
+      "cve_id": "CVE-2025-52544",
+      "advisory_id": "adv-armis-frostbyte10",
+      "component": "E3 Site Supervisor Control (planritningsfunktion)",
+      "affected_versions_text": "Firmware före 2.31F01",
+      "version_rule": {
+        "type": "lt",
+        "version": "2.31F01",
+        "version_end": null,
+        "text": "< 2.31F01"
+      },
+      "status": "affected",
+      "attack_prerequisites": "Nätverksåtkomst; ingen autentisering.",
+      "attack_vector": "network",
+      "authentication_required": "none",
+      "user_interaction": "none",
+      "fix": {
+        "available": "yes",
+        "version": "2.31F01",
+        "text": "NVD CPE versionEndExcluding 2.31f01.",
+        "status": "corroborated_secondary",
+        "source_ids": ["src-nvd-cve-2025-52544"]
+      },
+      "mitigation_control_ids": ["ctl-vendor-firmware-update", "ctl-network-segmentation"],
+      "mitigation_text": null,
+      "evidence": "NVD CVE-2025-52544 (CNA Armis), CPE < 2.31f01.",
+      "source_ids": ["src-nvd-cve-2025-52544"],
+      "verification_status": "verified_primary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": [],
+        "history": []
+      }
+    },
+    {
+      "id": "match-copeland-e3-cve-2025-52545",
+      "product_family_id": "pf-copeland-e3",
+      "cve_id": "CVE-2025-52545",
+      "advisory_id": "adv-armis-frostbyte10",
+      "component": "E3 Site Supervisor Control (RCI API)",
+      "affected_versions_text": "Firmware före 2.31F01",
+      "version_rule": {
+        "type": "lt",
+        "version": "2.31F01",
+        "version_end": null,
+        "text": "< 2.31F01"
+      },
+      "status": "affected",
+      "attack_prerequisites": "Nätverksåtkomst till RCI-tjänsten.",
+      "attack_vector": "network",
+      "authentication_required": "unknown",
+      "user_interaction": "none",
+      "fix": {
+        "available": "yes",
+        "version": "2.31F01",
+        "text": "NVD CPE versionEndExcluding 2.31f01.",
+        "status": "corroborated_secondary",
+        "source_ids": ["src-nvd-cve-2025-52545"]
+      },
+      "mitigation_control_ids": ["ctl-vendor-firmware-update", "ctl-network-segmentation"],
+      "mitigation_text": null,
+      "evidence": "NVD CVE-2025-52545 (CNA Armis), CPE < 2.31f01.",
+      "source_ids": ["src-nvd-cve-2025-52545"],
+      "verification_status": "verified_primary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": [],
+        "history": []
+      }
+    },
+    {
+      "id": "match-copeland-e3-cve-2025-52546",
+      "product_family_id": "pf-copeland-e3",
+      "cve_id": "CVE-2025-52546",
+      "advisory_id": "adv-armis-frostbyte10",
+      "component": "E3 Site Supervisor Control (planritningsfunktion)",
+      "affected_versions_text": "Firmware före 2.31F01",
+      "version_rule": {
+        "type": "lt",
+        "version": "2.31F01",
+        "version_end": null,
+        "text": "< 2.31F01"
+      },
+      "status": "affected",
+      "attack_prerequisites": "Nätverksåtkomst; ingen autentisering.",
+      "attack_vector": "network",
+      "authentication_required": "none",
+      "user_interaction": "none",
+      "fix": {
+        "available": "yes",
+        "version": "2.31F01",
+        "text": "NVD CPE versionEndExcluding 2.31f01.",
+        "status": "corroborated_secondary",
+        "source_ids": ["src-nvd-cve-2025-52546"]
+      },
+      "mitigation_control_ids": ["ctl-vendor-firmware-update", "ctl-network-segmentation"],
+      "mitigation_text": null,
+      "evidence": "NVD CVE-2025-52546 (CNA Armis), CPE < 2.31f01.",
+      "source_ids": ["src-nvd-cve-2025-52546"],
+      "verification_status": "verified_primary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": [],
+        "history": []
+      }
+    },
+    {
+      "id": "match-copeland-e3-cve-2025-52547",
+      "product_family_id": "pf-copeland-e3",
+      "cve_id": "CVE-2025-52547",
+      "advisory_id": "adv-armis-frostbyte10",
+      "component": "E3 Site Supervisor Control (MGW API)",
+      "affected_versions_text": "Firmware före 2.31F01",
+      "version_rule": {
+        "type": "lt",
+        "version": "2.31F01",
+        "version_end": null,
+        "text": "< 2.31F01"
+      },
+      "status": "affected",
+      "attack_prerequisites": "Nätverksåtkomst till MGW-API.",
+      "attack_vector": "network",
+      "authentication_required": "unknown",
+      "user_interaction": "none",
+      "fix": {
+        "available": "yes",
+        "version": "2.31F01",
+        "text": "NVD CPE versionEndExcluding 2.31f01.",
+        "status": "corroborated_secondary",
+        "source_ids": ["src-nvd-cve-2025-52547"]
+      },
+      "mitigation_control_ids": ["ctl-vendor-firmware-update", "ctl-network-segmentation"],
+      "mitigation_text": null,
+      "evidence": "NVD CVE-2025-52547 (CNA Armis), CPE < 2.31f01.",
+      "source_ids": ["src-nvd-cve-2025-52547"],
+      "verification_status": "verified_primary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": [],
+        "history": []
+      }
+    },
+    {
+      "id": "match-copeland-e3-cve-2025-52548",
+      "product_family_id": "pf-copeland-e3",
+      "cve_id": "CVE-2025-52548",
+      "advisory_id": "adv-armis-frostbyte10",
+      "component": "E3 Site Supervisor Control (dolt API)",
+      "affected_versions_text": "Firmware före 2.31F01",
+      "version_rule": {
+        "type": "lt",
+        "version": "2.31F01",
+        "version_end": null,
+        "text": "< 2.31F01"
+      },
+      "status": "affected",
+      "attack_prerequisites": "Administratörsåtkomst till applikationstjänsterna.",
+      "attack_vector": "network",
+      "authentication_required": "high",
+      "user_interaction": "none",
+      "fix": {
+        "available": "yes",
+        "version": "2.31F01",
+        "text": "NVD CPE versionEndExcluding 2.31f01.",
+        "status": "corroborated_secondary",
+        "source_ids": ["src-nvd-cve-2025-52548"]
+      },
+      "mitigation_control_ids": ["ctl-vendor-firmware-update", "ctl-least-privilege-accounts"],
+      "mitigation_text": null,
+      "evidence": "NVD CVE-2025-52548 (CNA Armis), CPE < 2.31f01.",
+      "source_ids": ["src-nvd-cve-2025-52548"],
+      "verification_status": "verified_primary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": [],
+        "history": []
+      }
+    },
+    {
+      "id": "match-copeland-e3-cve-2025-52549",
+      "product_family_id": "pf-copeland-e3",
+      "cve_id": "CVE-2025-52549",
+      "advisory_id": "adv-armis-frostbyte10",
+      "component": "E3 Site Supervisor Control (root-lösenord)",
+      "affected_versions_text": "Firmware före 2.31F01",
+      "version_rule": {
+        "type": "lt",
+        "version": "2.31F01",
+        "version_end": null,
+        "text": "< 2.31F01"
+      },
+      "status": "affected",
+      "attack_prerequisites": "Kännedom om lättåtkomliga parametrar för enheten.",
+      "attack_vector": "network",
+      "authentication_required": "unknown",
+      "user_interaction": "none",
+      "fix": {
+        "available": "yes",
+        "version": "2.31F01",
+        "text": "NVD CPE versionEndExcluding 2.31f01.",
+        "status": "corroborated_secondary",
+        "source_ids": ["src-nvd-cve-2025-52549"]
+      },
+      "mitigation_control_ids": ["ctl-vendor-firmware-update", "ctl-network-segmentation"],
+      "mitigation_text": null,
+      "evidence": "NVD CVE-2025-52549 (CNA Armis), CPE < 2.31f01.",
+      "source_ids": ["src-nvd-cve-2025-52549"],
+      "verification_status": "verified_primary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": [],
+        "history": []
+      }
+    },
+    {
+      "id": "match-copeland-e3-cve-2025-52550",
+      "product_family_id": "pf-copeland-e3",
+      "cve_id": "CVE-2025-52550",
+      "advisory_id": "adv-armis-frostbyte10",
+      "component": "E3 Site Supervisor Control (firmware-uppgradering)",
+      "affected_versions_text": "Firmware före 2.31F01",
+      "version_rule": {
+        "type": "lt",
+        "version": "2.31F01",
+        "version_end": null,
+        "text": "< 2.31F01"
+      },
+      "status": "affected",
+      "attack_prerequisites": "Administratörsåtkomst till applikationstjänsterna (PR:H).",
+      "attack_vector": "network",
+      "authentication_required": "high",
+      "user_interaction": "none",
+      "fix": {
+        "available": "yes",
+        "version": "2.31F01",
+        "text": "NVD CPE versionEndExcluding 2.31f01.",
+        "status": "corroborated_secondary",
+        "source_ids": ["src-nvd-cve-2025-52550"]
+      },
+      "mitigation_control_ids": ["ctl-vendor-firmware-update", "ctl-least-privilege-accounts"],
+      "mitigation_text": null,
+      "evidence": "NVD CVE-2025-52550 (CNA Armis), CPE < 2.31f01.",
+      "source_ids": ["src-nvd-cve-2025-52550"],
+      "verification_status": "verified_primary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": [],
+        "history": []
+      }
+    },
+    {
+      "id": "match-unitronics-vision-cve-2023-6448",
+      "product_family_id": "pf-unitronics-vision",
+      "cve_id": "CVE-2023-6448",
+      "advisory_id": "adv-unitronics-2023-001",
+      "component": "VisiLogic / Vision- och Samba-firmware",
+      "affected_versions_text": "VisiLogic före 9.9.00; Vision- och Samba-firmware före 12.38 (NVD CPE)",
+      "version_rule": {
+        "type": "lt",
+        "version": "12.38",
+        "version_end": null,
+        "text": "Vision/Samba-firmware < 12.38; VisiLogic < 9.9.00"
+      },
+      "status": "affected",
+      "attack_prerequisites": "Nätverksåtkomst (PCOM) och oförändrat standardlösenord.",
+      "attack_vector": "network",
+      "authentication_required": "none",
+      "user_interaction": "none",
+      "fix": {
+        "available": "yes",
+        "version": "VisiLogic 9.9.00 / firmware 12.38",
+        "text": "Enligt NVD CPE-gränser och Unitronics release notes (refererade av NVD). KEV: byt standardlösenord, ta bort från publika nät, uppdatera firmware.",
+        "status": "corroborated_secondary",
+        "source_ids": ["src-nvd-cve-2023-6448", "src-cisa-kev"]
+      },
+      "mitigation_control_ids": [
+        "ctl-change-default-credentials",
+        "ctl-no-public-admin",
+        "ctl-secure-remote-access",
+        "ctl-vendor-firmware-update"
+      ],
+      "mitigation_text": "Byt standardlösenord, stäng PCOM mot internet, säker fjärrservice (arbetsboken).",
+      "evidence": "NVD CVE-2023-6448 (CNA CISA, status Analyzed) med CPE för Vision/Samba-modeller; CISA KEV-post 2023-12-11.",
+      "source_ids": ["src-nvd-cve-2023-6448", "src-cisa-kev", "src-unitronics-advisory-2023-001"],
+      "verification_status": "verified_primary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": [],
+        "history": []
+      }
+    },
+    {
+      "id": "match-unitronics-vision-cve-2024-1480",
+      "product_family_id": "pf-unitronics-vision",
+      "cve_id": "CVE-2024-1480",
+      "advisory_id": "adv-cisa-icsa-24-109-01",
+      "component": "Vision Standard-serien",
+      "affected_versions_text": "Ingen versionsavgränsning i NVD (Deferred).",
+      "version_rule": {
+        "type": "unknown",
+        "version": null,
+        "version_end": null,
+        "text": "versionsgräns okänd"
+      },
+      "status": "affected",
+      "attack_prerequisites": "Nätverksåtkomst; ingen autentisering.",
+      "attack_vector": "network",
+      "authentication_required": "none",
+      "user_interaction": "none",
+      "fix": {
+        "available": "unknown",
+        "version": null,
+        "text": "Fixuppgift saknas i NVD; se ICSA-24-109-01 (ej läst i sessionen).",
+        "status": "unknown",
+        "source_ids": ["src-nvd-cve-2024-1480"]
+      },
+      "mitigation_control_ids": [
+        "ctl-no-public-admin",
+        "ctl-network-segmentation",
+        "ctl-secure-remote-access"
+      ],
+      "mitigation_text": null,
+      "evidence": "NVD CVE-2024-1480 (CNA Dragos).",
+      "source_ids": ["src-nvd-cve-2024-1480", "src-cisa-icsa-24-109-01"],
+      "verification_status": "corroborated_secondary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": ["Verifiera berörda modeller/versioner i ICSA-24-109-01."],
+        "history": []
+      }
+    },
+    {
+      "id": "match-siemens-desigo-cc-clickonce-v6-cve-2026-34223",
+      "product_family_id": "pf-siemens-desigo-cc-pxc",
+      "cve_id": "CVE-2026-34223",
+      "advisory_id": "adv-siemens-ssa-330084",
+      "component": "Desigo CC ClickOnce Client V6",
+      "affected_versions_text": "Alla versioner",
+      "version_rule": {
+        "type": "all",
+        "version": null,
+        "version_end": null,
+        "text": "alla versioner"
+      },
+      "status": "affected",
+      "attack_prerequisites": "Angriparen måste skapa ett skadligt grafikdokument och förmå en användare att öppna det i klienten (AV:L, PR:L, UI:R).",
+      "attack_vector": "local",
+      "authentication_required": "low",
+      "user_interaction": "required",
+      "fix": {
+        "available": "no",
+        "version": null,
+        "text": "CSAF remediation none_available: 'Currently no fix is available'. Mitigering: behörighetsstyrning för Graphics-applikationen enligt minsta privilegium.",
+        "status": "verified_primary",
+        "source_ids": ["src-siemens-ssa-330084-csaf"]
+      },
+      "mitigation_control_ids": [
+        "ctl-least-privilege-accounts",
+        "ctl-network-segmentation",
+        "ctl-logging-monitoring"
+      ],
+      "mitigation_text": "Utvärdera behörighetspolicy för Graphics-applikationen enligt minsta privilegium (Siemens).",
+      "evidence": "CSAF SSA-330084 product_status known_affected.",
+      "source_ids": ["src-siemens-ssa-330084-csaf"],
+      "verification_status": "verified_primary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": [],
+        "history": []
+      }
+    },
+    {
+      "id": "match-siemens-desigo-cc-clickonce-v7-cve-2026-34223",
+      "product_family_id": "pf-siemens-desigo-cc-pxc",
+      "cve_id": "CVE-2026-34223",
+      "advisory_id": "adv-siemens-ssa-330084",
+      "component": "Desigo CC ClickOnce Client V7",
+      "affected_versions_text": "Alla versioner",
+      "version_rule": {
+        "type": "all",
+        "version": null,
+        "version_end": null,
+        "text": "alla versioner"
+      },
+      "status": "affected",
+      "attack_prerequisites": "Som för ClickOnce V6.",
+      "attack_vector": "local",
+      "authentication_required": "low",
+      "user_interaction": "required",
+      "fix": {
+        "available": "no",
+        "version": null,
+        "text": "CSAF remediation none_available.",
+        "status": "verified_primary",
+        "source_ids": ["src-siemens-ssa-330084-csaf"]
+      },
+      "mitigation_control_ids": ["ctl-least-privilege-accounts"],
+      "mitigation_text": null,
+      "evidence": "CSAF SSA-330084 product_status known_affected. Saknades i arbetsboken.",
+      "source_ids": ["src-siemens-ssa-330084-csaf"],
+      "verification_status": "verified_primary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": ["Tillagd vid källgranskning; arbetsboken nämnde bara V6."],
+        "history": []
+      }
+    },
+    {
+      "id": "match-siemens-desigo-cc-installed-v6-cve-2026-34223",
+      "product_family_id": "pf-siemens-desigo-cc-pxc",
+      "cve_id": "CVE-2026-34223",
+      "advisory_id": "adv-siemens-ssa-330084",
+      "component": "Desigo CC Installed Client V6",
+      "affected_versions_text": "Alla versioner",
+      "version_rule": {
+        "type": "all",
+        "version": null,
+        "version_end": null,
+        "text": "alla versioner"
+      },
+      "status": "affected",
+      "attack_prerequisites": "Som för ClickOnce V6.",
+      "attack_vector": "local",
+      "authentication_required": "low",
+      "user_interaction": "required",
+      "fix": {
+        "available": "no",
+        "version": null,
+        "text": "CSAF remediation none_available.",
+        "status": "verified_primary",
+        "source_ids": ["src-siemens-ssa-330084-csaf"]
+      },
+      "mitigation_control_ids": ["ctl-least-privilege-accounts"],
+      "mitigation_text": null,
+      "evidence": "CSAF SSA-330084 product_status known_affected. Saknades i arbetsboken.",
+      "source_ids": ["src-siemens-ssa-330084-csaf"],
+      "verification_status": "verified_primary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": [],
+        "history": []
+      }
+    },
+    {
+      "id": "match-siemens-desigo-cc-installed-v7-cve-2026-34223",
+      "product_family_id": "pf-siemens-desigo-cc-pxc",
+      "cve_id": "CVE-2026-34223",
+      "advisory_id": "adv-siemens-ssa-330084",
+      "component": "Desigo CC Installed Client V7",
+      "affected_versions_text": "Alla versioner",
+      "version_rule": {
+        "type": "all",
+        "version": null,
+        "version_end": null,
+        "text": "alla versioner"
+      },
+      "status": "affected",
+      "attack_prerequisites": "Som för ClickOnce V6.",
+      "attack_vector": "local",
+      "authentication_required": "low",
+      "user_interaction": "required",
+      "fix": {
+        "available": "no",
+        "version": null,
+        "text": "CSAF remediation none_available.",
+        "status": "verified_primary",
+        "source_ids": ["src-siemens-ssa-330084-csaf"]
+      },
+      "mitigation_control_ids": ["ctl-least-privilege-accounts"],
+      "mitigation_text": null,
+      "evidence": "CSAF SSA-330084 product_status known_affected. Saknades i arbetsboken.",
+      "source_ids": ["src-siemens-ssa-330084-csaf"],
+      "verification_status": "verified_primary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": [],
+        "history": []
+      }
+    },
+    {
+      "id": "match-siemens-desigo-cc-family-v8-cve-2026-34223",
+      "product_family_id": "pf-siemens-desigo-cc-pxc",
+      "cve_id": "CVE-2026-34223",
+      "advisory_id": "adv-siemens-ssa-330084",
+      "component": "Desigo CC family V8",
+      "affected_versions_text": "Alla versioner – EJ berörd",
+      "version_rule": {
+        "type": "all",
+        "version": null,
+        "version_end": null,
+        "text": "alla versioner (ej berörd)"
+      },
+      "status": "not_affected",
+      "attack_prerequisites": null,
+      "attack_vector": "unknown",
+      "authentication_required": "unknown",
+      "user_interaction": "unknown",
+      "fix": {
+        "available": "unknown",
+        "version": null,
+        "text": "Ej tillämpligt – produkten är known_not_affected.",
+        "status": "verified_primary",
+        "source_ids": ["src-siemens-ssa-330084-csaf"]
+      },
+      "mitigation_control_ids": [],
+      "mitigation_text": null,
+      "evidence": "CSAF SSA-330084 product_status known_not_affected ('The vulnerability does not exist in this version'/'has been fixed in this version').",
+      "source_ids": ["src-siemens-ssa-330084-csaf"],
+      "verification_status": "verified_primary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": ["NVD:s beskrivningstext nämner produkten; CSAF product_status är auktoritativ."],
+        "history": []
+      }
+    },
+    {
+      "id": "match-siemens-desigo-cc-family-v9-cve-2026-34223",
+      "product_family_id": "pf-siemens-desigo-cc-pxc",
+      "cve_id": "CVE-2026-34223",
+      "advisory_id": "adv-siemens-ssa-330084",
+      "component": "Desigo CC family V9",
+      "affected_versions_text": "Alla versioner – EJ berörd",
+      "version_rule": {
+        "type": "all",
+        "version": null,
+        "version_end": null,
+        "text": "alla versioner (ej berörd)"
+      },
+      "status": "not_affected",
+      "attack_prerequisites": null,
+      "attack_vector": "unknown",
+      "authentication_required": "unknown",
+      "user_interaction": "unknown",
+      "fix": {
+        "available": "unknown",
+        "version": null,
+        "text": "Ej tillämpligt – known_not_affected.",
+        "status": "verified_primary",
+        "source_ids": ["src-siemens-ssa-330084-csaf"]
+      },
+      "mitigation_control_ids": [],
+      "mitigation_text": null,
+      "evidence": "CSAF SSA-330084 product_status known_not_affected.",
+      "source_ids": ["src-siemens-ssa-330084-csaf"],
+      "verification_status": "verified_primary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": [],
+        "history": []
+      }
+    },
+    {
+      "id": "match-siemens-desigo-cc-flex-v6-cve-2026-34223",
+      "product_family_id": "pf-siemens-desigo-cc-pxc",
+      "cve_id": "CVE-2026-34223",
+      "advisory_id": "adv-siemens-ssa-330084",
+      "component": "Desigo CC Flex Client V6",
+      "affected_versions_text": "Alla versioner – EJ berörd",
+      "version_rule": {
+        "type": "all",
+        "version": null,
+        "version_end": null,
+        "text": "alla versioner (ej berörd)"
+      },
+      "status": "not_affected",
+      "attack_prerequisites": null,
+      "attack_vector": "unknown",
+      "authentication_required": "unknown",
+      "user_interaction": "unknown",
+      "fix": {
+        "available": "unknown",
+        "version": null,
+        "text": "Ej tillämpligt – known_not_affected.",
+        "status": "verified_primary",
+        "source_ids": ["src-siemens-ssa-330084-csaf"]
+      },
+      "mitigation_control_ids": [],
+      "mitigation_text": null,
+      "evidence": "CSAF SSA-330084 product_status known_not_affected.",
+      "source_ids": ["src-siemens-ssa-330084-csaf"],
+      "verification_status": "verified_primary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": [],
+        "history": []
+      }
+    },
+    {
+      "id": "match-siemens-desigo-cc-flex-v7-cve-2026-34223",
+      "product_family_id": "pf-siemens-desigo-cc-pxc",
+      "cve_id": "CVE-2026-34223",
+      "advisory_id": "adv-siemens-ssa-330084",
+      "component": "Desigo CC Flex Client V7",
+      "affected_versions_text": "Alla versioner – EJ berörd",
+      "version_rule": {
+        "type": "all",
+        "version": null,
+        "version_end": null,
+        "text": "alla versioner (ej berörd)"
+      },
+      "status": "not_affected",
+      "attack_prerequisites": null,
+      "attack_vector": "unknown",
+      "authentication_required": "unknown",
+      "user_interaction": "unknown",
+      "fix": {
+        "available": "unknown",
+        "version": null,
+        "text": "Ej tillämpligt – known_not_affected.",
+        "status": "verified_primary",
+        "source_ids": ["src-siemens-ssa-330084-csaf"]
+      },
+      "mitigation_control_ids": [],
+      "mitigation_text": null,
+      "evidence": "CSAF SSA-330084 product_status known_not_affected.",
+      "source_ids": ["src-siemens-ssa-330084-csaf"],
+      "verification_status": "verified_primary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": [],
+        "history": []
+      }
+    },
+    {
+      "id": "match-siemens-s7-1200-cve-2022-38465",
+      "product_family_id": "pf-siemens-s7-1200",
+      "cve_id": "CVE-2022-38465",
+      "advisory_id": "adv-siemens-ssa-568427",
+      "component": "SIMATIC S7-1200 CPU family (inkl. SIPLUS-varianter)",
+      "affected_versions_text": "Alla versioner < V4.5.0",
+      "version_rule": {
+        "type": "lt",
+        "version": "V4.5.0",
+        "version_end": null,
+        "text": "< V4.5.0"
+      },
+      "status": "affected",
+      "attack_prerequisites": "Offline-angrepp mot en CPU i familjen (AV:L) för att utvinna den globala privata nyckeln; därefter angrepp mot legacy PG/PC-/HMI-kommunikation eller skyddade projekt.",
+      "attack_vector": "local",
+      "authentication_required": "none",
+      "user_interaction": "none",
+      "fix": {
+        "available": "yes",
+        "version": "V4.5.0",
+        "text": "Uppdatera till V4.5.0 eller senare, migrera projektet i TIA Portal och driftsätt om; konfigurera 'Only allow secure PG/PC and HMI communication'.",
+        "status": "verified_primary",
+        "source_ids": ["src-siemens-ssa-568427-csaf"]
+      },
+      "mitigation_control_ids": [
+        "ctl-vendor-firmware-update",
+        "ctl-secure-plc-communication",
+        "ctl-network-segmentation",
+        "ctl-protect-engineering-access"
+      ],
+      "mitigation_text": "Använd legacy (icke-TLS) PG/PC- och HMI-kommunikation endast i betrodda nät; skydda TIA-projekt, CPU och minneskort (Siemens).",
+      "evidence": "CSAF SSA-568427 product_status known_affected '< V4.5.0' med vendor_fix.",
+      "source_ids": ["src-siemens-ssa-568427-csaf", "src-nvd-cve-2022-38465"],
+      "verification_status": "verified_primary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": [
+          "Arbetsboken (rad 12) hade bulletinen som käll-URL men tomt CVE-fält; CVE-koppling tillagd från CSAF."
+        ],
+        "history": []
+      }
+    },
+    {
+      "id": "match-siemens-s7-1500-cve-2022-38465",
+      "product_family_id": "pf-siemens-s7-1500",
+      "cve_id": "CVE-2022-38465",
+      "advisory_id": "adv-siemens-ssa-568427",
+      "component": "SIMATIC S7-1500 CPU family (inkl. relaterade ET200-CPU:er och SIPLUS-varianter)",
+      "affected_versions_text": "Alla versioner < V2.9.2",
+      "version_rule": {
+        "type": "lt",
+        "version": "V2.9.2",
+        "version_end": null,
+        "text": "< V2.9.2"
+      },
+      "status": "affected",
+      "attack_prerequisites": "Som för S7-1200.",
+      "attack_vector": "local",
+      "authentication_required": "none",
+      "user_interaction": "none",
+      "fix": {
+        "available": "yes",
+        "version": "V2.9.2",
+        "text": "Uppdatera till V2.9.2 eller senare, migrera projektet i TIA Portal och driftsätt om; konfigurera 'Only allow secure PG/PC and HMI communication'. S7-1500 Software Controller: < V21.9 → V21.9.",
+        "status": "verified_primary",
+        "source_ids": ["src-siemens-ssa-568427-csaf"]
+      },
+      "mitigation_control_ids": [
+        "ctl-vendor-firmware-update",
+        "ctl-secure-plc-communication",
+        "ctl-network-segmentation",
+        "ctl-protect-engineering-access"
+      ],
+      "mitigation_text": "Som för S7-1200 (Siemens).",
+      "evidence": "CSAF SSA-568427 product_status known_affected '< V2.9.2' med vendor_fix.",
+      "source_ids": ["src-siemens-ssa-568427-csaf", "src-nvd-cve-2022-38465"],
+      "verification_status": "verified_primary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": [
+          "Arbetsboken (rad 47) angav 'SSA-568427 (se bulletin)' i CVE-kolumnen; CVE-ID hämtat från CSAF."
+        ],
+        "history": []
+      }
+    },
+    {
+      "id": "match-abb-ac500-v3-cve-2025-2595",
+      "product_family_id": "pf-abb-ac500-v3",
+      "cve_id": "CVE-2025-2595",
+      "advisory_id": "adv-certvde-2025-027",
+      "component": "CODESYS Visualization (komponent i AC500 V3 – ej verifierat)",
+      "affected_versions_text": "Arbetsboken: '< 3.9.0 för tidigare angiven bulletin (behöver kontrolleras mot ABB)'. CODESYS-versioner enligt CERT@VDE ej lästa.",
+      "version_rule": {
+        "type": "unknown",
+        "version": null,
+        "version_end": null,
+        "text": "okänd – ABB-specifik versionsgräns ej verifierad"
+      },
+      "status": "under_investigation",
+      "attack_prerequisites": "Nätverksåtkomst till visualiseringen; ingen autentisering (CODESYS).",
+      "attack_vector": "network",
+      "authentication_required": "none",
+      "user_interaction": "none",
+      "fix": {
+        "available": "unknown",
+        "version": null,
+        "text": "Arbetsboken: '3.9.0 för angiven bulletin; kontrollera senare advisories'. Ej verifierat mot ABB.",
+        "status": "needs_review",
+        "source_ids": ["src-workbook"]
+      },
+      "mitigation_control_ids": [
+        "ctl-network-segmentation",
+        "ctl-no-public-admin",
+        "ctl-vendor-firmware-update"
+      ],
+      "mitigation_text": null,
+      "evidence": "CVE:t är verifierat i NVD (CNA CERT@VDE) som CODESYS-sårbarhet. Kopplingen till ABB AC500 V3 och versionsgränsen kommer enbart från arbetsboken.",
+      "source_ids": ["src-nvd-cve-2025-2595", "src-workbook"],
+      "verification_status": "needs_review",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": ["Hämta ABB:s cybersäkerhetsbulletin för AC500 V3 och CODESYS-komponenter."],
+        "history": []
+      }
+    },
+    {
+      "id": "match-abb-ac500-v3-cve-2025-41659",
+      "product_family_id": "pf-abb-ac500-v3",
+      "cve_id": "CVE-2025-41659",
+      "advisory_id": "adv-certvde-2025-051",
+      "component": "CODESYS Control runtime (komponent i AC500 V3 – ej verifierat)",
+      "affected_versions_text": "Arbetsboken: '< 3.9.0 (behöver kontrolleras mot ABB)'.",
+      "version_rule": {
+        "type": "unknown",
+        "version": null,
+        "version_end": null,
+        "text": "okänd – ABB-specifik versionsgräns ej verifierad"
+      },
+      "status": "under_investigation",
+      "attack_prerequisites": "Lågprivilegierad fjärranvändare (PR:L).",
+      "attack_vector": "network",
+      "authentication_required": "low",
+      "user_interaction": "none",
+      "fix": {
+        "available": "unknown",
+        "version": null,
+        "text": "Ej verifierat mot ABB.",
+        "status": "needs_review",
+        "source_ids": ["src-workbook"]
+      },
+      "mitigation_control_ids": ["ctl-network-segmentation", "ctl-least-privilege-accounts"],
+      "mitigation_text": null,
+      "evidence": "CVE verifierat i NVD som CODESYS Control-sårbarhet; ABB-koppling enbart från arbetsboken.",
+      "source_ids": ["src-nvd-cve-2025-41659", "src-workbook"],
+      "verification_status": "needs_review",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": [],
+        "history": []
+      }
+    },
+    {
+      "id": "match-abb-ac500-v3-cve-2025-41691",
+      "product_family_id": "pf-abb-ac500-v3",
+      "cve_id": "CVE-2025-41691",
+      "advisory_id": "adv-certvde-2025-070",
+      "component": "CODESYS Control runtime (komponent i AC500 V3 – ej verifierat)",
+      "affected_versions_text": "Arbetsboken: '< 3.9.0 (behöver kontrolleras mot ABB)'.",
+      "version_rule": {
+        "type": "unknown",
+        "version": null,
+        "version_end": null,
+        "text": "okänd – ABB-specifik versionsgräns ej verifierad"
+      },
+      "status": "under_investigation",
+      "attack_prerequisites": "Nätverksåtkomst; ingen autentisering.",
+      "attack_vector": "network",
+      "authentication_required": "none",
+      "user_interaction": "none",
+      "fix": {
+        "available": "unknown",
+        "version": null,
+        "text": "Ej verifierat mot ABB.",
+        "status": "needs_review",
+        "source_ids": ["src-workbook"]
+      },
+      "mitigation_control_ids": ["ctl-network-segmentation", "ctl-no-public-admin"],
+      "mitigation_text": null,
+      "evidence": "CVE verifierat i NVD som CODESYS Control-sårbarhet; ABB-koppling enbart från arbetsboken.",
+      "source_ids": ["src-nvd-cve-2025-41691", "src-workbook"],
+      "verification_status": "needs_review",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": [],
+        "history": []
+      }
+    },
+    {
+      "id": "match-copeland-xweb-pro-cve-2026-25085",
+      "product_family_id": "pf-copeland-xweb-pro",
+      "cve_id": "CVE-2026-25085",
+      "advisory_id": "adv-cisa-icsa-26-057-10",
+      "component": "XWEB 300D PRO, XWEB 500D PRO, XWEB 500B PRO",
+      "affected_versions_text": "Version 1.12.1 och tidigare (CSAF product_status known_affected '<=1.12.1')",
+      "version_rule": {
+        "type": "lte",
+        "version": "1.12.1",
+        "version_end": null,
+        "text": "≤ 1.12.1"
+      },
+      "status": "affected",
+      "attack_prerequisites": "Enligt CVSS-vektor (CVSS 3.1: 8.6). CWE: CWE-394.",
+      "attack_vector": "network",
+      "authentication_required": "none",
+      "user_interaction": "none",
+      "fix": {
+        "available": "yes",
+        "version": null,
+        "text": "CISA ICSA-26-057-10: fix finns, uppdatera till senaste version via Copelands uppdateringssida; ingen versionssiffra anges.",
+        "status": "needs_review",
+        "source_ids": ["src-cisa-icsa-26-057-10-csaf", "src-copeland-xweb-update-page"]
+      },
+      "mitigation_control_ids": [
+        "ctl-no-public-admin",
+        "ctl-vendor-firmware-update",
+        "ctl-network-segmentation"
+      ],
+      "mitigation_text": null,
+      "evidence": "CISA CSAF ICSA-26-057-10 product_status known_affected för tre XWEB PRO-modeller ≤1.12.1; NVD CVE-2026-25085 (CNA CISA): A vulnerability exists in Copeland XWEB Pro version 1.12.1 and prior, in which an unexpected return value from the authentication routine is later on processed ",
+      "source_ids": ["src-nvd-cve-2026-25085", "src-cisa-icsa-26-057-10-csaf"],
+      "verification_status": "verified_primary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": ["Matchning genererad ur CSAF-produktstatus; ej listad i arbetsboken."],
+        "history": []
+      }
+    },
+    {
+      "id": "match-copeland-xweb-pro-cve-2026-24663",
+      "product_family_id": "pf-copeland-xweb-pro",
+      "cve_id": "CVE-2026-24663",
+      "advisory_id": "adv-cisa-icsa-26-057-10",
+      "component": "XWEB 300D PRO, XWEB 500D PRO, XWEB 500B PRO",
+      "affected_versions_text": "Version 1.12.1 och tidigare (CSAF product_status known_affected '<=1.12.1')",
+      "version_rule": {
+        "type": "lte",
+        "version": "1.12.1",
+        "version_end": null,
+        "text": "≤ 1.12.1"
+      },
+      "status": "affected",
+      "attack_prerequisites": "Enligt CVSS-vektor (CVSS 3.1: 9). CWE: CWE-78.",
+      "attack_vector": "network",
+      "authentication_required": "none",
+      "user_interaction": "none",
+      "fix": {
+        "available": "yes",
+        "version": null,
+        "text": "CISA ICSA-26-057-10: fix finns, uppdatera till senaste version via Copelands uppdateringssida; ingen versionssiffra anges.",
+        "status": "needs_review",
+        "source_ids": ["src-cisa-icsa-26-057-10-csaf", "src-copeland-xweb-update-page"]
+      },
+      "mitigation_control_ids": [
+        "ctl-no-public-admin",
+        "ctl-vendor-firmware-update",
+        "ctl-network-segmentation"
+      ],
+      "mitigation_text": null,
+      "evidence": "CISA CSAF ICSA-26-057-10 product_status known_affected för tre XWEB PRO-modeller ≤1.12.1; NVD CVE-2026-24663 (CNA CISA): An OS command injection vulnerability exists in XWEB Pro version 1.12.1 and prior, enabling an unauthenticated attacker to achieve remote code execution on the ",
+      "source_ids": ["src-nvd-cve-2026-24663", "src-cisa-icsa-26-057-10-csaf"],
+      "verification_status": "verified_primary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": ["Matchning genererad ur CSAF-produktstatus; ej listad i arbetsboken."],
+        "history": []
+      }
+    },
+    {
+      "id": "match-copeland-xweb-pro-cve-2026-21389",
+      "product_family_id": "pf-copeland-xweb-pro",
+      "cve_id": "CVE-2026-21389",
+      "advisory_id": "adv-cisa-icsa-26-057-10",
+      "component": "XWEB 300D PRO, XWEB 500D PRO, XWEB 500B PRO",
+      "affected_versions_text": "Version 1.12.1 och tidigare (CSAF product_status known_affected '<=1.12.1')",
+      "version_rule": {
+        "type": "lte",
+        "version": "1.12.1",
+        "version_end": null,
+        "text": "≤ 1.12.1"
+      },
+      "status": "affected",
+      "attack_prerequisites": "Enligt CVSS-vektor (CVSS 3.1: 8). CWE: CWE-78.",
+      "attack_vector": "network",
+      "authentication_required": "high",
+      "user_interaction": "none",
+      "fix": {
+        "available": "yes",
+        "version": null,
+        "text": "CISA ICSA-26-057-10: fix finns, uppdatera till senaste version via Copelands uppdateringssida; ingen versionssiffra anges.",
+        "status": "needs_review",
+        "source_ids": ["src-cisa-icsa-26-057-10-csaf", "src-copeland-xweb-update-page"]
+      },
+      "mitigation_control_ids": [
+        "ctl-no-public-admin",
+        "ctl-vendor-firmware-update",
+        "ctl-network-segmentation"
+      ],
+      "mitigation_text": null,
+      "evidence": "CISA CSAF ICSA-26-057-10 product_status known_affected för tre XWEB PRO-modeller ≤1.12.1; NVD CVE-2026-21389 (CNA CISA): An OS command injection vulnerability exists in XWEB Pro version 1.12.1 and prior, enabling an authenticated attacker to achieve remote code execution on the sy",
+      "source_ids": ["src-nvd-cve-2026-21389", "src-cisa-icsa-26-057-10-csaf"],
+      "verification_status": "verified_primary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": ["Matchning genererad ur CSAF-produktstatus; ej listad i arbetsboken."],
+        "history": []
+      }
+    },
+    {
+      "id": "match-copeland-xweb-pro-cve-2026-25111",
+      "product_family_id": "pf-copeland-xweb-pro",
+      "cve_id": "CVE-2026-25111",
+      "advisory_id": "adv-cisa-icsa-26-057-10",
+      "component": "XWEB 300D PRO, XWEB 500D PRO, XWEB 500B PRO",
+      "affected_versions_text": "Version 1.12.1 och tidigare (CSAF product_status known_affected '<=1.12.1')",
+      "version_rule": {
+        "type": "lte",
+        "version": "1.12.1",
+        "version_end": null,
+        "text": "≤ 1.12.1"
+      },
+      "status": "affected",
+      "attack_prerequisites": "Enligt CVSS-vektor (CVSS 3.1: 8). CWE: CWE-78.",
+      "attack_vector": "network",
+      "authentication_required": "high",
+      "user_interaction": "none",
+      "fix": {
+        "available": "yes",
+        "version": null,
+        "text": "CISA ICSA-26-057-10: fix finns, uppdatera till senaste version via Copelands uppdateringssida; ingen versionssiffra anges.",
+        "status": "needs_review",
+        "source_ids": ["src-cisa-icsa-26-057-10-csaf", "src-copeland-xweb-update-page"]
+      },
+      "mitigation_control_ids": [
+        "ctl-no-public-admin",
+        "ctl-vendor-firmware-update",
+        "ctl-network-segmentation"
+      ],
+      "mitigation_text": null,
+      "evidence": "CISA CSAF ICSA-26-057-10 product_status known_affected för tre XWEB PRO-modeller ≤1.12.1; NVD CVE-2026-25111 (CNA CISA): An OS command injection vulnerability exists in XWEB Pro version 1.12.1 and prior, enabling an authenticated attacker to achieve remote code execution on the sy",
+      "source_ids": ["src-nvd-cve-2026-25111", "src-cisa-icsa-26-057-10-csaf"],
+      "verification_status": "verified_primary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": ["Matchning genererad ur CSAF-produktstatus; ej listad i arbetsboken."],
+        "history": []
+      }
+    },
+    {
+      "id": "match-copeland-xweb-pro-cve-2026-20742",
+      "product_family_id": "pf-copeland-xweb-pro",
+      "cve_id": "CVE-2026-20742",
+      "advisory_id": "adv-cisa-icsa-26-057-10",
+      "component": "XWEB 300D PRO, XWEB 500D PRO, XWEB 500B PRO",
+      "affected_versions_text": "Version 1.12.1 och tidigare (CSAF product_status known_affected '<=1.12.1')",
+      "version_rule": {
+        "type": "lte",
+        "version": "1.12.1",
+        "version_end": null,
+        "text": "≤ 1.12.1"
+      },
+      "status": "affected",
+      "attack_prerequisites": "Enligt CVSS-vektor (CVSS 3.1: 8). CWE: CWE-78.",
+      "attack_vector": "network",
+      "authentication_required": "high",
+      "user_interaction": "none",
+      "fix": {
+        "available": "yes",
+        "version": null,
+        "text": "CISA ICSA-26-057-10: fix finns, uppdatera till senaste version via Copelands uppdateringssida; ingen versionssiffra anges.",
+        "status": "needs_review",
+        "source_ids": ["src-cisa-icsa-26-057-10-csaf", "src-copeland-xweb-update-page"]
+      },
+      "mitigation_control_ids": [
+        "ctl-no-public-admin",
+        "ctl-vendor-firmware-update",
+        "ctl-network-segmentation"
+      ],
+      "mitigation_text": null,
+      "evidence": "CISA CSAF ICSA-26-057-10 product_status known_affected för tre XWEB PRO-modeller ≤1.12.1; NVD CVE-2026-20742 (CNA CISA): An OS command injection vulnerability exists in XWEB Pro version 1.12.1 and prior, enabling an authenticated attacker to achieve remote code execution on the sy",
+      "source_ids": ["src-nvd-cve-2026-20742", "src-cisa-icsa-26-057-10-csaf"],
+      "verification_status": "verified_primary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": ["Matchning genererad ur CSAF-produktstatus; ej listad i arbetsboken."],
+        "history": []
+      }
+    },
+    {
+      "id": "match-copeland-xweb-pro-cve-2026-24517",
+      "product_family_id": "pf-copeland-xweb-pro",
+      "cve_id": "CVE-2026-24517",
+      "advisory_id": "adv-cisa-icsa-26-057-10",
+      "component": "XWEB 300D PRO, XWEB 500D PRO, XWEB 500B PRO",
+      "affected_versions_text": "Version 1.12.1 och tidigare (CSAF product_status known_affected '<=1.12.1')",
+      "version_rule": {
+        "type": "lte",
+        "version": "1.12.1",
+        "version_end": null,
+        "text": "≤ 1.12.1"
+      },
+      "status": "affected",
+      "attack_prerequisites": "Enligt CVSS-vektor (CVSS 3.1: 8). CWE: CWE-78.",
+      "attack_vector": "network",
+      "authentication_required": "high",
+      "user_interaction": "none",
+      "fix": {
+        "available": "yes",
+        "version": null,
+        "text": "CISA ICSA-26-057-10: fix finns, uppdatera till senaste version via Copelands uppdateringssida; ingen versionssiffra anges.",
+        "status": "needs_review",
+        "source_ids": ["src-cisa-icsa-26-057-10-csaf", "src-copeland-xweb-update-page"]
+      },
+      "mitigation_control_ids": [
+        "ctl-no-public-admin",
+        "ctl-vendor-firmware-update",
+        "ctl-network-segmentation"
+      ],
+      "mitigation_text": null,
+      "evidence": "CISA CSAF ICSA-26-057-10 product_status known_affected för tre XWEB PRO-modeller ≤1.12.1; NVD CVE-2026-24517 (CNA CISA): An OS command injection vulnerability exists in XWEB Pro version 1.12.1 and prior, enabling an authenticated attacker to achieve remote code execution on the sy",
+      "source_ids": ["src-nvd-cve-2026-24517", "src-cisa-icsa-26-057-10-csaf"],
+      "verification_status": "verified_primary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": ["Matchning genererad ur CSAF-produktstatus; ej listad i arbetsboken."],
+        "history": []
+      }
+    },
+    {
+      "id": "match-copeland-xweb-pro-cve-2026-25195",
+      "product_family_id": "pf-copeland-xweb-pro",
+      "cve_id": "CVE-2026-25195",
+      "advisory_id": "adv-cisa-icsa-26-057-10",
+      "component": "XWEB 300D PRO, XWEB 500D PRO, XWEB 500B PRO",
+      "affected_versions_text": "Version 1.12.1 och tidigare (CSAF product_status known_affected '<=1.12.1')",
+      "version_rule": {
+        "type": "lte",
+        "version": "1.12.1",
+        "version_end": null,
+        "text": "≤ 1.12.1"
+      },
+      "status": "affected",
+      "attack_prerequisites": "Enligt CVSS-vektor (CVSS 3.1: 8). CWE: CWE-78.",
+      "attack_vector": "network",
+      "authentication_required": "high",
+      "user_interaction": "none",
+      "fix": {
+        "available": "yes",
+        "version": null,
+        "text": "CISA ICSA-26-057-10: fix finns, uppdatera till senaste version via Copelands uppdateringssida; ingen versionssiffra anges.",
+        "status": "needs_review",
+        "source_ids": ["src-cisa-icsa-26-057-10-csaf", "src-copeland-xweb-update-page"]
+      },
+      "mitigation_control_ids": [
+        "ctl-no-public-admin",
+        "ctl-vendor-firmware-update",
+        "ctl-network-segmentation"
+      ],
+      "mitigation_text": null,
+      "evidence": "CISA CSAF ICSA-26-057-10 product_status known_affected för tre XWEB PRO-modeller ≤1.12.1; NVD CVE-2026-25195 (CNA CISA): An OS command injection vulnerability exists in XWEB Pro version 1.12.1 and prior, enabling an authenticated attacker to achieve remote code execution on the sy",
+      "source_ids": ["src-nvd-cve-2026-25195", "src-cisa-icsa-26-057-10-csaf"],
+      "verification_status": "verified_primary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": ["Matchning genererad ur CSAF-produktstatus; ej listad i arbetsboken."],
+        "history": []
+      }
+    },
+    {
+      "id": "match-copeland-xweb-pro-cve-2026-20910",
+      "product_family_id": "pf-copeland-xweb-pro",
+      "cve_id": "CVE-2026-20910",
+      "advisory_id": "adv-cisa-icsa-26-057-10",
+      "component": "XWEB 300D PRO, XWEB 500D PRO, XWEB 500B PRO",
+      "affected_versions_text": "Version 1.12.1 och tidigare (CSAF product_status known_affected '<=1.12.1')",
+      "version_rule": {
+        "type": "lte",
+        "version": "1.12.1",
+        "version_end": null,
+        "text": "≤ 1.12.1"
+      },
+      "status": "affected",
+      "attack_prerequisites": "Enligt CVSS-vektor (CVSS 3.1: 8). CWE: CWE-78.",
+      "attack_vector": "network",
+      "authentication_required": "high",
+      "user_interaction": "none",
+      "fix": {
+        "available": "yes",
+        "version": null,
+        "text": "CISA ICSA-26-057-10: fix finns, uppdatera till senaste version via Copelands uppdateringssida; ingen versionssiffra anges.",
+        "status": "needs_review",
+        "source_ids": ["src-cisa-icsa-26-057-10-csaf", "src-copeland-xweb-update-page"]
+      },
+      "mitigation_control_ids": [
+        "ctl-no-public-admin",
+        "ctl-vendor-firmware-update",
+        "ctl-network-segmentation"
+      ],
+      "mitigation_text": null,
+      "evidence": "CISA CSAF ICSA-26-057-10 product_status known_affected för tre XWEB PRO-modeller ≤1.12.1; NVD CVE-2026-20910 (CNA CISA): An OS command injection vulnerability exists in XWEB Pro version 1.12.1 and prior, enabling an authenticated attacker to achieve remote code execution on the sy",
+      "source_ids": ["src-nvd-cve-2026-20910", "src-cisa-icsa-26-057-10-csaf"],
+      "verification_status": "verified_primary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": ["Matchning genererad ur CSAF-produktstatus; ej listad i arbetsboken."],
+        "history": []
+      }
+    },
+    {
+      "id": "match-copeland-xweb-pro-cve-2026-24689",
+      "product_family_id": "pf-copeland-xweb-pro",
+      "cve_id": "CVE-2026-24689",
+      "advisory_id": "adv-cisa-icsa-26-057-10",
+      "component": "XWEB 300D PRO, XWEB 500D PRO, XWEB 500B PRO",
+      "affected_versions_text": "Version 1.12.1 och tidigare (CSAF product_status known_affected '<=1.12.1')",
+      "version_rule": {
+        "type": "lte",
+        "version": "1.12.1",
+        "version_end": null,
+        "text": "≤ 1.12.1"
+      },
+      "status": "affected",
+      "attack_prerequisites": "Enligt CVSS-vektor (CVSS 3.1: 8). CWE: CWE-78.",
+      "attack_vector": "network",
+      "authentication_required": "high",
+      "user_interaction": "none",
+      "fix": {
+        "available": "yes",
+        "version": null,
+        "text": "CISA ICSA-26-057-10: fix finns, uppdatera till senaste version via Copelands uppdateringssida; ingen versionssiffra anges.",
+        "status": "needs_review",
+        "source_ids": ["src-cisa-icsa-26-057-10-csaf", "src-copeland-xweb-update-page"]
+      },
+      "mitigation_control_ids": [
+        "ctl-no-public-admin",
+        "ctl-vendor-firmware-update",
+        "ctl-network-segmentation"
+      ],
+      "mitigation_text": null,
+      "evidence": "CISA CSAF ICSA-26-057-10 product_status known_affected för tre XWEB PRO-modeller ≤1.12.1; NVD CVE-2026-24689 (CNA CISA): An OS command injection vulnerability exists in XWEB Pro version 1.12.1 and prior, enabling an authenticated attacker to achieve remote code execution on the sy",
+      "source_ids": ["src-nvd-cve-2026-24689", "src-cisa-icsa-26-057-10-csaf"],
+      "verification_status": "verified_primary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": ["Matchning genererad ur CSAF-produktstatus; ej listad i arbetsboken."],
+        "history": []
+      }
+    },
+    {
+      "id": "match-copeland-xweb-pro-cve-2026-25109",
+      "product_family_id": "pf-copeland-xweb-pro",
+      "cve_id": "CVE-2026-25109",
+      "advisory_id": "adv-cisa-icsa-26-057-10",
+      "component": "XWEB 300D PRO, XWEB 500D PRO, XWEB 500B PRO",
+      "affected_versions_text": "Version 1.12.1 och tidigare (CSAF product_status known_affected '<=1.12.1')",
+      "version_rule": {
+        "type": "lte",
+        "version": "1.12.1",
+        "version_end": null,
+        "text": "≤ 1.12.1"
+      },
+      "status": "affected",
+      "attack_prerequisites": "Enligt CVSS-vektor (CVSS 3.1: 8). CWE: CWE-78.",
+      "attack_vector": "network",
+      "authentication_required": "high",
+      "user_interaction": "none",
+      "fix": {
+        "available": "yes",
+        "version": null,
+        "text": "CISA ICSA-26-057-10: fix finns, uppdatera till senaste version via Copelands uppdateringssida; ingen versionssiffra anges.",
+        "status": "needs_review",
+        "source_ids": ["src-cisa-icsa-26-057-10-csaf", "src-copeland-xweb-update-page"]
+      },
+      "mitigation_control_ids": [
+        "ctl-no-public-admin",
+        "ctl-vendor-firmware-update",
+        "ctl-network-segmentation"
+      ],
+      "mitigation_text": null,
+      "evidence": "CISA CSAF ICSA-26-057-10 product_status known_affected för tre XWEB PRO-modeller ≤1.12.1; NVD CVE-2026-25109 (CNA CISA): An OS command injection vulnerability exists in XWEB Pro version 1.12.1 and prior, enabling an authenticated attacker to achieve remote code execution on the sy",
+      "source_ids": ["src-nvd-cve-2026-25109", "src-cisa-icsa-26-057-10-csaf"],
+      "verification_status": "verified_primary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": ["Matchning genererad ur CSAF-produktstatus; ej listad i arbetsboken."],
+        "history": []
+      }
+    },
+    {
+      "id": "match-copeland-xweb-pro-cve-2026-20902",
+      "product_family_id": "pf-copeland-xweb-pro",
+      "cve_id": "CVE-2026-20902",
+      "advisory_id": "adv-cisa-icsa-26-057-10",
+      "component": "XWEB 300D PRO, XWEB 500D PRO, XWEB 500B PRO",
+      "affected_versions_text": "Version 1.12.1 och tidigare (CSAF product_status known_affected '<=1.12.1')",
+      "version_rule": {
+        "type": "lte",
+        "version": "1.12.1",
+        "version_end": null,
+        "text": "≤ 1.12.1"
+      },
+      "status": "affected",
+      "attack_prerequisites": "Enligt CVSS-vektor (CVSS 3.1: 8). CWE: CWE-78.",
+      "attack_vector": "network",
+      "authentication_required": "high",
+      "user_interaction": "none",
+      "fix": {
+        "available": "yes",
+        "version": null,
+        "text": "CISA ICSA-26-057-10: fix finns, uppdatera till senaste version via Copelands uppdateringssida; ingen versionssiffra anges.",
+        "status": "needs_review",
+        "source_ids": ["src-cisa-icsa-26-057-10-csaf", "src-copeland-xweb-update-page"]
+      },
+      "mitigation_control_ids": [
+        "ctl-no-public-admin",
+        "ctl-vendor-firmware-update",
+        "ctl-network-segmentation"
+      ],
+      "mitigation_text": null,
+      "evidence": "CISA CSAF ICSA-26-057-10 product_status known_affected för tre XWEB PRO-modeller ≤1.12.1; NVD CVE-2026-20902 (CNA CISA): An OS command injection vulnerability exists in XWEB Pro version 1.12.1 and prior, enabling an authenticated attacker to achieve remote code execution on the sy",
+      "source_ids": ["src-nvd-cve-2026-20902", "src-cisa-icsa-26-057-10-csaf"],
+      "verification_status": "verified_primary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": ["Matchning genererad ur CSAF-produktstatus; ej listad i arbetsboken."],
+        "history": []
+      }
+    },
+    {
+      "id": "match-copeland-xweb-pro-cve-2026-24695",
+      "product_family_id": "pf-copeland-xweb-pro",
+      "cve_id": "CVE-2026-24695",
+      "advisory_id": "adv-cisa-icsa-26-057-10",
+      "component": "XWEB 300D PRO, XWEB 500D PRO, XWEB 500B PRO",
+      "affected_versions_text": "Version 1.12.1 och tidigare (CSAF product_status known_affected '<=1.12.1')",
+      "version_rule": {
+        "type": "lte",
+        "version": "1.12.1",
+        "version_end": null,
+        "text": "≤ 1.12.1"
+      },
+      "status": "affected",
+      "attack_prerequisites": "Enligt CVSS-vektor (CVSS 3.1: 8). CWE: CWE-78.",
+      "attack_vector": "network",
+      "authentication_required": "high",
+      "user_interaction": "none",
+      "fix": {
+        "available": "yes",
+        "version": null,
+        "text": "CISA ICSA-26-057-10: fix finns, uppdatera till senaste version via Copelands uppdateringssida; ingen versionssiffra anges.",
+        "status": "needs_review",
+        "source_ids": ["src-cisa-icsa-26-057-10-csaf", "src-copeland-xweb-update-page"]
+      },
+      "mitigation_control_ids": [
+        "ctl-no-public-admin",
+        "ctl-vendor-firmware-update",
+        "ctl-network-segmentation"
+      ],
+      "mitigation_text": null,
+      "evidence": "CISA CSAF ICSA-26-057-10 product_status known_affected för tre XWEB PRO-modeller ≤1.12.1; NVD CVE-2026-24695 (CNA CISA): An OS command injection vulnerability exists in XWEB Pro version 1.12.1 and prior, enabling an authenticated attacker to achieve remote code execution on the sy",
+      "source_ids": ["src-nvd-cve-2026-24695", "src-cisa-icsa-26-057-10-csaf"],
+      "verification_status": "verified_primary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": ["Matchning genererad ur CSAF-produktstatus; ej listad i arbetsboken."],
+        "history": []
+      }
+    },
+    {
+      "id": "match-copeland-xweb-pro-cve-2026-25105",
+      "product_family_id": "pf-copeland-xweb-pro",
+      "cve_id": "CVE-2026-25105",
+      "advisory_id": "adv-cisa-icsa-26-057-10",
+      "component": "XWEB 300D PRO, XWEB 500D PRO, XWEB 500B PRO",
+      "affected_versions_text": "Version 1.12.1 och tidigare (CSAF product_status known_affected '<=1.12.1')",
+      "version_rule": {
+        "type": "lte",
+        "version": "1.12.1",
+        "version_end": null,
+        "text": "≤ 1.12.1"
+      },
+      "status": "affected",
+      "attack_prerequisites": "Enligt CVSS-vektor (CVSS 3.1: 8). CWE: CWE-78.",
+      "attack_vector": "network",
+      "authentication_required": "high",
+      "user_interaction": "none",
+      "fix": {
+        "available": "yes",
+        "version": null,
+        "text": "CISA ICSA-26-057-10: fix finns, uppdatera till senaste version via Copelands uppdateringssida; ingen versionssiffra anges.",
+        "status": "needs_review",
+        "source_ids": ["src-cisa-icsa-26-057-10-csaf", "src-copeland-xweb-update-page"]
+      },
+      "mitigation_control_ids": [
+        "ctl-no-public-admin",
+        "ctl-vendor-firmware-update",
+        "ctl-network-segmentation"
+      ],
+      "mitigation_text": null,
+      "evidence": "CISA CSAF ICSA-26-057-10 product_status known_affected för tre XWEB PRO-modeller ≤1.12.1; NVD CVE-2026-25105 (CNA CISA): An OS command injection vulnerability exists in XWEB Pro version 1.12.1 and prior, enabling an authenticated attacker to achieve remote code execution on the sy",
+      "source_ids": ["src-nvd-cve-2026-25105", "src-cisa-icsa-26-057-10-csaf"],
+      "verification_status": "verified_primary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": ["Matchning genererad ur CSAF-produktstatus; ej listad i arbetsboken."],
+        "history": []
+      }
+    },
+    {
+      "id": "match-copeland-xweb-pro-cve-2026-24452",
+      "product_family_id": "pf-copeland-xweb-pro",
+      "cve_id": "CVE-2026-24452",
+      "advisory_id": "adv-cisa-icsa-26-057-10",
+      "component": "XWEB 300D PRO, XWEB 500D PRO, XWEB 500B PRO",
+      "affected_versions_text": "Version 1.12.1 och tidigare (CSAF product_status known_affected '<=1.12.1')",
+      "version_rule": {
+        "type": "lte",
+        "version": "1.12.1",
+        "version_end": null,
+        "text": "≤ 1.12.1"
+      },
+      "status": "affected",
+      "attack_prerequisites": "Enligt CVSS-vektor (CVSS 3.1: 8). CWE: CWE-78.",
+      "attack_vector": "network",
+      "authentication_required": "high",
+      "user_interaction": "none",
+      "fix": {
+        "available": "yes",
+        "version": null,
+        "text": "CISA ICSA-26-057-10: fix finns, uppdatera till senaste version via Copelands uppdateringssida; ingen versionssiffra anges.",
+        "status": "needs_review",
+        "source_ids": ["src-cisa-icsa-26-057-10-csaf", "src-copeland-xweb-update-page"]
+      },
+      "mitigation_control_ids": [
+        "ctl-no-public-admin",
+        "ctl-vendor-firmware-update",
+        "ctl-network-segmentation"
+      ],
+      "mitigation_text": null,
+      "evidence": "CISA CSAF ICSA-26-057-10 product_status known_affected för tre XWEB PRO-modeller ≤1.12.1; NVD CVE-2026-24452 (CNA CISA): An OS command injection vulnerability exists in XWEB Pro version 1.12.1 and prior, enabling an authenticated attacker to achieve remote code execution on the sy",
+      "source_ids": ["src-nvd-cve-2026-24452", "src-cisa-icsa-26-057-10-csaf"],
+      "verification_status": "verified_primary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": ["Matchning genererad ur CSAF-produktstatus; ej listad i arbetsboken."],
+        "history": []
+      }
+    },
+    {
+      "id": "match-copeland-xweb-pro-cve-2026-23702",
+      "product_family_id": "pf-copeland-xweb-pro",
+      "cve_id": "CVE-2026-23702",
+      "advisory_id": "adv-cisa-icsa-26-057-10",
+      "component": "XWEB 300D PRO, XWEB 500D PRO, XWEB 500B PRO",
+      "affected_versions_text": "Version 1.12.1 och tidigare (CSAF product_status known_affected '<=1.12.1')",
+      "version_rule": {
+        "type": "lte",
+        "version": "1.12.1",
+        "version_end": null,
+        "text": "≤ 1.12.1"
+      },
+      "status": "affected",
+      "attack_prerequisites": "Enligt CVSS-vektor (CVSS 3.1: 8). CWE: CWE-78.",
+      "attack_vector": "network",
+      "authentication_required": "high",
+      "user_interaction": "none",
+      "fix": {
+        "available": "yes",
+        "version": null,
+        "text": "CISA ICSA-26-057-10: fix finns, uppdatera till senaste version via Copelands uppdateringssida; ingen versionssiffra anges.",
+        "status": "needs_review",
+        "source_ids": ["src-cisa-icsa-26-057-10-csaf", "src-copeland-xweb-update-page"]
+      },
+      "mitigation_control_ids": [
+        "ctl-no-public-admin",
+        "ctl-vendor-firmware-update",
+        "ctl-network-segmentation"
+      ],
+      "mitigation_text": null,
+      "evidence": "CISA CSAF ICSA-26-057-10 product_status known_affected för tre XWEB PRO-modeller ≤1.12.1; NVD CVE-2026-23702 (CNA CISA): An OS command injection vulnerability exists in XWEB Pro version 1.12.1 and prior, enabling an authenticated attacker to achieve remote code execution on the sy",
+      "source_ids": ["src-nvd-cve-2026-23702", "src-cisa-icsa-26-057-10-csaf"],
+      "verification_status": "verified_primary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": ["Matchning genererad ur CSAF-produktstatus; ej listad i arbetsboken."],
+        "history": []
+      }
+    },
+    {
+      "id": "match-copeland-xweb-pro-cve-2026-25721",
+      "product_family_id": "pf-copeland-xweb-pro",
+      "cve_id": "CVE-2026-25721",
+      "advisory_id": "adv-cisa-icsa-26-057-10",
+      "component": "XWEB 300D PRO, XWEB 500D PRO, XWEB 500B PRO",
+      "affected_versions_text": "Version 1.12.1 och tidigare (CSAF product_status known_affected '<=1.12.1')",
+      "version_rule": {
+        "type": "lte",
+        "version": "1.12.1",
+        "version_end": null,
+        "text": "≤ 1.12.1"
+      },
+      "status": "affected",
+      "attack_prerequisites": "Enligt CVSS-vektor (CVSS 3.1: 8). CWE: CWE-78.",
+      "attack_vector": "network",
+      "authentication_required": "high",
+      "user_interaction": "none",
+      "fix": {
+        "available": "yes",
+        "version": null,
+        "text": "CISA ICSA-26-057-10: fix finns, uppdatera till senaste version via Copelands uppdateringssida; ingen versionssiffra anges.",
+        "status": "needs_review",
+        "source_ids": ["src-cisa-icsa-26-057-10-csaf", "src-copeland-xweb-update-page"]
+      },
+      "mitigation_control_ids": [
+        "ctl-no-public-admin",
+        "ctl-vendor-firmware-update",
+        "ctl-network-segmentation"
+      ],
+      "mitigation_text": null,
+      "evidence": "CISA CSAF ICSA-26-057-10 product_status known_affected för tre XWEB PRO-modeller ≤1.12.1; NVD CVE-2026-25721 (CNA CISA): An OS command injection vulnerability exists in XWEB Pro version 1.12.1 and prior, enabling an authenticated attacker to achieve remote code execution on the sy",
+      "source_ids": ["src-nvd-cve-2026-25721", "src-cisa-icsa-26-057-10-csaf"],
+      "verification_status": "verified_primary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": ["Matchning genererad ur CSAF-produktstatus; ej listad i arbetsboken."],
+        "history": []
+      }
+    },
+    {
+      "id": "match-copeland-xweb-pro-cve-2026-20764",
+      "product_family_id": "pf-copeland-xweb-pro",
+      "cve_id": "CVE-2026-20764",
+      "advisory_id": "adv-cisa-icsa-26-057-10",
+      "component": "XWEB 300D PRO, XWEB 500D PRO, XWEB 500B PRO",
+      "affected_versions_text": "Version 1.12.1 och tidigare (CSAF product_status known_affected '<=1.12.1')",
+      "version_rule": {
+        "type": "lte",
+        "version": "1.12.1",
+        "version_end": null,
+        "text": "≤ 1.12.1"
+      },
+      "status": "affected",
+      "attack_prerequisites": "Enligt CVSS-vektor (CVSS 3.1: 8). CWE: CWE-78.",
+      "attack_vector": "network",
+      "authentication_required": "high",
+      "user_interaction": "none",
+      "fix": {
+        "available": "yes",
+        "version": null,
+        "text": "CISA ICSA-26-057-10: fix finns, uppdatera till senaste version via Copelands uppdateringssida; ingen versionssiffra anges.",
+        "status": "needs_review",
+        "source_ids": ["src-cisa-icsa-26-057-10-csaf", "src-copeland-xweb-update-page"]
+      },
+      "mitigation_control_ids": [
+        "ctl-no-public-admin",
+        "ctl-vendor-firmware-update",
+        "ctl-network-segmentation"
+      ],
+      "mitigation_text": null,
+      "evidence": "CISA CSAF ICSA-26-057-10 product_status known_affected för tre XWEB PRO-modeller ≤1.12.1; NVD CVE-2026-20764 (CNA CISA): An OS command injection vulnerability exists in XWEB Pro version 1.12.1 and prior, enabling an authenticated attacker to achieve remote code execution on the sy",
+      "source_ids": ["src-nvd-cve-2026-20764", "src-cisa-icsa-26-057-10-csaf"],
+      "verification_status": "verified_primary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": ["Matchning genererad ur CSAF-produktstatus; ej listad i arbetsboken."],
+        "history": []
+      }
+    },
+    {
+      "id": "match-copeland-xweb-pro-cve-2026-25196",
+      "product_family_id": "pf-copeland-xweb-pro",
+      "cve_id": "CVE-2026-25196",
+      "advisory_id": "adv-cisa-icsa-26-057-10",
+      "component": "XWEB 300D PRO, XWEB 500D PRO, XWEB 500B PRO",
+      "affected_versions_text": "Version 1.12.1 och tidigare (CSAF product_status known_affected '<=1.12.1')",
+      "version_rule": {
+        "type": "lte",
+        "version": "1.12.1",
+        "version_end": null,
+        "text": "≤ 1.12.1"
+      },
+      "status": "affected",
+      "attack_prerequisites": "Enligt CVSS-vektor (CVSS 3.1: 8). CWE: CWE-78.",
+      "attack_vector": "network",
+      "authentication_required": "high",
+      "user_interaction": "none",
+      "fix": {
+        "available": "yes",
+        "version": null,
+        "text": "CISA ICSA-26-057-10: fix finns, uppdatera till senaste version via Copelands uppdateringssida; ingen versionssiffra anges.",
+        "status": "needs_review",
+        "source_ids": ["src-cisa-icsa-26-057-10-csaf", "src-copeland-xweb-update-page"]
+      },
+      "mitigation_control_ids": [
+        "ctl-no-public-admin",
+        "ctl-vendor-firmware-update",
+        "ctl-network-segmentation"
+      ],
+      "mitigation_text": null,
+      "evidence": "CISA CSAF ICSA-26-057-10 product_status known_affected för tre XWEB PRO-modeller ≤1.12.1; NVD CVE-2026-25196 (CNA CISA): An OS command injection vulnerability exists in XWEB Pro version 1.12.1 and prior, enabling an authenticated attacker to achieve remote code execution on the sy",
+      "source_ids": ["src-nvd-cve-2026-25196", "src-cisa-icsa-26-057-10-csaf"],
+      "verification_status": "verified_primary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": ["Matchning genererad ur CSAF-produktstatus; ej listad i arbetsboken."],
+        "history": []
+      }
+    },
+    {
+      "id": "match-copeland-xweb-pro-cve-2026-25037",
+      "product_family_id": "pf-copeland-xweb-pro",
+      "cve_id": "CVE-2026-25037",
+      "advisory_id": "adv-cisa-icsa-26-057-10",
+      "component": "XWEB 300D PRO, XWEB 500D PRO, XWEB 500B PRO",
+      "affected_versions_text": "Version 1.12.1 och tidigare (CSAF product_status known_affected '<=1.12.1')",
+      "version_rule": {
+        "type": "lte",
+        "version": "1.12.1",
+        "version_end": null,
+        "text": "≤ 1.12.1"
+      },
+      "status": "affected",
+      "attack_prerequisites": "Enligt CVSS-vektor (CVSS 3.1: 8). CWE: CWE-78.",
+      "attack_vector": "network",
+      "authentication_required": "high",
+      "user_interaction": "none",
+      "fix": {
+        "available": "yes",
+        "version": null,
+        "text": "CISA ICSA-26-057-10: fix finns, uppdatera till senaste version via Copelands uppdateringssida; ingen versionssiffra anges.",
+        "status": "needs_review",
+        "source_ids": ["src-cisa-icsa-26-057-10-csaf", "src-copeland-xweb-update-page"]
+      },
+      "mitigation_control_ids": [
+        "ctl-no-public-admin",
+        "ctl-vendor-firmware-update",
+        "ctl-network-segmentation"
+      ],
+      "mitigation_text": null,
+      "evidence": "CISA CSAF ICSA-26-057-10 product_status known_affected för tre XWEB PRO-modeller ≤1.12.1; NVD CVE-2026-25037 (CNA CISA): An OS command injection vulnerability exists in XWEB Pro version 1.12.1 and prior, enabling an authenticated attacker to achieve remote code execution on the sy",
+      "source_ids": ["src-nvd-cve-2026-25037", "src-cisa-icsa-26-057-10-csaf"],
+      "verification_status": "verified_primary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": ["Matchning genererad ur CSAF-produktstatus; ej listad i arbetsboken."],
+        "history": []
+      }
+    },
+    {
+      "id": "match-copeland-xweb-pro-cve-2026-22877",
+      "product_family_id": "pf-copeland-xweb-pro",
+      "cve_id": "CVE-2026-22877",
+      "advisory_id": "adv-cisa-icsa-26-057-10",
+      "component": "XWEB 300D PRO, XWEB 500D PRO, XWEB 500B PRO",
+      "affected_versions_text": "Version 1.12.1 och tidigare (CSAF product_status known_affected '<=1.12.1')",
+      "version_rule": {
+        "type": "lte",
+        "version": "1.12.1",
+        "version_end": null,
+        "text": "≤ 1.12.1"
+      },
+      "status": "affected",
+      "attack_prerequisites": "Enligt CVSS-vektor (CVSS 3.1: 3.7). CWE: CWE-22, NVD-CWE-noinfo.",
+      "attack_vector": "network",
+      "authentication_required": "none",
+      "user_interaction": "none",
+      "fix": {
+        "available": "yes",
+        "version": null,
+        "text": "CISA ICSA-26-057-10: fix finns, uppdatera till senaste version via Copelands uppdateringssida; ingen versionssiffra anges.",
+        "status": "needs_review",
+        "source_ids": ["src-cisa-icsa-26-057-10-csaf", "src-copeland-xweb-update-page"]
+      },
+      "mitigation_control_ids": [
+        "ctl-no-public-admin",
+        "ctl-vendor-firmware-update",
+        "ctl-network-segmentation"
+      ],
+      "mitigation_text": null,
+      "evidence": "CISA CSAF ICSA-26-057-10 product_status known_affected för tre XWEB PRO-modeller ≤1.12.1; NVD CVE-2026-22877 (CNA CISA): An arbitrary file-read vulnerability exists in XWEB Pro version 1.12.1 and prior, enabling unauthenticated attackers to read arbitrary files on the system, and ",
+      "source_ids": ["src-nvd-cve-2026-22877", "src-cisa-icsa-26-057-10-csaf"],
+      "verification_status": "verified_primary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": ["Matchning genererad ur CSAF-produktstatus; ej listad i arbetsboken."],
+        "history": []
+      }
+    },
+    {
+      "id": "match-copeland-xweb-pro-cve-2026-20797",
+      "product_family_id": "pf-copeland-xweb-pro",
+      "cve_id": "CVE-2026-20797",
+      "advisory_id": "adv-cisa-icsa-26-057-10",
+      "component": "XWEB 300D PRO, XWEB 500D PRO, XWEB 500B PRO",
+      "affected_versions_text": "Version 1.12.1 och tidigare (CSAF product_status known_affected '<=1.12.1')",
+      "version_rule": {
+        "type": "lte",
+        "version": "1.12.1",
+        "version_end": null,
+        "text": "≤ 1.12.1"
+      },
+      "status": "affected",
+      "attack_prerequisites": "Enligt CVSS-vektor (CVSS 3.1: 4.3). CWE: CWE-121, CWE-787.",
+      "attack_vector": "adjacent",
+      "authentication_required": "none",
+      "user_interaction": "none",
+      "fix": {
+        "available": "yes",
+        "version": null,
+        "text": "CISA ICSA-26-057-10: fix finns, uppdatera till senaste version via Copelands uppdateringssida; ingen versionssiffra anges.",
+        "status": "needs_review",
+        "source_ids": ["src-cisa-icsa-26-057-10-csaf", "src-copeland-xweb-update-page"]
+      },
+      "mitigation_control_ids": [
+        "ctl-no-public-admin",
+        "ctl-vendor-firmware-update",
+        "ctl-network-segmentation"
+      ],
+      "mitigation_text": null,
+      "evidence": "CISA CSAF ICSA-26-057-10 product_status known_affected för tre XWEB PRO-modeller ≤1.12.1; NVD CVE-2026-20797 (CNA CISA): A stack based buffer overflow exists in an API route of XWEB Pro version 1.12.1 and prior, enabling unauthenticated attackers to cause stack corruption and a te",
+      "source_ids": ["src-nvd-cve-2026-20797", "src-cisa-icsa-26-057-10-csaf"],
+      "verification_status": "verified_primary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": ["Matchning genererad ur CSAF-produktstatus; ej listad i arbetsboken."],
+        "history": []
+      }
+    },
+    {
+      "id": "match-copeland-xweb-pro-cve-2026-3037",
+      "product_family_id": "pf-copeland-xweb-pro",
+      "cve_id": "CVE-2026-3037",
+      "advisory_id": "adv-cisa-icsa-26-057-10",
+      "component": "XWEB 300D PRO, XWEB 500D PRO, XWEB 500B PRO",
+      "affected_versions_text": "Version 1.12.1 och tidigare (CSAF product_status known_affected '<=1.12.1')",
+      "version_rule": {
+        "type": "lte",
+        "version": "1.12.1",
+        "version_end": null,
+        "text": "≤ 1.12.1"
+      },
+      "status": "affected",
+      "attack_prerequisites": "Enligt CVSS-vektor (CVSS 3.1: 8). CWE: CWE-78.",
+      "attack_vector": "network",
+      "authentication_required": "high",
+      "user_interaction": "none",
+      "fix": {
+        "available": "yes",
+        "version": null,
+        "text": "CISA ICSA-26-057-10: fix finns, uppdatera till senaste version via Copelands uppdateringssida; ingen versionssiffra anges.",
+        "status": "needs_review",
+        "source_ids": ["src-cisa-icsa-26-057-10-csaf", "src-copeland-xweb-update-page"]
+      },
+      "mitigation_control_ids": [
+        "ctl-no-public-admin",
+        "ctl-vendor-firmware-update",
+        "ctl-network-segmentation"
+      ],
+      "mitigation_text": null,
+      "evidence": "CISA CSAF ICSA-26-057-10 product_status known_affected för tre XWEB PRO-modeller ≤1.12.1; NVD CVE-2026-3037 (CNA CISA): An OS command injection vulnerability exists in XWEB Pro version 1.12.1 and prior, enabling an authenticated attacker to achieve remote code execution on the sy",
+      "source_ids": ["src-nvd-cve-2026-3037", "src-cisa-icsa-26-057-10-csaf"],
+      "verification_status": "verified_primary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": ["Matchning genererad ur CSAF-produktstatus; ej listad i arbetsboken."],
+        "history": []
+      }
+    }
+  ]
+}

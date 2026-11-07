@@ -1,0 +1,92 @@
+{
+  "$id": "https://timpan8.github.io/ot-iot-security-intelligence/schemas/vendor.schema.json",
+  "title": "vendor",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9.]+)*$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "aliases": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "security_portal_url": {
+      "default": null,
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "uri"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "psirt_contact_url": {
+      "default": null,
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "uri"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "support_urls": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      }
+    },
+    "verification_status": {
+      "type": "string",
+      "enum": [
+        "verified_primary",
+        "corroborated_secondary",
+        "needs_review",
+        "unknown",
+        "disputed"
+      ]
+    },
+    "source_ids": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9.]+)*$"
+      }
+    },
+    "notes": {
+      "default": null,
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "aliases",
+    "security_portal_url",
+    "psirt_contact_url",
+    "support_urls",
+    "verification_status",
+    "source_ids",
+    "notes"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,514 @@
+[
+  {
+    "id": "claim-pf-danfoss-ak-sm-800a-latest-fw",
+    "entity_id": "pf-danfoss-ak-sm-800a",
+    "field": "risk_summary.fix_text",
+    "text": "Arbetsboken anger 'senast angiven 5.3.x (okt 2026)' som senaste firmware. Uppgiften är inte verifierad mot Danfoss nedladdningssida.",
+    "status": "needs_review",
+    "source_ids": [
+      "src-workbook",
+      "src-danfoss-ak-sm-800a-downloads"
+    ],
+    "conflict_note": null,
+    "reviewed_at": "2026-11-07",
+    "history": []
+  },
+  {
+    "id": "claim-pf-danfoss-ak-sm-800a-cve-split",
+    "entity_id": "pf-danfoss-ak-sm-800a",
+    "field": "advisory_ids",
+    "text": "CVE-2025-41450 hör till DSA-2025-03-01 (bekräftat via NVD-referens); CVE-2025-41451 och CVE-2025-41452 anges tillhöra DSA-2025-08-01 enligt arbetsboken men sidan kunde inte läsas.",
+    "status": "needs_review",
+    "source_ids": [
+      "src-nvd-cve-2025-41450",
+      "src-danfoss-dsa-2025-08-01"
+    ],
+    "conflict_note": null,
+    "reviewed_at": "2026-11-07",
+    "history": []
+  },
+  {
+    "id": "claim-pf-copeland-xweb-pro-fix-1-13",
+    "entity_id": "pf-copeland-xweb-pro",
+    "field": "risk_summary.fix_text",
+    "text": "Arbetsboken: 'Åtgärdad version 1.13 enligt tidigare verifiering'. CISA ICSA-26-057-10 anger att fix finns men ingen versionssiffra. Uppgiften hålls overifierad tills Copelands uppdateringssida bekräftar versionen.",
+    "status": "needs_review",
+    "source_ids": [
+      "src-workbook",
+      "src-cisa-icsa-26-057-10-csaf",
+      "src-copeland-xweb-update-page"
+    ],
+    "conflict_note": null,
+    "reviewed_at": "2026-11-07",
+    "history": []
+  },
+  {
+    "id": "claim-pf-carel-pcoweb-oem-cves",
+    "entity_id": "pf-carel-pcoweb",
+    "field": "risk_summary.explanation_text",
+    "text": "Arbetsboken: tidigare rapporterade CVE gäller särskilda OEM-konfigurationer och får inte överföras till alla pCOWeb. Inga CVE-ID:n angivna; ingen matchning skapad.",
+    "status": "unknown",
+    "source_ids": [
+      "src-workbook"
+    ],
+    "conflict_note": null,
+    "reviewed_at": "2026-11-07",
+    "history": []
+  },
+  {
+    "id": "claim-pf-siemens-desigo-cc-pxc-not-pxc",
+    "entity_id": "pf-siemens-desigo-cc-pxc",
+    "field": "match_ids",
+    "text": "SSA-330084/CVE-2026-34223 gäller Desigo CC-klientvarianter. PXC-styrenheter förekommer inte i bulletinens produktträd och får inte antas berörda.",
+    "status": "verified_primary",
+    "source_ids": [
+      "src-siemens-ssa-330084-csaf"
+    ],
+    "conflict_note": null,
+    "reviewed_at": "2026-11-07",
+    "history": []
+  },
+  {
+    "id": "claim-pf-siemens-desigo-cc-pxc-nvd-text-conflict",
+    "entity_id": "pf-siemens-desigo-cc-pxc",
+    "field": "match_ids",
+    "text": "NVD:s beskrivning för CVE-2026-34223 räknar upp Desigo CC family V8/V9 och Flex Client V6/V7, medan Siemens CSAF product_status anger dem som known_not_affected. Projektet följer CSAF; posten markeras disputed tills NVD-texten eventuellt korrigeras.",
+    "status": "disputed",
+    "source_ids": [
+      "src-nvd-cve-2026-34223",
+      "src-siemens-ssa-330084-csaf"
+    ],
+    "conflict_note": "Beskrivningstext (NVD) vs. strukturerad produktstatus (Siemens CSAF).",
+    "reviewed_at": "2026-11-07",
+    "history": []
+  },
+  {
+    "id": "claim-pf-fronius-datamanager-no-portforward",
+    "entity_id": "pf-fronius-datamanager",
+    "field": "risk_summary.explanation_text",
+    "text": "Arbetsboken: Fronius avråder uttryckligen från portforwarding till växelriktare. Uppgiften är hämtad från tillverkarens manual enligt arbetsboken men inte omläst i denna session.",
+    "status": "needs_review",
+    "source_ids": [
+      "src-workbook"
+    ],
+    "conflict_note": null,
+    "reviewed_at": "2026-11-07",
+    "history": []
+  },
+  {
+    "id": "claim-pf-abb-ac500-v3-version-boundary",
+    "entity_id": "pf-abb-ac500-v3",
+    "field": "risk_summary.affected_firmware_text",
+    "text": "Arbetsboken: '<3.9.0 för tidigare angiven bulletin (behöver kontrolleras mot ABB)'. De tre CVE:erna är verifierade som CODESYS-sårbarheter (CERT@VDE) men ABB:s mappning till AC500 V3-firmware är inte verifierad.",
+    "status": "needs_review",
+    "source_ids": [
+      "src-workbook",
+      "src-nvd-cve-2025-2595",
+      "src-nvd-cve-2025-41659",
+      "src-nvd-cve-2025-41691"
+    ],
+    "conflict_note": null,
+    "reviewed_at": "2026-11-07",
+    "history": []
+  },
+  {
+    "id": "claim-pf-ptc-kepware-http-api",
+    "entity_id": "pf-ptc-kepware-kepserverex",
+    "field": "risk_summary.explanation_text",
+    "text": "Arbetsboken: PTC varnar uttryckligen att HTTP Configuration API kan exponera känsliga data (käll-URL till PTC:s dokumentation, rad 54). Sidan ej omläst i denna session.",
+    "status": "needs_review",
+    "source_ids": [
+      "src-workbook"
+    ],
+    "conflict_note": null,
+    "reviewed_at": "2026-11-07",
+    "history": []
+  },
+  {
+    "id": "claim-match-copeland-xweb-pro-cve-2026-21718-fix",
+    "entity_id": "pf-copeland-xweb-pro",
+    "field": "matches.match-copeland-xweb-pro-cve-2026-21718.fix",
+    "text": "CISA ICSA-26-057-10: Copeland har släppt fix och rekommenderar uppdatering till senaste version via uppdateringssidan eller menyn SYSTEM → Updates | Network. Ingen specifik versionssiffra anges i bulletinen. Arbetsbokens uppgift 'åtgärdad version 1.13 enligt tidigare verifiering' är INTE bekräftad av primärkälla och hålls som needs_review.",
+    "status": "needs_review",
+    "source_ids": [
+      "src-cisa-icsa-26-057-10-csaf",
+      "src-copeland-xweb-update-page"
+    ],
+    "conflict_note": null,
+    "reviewed_at": "2026-11-07",
+    "history": []
+  },
+  {
+    "id": "claim-match-copeland-e2-cve-2025-52551-fix",
+    "entity_id": "pf-copeland-e2",
+    "field": "matches.match-copeland-e2-cve-2025-52551.fix",
+    "text": "Arbetsboken: 'E2E EOL oktober 2024; migrering till E3'. EOL-datum och eventuell fix ej verifierade mot Copeland.",
+    "status": "needs_review",
+    "source_ids": [
+      "src-workbook"
+    ],
+    "conflict_note": null,
+    "reviewed_at": "2026-11-07",
+    "history": []
+  },
+  {
+    "id": "claim-match-unitronics-vision-cve-2024-1480-fix",
+    "entity_id": "pf-unitronics-vision",
+    "field": "matches.match-unitronics-vision-cve-2024-1480.fix",
+    "text": "Fixuppgift saknas i NVD; se ICSA-24-109-01 (ej läst i sessionen).",
+    "status": "unknown",
+    "source_ids": [
+      "src-nvd-cve-2024-1480"
+    ],
+    "conflict_note": null,
+    "reviewed_at": "2026-11-07",
+    "history": []
+  },
+  {
+    "id": "claim-match-abb-ac500-v3-cve-2025-2595-fix",
+    "entity_id": "pf-abb-ac500-v3",
+    "field": "matches.match-abb-ac500-v3-cve-2025-2595.fix",
+    "text": "Arbetsboken: '3.9.0 för angiven bulletin; kontrollera senare advisories'. Ej verifierat mot ABB.",
+    "status": "needs_review",
+    "source_ids": [
+      "src-workbook"
+    ],
+    "conflict_note": null,
+    "reviewed_at": "2026-11-07",
+    "history": []
+  },
+  {
+    "id": "claim-match-abb-ac500-v3-cve-2025-41659-fix",
+    "entity_id": "pf-abb-ac500-v3",
+    "field": "matches.match-abb-ac500-v3-cve-2025-41659.fix",
+    "text": "Ej verifierat mot ABB.",
+    "status": "needs_review",
+    "source_ids": [
+      "src-workbook"
+    ],
+    "conflict_note": null,
+    "reviewed_at": "2026-11-07",
+    "history": []
+  },
+  {
+    "id": "claim-match-abb-ac500-v3-cve-2025-41691-fix",
+    "entity_id": "pf-abb-ac500-v3",
+    "field": "matches.match-abb-ac500-v3-cve-2025-41691.fix",
+    "text": "Ej verifierat mot ABB.",
+    "status": "needs_review",
+    "source_ids": [
+      "src-workbook"
+    ],
+    "conflict_note": null,
+    "reviewed_at": "2026-11-07",
+    "history": []
+  },
+  {
+    "id": "claim-match-copeland-xweb-pro-cve-2026-25085-fix",
+    "entity_id": "pf-copeland-xweb-pro",
+    "field": "matches.match-copeland-xweb-pro-cve-2026-25085.fix",
+    "text": "CISA ICSA-26-057-10: fix finns, uppdatera till senaste version via Copelands uppdateringssida; ingen versionssiffra anges.",
+    "status": "needs_review",
+    "source_ids": [
+      "src-cisa-icsa-26-057-10-csaf",
+      "src-copeland-xweb-update-page"
+    ],
+    "conflict_note": null,
+    "reviewed_at": "2026-11-07",
+    "history": []
+  },
+  {
+    "id": "claim-match-copeland-xweb-pro-cve-2026-24663-fix",
+    "entity_id": "pf-copeland-xweb-pro",
+    "field": "matches.match-copeland-xweb-pro-cve-2026-24663.fix",
+    "text": "CISA ICSA-26-057-10: fix finns, uppdatera till senaste version via Copelands uppdateringssida; ingen versionssiffra anges.",
+    "status": "needs_review",
+    "source_ids": [
+      "src-cisa-icsa-26-057-10-csaf",
+      "src-copeland-xweb-update-page"
+    ],
+    "conflict_note": null,
+    "reviewed_at": "2026-11-07",
+    "history": []
+  },
+  {
+    "id": "claim-match-copeland-xweb-pro-cve-2026-21389-fix",
+    "entity_id": "pf-copeland-xweb-pro",
+    "field": "matches.match-copeland-xweb-pro-cve-2026-21389.fix",
+    "text": "CISA ICSA-26-057-10: fix finns, uppdatera till senaste version via Copelands uppdateringssida; ingen versionssiffra anges.",
+    "status": "needs_review",
+    "source_ids": [
+      "src-cisa-icsa-26-057-10-csaf",
+      "src-copeland-xweb-update-page"
+    ],
+    "conflict_note": null,
+    "reviewed_at": "2026-11-07",
+    "history": []
+  },
+  {
+    "id": "claim-match-copeland-xweb-pro-cve-2026-25111-fix",
+    "entity_id": "pf-copeland-xweb-pro",
+    "field": "matches.match-copeland-xweb-pro-cve-2026-25111.fix",
+    "text": "CISA ICSA-26-057-10: fix finns, uppdatera till senaste version via Copelands uppdateringssida; ingen versionssiffra anges.",
+    "status": "needs_review",
+    "source_ids": [
+      "src-cisa-icsa-26-057-10-csaf",
+      "src-copeland-xweb-update-page"
+    ],
+    "conflict_note": null,
+    "reviewed_at": "2026-11-07",
+    "history": []
+  },
+  {
+    "id": "claim-match-copeland-xweb-pro-cve-2026-20742-fix",
+    "entity_id": "pf-copeland-xweb-pro",
+    "field": "matches.match-copeland-xweb-pro-cve-2026-20742.fix",
+    "text": "CISA ICSA-26-057-10: fix finns, uppdatera till senaste version via Copelands uppdateringssida; ingen versionssiffra anges.",
+    "status": "needs_review",
+    "source_ids": [
+      "src-cisa-icsa-26-057-10-csaf",
+      "src-copeland-xweb-update-page"
+    ],
+    "conflict_note": null,
+    "reviewed_at": "2026-11-07",
+    "history": []
+  },
+  {
+    "id": "claim-match-copeland-xweb-pro-cve-2026-24517-fix",
+    "entity_id": "pf-copeland-xweb-pro",
+    "field": "matches.match-copeland-xweb-pro-cve-2026-24517.fix",
+    "text": "CISA ICSA-26-057-10: fix finns, uppdatera till senaste version via Copelands uppdateringssida; ingen versionssiffra anges.",
+    "status": "needs_review",
+    "source_ids": [
+      "src-cisa-icsa-26-057-10-csaf",
+      "src-copeland-xweb-update-page"
+    ],
+    "conflict_note": null,
+    "reviewed_at": "2026-11-07",
+    "history": []
+  },
+  {
+    "id": "claim-match-copeland-xweb-pro-cve-2026-25195-fix",
+    "entity_id": "pf-copeland-xweb-pro",
+    "field": "matches.match-copeland-xweb-pro-cve-2026-25195.fix",
+    "text": "CISA ICSA-26-057-10: fix finns, uppdatera till senaste version via Copelands uppdateringssida; ingen versionssiffra anges.",
+    "status": "needs_review",
+    "source_ids": [
+      "src-cisa-icsa-26-057-10-csaf",
+      "src-copeland-xweb-update-page"
+    ],
+    "conflict_note": null,
+    "reviewed_at": "2026-11-07",
+    "history": []
+  },
+  {
+    "id": "claim-match-copeland-xweb-pro-cve-2026-20910-fix",
+    "entity_id": "pf-copeland-xweb-pro",
+    "field": "matches.match-copeland-xweb-pro-cve-2026-20910.fix",
+    "text": "CISA ICSA-26-057-10: fix finns, uppdatera till senaste version via Copelands uppdateringssida; ingen versionssiffra anges.",
+    "status": "needs_review",
+    "source_ids": [
+      "src-cisa-icsa-26-057-10-csaf",
+      "src-copeland-xweb-update-page"
+    ],
+    "conflict_note": null,
+    "reviewed_at": "2026-11-07",
+    "history": []
+  },
+  {
+    "id": "claim-match-copeland-xweb-pro-cve-2026-24689-fix",
+    "entity_id": "pf-copeland-xweb-pro",
+    "field": "matches.match-copeland-xweb-pro-cve-2026-24689.fix",
+    "text": "CISA ICSA-26-057-10: fix finns, uppdatera till senaste version via Copelands uppdateringssida; ingen versionssiffra anges.",
+    "status": "needs_review",
+    "source_ids": [
+      "src-cisa-icsa-26-057-10-csaf",
+      "src-copeland-xweb-update-page"
+    ],
+    "conflict_note": null,
+    "reviewed_at": "2026-11-07",
+    "history": []
+  },
+  {
+    "id": "claim-match-copeland-xweb-pro-cve-2026-25109-fix",
+    "entity_id": "pf-copeland-xweb-pro",
+    "field": "matches.match-copeland-xweb-pro-cve-2026-25109.fix",
+    "text": "CISA ICSA-26-057-10: fix finns, uppdatera till senaste version via Copelands uppdateringssida; ingen versionssiffra anges.",
+    "status": "needs_review",
+    "source_ids": [
+      "src-cisa-icsa-26-057-10-csaf",
+      "src-copeland-xweb-update-page"
+    ],
+    "conflict_note": null,
+    "reviewed_at": "2026-11-07",
+    "history": []
+  },
+  {
+    "id": "claim-match-copeland-xweb-pro-cve-2026-20902-fix",
+    "entity_id": "pf-copeland-xweb-pro",
+    "field": "matches.match-copeland-xweb-pro-cve-2026-20902.fix",
+    "text": "CISA ICSA-26-057-10: fix finns, uppdatera till senaste version via Copelands uppdateringssida; ingen versionssiffra anges.",
+    "status": "needs_review",
+    "source_ids": [
+      "src-cisa-icsa-26-057-10-csaf",
+      "src-copeland-xweb-update-page"
+    ],
+    "conflict_note": null,
+    "reviewed_at": "2026-11-07",
+    "history": []
+  },
+  {
+    "id": "claim-match-copeland-xweb-pro-cve-2026-24695-fix",
+    "entity_id": "pf-copeland-xweb-pro",
+    "field": "matches.match-copeland-xweb-pro-cve-2026-24695.fix",
+    "text": "CISA ICSA-26-057-10: fix finns, uppdatera till senaste version via Copelands uppdateringssida; ingen versionssiffra anges.",
+    "status": "needs_review",
+    "source_ids": [
+      "src-cisa-icsa-26-057-10-csaf",
+      "src-copeland-xweb-update-page"
+    ],
+    "conflict_note": null,
+    "reviewed_at": "2026-11-07",
+    "history": []
+  },
+  {
+    "id": "claim-match-copeland-xweb-pro-cve-2026-25105-fix",
+    "entity_id": "pf-copeland-xweb-pro",
+    "field": "matches.match-copeland-xweb-pro-cve-2026-25105.fix",
+    "text": "CISA ICSA-26-057-10: fix finns, uppdatera till senaste version via Copelands uppdateringssida; ingen versionssiffra anges.",
+    "status": "needs_review",
+    "source_ids": [
+      "src-cisa-icsa-26-057-10-csaf",
+      "src-copeland-xweb-update-page"
+    ],
+    "conflict_note": null,
+    "reviewed_at": "2026-11-07",
+    "history": []
+  },
+  {
+    "id": "claim-match-copeland-xweb-pro-cve-2026-24452-fix",
+    "entity_id": "pf-copeland-xweb-pro",
+    "field": "matches.match-copeland-xweb-pro-cve-2026-24452.fix",
+    "text": "CISA ICSA-26-057-10: fix finns, uppdatera till senaste version via Copelands uppdateringssida; ingen versionssiffra anges.",
+    "status": "needs_review",
+    "source_ids": [
+      "src-cisa-icsa-26-057-10-csaf",
+      "src-copeland-xweb-update-page"
+    ],
+    "conflict_note": null,
+    "reviewed_at": "2026-11-07",
+    "history": []
+  },
+  {
+    "id": "claim-match-copeland-xweb-pro-cve-2026-23702-fix",
+    "entity_id": "pf-copeland-xweb-pro",
+    "field": "matches.match-copeland-xweb-pro-cve-2026-23702.fix",
+    "text": "CISA ICSA-26-057-10: fix finns, uppdatera till senaste version via Copelands uppdateringssida; ingen versionssiffra anges.",
+    "status": "needs_review",
+    "source_ids": [
+      "src-cisa-icsa-26-057-10-csaf",
+      "src-copeland-xweb-update-page"
+    ],
+    "conflict_note": null,
+    "reviewed_at": "2026-11-07",
+    "history": []
+  },
+  {
+    "id": "claim-match-copeland-xweb-pro-cve-2026-25721-fix",
+    "entity_id": "pf-copeland-xweb-pro",
+    "field": "matches.match-copeland-xweb-pro-cve-2026-25721.fix",
+    "text": "CISA ICSA-26-057-10: fix finns, uppdatera till senaste version via Copelands uppdateringssida; ingen versionssiffra anges.",
+    "status": "needs_review",
+    "source_ids": [
+      "src-cisa-icsa-26-057-10-csaf",
+      "src-copeland-xweb-update-page"
+    ],
+    "conflict_note": null,
+    "reviewed_at": "2026-11-07",
+    "history": []
+  },
+  {
+    "id": "claim-match-copeland-xweb-pro-cve-2026-20764-fix",
+    "entity_id": "pf-copeland-xweb-pro",
+    "field": "matches.match-copeland-xweb-pro-cve-2026-20764.fix",
+    "text": "CISA ICSA-26-057-10: fix finns, uppdatera till senaste version via Copelands uppdateringssida; ingen versionssiffra anges.",
+    "status": "needs_review",
+    "source_ids": [
+      "src-cisa-icsa-26-057-10-csaf",
+      "src-copeland-xweb-update-page"
+    ],
+    "conflict_note": null,
+    "reviewed_at": "2026-11-07",
+    "history": []
+  },
+  {
+    "id": "claim-match-copeland-xweb-pro-cve-2026-25196-fix",
+    "entity_id": "pf-copeland-xweb-pro",
+    "field": "matches.match-copeland-xweb-pro-cve-2026-25196.fix",
+    "text": "CISA ICSA-26-057-10: fix finns, uppdatera till senaste version via Copelands uppdateringssida; ingen versionssiffra anges.",
+    "status": "needs_review",
+    "source_ids": [
+      "src-cisa-icsa-26-057-10-csaf",
+      "src-copeland-xweb-update-page"
+    ],
+    "conflict_note": null,
+    "reviewed_at": "2026-11-07",
+    "history": []
+  },
+  {
+    "id": "claim-match-copeland-xweb-pro-cve-2026-25037-fix",
+    "entity_id": "pf-copeland-xweb-pro",
+    "field": "matches.match-copeland-xweb-pro-cve-2026-25037.fix",
+    "text": "CISA ICSA-26-057-10: fix finns, uppdatera till senaste version via Copelands uppdateringssida; ingen versionssiffra anges.",
+    "status": "needs_review",
+    "source_ids": [
+      "src-cisa-icsa-26-057-10-csaf",
+      "src-copeland-xweb-update-page"
+    ],
+    "conflict_note": null,
+    "reviewed_at": "2026-11-07",
+    "history": []
+  },
+  {
+    "id": "claim-match-copeland-xweb-pro-cve-2026-22877-fix",
+    "entity_id": "pf-copeland-xweb-pro",
+    "field": "matches.match-copeland-xweb-pro-cve-2026-22877.fix",
+    "text": "CISA ICSA-26-057-10: fix finns, uppdatera till senaste version via Copelands uppdateringssida; ingen versionssiffra anges.",
+    "status": "needs_review",
+    "source_ids": [
+      "src-cisa-icsa-26-057-10-csaf",
+      "src-copeland-xweb-update-page"
+    ],
+    "conflict_note": null,
+    "reviewed_at": "2026-11-07",
+    "history": []
+  },
+  {
+    "id": "claim-match-copeland-xweb-pro-cve-2026-20797-fix",
+    "entity_id": "pf-copeland-xweb-pro",
+    "field": "matches.match-copeland-xweb-pro-cve-2026-20797.fix",
+    "text": "CISA ICSA-26-057-10: fix finns, uppdatera till senaste version via Copelands uppdateringssida; ingen versionssiffra anges.",
+    "status": "needs_review",
+    "source_ids": [
+      "src-cisa-icsa-26-057-10-csaf",
+      "src-copeland-xweb-update-page"
+    ],
+    "conflict_note": null,
+    "reviewed_at": "2026-11-07",
+    "history": []
+  },
+  {
+    "id": "claim-match-copeland-xweb-pro-cve-2026-3037-fix",
+    "entity_id": "pf-copeland-xweb-pro",
+    "field": "matches.match-copeland-xweb-pro-cve-2026-3037.fix",
+    "text": "CISA ICSA-26-057-10: fix finns, uppdatera till senaste version via Copelands uppdateringssida; ingen versionssiffra anges.",
+    "status": "needs_review",
+    "source_ids": [
+      "src-cisa-icsa-26-057-10-csaf",
+      "src-copeland-xweb-update-page"
+    ],
+    "conflict_note": null,
+    "reviewed_at": "2026-11-07",
+    "history": []
+  }
+]
