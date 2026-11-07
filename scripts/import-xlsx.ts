@@ -232,7 +232,16 @@ export async function importWorkbook(path: string = WORKBOOK_PATH): Promise<{
       .filter((r) => r.fields.defensive_control?.startsWith('Ingen publik direktadministration'))
       .map((r) => r.row),
     industry_guide_documentation_rows: records
-      .filter((r) => r.fields.documentation_url?.includes('csrc.nist.gov'))
+      .filter((r) => {
+        const url = r.fields.documentation_url;
+        if (!url) return false;
+        try {
+          const host = new URL(url).hostname.toLowerCase();
+          return host === 'csrc.nist.gov' || host.endsWith('.csrc.nist.gov');
+        } catch {
+          return false;
+        }
+      })
       .map((r) => r.row),
     assumptions: [
       'Rad 1 är rubrikrad; rad 2–67 är dataposter. Tomma rader ignoreras.',
