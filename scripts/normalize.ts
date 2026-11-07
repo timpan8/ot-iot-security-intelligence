@@ -151,6 +151,12 @@ function uniq<T>(arr: T[]): T[] {
   return [...new Set(arr)];
 }
 
+function hostMatchesDomain(host: string, domain: string): boolean {
+  const h = host.toLowerCase().replace(/\.$/, '');
+  const d = domain.toLowerCase().replace(/\.$/, '');
+  return h === d || h.endsWith(`.${d}`);
+}
+
 /* ------------------------------------------------------------------ */
 /* Källor                                                              */
 /* ------------------------------------------------------------------ */
