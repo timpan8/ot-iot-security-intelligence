@@ -161,12 +161,6 @@ function hostMatchesDomain(host: string, domain: string): boolean {
 /* Källor                                                              */
 /* ------------------------------------------------------------------ */
 
-function hostMatchesDomain(host: string, domain: string): boolean {
-  const normalizedHost = host.toLowerCase().replace(/\.+$/, '');
-  const normalizedDomain = domain.toLowerCase().replace(/\.+$/, '');
-  if (host === 'cert-portal.siemens.com')
-}
-
 function classifySourceByHost(host: string): { type: Source['source_type']; publisher: string } {
   if (hostMatchesDomain(host, 'csrc.nist.gov') || hostMatchesDomain(host, 'nist.gov'))
     return { type: 'primary_standard', publisher: 'NIST' };
