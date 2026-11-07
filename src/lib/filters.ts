@@ -11,6 +11,7 @@ export type EntryKind = 'all' | 'product_family' | 'protocol_service';
 export type OriginFilter = 'all' | RegisterOrigin;
 export type PocFilter = 'any' | PublicPocStatus;
 export type DocGapFilter = 'any' | 'verified' | 'unverified';
+export type ViewMode = 'table' | 'cards';
 const POC_VALUES: PublicPocStatus[] = [
   'poc_reported',
   'none_reported_at_assessment',
@@ -54,6 +55,8 @@ export interface CatalogFilters {
   has: string[]; // HasKey
   sort: SortKey;
   dir: 'asc' | 'desc';
+  /** Presentation, inte ett filter – räknas inte som aktivt filter. */
+  view: ViewMode;
 }
 
 export const DEFAULT_FILTERS: CatalogFilters = {
@@ -77,6 +80,7 @@ export const DEFAULT_FILTERS: CatalogFilters = {
   has: [],
   sort: 'name',
   dir: 'asc',
+  view: 'table',
 };
 
 const LIST_KEYS = [
@@ -132,6 +136,7 @@ export function parseFilters(params: URLSearchParams): CatalogFilters {
   const sort = params.get('sort');
   if (sort && (SORT_KEYS as string[]).includes(sort)) f.sort = sort as SortKey;
   if (params.get('dir') === 'desc') f.dir = 'desc';
+  if (params.get('view') === 'cards') f.view = 'cards';
   return f;
 }
 
@@ -148,6 +153,7 @@ export function serializeFilters(f: CatalogFilters): URLSearchParams {
   for (const k of LIST_KEYS) if (f[k].length) p.set(k, f[k].join(','));
   if (f.sort !== 'name') p.set('sort', f.sort);
   if (f.dir !== 'asc') p.set('dir', f.dir);
+  if (f.view !== 'table') p.set('view', f.view);
   return p;
 }
 

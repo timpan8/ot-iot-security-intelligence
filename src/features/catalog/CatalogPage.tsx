@@ -5,6 +5,7 @@ import { useDataset } from '@/data/DatasetContext';
 import { isProduct } from '@/data/loader';
 import { Badge, OriginBadge, PocBadge, PwdTypeBadge, VerificationBadge } from '@/components/Badge';
 import { EntryPanel } from './EntryPanel';
+import { ProductCard } from './ProductCard';
 import { EmptyState, PageHeader } from '@/components/ui';
 import {
   applyFilters,
@@ -295,8 +296,10 @@ export function CatalogPage() {
         title="Katalog"
         lead={
           <>
-            {d.entries.length} produktfamiljer och protokoll. Klicka på en rad för att se konto,
-            CVE, dokumentation och åtgärd direkt. Filtren sparas i adressen och kan delas.
+            {d.entries.length} produktfamiljer och protokoll. <strong>Tabell</strong> ger en tät
+            lista där en rad fälls ut; <strong>Dossier</strong> visar allt per produkt samlat –
+            konto, initiallösenordstyp, CVE:er, PoC-underlag, sökord och åtgärd. Filtren sparas i
+            adressen och kan delas.
           </>
         }
       />
@@ -556,7 +559,33 @@ export function CatalogPage() {
                 Rensa filter
               </button>
             ) : null}
-            <label className="ml-auto flex items-center gap-2 text-sm">
+            <div
+              role="group"
+              aria-label="Visningsläge"
+              className="ml-auto inline-flex overflow-hidden rounded-[3px] border border-border"
+            >
+              {(
+                [
+                  ['table', 'Tabell'],
+                  ['cards', 'Dossier'],
+                ] as const
+              ).map(([v, label]) => (
+                <button
+                  key={v}
+                  type="button"
+                  aria-pressed={filters.view === v}
+                  onClick={() => upd({ view: v })}
+                  className={`px-2.5 py-1 text-sm ${
+                    filters.view === v
+                      ? 'bg-accent text-accent-contrast'
+                      : 'bg-surface text-muted hover:bg-surface-2'
+                  }`}
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
+            <label className="flex items-center gap-2 text-sm">
               <span className="text-muted">Sortera</span>
               <select
                 className="input w-auto py-1"
@@ -573,17 +602,19 @@ export function CatalogPage() {
                 <option value="verification">Verifiering</option>
               </select>
             </label>
-            <button
-              type="button"
-              className="btn"
-              aria-pressed={allOpen}
-              onClick={() => {
-                setAllOpen((v) => !v);
-                setOpen(new Set());
-              }}
-            >
-              {allOpen ? 'Fäll ihop alla' : 'Fäll ut alla'}
-            </button>
+            {filters.view === 'table' ? (
+              <button
+                type="button"
+                className="btn"
+                aria-pressed={allOpen}
+                onClick={() => {
+                  setAllOpen((v) => !v);
+                  setOpen(new Set());
+                }}
+              >
+                {allOpen ? 'Fäll ihop alla' : 'Fäll ut alla'}
+              </button>
+            ) : null}
             <button
               type="button"
               className="btn"
@@ -615,6 +646,14 @@ export function CatalogPage() {
               </button>
               .
             </EmptyState>
+          ) : filters.view === 'cards' ? (
+            <ul className="grid grid-cols-1 gap-3 2xl:grid-cols-2">
+              {rows.map((e) => (
+                <li key={e.id}>
+                  <ProductCard d={d} e={e} />
+                </li>
+              ))}
+            </ul>
           ) : (
             <>
               <div className="card hidden md:block">

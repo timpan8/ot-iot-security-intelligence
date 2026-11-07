@@ -67,7 +67,15 @@ function Field({ label, children }: { label: string; children: React.ReactNode }
 }
 
 /** Allt som är dokumenterat om en post, i ett utfällt block direkt i katalogen. */
-export function EntryPanel({ d, e }: { d: IndexedDataset; e: CatalogEntry }) {
+export function EntryPanel({
+  d,
+  e,
+  hideVerification = false,
+}: {
+  d: IndexedDataset;
+  e: CatalogEntry;
+  hideVerification?: boolean;
+}) {
   const { cves, pocs } = collect(d, e);
   const detail = isProduct(e) ? `/produkt/${e.id}` : `/protokoll/${e.id}`;
   const cred = e.credentials;
@@ -98,9 +106,11 @@ export function EntryPanel({ d, e }: { d: IndexedDataset; e: CatalogEntry }) {
             </span>
           </span>
         </Field>
-        <Field label="Verifiering">
-          <VerificationBadge status={e.verification_status} />
-        </Field>
+        {hideVerification ? null : (
+          <Field label="Verifiering">
+            <VerificationBadge status={e.verification_status} />
+          </Field>
+        )}
         {e.risk_summary.type_text ? (
           <Field label="Risktyp">
             <span className="text-xs">{e.risk_summary.type_text}</span>

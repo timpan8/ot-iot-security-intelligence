@@ -92,6 +92,7 @@ function OverviewRedirect() {
   const has = old.get('has');
   if (has) next.set('has', has);
   next.set('sort', old.get('sort') === 'name' ? 'name' : 'severity');
+  next.set('view', 'cards');
   return <Navigate to={`/katalog?${next.toString()}`} replace />;
 }
 
