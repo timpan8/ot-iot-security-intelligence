@@ -6,12 +6,14 @@ import { isProduct } from '@/data/loader';
 import { Badge, OriginBadge, PocBadge, PwdTypeBadge, VerificationBadge } from '@/components/Badge';
 import { EntryPanel } from './EntryPanel';
 import { ProductCard } from './ProductCard';
+import { DetailTable } from './DetailTable';
 import { EmptyState, PageHeader } from '@/components/ui';
 import {
   applyFilters,
   countActiveFilters,
   DEFAULT_FILTERS,
   deriveEntry,
+  serializeFilters,
   strongestPoc,
   type CatalogFilters,
   type EntryDerived,
@@ -178,6 +180,15 @@ export function CatalogPage() {
   const [open, setOpen] = useState<Set<string>>(() => new Set());
   const [allOpen, setAllOpen] = useState(false);
   const [moreFilters, setMoreFilters] = useState(false);
+  // Dossiervyn visar en sida i taget; nytt urval börjar om från första sidan.
+  const CARD_PAGE = 20;
+  const [cardLimit, setCardLimit] = useState(CARD_PAGE);
+  const [limitKey, setLimitKey] = useState('');
+  const filterKey = serializeFilters(filters).toString();
+  if (limitKey !== filterKey) {
+    setLimitKey(filterKey);
+    setCardLimit(CARD_PAGE);
+  }
   const index = useMemo(() => buildSearchIndex(buildSearchDocs(d)), [d]);
   const hits = useMemo(() => searchIds(index, filters.q), [index, filters.q]);
   const rows = useMemo(() => applyFilters(d, d.entries, filters, hits), [d, filters, hits]);
@@ -296,10 +307,10 @@ export function CatalogPage() {
         title="Katalog"
         lead={
           <>
-            {d.entries.length} produktfamiljer och protokoll. <strong>Tabell</strong> ger en tät
-            lista där en rad fälls ut; <strong>Dossier</strong> visar allt per produkt samlat –
-            konto, initiallösenordstyp, CVE:er, PoC-underlag, sökord och åtgärd. Filtren sparas i
-            adressen och kan delas.
+            {d.entries.length} produktfamiljer och protokoll. <strong>Tabell</strong> är en tät
+            lista där en rad fälls ut. <strong>Detaljtabell</strong> och <strong>Dossier</strong>{' '}
+            visar allt per produkt direkt: konto, typ av initiallösenord, sökord, CVE, PoC-underlag,
+            setup och åtgärd – som tabell respektive kort. Filtren sparas i adressen och kan delas.
           </>
         }
       />
@@ -567,6 +578,7 @@ export function CatalogPage() {
               {(
                 [
                   ['table', 'Tabell'],
+                  ['fields', 'Detaljtabell'],
                   ['cards', 'Dossier'],
                 ] as const
               ).map(([v, label]) => (
@@ -646,14 +658,35 @@ export function CatalogPage() {
               </button>
               .
             </EmptyState>
+          ) : filters.view === 'fields' ? (
+            <DetailTable d={d} rows={rows} derived={derived} />
           ) : filters.view === 'cards' ? (
-            <ul className="grid grid-cols-1 gap-3 2xl:grid-cols-2">
-              {rows.map((e) => (
-                <li key={e.id}>
-                  <ProductCard d={d} e={e} />
-                </li>
-              ))}
-            </ul>
+            <>
+              <ul className="grid grid-cols-1 gap-3 2xl:grid-cols-2">
+                {rows.slice(0, cardLimit).map((e) => (
+                  <li key={e.id}>
+                    <ProductCard d={d} e={e} />
+                  </li>
+                ))}
+              </ul>
+              {rows.length > cardLimit ? (
+                <div className="mt-4 flex flex-wrap items-center justify-center gap-3 text-sm">
+                  <span className="text-muted">
+                    Visar {cardLimit} av {rows.length}
+                  </span>
+                  <button
+                    type="button"
+                    className="btn"
+                    onClick={() => setCardLimit((n) => n + CARD_PAGE)}
+                  >
+                    Visa {Math.min(CARD_PAGE, rows.length - cardLimit)} till
+                  </button>
+                  <button type="button" className="btn" onClick={() => setCardLimit(rows.length)}>
+                    Visa alla
+                  </button>
+                </div>
+              ) : null}
+            </>
           ) : (
             <>
               <div className="card hidden md:block">

@@ -176,6 +176,15 @@
   filter: brightness(1.08);
 }
 
+/*
+ * Rullbara tabellbehållare måste vara positionerade. Annars "rymmer"
+ * absolutpositionerade barn (skärmläsartexter som "öppnas i ny flik")
+ * ur behållaren och gör hela sidan bredare än skärmen på mobil.
+ */
+.overflow-x-auto {
+  position: relative;
+}
+
 /* Växlingsknapp (filterchip) */
 .chip {
   display: inline-flex;
