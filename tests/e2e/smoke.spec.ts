@@ -167,6 +167,20 @@ test.describe('Röktest – publik kunskapsbas', () => {
     ).toBeVisible();
   });
 
+  test('detaljtabellen har kolumner för konto och standardportar', async ({ page }) => {
+    await page.goto('#/katalog?view=fields');
+    const table = page.getByRole('table');
+    await expect(
+      table.getByRole('columnheader', { name: 'Standardkonto och initiallösenord' }),
+    ).toBeVisible();
+    await expect(
+      table.getByRole('columnheader', { name: 'Standardportar (via protokoll)' }),
+    ).toBeVisible();
+    // En post med känt protokoll visar sin port
+    await page.getByLabel(/Fulltextsökning/).fill('Danfoss AK-SM');
+    await expect(table.getByText('502/tcp').first()).toBeVisible();
+  });
+
   test('inga sidor blir bredare än skärmen på mobil', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     for (const r of ['#/bulletiner', '#/konton', '#/atgarder', '#/produkt/pf-abb-aspect']) {

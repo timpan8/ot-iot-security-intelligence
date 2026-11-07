@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { NavLink, Outlet } from 'react-router';
+import { NavLink, Outlet, useLocation } from 'react-router';
 import { applyTheme, readStoredTheme, storeTheme, systemTheme, type Theme } from './theme';
 import { useDatasetState } from '@/data/DatasetContext';
 
@@ -27,6 +27,12 @@ export function Layout() {
   const [theme, setTheme] = useState<Theme>(() => readStoredTheme() ?? systemTheme());
   const [menuOpen, setMenuOpen] = useState(false);
   const ds = useDatasetState();
+  const { pathname } = useLocation();
+  // Listor och tabeller använder hela bredden. Detaljsidor med löptext behåller
+  // en läsbar maxbredd, vänsterställd i linje med sidhuvudet.
+  const reading = /^\/(produkt|protokoll|om|export)(\/|$)|^\/(sarbarheter|bulletiner)\/./.test(
+    pathname,
+  );
 
   useEffect(() => applyTheme(theme), [theme]);
 
@@ -45,7 +51,7 @@ export function Layout() {
         Hoppa till innehåll
       </a>
       <header className="sticky top-0 z-20 border-b border-border bg-surface">
-        <div className="mx-auto flex max-w-[90rem] items-center gap-4 px-4 py-2">
+        <div className="flex items-center gap-4 px-4 py-2 lg:px-6">
           <NavLink to="/" className="flex shrink-0 items-center gap-2 text-text no-underline">
             <span
               aria-hidden="true"
@@ -118,11 +124,14 @@ export function Layout() {
           </div>
         </div>
       </header>
-      <main id="main" className="mx-auto w-full max-w-[90rem] flex-1 px-4 py-5">
+      <main
+        id="main"
+        className={`w-full flex-1 px-4 py-5 lg:px-6 ${reading ? 'max-w-[90rem]' : ''}`}
+      >
         <Outlet />
       </main>
       <footer className="border-t border-border bg-surface">
-        <div className="mx-auto max-w-[90rem] px-4 py-4 text-xs text-muted">
+        <div className="px-4 py-4 text-xs text-muted lg:px-6">
           <p>
             Publik produkt- och hotkunskapsbas. Innehåller inga anläggningsunika uppgifter. Frånvaro
             av CVE är inte bevis för frånvaro av sårbarheter. Ingen exploateringsvägledning.

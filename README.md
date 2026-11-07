@@ -174,8 +174,11 @@ dokumenterat standardkonto och typ av initiallösenord (aldrig lösenordsvärden
 setupdokumentation, upptäcktsheuristik (för egen auktoriserad inventering), PoC-/hotunderlag som
 evidensnivå och rekommenderad åtgärd. Tre visningslägen väljs med knapparna i resultatlistan och speglas som `view=` i adressen:
 **Tabell** (tät lista med utfällbara rader), **Detaljtabell** (`view=fields`, dossierns fält som
-kolumner) och **Dossier** (`view=cards`, ett kort per produkt, 20 åt gången). I detaljtabellen väljer
-man själv vilka kolumner som visas via knappen _Kolumner_; valet sparas i webbläsaren. Snabbfiltret `has=` (`kev`, `poc`, `cve`, `defaultpw`,
+kolumner) och **Dossier** (`view=cards`, ett kort per produkt, 20 åt gången). I detaljtabellen staplas inte fälten på höjden; varje kolumn (konto och
+initiallösenordstyp med bytesanvisning, standardportar via protokoll, sökord, CVE, PoC-underlag,
+setup, åtgärd m.fl.) läggs i bredd. Kolumnerna väljs via knappen _Kolumner_, valet sparas i
+webbläsaren. Listvyer använder hela fönsterbredden; filterkolumnen kan fällas ihop med _Dölj
+filter_. Snabbfiltret `has=` (`kev`, `poc`, `cve`, `defaultpw`,
 `account`) och `sort=severity` (KEV först, sedan högsta CVSS) speglas i adressen. Den tidigare
 vyn `/oversikt` är sammanslagen med katalogen; gamla länkar omdirigeras dit med motsvarande filter.
 
