@@ -382,7 +382,7 @@ export function addRegisterSources(
       byUrl.set(norm, sourcesByUrl.get(norm)!.id);
       continue;
     }
-    let host = 'unknown-host';
+    let host: string;
     try {
       host = new URL(a.url).hostname.toLowerCase();
     } catch {
