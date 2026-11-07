@@ -1,48 +1,67 @@
 @import 'tailwindcss';
+@import '@fontsource/ibm-plex-sans/latin-400.css';
+@import '@fontsource/ibm-plex-sans/latin-500.css';
+@import '@fontsource/ibm-plex-sans/latin-600.css';
+@import '@fontsource/ibm-plex-sans/latin-400-italic.css';
+@import '@fontsource/ibm-plex-sans-condensed/latin-500.css';
+@import '@fontsource/ibm-plex-sans-condensed/latin-600.css';
+@import '@fontsource/ibm-plex-mono/latin-400.css';
 
 @custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
 
+/*
+ * Formspråk: ISA-101 / "high-performance HMI".
+ * Normalläge är grått och lugnt. Färg används bara för avvikelser
+ * (rött = bekräftat utnyttjande/hårdkodat, gult = rapporterad PoC/svaghet).
+ * Verifierat/OK är medvetet neutralt – det ska inte konkurrera om blicken.
+ */
 :root {
-  --bg: #f6f7f9;
-  --surface: #ffffff;
-  --surface-2: #eef1f5;
-  --border: #d5dae2;
-  --text: #0f172a;
-  --muted: #4b5563;
-  --accent: #0b5cad;
+  --bg: #e7e9ea;
+  --surface: #f6f7f7;
+  --surface-2: #dde1e3;
+  --border: #c2c8cc;
+  --rule: #d3d8db;
+  --text: #1c2226;
+  --muted: #56616a;
+  --accent: #22587a;
   --accent-contrast: #ffffff;
-  --ok: #166534;
-  --ok-bg: #dcfce7;
-  --info: #1e40af;
-  --info-bg: #dbeafe;
-  --warn: #854d0e;
-  --warn-bg: #fef3c7;
-  --neutral: #374151;
-  --neutral-bg: #e5e7eb;
-  --danger: #991b1b;
-  --danger-bg: #fee2e2;
+  --ok: #3b4d42;
+  --ok-bg: #e2e7e3;
+  --info: #2b4960;
+  --info-bg: #dae3ea;
+  --warn: #6f4300;
+  --warn-bg: #f3e0b5;
+  --warn-bar: #d99a1e;
+  --neutral: #424c53;
+  --neutral-bg: transparent;
+  --danger: #9b1519;
+  --danger-bg: #f6dada;
+  --danger-bar: #c62828;
   color-scheme: light;
 }
 
 [data-theme='dark'] {
-  --bg: #0b1220;
-  --surface: #111a2b;
-  --surface-2: #182338;
-  --border: #2a3650;
-  --text: #e6ebf2;
-  --muted: #a3adbf;
-  --accent: #5ab0f6;
-  --accent-contrast: #061222;
-  --ok: #86efac;
-  --ok-bg: #0f3b22;
-  --info: #93c5fd;
-  --info-bg: #142a52;
-  --warn: #fcd34d;
-  --warn-bg: #3f2f08;
-  --neutral: #d1d5db;
-  --neutral-bg: #2b3447;
-  --danger: #fca5a5;
-  --danger-bg: #4a1414;
+  --bg: #181c1f;
+  --surface: #20262a;
+  --surface-2: #2a3136;
+  --border: #3b454c;
+  --rule: #2f383e;
+  --text: #dde3e6;
+  --muted: #98a4ac;
+  --accent: #82b6d8;
+  --accent-contrast: #0c1a24;
+  --ok: #b2c6b8;
+  --ok-bg: #26302a;
+  --info: #b0c8da;
+  --info-bg: #25323c;
+  --warn: #f2c46d;
+  --warn-bg: #3f300f;
+  --warn-bar: #d99a1e;
+  --neutral: #c3cbd0;
+  --neutral-bg: transparent;
+  --danger: #ff9a92;
+  --danger-bg: #4a1d1d;
+  --danger-bar: #e5484d;
   color-scheme: dark;
 }
 
@@ -51,6 +70,7 @@
   --color-surface: var(--surface);
   --color-surface-2: var(--surface-2);
   --color-border: var(--border);
+  --color-rule: var(--rule);
   --color-text: var(--text);
   --color-muted: var(--muted);
   --color-accent: var(--accent);
@@ -61,10 +81,15 @@
   --color-info-bg: var(--info-bg);
   --color-warn: var(--warn);
   --color-warn-bg: var(--warn-bg);
+  --color-warn-bar: var(--warn-bar);
   --color-neutral: var(--neutral);
   --color-neutral-bg: var(--neutral-bg);
   --color-danger: var(--danger);
   --color-danger-bg: var(--danger-bg);
+  --color-danger-bar: var(--danger-bar);
+  --font-sans: 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-cond: 'IBM Plex Sans Condensed', 'IBM Plex Sans', ui-sans-serif, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
 }
 
 @layer base {
@@ -72,41 +97,53 @@
   body {
     background: var(--bg);
     color: var(--text);
-    font-family:
-      ui-sans-serif,
-      system-ui,
-      -apple-system,
-      'Segoe UI',
-      Roboto,
-      'Helvetica Neue',
-      Arial,
-      sans-serif;
+    font-family: var(--font-sans);
+    font-size: 15px;
     line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-cond);
+    letter-spacing: -0.005em;
   }
 
   a {
     color: var(--accent);
+    text-underline-offset: 2px;
   }
 
   :focus-visible {
     outline: 2px solid var(--accent);
     outline-offset: 2px;
   }
+
+  code {
+    font-family: var(--font-mono);
+    font-size: 0.85em;
+  }
 }
 
+/* Panel: ytan på en HMI-skärm. Liten radie, ingen skugga. */
 .card {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 0.75rem;
+  border-radius: 4px;
 }
 
 .input {
   background: var(--surface);
   border: 1px solid var(--border);
   color: var(--text);
-  border-radius: 0.5rem;
-  padding: 0.45rem 0.65rem;
+  border-radius: 3px;
+  padding: 0.4rem 0.6rem;
   width: 100%;
+  font-size: 0.875rem;
+}
+.input:focus {
+  border-color: var(--accent);
 }
 
 .btn {
@@ -114,42 +151,134 @@
   align-items: center;
   gap: 0.4rem;
   border: 1px solid var(--border);
-  border-radius: 0.5rem;
-  padding: 0.4rem 0.75rem;
+  border-radius: 3px;
+  padding: 0.35rem 0.7rem;
   background: var(--surface);
   color: var(--text);
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   cursor: pointer;
+  text-decoration: none;
 }
-.btn:hover {
+.btn:hover:not(:disabled) {
   background: var(--surface-2);
+}
+.btn:disabled {
+  opacity: 0.5;
+  cursor: default;
 }
 .btn-primary {
   background: var(--accent);
   color: var(--accent-contrast);
   border-color: var(--accent);
 }
+.btn-primary:hover:not(:disabled) {
+  background: var(--accent);
+  filter: brightness(1.08);
+}
+
+/* Växlingsknapp (filterchip) */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.8125rem;
+  color: var(--text);
+  background: transparent;
+  cursor: pointer;
+  text-decoration: none;
+}
+.chip:hover {
+  background: var(--surface-2);
+}
+.chip[aria-pressed='true'] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-contrast);
+}
+.chip .n {
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+}
+.chip[aria-pressed='true'] .n {
+  color: inherit;
+  opacity: 0.8;
+}
 
 .table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
 }
 .table th,
 .table td {
   text-align: left;
-  padding: 0.5rem 0.6rem;
-  border-bottom: 1px solid var(--border);
+  padding: 0.45rem 0.6rem;
+  border-bottom: 1px solid var(--rule);
   vertical-align: top;
 }
 .table th {
+  font-family: var(--font-cond);
   color: var(--muted);
   font-weight: 600;
+  font-size: 0.8125rem;
   background: var(--surface-2);
+  white-space: nowrap;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.table tbody tr:hover > td {
+  background: color-mix(in srgb, var(--surface-2) 45%, transparent);
+}
+
+/* Larmstapel till vänster om en rad – larmprioritet i HMI-mening */
+.bar-danger {
+  box-shadow: inset 3px 0 0 var(--danger-bar);
+}
+.bar-warn {
+  box-shadow: inset 3px 0 0 var(--warn-bar);
+}
+
+.clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.num {
+  font-family: var(--font-cond);
+  font-variant-numeric: tabular-nums;
 }
 
 .prose-sm p + p {
   margin-top: 0.5rem;
+}
+
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details > summary::before {
+  content: '▸';
+  display: inline-block;
+  width: 1em;
+  color: var(--muted);
+  transition: transform 120ms ease;
+}
+details[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
 }
 
 .sr-only {

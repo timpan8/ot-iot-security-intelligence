@@ -3,18 +3,24 @@ import { NavLink, Outlet } from 'react-router';
 import { applyTheme, readStoredTheme, storeTheme, systemTheme, type Theme } from './theme';
 import { useDatasetState } from '@/data/DatasetContext';
 
-const NAV: Array<{ to: string; label: string }> = [
-  { to: '/', label: 'Översikt' },
-  { to: '/katalog', label: 'Katalog' },
-  { to: '/oversikt', label: 'Snabböversikt' },
-  { to: '/sarbarheter', label: 'Sårbarheter' },
-  { to: '/bulletiner', label: 'Bulletiner' },
-  { to: '/prioritering', label: 'Prioritering' },
-  { to: '/atgarder', label: 'Åtgärder' },
-  { to: '/konton', label: 'Konton' },
-  { to: '/datakvalitet', label: 'Datakvalitet' },
-  { to: '/export', label: 'Export' },
-  { to: '/om', label: 'Om / metodik' },
+/** Menyn är grupperad efter uppgift: hitta → bedöma → underlag. */
+const NAV: Array<Array<{ to: string; label: string }>> = [
+  [
+    { to: '/', label: 'Översikt' },
+    { to: '/katalog', label: 'Katalog' },
+    { to: '/sarbarheter', label: 'Sårbarheter' },
+    { to: '/bulletiner', label: 'Bulletiner' },
+  ],
+  [
+    { to: '/prioritering', label: 'Prioritering' },
+    { to: '/konton', label: 'Konton' },
+    { to: '/atgarder', label: 'Åtgärder' },
+  ],
+  [
+    { to: '/datakvalitet', label: 'Datakvalitet' },
+    { to: '/export', label: 'Export' },
+    { to: '/om', label: 'Om' },
+  ],
 ];
 
 export function Layout() {
@@ -38,20 +44,67 @@ export function Layout() {
       >
         Hoppa till innehåll
       </a>
-      <header className="border-b border-border bg-surface">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3">
-          <NavLink to="/" className="flex items-center gap-2 no-underline text-text">
-            <span aria-hidden="true" className="inline-block h-7 w-7 rounded-md bg-accent" />
-            <span className="font-semibold leading-tight">
+      <header className="sticky top-0 z-20 border-b border-border bg-surface">
+        <div className="mx-auto flex max-w-[90rem] items-center gap-4 px-4 py-2">
+          <NavLink to="/" className="flex shrink-0 items-center gap-2 text-text no-underline">
+            <span
+              aria-hidden="true"
+              className="grid h-6 w-6 place-items-center rounded-[3px] bg-accent font-cond text-[11px] font-semibold text-accent-contrast"
+            >
+              OT
+            </span>
+            <span className="font-cond text-[15px] font-semibold leading-tight">
               OT/IoT Security Intelligence
-              <span className="block text-xs font-normal text-muted">
-                Publik kunskapsbas · defensiv
-              </span>
             </span>
           </NavLink>
-          <div className="flex items-center gap-2">
-            <button type="button" className="btn" onClick={toggle} aria-pressed={theme === 'dark'}>
-              {theme === 'dark' ? 'Ljust tema' : 'Mörkt tema'}
+          <nav
+            id="primary-nav"
+            aria-label="Huvudnavigation"
+            className={`${menuOpen ? 'block' : 'hidden'} absolute inset-x-0 top-full border-b border-border bg-surface lg:static lg:block lg:border-0 lg:bg-transparent`}
+          >
+            <ul className="flex flex-col gap-0.5 px-2 py-2 lg:flex-row lg:items-center lg:p-0">
+              {NAV.map((group, gi) => (
+                <li
+                  key={gi}
+                  className={
+                    gi > 0
+                      ? 'mt-1 border-t border-rule pt-1 lg:mt-0 lg:ml-2 lg:border-t-0 lg:border-l lg:pt-0 lg:pl-2'
+                      : ''
+                  }
+                >
+                  <ul className="flex flex-col gap-0.5 lg:flex-row">
+                    {group.map((n) => (
+                      <li key={n.to}>
+                        <NavLink
+                          to={n.to}
+                          end={n.to === '/'}
+                          onClick={() => setMenuOpen(false)}
+                          className={({ isActive }) =>
+                            `block rounded-[3px] px-2.5 py-1 text-sm no-underline ${
+                              isActive
+                                ? 'bg-accent text-accent-contrast'
+                                : 'text-text hover:bg-surface-2'
+                            }`
+                          }
+                        >
+                          {n.label}
+                        </NavLink>
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          <div className="ml-auto flex items-center gap-2">
+            <button
+              type="button"
+              className="btn"
+              onClick={toggle}
+              aria-pressed={theme === 'dark'}
+              title={theme === 'dark' ? 'Byt till ljust tema' : 'Byt till mörkt tema'}
+            >
+              {theme === 'dark' ? 'Ljust' : 'Mörkt'}
             </button>
             <button
               type="button"
@@ -64,36 +117,12 @@ export function Layout() {
             </button>
           </div>
         </div>
-        <nav
-          id="primary-nav"
-          aria-label="Huvudnavigation"
-          className={`${menuOpen ? 'block' : 'hidden'} border-t border-border lg:block`}
-        >
-          <ul className="mx-auto flex max-w-7xl flex-col gap-1 px-2 py-2 lg:flex-row lg:flex-wrap lg:px-4">
-            {NAV.map((n) => (
-              <li key={n.to}>
-                <NavLink
-                  to={n.to}
-                  end={n.to === '/'}
-                  onClick={() => setMenuOpen(false)}
-                  className={({ isActive }) =>
-                    `block rounded-md px-3 py-1.5 text-sm no-underline ${
-                      isActive ? 'bg-accent text-accent-contrast' : 'text-text hover:bg-surface-2'
-                    }`
-                  }
-                >
-                  {n.label}
-                </NavLink>
-              </li>
-            ))}
-          </ul>
-        </nav>
       </header>
-      <main id="main" className="mx-auto w-full max-w-7xl flex-1 px-4 py-6">
+      <main id="main" className="mx-auto w-full max-w-[90rem] flex-1 px-4 py-5">
         <Outlet />
       </main>
       <footer className="border-t border-border bg-surface">
-        <div className="mx-auto max-w-7xl px-4 py-4 text-xs text-muted">
+        <div className="mx-auto max-w-[90rem] px-4 py-4 text-xs text-muted">
           <p>
             Publik produkt- och hotkunskapsbas. Innehåller inga anläggningsunika uppgifter. Frånvaro
             av CVE är inte bevis för frånvaro av sårbarheter. Ingen exploateringsvägledning.

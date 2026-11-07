@@ -17,6 +17,13 @@ describe('URL-filter', () => {
     expect(f.dir).toBe('desc');
     expect(countActiveFilters(f)).toBe(5);
   });
+  it('tolkar snabbfilter (has) och allvarlighetssortering', () => {
+    const f = parseFilters(new URLSearchParams('has=kev,bogus,defaultpw&sort=severity'));
+    expect(f.has).toEqual(['kev', 'defaultpw']);
+    expect(f.sort).toBe('severity');
+    expect(countActiveFilters(f)).toBe(1);
+    expect(serializeFilters(f).toString()).toBe('has=kev%2Cdefaultpw&sort=severity');
+  });
   it('ignorerar ogiltiga värden', () => {
     const f = parseFilters(new URLSearchParams('kind=hacker&kev=maybe&sort=evil&dir=sideways'));
     expect(f.kind).toBe('all');

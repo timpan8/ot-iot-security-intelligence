@@ -33,6 +33,7 @@ export function VulnerabilitiesPage() {
   const [onlyKev, setOnlyKev] = useState(false);
   const [poc, setPoc] = useState<'any' | PublicPocStatus>('any');
   const [material, setMaterial] = useState<'any' | MaterialTypeCode>('any');
+  const [sort, setSort] = useState<'severity' | 'newest'>('severity');
   const rows = useMemo(() => {
     const needle = q.trim().toLowerCase();
     return d.vulnerabilities
@@ -46,8 +47,15 @@ export function VulnerabilitiesPage() {
               .toLowerCase()
               .includes(needle)),
       )
-      .sort((a, b) => b.cve_id.localeCompare(a.cve_id));
-  }, [d, q, onlyKev, poc, material]);
+      .sort((a, b) => {
+        if (sort === 'newest') return b.cve_id.localeCompare(a.cve_id);
+        const sa = bestCvss(a)?.base_score ?? -1;
+        const sb = bestCvss(b)?.base_score ?? -1;
+        return (
+          Number(b.kev.listed) - Number(a.kev.listed) || sb - sa || b.cve_id.localeCompare(a.cve_id)
+        );
+      });
+  }, [d, q, onlyKev, poc, material, sort]);
   const pocCounts = useMemo(() => {
     const m = new Map<string, number>();
     for (const v of d.vulnerabilities)
@@ -115,6 +123,20 @@ export function VulnerabilitiesPage() {
             ))}
           </select>
         </div>
+        <div>
+          <label htmlFor="vsort" className="block text-xs font-medium text-muted">
+            Sortering
+          </label>
+          <select
+            id="vsort"
+            className="input mt-1"
+            value={sort}
+            onChange={(e) => setSort(e.target.value as typeof sort)}
+          >
+            <option value="severity">KEV och högst CVSS först</option>
+            <option value="newest">Nyast CVE-id först</option>
+          </select>
+        </div>
         <span className="text-sm text-muted" role="status">
           {rows.length} poster
         </span>
@@ -147,7 +169,7 @@ export function VulnerabilitiesPage() {
                 const uniq = [...new Map(products.map((p) => [p.id, p])).values()];
                 return (
                   <tr key={v.id}>
-                    <td>
+                    <td className={`whitespace-nowrap ${v.kev.listed ? 'bar-danger' : ''}`}>
                       <Link to={`/sarbarheter/${v.cve_id}`} className="font-mono text-sm">
                         {v.cve_id}
                       </Link>
@@ -155,11 +177,18 @@ export function VulnerabilitiesPage() {
                         {nvdStatusLabel[v.nvd_status] ?? v.nvd_status}
                       </div>
                     </td>
-                    <td className="max-w-md text-xs">{v.summary_sv ?? v.summary}</td>
-                    <td className="text-sm tabular-nums">
+                    <td className="max-w-md text-xs">
+                      <span className="clamp-2" title={v.summary_sv ?? v.summary}>
+                        {v.summary_sv ?? v.summary}
+                      </span>
+                    </td>
+                    <td className="num whitespace-nowrap text-sm">
                       {c ? (
                         <>
-                          {fmtScore(c.base_score)} (v{c.version})
+                          <span className={c.base_score >= 9 ? 'font-semibold text-danger' : ''}>
+                            {fmtScore(c.base_score)}
+                          </span>{' '}
+                          <span className="text-xs text-muted">v{c.version}</span>
                           {c.from === 'register' ? (
                             <div className="text-xs text-muted">registret</div>
                           ) : null}
@@ -168,12 +197,11 @@ export function VulnerabilitiesPage() {
                         <span className="text-muted">Okänt</span>
                       )}
                     </td>
-                    <td className="text-xs tabular-nums">
+                    <td className="num whitespace-nowrap text-xs">
                       {v.epss ? (
-                        <>
+                        <span title={`EPSS ${fmtDate(v.epss.date)}`}>
                           {fmtPct(v.epss.score, 2)}
-                          <div className="text-muted">{fmtDate(v.epss.date)}</div>
-                        </>
+                        </span>
                       ) : (
                         <span className="text-muted">Okänt</span>
                       )}
@@ -182,13 +210,17 @@ export function VulnerabilitiesPage() {
                       {v.kev.listed ? (
                         <Badge tone="danger">KEV {fmtDate(v.kev.date_added)}</Badge>
                       ) : (
-                        <Badge>Ej i KEV</Badge>
+                        <span className="text-muted">–</span>
                       )}
                     </td>
                     <td className="text-xs">
                       {v.threat_intel ? (
                         <>
-                          <PocBadge status={v.threat_intel.public_poc_status} short />
+                          {v.threat_intel.public_poc_status === 'none_reported_at_assessment' ? (
+                            <span className="text-muted">Ingen uppgiven</span>
+                          ) : (
+                            <PocBadge status={v.threat_intel.public_poc_status} short />
+                          )}
                           {v.threat_intel.material_type_code !== 'none_verified' ? (
                             <div className="mt-1 text-muted">
                               {materialTypeLabel[v.threat_intel.material_type_code]}

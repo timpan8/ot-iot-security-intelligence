@@ -4,6 +4,8 @@ import {
   useRouteError,
   isRouteErrorResponse,
   Link,
+  Navigate,
+  useLocation,
 } from 'react-router';
 import { DatasetProvider, useDatasetState } from '@/data/DatasetContext';
 import { Layout } from './Layout';
@@ -21,7 +23,6 @@ import { AboutPage } from '@/features/about/AboutPage';
 import { PrioritizationPage } from '@/features/prioritization/PrioritizationPage';
 import { ExportPage } from '@/features/export/ExportPage';
 import { AccountsPage } from '@/features/accounts/AccountsPage';
-import { ProductOverviewPage } from '@/features/overview/ProductOverviewPage';
 import { Callout } from '@/components/ui';
 
 function DataGate({ children }: { children: React.ReactNode }) {
@@ -75,6 +76,25 @@ function NotFound() {
   );
 }
 
+/**
+ * Snabböversikten är sammanslagen med katalogen (utfällbara rader).
+ * Gamla länkar (#/oversikt?scope=…&has=…&sort=…) översätts till katalogens filter.
+ */
+function OverviewRedirect() {
+  const { search } = useLocation();
+  const old = new URLSearchParams(search);
+  const next = new URLSearchParams();
+  const scope = old.get('scope');
+  if (scope === 'products') next.set('kind', 'product_family');
+  if (scope === 'protocols') next.set('kind', 'protocol_service');
+  const origin = old.get('origin');
+  if (origin === 'original' || origin === 'new') next.set('origin', origin);
+  const has = old.get('has');
+  if (has) next.set('has', has);
+  next.set('sort', old.get('sort') === 'name' ? 'name' : 'severity');
+  return <Navigate to={`/katalog?${next.toString()}`} replace />;
+}
+
 const gate = (el: React.ReactNode) => <DataGate>{el}</DataGate>;
 
 const router = createHashRouter([
@@ -96,7 +116,7 @@ const router = createHashRouter([
       { path: 'datakvalitet', element: gate(<DataQualityPage />) },
       { path: 'export', element: gate(<ExportPage />) },
       { path: 'konton', element: gate(<AccountsPage />) },
-      { path: 'oversikt', element: gate(<ProductOverviewPage />) },
+      { path: 'oversikt', element: <OverviewRedirect /> },
       { path: 'om', element: <AboutPage /> },
       { path: '*', element: <NotFound /> },
     ],

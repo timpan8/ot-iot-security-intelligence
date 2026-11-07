@@ -83,22 +83,26 @@ test.describe('Röktest – publik kunskapsbas', () => {
     await expect(page.getByText(/bevisar inte att offentlig/).first()).toBeVisible();
   });
 
-  test('snabböversikten samlar allt per produkt och KEV-filtret begränsar urvalet', async ({
+  test('gamla snabböversikten leder till katalogen; KEV-filter och utfälld rad visar allt per produkt', async ({
     page,
   }) => {
     await page.goto('#/oversikt?sort=severity');
-    await expect(
-      page.getByRole('heading', { level: 1, name: /Snabböversikt per produkt/ }),
-    ).toBeVisible();
-    await expect(page.getByText('125 av 125 poster')).toBeVisible();
+    await expect(page).toHaveURL(/#\/katalog\?sort=severity/);
+    await expect(page.getByRole('heading', { level: 1, name: 'Katalog' })).toBeVisible();
+    await expect(page.getByRole('status')).toHaveText(/^125 av 125 poster$/);
     // Defensiv disciplin: tydlig text om att inga lösenordsvärden finns
-    await expect(page.getByText(/Inga lösenordsvärden finns i underlaget/).first()).toBeVisible();
-    // KEV-filtret ska minska antalet poster
-    await page.getByRole('button', { name: 'KEV' }).click();
-    await expect(page.getByText(/^2 av 125 poster$/)).toBeVisible();
-    // Första kortet (KEV-sorterat) visar en KEV-badge och en CVE-länk
+    await expect(
+      page.getByText(/Underlaget innehåller inga lösenordsvärden/).first(),
+    ).toBeVisible();
+    // KEV-snabbfiltret ska minska antalet poster och speglas i URL
+    await page.getByRole('button', { name: /CVE i CISA KEV/ }).click();
+    await expect(page.getByRole('status')).toHaveText(/^2 av 125 poster$/);
+    await expect(page).toHaveURL(/has=kev/);
     await expect(page.getByText('KEV ×1').first()).toBeVisible();
+    // Fäll ut raden: konto, lösenordstyp och CVE-lista utan att lämna katalogen
+    await page.getByRole('button', { name: /Visa detaljer för Unitronics Vision/ }).click();
     await expect(page.getByRole('link', { name: 'CVE-2023-6448' }).first()).toBeVisible();
+    await expect(page.getByText('Initiallösenord (typ, aldrig värde)').first()).toBeVisible();
   });
 
   test('inga externa länkar utan säkra attribut', async ({ page }) => {

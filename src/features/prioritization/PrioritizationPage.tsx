@@ -20,6 +20,7 @@ const FACTORS = [
 export function PrioritizationPage() {
   const d = useDataset();
   const [action, setAction] = useState<string>('all');
+  const [why, setWhy] = useState(false);
   const rows = useMemo(() => {
     const order = RecommendedAction.options;
     return d.entries
@@ -72,8 +73,12 @@ export function PrioritizationPage() {
         <Section
           title={`Poster (${rows.length})`}
           id="poster"
-          description="Faktorer: hot/sannolikhet (KEV, EPSS, attackförutsättningar), teknisk allvarlighet (CVSS + leverantörskontext), faktisk relevans (styrkt versionsmatchning), exponering (alltid okänd här), OT-konsekvens, skydd/genomförbarhet och datakvalitet."
+          description="Faktorer: hot/sannolikhet (KEV, EPSS, attackförutsättningar), teknisk allvarlighet (CVSS + leverantörskontext), faktisk relevans (styrkt versionsmatchning), exponering (alltid okänd här), OT-konsekvens, skydd/genomförbarhet och datakvalitet. Håll muspekaren över en nivå för att se underlaget."
         >
+          <label className="mb-3 flex items-center gap-2 text-sm">
+            <input type="checkbox" checked={why} onChange={(e) => setWhy(e.target.checked)} />
+            Visa motiveringar i tabellen
+          </label>
           <div className="overflow-x-auto">
             <table className="table">
               <thead>
@@ -81,7 +86,7 @@ export function PrioritizationPage() {
                   <th scope="col">Post</th>
                   <th scope="col">Åtgärd</th>
                   {FACTORS.map((f) => (
-                    <th key={f} scope="col" className="text-xs">
+                    <th key={f} scope="col" className="whitespace-normal text-xs">
                       {factorName[f]}
                     </th>
                   ))}
@@ -97,20 +102,24 @@ export function PrioritizationPage() {
                       >
                         {e.name}
                       </Link>
-                      <div className="text-xs text-muted">
-                        {e.category} · <VerificationBadge status={e.verification_status} />
+                      <div className="mt-0.5 flex flex-wrap items-center gap-1.5 text-xs text-muted">
+                        {e.category} <VerificationBadge status={e.verification_status} />
                       </div>
                     </td>
-                    <td className="text-xs">
+                    <td className="text-xs" title={e.risk.rationale}>
                       {actionLabel[e.risk.recommended_action]}
-                      <div className="mt-1 max-w-xs text-muted">{e.risk.rationale}</div>
+                      {why ? (
+                        <div className="mt-1 max-w-xs text-muted">{e.risk.rationale}</div>
+                      ) : null}
                     </td>
                     {FACTORS.map((f) => (
-                      <td key={f}>
+                      <td key={f} title={e.risk[f].basis}>
                         <FactorBadge level={e.risk[f].level} />
-                        <div className="mt-1 max-w-[12rem] text-xs text-muted">
-                          {e.risk[f].basis}
-                        </div>
+                        {why ? (
+                          <div className="mt-1 max-w-[12rem] text-xs text-muted">
+                            {e.risk[f].basis}
+                          </div>
+                        ) : null}
                       </td>
                     ))}
                   </tr>

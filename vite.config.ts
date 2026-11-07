@@ -18,6 +18,8 @@ export default defineConfig({
   },
   build: {
     sourcemap: false,
+    // CSP tillåter inte data:-typsnitt (font-src 'self') – inline aldrig tillgångar
+    assetsInlineLimit: 0,
     target: 'es2022',
   },
 });
