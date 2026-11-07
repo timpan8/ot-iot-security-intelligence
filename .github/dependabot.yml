@@ -12,6 +12,10 @@ updates:
       npm-minor-patch:
         update-types: [minor, patch]
     labels: [dependencies]
+    ignore:
+      # typescript-eslint stöder inte TS 7 än; ta bort när det gör det.
+      - dependency-name: typescript
+        update-types: ['version-update:semver-major']
   - package-ecosystem: github-actions
     directory: /
     schedule:

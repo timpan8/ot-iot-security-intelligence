@@ -1108,6 +1108,14 @@
                 "null"
               ]
             },
+            "identity_verified": {
+              "default": false,
+              "type": "boolean"
+            },
+            "exact_manual_missing": {
+              "default": false,
+              "type": "boolean"
+            },
             "is_verified_setup_manual": {
               "type": "boolean"
             },
@@ -1143,6 +1151,8 @@
             "scope_text",
             "verification_text",
             "fetch_status_text",
+            "identity_verified",
+            "exact_manual_missing",
             "is_verified_setup_manual",
             "source_id",
             "checked_at"
