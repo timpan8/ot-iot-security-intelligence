@@ -1,0 +1,673 @@
+[
+  {
+    "id": "ctl-asset-version-verification",
+    "name": "Fastställ modell, hårdvarurevision och firmwareversion",
+    "goal": "Göra sårbarhetsmatchning möjlig; utan exakt version är varje CVE-bedömning 'okänd'.",
+    "description": "Inventera varje enhet med exakt produktmodell, hårdvarurevision, firmware-/programvaruversion och installerade moduler/komponenter. Dokumentera i en skyddad asset-inventering (inte i denna publika katalog).",
+    "effect": "Gör det möjligt att avgöra berörd/ej berörd per bulletin och prioritera rätt.",
+    "limitations": "Kräver åtkomst till enheter eller dokumentation; versionsuppgifter kan vara dolda bakom partnerportaler.",
+    "ot_suitability": "high",
+    "requires_operational_approval": false,
+    "order_hint": 1,
+    "depends_on_control_ids": [],
+    "category_scope": [],
+    "protocol_scope": [],
+    "vendor_guide_url": null,
+    "framework_refs": [
+      {
+        "framework": "NIST CSF 2.0",
+        "reference": "ID.AM-01/ID.AM-02",
+        "note": "Inventering av hårdvara och programvara",
+        "status": "mapped_reference"
+      },
+      {
+        "framework": "IEC 62443",
+        "reference": "62443-2-1 (inventering/SPE)",
+        "note": null,
+        "status": "mapped_reference"
+      },
+      {
+        "framework": "Cybersäkerhetslagen",
+        "reference": "Tillgångsinventering (generellt krav)",
+        "note": "Ingen juridisk bedömning",
+        "status": "informational"
+      }
+    ],
+    "source_ids": [
+      "src-nist-sp800-82r3"
+    ]
+  },
+  {
+    "id": "ctl-no-public-admin",
+    "name": "Ingen direkt publik exponering av administrations- eller styrgränssnitt",
+    "goal": "Eliminera internetexponering av webbadministration, protokollportar och fjärrtjänster.",
+    "description": "Blockera inkommande trafik från internet till enhetens webbgränssnitt och OT-protokoll. Ta bort port forwarding. Publicera aldrig lokala paneler direkt; använd leverantörens molntjänst (om sådan används och godkänts) eller skyddad fjärråtkomst.",
+    "effect": "Tar bort den vanligaste angreppsvägen för alla poster med 'P1 vid publik åtkomst'.",
+    "limitations": "Skyddar inte mot angrepp inifrån nätet eller via komprometterad fjärrtjänst.",
+    "ot_suitability": "high",
+    "requires_operational_approval": true,
+    "order_hint": 2,
+    "depends_on_control_ids": [
+      "ctl-asset-version-verification"
+    ],
+    "category_scope": [],
+    "protocol_scope": [],
+    "vendor_guide_url": null,
+    "framework_refs": [
+      {
+        "framework": "NIST SP 800-82r3",
+        "reference": "Nätverksarkitektur/segmentering (kap. 5–6)",
+        "note": null,
+        "status": "mapped_reference"
+      },
+      {
+        "framework": "NIST CSF 2.0",
+        "reference": "PR.IR-01",
+        "note": null,
+        "status": "mapped_reference"
+      }
+    ],
+    "source_ids": [
+      "src-nist-sp800-82r3"
+    ]
+  },
+  {
+    "id": "ctl-network-segmentation",
+    "name": "Nätsegmentering i zoner och ledningar (conduits)",
+    "goal": "Begränsa räckvidd och spridning; placera OT-enheter i egna zoner skilda från kontorsnät.",
+    "description": "Dela upp nätet i zoner (t.ex. styrsystem, övervakning, fjärråtkomst, IT) med brandväggar/ACL mellan zonerna. Tillåt endast nödvändiga flöden (källa, destination, port/protokoll, riktning). Logga nekade flöden.",
+    "effect": "Minskar påverkan av en komprometterad enhet och gör protokoll utan autentisering (Modbus, BACnet, S7comm) hanterbara.",
+    "limitations": "Kräver nätdesign och underhåll av regler; felaktiga regler kan störa drift.",
+    "ot_suitability": "high",
+    "requires_operational_approval": true,
+    "order_hint": 3,
+    "depends_on_control_ids": [
+      "ctl-asset-version-verification"
+    ],
+    "category_scope": [],
+    "protocol_scope": [],
+    "vendor_guide_url": null,
+    "framework_refs": [
+      {
+        "framework": "IEC 62443",
+        "reference": "62443-3-2 (zoner och conduits)",
+        "note": null,
+        "status": "mapped_reference"
+      },
+      {
+        "framework": "NIST SP 800-82r3",
+        "reference": "Defense-in-depth-arkitektur",
+        "note": null,
+        "status": "mapped_reference"
+      }
+    ],
+    "source_ids": [
+      "src-nist-sp800-82r3"
+    ]
+  },
+  {
+    "id": "ctl-protocol-firewall-allowlist",
+    "name": "Protokollmedveten filtrering (funktionskoder, kommandon)",
+    "goal": "Tillåt endast läsning eller godkända funktioner över OT-protokoll från godkända källor.",
+    "description": "Använd industriella brandväggar/ACL som kan filtrera t.ex. Modbus-funktionskoder, CIP-tjänster eller BACnet-tjänster, och begränsa skrivkommandon till kända engineering-/SCADA-stationer.",
+    "effect": "Minskar risken för obehöriga styrkommandon även när protokollet saknar autentisering.",
+    "limitations": "Kräver stöd i utrustning och kunskap om normal trafik; kan ge falska blockeringar.",
+    "ot_suitability": "medium",
+    "requires_operational_approval": true,
+    "order_hint": 4,
+    "depends_on_control_ids": [
+      "ctl-network-segmentation"
+    ],
+    "category_scope": [
+      "Tjänst",
+      "PLC",
+      "RTU",
+      "DCS"
+    ],
+    "protocol_scope": [
+      "svc-modbus-tcp",
+      "svc-ethernet-ip-cip",
+      "svc-s7comm",
+      "svc-bacnet-ip",
+      "svc-iec-104-dnp3",
+      "svc-iec-61850-mms"
+    ],
+    "vendor_guide_url": null,
+    "framework_refs": [
+      {
+        "framework": "IEC 62443",
+        "reference": "62443-3-3 SR 5.x (restricted data flow)",
+        "note": null,
+        "status": "mapped_reference"
+      }
+    ],
+    "source_ids": [
+      "src-nist-sp800-82r3"
+    ]
+  },
+  {
+    "id": "ctl-secure-remote-access",
+    "name": "Skyddad fjärråtkomst (VPN/jump host, MFA där möjligt)",
+    "goal": "Ersätta direkt exponering med autentiserad, loggad och tidsbegränsad fjärråtkomst.",
+    "description": "All fjärråtkomst via VPN eller fjärråtkomstgateway med individuella konton, MFA där tekniken medger, aktivering per servicefönster och fullständig loggning. Leverantörsåtkomst styrs och övervakas.",
+    "effect": "Kraftigt minskad angreppsyta för webbpaneler, RDP/VNC/SSH och fjärrservice.",
+    "limitations": "VPN/gateway blir själv kritisk komponent och måste patchas; MFA stöds sällan av OT-enheten själv.",
+    "ot_suitability": "high",
+    "requires_operational_approval": true,
+    "order_hint": 5,
+    "depends_on_control_ids": [
+      "ctl-no-public-admin"
+    ],
+    "category_scope": [],
+    "protocol_scope": [
+      "svc-ot-remote-admin",
+      "svc-web-hmi-scada"
+    ],
+    "vendor_guide_url": "https://www.cisa.gov/sites/default/files/2023-01/RP_Managing_Remote_Access_S508NC.pdf",
+    "framework_refs": [
+      {
+        "framework": "CISA",
+        "reference": "Managing Remote Access for ICS",
+        "note": null,
+        "status": "mapped_reference"
+      },
+      {
+        "framework": "NIST CSF 2.0",
+        "reference": "PR.AA-03/PR.AA-05",
+        "note": null,
+        "status": "mapped_reference"
+      }
+    ],
+    "source_ids": [
+      "src-cisa-remote-access-ics"
+    ]
+  },
+  {
+    "id": "ctl-change-default-credentials",
+    "name": "Byt standardlösenord och ta bort inbyggda konton där möjligt",
+    "goal": "Eliminera kända/förutsägbara autentiseringsuppgifter.",
+    "description": "Byt alla standardlösenord vid driftsättning, använd unika konton per person/system och inaktivera eller begränsa inbyggda servicekonton. Där inbyggda konton inte kan tas bort (t.ex. dokumenterat i vissa bulletiner) krävs kompenserande nätskydd.",
+    "effect": "Direkt relevant för KEV-listade brister av typen standardlösenord (t.ex. CVE-2023-6448).",
+    "limitations": "Vissa enheter har hårdkodade konton som bara firmwareuppdatering åtgärdar.",
+    "ot_suitability": "high",
+    "requires_operational_approval": false,
+    "order_hint": 6,
+    "depends_on_control_ids": [],
+    "category_scope": [],
+    "protocol_scope": [],
+    "vendor_guide_url": null,
+    "framework_refs": [
+      {
+        "framework": "IEC 62443",
+        "reference": "62443-3-3 SR 1.x (identification & authentication)",
+        "note": null,
+        "status": "mapped_reference"
+      },
+      {
+        "framework": "NIST CSF 2.0",
+        "reference": "PR.AA-01",
+        "note": null,
+        "status": "mapped_reference"
+      }
+    ],
+    "source_ids": []
+  },
+  {
+    "id": "ctl-least-privilege-accounts",
+    "name": "Rollbaserad behörighet och minsta privilegium",
+    "goal": "Begränsa vad ett komprometterat konto kan göra.",
+    "description": "Rollstyrning i produkten (operatör/ingenjör/admin), inga delade adminkonton, regelbunden behörighetsöversyn, begränsa behörighet till konfigurationsfunktioner (t.ex. grafik-/skriptredigering).",
+    "effect": "Minskar påverkan av autentiserade sårbarheter (PR:L/PR:H) och klientkodkörning.",
+    "limitations": "Kräver att produkten stöder roller; administrativt underhåll.",
+    "ot_suitability": "high",
+    "requires_operational_approval": false,
+    "order_hint": 7,
+    "depends_on_control_ids": [],
+    "category_scope": [],
+    "protocol_scope": [],
+    "vendor_guide_url": null,
+    "framework_refs": [
+      {
+        "framework": "IEC 62443",
+        "reference": "62443-3-3 SR 2.1 (authorization enforcement)",
+        "note": null,
+        "status": "mapped_reference"
+      }
+    ],
+    "source_ids": []
+  },
+  {
+    "id": "ctl-vendor-firmware-update",
+    "name": "Uppdatera firmware/programvara enligt tillverkarens bulletin",
+    "goal": "Avlägsna verifierade sårbarheter där tillverkaren släppt fix.",
+    "description": "Planera uppdatering i servicefönster efter test, med backup av konfiguration och återställningsplan. Verifiera fixversion mot primärkälla (bulletin/CSAF), inte mot sekundära uppgifter.",
+    "effect": "Tar bort sårbarheten i stället för att bara minska exponeringen.",
+    "limitations": "Kräver driftstopp/godkännande; EOL-produkter saknar fix; versionsuppgifter måste verifieras.",
+    "ot_suitability": "medium",
+    "requires_operational_approval": true,
+    "order_hint": 8,
+    "depends_on_control_ids": [
+      "ctl-asset-version-verification",
+      "ctl-backup-restore"
+    ],
+    "category_scope": [],
+    "protocol_scope": [],
+    "vendor_guide_url": null,
+    "framework_refs": [
+      {
+        "framework": "NIST SP 800-82r3",
+        "reference": "Patch management i OT (kap. 6)",
+        "note": null,
+        "status": "mapped_reference"
+      },
+      {
+        "framework": "NIST CSF 2.0",
+        "reference": "ID.RA-01/PR.PS-02",
+        "note": null,
+        "status": "mapped_reference"
+      }
+    ],
+    "source_ids": [
+      "src-nist-sp800-82r3"
+    ]
+  },
+  {
+    "id": "ctl-https-strict-mode",
+    "name": "Aktivera HTTPS/TLS och produktens strikta säkerhetsläge",
+    "goal": "Skydda administrationstrafik och aktivera inbyggda härdningslägen.",
+    "description": "Tvinga HTTPS för webbgränssnitt, byt ut standardcertifikat, aktivera produktens 'strict'/'secure'-läge där det finns (t.ex. Danfoss Strict Mode, Weintek Force HTTPS) och stäng av okrypterade protokollvarianter.",
+    "effect": "Minskar risk för avlyssning och sessionskapning.",
+    "limitations": "Certifikathantering krävs; vissa äldre klienter stöder inte TLS.",
+    "ot_suitability": "high",
+    "requires_operational_approval": false,
+    "order_hint": 9,
+    "depends_on_control_ids": [],
+    "category_scope": [
+      "Kyla",
+      "BMS",
+      "HMI",
+      "Energi",
+      "Kamera",
+      "NAS",
+      "Gateway",
+      "SCADA"
+    ],
+    "protocol_scope": [
+      "svc-web-hmi-scada"
+    ],
+    "vendor_guide_url": null,
+    "framework_refs": [
+      {
+        "framework": "IEC 62443",
+        "reference": "62443-3-3 SR 4.1 (information confidentiality)",
+        "note": null,
+        "status": "mapped_reference"
+      }
+    ],
+    "source_ids": []
+  },
+  {
+    "id": "ctl-secure-protocol-features",
+    "name": "Aktivera protokollens säkerhetsfunktioner (OPC UA signering/kryptering, MQTT-TLS, BACnet/SC, CIP Security, Secure ADS, IEC 62351)",
+    "goal": "Använd autentisering och kryptering där protokollet erbjuder det.",
+    "description": "Konfigurera OPC UA med SignAndEncrypt och certifikatförtroende, MQTT med TLS och per-klient-behörigheter per topic, BACnet/SC eller BACnet över skyddad zon, CIP Security där PLC/moduler stöder det, Beckhoff Secure ADS, IEC 62351 för IEC 61850/104 när stöd finns.",
+    "effect": "Minskar beroendet av enbart nätskydd.",
+    "limitations": "Stöd varierar kraftigt; äldre enheter saknar funktionerna; kräver test.",
+    "ot_suitability": "medium",
+    "requires_operational_approval": true,
+    "order_hint": 10,
+    "depends_on_control_ids": [
+      "ctl-network-segmentation"
+    ],
+    "category_scope": [
+      "Tjänst",
+      "PLC",
+      "OPC",
+      "SCADA",
+      "IoT"
+    ],
+    "protocol_scope": [
+      "svc-opc-ua",
+      "svc-mqtt",
+      "svc-bacnet-ip",
+      "svc-ethernet-ip-cip",
+      "svc-iec-61850-mms",
+      "svc-iec-104-dnp3"
+    ],
+    "vendor_guide_url": null,
+    "framework_refs": [
+      {
+        "framework": "IEC 62443",
+        "reference": "62443-4-2 (komponentkrav)",
+        "note": null,
+        "status": "mapped_reference"
+      }
+    ],
+    "source_ids": []
+  },
+  {
+    "id": "ctl-secure-plc-communication",
+    "name": "Tillåt endast säker PG/PC- och HMI-kommunikation samt skydda nycklar/projekt",
+    "goal": "Avveckla legacy-kommunikation som bygger på svagt skyddade delade nycklar.",
+    "description": "Konfigurera CPU:n till 'Only allow secure PG/PC and HMI communication' (Siemens), uppdatera CPU och TIA-projekt, skydda minneskort, projektfiler och engineering-stationer.",
+    "effect": "Adresserar SSA-568427/CVE-2022-38465 och liknande legacy-protokollrisker.",
+    "limitations": "Kräver att alla HMI/klienter stöder säker kommunikation; projektmigrering.",
+    "ot_suitability": "medium",
+    "requires_operational_approval": true,
+    "order_hint": 11,
+    "depends_on_control_ids": [
+      "ctl-vendor-firmware-update"
+    ],
+    "category_scope": [
+      "PLC",
+      "SCADA",
+      "HMI"
+    ],
+    "protocol_scope": [
+      "svc-s7comm"
+    ],
+    "vendor_guide_url": "https://cert-portal.siemens.com/productcert/html/ssa-568427.html",
+    "framework_refs": [
+      {
+        "framework": "IEC 62443",
+        "reference": "62443-3-3 SR 3.1 (communication integrity)",
+        "note": null,
+        "status": "mapped_reference"
+      }
+    ],
+    "source_ids": [
+      "src-siemens-ssa-568427-csaf"
+    ]
+  },
+  {
+    "id": "ctl-protect-engineering-access",
+    "name": "Skydda engineering-stationer och programmeringsåtkomst",
+    "goal": "Hindra obehörig omprogrammering av styrsystem.",
+    "description": "Aktivera åtkomstskydd/lösenordsnivåer i PLC (t.ex. TIA Security Wizard, FactoryTalk Security, IP-filter/säkerhetsnyckel i MELSEC), härda engineering-datorer, begränsa vilka stationer som får nå PLC:ns programmeringsport.",
+    "effect": "Minskar risken för logikändringar och projektstöld.",
+    "limitations": "Skyddsnivåer varierar mellan produkter; kan påverka servicearbete.",
+    "ot_suitability": "high",
+    "requires_operational_approval": true,
+    "order_hint": 12,
+    "depends_on_control_ids": [
+      "ctl-network-segmentation"
+    ],
+    "category_scope": [
+      "PLC",
+      "PLC/HMI",
+      "DCS",
+      "RTU"
+    ],
+    "protocol_scope": [
+      "svc-s7comm",
+      "svc-ethernet-ip-cip"
+    ],
+    "vendor_guide_url": null,
+    "framework_refs": [
+      {
+        "framework": "IEC 62443",
+        "reference": "62443-3-3 SR 2.x",
+        "note": null,
+        "status": "mapped_reference"
+      }
+    ],
+    "source_ids": []
+  },
+  {
+    "id": "ctl-disable-unused-services",
+    "name": "Stäng av oanvända tjänster och protokoll",
+    "goal": "Minska angreppsytan på varje enhet.",
+    "description": "Inaktivera FTP/Telnet/HTTP, okrypterade API:er (t.ex. HTTP Configuration API), UPnP, oanvända protokollstackar och felsökningsportar enligt tillverkarens härdningsguide.",
+    "effect": "Färre exponerade tjänster → färre tillämpliga sårbarheter.",
+    "limitations": "Kräver kunskap om vilka tjänster driften använder.",
+    "ot_suitability": "high",
+    "requires_operational_approval": true,
+    "order_hint": 13,
+    "depends_on_control_ids": [
+      "ctl-asset-version-verification"
+    ],
+    "category_scope": [],
+    "protocol_scope": [],
+    "vendor_guide_url": null,
+    "framework_refs": [
+      {
+        "framework": "IEC 62443",
+        "reference": "62443-3-3 SR 7.7 (least functionality)",
+        "note": null,
+        "status": "mapped_reference"
+      },
+      {
+        "framework": "NIST CSF 2.0",
+        "reference": "PR.PS-01",
+        "note": null,
+        "status": "mapped_reference"
+      }
+    ],
+    "source_ids": []
+  },
+  {
+    "id": "ctl-logging-monitoring",
+    "name": "Loggning, tidsynkronisering och övervakning",
+    "goal": "Upptäcka obehörig åtkomst och konfigurationsändringar.",
+    "description": "Aktivera enhetsloggar (inloggningar, konfigurationsändringar, larm), skicka till central logg där möjligt, synkronisera tid, övervaka nätflöden mot OT-zoner och larma på avvikelser.",
+    "effect": "Kortare upptäcktstid; underlag för incidenthantering.",
+    "limitations": "Många OT-enheter har begränsad loggning; kräver mottagare och rutiner.",
+    "ot_suitability": "high",
+    "requires_operational_approval": false,
+    "order_hint": 14,
+    "depends_on_control_ids": [],
+    "category_scope": [],
+    "protocol_scope": [],
+    "vendor_guide_url": null,
+    "framework_refs": [
+      {
+        "framework": "NIST CSF 2.0",
+        "reference": "DE.CM-01/DE.CM-09",
+        "note": null,
+        "status": "mapped_reference"
+      },
+      {
+        "framework": "Cybersäkerhetslagen",
+        "reference": "Incidenthantering (generellt krav)",
+        "note": "Ingen juridisk bedömning",
+        "status": "informational"
+      }
+    ],
+    "source_ids": [
+      "src-nist-sp800-82r3"
+    ]
+  },
+  {
+    "id": "ctl-backup-restore",
+    "name": "Säkerhetskopiering och testad återställning av konfiguration/projekt",
+    "goal": "Kunna återställa drift efter incident eller misslyckad uppdatering.",
+    "description": "Ta backup av styrsystemskonfiguration, projektfiler, recept och databaser; förvara offline/skyddat; testa återställning regelbundet; dokumentera återställningstid.",
+    "effect": "Minskar driftavbrott och ransomware-påverkan (särskilt NAS/historian).",
+    "limitations": "Backup skyddar inte mot kompromettering i sig; kräver rutiner.",
+    "ot_suitability": "high",
+    "requires_operational_approval": false,
+    "order_hint": 15,
+    "depends_on_control_ids": [],
+    "category_scope": [],
+    "protocol_scope": [],
+    "vendor_guide_url": null,
+    "framework_refs": [
+      {
+        "framework": "NIST CSF 2.0",
+        "reference": "PR.DS-11/RC.RP-01",
+        "note": null,
+        "status": "mapped_reference"
+      },
+      {
+        "framework": "Cybersäkerhetslagen",
+        "reference": "Kontinuitet (generellt krav)",
+        "note": "Ingen juridisk bedömning",
+        "status": "informational"
+      }
+    ],
+    "source_ids": [
+      "src-nist-sp800-82r3"
+    ]
+  },
+  {
+    "id": "ctl-eol-replacement",
+    "name": "Livscykelhantering: planera utbyte eller strikt isolering av EOL-produkter",
+    "goal": "Hantera produkter som inte längre får säkerhetsuppdateringar.",
+    "description": "Identifiera produkter med utgånget stöd (verifiera EOL-datum hos tillverkaren), planera migrering/utbyte, och till dess: strikt isolering, ingen fjärråtkomst, ökad övervakning och dokumenterad riskacceptans.",
+    "effect": "Begränsar risk när fix aldrig kommer.",
+    "limitations": "Kostnad och ledtid; EOL-uppgifter måste verifieras.",
+    "ot_suitability": "high",
+    "requires_operational_approval": true,
+    "order_hint": 16,
+    "depends_on_control_ids": [
+      "ctl-asset-version-verification",
+      "ctl-network-segmentation"
+    ],
+    "category_scope": [],
+    "protocol_scope": [],
+    "vendor_guide_url": null,
+    "framework_refs": [
+      {
+        "framework": "NIST CSF 2.0",
+        "reference": "ID.AM-08",
+        "note": null,
+        "status": "mapped_reference"
+      },
+      {
+        "framework": "Cybersäkerhetslagen",
+        "reference": "Leveranskedja/livscykel (generellt krav)",
+        "note": "Ingen juridisk bedömning",
+        "status": "informational"
+      }
+    ],
+    "source_ids": []
+  },
+  {
+    "id": "ctl-monitor-remote-service",
+    "name": "Styr och övervaka leverantörs- och fjärrservicetunnlar",
+    "goal": "Hantera risk från fjärrservicelösningar (t.ex. industriella VPN-routrar/-gateways) som inte syns utifrån.",
+    "description": "Inventera alla fjärrservicekanaler, kräv individuella konton och MFA i leverantörsportalen, aktivera tunnlar endast vid behov, logga sessioner, granska leverantörens säkerhetsarbete.",
+    "effect": "Minskar risk via komprometterad leverantör eller molntjänst.",
+    "limitations": "Beroende av leverantörens funktioner och avtal.",
+    "ot_suitability": "high",
+    "requires_operational_approval": true,
+    "order_hint": 17,
+    "depends_on_control_ids": [
+      "ctl-secure-remote-access"
+    ],
+    "category_scope": [
+      "Gateway",
+      "Kyla",
+      "Ventilation",
+      "Energi"
+    ],
+    "protocol_scope": [
+      "svc-ot-remote-admin"
+    ],
+    "vendor_guide_url": null,
+    "framework_refs": [
+      {
+        "framework": "NIST CSF 2.0",
+        "reference": "GV.SC (leveranskedja)",
+        "note": null,
+        "status": "mapped_reference"
+      }
+    ],
+    "source_ids": [
+      "src-cisa-remote-access-ics"
+    ]
+  },
+  {
+    "id": "ctl-cloud-not-inbound",
+    "name": "Skilj på molnanslutning och inkommande exponering",
+    "goal": "Undvika onödig port forwarding för produkter som redan har utgående molnanslutning.",
+    "description": "Produkter med molntjänst (t.ex. värmepumpar, ventilationsaggregat, växelriktare) ska nå molnet utgående; öppna aldrig inkommande portar till den lokala panelen. Följ tillverkarens avrådan från port forwarding.",
+    "effect": "Tar bort exponering utan funktionsförlust.",
+    "limitations": "Molntjänsten blir en beroendepunkt med egna risker.",
+    "ot_suitability": "high",
+    "requires_operational_approval": false,
+    "order_hint": 18,
+    "depends_on_control_ids": [
+      "ctl-no-public-admin"
+    ],
+    "category_scope": [
+      "Energi",
+      "Ventilation",
+      "IoT",
+      "Kyla"
+    ],
+    "protocol_scope": [],
+    "vendor_guide_url": null,
+    "framework_refs": [
+      {
+        "framework": "NIST CSF 2.0",
+        "reference": "PR.IR-01",
+        "note": null,
+        "status": "mapped_reference"
+      }
+    ],
+    "source_ids": []
+  },
+  {
+    "id": "ctl-vendor-hardening-guide",
+    "name": "Följ tillverkarens härdningsguide för produkten",
+    "goal": "Tillämpa produktspecifika inställningar som tillverkaren verifierat.",
+    "description": "Använd den produktspecifika härdnings-/säkerhetsguiden (där sådan finns – se dokumentationslänk och dokumentnivå per post). Där endast branschguide finns: begär produktspecifik vägledning från tillverkaren.",
+    "effect": "Säkerställer att produktens inbyggda skydd används korrekt.",
+    "limitations": "Många poster saknar verifierad produktspecifik guide (industry_guide_only).",
+    "ot_suitability": "high",
+    "requires_operational_approval": false,
+    "order_hint": 19,
+    "depends_on_control_ids": [],
+    "category_scope": [],
+    "protocol_scope": [],
+    "vendor_guide_url": null,
+    "framework_refs": [
+      {
+        "framework": "IEC 62443",
+        "reference": "62443-2-4 (leverantörens säkerhetsprogram)",
+        "note": null,
+        "status": "mapped_reference"
+      }
+    ],
+    "source_ids": []
+  },
+  {
+    "id": "ctl-supply-chain-vendor-risk",
+    "name": "Leverantörs- och komponentrisk (tredjepartskomponenter som CODESYS, inbäddade OS)",
+    "goal": "Hantera sårbarheter som kommer via inbyggda komponenter.",
+    "description": "Kartlägg vilka tredjepartskomponenter produkten bygger på (runtime, webbserver, OS), bevaka både komponent-CERT (t.ex. CERT@VDE) och tillverkarens bulletiner, och kräv SBOM/komponentinformation vid upphandling.",
+    "effect": "Fångar sårbarheter som inte syns under produktnamnet.",
+    "limitations": "Komponentinformation är ofta ofullständig; tillverkarens mappning krävs för att avgöra berörd version.",
+    "ot_suitability": "medium",
+    "requires_operational_approval": false,
+    "order_hint": 20,
+    "depends_on_control_ids": [
+      "ctl-asset-version-verification"
+    ],
+    "category_scope": [
+      "PLC",
+      "DCS",
+      "Gateway",
+      "HMI",
+      "SCADA"
+    ],
+    "protocol_scope": [],
+    "vendor_guide_url": null,
+    "framework_refs": [
+      {
+        "framework": "NIST CSF 2.0",
+        "reference": "GV.SC-04/ID.RA-10",
+        "note": null,
+        "status": "mapped_reference"
+      },
+      {
+        "framework": "Cybersäkerhetslagen",
+        "reference": "Leveranskedjesäkerhet (generellt krav)",
+        "note": "Ingen juridisk bedömning",
+        "status": "informational"
+      }
+    ],
+    "source_ids": []
+  }
+]

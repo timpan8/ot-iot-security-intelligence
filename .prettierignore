@@ -1,0 +1,7 @@
+node_modules
+dist
+public/data
+sources/raw
+sources/enrichment
+schemas/json
+package-lock.json

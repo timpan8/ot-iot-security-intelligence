@@ -1,0 +1,2737 @@
+[
+  {
+    "id": "src-workbook",
+    "url": "https://github.com/timpan8/ot-iot-security-intelligence/blob/main/sources/original/OT_IoT_sarbarhetsoversikt_66_system_2026-11-07.xlsx",
+    "title": "OT/IoT sårbarhetsöversikt, 66 system (arbetsbok 2026-11-07)",
+    "publisher": "Projektets ursprungliga inventering",
+    "source_type": "internal_workbook",
+    "is_primary": false,
+    "published_at": "2026-11-07",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": "2026-11-07",
+    "availability": "ok",
+    "http_status": null,
+    "supports_claims": [],
+    "access_note": null,
+    "notes": "Alla 66 poster och originalfält härstammar härifrån (sha256 1a09ad42eb3590bdb6be2f79b61a84b617657228e2ff678d2e932ca8a3242d0d)."
+  },
+  {
+    "id": "src-nvd-cve-2025-41450",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-41450",
+    "title": "NVD: CVE-2025-41450",
+    "publisher": "NIST NVD (CNA: Danfoss)",
+    "source_type": "database",
+    "is_primary": true,
+    "published_at": "2025-05-08",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": "2026-11-07",
+    "availability": "ok",
+    "http_status": 200,
+    "supports_claims": [
+      {
+        "entity_id": "cve-2025-41450",
+        "field": "*",
+        "note": "Hämtad via NVD CVE API 2.0"
+      }
+    ],
+    "access_note": null,
+    "notes": "lastModified 2026-10-19; status Deferred."
+  },
+  {
+    "id": "src-nvd-cve-2025-41451",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-41451",
+    "title": "NVD: CVE-2025-41451",
+    "publisher": "NIST NVD (CNA: Danfoss)",
+    "source_type": "database",
+    "is_primary": true,
+    "published_at": "2025-08-22",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": "2026-11-07",
+    "availability": "ok",
+    "http_status": 200,
+    "supports_claims": [
+      {
+        "entity_id": "cve-2025-41451",
+        "field": "*",
+        "note": null
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-nvd-cve-2025-41452",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-41452",
+    "title": "NVD: CVE-2025-41452",
+    "publisher": "NIST NVD (CNA: Danfoss)",
+    "source_type": "database",
+    "is_primary": true,
+    "published_at": "2025-08-22",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": "2026-11-07",
+    "availability": "ok",
+    "http_status": 200,
+    "supports_claims": [
+      {
+        "entity_id": "cve-2025-41452",
+        "field": "*",
+        "note": null
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-nvd-cve-2026-34223",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34223",
+    "title": "NVD: CVE-2026-34223",
+    "publisher": "NIST NVD (CNA: Siemens ProductCERT)",
+    "source_type": "database",
+    "is_primary": true,
+    "published_at": "2026-09-08",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": "2026-11-07",
+    "availability": "ok",
+    "http_status": 200,
+    "supports_claims": [
+      {
+        "entity_id": "cve-2026-34223",
+        "field": "*",
+        "note": "Beskrivningstexten räknar upp alla produkter i bulletinen; berörd/ej berörd avgörs av CSAF product_status."
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-nvd-cve-2026-21718",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21718",
+    "title": "NVD: CVE-2026-21718",
+    "publisher": "NIST NVD (CNA: CISA)",
+    "source_type": "database",
+    "is_primary": true,
+    "published_at": "2026-02-27",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": "2026-11-07",
+    "availability": "ok",
+    "http_status": 200,
+    "supports_claims": [
+      {
+        "entity_id": "cve-2026-21718",
+        "field": "*",
+        "note": null
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-nvd-cve-2025-52551",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-52551",
+    "title": "NVD: CVE-2025-52551",
+    "publisher": "NIST NVD (CNA: Armis)",
+    "source_type": "database",
+    "is_primary": true,
+    "published_at": "2025-09-02",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": "2026-11-07",
+    "availability": "ok",
+    "http_status": 200,
+    "supports_claims": [
+      {
+        "entity_id": "cve-2025-52551",
+        "field": "*",
+        "note": null
+      }
+    ],
+    "access_note": null,
+    "notes": "Ingen CPE/versionsavgränsning i NVD (Deferred)."
+  },
+  {
+    "id": "src-nvd-cve-2025-6519",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-6519",
+    "title": "NVD: CVE-2025-6519",
+    "publisher": "NIST NVD (CNA: Armis)",
+    "source_type": "database",
+    "is_primary": true,
+    "published_at": "2025-09-02",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": "2026-11-07",
+    "availability": "ok",
+    "http_status": 200,
+    "supports_claims": [
+      {
+        "entity_id": "cve-2025-6519",
+        "field": "*",
+        "note": null
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-nvd-cve-2025-52543",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-52543",
+    "title": "NVD: CVE-2025-52543",
+    "publisher": "NIST NVD (CNA: Armis)",
+    "source_type": "database",
+    "is_primary": true,
+    "published_at": "2025-09-02",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": "2026-11-07",
+    "availability": "ok",
+    "http_status": 200,
+    "supports_claims": [
+      {
+        "entity_id": "cve-2025-52543",
+        "field": "*",
+        "note": null
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-nvd-cve-2025-52544",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-52544",
+    "title": "NVD: CVE-2025-52544",
+    "publisher": "NIST NVD (CNA: Armis)",
+    "source_type": "database",
+    "is_primary": true,
+    "published_at": "2025-09-02",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": "2026-11-07",
+    "availability": "ok",
+    "http_status": 200,
+    "supports_claims": [
+      {
+        "entity_id": "cve-2025-52544",
+        "field": "*",
+        "note": null
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-nvd-cve-2025-52545",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-52545",
+    "title": "NVD: CVE-2025-52545",
+    "publisher": "NIST NVD (CNA: Armis)",
+    "source_type": "database",
+    "is_primary": true,
+    "published_at": "2025-09-02",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": "2026-11-07",
+    "availability": "ok",
+    "http_status": 200,
+    "supports_claims": [
+      {
+        "entity_id": "cve-2025-52545",
+        "field": "*",
+        "note": null
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-nvd-cve-2025-52546",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-52546",
+    "title": "NVD: CVE-2025-52546",
+    "publisher": "NIST NVD (CNA: Armis)",
+    "source_type": "database",
+    "is_primary": true,
+    "published_at": "2025-09-02",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": "2026-11-07",
+    "availability": "ok",
+    "http_status": 200,
+    "supports_claims": [
+      {
+        "entity_id": "cve-2025-52546",
+        "field": "*",
+        "note": null
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-nvd-cve-2025-52547",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-52547",
+    "title": "NVD: CVE-2025-52547",
+    "publisher": "NIST NVD (CNA: Armis)",
+    "source_type": "database",
+    "is_primary": true,
+    "published_at": "2025-09-02",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": "2026-11-07",
+    "availability": "ok",
+    "http_status": 200,
+    "supports_claims": [
+      {
+        "entity_id": "cve-2025-52547",
+        "field": "*",
+        "note": null
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-nvd-cve-2025-52548",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-52548",
+    "title": "NVD: CVE-2025-52548",
+    "publisher": "NIST NVD (CNA: Armis)",
+    "source_type": "database",
+    "is_primary": true,
+    "published_at": "2025-09-02",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": "2026-11-07",
+    "availability": "ok",
+    "http_status": 200,
+    "supports_claims": [
+      {
+        "entity_id": "cve-2025-52548",
+        "field": "*",
+        "note": null
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-nvd-cve-2025-52549",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-52549",
+    "title": "NVD: CVE-2025-52549",
+    "publisher": "NIST NVD (CNA: Armis)",
+    "source_type": "database",
+    "is_primary": true,
+    "published_at": "2025-09-02",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": "2026-11-07",
+    "availability": "ok",
+    "http_status": 200,
+    "supports_claims": [
+      {
+        "entity_id": "cve-2025-52549",
+        "field": "*",
+        "note": null
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-nvd-cve-2025-52550",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-52550",
+    "title": "NVD: CVE-2025-52550",
+    "publisher": "NIST NVD (CNA: Armis)",
+    "source_type": "database",
+    "is_primary": true,
+    "published_at": "2025-09-02",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": "2026-11-07",
+    "availability": "ok",
+    "http_status": 200,
+    "supports_claims": [
+      {
+        "entity_id": "cve-2025-52550",
+        "field": "*",
+        "note": null
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-nvd-cve-2023-6448",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-6448",
+    "title": "NVD: CVE-2023-6448",
+    "publisher": "NIST NVD (CNA: CISA)",
+    "source_type": "database",
+    "is_primary": true,
+    "published_at": "2023-12-05",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": "2026-11-07",
+    "availability": "ok",
+    "http_status": 200,
+    "supports_claims": [
+      {
+        "entity_id": "cve-2023-6448",
+        "field": "*",
+        "note": "Inkl. cisaExploitAdd 2023-12-11"
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-nvd-cve-2024-1480",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-1480",
+    "title": "NVD: CVE-2024-1480",
+    "publisher": "NIST NVD (CNA: Dragos)",
+    "source_type": "database",
+    "is_primary": true,
+    "published_at": "2024-04-19",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": "2026-11-07",
+    "availability": "ok",
+    "http_status": 200,
+    "supports_claims": [
+      {
+        "entity_id": "cve-2024-1480",
+        "field": "*",
+        "note": null
+      }
+    ],
+    "access_note": null,
+    "notes": "Deferred; ingen CPE."
+  },
+  {
+    "id": "src-nvd-cve-2025-2595",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-2595",
+    "title": "NVD: CVE-2025-2595",
+    "publisher": "NIST NVD (CNA: CERT@VDE)",
+    "source_type": "database",
+    "is_primary": true,
+    "published_at": "2025-04-23",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": "2026-11-07",
+    "availability": "ok",
+    "http_status": 200,
+    "supports_claims": [
+      {
+        "entity_id": "cve-2025-2595",
+        "field": "*",
+        "note": "Gäller CODESYS Visualization, inte ABB-specifikt i NVD"
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-nvd-cve-2025-41659",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-41659",
+    "title": "NVD: CVE-2025-41659",
+    "publisher": "NIST NVD (CNA: CERT@VDE)",
+    "source_type": "database",
+    "is_primary": true,
+    "published_at": "2025-08-04",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": "2026-11-07",
+    "availability": "ok",
+    "http_status": 200,
+    "supports_claims": [
+      {
+        "entity_id": "cve-2025-41659",
+        "field": "*",
+        "note": null
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-nvd-cve-2025-41691",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-41691",
+    "title": "NVD: CVE-2025-41691",
+    "publisher": "NIST NVD (CNA: CERT@VDE)",
+    "source_type": "database",
+    "is_primary": true,
+    "published_at": "2025-08-04",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": "2026-11-07",
+    "availability": "ok",
+    "http_status": 200,
+    "supports_claims": [
+      {
+        "entity_id": "cve-2025-41691",
+        "field": "*",
+        "note": null
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-nvd-cve-2022-38465",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-38465",
+    "title": "NVD: CVE-2022-38465",
+    "publisher": "NIST NVD (CNA: Siemens ProductCERT)",
+    "source_type": "database",
+    "is_primary": true,
+    "published_at": "2022-10-11",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": "2026-11-07",
+    "availability": "ok",
+    "http_status": 200,
+    "supports_claims": [
+      {
+        "entity_id": "cve-2022-38465",
+        "field": "*",
+        "note": null
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-siemens-ssa-330084-csaf",
+    "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-330084.json",
+    "title": "SSA-330084 (CSAF 2.0): Client Code Execution Vulnerability in Desigo CC Product Family",
+    "publisher": "Siemens ProductCERT",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": "2026-09-08",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": "2026-11-07",
+    "availability": "ok",
+    "http_status": 200,
+    "supports_claims": [
+      {
+        "entity_id": "adv-siemens-ssa-330084",
+        "field": "*",
+        "note": "product_status known_affected/known_not_affected lästa maskinellt"
+      }
+    ],
+    "access_note": null,
+    "notes": "Version 1, status interim."
+  },
+  {
+    "id": "src-siemens-ssa-330084-html",
+    "url": "https://cert-portal.siemens.com/productcert/html/ssa-330084.html",
+    "title": "SSA-330084 (HTML)",
+    "publisher": "Siemens ProductCERT",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": "2026-09-08",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": null,
+    "availability": "ok",
+    "http_status": 200,
+    "supports_claims": [
+      {
+        "entity_id": "adv-siemens-ssa-330084",
+        "field": "url",
+        "note": "Arbetsbokens källänk (rad 22)"
+      },
+      {
+        "entity_id": "pf-siemens-desigo-cc-pxc",
+        "field": "risk_summary.cve_text",
+        "note": "Arbetsboken rad 22, kolumn N"
+      }
+    ],
+    "access_note": null,
+    "notes": "HTML-versionen nåddes; innehållet verifierades via CSAF-dokumentet."
+  },
+  {
+    "id": "src-siemens-ssa-568427-csaf",
+    "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-568427.json",
+    "title": "SSA-568427 (CSAF 2.0): Weak Key Protection Vulnerability in SIMATIC S7-1200 and S7-1500 CPU Families",
+    "publisher": "Siemens ProductCERT",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": "2022-10-11",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": "2026-11-07",
+    "availability": "ok",
+    "http_status": 200,
+    "supports_claims": [
+      {
+        "entity_id": "adv-siemens-ssa-568427",
+        "field": "*",
+        "note": null
+      }
+    ],
+    "access_note": null,
+    "notes": "Version 1, status final."
+  },
+  {
+    "id": "src-siemens-ssa-568427-html",
+    "url": "https://cert-portal.siemens.com/productcert/html/ssa-568427.html",
+    "title": "SSA-568427 (HTML)",
+    "publisher": "Siemens ProductCERT",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": "2022-10-11",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": null,
+    "availability": "ok",
+    "http_status": 200,
+    "supports_claims": [
+      {
+        "entity_id": "adv-siemens-ssa-568427",
+        "field": "url",
+        "note": "Arbetsbokens källänk (rad 12 och 47)"
+      },
+      {
+        "entity_id": "pf-siemens-s7-1200",
+        "field": "risk_summary.cve_text",
+        "note": "Arbetsboken rad 12, kolumn N"
+      },
+      {
+        "entity_id": "pf-siemens-s7-1500",
+        "field": "risk_summary.cve_text",
+        "note": "Arbetsboken rad 47, kolumn N"
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-danfoss-dsa-2025-03-01",
+    "url": "https://www.danfoss.com/en/service-and-support/coordinated-vulnerability-disclosure/danfoss-security-advisories/dsa-2025-03-01",
+    "title": "Danfoss Security Advisory DSA-2025-03-01",
+    "publisher": "Danfoss",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": null,
+    "availability": "blocked",
+    "http_status": 403,
+    "supports_claims": [
+      {
+        "entity_id": "adv-danfoss-dsa-2025-03-01",
+        "field": "cve_ids",
+        "note": "Kopplingen DSA-2025-03-01 ↔ CVE-2025-41450 stöds av NVD-postens referenslista (CNA Danfoss)."
+      }
+    ],
+    "access_note": "Sidan svarade 403 för automatiserad hämtning (bot-skydd); innehållet kunde inte läsas i denna session.",
+    "notes": null
+  },
+  {
+    "id": "src-danfoss-dsa-2025-08-01",
+    "url": "https://www.danfoss.com/en/service-and-support/coordinated-vulnerability-disclosure/danfoss-security-advisories/dsa-2025-08-01",
+    "title": "Danfoss Security Advisory DSA-2025-08-01",
+    "publisher": "Danfoss",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": null,
+    "availability": "blocked",
+    "http_status": 403,
+    "supports_claims": [
+      {
+        "entity_id": "adv-danfoss-dsa-2025-08-01",
+        "field": "cve_ids",
+        "note": "Arbetsbokens källänk (rad 3). NVD-posterna för CVE-2025-41451/41452 refererar till produktens nedladdningssida, inte denna DSA-sida; kopplingen är därför needs_review."
+      },
+      {
+        "entity_id": "pf-danfoss-ak-sm-800a",
+        "field": "risk_summary.cve_text",
+        "note": "Arbetsboken rad 3, kolumn N"
+      }
+    ],
+    "access_note": "Sidan svarade 403 för automatiserad hämtning (bot-skydd).",
+    "notes": null
+  },
+  {
+    "id": "src-danfoss-ak-sm-800a-downloads",
+    "url": "https://www.danfoss.com/en/service-and-support/downloads/dcs/adap-kool-software/ak-sm-800a/",
+    "title": "Danfoss AK-SM 800A – programvara, nedladdningar och cybersäkerhetsråd",
+    "publisher": "Danfoss",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "pf-danfoss-ak-sm-800a",
+        "field": "documentation",
+        "note": "Arbetsbokens dokumentationslänk (rad 2–4); refereras också av NVD för CVE-2025-41451/41452."
+      },
+      {
+        "entity_id": "pf-danfoss-ak-sm-800",
+        "field": "documentation",
+        "note": "Arbetsboken rad 2, kolumn L"
+      },
+      {
+        "entity_id": "pf-danfoss-ak-sm-800a",
+        "field": "documentation",
+        "note": "Arbetsboken rad 3, kolumn L"
+      },
+      {
+        "entity_id": "pf-danfoss-ak-sc-355",
+        "field": "documentation",
+        "note": "Arbetsboken rad 4, kolumn L"
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-cisa-icsa-26-057-10-csaf",
+    "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2026/icsa-26-057-10.json",
+    "title": "ICSA-26-057-10 (CSAF): Copeland XWEB and XWEB Pro",
+    "publisher": "CISA",
+    "source_type": "primary_government",
+    "is_primary": true,
+    "published_at": "2026-02-26",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": "2026-11-07",
+    "availability": "ok",
+    "http_status": 200,
+    "supports_claims": [
+      {
+        "entity_id": "adv-cisa-icsa-26-057-10",
+        "field": "*",
+        "note": "22 CVE, XWEB 300D/500D/500B PRO ≤1.12.1, fix: uppdatera till senaste version (ingen versionssiffra angiven)"
+      }
+    ],
+    "access_note": null,
+    "notes": "Status final, release 2026-02-26."
+  },
+  {
+    "id": "src-cisa-icsa-26-057-10",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-057-10",
+    "title": "ICSA-26-057-10: Copeland XWEB and XWEB Pro (webb)",
+    "publisher": "CISA",
+    "source_type": "primary_government",
+    "is_primary": true,
+    "published_at": "2026-02-26",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": null,
+    "availability": "blocked",
+    "http_status": 403,
+    "supports_claims": [
+      {
+        "entity_id": "adv-cisa-icsa-26-057-10",
+        "field": "url",
+        "note": "Arbetsbokens källänk (rad 5); innehållet verifierat via CSAF-filen."
+      },
+      {
+        "entity_id": "pf-copeland-xweb-pro",
+        "field": "risk_summary.cve_text",
+        "note": "Arbetsboken rad 5, kolumn N"
+      }
+    ],
+    "access_note": "www.cisa.gov svarade 403 för automatiserad hämtning.",
+    "notes": null
+  },
+  {
+    "id": "src-cisa-kev",
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+    "title": "CISA Known Exploited Vulnerabilities Catalog",
+    "publisher": "CISA",
+    "source_type": "primary_government",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": "2026-11-07",
+    "availability": "ok",
+    "http_status": 200,
+    "supports_claims": [
+      {
+        "entity_id": "cve-2023-6448",
+        "field": "kev",
+        "note": "catalogVersion 2026.11.06; JSON-feed hämtad"
+      }
+    ],
+    "access_note": "JSON-feed: https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
+    "notes": null
+  },
+  {
+    "id": "src-first-epss",
+    "url": "https://api.first.org/data/v1/epss",
+    "title": "FIRST EPSS API (data v1)",
+    "publisher": "FIRST.org",
+    "source_type": "database",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": "2026-11-07",
+    "availability": "ok",
+    "http_status": 200,
+    "supports_claims": [
+      {
+        "entity_id": "*",
+        "field": "epss",
+        "note": "EPSS-värden daterade 2026-11-07"
+      }
+    ],
+    "access_note": null,
+    "notes": "EPSS är en statistisk sannolikhetsindikator, inte bevis för exploatering."
+  },
+  {
+    "id": "src-unitronics-advisory-2023-001",
+    "url": "https://downloads.unitronicsplc.com/Sites/plc/Technical_Library/Unitronics-Cybersecurity-Advisory-2023-001-CVE-2023-6448.pdf",
+    "title": "Unitronics Cybersecurity Advisory 2023-001 (CVE-2023-6448)",
+    "publisher": "Unitronics",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "adv-unitronics-2023-001",
+        "field": "url",
+        "note": "URL från NVD-referens (tag Vendor Advisory) och KEV-noter"
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-cisa-alert-unitronics-2023-11-28",
+    "url": "https://www.cisa.gov/news-events/alerts/2023/11/28/exploitation-unitronics-plcs-used-water-and-wastewater-systems",
+    "title": "CISA Alert: Exploitation of Unitronics PLCs used in Water and Wastewater Systems",
+    "publisher": "CISA",
+    "source_type": "primary_government",
+    "is_primary": true,
+    "published_at": "2023-11-28",
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "cve-2023-6448",
+        "field": "exploitation_evidence",
+        "note": "URL från NVD-referens"
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-cisa-icsa-24-109-01",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-24-109-01",
+    "title": "ICSA-24-109-01: Unitronics Vision Standard",
+    "publisher": "CISA",
+    "source_type": "primary_government",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "adv-cisa-icsa-24-109-01",
+        "field": "url",
+        "note": "URL från NVD-referens för CVE-2024-1480"
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-dragos-unitronics-vision-standard",
+    "url": "https://www.dragos.com/advisory/unitronics-vision-standard/",
+    "title": "Dragos advisory: Unitronics Vision Standard",
+    "publisher": "Dragos",
+    "source_type": "secondary_research",
+    "is_primary": false,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "cve-2024-1480",
+        "field": "references",
+        "note": "Dragos är CNA för CVE-2024-1480"
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-armis-frostbyte10",
+    "url": "https://www.armis.com/research/frostbyte10/",
+    "title": "Armis Research: Frostbyte10 (Copeland E2/E3)",
+    "publisher": "Armis",
+    "source_type": "secondary_research",
+    "is_primary": false,
+    "published_at": null,
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "adv-armis-frostbyte10",
+        "field": "*",
+        "note": "Arbetsbokens källänk (rad 7–8). Armis är CNA för CVE-posterna, vilket ger NVD-posterna primär status; själva rapporten klassas som sekundär forskning."
+      },
+      {
+        "entity_id": "pf-copeland-e2",
+        "field": "risk_summary.cve_text",
+        "note": "Arbetsboken rad 7, kolumn N"
+      },
+      {
+        "entity_id": "pf-copeland-e3",
+        "field": "risk_summary.cve_text",
+        "note": "Arbetsboken rad 8, kolumn N"
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-copeland-xweb-update-page",
+    "url": "https://webapps.copeland.com/Dixell/Pages/SystemSoftwareUpdate",
+    "title": "Copeland/Dixell XWEB Pro – System Software Update",
+    "publisher": "Copeland",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "match-copeland-xweb-pro-cve-2026-21718",
+        "field": "fix",
+        "note": "Angiven av CISA som uppdateringskälla; versionsnummer ej läst"
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-github-fromagegate",
+    "url": "https://github.com/msuiche/fromagegate",
+    "title": "fromagegate (forskningsrepo refererat av NVD för Danfoss AK-SM 8xxA)",
+    "publisher": "Tredjepartsforskare (GitHub)",
+    "source_type": "secondary_research",
+    "is_primary": false,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "cve-2025-41450",
+        "field": "references",
+        "note": "Endast referens; innehållet ej granskat och används inte som faktakälla."
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-certvde-2025-027",
+    "url": "https://certvde.com/en/advisories/VDE-2025-027",
+    "title": "VDE-2025-027 (CODESYS Visualization)",
+    "publisher": "CERT@VDE",
+    "source_type": "primary_government",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "adv-certvde-2025-027",
+        "field": "url",
+        "note": "URL från NVD-referens"
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-certvde-2025-051",
+    "url": "https://certvde.com/de/advisories/VDE-2025-051",
+    "title": "VDE-2025-051 (CODESYS Control runtime)",
+    "publisher": "CERT@VDE",
+    "source_type": "primary_government",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "adv-certvde-2025-051",
+        "field": "url",
+        "note": "URL från NVD-referens"
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-certvde-2025-070",
+    "url": "https://certvde.com/de/advisories/VDE-2025-070",
+    "title": "VDE-2025-070 (CODESYS Control runtime)",
+    "publisher": "CERT@VDE",
+    "source_type": "primary_government",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "adv-certvde-2025-070",
+        "field": "url",
+        "note": "URL från NVD-referens"
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-nist-sp800-82r3",
+    "url": "https://csrc.nist.gov/pubs/sp/800/82/r3/final",
+    "title": "NIST SP 800-82 Rev. 3 – Guide to Operational Technology (OT) Security (fastställd)",
+    "publisher": "NIST",
+    "source_type": "primary_standard",
+    "is_primary": true,
+    "published_at": "2023-09-28",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "*",
+        "field": "controls",
+        "note": "Branschguide använd som generell referens i arbetsboken (12 rader)"
+      },
+      {
+        "entity_id": "pf-carel-pcoweb",
+        "field": "documentation",
+        "note": "Arbetsboken rad 6, kolumn L"
+      },
+      {
+        "entity_id": "pf-automated-logic-webctrl",
+        "field": "documentation",
+        "note": "Arbetsboken rad 11, kolumn L"
+      },
+      {
+        "entity_id": "pf-rockwell-micro850",
+        "field": "documentation",
+        "note": "Arbetsboken rad 15, kolumn L"
+      },
+      {
+        "entity_id": "pf-dahua-ip-cameras-nvr",
+        "field": "documentation",
+        "note": "Arbetsboken rad 26, kolumn L"
+      },
+      {
+        "entity_id": "pf-nibe-s-f-series",
+        "field": "documentation",
+        "note": "Arbetsboken rad 31, kolumn L"
+      },
+      {
+        "entity_id": "pf-sma-sunny-webbox",
+        "field": "documentation",
+        "note": "Arbetsboken rad 32, kolumn L"
+      },
+      {
+        "entity_id": "pf-schneider-easergy-saitel",
+        "field": "documentation",
+        "note": "Arbetsboken rad 56, kolumn L"
+      },
+      {
+        "entity_id": "svc-modbus-tcp",
+        "field": "documentation",
+        "note": "Arbetsboken rad 57, kolumn L"
+      },
+      {
+        "entity_id": "svc-bacnet-ip",
+        "field": "documentation",
+        "note": "Arbetsboken rad 61, kolumn L"
+      },
+      {
+        "entity_id": "svc-iec-104-dnp3",
+        "field": "documentation",
+        "note": "Arbetsboken rad 62, kolumn L"
+      },
+      {
+        "entity_id": "svc-iec-61850-mms",
+        "field": "documentation",
+        "note": "Arbetsboken rad 63, kolumn L"
+      },
+      {
+        "entity_id": "svc-mqtt",
+        "field": "documentation",
+        "note": "Arbetsboken rad 64, kolumn L"
+      }
+    ],
+    "access_note": null,
+    "notes": "Publiceringsdatum enligt NIST:s publikationssida (ej omläst i denna session)."
+  },
+  {
+    "id": "src-nist-sp800-82r4-ipd",
+    "url": "https://csrc.nist.gov/pubs/sp/800/82/r4/ipd",
+    "title": "NIST SP 800-82 Rev. 4 – Initial Public Draft (utkast)",
+    "publisher": "NIST",
+    "source_type": "primary_standard",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "*",
+        "field": "methodology",
+        "note": "Per 2026-11-07 ett offentligt utkast, inte fastställd vägledning"
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-cisa-ssvc-guide",
+    "url": "https://www.cisa.gov/sites/default/files/publications/cisa-ssvc-guide%20508c.pdf",
+    "title": "CISA Stakeholder-Specific Vulnerability Categorization (SSVC) Guide",
+    "publisher": "CISA",
+    "source_type": "primary_government",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "*",
+        "field": "methodology",
+        "note": "Inspirationskälla för riskfaktorer; projektets metod är inte officiell SSVC"
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-ncsc-cybersakerhetslagen",
+    "url": "https://www.ncsc.se/sv/radgivning-och-stod/cybersakerhetslagen-nis2/sakerhetsatgarder-enligt-cybersakerhetslagen/",
+    "title": "NCSC: Säkerhetsåtgärder enligt cybersäkerhetslagen (NIS2)",
+    "publisher": "NCSC Sverige",
+    "source_type": "primary_government",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "*",
+        "field": "methodology",
+        "note": "Generella krav på riskhantering, tillgångsinventering, incidenthantering, leveranskedja, kontinuitet"
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-cisa-remote-access-ics",
+    "url": "https://www.cisa.gov/sites/default/files/2023-01/RP_Managing_Remote_Access_S508NC.pdf",
+    "title": "CISA: Managing Remote Access for Industrial Control Systems",
+    "publisher": "CISA",
+    "source_type": "primary_government",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "ctl-secure-remote-access",
+        "field": "*",
+        "note": "Refererad i arbetsbokens blad 'Läs först' och rad 67"
+      },
+      {
+        "entity_id": "svc-ot-remote-admin",
+        "field": "documentation",
+        "note": "Arbetsboken rad 67, kolumn L"
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-iana-ports",
+    "url": "https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml",
+    "title": "IANA Service Name and Transport Protocol Port Number Registry",
+    "publisher": "IANA",
+    "source_type": "primary_standard",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "*",
+        "field": "default_ports",
+        "note": "Standardportar för protokoll/tjänster; registret ej omläst i denna session (status corroborated_secondary)."
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-nvd-cve-2026-25085",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25085",
+    "title": "NVD: CVE-2026-25085",
+    "publisher": "NIST NVD (CNA: CISA)",
+    "source_type": "database",
+    "is_primary": true,
+    "published_at": "2026-02-27",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": "2026-11-07",
+    "availability": "ok",
+    "http_status": 200,
+    "supports_claims": [
+      {
+        "entity_id": "cve-2026-25085",
+        "field": "*",
+        "note": "Hämtad via NVD CVE API 2.0 (ICSA-26-057-10)"
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-nvd-cve-2026-24663",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24663",
+    "title": "NVD: CVE-2026-24663",
+    "publisher": "NIST NVD (CNA: CISA)",
+    "source_type": "database",
+    "is_primary": true,
+    "published_at": "2026-02-27",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": "2026-11-07",
+    "availability": "ok",
+    "http_status": 200,
+    "supports_claims": [
+      {
+        "entity_id": "cve-2026-24663",
+        "field": "*",
+        "note": "Hämtad via NVD CVE API 2.0 (ICSA-26-057-10)"
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-nvd-cve-2026-21389",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21389",
+    "title": "NVD: CVE-2026-21389",
+    "publisher": "NIST NVD (CNA: CISA)",
+    "source_type": "database",
+    "is_primary": true,
+    "published_at": "2026-02-27",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": "2026-11-07",
+    "availability": "ok",
+    "http_status": 200,
+    "supports_claims": [
+      {
+        "entity_id": "cve-2026-21389",
+        "field": "*",
+        "note": "Hämtad via NVD CVE API 2.0 (ICSA-26-057-10)"
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-nvd-cve-2026-25111",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25111",
+    "title": "NVD: CVE-2026-25111",
+    "publisher": "NIST NVD (CNA: CISA)",
+    "source_type": "database",
+    "is_primary": true,
+    "published_at": "2026-02-27",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": "2026-11-07",
+    "availability": "ok",
+    "http_status": 200,
+    "supports_claims": [
+      {
+        "entity_id": "cve-2026-25111",
+        "field": "*",
+        "note": "Hämtad via NVD CVE API 2.0 (ICSA-26-057-10)"
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-nvd-cve-2026-20742",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20742",
+    "title": "NVD: CVE-2026-20742",
+    "publisher": "NIST NVD (CNA: CISA)",
+    "source_type": "database",
+    "is_primary": true,
+    "published_at": "2026-02-27",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": "2026-11-07",
+    "availability": "ok",
+    "http_status": 200,
+    "supports_claims": [
+      {
+        "entity_id": "cve-2026-20742",
+        "field": "*",
+        "note": "Hämtad via NVD CVE API 2.0 (ICSA-26-057-10)"
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-nvd-cve-2026-24517",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24517",
+    "title": "NVD: CVE-2026-24517",
+    "publisher": "NIST NVD (CNA: CISA)",
+    "source_type": "database",
+    "is_primary": true,
+    "published_at": "2026-02-27",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": "2026-11-07",
+    "availability": "ok",
+    "http_status": 200,
+    "supports_claims": [
+      {
+        "entity_id": "cve-2026-24517",
+        "field": "*",
+        "note": "Hämtad via NVD CVE API 2.0 (ICSA-26-057-10)"
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-nvd-cve-2026-25195",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25195",
+    "title": "NVD: CVE-2026-25195",
+    "publisher": "NIST NVD (CNA: CISA)",
+    "source_type": "database",
+    "is_primary": true,
+    "published_at": "2026-02-27",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": "2026-11-07",
+    "availability": "ok",
+    "http_status": 200,
+    "supports_claims": [
+      {
+        "entity_id": "cve-2026-25195",
+        "field": "*",
+        "note": "Hämtad via NVD CVE API 2.0 (ICSA-26-057-10)"
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-nvd-cve-2026-20910",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20910",
+    "title": "NVD: CVE-2026-20910",
+    "publisher": "NIST NVD (CNA: CISA)",
+    "source_type": "database",
+    "is_primary": true,
+    "published_at": "2026-02-27",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": "2026-11-07",
+    "availability": "ok",
+    "http_status": 200,
+    "supports_claims": [
+      {
+        "entity_id": "cve-2026-20910",
+        "field": "*",
+        "note": "Hämtad via NVD CVE API 2.0 (ICSA-26-057-10)"
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-nvd-cve-2026-24689",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24689",
+    "title": "NVD: CVE-2026-24689",
+    "publisher": "NIST NVD (CNA: CISA)",
+    "source_type": "database",
+    "is_primary": true,
+    "published_at": "2026-02-27",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": "2026-11-07",
+    "availability": "ok",
+    "http_status": 200,
+    "supports_claims": [
+      {
+        "entity_id": "cve-2026-24689",
+        "field": "*",
+        "note": "Hämtad via NVD CVE API 2.0 (ICSA-26-057-10)"
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-nvd-cve-2026-25109",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25109",
+    "title": "NVD: CVE-2026-25109",
+    "publisher": "NIST NVD (CNA: CISA)",
+    "source_type": "database",
+    "is_primary": true,
+    "published_at": "2026-02-27",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": "2026-11-07",
+    "availability": "ok",
+    "http_status": 200,
+    "supports_claims": [
+      {
+        "entity_id": "cve-2026-25109",
+        "field": "*",
+        "note": "Hämtad via NVD CVE API 2.0 (ICSA-26-057-10)"
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-nvd-cve-2026-20902",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20902",
+    "title": "NVD: CVE-2026-20902",
+    "publisher": "NIST NVD (CNA: CISA)",
+    "source_type": "database",
+    "is_primary": true,
+    "published_at": "2026-02-27",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": "2026-11-07",
+    "availability": "ok",
+    "http_status": 200,
+    "supports_claims": [
+      {
+        "entity_id": "cve-2026-20902",
+        "field": "*",
+        "note": "Hämtad via NVD CVE API 2.0 (ICSA-26-057-10)"
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-nvd-cve-2026-24695",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24695",
+    "title": "NVD: CVE-2026-24695",
+    "publisher": "NIST NVD (CNA: CISA)",
+    "source_type": "database",
+    "is_primary": true,
+    "published_at": "2026-02-27",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": "2026-11-07",
+    "availability": "ok",
+    "http_status": 200,
+    "supports_claims": [
+      {
+        "entity_id": "cve-2026-24695",
+        "field": "*",
+        "note": "Hämtad via NVD CVE API 2.0 (ICSA-26-057-10)"
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-nvd-cve-2026-25105",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25105",
+    "title": "NVD: CVE-2026-25105",
+    "publisher": "NIST NVD (CNA: CISA)",
+    "source_type": "database",
+    "is_primary": true,
+    "published_at": "2026-02-27",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": "2026-11-07",
+    "availability": "ok",
+    "http_status": 200,
+    "supports_claims": [
+      {
+        "entity_id": "cve-2026-25105",
+        "field": "*",
+        "note": "Hämtad via NVD CVE API 2.0 (ICSA-26-057-10)"
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-nvd-cve-2026-24452",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24452",
+    "title": "NVD: CVE-2026-24452",
+    "publisher": "NIST NVD (CNA: CISA)",
+    "source_type": "database",
+    "is_primary": true,
+    "published_at": "2026-02-27",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": "2026-11-07",
+    "availability": "ok",
+    "http_status": 200,
+    "supports_claims": [
+      {
+        "entity_id": "cve-2026-24452",
+        "field": "*",
+        "note": "Hämtad via NVD CVE API 2.0 (ICSA-26-057-10)"
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-nvd-cve-2026-23702",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23702",
+    "title": "NVD: CVE-2026-23702",
+    "publisher": "NIST NVD (CNA: CISA)",
+    "source_type": "database",
+    "is_primary": true,
+    "published_at": "2026-02-27",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": "2026-11-07",
+    "availability": "ok",
+    "http_status": 200,
+    "supports_claims": [
+      {
+        "entity_id": "cve-2026-23702",
+        "field": "*",
+        "note": "Hämtad via NVD CVE API 2.0 (ICSA-26-057-10)"
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-nvd-cve-2026-25721",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25721",
+    "title": "NVD: CVE-2026-25721",
+    "publisher": "NIST NVD (CNA: CISA)",
+    "source_type": "database",
+    "is_primary": true,
+    "published_at": "2026-02-27",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": "2026-11-07",
+    "availability": "ok",
+    "http_status": 200,
+    "supports_claims": [
+      {
+        "entity_id": "cve-2026-25721",
+        "field": "*",
+        "note": "Hämtad via NVD CVE API 2.0 (ICSA-26-057-10)"
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-nvd-cve-2026-20764",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20764",
+    "title": "NVD: CVE-2026-20764",
+    "publisher": "NIST NVD (CNA: CISA)",
+    "source_type": "database",
+    "is_primary": true,
+    "published_at": "2026-02-27",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": "2026-11-07",
+    "availability": "ok",
+    "http_status": 200,
+    "supports_claims": [
+      {
+        "entity_id": "cve-2026-20764",
+        "field": "*",
+        "note": "Hämtad via NVD CVE API 2.0 (ICSA-26-057-10)"
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-nvd-cve-2026-25196",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25196",
+    "title": "NVD: CVE-2026-25196",
+    "publisher": "NIST NVD (CNA: CISA)",
+    "source_type": "database",
+    "is_primary": true,
+    "published_at": "2026-02-27",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": "2026-11-07",
+    "availability": "ok",
+    "http_status": 200,
+    "supports_claims": [
+      {
+        "entity_id": "cve-2026-25196",
+        "field": "*",
+        "note": "Hämtad via NVD CVE API 2.0 (ICSA-26-057-10)"
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-nvd-cve-2026-25037",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25037",
+    "title": "NVD: CVE-2026-25037",
+    "publisher": "NIST NVD (CNA: CISA)",
+    "source_type": "database",
+    "is_primary": true,
+    "published_at": "2026-02-27",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": "2026-11-07",
+    "availability": "ok",
+    "http_status": 200,
+    "supports_claims": [
+      {
+        "entity_id": "cve-2026-25037",
+        "field": "*",
+        "note": "Hämtad via NVD CVE API 2.0 (ICSA-26-057-10)"
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-nvd-cve-2026-22877",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-22877",
+    "title": "NVD: CVE-2026-22877",
+    "publisher": "NIST NVD (CNA: CISA)",
+    "source_type": "database",
+    "is_primary": true,
+    "published_at": "2026-02-27",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": "2026-11-07",
+    "availability": "ok",
+    "http_status": 200,
+    "supports_claims": [
+      {
+        "entity_id": "cve-2026-22877",
+        "field": "*",
+        "note": "Hämtad via NVD CVE API 2.0 (ICSA-26-057-10)"
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-nvd-cve-2026-20797",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20797",
+    "title": "NVD: CVE-2026-20797",
+    "publisher": "NIST NVD (CNA: CISA)",
+    "source_type": "database",
+    "is_primary": true,
+    "published_at": "2026-02-27",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": "2026-11-07",
+    "availability": "ok",
+    "http_status": 200,
+    "supports_claims": [
+      {
+        "entity_id": "cve-2026-20797",
+        "field": "*",
+        "note": "Hämtad via NVD CVE API 2.0 (ICSA-26-057-10)"
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-nvd-cve-2026-3037",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3037",
+    "title": "NVD: CVE-2026-3037",
+    "publisher": "NIST NVD (CNA: CISA)",
+    "source_type": "database",
+    "is_primary": true,
+    "published_at": "2026-02-27",
+    "last_checked_at": "2026-11-07",
+    "last_verified_at": "2026-11-07",
+    "availability": "ok",
+    "http_status": 200,
+    "supports_claims": [
+      {
+        "entity_id": "cve-2026-3037",
+        "field": "*",
+        "note": "Hämtad via NVD CVE API 2.0 (ICSA-26-057-10)"
+      }
+    ],
+    "access_note": null,
+    "notes": null
+  },
+  {
+    "id": "src-wb-webapps.copeland.com-94c8bb33",
+    "url": "https://webapps.copeland.com/Dixell/Content/Pages/Manuals/XWEBPRO/XWEBPROV1.2OPERATION/XWEB-PRO-OPR-EN.pdf",
+    "title": "Produktmanual (PDF) – Copeland/Dixell XWEB Pro",
+    "publisher": "webapps.copeland.com",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "pf-copeland-xweb-pro",
+        "field": "documentation",
+        "note": "Arbetsboken rad 5, kolumn L"
+      }
+    ],
+    "access_note": null,
+    "notes": "Länk från arbetsboken, rad 5, kolumn L."
+  },
+  {
+    "id": "src-wb-www.copeland.com-4466a190",
+    "url": "https://www.copeland.com/en-us/products/controls-monitoring-systems/facility-controls-electronics/facility-and-system-controls/documents/supervisory-e3",
+    "title": "E3-migrering/leverantörsdokument – inte E2-härdning – Copeland E2",
+    "publisher": "copeland.com",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "pf-copeland-e2",
+        "field": "documentation",
+        "note": "Arbetsboken rad 7, kolumn L"
+      },
+      {
+        "entity_id": "pf-copeland-e3",
+        "field": "documentation",
+        "note": "Arbetsboken rad 8, kolumn L"
+      }
+    ],
+    "access_note": null,
+    "notes": "Länk från arbetsboken, rad 7, kolumn L."
+  },
+  {
+    "id": "src-wb-www.tridium.com-368754de",
+    "url": "https://www.tridium.com/content/dam/tridium/en/documents/document-lists/niagara/tri-Niagara4-Hardening-Guide-en-2025.pdf",
+    "title": "Produktens Hardening Guide (PDF) – Tridium Niagara 4 / AX",
+    "publisher": "tridium.com",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "pf-tridium-niagara",
+        "field": "documentation",
+        "note": "Arbetsboken rad 9, kolumn L"
+      }
+    ],
+    "access_note": null,
+    "notes": "Länk från arbetsboken, rad 9, kolumn L."
+  },
+  {
+    "id": "src-wb-docs.johnsoncontrols.com-f98ca8fe",
+    "url": "https://docs.johnsoncontrols.com/bas/r/Metasys/en-US/Network-and-IT-Guidance-Technical-Bulletin/16.0/Introduction?contentId=u1gPxxRzqUJyrJGMHYEgKw",
+    "title": "Produktens Network and IT Guidance – Johnson Controls Metasys",
+    "publisher": "docs.johnsoncontrols.com",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "pf-johnson-controls-metasys",
+        "field": "documentation",
+        "note": "Arbetsboken rad 10, kolumn L"
+      }
+    ],
+    "access_note": null,
+    "notes": "Länk från arbetsboken, rad 10, kolumn L."
+  },
+  {
+    "id": "src-wb-docs.tia.siemens.cloud-1bb5baef",
+    "url": "https://docs.tia.siemens.cloud/r/simatic_s7_1200_manual_collection_enus_20/device-configuration/protection-security",
+    "title": "Produktfamiljens säkerhetskonfiguration – Siemens S7-1200",
+    "publisher": "docs.tia.siemens.cloud",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "pf-siemens-s7-1200",
+        "field": "documentation",
+        "note": "Arbetsboken rad 12, kolumn L"
+      },
+      {
+        "entity_id": "svc-s7comm",
+        "field": "documentation",
+        "note": "Arbetsboken rad 59, kolumn L"
+      }
+    ],
+    "access_note": null,
+    "notes": "Länk från arbetsboken, rad 12, kolumn L."
+  },
+  {
+    "id": "src-wb-www.se.com-a89e80a6",
+    "url": "https://www.se.com/us/en/download/document/EIO0000004242/",
+    "title": "Tillverkarens Cybersecurity Guide – Schneider Modicon M241/M251 (m.fl.)",
+    "publisher": "se.com",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "pf-schneider-modicon-m241-m251",
+        "field": "documentation",
+        "note": "Arbetsboken rad 13, kolumn L"
+      }
+    ],
+    "access_note": null,
+    "notes": "Länk från arbetsboken, rad 13, kolumn L."
+  },
+  {
+    "id": "src-wb-literature.rockwellautomation.com-0abd3124",
+    "url": "https://literature.rockwellautomation.com/idc/groups/literature/documents/um/5069-um001_-en-p.pdf",
+    "title": "Produktmanual inkl. säkerhetskapitel – Rockwell CompactLogix",
+    "publisher": "literature.rockwellautomation.com",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "pf-rockwell-compactlogix",
+        "field": "documentation",
+        "note": "Arbetsboken rad 14, kolumn L"
+      }
+    ],
+    "access_note": null,
+    "notes": "Länk från arbetsboken, rad 14, kolumn L."
+  },
+  {
+    "id": "src-wb-downloads.unitronicsplc.com-ea3ec37f",
+    "url": "https://downloads.unitronicsplc.com/Sites/plc/support-tools-and-applications/Cyber-Protection-Samba-Vision.pdf",
+    "title": "Produktens Cyber Protection Guide (PDF) – Unitronics Vision",
+    "publisher": "downloads.unitronicsplc.com",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "pf-unitronics-vision",
+        "field": "documentation",
+        "note": "Arbetsboken rad 16, kolumn L"
+      },
+      {
+        "entity_id": "pf-unitronics-vision",
+        "field": "risk_summary.cve_text",
+        "note": "Arbetsboken rad 16, kolumn N"
+      }
+    ],
+    "access_note": null,
+    "notes": "Länk från arbetsboken, rad 16, kolumn L."
+  },
+  {
+    "id": "src-wb-dl.weintek.com-f3c9f035",
+    "url": "https://dl.weintek.com/public/Document/UM0/Product-Security-UserManual-eng.pdf",
+    "title": "Produktens Security User Manual (PDF) – Weintek cMT",
+    "publisher": "dl.weintek.com",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "pf-weintek-cmt",
+        "field": "documentation",
+        "note": "Arbetsboken rad 17, kolumn L"
+      }
+    ],
+    "access_note": null,
+    "notes": "Länk från arbetsboken, rad 17, kolumn L."
+  },
+  {
+    "id": "src-wb-www.johnsoncontrols.com-e9bba107",
+    "url": "https://www.johnsoncontrols.com/trust-center/cybersecurity/security-advisories",
+    "title": "Säkerhetsbulletinportal, ej konfigurationsmanual – Johnson Controls iSTAR",
+    "publisher": "johnsoncontrols.com",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "pf-johnson-controls-istar",
+        "field": "documentation",
+        "note": "Arbetsboken rad 18, kolumn L"
+      }
+    ],
+    "access_note": null,
+    "notes": "Länk från arbetsboken, rad 18, kolumn L."
+  },
+  {
+    "id": "src-wb-www.regincontrols.com-d4e01f30",
+    "url": "https://www.regincontrols.com/globalassets/pimmediafiles/documents/corrigo-5.0_ma30012_en.pdf",
+    "title": "Produktmanual (PDF) – Regin Corrigo / EXO",
+    "publisher": "regincontrols.com",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "pf-regin-corrigo-exo",
+        "field": "documentation",
+        "note": "Arbetsboken rad 19, kolumn L"
+      }
+    ],
+    "access_note": null,
+    "notes": "Länk från arbetsboken, rad 19, kolumn L."
+  },
+  {
+    "id": "src-wb-www.swegon.com-f8b85081",
+    "url": "https://www.swegon.com/sv/support/hitta-information/hitta-dokument/?q=gold",
+    "title": "Tillverkarens dokumentsök (modell måste väljas) – Swegon GOLD / IQlogic",
+    "publisher": "swegon.com",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "pf-swegon-gold-iqlogic",
+        "field": "documentation",
+        "note": "Arbetsboken rad 20, kolumn L"
+      }
+    ],
+    "access_note": null,
+    "notes": "Länk från arbetsboken, rad 20, kolumn L."
+  },
+  {
+    "id": "src-wb-www.systemair.com-5b8e0fdf",
+    "url": "https://www.systemair.com/sv-se/produkter/ventilationssystem-for-bostader/tillbehor/tillbehor-for-bostadsaggregat/styrutrustning/save-connect",
+    "title": "Produktens installations-/konfigurationssida – Systemair SAVE / SAVE CONNECT",
+    "publisher": "systemair.com",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "pf-systemair-save-connect",
+        "field": "documentation",
+        "note": "Arbetsboken rad 21, kolumn L"
+      }
+    ],
+    "access_note": null,
+    "notes": "Länk från arbetsboken, rad 21, kolumn L."
+  },
+  {
+    "id": "src-wb-sid.siemens.com-2e7a9d34",
+    "url": "https://sid.siemens.com/r/A6V14948151/29540941067___en-US_29541994379",
+    "title": "Desigo CC cybersäkerhetsvägledning – Siemens Desigo CC / PXC",
+    "publisher": "sid.siemens.com",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "pf-siemens-desigo-cc-pxc",
+        "field": "documentation",
+        "note": "Arbetsboken rad 22, kolumn L"
+      }
+    ],
+    "access_note": null,
+    "notes": "Länk från arbetsboken, rad 22, kolumn L."
+  },
+  {
+    "id": "src-wb-www.se.com-4fb7abd9",
+    "url": "https://www.se.com/us/en/download/document/AN_EBOCyberSecurity_EN/",
+    "title": "Tillverkarens BMS-arkitekturguide – Schneider EcoStruxure Building Operation",
+    "publisher": "se.com",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "pf-schneider-ecostruxure-building-operation",
+        "field": "documentation",
+        "note": "Arbetsboken rad 23, kolumn L"
+      }
+    ],
+    "access_note": null,
+    "notes": "Länk från arbetsboken, rad 23, kolumn L."
+  },
+  {
+    "id": "src-wb-help.axis.com-0e4fb5c0",
+    "url": "https://help.axis.com/en-us/axis-camera-station-system-hardening-guide",
+    "title": "System Hardening Guide (Axis Camera Station) – Axis IP-kameror",
+    "publisher": "help.axis.com",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "pf-axis-ip-cameras",
+        "field": "documentation",
+        "note": "Arbetsboken rad 24, kolumn L"
+      }
+    ],
+    "access_note": null,
+    "notes": "Länk från arbetsboken, rad 24, kolumn L."
+  },
+  {
+    "id": "src-wb-www.hikvision.com-7fcaea8f",
+    "url": "https://www.hikvision.com/content/dam/hikvision/eu/support/cybersecurity/Network-Security-Hardening-Guide-new-1.pdf",
+    "title": "Tillverkarens Network Hardening Guide (PDF) – Hikvision IP-kameror / NVR",
+    "publisher": "hikvision.com",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "pf-hikvision-ip-cameras-nvr",
+        "field": "documentation",
+        "note": "Arbetsboken rad 25, kolumn L"
+      }
+    ],
+    "access_note": null,
+    "notes": "Länk från arbetsboken, rad 25, kolumn L."
+  },
+  {
+    "id": "src-wb-rco.se-d98177e3",
+    "url": "https://rco.se/mjukvara/grundlicenser/programvare/m5/r-card-m5",
+    "title": "Produktmanual och nedladdningar – RCO R-CARD M5",
+    "publisher": "rco.se",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "pf-rco-r-card-m5",
+        "field": "documentation",
+        "note": "Arbetsboken rad 27, kolumn L"
+      }
+    ],
+    "access_note": null,
+    "notes": "Länk från arbetsboken, rad 27, kolumn L."
+  },
+  {
+    "id": "src-wb-www.assaabloy.com-0fa3c1b3",
+    "url": "https://www.assaabloy.com/se/sv/service/support/access-control-system",
+    "title": "Tillverkarens support/Smart Guide – ASSA ABLOY ARX",
+    "publisher": "assaabloy.com",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "pf-assa-abloy-arx",
+        "field": "documentation",
+        "note": "Arbetsboken rad 28, kolumn L"
+      }
+    ],
+    "access_note": null,
+    "notes": "Länk från arbetsboken, rad 28, kolumn L."
+  },
+  {
+    "id": "src-wb-www.assaabloy.com-61cbebaa",
+    "url": "https://www.assaabloy.com/se/sv/service/support/aptus",
+    "title": "Support + partnerdokumentation (inloggning kan krävas) – ASSA ABLOY Aptus",
+    "publisher": "assaabloy.com",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "pf-assa-abloy-aptus",
+        "field": "documentation",
+        "note": "Arbetsboken rad 29, kolumn L"
+      }
+    ],
+    "access_note": null,
+    "notes": "Länk från arbetsboken, rad 29, kolumn L."
+  },
+  {
+    "id": "src-wb-www.2n.com-aa0fd96d",
+    "url": "https://www.2n.com/en-GB/manuals/intercoms/2n-ip-verso/",
+    "title": "Produktens installations- och konfigurationsmanualer – 2N IP Verso / Force",
+    "publisher": "2n.com",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "pf-2n-ip-verso-force",
+        "field": "documentation",
+        "note": "Arbetsboken rad 30, kolumn L"
+      }
+    ],
+    "access_note": null,
+    "notes": "Länk från arbetsboken, rad 30, kolumn L."
+  },
+  {
+    "id": "src-wb-manuals.fronius.com-0dccad81",
+    "url": "https://manuals.fronius.com/html/4204260191/sv.html",
+    "title": "Produktmanual på svenska – Fronius Datamanager",
+    "publisher": "manuals.fronius.com",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "pf-fronius-datamanager",
+        "field": "documentation",
+        "note": "Arbetsboken rad 33, kolumn L"
+      }
+    ],
+    "access_note": null,
+    "notes": "Länk från arbetsboken, rad 33, kolumn L."
+  },
+  {
+    "id": "src-wb-www.solar-log.com-1ce5537a",
+    "url": "https://www.solar-log.com/en/support/firmware-database",
+    "title": "Firmwareportal + manualer via support – Solar-Log datalogger",
+    "publisher": "solar-log.com",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "pf-solar-log-datalogger",
+        "field": "documentation",
+        "note": "Arbetsboken rad 34, kolumn L"
+      }
+    ],
+    "access_note": null,
+    "notes": "Länk från arbetsboken, rad 34, kolumn L."
+  },
+  {
+    "id": "src-wb-www.sungrowpower.com-61a78c95",
+    "url": "https://www.sungrowpower.com/se/en/products/intelligent-gateway/winet-s2",
+    "title": "Produktmanual + säkerhetsanvisningar – Sungrow WiNet / Logger1000",
+    "publisher": "sungrowpower.com",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "pf-sungrow-winet-logger1000",
+        "field": "documentation",
+        "note": "Arbetsboken rad 35, kolumn L"
+      }
+    ],
+    "access_note": null,
+    "notes": "Länk från arbetsboken, rad 35, kolumn L."
+  },
+  {
+    "id": "src-wb-wiki.teltonika-networks.com-1be49e41",
+    "url": "https://wiki.teltonika-networks.com/view/Security_Features",
+    "title": "Tillverkarens säkerhetsinställningar – Teltonika RUT",
+    "publisher": "wiki.teltonika-networks.com",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "pf-teltonika-rut",
+        "field": "documentation",
+        "note": "Arbetsboken rad 36, kolumn L"
+      }
+    ],
+    "access_note": null,
+    "notes": "Länk från arbetsboken, rad 36, kolumn L."
+  },
+  {
+    "id": "src-wb-support.hms-networks.com-69523668",
+    "url": "https://support.hms-networks.com/hc/en-us/articles/27420854662290-Ewon-Cosy-Feature-Changes-Introduced-in-Firmware-23-0-RED",
+    "title": "Tillverkarens säkerhets-/versionsguide (Cosy+) – HMS Ewon Cosy / Flexy",
+    "publisher": "support.hms-networks.com",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "pf-hms-ewon-cosy-flexy",
+        "field": "documentation",
+        "note": "Arbetsboken rad 37, kolumn L"
+      }
+    ],
+    "access_note": null,
+    "notes": "Länk från arbetsboken, rad 37, kolumn L."
+  },
+  {
+    "id": "src-wb-www.se.com-889a0204",
+    "url": "https://www.se.com/us/en/download/document/SPD_CCON-BDYD7K_EN/",
+    "title": "Network Management Card 3 Security Handbook – APC Network Management Card",
+    "publisher": "se.com",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "pf-apc-network-management-card",
+        "field": "documentation",
+        "note": "Arbetsboken rad 38, kolumn L"
+      }
+    ],
+    "access_note": null,
+    "notes": "Länk från arbetsboken, rad 38, kolumn L."
+  },
+  {
+    "id": "src-wb-kb.synology.com-f73857fe",
+    "url": "https://kb.synology.com/en-us/DSM/tutorial/How_to_add_extra_security_to_your_Synology_NAS",
+    "title": "Tillverkarens säkerhetsguide – Synology DSM",
+    "publisher": "kb.synology.com",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "pf-synology-dsm",
+        "field": "documentation",
+        "note": "Arbetsboken rad 39, kolumn L"
+      }
+    ],
+    "access_note": null,
+    "notes": "Länk från arbetsboken, rad 39, kolumn L."
+  },
+  {
+    "id": "src-wb-www.qnap.com-b89adcc6",
+    "url": "https://www.qnap.com/sv-se/security",
+    "title": "Tillverkarens NAS-säkerhetsguide – QNAP QTS / QuTS",
+    "publisher": "qnap.com",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "pf-qnap-qts-quts",
+        "field": "documentation",
+        "note": "Arbetsboken rad 40, kolumn L"
+      }
+    ],
+    "access_note": null,
+    "notes": "Länk från arbetsboken, rad 40, kolumn L."
+  },
+  {
+    "id": "src-wb-www.home-assistant.io-9021e8c0",
+    "url": "https://www.home-assistant.io/docs/configuration/remote/",
+    "title": "Officiell vägledning för säker fjärråtkomst – Home Assistant",
+    "publisher": "home-assistant.io",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "pf-home-assistant",
+        "field": "documentation",
+        "note": "Arbetsboken rad 41, kolumn L"
+      }
+    ],
+    "access_note": null,
+    "notes": "Länk från arbetsboken, rad 41, kolumn L."
+  },
+  {
+    "id": "src-wb-www.abb.com-a03c04fc",
+    "url": "https://www.abb.com/global/en/company/about/cybersecurity/alerts-and-notifications",
+    "title": "Tillverkarens säkerhetsbulletinportal – ABB AC500 V3",
+    "publisher": "abb.com",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "pf-abb-ac500-v3",
+        "field": "documentation",
+        "note": "Arbetsboken rad 42, kolumn L"
+      },
+      {
+        "entity_id": "pf-abb-ac500-v3",
+        "field": "risk_summary.cve_text",
+        "note": "Arbetsboken rad 42, kolumn N"
+      },
+      {
+        "entity_id": "pf-abb-system-800xa",
+        "field": "documentation",
+        "note": "Arbetsboken rad 43, kolumn L"
+      }
+    ],
+    "access_note": null,
+    "notes": "Länk från arbetsboken, rad 42, kolumn L."
+  },
+  {
+    "id": "src-wb-infosys.beckhoff.com-05594f9e",
+    "url": "https://infosys.beckhoff.com/content/1033/ipc_security_wince/11157442315.html",
+    "title": "Beckhoff säkerhetsdokumentation med vidare länkar – Beckhoff CX / TwinCAT 3",
+    "publisher": "infosys.beckhoff.com",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "pf-beckhoff-cx-twincat-3",
+        "field": "documentation",
+        "note": "Arbetsboken rad 44, kolumn L"
+      }
+    ],
+    "access_note": null,
+    "notes": "Länk från arbetsboken, rad 44, kolumn L."
+  },
+  {
+    "id": "src-wb-techdocs.wago.com-76f87f4b",
+    "url": "https://techdocs.wago.com/io-system/750_753/system/en-US/75536779.html",
+    "title": "Tillverkarens Data Security Guide – WAGO PFC100 / PFC200 / CC100",
+    "publisher": "techdocs.wago.com",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "pf-wago-pfc100-pfc200-cc100",
+        "field": "documentation",
+        "note": "Arbetsboken rad 45, kolumn L"
+      }
+    ],
+    "access_note": null,
+    "notes": "Länk från arbetsboken, rad 45, kolumn L."
+  },
+  {
+    "id": "src-wb-engineer.plcnext.help-0babe484",
+    "url": "https://engineer.plcnext.help/2024.0_LTS_en/SecurityGeneralInPCWE.htm",
+    "title": "PLCnext Engineer Security Guide – Phoenix Contact PLCnext / AXC",
+    "publisher": "engineer.plcnext.help",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "pf-phoenix-contact-plcnext-axc",
+        "field": "documentation",
+        "note": "Arbetsboken rad 46, kolumn L"
+      }
+    ],
+    "access_note": null,
+    "notes": "Länk från arbetsboken, rad 46, kolumn L."
+  },
+  {
+    "id": "src-wb-docs.tia.siemens.cloud-0f3d7d67",
+    "url": "https://docs.tia.siemens.cloud/r/simatic_s7_1500_et_200mp_manual_collection_enus_20/basic-information/automation-system/protection",
+    "title": "Officiell säkerhetsmanual – Siemens S7-1500",
+    "publisher": "docs.tia.siemens.cloud",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "pf-siemens-s7-1500",
+        "field": "documentation",
+        "note": "Arbetsboken rad 47, kolumn L"
+      }
+    ],
+    "access_note": null,
+    "notes": "Länk från arbetsboken, rad 47, kolumn L."
+  },
+  {
+    "id": "src-wb-www.rockwellautomation.com-457996fe",
+    "url": "https://www.rockwellautomation.com/en-se/docs/technical/logix5000/_online/1756-um543/controllogix-5580-and-guardlogix-5580-controllers-/develop-secure-applications.html",
+    "title": "Säkerhetsmanual för ControlLogix 5580 – Rockwell ControlLogix",
+    "publisher": "rockwellautomation.com",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "pf-rockwell-controllogix",
+        "field": "documentation",
+        "note": "Arbetsboken rad 48, kolumn L"
+      }
+    ],
+    "access_note": null,
+    "notes": "Länk från arbetsboken, rad 48, kolumn L."
+  },
+  {
+    "id": "src-wb-fa-faq.mitsubishielectric.com-75511429",
+    "url": "https://fa-faq.mitsubishielectric.com/faq/show/22481?back=front%2Fcategory%3Ashow&category_id=1995&page=21&sort=sort_access&sort_order=desc",
+    "title": "Tillverkarens säkerhetsfunktioner (iQ-R) – Mitsubishi MELSEC iQ-R / iQ-F",
+    "publisher": "fa-faq.mitsubishielectric.com",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "pf-mitsubishi-melsec-iq-r-iq-f",
+        "field": "documentation",
+        "note": "Arbetsboken rad 49, kolumn L"
+      }
+    ],
+    "access_note": null,
+    "notes": "Länk från arbetsboken, rad 49, kolumn L."
+  },
+  {
+    "id": "src-wb-industrial.omron.eu-80cff25c",
+    "url": "https://industrial.omron.eu/en/services-support/support/cybersecurity",
+    "title": "Tillverkarens cybersäkerhetsportal – Omron NX / NJ",
+    "publisher": "industrial.omron.eu",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "pf-omron-nx-nj",
+        "field": "documentation",
+        "note": "Arbetsboken rad 50, kolumn L"
+      }
+    ],
+    "access_note": null,
+    "notes": "Länk från arbetsboken, rad 50, kolumn L."
+  },
+  {
+    "id": "src-wb-inductiveautomation.com-d2d8e128",
+    "url": "https://inductiveautomation.com/resources/article/ignition-security-hardening-guide",
+    "title": "Officiell Security Hardening Guide – Inductive Automation Ignition",
+    "publisher": "inductiveautomation.com",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "pf-inductive-automation-ignition",
+        "field": "documentation",
+        "note": "Arbetsboken rad 51, kolumn L"
+      },
+      {
+        "entity_id": "svc-web-hmi-scada",
+        "field": "documentation",
+        "note": "Arbetsboken rad 65, kolumn L"
+      }
+    ],
+    "access_note": null,
+    "notes": "Länk från arbetsboken, rad 51, kolumn L."
+  },
+  {
+    "id": "src-wb-cache.industry.siemens.com-01b0497b",
+    "url": "https://cache.industry.siemens.com/dl/files/842/109925842/att_1262081/v1/ONE_IndustrialCybersecurity_config_man_0124_en-US.pdf",
+    "title": "Tillverkarens generella Industrial Cybersecurity-guide – Siemens WinCC / WinCC Unified",
+    "publisher": "cache.industry.siemens.com",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "pf-siemens-wincc-unified",
+        "field": "documentation",
+        "note": "Arbetsboken rad 52, kolumn L"
+      }
+    ],
+    "access_note": null,
+    "notes": "Länk från arbetsboken, rad 52, kolumn L."
+  },
+  {
+    "id": "src-wb-docs.aveva.com-e77d8496",
+    "url": "https://docs.aveva.com/bundle/plant-scada/page/1243288.html",
+    "title": "Plant SCADA Security Guidelines – AVEVA InTouch / Plant SCADA",
+    "publisher": "docs.aveva.com",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "pf-aveva-intouch-plant-scada",
+        "field": "documentation",
+        "note": "Arbetsboken rad 53, kolumn L"
+      }
+    ],
+    "access_note": null,
+    "notes": "Länk från arbetsboken, rad 53, kolumn L."
+  },
+  {
+    "id": "src-wb-www.ptc.com-2190de32",
+    "url": "https://www.ptc.com/en/support/refdoc/KepwareServer/7_0/Secure_Deployment_Guide_for_Kepware_Server",
+    "title": "Secure Deployment Guide – PTC Kepware KEPServerEX",
+    "publisher": "ptc.com",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "pf-ptc-kepware-kepserverex",
+        "field": "documentation",
+        "note": "Arbetsboken rad 54, kolumn L"
+      }
+    ],
+    "access_note": null,
+    "notes": "Länk från arbetsboken, rad 54, kolumn L."
+  },
+  {
+    "id": "src-wb-www.ptc.com-58a78e6c",
+    "url": "https://www.ptc.com/help/kepware/kepware_server/en/kepware/server/settings-config-api-configuration.html",
+    "title": "Säkerhetskälla (arbetsboken) – PTC Kepware KEPServerEX",
+    "publisher": "ptc.com",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "pf-ptc-kepware-kepserverex",
+        "field": "risk_summary.cve_text",
+        "note": "Arbetsboken rad 54, kolumn N"
+      }
+    ],
+    "access_note": null,
+    "notes": "Länk från arbetsboken, rad 54, kolumn N."
+  },
+  {
+    "id": "src-wb-www.moxa.com-e4cf4926",
+    "url": "https://www.moxa.com/getmedia/5c1ddb66-33b7-42d0-8d30-559f34f62753/moxa-nport-6000-series-manual-v17.5.pdf",
+    "title": "NPort 6000-seriens manual (PDF) – Moxa NPort / EDR",
+    "publisher": "moxa.com",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "pf-moxa-nport-edr",
+        "field": "documentation",
+        "note": "Arbetsboken rad 55, kolumn L"
+      }
+    ],
+    "access_note": null,
+    "notes": "Länk från arbetsboken, rad 55, kolumn L."
+  },
+  {
+    "id": "src-wb-www.rockwellautomation.com-99d4a550",
+    "url": "https://www.rockwellautomation.com/en-us/docs/technical/logix5000/_online/1756-um900/controllogix-5590-controller-user-manual-ditamap/develop-secure-applications.html",
+    "title": "Tillverkarens CIP-/systemsäkert innehåll – EtherNet/IP (CIP)",
+    "publisher": "rockwellautomation.com",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "svc-ethernet-ip-cip",
+        "field": "documentation",
+        "note": "Arbetsboken rad 58, kolumn L"
+      }
+    ],
+    "access_note": null,
+    "notes": "Länk från arbetsboken, rad 58, kolumn L."
+  },
+  {
+    "id": "src-wb-reference.opcfoundation.org-84dc16b3",
+    "url": "https://reference.opcfoundation.org/specs/OPC-10000-2/1",
+    "title": "OPC Foundation Security Model – OPC UA",
+    "publisher": "OPC Foundation",
+    "source_type": "primary_standard",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "svc-opc-ua",
+        "field": "documentation",
+        "note": "Arbetsboken rad 60, kolumn L"
+      }
+    ],
+    "access_note": null,
+    "notes": "Länk från arbetsboken, rad 60, kolumn L."
+  },
+  {
+    "id": "src-wb-learn.microsoft.com-ded8fec8",
+    "url": "https://learn.microsoft.com/en-us/sql/relational-databases/security/secure-sql-server?view=sql-server-ver17",
+    "title": "Microsoft SQL Server Security Guide – Historian / SQL",
+    "publisher": "Microsoft",
+    "source_type": "primary_vendor",
+    "is_primary": true,
+    "published_at": null,
+    "last_checked_at": null,
+    "last_verified_at": null,
+    "availability": "unchecked",
+    "http_status": null,
+    "supports_claims": [
+      {
+        "entity_id": "svc-historian-sql",
+        "field": "documentation",
+        "note": "Arbetsboken rad 66, kolumn L"
+      }
+    ],
+    "access_note": null,
+    "notes": "Länk från arbetsboken, rad 66, kolumn L."
+  }
+]

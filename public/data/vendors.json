@@ -1,0 +1,560 @@
+[
+  {
+    "id": "vendor-danfoss",
+    "name": "Danfoss",
+    "aliases": [
+      "Danfoss Climate Solutions",
+      "ADAP-KOOL"
+    ],
+    "security_portal_url": "https://www.danfoss.com/en/service-and-support/coordinated-vulnerability-disclosure/",
+    "psirt_contact_url": null,
+    "support_urls": [
+      "https://www.danfoss.com/en/service-and-support/downloads/dcs/adap-kool-software/ak-sm-800a/"
+    ],
+    "verification_status": "corroborated_secondary",
+    "source_ids": [
+      "src-nvd-cve-2025-41450"
+    ],
+    "notes": "CVD-portalen härledd ur DSA-länkarnas sökväg i arbetsboken och NVD-referens; Danfoss är CNA för AK-SM-CVE:erna (NVD source API)."
+  },
+  {
+    "id": "vendor-copeland",
+    "name": "Copeland",
+    "aliases": [
+      "Emerson Climate Technologies",
+      "Dixell",
+      "Copeland Controls"
+    ],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [
+      "https://webapps.copeland.com/Dixell/Pages/SystemSoftwareUpdate"
+    ],
+    "verification_status": "corroborated_secondary",
+    "source_ids": [
+      "src-cisa-icsa-26-057-10-csaf"
+    ],
+    "notes": "Dixell är ett Copeland-varumärke. Uppdateringssidan anges i CISA ICSA-26-057-10."
+  },
+  {
+    "id": "vendor-carel",
+    "name": "CAREL",
+    "aliases": [
+      "CAREL Industries"
+    ],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": null
+  },
+  {
+    "id": "vendor-tridium",
+    "name": "Tridium",
+    "aliases": [
+      "Honeywell Tridium",
+      "Niagara Framework"
+    ],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [
+      "https://www.tridium.com/content/dam/tridium/en/documents/document-lists/niagara/tri-Niagara4-Hardening-Guide-en-2025.pdf"
+    ],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": "Hardening guide från arbetsboken."
+  },
+  {
+    "id": "vendor-johnson-controls",
+    "name": "Johnson Controls",
+    "aliases": [
+      "JCI",
+      "Software House",
+      "Tyco"
+    ],
+    "security_portal_url": "https://www.johnsoncontrols.com/trust-center/cybersecurity/security-advisories",
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "needs_review",
+    "source_ids": [],
+    "notes": "Bulletinportal angiven i arbetsboken (rad 18); länk ej kontrollerad i denna session."
+  },
+  {
+    "id": "vendor-automated-logic",
+    "name": "Automated Logic",
+    "aliases": [
+      "ALC",
+      "Carrier Automated Logic"
+    ],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": null
+  },
+  {
+    "id": "vendor-siemens",
+    "name": "Siemens",
+    "aliases": [
+      "Siemens ProductCERT",
+      "Siemens Smart Infrastructure",
+      "SIMATIC"
+    ],
+    "security_portal_url": "https://cert-portal.siemens.com/productcert/html/",
+    "psirt_contact_url": "https://www.siemens.com/cert/advisories",
+    "support_urls": [],
+    "verification_status": "verified_primary",
+    "source_ids": [
+      "src-siemens-ssa-330084-csaf",
+      "src-siemens-ssa-568427-csaf"
+    ],
+    "notes": "ProductCERT-portalen verifierad via hämtade CSAF-dokument."
+  },
+  {
+    "id": "vendor-schneider-electric",
+    "name": "Schneider Electric",
+    "aliases": [
+      "APC by Schneider Electric",
+      "Modicon",
+      "EcoStruxure",
+      "Easergy"
+    ],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [
+      "https://www.se.com/us/en/download/document/EIO0000004242/"
+    ],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": "APC Network Management Card ingår under Schneider Electric."
+  },
+  {
+    "id": "vendor-rockwell-automation",
+    "name": "Rockwell Automation",
+    "aliases": [
+      "Allen-Bradley",
+      "FactoryTalk"
+    ],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": null
+  },
+  {
+    "id": "vendor-unitronics",
+    "name": "Unitronics",
+    "aliases": [],
+    "security_portal_url": "https://www.unitronicsplc.com/cyber_security_vision-samba/",
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "corroborated_secondary",
+    "source_ids": [
+      "src-nvd-cve-2023-6448"
+    ],
+    "notes": "Säkerhetssida refererad i NVD-posten för CVE-2023-6448."
+  },
+  {
+    "id": "vendor-weintek",
+    "name": "Weintek",
+    "aliases": [],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [
+      "https://dl.weintek.com/public/Document/UM0/Product-Security-UserManual-eng.pdf"
+    ],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": null
+  },
+  {
+    "id": "vendor-regin",
+    "name": "Regin",
+    "aliases": [
+      "AB Regin"
+    ],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": null
+  },
+  {
+    "id": "vendor-swegon",
+    "name": "Swegon",
+    "aliases": [],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": null
+  },
+  {
+    "id": "vendor-systemair",
+    "name": "Systemair",
+    "aliases": [],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": null
+  },
+  {
+    "id": "vendor-axis",
+    "name": "Axis Communications",
+    "aliases": [
+      "Axis"
+    ],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [
+      "https://help.axis.com/en-us/axis-camera-station-system-hardening-guide"
+    ],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": null
+  },
+  {
+    "id": "vendor-hikvision",
+    "name": "Hikvision",
+    "aliases": [],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": null
+  },
+  {
+    "id": "vendor-dahua",
+    "name": "Dahua Technology",
+    "aliases": [
+      "Dahua"
+    ],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": null
+  },
+  {
+    "id": "vendor-rco",
+    "name": "RCO Security",
+    "aliases": [
+      "RCO"
+    ],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [
+      "https://rco.se/mjukvara/grundlicenser/programvare/m5/r-card-m5"
+    ],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": null
+  },
+  {
+    "id": "vendor-assa-abloy",
+    "name": "ASSA ABLOY",
+    "aliases": [
+      "ASSA ABLOY Opening Solutions Sweden"
+    ],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": null
+  },
+  {
+    "id": "vendor-2n",
+    "name": "2N",
+    "aliases": [
+      "2N Telekomunikace",
+      "2N (Axis-koncernen)"
+    ],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [
+      "https://www.2n.com/en-GB/manuals/intercoms/2n-ip-verso/"
+    ],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": null
+  },
+  {
+    "id": "vendor-nibe",
+    "name": "NIBE",
+    "aliases": [
+      "NIBE Energy Systems",
+      "myUplink"
+    ],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": null
+  },
+  {
+    "id": "vendor-sma",
+    "name": "SMA Solar Technology",
+    "aliases": [
+      "SMA"
+    ],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": null
+  },
+  {
+    "id": "vendor-fronius",
+    "name": "Fronius",
+    "aliases": [],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [
+      "https://manuals.fronius.com/html/4204260191/sv.html"
+    ],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": null
+  },
+  {
+    "id": "vendor-solar-log",
+    "name": "Solar-Log",
+    "aliases": [
+      "Solare Datensysteme"
+    ],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [
+      "https://www.solar-log.com/en/support/firmware-database"
+    ],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": null
+  },
+  {
+    "id": "vendor-sungrow",
+    "name": "Sungrow",
+    "aliases": [
+      "Sungrow Power Supply"
+    ],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": null
+  },
+  {
+    "id": "vendor-teltonika",
+    "name": "Teltonika Networks",
+    "aliases": [
+      "Teltonika"
+    ],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [
+      "https://wiki.teltonika-networks.com/view/Security_Features"
+    ],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": null
+  },
+  {
+    "id": "vendor-hms-networks",
+    "name": "HMS Networks",
+    "aliases": [
+      "Ewon",
+      "eWON"
+    ],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": null
+  },
+  {
+    "id": "vendor-synology",
+    "name": "Synology",
+    "aliases": [],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [
+      "https://kb.synology.com/en-us/DSM/tutorial/How_to_add_extra_security_to_your_Synology_NAS"
+    ],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": null
+  },
+  {
+    "id": "vendor-qnap",
+    "name": "QNAP Systems",
+    "aliases": [
+      "QNAP"
+    ],
+    "security_portal_url": "https://www.qnap.com/sv-se/security",
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "needs_review",
+    "source_ids": [],
+    "notes": "Säkerhetssida angiven i arbetsboken (rad 40); länk ej kontrollerad i denna session."
+  },
+  {
+    "id": "vendor-home-assistant",
+    "name": "Home Assistant",
+    "aliases": [
+      "Open Home Foundation",
+      "Nabu Casa"
+    ],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [
+      "https://www.home-assistant.io/docs/configuration/remote/"
+    ],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": "Öppen källkod; ingen klassisk PSIRT-portal registrerad här."
+  },
+  {
+    "id": "vendor-abb",
+    "name": "ABB",
+    "aliases": [],
+    "security_portal_url": "https://www.abb.com/global/en/company/about/cybersecurity/alerts-and-notifications",
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "needs_review",
+    "source_ids": [],
+    "notes": "Bulletinportal angiven i arbetsboken (rad 42–43); länk ej kontrollerad i denna session."
+  },
+  {
+    "id": "vendor-beckhoff",
+    "name": "Beckhoff Automation",
+    "aliases": [
+      "Beckhoff",
+      "TwinCAT"
+    ],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": null
+  },
+  {
+    "id": "vendor-wago",
+    "name": "WAGO",
+    "aliases": [],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": null
+  },
+  {
+    "id": "vendor-phoenix-contact",
+    "name": "Phoenix Contact",
+    "aliases": [
+      "PLCnext"
+    ],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": null
+  },
+  {
+    "id": "vendor-mitsubishi-electric",
+    "name": "Mitsubishi Electric",
+    "aliases": [
+      "MELSEC"
+    ],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": null
+  },
+  {
+    "id": "vendor-omron",
+    "name": "OMRON",
+    "aliases": [
+      "Omron Industrial Automation"
+    ],
+    "security_portal_url": "https://industrial.omron.eu/en/services-support/support/cybersecurity",
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "needs_review",
+    "source_ids": [],
+    "notes": "Cybersäkerhetsportal angiven i arbetsboken (rad 50); länk ej kontrollerad i denna session."
+  },
+  {
+    "id": "vendor-inductive-automation",
+    "name": "Inductive Automation",
+    "aliases": [
+      "Ignition"
+    ],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [
+      "https://inductiveautomation.com/resources/article/ignition-security-hardening-guide"
+    ],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": null
+  },
+  {
+    "id": "vendor-aveva",
+    "name": "AVEVA",
+    "aliases": [
+      "Wonderware",
+      "Citect"
+    ],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": null
+  },
+  {
+    "id": "vendor-ptc",
+    "name": "PTC",
+    "aliases": [
+      "Kepware"
+    ],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [
+      "https://www.ptc.com/en/support/refdoc/KepwareServer/7_0/Secure_Deployment_Guide_for_Kepware_Server"
+    ],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": null
+  },
+  {
+    "id": "vendor-moxa",
+    "name": "Moxa",
+    "aliases": [],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": null
+  }
+]

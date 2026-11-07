@@ -1,0 +1,92 @@
+# Schemalagd datainhämtning (NVD / EPSS / KEV / CSAF) → granskningsbar pull request.
+# Automatiken skriver ALDRIG direkt till main och skriver aldrig över kuraterade uppgifter;
+# diff-rapporten listar konflikter som "disputed-kandidater" som en människa måste avgöra.
+# Valfri hemlighet: NVD_API_KEY (höjer NVD:s rate limit). Nyckeln används bara i detta jobb.
+name: Data update (NVD/KEV/EPSS)
+
+on:
+  schedule:
+    - cron: '17 5 * * 1' # måndagar 05:17 UTC
+  workflow_dispatch:
+    inputs:
+      only:
+        description: 'Steg att köra (kommaseparerat: nvd,epss,kev,csaf). Tomt = alla.'
+        required: false
+        default: ''
+      force:
+        description: 'Ignorera cache-ålder och hämta om allt'
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: data-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          persist-credentials: false
+      - name: Setup Node 22
+        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Fetch external data (rate limited, cached, allowlisted hosts)
+        env:
+          NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
+          ONLY: ${{ github.event.inputs.only }}
+          FORCE: ${{ github.event.inputs.force }}
+        run: |
+          ARGS=""
+          if [ -n "$ONLY" ]; then ARGS="$ARGS --only=$ONLY"; fi
+          if [ "$FORCE" = "true" ]; then ARGS="$ARGS --force"; fi
+          npx tsx scripts/enrich/run.ts $ARGS
+      - name: Rebuild and validate public data with new cache
+        run: |
+          npm run data:import
+          npm run data:build
+          npm run data:validate
+      - name: Diff report
+        id: diff
+        run: |
+          npx tsx scripts/enrich/diff.ts > /dev/null
+          if git diff --quiet -- sources/enrichment public/data; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Create review pull request
+        if: steps.diff.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@22a9089034f40e5a961c8808d113e2c98fb63676 # v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: data-update/${{ github.run_id }}
+          delete-branch: true
+          commit-message: 'data: automatisk uppdatering NVD/KEV/EPSS (needs_review)'
+          title: 'data: automatisk uppdatering NVD/KEV/EPSS – kräver granskning'
+          body-path: sources/enrichment/diff-report.md
+          labels: needs_review, data
+          draft: true
+          add-paths: |
+            sources/enrichment/**
+            public/data/**
+      - name: Summary
+        if: always()
+        run: |
+          echo "### Datauppdatering" >> "$GITHUB_STEP_SUMMARY"
+          echo "Ändringar: ${{ steps.diff.outputs.changed }}" >> "$GITHUB_STEP_SUMMARY"
+          if [ -f sources/enrichment/diff-report.md ]; then cat sources/enrichment/diff-report.md >> "$GITHUB_STEP_SUMMARY"; fi

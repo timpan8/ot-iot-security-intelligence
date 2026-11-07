@@ -1,0 +1,330 @@
+{
+  "_comment": "Bulletiner. cve_ids listar CVE:er som bulletinen omfattar enligt primärkälla; alla behöver inte finnas som vulnerability-poster (se vulnerability_overrides och enrichment-cache).",
+  "advisories": [
+    {
+      "id": "adv-siemens-ssa-330084",
+      "advisory_id": "SSA-330084",
+      "issuer": "Siemens ProductCERT",
+      "vendor_id": "vendor-siemens",
+      "title": "SSA-330084: Client Code Execution Vulnerability in Desigo CC Product Family",
+      "url": "https://cert-portal.siemens.com/productcert/html/ssa-330084.html",
+      "csaf_url": "https://cert-portal.siemens.com/productcert/csaf/ssa-330084.json",
+      "published_at": "2026-09-08",
+      "updated_at": "2026-09-08",
+      "status": "interim",
+      "source_type": "primary_vendor",
+      "cve_ids": ["CVE-2026-34223"],
+      "summary": "Klientkodkörning (CCE) via skript i användardefinierade grafikdokument. Berörda enligt CSAF product_status: Desigo CC ClickOnce Client V6 och V7 samt Desigo CC Installed Client V6 och V7 (alla versioner). Uttryckligen EJ berörda: Desigo CC family V8 och V9 samt Desigo CC Flex Client V6 och V7. Ingen fix tillgänglig för berörda klienter (none_available); mitigering: behörighetsstyrning av Graphics-applikationen enligt minsta privilegium. PXC-styrenheter nämns inte i bulletinen.",
+      "history": [
+        {
+          "date": "2026-09-08",
+          "status": "verified_primary",
+          "summary": "Version 1 publicerad (CSAF revision_history)."
+        }
+      ],
+      "source_ids": ["src-siemens-ssa-330084-csaf", "src-siemens-ssa-330084-html"],
+      "verification_status": "verified_primary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": [
+          "Arbetsboken angav enbart 'ClickOnce Client V6: alla versioner' – bulletinen omfattar fler klientvarianter och anger uttryckligen ej berörda varianter.",
+          "NVD:s beskrivningstext räknar upp även V8/V9/Flex; CSAF product_status är auktoritativ och anger dem som known_not_affected (se claim)."
+        ],
+        "history": []
+      }
+    },
+    {
+      "id": "adv-siemens-ssa-568427",
+      "advisory_id": "SSA-568427",
+      "issuer": "Siemens ProductCERT",
+      "vendor_id": "vendor-siemens",
+      "title": "SSA-568427: Weak Key Protection Vulnerability in SIMATIC S7-1200 and S7-1500 CPU Families",
+      "url": "https://cert-portal.siemens.com/productcert/html/ssa-568427.html",
+      "csaf_url": "https://cert-portal.siemens.com/productcert/csaf/ssa-568427.json",
+      "published_at": "2022-10-11",
+      "updated_at": "2022-10-11",
+      "status": "final",
+      "source_type": "primary_vendor",
+      "cve_ids": ["CVE-2022-38465"],
+      "summary": "Otillräckligt skydd av inbyggd global privat nyckel som används för legacy-skydd av konfigurationsdata och legacy PG/PC- och HMI-kommunikation. Berörda: SIMATIC S7-1200 CPU family (inkl. SIPLUS) < V4.5.0; SIMATIC S7-1500 CPU family (inkl. ET200-CPU:er och SIPLUS) < V2.9.2; S7-1500 Software Controller < V21.9; Drive Controller < V2.9.2; ET 200SP Open Controller CPU 1515SP PC (alla versioner, ingen fix planerad) och 1515SP PC2 < V21.9; S7-PLCSIM Advanced < V4.0. Åtgärd: uppdatera, migrera TIA-projekt och konfigurera 'Only allow secure PG/PC and HMI communication'.",
+      "history": [
+        { "date": "2022-10-11", "status": "verified_primary", "summary": "Version 1 publicerad." }
+      ],
+      "source_ids": ["src-siemens-ssa-568427-csaf", "src-siemens-ssa-568427-html"],
+      "verification_status": "verified_primary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": [
+          "Arbetsboken angav bulletin-ID i CVE-kolumnen för S7-1500 (rad 47) och som käll-URL för S7-1200 (rad 12); CVE-ID:t CVE-2022-38465 hämtat från CSAF."
+        ],
+        "history": []
+      }
+    },
+    {
+      "id": "adv-danfoss-dsa-2025-03-01",
+      "advisory_id": "DSA-2025-03-01",
+      "issuer": "Danfoss",
+      "vendor_id": "vendor-danfoss",
+      "title": "Danfoss Security Advisory DSA-2025-03-01 (AK-SM 8xxA)",
+      "url": "https://www.danfoss.com/en/service-and-support/coordinated-vulnerability-disclosure/danfoss-security-advisories/dsa-2025-03-01",
+      "csaf_url": null,
+      "published_at": null,
+      "updated_at": null,
+      "status": "unknown",
+      "source_type": "primary_vendor",
+      "cve_ids": ["CVE-2025-41450"],
+      "summary": "Kopplingen till CVE-2025-41450 (Improper Authentication, AK-SM 8xxA Series före version 4.2) stöds av NVD-postens referenslista, där Danfoss som CNA anger denna DSA-sida. Bulletinens egna publicerings-/revisionsdatum kunde inte läsas (bot-skydd).",
+      "history": [],
+      "source_ids": ["src-danfoss-dsa-2025-03-01", "src-nvd-cve-2025-41450"],
+      "verification_status": "corroborated_secondary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": [
+          "Primärsidan returnerade HTTP 403 för automatiserad hämtning; manuell läsning krävs för datum och eventuella revisioner."
+        ],
+        "history": []
+      }
+    },
+    {
+      "id": "adv-danfoss-dsa-2025-08-01",
+      "advisory_id": "DSA-2025-08-01",
+      "issuer": "Danfoss",
+      "vendor_id": "vendor-danfoss",
+      "title": "Danfoss Security Advisory DSA-2025-08-01 (AK-SM 8xxA)",
+      "url": "https://www.danfoss.com/en/service-and-support/coordinated-vulnerability-disclosure/danfoss-security-advisories/dsa-2025-08-01",
+      "csaf_url": null,
+      "published_at": null,
+      "updated_at": null,
+      "status": "unknown",
+      "source_type": "primary_vendor",
+      "cve_ids": ["CVE-2025-41451", "CVE-2025-41452"],
+      "summary": "Enligt arbetsboken (rad 3) och projektets masterprompt omfattar bulletinen CVE-2025-41451 och CVE-2025-41452 (AK-SM 8xxA före 4.3.1). NVD-posterna refererar till produktens nedladdningssida men inte till denna DSA-sida, och sidan kunde inte läsas i sessionen. Kopplingen bulletin↔CVE är därför markerad needs_review; CVE-uppgifterna i sig är verifierade via NVD (CNA Danfoss).",
+      "history": [],
+      "source_ids": [
+        "src-danfoss-dsa-2025-08-01",
+        "src-nvd-cve-2025-41451",
+        "src-nvd-cve-2025-41452"
+      ],
+      "verification_status": "needs_review",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": [
+          "Att verifiera manuellt: att DSA-2025-08-01 faktiskt listar båda CVE:erna samt bulletinens datum."
+        ],
+        "history": []
+      }
+    },
+    {
+      "id": "adv-cisa-icsa-26-057-10",
+      "advisory_id": "ICSA-26-057-10",
+      "issuer": "CISA",
+      "vendor_id": "vendor-copeland",
+      "title": "ICSA-26-057-10: Copeland XWEB and XWEB Pro",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-057-10",
+      "csaf_url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2026/icsa-26-057-10.json",
+      "published_at": "2026-02-26",
+      "updated_at": "2026-02-26",
+      "status": "final",
+      "source_type": "primary_government",
+      "cve_ids": [
+        "CVE-2026-25085",
+        "CVE-2026-21718",
+        "CVE-2026-24663",
+        "CVE-2026-21389",
+        "CVE-2026-25111",
+        "CVE-2026-20742",
+        "CVE-2026-24517",
+        "CVE-2026-25195",
+        "CVE-2026-20910",
+        "CVE-2026-24689",
+        "CVE-2026-25109",
+        "CVE-2026-20902",
+        "CVE-2026-24695",
+        "CVE-2026-25105",
+        "CVE-2026-24452",
+        "CVE-2026-23702",
+        "CVE-2026-25721",
+        "CVE-2026-20764",
+        "CVE-2026-25196",
+        "CVE-2026-25037",
+        "CVE-2026-22877",
+        "CVE-2026-20797",
+        "CVE-2026-3037"
+      ],
+      "summary": "Berörda produkter enligt CSAF: XWEB 300D PRO, XWEB 500D PRO och XWEB 500B PRO, version ≤1.12.1. Sammanlagd riskbedömning: autentiseringsförbigång, DoS, minneskorruption och kodkörning. Åtgärd: Copeland har släppt fix och rekommenderar uppdatering till senaste version via uppdateringssidan eller via enhetens meny SYSTEM → Updates | Network. Bulletinen anger INGEN specifik fixversion. CISA: ingen känd publik exploatering rapporterad vid publicering.",
+      "history": [
+        { "date": "2026-02-26", "status": "verified_primary", "summary": "Initial release (CSAF)." }
+      ],
+      "source_ids": ["src-cisa-icsa-26-057-10-csaf", "src-cisa-icsa-26-057-10"],
+      "verification_status": "verified_primary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": [
+          "Arbetsboken listar endast CVE-2026-21718; bulletinen omfattar 23 CVE-ID:n. Övriga är inte importerade som vulnerability-poster i MVP (backlog).",
+          "Arbetsbokens uppgift 'åtgärdad version 1.13' återfinns inte i bulletinen och förblir overifierad."
+        ],
+        "history": []
+      }
+    },
+    {
+      "id": "adv-unitronics-2023-001",
+      "advisory_id": "Unitronics Cybersecurity Advisory 2023-001",
+      "issuer": "Unitronics",
+      "vendor_id": "vendor-unitronics",
+      "title": "Unitronics Cybersecurity Advisory 2023-001 – CVE-2023-6448",
+      "url": "https://downloads.unitronicsplc.com/Sites/plc/Technical_Library/Unitronics-Cybersecurity-Advisory-2023-001-CVE-2023-6448.pdf",
+      "csaf_url": null,
+      "published_at": null,
+      "updated_at": null,
+      "status": "unknown",
+      "source_type": "primary_vendor",
+      "cve_ids": ["CVE-2023-6448"],
+      "summary": "Tillverkarens bulletin refererad av NVD (Vendor Advisory) och CISA KEV. Innehållet ej läst i denna session; NVD anger VisiLogic före 9.9.00 och Vision/Samba-firmware före 12.38 som berörda.",
+      "history": [],
+      "source_ids": ["src-unitronics-advisory-2023-001", "src-nvd-cve-2023-6448"],
+      "verification_status": "corroborated_secondary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": [],
+        "history": []
+      }
+    },
+    {
+      "id": "adv-cisa-icsa-24-109-01",
+      "advisory_id": "ICSA-24-109-01",
+      "issuer": "CISA",
+      "vendor_id": "vendor-unitronics",
+      "title": "ICSA-24-109-01: Unitronics Vision Standard",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-24-109-01",
+      "csaf_url": null,
+      "published_at": null,
+      "updated_at": null,
+      "status": "unknown",
+      "source_type": "primary_government",
+      "cve_ids": ["CVE-2024-1480"],
+      "summary": "Refererad av NVD för CVE-2024-1480 (Information Mode-lösenord kan hämtas utan autentisering, Vision Standard). Innehållet ej läst i denna session.",
+      "history": [],
+      "source_ids": ["src-cisa-icsa-24-109-01", "src-nvd-cve-2024-1480"],
+      "verification_status": "corroborated_secondary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": [],
+        "history": []
+      }
+    },
+    {
+      "id": "adv-armis-frostbyte10",
+      "advisory_id": "Frostbyte10",
+      "issuer": "Armis Labs",
+      "vendor_id": "vendor-copeland",
+      "title": "Frostbyte10 – sårbarheter i Copeland E2 och E3 (forskningsrapport)",
+      "url": "https://www.armis.com/research/frostbyte10/",
+      "csaf_url": null,
+      "published_at": null,
+      "updated_at": null,
+      "status": "unknown",
+      "source_type": "secondary_research",
+      "cve_ids": [
+        "CVE-2025-6519",
+        "CVE-2025-52543",
+        "CVE-2025-52544",
+        "CVE-2025-52545",
+        "CVE-2025-52546",
+        "CVE-2025-52547",
+        "CVE-2025-52548",
+        "CVE-2025-52549",
+        "CVE-2025-52550",
+        "CVE-2025-52551"
+      ],
+      "summary": "Forskningsrapport (sekundärkälla) som är enda referens i NVD-posterna. Armis är CNA för CVE:erna, varför NVD-posternas uppgifter om E3 Site Supervisor < 2.31F01 (CPE versionEndExcluding 2.31f01, status Analyzed) räknas som verifierade. Ingen leverantörsbulletin från Copeland har identifierats i denna session.",
+      "history": [],
+      "source_ids": ["src-armis-frostbyte10"],
+      "verification_status": "corroborated_secondary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": ["Att verifiera: finns en Copeland-bulletin eller release notes för 2.31F01?"],
+        "history": []
+      }
+    },
+    {
+      "id": "adv-certvde-2025-027",
+      "advisory_id": "VDE-2025-027",
+      "issuer": "CERT@VDE",
+      "vendor_id": null,
+      "title": "VDE-2025-027: CODESYS Visualization – forced browsing",
+      "url": "https://certvde.com/en/advisories/VDE-2025-027",
+      "csaf_url": null,
+      "published_at": null,
+      "updated_at": null,
+      "status": "unknown",
+      "source_type": "primary_government",
+      "cve_ids": ["CVE-2025-2595"],
+      "summary": "CODESYS-komponentbulletin (CNA CERT@VDE). Gäller CODESYS Visualization; eventuell påverkan på ABB AC500 V3 måste verifieras mot ABB:s egna bulletiner.",
+      "history": [],
+      "source_ids": ["src-certvde-2025-027", "src-nvd-cve-2025-2595"],
+      "verification_status": "corroborated_secondary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": [],
+        "history": []
+      }
+    },
+    {
+      "id": "adv-certvde-2025-051",
+      "advisory_id": "VDE-2025-051",
+      "issuer": "CERT@VDE",
+      "vendor_id": null,
+      "title": "VDE-2025-051: CODESYS Control – PKI-katalog åtkomlig",
+      "url": "https://certvde.com/de/advisories/VDE-2025-051",
+      "csaf_url": null,
+      "published_at": null,
+      "updated_at": null,
+      "status": "unknown",
+      "source_type": "primary_government",
+      "cve_ids": ["CVE-2025-41659"],
+      "summary": "CODESYS Control runtime: lågprivilegierad fjärranvändare kan läsa/skriva certifikat och nycklar i PKI-katalogen.",
+      "history": [],
+      "source_ids": ["src-certvde-2025-051", "src-nvd-cve-2025-41659"],
+      "verification_status": "corroborated_secondary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": [],
+        "history": []
+      }
+    },
+    {
+      "id": "adv-certvde-2025-070",
+      "advisory_id": "VDE-2025-070",
+      "issuer": "CERT@VDE",
+      "vendor_id": null,
+      "title": "VDE-2025-070: CODESYS Control – NULL pointer dereference (DoS)",
+      "url": "https://certvde.com/de/advisories/VDE-2025-070",
+      "csaf_url": null,
+      "published_at": null,
+      "updated_at": null,
+      "status": "unknown",
+      "source_type": "primary_government",
+      "cve_ids": ["CVE-2025-41691"],
+      "summary": "CODESYS Control runtime: oautentiserad DoS via specialutformade kommunikationsförfrågningar.",
+      "history": [],
+      "source_ids": ["src-certvde-2025-070", "src-nvd-cve-2025-41691"],
+      "verification_status": "corroborated_secondary",
+      "review": {
+        "reviewed_at": "2026-11-07",
+        "reviewer": "projektgranskning",
+        "notes": [],
+        "history": []
+      }
+    }
+  ]
+}
