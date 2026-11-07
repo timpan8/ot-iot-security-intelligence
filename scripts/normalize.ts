@@ -155,16 +155,22 @@ function uniq<T>(arr: T[]): T[] {
 /* Källor                                                              */
 /* ------------------------------------------------------------------ */
 
+function hostMatchesDomain(host: string, domain: string): boolean {
+  const normalizedHost = host.toLowerCase().replace(/\.+$/, '');
+  const normalizedDomain = domain.toLowerCase().replace(/\.+$/, '');
+  return normalizedHost === normalizedDomain || normalizedHost.endsWith(`.${normalizedDomain}`);
+}
+
 function classifySourceByHost(host: string): { type: Source['source_type']; publisher: string } {
-  if (host.endsWith('csrc.nist.gov') || host.endsWith('nist.gov'))
+  if (hostMatchesDomain(host, 'csrc.nist.gov') || hostMatchesDomain(host, 'nist.gov'))
     return { type: 'primary_standard', publisher: 'NIST' };
-  if (host.endsWith('cisa.gov')) return { type: 'primary_government', publisher: 'CISA' };
-  if (host.endsWith('armis.com')) return { type: 'secondary_research', publisher: 'Armis' };
-  if (host.endsWith('opcfoundation.org'))
+  if (hostMatchesDomain(host, 'cisa.gov')) return { type: 'primary_government', publisher: 'CISA' };
+  if (hostMatchesDomain(host, 'armis.com')) return { type: 'secondary_research', publisher: 'Armis' };
+  if (hostMatchesDomain(host, 'opcfoundation.org'))
     return { type: 'primary_standard', publisher: 'OPC Foundation' };
-  if (host.endsWith('learn.microsoft.com'))
+  if (hostMatchesDomain(host, 'learn.microsoft.com'))
     return { type: 'primary_vendor', publisher: 'Microsoft' };
-  if (host.endsWith('cert-portal.siemens.com'))
+  if (hostMatchesDomain(host, 'cert-portal.siemens.com'))
     return { type: 'primary_vendor', publisher: 'Siemens ProductCERT' };
   return { type: 'primary_vendor', publisher: host.replace(/^www\./, '') };
 }
