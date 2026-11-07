@@ -83,26 +83,39 @@ test.describe('Röktest – publik kunskapsbas', () => {
     await expect(page.getByText(/bevisar inte att offentlig/).first()).toBeVisible();
   });
 
-  test('gamla snabböversikten leder till katalogen; KEV-filter och utfälld rad visar allt per produkt', async ({
+  test('gamla snabböversikten leder till katalogens dossiervy med allt per produkt', async ({
     page,
   }) => {
     await page.goto('#/oversikt?sort=severity');
-    await expect(page).toHaveURL(/#\/katalog\?sort=severity/);
+    await expect(page).toHaveURL(/#\/katalog\?.*view=cards/);
     await expect(page.getByRole('heading', { level: 1, name: 'Katalog' })).toBeVisible();
     await expect(page.getByRole('status')).toHaveText(/^125 av 125 poster$/);
     // Defensiv disciplin: tydlig text om att inga lösenordsvärden finns
     await expect(
       page.getByText(/Underlaget innehåller inga lösenordsvärden/).first(),
     ).toBeVisible();
-    // KEV-snabbfiltret ska minska antalet poster och speglas i URL
-    await page.getByRole('button', { name: /CVE i CISA KEV/ }).click();
-    await expect(page.getByRole('status')).toHaveText(/^2 av 125 poster$/);
-    await expect(page).toHaveURL(/has=kev/);
+    // Dossiervyn visar signaler och CVE direkt, utan att klicka
     await expect(page.getByText('KEV ×1').first()).toBeVisible();
-    // Fäll ut raden: konto, lösenordstyp och CVE-lista utan att lämna katalogen
-    await page.getByRole('button', { name: /Visa detaljer för Unitronics Vision/ }).click();
     await expect(page.getByRole('link', { name: 'CVE-2023-6448' }).first()).toBeVisible();
     await expect(page.getByText('Initiallösenord (typ, aldrig värde)').first()).toBeVisible();
+  });
+
+  test('dossiervyn visar konto, lösenordstyp, sökord och CVE per produkt utan att klicka', async ({
+    page,
+  }) => {
+    await page.goto('#/katalog?view=cards&sort=severity&has=kev');
+    await expect(page.getByRole('status')).toHaveText(/^2 av 125 poster$/);
+    const card = page.locator('article').first();
+    await expect(card.getByRole('link', { name: 'Unitronics Vision' })).toBeVisible();
+    // Allt syns direkt i kortet – ingen utfällning behövs
+    await expect(card.getByText('Standardkonto')).toBeVisible();
+    await expect(card.getByText('Initiallösenord (typ, aldrig värde)')).toBeVisible();
+    await expect(card.getByText('Sökord för egen inventering')).toBeVisible();
+    await expect(card.getByRole('link', { name: 'CVE-2023-6448' })).toBeVisible();
+    // Växling tillbaka till tabell speglas i URL
+    await page.getByRole('button', { name: 'Tabell' }).click();
+    await expect(page).not.toHaveURL(/view=cards/);
+    await expect(page.getByRole('table')).toBeVisible();
   });
 
   test('inga externa länkar utan säkra attribut', async ({ page }) => {

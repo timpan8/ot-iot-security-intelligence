@@ -279,7 +279,7 @@ export function DashboardPage() {
 
         <Panel
           title="Allvarligast just nu"
-          more={{ to: '/katalog?sort=severity&has=cve', label: 'Alla i katalogen' }}
+          more={{ to: '/katalog?sort=severity&has=cve&view=cards', label: 'Alla i dossiervyn' }}
         >
           <table className="table">
             <thead className="sr-only">
