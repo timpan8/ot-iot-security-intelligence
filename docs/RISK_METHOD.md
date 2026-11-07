@@ -38,6 +38,11 @@ underlaget) och `source_ids`.
 
 ### Kategori-default för `ot_impact`
 
+Från registerimporten är kategorin fri text och defaultvärdena ligger i
+`sources/curated/category_profiles.json` (46 kategorier med grupp, nivå och motivering, t.ex.
+`Medicinsk bild` → `high` med K7, `EV-laddning` → `medium`). Saknas profil blir nivån `unknown`,
+inte en gissning. Tabellen nedan visar originalets 18 kategorier.
+
 | Kategori                                | Default          | Motivering                                                                                         |
 | --------------------------------------- | ---------------- | -------------------------------------------------------------------------------------------------- |
 | Kyla                                    | high             | Kylkedja, livsmedels- och läkemedelssäkerhet, ekonomisk skada vid stopp                            |
@@ -69,6 +74,33 @@ Faktiska värden per post finns i `public/data/product_families.json` och
 
 `rationale` i varje post förklarar valet i klartext. Åtgärderna i `controls` har `order_hint` och
 `depends_on_control_ids` för rekommenderad ordning.
+
+## Hotunderlag från registret (`threat_intel`)
+
+Registret tillför per CVE fyra signaler som ingår i `threat`-faktorns `basis` men aldrig slås
+ihop till ett värde:
+
+| Signal                                            | Påverkan på `threat`                                                                                                                                                                                 |
+| ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `active_exploitation_status = kev_listed` / KEV   | `high` (bekräftat utnyttjande)                                                                                                                                                                       |
+| `public_poc_status = poc_reported`                | Minst `medium` för bekräftade matchningar; **aldrig `high` utan KEV**. En offentlig PoC är en daterad uppgift om demonstration, inte bevis på angrepp mot produkten.                                 |
+| `public_poc_status = none_reported_at_assessment` | Ingen höjning. SSVC `none` med bedömningsdatum bevisar inte att kod eller exploatering saknas i dag; `basis` anger datumet.                                                                          |
+| `public_poc_status = unknown_missing`             | Ingen höjning; redovisas som okänt.                                                                                                                                                                  |
+| `material_type_code`                              | Styr ordval i `basis`: emulator/rekonstruerad PoC, detektionsverktyg, komponent-PoC eller officiell rapport. En komponent-PoC (t.ex. Linux, OpenSSH) bevisar inte fjärrexploatering av OT-produkten. |
+
+`relevance` för registerrelationer: `verified_primary` när CVE finns i den hämtade CSAF-bulletinen
+och produkten i `known_affected` – men versionsregeln är `source_text`, så installerad version
+måste alltid matchas mot `affected_source_text`. `mitigation_feasibility` bygger på
+`fixed_source_text`; ”Ingen fixed-matris angiven” betyder inte att fix saknas.
+
+## Tolkning av registrets prioritet (`register.priority_text`)
+
+Registret anger `P1 – verifiera omgående` (2 poster) eller `P2 – snar verifiering` (123 poster)
+**vid konstaterad exponering**. Eftersom `observed_exposure_text` är ”Ej undersökt” på alla rader
+och `risk.exposure` alltid är `unknown`, är detta en villkorlig signal på samma sätt som
+originalets ”P1 vid publik åtkomst”: den anger vad som bör ske _om_ en auktoriserad inventering
+konstaterar exponering, inte en bedömning av faktisk exponering. Slutlig prioritet kräver lokal
+process- och säkerhetsbedömning.
 
 ## Tolkning av ”P1 vid publik åtkomst”
 

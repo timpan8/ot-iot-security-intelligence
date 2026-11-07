@@ -1,0 +1,14 @@
+[
+  {
+    "type": "cve_set_difference",
+    "register_id": "OT-041",
+    "project_id": "pf-abb-ac500-v3",
+    "only_in_register": [],
+    "only_in_project": [
+      "CVE-2025-2595",
+      "CVE-2025-41659",
+      "CVE-2025-41691"
+    ],
+    "resolution": "Projektets kuraterade matchningar behålls; registrets relationer läggs till som register_relation. Granska manuellt."
+  }
+]

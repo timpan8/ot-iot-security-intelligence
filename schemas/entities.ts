@@ -5,6 +5,9 @@ import {
   ClaimId,
   ControlId,
   DataQualityFlag,
+  LinkCheckId,
+  RegisterOrigin,
+  ThreatIntelId,
   HistoryEntry,
   HttpsUrl,
   IsoDate,
@@ -60,8 +63,35 @@ export const Source = z.strictObject({
   supports_claims: z.array(SupportedClaim).default([]),
   access_note: z.string().nullable().default(null), // t.ex. "kräver inloggning", "bot-skydd"
   notes: z.string().nullable().default(null),
+  // Registerimport: dokumenthash är källmetadata, aldrig produktidentitet
+  document_sha256: z
+    .string()
+    .regex(/^[a-f0-9]{64}$/)
+    .nullable()
+    .default(null),
+  fetched_at: IsoDate.nullable().default(null),
+  final_url: z.string().nullable().default(null),
+  interpretation_text: z.string().nullable().default(null),
+  register_source_key: z.string().nullable().default(null), // Käll-ID i Källmanifest (ICSA-…, SETUP-…, CVE-…)
 });
 export type Source = z.infer<typeof Source>;
+
+/** Länkkontroll från registret. url är ren sträng (kan vara http://) och renderas aldrig som länk om den inte är https. */
+export const LinkCheck = z.strictObject({
+  id: LinkCheckId,
+  url: z.string().min(1),
+  http_status_text: z.string().nullable(),
+  final_url: z.string().nullable(),
+  response_sha256: z
+    .string()
+    .regex(/^[a-f0-9]{64}$/)
+    .nullable(),
+  interpretation_text: z.string().nullable(),
+  checked_at: IsoDate.nullable(),
+  source_ids: z.array(SourceId).default([]),
+  entity_ids: z.array(z.string()).default([]), // poster som refererar URL:en
+});
+export type LinkCheck = z.infer<typeof LinkCheck>;
 
 /* ------------------------------------------------------------------ */
 /* Leverantörer                                                        */
@@ -136,6 +166,122 @@ export const OriginalRow = z.strictObject({
   values: z.record(z.string(), z.string().nullable()), // header -> cellvärde (verbatim)
 });
 
+/* ------------------------------------------------------------------ */
+/* Registerimport (125-postregistret)                                  */
+/* ------------------------------------------------------------------ */
+
+export const ImportProvenance = z.strictObject({
+  file: z.string().min(1),
+  file_sha256: z.string().regex(/^[a-f0-9]{64}$/),
+  import_version: z.string().min(1),
+  sheet: z.string().min(1),
+  row: z.number().int().positive(),
+});
+
+export const RegisterInfo = z.strictObject({
+  register_id: z.string().regex(/^OT-[A-Za-z0-9-]+$/),
+  origin: RegisterOrigin,
+  origin_reference: z.string().nullable(), // "Original rad N" eller bulletin-ID
+  normalization_key: z.string().nullable(),
+  scope_alias_text: z.string().nullable(),
+  source_status_text: z.string().nullable(),
+  uncertainty_text: z.string().nullable(),
+  exposure_risk_text: z.string().nullable(),
+  cve_selection_text: z.string().nullable(),
+  kev_text: z.string().nullable(),
+  priority_text: z.string().nullable(), // "P1 – verifiera omgående" / "P2 – snar verifiering" – villkorlig vid KONSTATERAD exponering
+  control_codes: z.array(z.string().regex(/^K\d$/)).default([]),
+  controls_text: z.string().nullable(),
+  credentials_status_text: z.string().nullable(),
+  change_required_text: z.string().nullable(),
+  verify_login_text: z.string().nullable(),
+  documentation_limitation_text: z.string().nullable(),
+  versions_guidance_text: z.string().nullable(),
+  fix_guidance_text: z.string().nullable(),
+  source_date_text: z.string().nullable(),
+  checked_at: IsoDate.nullable(),
+  observed_exposure_text: z.string().nullable(), // "Ej undersökt" – aldrig tolkat som exponerad eller säker
+  threat_selection_text: z.string().nullable(),
+  threat_links_text: z.string().nullable(),
+  threat_tracking_text: z.string().nullable(),
+  limitation_text: z.string().nullable(),
+  threat_checked_at: IsoDate.nullable(),
+  import: ImportProvenance,
+});
+export type RegisterInfo = z.infer<typeof RegisterInfo>;
+
+/** Typ av initialt/fabrikslösenord. Enbart typ – aldrig värden. */
+export const InitialPasswordType = z.enum([
+  'shared_default_documented', // gemensamt standardlösenord dokumenterat
+  'default_exists_type_unknown', // standardlösenord förekommer – typ ej fastställd
+  'device_unique_documented', // enhetsunikt initiallösenord enligt dokumentation
+  'device_unique_normal_delivery', // enhetsunikt vid normal leverans
+  'model_version_batch_dependent', // modell-/versions-/batchberoende
+  'version_dependent_shared_or_unique', // versionsberoende – gemensamt eller enhetsbundet
+  'set_at_commissioning', // väljs/skapas vid driftsättning
+  'hardcoded_in_affected_version', // hårdkodade uppgifter i berörd version (CVE)
+  'predictable_builtin_mechanism', // förutsägbar inbyggd mekanism i berörd version
+  'not_applicable_implementation', // protokoll/tjänst – implementation styr
+  'unknown_unverified', // okänt – ej verifierat
+]);
+export type InitialPasswordType = z.infer<typeof InitialPasswordType>;
+
+export const Credentials = z.strictObject({
+  account_name: z.string().nullable(), // null när "Ej verifierat"/"Ej tillämpligt"
+  account_name_text: z.string().nullable(), // originaltext
+  account_status_text: z.string().nullable(),
+  account_scope_text: z.string().nullable(), // modell-/versionsgräns för kontouppgiften
+  account_source_id: SourceId.nullable(),
+  initial_password_type: InitialPasswordType,
+  initial_password_type_text: z.string().nullable(),
+  change_requirement_text: z.string().nullable(),
+  commissioning_action_text: z.string().nullable(),
+  password_status_source_id: SourceId.nullable(),
+  verification_status: VerificationStatus,
+  checked_at: IsoDate.nullable(),
+  note: z.literal(
+    'Underlaget innehåller inga lösenordsvärden; endast kontonamn, lösenordstyp och bytekrav.',
+  ),
+});
+export type Credentials = z.infer<typeof Credentials>;
+
+export const SetupDocType = z.enum([
+  'direct_manual',
+  'doc_portal',
+  'online_handbook',
+  'vendor_entry_unverified',
+  'security_guide_unverified',
+  'start_guide',
+  'not_product',
+  'unverified',
+  'other',
+]);
+
+export const SetupDocumentation = z.strictObject({
+  url: HttpsUrl.nullable(),
+  title: z.string().nullable(),
+  doc_type: SetupDocType,
+  doc_type_text: z.string().nullable(),
+  scope_text: z.string().nullable(),
+  verification_text: z.string().nullable(),
+  fetch_status_text: z.string().nullable(),
+  identity_verified: z.boolean().default(false), // dokumentidentitet/omfattning kontrollerad enligt registret
+  exact_manual_missing: z.boolean().default(false), // registret: "Exakt setupmanual saknas …"
+  is_verified_setup_manual: z.boolean(), // identitet kontrollerad OCH direkt manual/handbok (portal/säkerhetsguide ⇒ false)
+  source_id: SourceId.nullable(),
+  checked_at: IsoDate.nullable(),
+});
+export type SetupDocumentation = z.infer<typeof SetupDocumentation>;
+
+export const ReviewFinding = z.strictObject({
+  finding: z.string().nullable(),
+  uncertainty: z.string().nullable(),
+  status_text: z.string().nullable(),
+  source_ids: z.array(SourceId).default([]),
+  checked_at: IsoDate.nullable(),
+});
+export type ReviewFinding = z.infer<typeof ReviewFinding>;
+
 const CatalogBase = {
   name: z.string().min(1),
   aliases: z.array(z.string()).default([]),
@@ -157,6 +303,10 @@ const CatalogBase = {
   verification_status: VerificationStatus,
   source_ids: z.array(SourceId).default([]),
   review: Review,
+  register: RegisterInfo.nullable().default(null),
+  credentials: Credentials.nullable().default(null),
+  setup_documentation: SetupDocumentation.nullable().default(null),
+  review_findings: z.array(ReviewFinding).default([]),
 };
 
 /* ------------------------------------------------------------------ */
@@ -204,6 +354,7 @@ export const ProtocolService = z.strictObject({
   id: ProtocolServiceId,
   kind: z.literal('protocol_service'),
   ...CatalogBase,
+  category: z.literal('Tjänst'),
   typical_use: z.string().min(1),
   default_ports: z.array(PortSpec).default([]),
   authentication: SecurityProperty,
@@ -272,6 +423,50 @@ export const ExploitationEvidence = z.strictObject({
   status: VerificationStatus,
 });
 
+export const PublicPocStatus = z.enum([
+  'poc_reported', // offentlig PoC enligt CISA SSVC vid bedömningsdatumet
+  'none_reported_at_assessment', // ingen PoC uppgiven vid CISA-bedömningen – inte frånvarobevis
+  'unknown_missing', // CISA SSVC-bedömning saknas
+  'active_reported', // aktiv exploatering uppgiven (KEV); PoC ej fastställd separat
+]);
+export type PublicPocStatus = z.infer<typeof PublicPocStatus>;
+
+export const MaterialTypeCode = z.enum([
+  'none_verified',
+  'emulator_or_reconstructed_poc',
+  'research_artifacts_and_detection',
+  'component_exploit_published',
+  'component_poc_research',
+  'research_publication_with_code',
+  'public_exploit_archive',
+  'official_active_exploitation_report',
+  'incident_analysis_detection',
+  'cert_report_public_poc',
+  'other',
+]);
+export type MaterialTypeCode = z.infer<typeof MaterialTypeCode>;
+
+/** Hotunderlag per CVE. Fyra separata signaler som aldrig slås ihop: offentlig PoC, SSVC-råvärde (daterat), aktiv exploatering, materialtyp. */
+export const ThreatIntel = z.strictObject({
+  id: ThreatIntelId,
+  public_poc_status: PublicPocStatus,
+  public_poc_status_text: z.string().nullable(),
+  cisa_ssvc_exploitation_raw: z.enum(['none', 'poc', 'active', 'missing']).nullable(),
+  cisa_assessment_date: IsoDate.nullable(),
+  active_exploitation_status: z.enum(['kev_listed', 'not_established']),
+  active_exploitation_text: z.string().nullable(),
+  poc_url: HttpsUrl.nullable(),
+  material_type_code: MaterialTypeCode,
+  material_type_text: z.string().nullable(),
+  source_critical_note: z.string().nullable(),
+  verification_level_text: z.string().nullable(),
+  assessment_source_id: SourceId.nullable(),
+  record_source_id: SourceId.nullable(), // Hotkällor (CVE/CNA + CISA ADP) med SHA-256
+  subject_product_family_id: ProductFamilyId.nullable(),
+  checked_at: IsoDate.nullable(),
+});
+export type ThreatIntel = z.infer<typeof ThreatIntel>;
+
 export const Reference = z.strictObject({
   url: HttpsUrl,
   tags: z.array(z.string()).default([]),
@@ -296,6 +491,16 @@ export const Vulnerability = z.strictObject({
   advisory_ids: z.array(AdvisoryId).default([]),
   source_ids: z.array(SourceId).default([]),
   verification_status: VerificationStatus,
+  threat_intel: ThreatIntel.nullable().default(null),
+  register_cvss: z
+    .strictObject({
+      version: z.string(),
+      base_score: z.number().nullable(),
+      vector: z.string().nullable(),
+      cwe_text: z.string().nullable(),
+    })
+    .nullable()
+    .default(null),
   enrichment: z.strictObject({
     nvd_fetched_at: IsoDateTime.nullable().default(null),
     epss_fetched_at: IsoDateTime.nullable().default(null),
@@ -339,7 +544,7 @@ export type Advisory = z.infer<typeof Advisory>;
 export const MatchStatus = z.enum(['affected', 'not_affected', 'unknown', 'under_investigation']);
 
 export const VersionRule = z.strictObject({
-  type: z.enum(['lt', 'lte', 'eq', 'range', 'all', 'unknown']),
+  type: z.enum(['lt', 'lte', 'eq', 'range', 'all', 'source_text', 'unknown']),
   version: z.string().nullable().default(null),
   version_end: z.string().nullable().default(null),
   text: z.string().min(1), // människoläsbar, t.ex. "< 4.2", "≤ 1.12.1", "alla versioner"
@@ -382,6 +587,13 @@ export const ProductVulnerabilityMatch = z.strictObject({
   source_ids: z.array(SourceId).min(1),
   verification_status: VerificationStatus,
   review: Review,
+  // Registerimport
+  register_relation: z.boolean().default(false),
+  affected_source_text: z.string().nullable().default(null), // exakt known_affected/CNA-text
+  fixed_source_text: z.string().nullable().default(null), // exakt fixed-matris/osäkerhet
+  product_link_limitation_text: z.string().nullable().default(null),
+  cwe_text: z.string().nullable().default(null),
+  register_verification_note: z.string().nullable().default(null),
 });
 export type ProductVulnerabilityMatch = z.infer<typeof ProductVulnerabilityMatch>;
 
@@ -420,6 +632,8 @@ export const Control = z.strictObject({
   vendor_guide_url: HttpsUrl.nullable().default(null),
   framework_refs: z.array(FrameworkRef).default([]),
   source_ids: z.array(SourceId).default([]),
+  register_code: z.string().regex(/^K\d$/).nullable().default(null),
+  verification_method: z.string().nullable().default(null),
 });
 export type Control = z.infer<typeof Control>;
 

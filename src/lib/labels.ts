@@ -1,7 +1,11 @@
 import type {
   DataQualityFlag,
   FactorLevel,
+  InitialPasswordType,
+  MaterialTypeCode,
+  PublicPocStatus,
   RecommendedAction,
+  RegisterOrigin,
   VerificationStatus,
 } from '@schemas/index';
 
@@ -79,7 +83,109 @@ export const flagLabel: Record<DataQualityFlag, string> = {
   unexpanded_cve_range: 'Oexpanderat CVE-intervall',
   conflicting_sources: 'Motstridiga källor',
   broken_link: 'Trasig länk',
+  setup_manual_unverified: 'Setupmanual ej verifierad',
+  account_name_unverified: 'Kontonamn ej verifierat',
+  initial_password_type_unknown: 'Initiallösenordets typ okänd',
+  register_conflict: 'Konflikt mellan register och projektdata',
 };
+
+export const originLabel: Record<RegisterOrigin, string> = {
+  original: 'Original (66-postsinventeringen)',
+  new: 'Ny (125-postregistret)',
+};
+export const originShort: Record<RegisterOrigin, string> = { original: 'Original', new: 'Ny' };
+
+/** Typ av initialt/fabrikslösenord – aldrig värden. */
+export const pwdTypeLabel: Record<InitialPasswordType, string> = {
+  shared_default_documented: 'Gemensamt standardlösenord dokumenterat',
+  default_exists_type_unknown: 'Standardlösenord förekommer – typ ej fastställd',
+  device_unique_documented: 'Enhetsunikt initiallösenord enligt dokumentation',
+  device_unique_normal_delivery: 'Enhetsunikt initiallösenord vid normal leverans',
+  model_version_batch_dependent: 'Modell-/versions-/batchberoende initiallösenord',
+  version_dependent_shared_or_unique: 'Versionsberoende – gemensamt eller enhetsbundet',
+  set_at_commissioning: 'Lösenord väljs/skapas vid driftsättning',
+  hardcoded_in_affected_version: 'Hårdkodade uppgifter i berörd version',
+  predictable_builtin_mechanism: 'Förutsägbar inbyggd lösenordsmekanism i berörd version',
+  not_applicable_implementation: 'Ej tillämpligt – implementation styr',
+  unknown_unverified: 'Okänt – initiallösenordets typ ej verifierad',
+};
+
+export const pwdTypeDescription: Record<InitialPasswordType, string> = {
+  shared_default_documented:
+    'Ett gemensamt standardlösenord är dokumenterat. Byt det före skyddad drift; tekniskt tvång är inte generellt verifierat.',
+  default_exists_type_unknown:
+    'Leverantören anger att standardlösenord förekommer, men om det är gemensamt eller enhetsunikt är inte fastställt.',
+  device_unique_documented: 'Dokumentationen anger ett enhetsunikt initiallösenord.',
+  device_unique_normal_delivery:
+    'Enhetsunikt initiallösenord vid normal leverans enligt dokumentationen.',
+  model_version_batch_dependent:
+    'Initiallösenordets typ beror på modell, version eller tillverkningsbatch – kontrollera den egna enheten.',
+  version_dependent_shared_or_unique:
+    'Beroende på version kan lösenordet vara gemensamt eller enhetsbundet.',
+  set_at_commissioning:
+    'Lösenordet skapas av installatören vid driftsättning/aktivering – välj ett unikt lösenord.',
+  hardcoded_in_affected_version:
+    'Hårdkodade uppgifter i berörd version (CVE). Ett vanligt lösenordsbyte räcker inte; följ firmwareåtgärd eller utbyte i bulletinen.',
+  predictable_builtin_mechanism:
+    'En förutsägbar inbyggd mekanism i berörd version. Kräver leverantörens åtgärd, inte bara lösenordsbyte.',
+  not_applicable_implementation:
+    'Protokoll/tjänst har inget universellt fabrikslösenord; den konkreta implementationen styr.',
+  unknown_unverified:
+    'Initiallösenordets typ är inte verifierad i underlaget. Okänt betyder inte säkert – kontrollera manual och lokala kontoinställningar.',
+};
+
+export const pocStatusLabel: Record<PublicPocStatus, string> = {
+  poc_reported: 'Offentlig PoC rapporterad (CISA SSVC)',
+  none_reported_at_assessment: 'Ingen PoC uppgiven vid CISA-bedömningen',
+  unknown_missing: 'Okänt – CISA SSVC-bedömning saknas',
+  active_reported: 'Aktiv exploatering uppgiven (KEV); PoC ej fastställd separat',
+};
+export const pocStatusShort: Record<PublicPocStatus, string> = {
+  poc_reported: 'PoC rapporterad',
+  none_reported_at_assessment: 'Ingen PoC uppgiven',
+  unknown_missing: 'PoC-status okänd',
+  active_reported: 'Aktiv exploatering',
+};
+
+export const materialTypeLabel: Record<MaterialTypeCode, string> = {
+  none_verified: 'Ingen direkt PoC-länk verifierad',
+  emulator_or_reconstructed_poc: 'Emulator / rekonstruerad PoC + detektionsmaterial',
+  research_artifacts_and_detection: 'Forskningsartefakter och separat detektionsverktyg',
+  component_exploit_published: 'Publicerad komponentexploit',
+  component_poc_research: 'Forskarpublicerad komponent-PoC',
+  research_publication_with_code: 'Forskarpublicering med kodlänk',
+  public_exploit_archive: 'Publikt exploitarkiv med reproduktionsmaterial',
+  official_active_exploitation_report: 'Officiell rapport om aktiv exploatering',
+  incident_analysis_detection: 'Incidentanalys och detektionstemplate',
+  cert_report_public_poc: 'CERT-rapport om offentlig PoC',
+  other: 'Annan materialtyp',
+};
+
+export const setupDocTypeLabel: Record<string, string> = {
+  direct_manual: 'Direkt instruktion/manual',
+  doc_portal: 'Produktens dokumentportal',
+  online_handbook: 'Onlinehandbok',
+  vendor_entry_unverified: 'Leverantörsingång – setupmanual ej verifierad',
+  security_guide_unverified: 'Säkerhetsguide – setupmanual ej verifierad',
+  start_guide: 'Tillverkarens startinstruktion',
+  not_product: 'Ej produkt – implementationsmanual krävs',
+  unverified: 'Setupmanual ej verifierad',
+  other: 'Övrigt',
+};
+
+export const nvdStatusLabel: Record<string, string> = {
+  unknown: 'NVD-post ej hämtad',
+  Received: 'NVD: mottagen',
+  'Awaiting Analysis': 'NVD: inväntar analys',
+  'Undergoing Analysis': 'NVD: under analys',
+  Analyzed: 'NVD: analyserad',
+  Modified: 'NVD: modifierad',
+  Deferred: 'NVD: uppskjuten (Deferred)',
+  Rejected: 'NVD: avvisad',
+};
+
+export const NO_PASSWORD_VALUES_NOTE =
+  'Underlaget innehåller inga lösenordsvärden; endast kontonamn, lösenordstyp och bytekrav.';
 
 export const matchStatusLabel: Record<string, string> = {
   affected: 'Berörd',

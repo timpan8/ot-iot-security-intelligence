@@ -9,16 +9,20 @@ const matches = byId(ds.matches);
 const vulns = byId(ds.vulnerabilities);
 
 describe('normalize – invarianter', () => {
-  it('66 poster, 55 produkter, 11 tjänster, 18 kategorier, alla rader unika', () => {
-    expect(ds.product_families.length + ds.protocol_services.length).toBe(66);
-    expect(ds.product_families).toHaveLength(55);
-    expect(ds.protocol_services).toHaveLength(11);
-    const cats = new Set([...ds.product_families, ...ds.protocol_services].map((x) => x.category));
-    expect(cats.size).toBe(18);
-    const rows = [...ds.product_families, ...ds.protocol_services]
-      .map((x) => x.original.row)
-      .sort((a, b) => a - b);
+  it('originalinventeringen bevaras: 66 poster (55 produkter, 11 tjänster, 18 kategorier) med unika rader', () => {
+    const originals = [...ds.product_families, ...ds.protocol_services].filter(
+      (x) => x.original.sheet === '66 system och tjänster',
+    );
+    expect(originals).toHaveLength(66);
+    expect(originals.filter((x) => x.kind === 'product_family')).toHaveLength(55);
+    expect(originals.filter((x) => x.kind === 'protocol_service')).toHaveLength(11);
+    expect(new Set(originals.map((x) => x.category)).size).toBe(18);
+    const rows = originals.map((x) => x.original.row).sort((a, b) => a - b);
     expect(rows).toEqual(Array.from({ length: 66 }, (_, i) => i + 2));
+    // totalen styrs av importrapporterna (125 efter registerimporten)
+    expect(ds.product_families.length + ds.protocol_services.length).toBe(
+      ds.manifest.counts.total_entries,
+    );
   });
 
   it('validerar utan fel', () => {
@@ -126,9 +130,9 @@ describe('normalize – invarianter', () => {
     expect(pf.risk.recommended_action).toBe('verify_model_and_version');
   });
 
-  it('KEV: endast CVE-2023-6448 är listad och ger threat=high och mitigate_if_exposed', () => {
+  it('KEV: CVE-2023-6448 är listad och ger threat=high och mitigate_if_exposed', () => {
     const kev = ds.vulnerabilities.filter((v) => v.kev.listed).map((v) => v.cve_id);
-    expect(kev).toEqual(['CVE-2023-6448']);
+    expect(kev).toContain('CVE-2023-6448');
     const pf = pfs.get('pf-unitronics-vision')!;
     expect(pf.risk.threat.level).toBe('high');
     expect(pf.risk.recommended_action).toBe('mitigate_if_exposed');
@@ -158,10 +162,11 @@ describe('normalize – invarianter', () => {
 
   it('alla originalfält bevaras per post och provenance pekar på rätt blad', () => {
     for (const e of [...ds.product_families, ...ds.protocol_services]) {
-      expect(Object.keys(e.original.values)).toHaveLength(15);
+      const original = e.original.sheet === '66 system och tjänster';
+      expect(Object.keys(e.original.values)).toHaveLength(original ? 15 : 36);
       expect(e.original.values['System / produktfamilj']).toBe(e.name);
       expect(
-        e.provenance.every((p) => p.sheet === '66 system och tjänster' && p.row === e.original.row),
+        e.provenance.every((p) => p.sheet === e.original.sheet && p.row === e.original.row),
       ).toBe(true);
     }
   });

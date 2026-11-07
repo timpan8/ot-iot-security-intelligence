@@ -16,6 +16,7 @@ import {
   Control,
   DATA_FILES,
   FORBIDDEN_PUBLIC_KEYS,
+  LinkCheck,
   Manifest,
   Observation,
   ProductFamily,
@@ -35,7 +36,72 @@ export interface ValidationResult {
   counts: Record<string, number>;
 }
 
-export const EXPECTED = { total: 66, products: 55, services: 11, categories: 18 } as const;
+/**
+ * Förväntade kontrolltal läses från importrapporterna (inte hårdkodade applikationsvärden):
+ *  - sources/raw/import-report.json (66-postsinventeringen)
+ *  - sources/raw/register/import-report.json (125-postregistret), om den finns
+ */
+export interface ExpectedCounts {
+  total: number;
+  products: number;
+  services: number;
+  original_entries: number;
+  register: null | {
+    entries: number;
+    products: number;
+    services: number;
+    unique_cves: number;
+    relations: number;
+    kev_rows: number;
+    link_checks: number;
+    threat_intel: number;
+  };
+}
+
+export function loadExpectedCounts(): ExpectedCounts {
+  const wbReport = readJson<{
+    counts: { total: number; product_families: number; protocol_services: number };
+  }>(p('sources', 'raw', 'import-report.json'));
+  const regPath = p('sources', 'raw', 'register', 'import-report.json');
+  if (!existsSync(regPath)) {
+    return {
+      total: wbReport.counts.total,
+      products: wbReport.counts.product_families,
+      services: wbReport.counts.protocol_services,
+      original_entries: wbReport.counts.total,
+      register: null,
+    };
+  }
+  const reg = readJson<{
+    counts: {
+      register_entries: number;
+      register_products: number;
+      register_services: number;
+      unique_cves: number;
+      vulnerability_relations: number;
+      kev_rows: number;
+      link_checks: number;
+      threat_intel: number;
+      register_origin: Record<string, number>;
+    };
+  }>(regPath);
+  return {
+    total: reg.counts.register_entries,
+    products: reg.counts.register_products,
+    services: reg.counts.register_services,
+    original_entries: wbReport.counts.total,
+    register: {
+      entries: reg.counts.register_entries,
+      products: reg.counts.register_products,
+      services: reg.counts.register_services,
+      unique_cves: reg.counts.unique_cves,
+      relations: reg.counts.vulnerability_relations,
+      kev_rows: reg.counts.kev_rows,
+      link_checks: reg.counts.link_checks,
+      threat_intel: reg.counts.threat_intel,
+    },
+  };
+}
 
 export function findForbiddenKeys(value: unknown, path = '$'): string[] {
   const found: string[] = [];
@@ -56,6 +122,8 @@ export function findForbiddenKeys(value: unknown, path = '$'): string[] {
 export function findNonHttpsUrls(value: unknown, path = '$'): string[] {
   const found: string[] = [];
   const walk = (v: unknown, pth: string) => {
+    // link_checks lagrar kontrollerade URL:er som ren text (kan vara http://); renderas aldrig som länk
+    if (pth.startsWith('$.link_checks')) return;
     if (Array.isArray(v)) v.forEach((x, i) => walk(x, `${pth}[${i}]`));
     else if (v && typeof v === 'object')
       for (const [k, val] of Object.entries(v as Record<string, unknown>)) walk(val, `${pth}.${k}`);
@@ -88,7 +156,10 @@ function parseFile<T>(schema: z.ZodType<T>, file: string, errors: string[]): T |
   return res.data;
 }
 
-export function validateDataset(ds: Dataset): ValidationResult {
+export function validateDataset(
+  ds: Dataset,
+  expected: ExpectedCounts = loadExpectedCounts(),
+): ValidationResult {
   const errors: string[] = [];
   const warnings: string[] = [];
 
@@ -235,13 +306,94 @@ export function validateDataset(ds: Dataset): ValidationResult {
   // Antal
   const total = ds.product_families.length + ds.protocol_services.length;
   const cats = new Set([...ds.product_families, ...ds.protocol_services].map((x) => x.category));
-  if (total !== EXPECTED.total) errors.push(`Antal poster ${total} ≠ ${EXPECTED.total}`);
-  if (ds.product_families.length !== EXPECTED.products)
-    errors.push(`Antal produktfamiljer ${ds.product_families.length} ≠ ${EXPECTED.products}`);
-  if (ds.protocol_services.length !== EXPECTED.services)
-    errors.push(`Antal tjänster ${ds.protocol_services.length} ≠ ${EXPECTED.services}`);
-  if (cats.size !== EXPECTED.categories)
-    errors.push(`Antal kategorier ${cats.size} ≠ ${EXPECTED.categories}`);
+  if (total !== expected.total)
+    errors.push(`Antal poster ${total} ≠ ${expected.total} (importrapport)`);
+  if (ds.product_families.length !== expected.products)
+    errors.push(`Antal produktfamiljer ${ds.product_families.length} ≠ ${expected.products}`);
+  if (ds.protocol_services.length !== expected.services)
+    errors.push(`Antal tjänster ${ds.protocol_services.length} ≠ ${expected.services}`);
+  const originals = [...ds.product_families, ...ds.protocol_services].filter(
+    (x) => x.original.sheet === '66 system och tjänster',
+  );
+  if (originals.length !== expected.original_entries)
+    errors.push(`Antal bevarade originalposter ${originals.length} ≠ ${expected.original_entries}`);
+  if (cats.size !== ds.manifest.counts.categories)
+    errors.push('manifest.counts.categories stämmer inte');
+  // Registerimport
+  if (expected.register) {
+    const withReg = [...ds.product_families, ...ds.protocol_services].filter((x) => x.register);
+    if (withReg.length !== expected.register.entries)
+      errors.push(
+        `Poster med registerinformation ${withReg.length} ≠ ${expected.register.entries}`,
+      );
+    const regIds = withReg.map((x) => x.register!.register_id);
+    if (new Set(regIds).size !== regIds.length) errors.push('Dubblerade register_id');
+    const newCount = withReg.filter((x) => x.register!.origin === 'new').length;
+    const origCount = withReg.filter((x) => x.register!.origin === 'original').length;
+    if (origCount !== expected.original_entries)
+      errors.push(`Register origin=original ${origCount} ≠ ${expected.original_entries}`);
+    if (newCount !== expected.register.entries - expected.original_entries)
+      errors.push(`Register origin=new ${newCount} ≠ förväntat`);
+    const regRelations = ds.matches.filter((m) => m.register_relation).length;
+    if (regRelations !== expected.register.relations)
+      errors.push(
+        `Registerrelationer i matchningar ${regRelations} ≠ ${expected.register.relations}`,
+      );
+    const regCves = new Set(
+      ds.matches.filter((m) => m.register_relation).map((m) => m.vulnerability_id),
+    );
+    if (regCves.size !== expected.register.unique_cves)
+      errors.push(
+        `Unika CVE i registerrelationer ${regCves.size} ≠ ${expected.register.unique_cves}`,
+      );
+    if (ds.link_checks.length !== expected.register.link_checks)
+      errors.push(`Länkkontroller ${ds.link_checks.length} ≠ ${expected.register.link_checks}`);
+    const ti = ds.vulnerabilities.filter((v) => v.threat_intel).length;
+    if (ti !== expected.register.threat_intel)
+      errors.push(`Hotunderlag ${ti} ≠ ${expected.register.threat_intel}`);
+    for (const e of withReg) {
+      if (!e.credentials) errors.push(`${e.id}: registerpost saknar credentials`);
+      if (e.credentials?.account_source_id)
+        ref([e.credentials.account_source_id], srcIds, `${e.id}.credentials.account_source_id`);
+      if (e.credentials?.password_status_source_id)
+        ref(
+          [e.credentials.password_status_source_id],
+          srcIds,
+          `${e.id}.credentials.password_status_source_id`,
+        );
+      if (e.setup_documentation?.source_id)
+        ref([e.setup_documentation.source_id], srcIds, `${e.id}.setup_documentation.source_id`);
+      for (const rf of e.review_findings) ref(rf.source_ids, srcIds, `${e.id}.review_findings`);
+      if (
+        e.register!.observed_exposure_text &&
+        !/ej undersökt/i.test(e.register!.observed_exposure_text) &&
+        e.risk.exposure.level !== 'unknown'
+      )
+        errors.push(`${e.id}: observerad exponering får inte påverka publik exponeringsfaktor`);
+    }
+    for (const v of ds.vulnerabilities) {
+      if (!v.threat_intel) continue;
+      if (v.threat_intel.assessment_source_id)
+        ref(
+          [v.threat_intel.assessment_source_id],
+          srcIds,
+          `${v.id}.threat_intel.assessment_source_id`,
+        );
+      if (v.threat_intel.record_source_id)
+        ref([v.threat_intel.record_source_id], srcIds, `${v.id}.threat_intel.record_source_id`);
+      if (v.threat_intel.subject_product_family_id)
+        ref(
+          [v.threat_intel.subject_product_family_id],
+          pfIds,
+          `${v.id}.threat_intel.subject_product_family_id`,
+        );
+      if (v.threat_intel.active_exploitation_status === 'kev_listed' && !v.kev.listed)
+        warnings.push(
+          `${v.id}: hotunderlag anger KEV men KEV-flaggan saknas (kontrollera KEV-cache)`,
+        );
+    }
+    for (const lc of ds.link_checks) ref(lc.source_ids, srcIds, `${lc.id}.source_ids`);
+  }
   if (ds.manifest.counts.total_entries !== total)
     errors.push('manifest.counts.total_entries stämmer inte');
   if (ds.manifest.counts.vulnerabilities !== ds.vulnerabilities.length)
@@ -270,6 +422,9 @@ export function validateDataset(ds: Dataset): ValidationResult {
       matches: ds.matches.length,
       sources: ds.sources.length,
       forbidden_keys: forbidden.length,
+      register_entries: [...ds.product_families, ...ds.protocol_services].filter((x) => x.register)
+        .length,
+      link_checks: ds.link_checks.length,
     },
   };
 }
@@ -290,6 +445,9 @@ export function loadPublicDataset(errors: string[]): Dataset | null {
   const sources = parseFile(z.array(Source), DATA_FILES.sources, errors);
   const observations = parseFile(z.array(Observation), DATA_FILES.observations, errors);
   const claims = parseFile(z.array(Claim), DATA_FILES.claims, errors);
+  const link_checks = existsSync(p('public', 'data', DATA_FILES.link_checks))
+    ? parseFile(z.array(LinkCheck), DATA_FILES.link_checks, errors)
+    : [];
   if (
     !manifest ||
     !vendors ||
@@ -301,7 +459,8 @@ export function loadPublicDataset(errors: string[]): Dataset | null {
     !controls ||
     !sources ||
     !observations ||
-    !claims
+    !claims ||
+    !link_checks
   )
     return null;
   return {
@@ -316,6 +475,7 @@ export function loadPublicDataset(errors: string[]): Dataset | null {
     sources,
     observations,
     claims,
+    link_checks,
   };
 }
 

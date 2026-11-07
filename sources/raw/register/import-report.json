@@ -1,0 +1,112 @@
+{
+  "imported_at": "2026-11-07T22:14:21.191Z",
+  "import_version": "register-import-1.0.0",
+  "file": "OT_IoT_125_poster_losenordsstatus.xlsx",
+  "sha256": "2e017d3c9f1c28ea82aa05b474c9388f39db8d7350df00d2b2103741238469f1",
+  "sheets": [
+    "66 system och tjänster",
+    "Läs först",
+    "Sammanställning",
+    "Granskningsrapport",
+    "Register",
+    "Sårbarheter",
+    "Radgranskning",
+    "Riskkontroller",
+    "Källmanifest",
+    "Länkkontroll",
+    "Hotunderlag",
+    "Hotkällor",
+    "Setup och konton"
+  ],
+  "preserved_original_sheets": [
+    "66 system och tjänster",
+    "Läs först",
+    "Sammanställning"
+  ],
+  "counts": {
+    "register_entries": 125,
+    "register_products": 114,
+    "register_services": 11,
+    "register_origin": {
+      "Original": 66,
+      "Ny": 59
+    },
+    "categories": 46,
+    "vulnerability_relations": 349,
+    "unique_cves": 344,
+    "products_with_cves": 67,
+    "cves_in_multiple_products": 5,
+    "kev_rows": 2,
+    "kev_cves": [
+      "CVE-2023-6448",
+      "CVE-2025-0994"
+    ],
+    "review_rows": 125,
+    "controls": 7,
+    "source_manifest": 214,
+    "link_checks": 210,
+    "threat_intel": 344,
+    "threat_sources": 344,
+    "setup_accounts": 125
+  },
+  "id_map": {
+    "created": 0,
+    "unchanged": 125,
+    "total": 125,
+    "conflicted": 1
+  },
+  "integrity": {
+    "bad_cve_ids": [],
+    "duplicate_relations": [],
+    "unknown_product_ids_in_vulnerabilities": []
+  },
+  "workbook_control_totals": {
+    "Originalposter": {
+      "reported": 66,
+      "computed": 66
+    },
+    "Original: produkter": {
+      "reported": 55,
+      "computed": 55
+    },
+    "Original: protokoll/tjänster": {
+      "reported": 11,
+      "computed": 11
+    },
+    "Nya produktfamiljer": {
+      "reported": 59,
+      "computed": 59
+    },
+    "Totalt i Register": {
+      "reported": 125,
+      "computed": 125
+    },
+    "Unika CVE i verifierat urval": {
+      "reported": 344,
+      "computed": 344
+    },
+    "CVE-/produktrelationer": {
+      "reported": 349,
+      "computed": 349
+    },
+    "Unika CVE med KEV-träff": {
+      "reported": 2,
+      "computed": 2
+    },
+    "Kontrollerade CVE": {
+      "reported": 344,
+      "computed": 344
+    },
+    "Poster i dokumentöversikten": {
+      "reported": 125,
+      "computed": 125
+    }
+  },
+  "deviations": [
+    "Register: 65 rader har Källdatum som fritext i stället för datum (bevaras verbatim).",
+    "Register: CVE-urvalet är trunkerat (\"ytterligare N\") för 6 poster – relationerna hämtas från Sårbarheter.",
+    "Hotunderlag: 5 rader avser CVE som i Sårbarheter är kopplade till fler produkter; hotunderlaget kopplas per CVE, inte per produkt."
+  ],
+  "password_values_present": false,
+  "password_values_note": "Arbetsboken innehåller inga lösenordsvärden – endast kontonamn, lösenordstyp och bytekrav (\"utan värden\")."
+}

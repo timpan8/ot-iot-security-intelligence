@@ -31,9 +31,12 @@ Plattformen skiljer konsekvent mellan sex olika saker som ofta blandas ihop:
 
 ### Övriga byggstenar
 
-- `Category`: de 18 kategorierna i arbetsboken (`BMS`, `DCS`, `Energi`, `Gateway`, `HMI`, `IoT`,
-  `Kamera`, `Kraft`, `Kyla`, `NAS`, `OPC`, `PLC`, `PLC/HMI`, `Passer`, `RTU`, `SCADA`, `Tjänst`,
-  `Ventilation`).
+- `Category`: fri text (`z.string().min(1).max(60)`). 66-postsinventeringen hade 18 kategorier,
+  125-postregistret 46 (t.ex. `Industriellt nät`, `EV-laddning`, `Medicinsk bild`). Kända
+  kategorier får profil i `sources/curated/category_profiles.json` (grupp, `ot_impact`-default,
+  motivering); okänd kategori ger `ot_impact: unknown`, aldrig en gissning. `PROTOCOL_CATEGORY =
+'Tjänst'` är låst för protokoll/tjänster.
+- `RegisterOrigin`: `original` (fanns i 66-postsinventeringen) eller `new` (tillkom i registret).
 - `HttpsUrl`: endast `https://` tillåts.
 - `Provenance`: `{ sheet, row, column, header }` – spårbarhet till Excel-cell.
 - `VerifiedText`: `{ value, status, source_ids, reviewed_at, note }` för enskilda uppgifter som kan
@@ -44,7 +47,8 @@ Plattformen skiljer konsekvent mellan sex olika saker som ofta blandas ihop:
   `unknown_version_boundary`, `unverified_fix_version`, `possibly_outdated`,
   `needs_human_review`, `generic_control_text`, `industry_guide_only`,
   `conditional_priority_only`, `patch_level_unknown`, `unexpanded_cve_range`,
-  `conflicting_sources`, `broken_link`.
+  `conflicting_sources`, `broken_link`, samt från registerimporten `setup_manual_unverified`,
+  `account_name_unverified`, `initial_password_type_unknown`, `register_conflict`.
 
 ### ID-prefix
 
@@ -60,6 +64,12 @@ Plattformen skiljer konsekvent mellan sex olika saker som ofta blandas ihop:
 | Source                    | `src-`    | `src-nvd-cve-2025-41450`                     |
 | Observation               | `obs-`    | `obs-danfoss-storeview-2026`                 |
 | Claim                     | `claim-`  | `claim-pf-danfoss-ak-sm-800a-fix-latest`     |
+| LinkCheck                 | `lc-`     | `lc-3fa1c2d9-12`                             |
+| ThreatIntel (inbäddad)    | `ti-`     | `ti-cve-2025-41450`                          |
+
+Registrets egna ID:n (`OT-001`, `OT-N-ICSA-25-007-01`) lagras som `register.register_id` och
+mappas till projekt-ID via `sources/curated/register_id_map.json`. Registerrelationer får
+`match-reg-<register-id>-<cve>` (t.ex. `match-reg-ot-n-icsa-25-007-01-cve-2024-6209`).
 
 ID:n är slugs (`^[a-z0-9]+(?:-[a-z0-9.]+)*$`), stabila över tid och får aldrig återanvändas.
 
@@ -70,7 +80,8 @@ ID:n är slugs (`^[a-z0-9]+(?:-[a-z0-9.]+)*$`), stabila över tid och får aldri
 `site`, `site_id`, `facility`, `building`, `owner`, `asset_owner`, `contact`, `contact_email`,
 `phone`, `network_zone`, `vlan`, `subnet`, `scan_result`, `shodan_result`, `exposure_confirmed`,
 `ticket`, `incident_id`, `installed_version`, `actual_version`, `maintenance_window`,
-`risk_acceptance`. Listan kontrolleras rekursivt av `scripts/validate.ts`, `scripts/check-artifact.ts`
+`risk_acceptance`, samt autentiseringsuppgifter `password`, `password_value`, `passwd`, `secret`,
+`api_key`, `credential_value`. Listan kontrolleras rekursivt av `scripts/validate.ts`, `scripts/check-artifact.ts`
 och enhetstester.
 
 ## Entiteter (`schemas/entities.ts`)
@@ -87,6 +98,19 @@ och enhetstester.
 | `supports_claims[]`                                   | `{ entity_id, field, note }` – vilka uppgifter källan stödjer                                                                        |
 | `access_note`, `notes`                                | T.ex. "bot-skydd", "kräver inloggning"                                                                                               |
 
+Registerimporten lägger till `document_sha256` (SHA-256 av hämtat dokument enligt Källmanifest
+eller Hotkällor – **källmetadata, aldrig produktidentitet**), `fetched_at`, `final_url`,
+`interpretation_text` (från Länkkontroll) och `register_source_key` (Käll-ID i manifestet:
+`ICSA-…`, `SETUP-…`, `CVE-…`).
+
+### LinkCheck
+
+Länkkontroll från registret: `id`, `url` (ren sträng – kan vara `http://`, renderas aldrig som
+länk om den inte är https), `http_status_text`, `final_url`, `response_sha256`,
+`interpretation_text`, `checked_at`, `source_ids[]`, `entity_ids[]`. Resultatet speglas även i
+`Source.availability`/`http_status`/`final_url` för källor med samma URL. Publiceras som
+`link_checks.json`.
+
 ### Vendor
 
 `id`, `name`, `aliases[]`, `security_portal_url`, `psirt_contact_url`, `support_urls[]`,
@@ -101,8 +125,62 @@ arbetsboken eller har verifierats.
 `standard`, `other`), `discovery_heuristic` (`{ query, caveat, purpose: 'authorized_inventory_only' }`),
 `risk_summary` (originaltexterna från kolumn E–K och O), `control_ids[]`, `advisory_ids[]`,
 `match_ids[]`, `observation_ids[]`, `claim_ids[]`, `risk` (se `docs/RISK_METHOD.md`),
-`data_quality_flags[]`, `provenance[]`, `original` (`{ sheet, row, values }` – hela raden verbatim),
-`verification_status`, `source_ids[]`, `review`.
+`data_quality_flags[]`, `provenance[]`, `original` (`{ sheet, row, values }` – hela raden verbatim;
+för registerposter är bladet `Register` och `values` har 36 rubriker), `verification_status`,
+`source_ids[]`, `review`, samt registerblocken nedan (alla `null`/tomma för poster utan
+registerkoppling).
+
+#### RegisterInfo (`register`)
+
+`register_id`, `origin`, `origin_reference` (”Original rad N” eller bulletin-ID),
+`normalization_key`, `scope_alias_text`, `source_status_text`, `uncertainty_text`,
+`exposure_risk_text`, `cve_selection_text` (registrets trunkerade urval – relationerna hämtas ur
+bladet Sårbarheter), `kev_text`, `priority_text` (`P1 – verifiera omgående` / `P2 – snar
+verifiering`; gäller **vid konstaterad exponering**, som aldrig är undersökt i publik data),
+`control_codes[]` (K1–K7), `controls_text`, `credentials_status_text`, `change_required_text`,
+`verify_login_text`, `documentation_limitation_text`, `versions_guidance_text`,
+`fix_guidance_text`, `source_date_text`, `checked_at`, `observed_exposure_text` (alltid ”Ej
+undersökt” i underlaget; tolkas aldrig som exponerad eller säker), `threat_selection_text`,
+`threat_links_text`, `threat_tracking_text`, `limitation_text`, `threat_checked_at` och
+`import` (`{ file, file_sha256, import_version, sheet, row }` – spårbarhet till importfilen).
+
+#### Credentials (`credentials`)
+
+`account_name` (`null` när ”Ej verifierat”, ”Ej tillämpligt” eller ”Skapas vid driftsättning”),
+`account_name_text` (originaltext), `account_status_text`, `account_scope_text` (modell-/
+versionsgräns för kontouppgiften), `account_source_id`, `initial_password_type` (kod),
+`initial_password_type_text`, `change_requirement_text`, `commissioning_action_text`,
+`password_status_source_id`, `verification_status`, `checked_at` och den låsta texten `note`:
+”Underlaget innehåller inga lösenordsvärden; endast kontonamn, lösenordstyp och bytekrav.”
+
+`InitialPasswordType` skiljer evidens som inte får blandas ihop:
+
+| Kod                                  | Betydelse                                                          |
+| ------------------------------------ | ------------------------------------------------------------------ |
+| `shared_default_documented`          | Gemensamt standardlösenord dokumenterat                            |
+| `default_exists_type_unknown`        | Standardlösenord förekommer, typ ej fastställd                     |
+| `device_unique_documented`           | Enhetsunikt initiallösenord enligt dokumentationen                 |
+| `device_unique_normal_delivery`      | Enhetsunikt initiallösenord vid normal leverans                    |
+| `model_version_batch_dependent`      | Modell-/versions-/batchberoende                                    |
+| `version_dependent_shared_or_unique` | Versionsberoende – gemensamt eller enhetsbundet                    |
+| `set_at_commissioning`               | Lösenord väljs/skapas av installatören vid driftsättning           |
+| `hardcoded_in_affected_version`      | Hårdkodade uppgifter i berörd version – kräver firmware eller byte |
+| `predictable_builtin_mechanism`      | Förutsägbar inbyggd lösenordsmekanism i berörd version             |
+| `not_applicable_implementation`      | Protokoll/tjänst – implementationen styr                           |
+| `unknown_unverified`                 | Okänt – typen ej verifierad (**inte** ”säker” eller ”nej”)         |
+
+#### SetupDocumentation (`setup_documentation`)
+
+`url` (https eller `null`), `title`, `doc_type` (`direct_manual`, `doc_portal`,
+`online_handbook`, `vendor_entry_unverified`, `security_guide_unverified`, `start_guide`,
+`not_product`, `unverified`, `other`), `doc_type_text`, `scope_text`, `verification_text`,
+`fetch_status_text`, `is_verified_setup_manual` (`false` för portaler, säkerhetsguider och
+overifierade länkar – en dokumentportal är inte en verifierad installationsmanual), `source_id`,
+`checked_at`.
+
+#### ReviewFinding (`review_findings[]`)
+
+Från bladet Radgranskning: `finding`, `uncertainty`, `status_text`, `source_ids[]`, `checked_at`.
 
 ### ProductFamily
 
@@ -136,6 +214,28 @@ tilldelas produkt-CVE.
 | `published_at`, `last_modified_at`, `references[]`, `advisory_ids[]`, `source_ids[]` |                                                                                                                         |
 | `verification_status`, `enrichment`, `review`                                        | `enrichment` har `nvd_fetched_at`, `epss_fetched_at`, `kev_checked_at`                                                  |
 
+#### ThreatIntel (`threat_intel`) och `register_cvss`
+
+Hotunderlag per CVE från bladen Hotunderlag/Hotkällor. Fyra **separata** signaler lagras och
+visas var för sig:
+
+| Fält                                                  | Innehåll                                                                                                                         |
+| ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `public_poc_status`                                   | `poc_reported`, `none_reported_at_assessment`, `unknown_missing`, `active_reported` – offentlig PoC enligt CISA SSVC vid datumet |
+| `cisa_ssvc_exploitation_raw` + `cisa_assessment_date` | Råvärdet `none`/`poc`/`active`/`missing` **med datum**. `none` daterat är inte bevis för att kod eller angrepp saknas i dag      |
+| `active_exploitation_status`                          | `kev_listed` eller `not_established` – aktiv exploatering är en annan uppgift än PoC                                             |
+| `material_type_code` + `material_type_text`           | Vad länkat material faktiskt är: emulator/rekonstruerad PoC, detektionsverktyg, komponentexploit, officiell rapport …            |
+
+Övrigt: `poc_url` (https), `source_critical_note` (t.ex. att en komponent-PoC inte bevisar
+fjärrexploatering av en viss OT-produkt), `verification_level_text` (ingen kod har körts),
+`assessment_source_id`, `record_source_id` (cveawg-post med SHA-256), `subject_product_family_id`
+(registret knyter hotunderlaget till en produkt per CVE även när CVE:t berör fler),
+`checked_at`.
+
+`register_cvss` (`{ version, base_score, vector, cwe_text }`) bevarar registrets CVSS/CWE
+separat från NVD:s metrics. Saknas NVD-post byggs posten från registret med
+`nvd_status: 'unknown'` och `verification_status: 'needs_review'`.
+
 ### Advisory
 
 `id`, `advisory_id` (t.ex. `SSA-330084`, `DSA-2025-03-01`, `ICSA-26-057-10`), `issuer`,
@@ -145,18 +245,24 @@ tilldelas produkt-CVE.
 
 ### ProductVulnerabilityMatch
 
-| Fält                                                                                   | Beskrivning                                                  |
-| -------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
-| `product_family_id`                                                                    | Måste finnas; får aldrig peka på ett protokoll               |
-| `vulnerability_id`, `advisory_id`                                                      | Minst en bör anges; kan vara `null`                          |
-| `component`                                                                            | T.ex. `Desigo CC ClickOnce Client V6`                        |
-| `affected_versions_text`, `version_rule`                                               | `{ type: lt                                                  | lte | eq      | range   | all          | unknown, version, version_end, text }`        |
-| `status`                                                                               | `affected`, `not_affected`, `unknown`, `under_investigation` |
-| `attack_prerequisites`, `attack_vector`, `authentication_required`, `user_interaction` | Attackförutsättningar                                        |
-| `fix`                                                                                  | `{ available: yes                                            | no  | partial | planned | none_planned | unknown, version, text, status, source_ids }` |
-| `mitigation_control_ids[]`, `mitigation_text`                                          | Kompensatoriska skydd                                        |
-| `evidence`                                                                             | Vad matchningen bygger på                                    |
-| `source_ids[]` (minst 1), `verification_status`, `review`                              |                                                              |
+| Fält                                                                                   | Beskrivning                                                                 |
+| -------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `product_family_id`                                                                    | Måste finnas; får aldrig peka på ett protokoll                              |
+| `vulnerability_id`, `advisory_id`                                                      | Minst en bör anges; kan vara `null`                                         |
+| `component`                                                                            | T.ex. `Desigo CC ClickOnce Client V6`                                       |
+| `affected_versions_text`, `version_rule`                                               | `{ type: lt                                                                 | lte | eq      | range   | all          | unknown, version, version_end, text }`        |
+| `status`                                                                               | `affected`, `not_affected`, `unknown`, `under_investigation`                |
+| `attack_prerequisites`, `attack_vector`, `authentication_required`, `user_interaction` | Attackförutsättningar                                                       |
+| `fix`                                                                                  | `{ available: yes                                                           | no  | partial | planned | none_planned | unknown, version, text, status, source_ids }` |
+| `mitigation_control_ids[]`, `mitigation_text`                                          | Kompensatoriska skydd                                                       |
+| `evidence`                                                                             | Vad matchningen bygger på                                                   |
+| `source_ids[]` (minst 1), `verification_status`, `review`                              |                                                                             |
+| `register_relation`                                                                    | `true` om relationen finns i registrets blad Sårbarheter                    |
+| `affected_source_text`, `fixed_source_text`                                            | Exakt källtext för known affected/CNA affected och fixed-matris/osäkerhet   |
+| `product_link_limitation_text`, `cwe_text`, `register_verification_note`               | Produktkopplingens begränsning, CWE-text och resultat av CSAF-verifieringen |
+
+`version_rule.type` har även värdet `source_text`: versionsgränsen återges som källans exakta
+text utan att tolkas till en jämförbar regel.
 
 ### Control
 
@@ -164,7 +270,10 @@ tilldelas produkt-CVE.
 (`high|medium|low|depends`), `requires_operational_approval`, `order_hint` (rekommenderad
 ordning), `depends_on_control_ids[]`, `category_scope[]`, `protocol_scope[]`, `vendor_guide_url`,
 `framework_refs[]` (`{ framework: IEC 62443|NIST CSF 2.0|NIST SP 800-82r3|CISA|Cybersäkerhetslagen,
-reference, note, status: mapped_reference|informational }` – aldrig "compliant"), `source_ids[]`.
+reference, note, status: mapped_reference|informational }` – aldrig "compliant"), `source_ids[]`,
+`register_code` (K1–K7 ur registrets blad Riskkontroller, `null` för övriga) och
+`verification_method` (hur kontrollen verifieras enligt registret). K7
+(`ctl-medical-device-coordination`) gäller medicinteknik.
 
 ### Observation
 
@@ -184,7 +293,10 @@ Atomära påståenden som kan spåras och granskas: `entity_id`, `field`, `text`
 `dataset_tier: 'public'`, `schema_version`, `generated_at`, arbetsbokens filnamn/SHA-256/blad,
 räkningar (totalt, produktfamiljer, tjänster, kategorier, leverantörer, sårbarheter, bulletiner,
 matchningar, kontroller, källor, observationer, påståenden, poster med CVE-referens, poster med
-säkerhetskälla, KEV-listade) och `files`.
+säkerhetskälla, KEV-listade, samt `register_entries`, `register_original`, `register_new`,
+`register_cve_unique`, `register_relations`, `link_checks`, `threat_intel`), `imports[]` (fil,
+SHA-256, importtidpunkt, importversion, blad och kontrolltal per import) och `files` (inkl.
+`link_checks.json`).
 
 ## Relationer
 
@@ -307,7 +419,24 @@ för den faktiska posten.
 5. **Exponering är alltid `unknown` i publik data.** Faktisk exponering kräver auktoriserad
    inventering i en privat modul.
 6. **Spårbarhet.** Varje katalogpost har `provenance` och `original`; varje betydelsefullt
-   påstående har `source_ids` eller en `Claim`.
+   påstående har `source_ids` eller en `Claim`. Registerposter har dessutom `register.import`
+   (fil, SHA-256, importversion, blad, rad).
+7. **Produkt–CVE är många-till-många.** En CVE kan beröra flera produkter (fem i registret) och
+   en produkt många CVE (upp till 72). Relationen lagras per par i `product_vulnerability_matches`
+   och expanderas aldrig från registrets trunkerade `cve_selection_text`.
+8. **Kombinationsposter delas inte.** En registerrad som ”Schneider Electric Harmony / Pro-face
+   HMI” förblir en post; modell-/versionsgränsen står i `affected_source_text` och
+   `account_scope_text`, inte som separata produkter.
+9. **Okänt är okänt.** ”Ej verifierat”, ”Okänt”, ”Ej undersökt” blir `null`/`unknown_unverified`/
+   `unknown`, aldrig ”nej” eller ”säker”. Observerad internetexponering ”Ej undersökt” påverkar
+   inte `risk.exposure`, som förblir `unknown`.
+10. **Dokumenthash är källmetadata.** `document_sha256`/`response_sha256` beskriver ett hämtat
+    dokument vid en tidpunkt och används aldrig som produkt- eller post-identitet.
+11. **Registret skriver inte över kuraterat.** Befintliga kuraterade matchningar vinner och
+    annoteras (`register_relation: true`); skillnader i CVE-mängd eller namn blir `disputed`-
+    claims (`claim-register-conflict-…`) och flaggan `register_conflict`.
+12. **Inga lösenordsvärden.** Endast kontonamn, lösenordstyp och bytekrav importeras; nycklar för
+    lösenord är förbjudna i publik data.
 
 ## Privat asset-schema (`schemas/private/assets.ts`)
 

@@ -33,6 +33,56 @@ test.describe('Röktest – publik kunskapsbas', () => {
     await expect(page.getByRole('main').getByText(/^CVE-\d{4}-\d+$/)).toHaveCount(0);
   });
 
+  test('katalogfilter origin=new visar registrets nya poster', async ({ page }) => {
+    await page.goto('#/katalog?origin=new');
+    await expect(page.getByRole('status')).toHaveText(/^59 av 125 poster$/);
+    await expect(page.getByRole('link', { name: 'ABB ASPECT' }).first()).toBeVisible();
+  });
+
+  test('produktsidan för ABB ASPECT visar konto-, setup- och registersektioner samt CVE-tabell', async ({
+    page,
+  }) => {
+    await page.goto('#/produkt/pf-abb-aspect');
+    await expect(page.getByRole('heading', { level: 1, name: 'ABB ASPECT' })).toBeVisible();
+    await expect(
+      page.getByRole('heading', { name: 'Registeruppgifter och granskning' }),
+    ).toBeVisible();
+    await expect(page.getByRole('heading', { name: 'Konton och initiallösenord' })).toBeVisible();
+    await expect(page.getByRole('heading', { name: 'Setup och installation' })).toBeVisible();
+    await expect(page.getByText('OT-N-ICSA-25-007-01').first()).toBeVisible();
+    await expect(
+      page.getByText(/Underlaget innehåller inga lösenordsvärden/).first(),
+    ).toBeVisible();
+    const rows = page.locator('#matchning tbody tr');
+    const showMore = page.getByRole('button', { name: /Visa fler/ });
+    const n = await rows.count();
+    expect(n >= 15 || (await showMore.count()) > 0).toBe(true);
+    if ((await showMore.count()) > 0) {
+      await showMore.click();
+      expect(await rows.count()).toBeGreaterThanOrEqual(20);
+    }
+  });
+
+  test('kontosammanställningen laddar med tabell och export', async ({ page }) => {
+    await page.goto('#/konton');
+    await expect(
+      page.getByRole('heading', { level: 1, name: 'Konton och initiallösenord' }),
+    ).toBeVisible();
+    await expect(page.getByRole('table')).toBeVisible();
+    await expect(page.getByRole('status')).toHaveText(/\d+ av \d+ poster/);
+    await expect(page.getByRole('button', { name: 'Exportera CSV' })).toBeEnabled();
+  });
+
+  test('CVE-sidan för CVE-2025-41450 visar hotunderlag med materialtyp Emulator', async ({
+    page,
+  }) => {
+    await page.goto('#/sarbarheter/CVE-2025-41450');
+    await expect(page.getByRole('heading', { level: 1, name: 'CVE-2025-41450' })).toBeVisible();
+    await expect(page.getByRole('heading', { name: /Hotunderlag/ })).toBeVisible();
+    await expect(page.getByText(/Emulator/).first()).toBeVisible();
+    await expect(page.getByText(/bevisar inte att offentlig/).first()).toBeVisible();
+  });
+
   test('inga externa länkar utan säkra attribut', async ({ page }) => {
     await page.goto('#/produkt/pf-danfoss-ak-sm-800a');
     const external = page.locator('a[href^="http"]');

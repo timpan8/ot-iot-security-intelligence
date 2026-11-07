@@ -1,0 +1,4501 @@
+{
+  "sheet": "Hotkällor",
+  "import_version": "register-import-1.0.0",
+  "file": "OT_IoT_125_poster_losenordsstatus.xlsx",
+  "file_sha256": "2e017d3c9f1c28ea82aa05b474c9388f39db8d7350df00d2b2103741238469f1",
+  "header_row": 1,
+  "headers": [
+    "CVE",
+    "Källtyp",
+    "URL",
+    "SHA-256",
+    "Källpostens uppdateringsdatum",
+    "Hämtningsdatum",
+    "Kontrollerade fält"
+  ],
+  "column_map": {
+    "CVE": "cve_id",
+    "Källtyp": "source_type",
+    "URL": "url",
+    "SHA-256": "sha256",
+    "Källpostens uppdateringsdatum": "record_updated_at",
+    "Hämtningsdatum": "fetched_at",
+    "Kontrollerade fält": "checked_fields"
+  },
+  "missing_headers": [],
+  "extra_headers": [],
+  "records": [
+    {
+      "row": 2,
+      "fields": {
+        "cve_id": "CVE-1999-0524",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-1999-0524",
+        "sha256": "086ceddce1c240d515b6ee4cb3a2a1a94ec497ef2c2b54d3e2c7995e57ea8534",
+        "record_updated_at": "2026-05-28",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 3,
+      "fields": {
+        "cve_id": "CVE-2012-4929",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2012-4929",
+        "sha256": "ef99a6d78585ade47e8bf53199fe4a1ee1cadd49b334a012f7d8d86d901f0992",
+        "record_updated_at": "2024-08-06",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 4,
+      "fields": {
+        "cve_id": "CVE-2013-0169",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2013-0169",
+        "sha256": "9dd585c73620da6dc1ff398e9f17fc2362aad392593dbbc9b5b394556e2474d5",
+        "record_updated_at": "2024-08-06",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 5,
+      "fields": {
+        "cve_id": "CVE-2016-10009",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2016-10009",
+        "sha256": "64c1049bd32c84951f901a7d894a058f55cb821f414bca735d84152c3ad0881a",
+        "record_updated_at": "2026-05-29",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 6,
+      "fields": {
+        "cve_id": "CVE-2020-22218",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2020-22218",
+        "sha256": "4968ed31165cf14497cb20f952d197129c7353863bcb34f1bcac6858e5421a88",
+        "record_updated_at": "2026-10-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 7,
+      "fields": {
+        "cve_id": "CVE-2021-25220",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2021-25220",
+        "sha256": "ea8a578507638e3ff77c4a1b26d85cf3c0d10b7300cd24735c523e1f4698a4b4",
+        "record_updated_at": "2024-09-16",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 8,
+      "fields": {
+        "cve_id": "CVE-2021-26401",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2021-26401",
+        "sha256": "918c91314c75fd55e5f2a2eade2c28c9c9b14091141b724cb47febc72bceeff3",
+        "record_updated_at": "2024-09-17",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 9,
+      "fields": {
+        "cve_id": "CVE-2022-23521",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2022-23521",
+        "sha256": "8b92fdd493a0fc5a1ada4793ef356680a65648fab5c5d14a86932907e23778f2",
+        "record_updated_at": "2025-02-13",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 10,
+      "fields": {
+        "cve_id": "CVE-2022-25147",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2022-25147",
+        "sha256": "e505b2c94d6c79ae975455115ee5f7e016c0a151256721d53cc1333a2037e671",
+        "record_updated_at": "2025-02-13",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 11,
+      "fields": {
+        "cve_id": "CVE-2022-2526",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2022-2526",
+        "sha256": "390fed0bca95abbe09a43e918672de42e280f5e9e4280c09bbc2490f04d531f3",
+        "record_updated_at": "2024-08-03",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 12,
+      "fields": {
+        "cve_id": "CVE-2022-2588",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2022-2588",
+        "sha256": "67fc444aaffd9a9abc9a62b0f5f5c51ff3cba936724773fd578845359d19345f",
+        "record_updated_at": "2026-10-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 13,
+      "fields": {
+        "cve_id": "CVE-2022-2663",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2022-2663",
+        "sha256": "433380662c81a5f51edcb4742afb41aaebaa9af9f590be19d2be1d7535c21e98",
+        "record_updated_at": "2026-10-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 14,
+      "fields": {
+        "cve_id": "CVE-2022-2795",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2022-2795",
+        "sha256": "bde4e1ac9358cf883e8592fd565bc9f20df133a6782e10fd4f07b822ebf6bb7a",
+        "record_updated_at": "2024-11-29",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 15,
+      "fields": {
+        "cve_id": "CVE-2022-29154",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2022-29154",
+        "sha256": "2d084309a750f299b507107f879c867308a0136790969185284fb7d0c7d7ad24",
+        "record_updated_at": "2024-08-03",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 16,
+      "fields": {
+        "cve_id": "CVE-2022-2964",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2022-2964",
+        "sha256": "c1502eeb786db2facf48f7ba3761ca01da8ff445f7a8831c60dd9068d2dff359",
+        "record_updated_at": "2024-08-03",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 17,
+      "fields": {
+        "cve_id": "CVE-2022-3524",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2022-3524",
+        "sha256": "c3928ec6a694aa48a740b428ca9a7831d481496551d405d79397a2a31d19d82d",
+        "record_updated_at": "2026-10-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 18,
+      "fields": {
+        "cve_id": "CVE-2022-3564",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2022-3564",
+        "sha256": "6b3761e51a129289948c24c526a9fb0a1544cd4f7411f15951117c3616991ce4",
+        "record_updated_at": "2026-10-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 19,
+      "fields": {
+        "cve_id": "CVE-2022-37434",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2022-37434",
+        "sha256": "7217df6b154537b22c3b5ec73944d246a32e3872cb6d1c8dc2fc70b0aa5a6133",
+        "record_updated_at": "2026-10-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 20,
+      "fields": {
+        "cve_id": "CVE-2022-38177",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2022-38177",
+        "sha256": "660ee17430472c5f92847c9745e53564375e4e96f4e217acd513dc5c74c187e9",
+        "record_updated_at": "2025-05-28",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 21,
+      "fields": {
+        "cve_id": "CVE-2022-38178",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2022-38178",
+        "sha256": "81e9372e579ada1837771a4940065d52bc52bc7eae9f79c84fd3322b035aa683",
+        "record_updated_at": "2025-05-28",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 22,
+      "fields": {
+        "cve_id": "CVE-2022-38465",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2022-38465",
+        "sha256": "8ba8f50c6c11cc0feea22f65bc8ac44cf977d28733effbe399d2007f82e5c1fb",
+        "record_updated_at": "2025-04-21",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 23,
+      "fields": {
+        "cve_id": "CVE-2022-39188",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2022-39188",
+        "sha256": "b9177c096de4cc8580b6277c6fa7280f9ae4c69834352922e9c8a4c6185d326c",
+        "record_updated_at": "2026-10-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 24,
+      "fields": {
+        "cve_id": "CVE-2022-39842",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2022-39842",
+        "sha256": "d2d18dd6764b038e32710ccbeda39f054c1280ca0ca51f8eaa0f3304765094e2",
+        "record_updated_at": "2024-08-03",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 25,
+      "fields": {
+        "cve_id": "CVE-2022-40303",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2022-40303",
+        "sha256": "d33a72f2092760d53bb6497361a3bbb025bbf6a32c7fc5d2e32a44baa77d1320",
+        "record_updated_at": "2026-10-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 26,
+      "fields": {
+        "cve_id": "CVE-2022-40304",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2022-40304",
+        "sha256": "6fd4f9c67ef880fb3009004c5f2bd3e694ec2d45a906b014be53429bd96c136a",
+        "record_updated_at": "2026-10-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 27,
+      "fields": {
+        "cve_id": "CVE-2022-40674",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2022-40674",
+        "sha256": "6f3e06456e59cdc71918b272cde8442b55018425fb97bf22a8a79b9dd7f33407",
+        "record_updated_at": "2026-10-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 28,
+      "fields": {
+        "cve_id": "CVE-2022-41903",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2022-41903",
+        "sha256": "f84e80d2e7695e7d241fd77c82c2b677391a3ed0279a9b18ef0325d00196014a",
+        "record_updated_at": "2025-03-10",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 29,
+      "fields": {
+        "cve_id": "CVE-2022-41974",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2022-41974",
+        "sha256": "e58b954bc409ebc2bd88d4880bec201d45190cf99d4b8f34686bd03f8484d7d7",
+        "record_updated_at": "2024-08-03",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 30,
+      "fields": {
+        "cve_id": "CVE-2022-42703",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2022-42703",
+        "sha256": "c0dd4712c3e3688448191be4aa6a5b612dfd940db57781307b931bdff7246c3c",
+        "record_updated_at": "2026-10-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 31,
+      "fields": {
+        "cve_id": "CVE-2022-42898",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2022-42898",
+        "sha256": "8d74ab741f9ff689dc87e92354fa430379d8c291d85eac1a5116b1871afba5f4",
+        "record_updated_at": "2026-10-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 32,
+      "fields": {
+        "cve_id": "CVE-2022-4304",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2022-4304",
+        "sha256": "dc1d6c232425974b103d3f6c1fb2c4328cbcf1792d70f8c442c080b8e181cfa7",
+        "record_updated_at": "2026-10-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 33,
+      "fields": {
+        "cve_id": "CVE-2022-43750",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2022-43750",
+        "sha256": "dde4360f7d7978fe7787fccc010e7518026f3b67361e71f1a9230905ce69d8ca",
+        "record_updated_at": "2026-10-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 34,
+      "fields": {
+        "cve_id": "CVE-2022-4378",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2022-4378",
+        "sha256": "4604da7df02c047394d1b16d552330c0e46186ea1060f7130444ed96e5a54f6b",
+        "record_updated_at": "2025-04-10",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 35,
+      "fields": {
+        "cve_id": "CVE-2022-4450",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2022-4450",
+        "sha256": "f277f17aacfd354f390626d4ffb9ccb2b16fa0276800bebde5f1725d864b664c",
+        "record_updated_at": "2026-10-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 36,
+      "fields": {
+        "cve_id": "CVE-2022-47069",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2022-47069",
+        "sha256": "e0db337375ddc06405c47394507056746eadec5deb3334f79602c4f25bb93f5f",
+        "record_updated_at": "2025-11-20",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 37,
+      "fields": {
+        "cve_id": "CVE-2022-47929",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2022-47929",
+        "sha256": "7efb512370469c44835ef1b6b47513e719dfb38d5897a09bc8ea9d5f71a8bb05",
+        "record_updated_at": "2026-10-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 38,
+      "fields": {
+        "cve_id": "CVE-2023-0045",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-0045",
+        "sha256": "4eb4840ae0bb0ff6af491b642f1d223acdc22be0c88b59f4efa3ccf96dc49799",
+        "record_updated_at": "2025-02-13",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 39,
+      "fields": {
+        "cve_id": "CVE-2023-0215",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-0215",
+        "sha256": "dacbe8e6f3079a18d85da7a3abe97d3becc059df2c3241824bfe2a2c3e6844c2",
+        "record_updated_at": "2026-10-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 40,
+      "fields": {
+        "cve_id": "CVE-2023-0286",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-0286",
+        "sha256": "5c9ab0925cb12492e254657bff1f3548b538a40f2d83ad5739fe1f61e878b100",
+        "record_updated_at": "2026-10-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 41,
+      "fields": {
+        "cve_id": "CVE-2023-0464",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-0464",
+        "sha256": "3f6ea38c87bf016f737788e1b7d382c624040ed3d4af6ce3d082969618402add",
+        "record_updated_at": "2026-10-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 42,
+      "fields": {
+        "cve_id": "CVE-2023-0465",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-0465",
+        "sha256": "75493df0b8518b0cf8701813cb260ac620136030783f052290dc4c536a84f1ca",
+        "record_updated_at": "2026-10-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 43,
+      "fields": {
+        "cve_id": "CVE-2023-0466",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-0466",
+        "sha256": "b167f6019ffd6102e550fde62bd911cbcedc0b99d873663eeee2784fffe5c2f0",
+        "record_updated_at": "2026-10-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 44,
+      "fields": {
+        "cve_id": "CVE-2023-0590",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-0590",
+        "sha256": "6b3957a877be4541569f5a2db837507958114b3fcd229ebf9505009b25a708b4",
+        "record_updated_at": "2026-10-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 45,
+      "fields": {
+        "cve_id": "CVE-2023-1073",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-1073",
+        "sha256": "8e1c960ba2b90161fd0f8e9192a5c9b5a885c8325a55e92b8fc22123a8663ade",
+        "record_updated_at": "2025-04-23",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 46,
+      "fields": {
+        "cve_id": "CVE-2023-1074",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-1074",
+        "sha256": "6c7e759083c91390fdbfae2b967005954bb83c4ae4e62b1fece7db924f757849",
+        "record_updated_at": "2025-03-19",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 47,
+      "fields": {
+        "cve_id": "CVE-2023-1118",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-1118",
+        "sha256": "0bb45202cbb76ae5615ace8f71306aa5f5ba8684cf9cabf15ab0ee45b51d24d5",
+        "record_updated_at": "2026-09-18",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 48,
+      "fields": {
+        "cve_id": "CVE-2023-1206",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-1206",
+        "sha256": "5d65ff9665c2f124ce18be2d83ef035b32e0b7b773cfb467c5063badf6b34515",
+        "record_updated_at": "2026-10-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 49,
+      "fields": {
+        "cve_id": "CVE-2023-1380",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-1380",
+        "sha256": "804cf6fb9c77d872057c0e50275bda7ad4c6df651531010e46e6e0b0466919df",
+        "record_updated_at": "2026-09-18",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 50,
+      "fields": {
+        "cve_id": "CVE-2023-1670",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-1670",
+        "sha256": "01c30efc877b0012d32ff4933ab353724a45eafa83906100e70872c3abeb6635",
+        "record_updated_at": "2025-02-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 51,
+      "fields": {
+        "cve_id": "CVE-2023-20032",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-20032",
+        "sha256": "e063dfdecb8abd0946576baf52a7b194bf9e2a84ad15e10e94169eaab35b69a7",
+        "record_updated_at": "2024-08-02",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 52,
+      "fields": {
+        "cve_id": "CVE-2023-20569",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-20569",
+        "sha256": "134a572da3332b6b5aee54ef546fffd44670146de18ff2c0332232fbad94ccc6",
+        "record_updated_at": "2024-09-23",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 53,
+      "fields": {
+        "cve_id": "CVE-2023-20593",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-20593",
+        "sha256": "2739d9116101366f6c7f63c64a9aa1147e0906abcda8c4c4f25bdd9e33fb9b89",
+        "record_updated_at": "2025-02-13",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 54,
+      "fields": {
+        "cve_id": "CVE-2023-2194",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-2194",
+        "sha256": "0ec69273eededc3af5dbefc9ed1a729769aaed3402414f2f192a953c9d4c4e16",
+        "record_updated_at": "2025-04-23",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 55,
+      "fields": {
+        "cve_id": "CVE-2023-22809",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-22809",
+        "sha256": "f5fce07a9122e340062494ec1f7217e1f9c6dcd5b1fb5d729ef550d1992bd539",
+        "record_updated_at": "2025-04-04",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 56,
+      "fields": {
+        "cve_id": "CVE-2023-23454",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-23454",
+        "sha256": "4d843d34de504cbd8e323d78d16e53c8d583e4bd3b628a5563b47e36455ea095",
+        "record_updated_at": "2026-10-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 57,
+      "fields": {
+        "cve_id": "CVE-2023-23455",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-23455",
+        "sha256": "c6210c121db7b33cf1cc43930dc40c996df926f60859d8593969401b3d65cf16",
+        "record_updated_at": "2026-10-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 58,
+      "fields": {
+        "cve_id": "CVE-2023-23559",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-23559",
+        "sha256": "137f08a6086db4fba5a3e4372ce8fbc39aaad7540f9520a26a80d09cd08f0b0d",
+        "record_updated_at": "2026-10-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 59,
+      "fields": {
+        "cve_id": "CVE-2023-24329",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-24329",
+        "sha256": "d78813ccde25cace095e559410783262688f1e577b30aaa61e3a0681690c3a2b",
+        "record_updated_at": "2026-10-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 60,
+      "fields": {
+        "cve_id": "CVE-2023-25652",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-25652",
+        "sha256": "574c1d7aa80d850fb8da2766ccdd5239801197f92cfd80297a8bcdbb22addb33",
+        "record_updated_at": "2025-11-04",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 61,
+      "fields": {
+        "cve_id": "CVE-2023-25690",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-25690",
+        "sha256": "807ea1c2d615f257cc01e935edebe288a92aac06c0bf0a9c11ad5da02c5dacd9",
+        "record_updated_at": "2025-12-18",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 62,
+      "fields": {
+        "cve_id": "CVE-2023-26545",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-26545",
+        "sha256": "cb56b1c8904941c0474814a14938a2e94e2b7523a6832c803bdc93d415655fe9",
+        "record_updated_at": "2025-03-20",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 63,
+      "fields": {
+        "cve_id": "CVE-2023-2828",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-2828",
+        "sha256": "d74337448fc0723154cf1a70c1ad6a3bf45d8a4adc038ff6b4d43342bdba8ae6",
+        "record_updated_at": "2025-02-13",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 64,
+      "fields": {
+        "cve_id": "CVE-2023-28484",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-28484",
+        "sha256": "e71a6d117f6618ff0da42aca7320650a0b9bd1060573a2124e18255938d301e0",
+        "record_updated_at": "2026-10-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 65,
+      "fields": {
+        "cve_id": "CVE-2023-28578",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-28578",
+        "sha256": "0134c43c3934cbdfc878d507331e4956ed0875e5edf476aceed0060ff3fb25ec",
+        "record_updated_at": "2024-08-29",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 66,
+      "fields": {
+        "cve_id": "CVE-2023-29007",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-29007",
+        "sha256": "0ece8077d3cdae6348d81bc3d4bd3c19c151fc7211b63a170fdb3383cda7e7d7",
+        "record_updated_at": "2026-11-02",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 67,
+      "fields": {
+        "cve_id": "CVE-2023-29469",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-29469",
+        "sha256": "dafc75519f9228e5065134d870e2ebbbac6e744af82c212ef429756d546de936",
+        "record_updated_at": "2026-10-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 68,
+      "fields": {
+        "cve_id": "CVE-2023-2953",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-2953",
+        "sha256": "58f16c966a11c950ce27a4c8e7d00a9aa0dd5798f5fd8f938f4264d10c010cf6",
+        "record_updated_at": "2026-10-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 69,
+      "fields": {
+        "cve_id": "CVE-2023-31085",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-31085",
+        "sha256": "1a040cecb4f8a9a0c3e182b3d815598d55be3caeb1f98508f775a390445f2771",
+        "record_updated_at": "2026-10-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 70,
+      "fields": {
+        "cve_id": "CVE-2023-31315",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-31315",
+        "sha256": "17574a7b74183e363758f9bd79897b54d3194c7d0f3be6bd77f19d3f26138b9c",
+        "record_updated_at": "2024-09-12",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 71,
+      "fields": {
+        "cve_id": "CVE-2023-32233",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-32233",
+        "sha256": "667c1e76045b4b27ac759307dfccbe6e0b53e9ab4b1fa88b839ea6b7507fb47e",
+        "record_updated_at": "2026-10-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 72,
+      "fields": {
+        "cve_id": "CVE-2023-3341",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-3341",
+        "sha256": "8dc196bb76b0b80d40380d22b9725ffebad91035cc6758d85d3377329da8ca73",
+        "record_updated_at": "2025-12-02",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 73,
+      "fields": {
+        "cve_id": "CVE-2023-3446",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-3446",
+        "sha256": "e1fa6d55b54df131cd2331e480c0cb538c5b793bce3ec79edab2c298c9561146",
+        "record_updated_at": "2026-10-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 74,
+      "fields": {
+        "cve_id": "CVE-2023-35001",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-35001",
+        "sha256": "a811c258669f7fc5e97ee810c897c33217907fd43bfe1c379697f66d81815be4",
+        "record_updated_at": "2026-10-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 75,
+      "fields": {
+        "cve_id": "CVE-2023-35002",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-35002",
+        "sha256": "e3f88848d32c355fc5dc975055ee17dd6f0b003d2437b4d9e593242771aac29f",
+        "record_updated_at": "2025-11-04",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 76,
+      "fields": {
+        "cve_id": "CVE-2023-3609",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-3609",
+        "sha256": "e3905b160bb8ab00a1808cd434007d1fe34547a9fafd0ecee4801eb8780c2796",
+        "record_updated_at": "2026-10-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 77,
+      "fields": {
+        "cve_id": "CVE-2023-3611",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-3611",
+        "sha256": "e43ee9d4346faa033cc0576f7f0635212691d10d20d7b6c79c2001f18673a5aa",
+        "record_updated_at": "2026-10-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 78,
+      "fields": {
+        "cve_id": "CVE-2023-38408",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-38408",
+        "sha256": "48b7f5fd8af927d7c6ab10bc7139afe32454e5fc13c1c7e42ec5cd4e1d3feab1",
+        "record_updated_at": "2026-10-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 79,
+      "fields": {
+        "cve_id": "CVE-2023-39192",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-39192",
+        "sha256": "f5fa40aa7a442d21d481bdf550d78b2ad4a9bb132a92a08fa157fb14c064beb4",
+        "record_updated_at": "2026-11-07",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 80,
+      "fields": {
+        "cve_id": "CVE-2023-39193",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-39193",
+        "sha256": "c521f84b4cdd438a715eb71840a126654f51f6e85d8723fafc835a8f5e946352",
+        "record_updated_at": "2026-11-07",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 81,
+      "fields": {
+        "cve_id": "CVE-2023-40217",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-40217",
+        "sha256": "ed32e117dde2988face1c9eef367b9b235b7533afde66132b2e248621768ce19",
+        "record_updated_at": "2025-11-03",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 82,
+      "fields": {
+        "cve_id": "CVE-2023-42753",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-42753",
+        "sha256": "a18b9f0f64b9c42c92c19d53f8aa5a643fc2fd79218eca3936da85cde9ce0081",
+        "record_updated_at": "2026-11-07",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 83,
+      "fields": {
+        "cve_id": "CVE-2023-42754",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-42754",
+        "sha256": "c6e45b34714e82e108741bd9f8c7afd4e662628d4b9291f2f13babdb15e1af16",
+        "record_updated_at": "2026-11-07",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 84,
+      "fields": {
+        "cve_id": "CVE-2023-43522",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-43522",
+        "sha256": "27c8adcc044fd161f3f38883ddc88e49e06382ad7b1ba1b0437cbb142c67fd15",
+        "record_updated_at": "2024-08-21",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 85,
+      "fields": {
+        "cve_id": "CVE-2023-44320",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-44320",
+        "sha256": "d813f49d8da6ae2734ac64083d1962bba1394bded26927e329402107d2345040",
+        "record_updated_at": "2026-02-25",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 86,
+      "fields": {
+        "cve_id": "CVE-2023-44322",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-44322",
+        "sha256": "87e361e0f7d649b000a8ca2ea4e32d4641a8f283d72ad5fbf883799b8e853183",
+        "record_updated_at": "2026-02-25",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 87,
+      "fields": {
+        "cve_id": "CVE-2023-45853",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-45853",
+        "sha256": "5b53891b380d12321c0e7575c4c44f07daee4d472ce8121caed8a9a76712edfc",
+        "record_updated_at": "2026-10-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 88,
+      "fields": {
+        "cve_id": "CVE-2023-45863",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-45863",
+        "sha256": "923e16813f9b17d711deab0ca5e99c664ee3906766965a26b4820b6395cdfad1",
+        "record_updated_at": "2026-10-15",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 89,
+      "fields": {
+        "cve_id": "CVE-2023-4623",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-4623",
+        "sha256": "63f22fa82132955bade7069dd033487f2cf14a24cb4dbf9aaa85f8ee33c3b399",
+        "record_updated_at": "2026-10-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 90,
+      "fields": {
+        "cve_id": "CVE-2023-47610",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-47610",
+        "sha256": "5fa228d80e93b51c77b92e91c562e9f64a0abd7801ff5e3be068a4b79711a1d0",
+        "record_updated_at": "2025-02-27",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 91,
+      "fields": {
+        "cve_id": "CVE-2023-47611",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-47611",
+        "sha256": "cabd4d2848465a8d68c88d7011cd5ce3ba531b251573479894f8a0a739ef5597",
+        "record_updated_at": "2024-08-02",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 92,
+      "fields": {
+        "cve_id": "CVE-2023-47612",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-47612",
+        "sha256": "dcd23fe2aaa672327875525eb40935121255daa51a767167033568f9d74b6146",
+        "record_updated_at": "2024-09-04",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 93,
+      "fields": {
+        "cve_id": "CVE-2023-47613",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-47613",
+        "sha256": "6137bb695fb4b1750f01fea197243baf4bd434ded317707ccbdbbe290606b884",
+        "record_updated_at": "2024-09-03",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 94,
+      "fields": {
+        "cve_id": "CVE-2023-47614",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-47614",
+        "sha256": "321d3d2467930153d4b185773b0e366d19622b6016e3b4ec67ef5ed3c3f6ab39",
+        "record_updated_at": "2024-09-03",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 95,
+      "fields": {
+        "cve_id": "CVE-2023-47615",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-47615",
+        "sha256": "5acc08af6a4b26cde3f4d56cdb0d56658508c08ee9ff8cc111d610cca46979ad",
+        "record_updated_at": "2024-09-03",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 96,
+      "fields": {
+        "cve_id": "CVE-2023-47616",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-47616",
+        "sha256": "d49a055c79cff178431400873605e7071990bfc9fe1541e1399100e83d0ba2cf",
+        "record_updated_at": "2024-09-03",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 97,
+      "fields": {
+        "cve_id": "CVE-2023-48795",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-48795",
+        "sha256": "5d3b6a72f565355a5e3b559a288e49974162f4b55b1bd4f25cfd7f545476e442",
+        "record_updated_at": "2026-10-15",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 98,
+      "fields": {
+        "cve_id": "CVE-2023-4921",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-4921",
+        "sha256": "1fdc0774c54ed64407fcc31e82ca76a29ac02a166aacc3c5c58a9c1226137758",
+        "record_updated_at": "2026-10-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 99,
+      "fields": {
+        "cve_id": "CVE-2023-51384",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-51384",
+        "sha256": "b244a7c8120ab1ab637a0797ae3b8c15321dfe426e02d2551ebca6b129c4366e",
+        "record_updated_at": "2026-10-15",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 100,
+      "fields": {
+        "cve_id": "CVE-2023-51385",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-51385",
+        "sha256": "ad29f2693be5fd57b86d60b56d1e92478f02c55ca387e9ac0e8697a4c8a0cba1",
+        "record_updated_at": "2026-10-15",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 101,
+      "fields": {
+        "cve_id": "CVE-2023-5363",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-5363",
+        "sha256": "28e03006927af7fc76fef33b37065f0325bb6fc1ca9615480cb0174f334e0c85",
+        "record_updated_at": "2026-10-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 102,
+      "fields": {
+        "cve_id": "CVE-2023-5678",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-5678",
+        "sha256": "8fc20cd007d743c4ceb2a5d1a7e8371c7a49432e22d3d2bee3a96d0df9e101c5",
+        "record_updated_at": "2026-10-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 103,
+      "fields": {
+        "cve_id": "CVE-2023-5717",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-5717",
+        "sha256": "e58b3304985b0f2e7d2956a046f4e4a43c8f7327c95259ca90d90a9b4f9877bf",
+        "record_updated_at": "2026-10-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 104,
+      "fields": {
+        "cve_id": "CVE-2023-6129",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-6129",
+        "sha256": "69c67dc9612674c7f5480ec9784f30838e7f9a97c8fa1eaeed969f221915336d",
+        "record_updated_at": "2026-10-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 105,
+      "fields": {
+        "cve_id": "CVE-2023-6237",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-6237",
+        "sha256": "c02da836abaa2a97dd252546a6ed11820f0fae52b9d1da3ea3cf3667f7110003",
+        "record_updated_at": "2026-10-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 106,
+      "fields": {
+        "cve_id": "CVE-2023-6448",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-6448",
+        "sha256": "e46d353069e0acf89925d2045d0c5a2f023b9dea13daca6d0b6cc73d69de6fdb",
+        "record_updated_at": "2025-10-21",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 107,
+      "fields": {
+        "cve_id": "CVE-2023-7250",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-7250",
+        "sha256": "ac6af722613cf7d13bdc396d7c296b19b8f4d01d2b7ae751bab82011d5045384",
+        "record_updated_at": "2026-11-05",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 108,
+      "fields": {
+        "cve_id": "CVE-2024-0727",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-0727",
+        "sha256": "ca107fa623a7ae76652048b7f5934746aac5e7d4ee3825bfc73eb1d360462f85",
+        "record_updated_at": "2026-10-15",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 109,
+      "fields": {
+        "cve_id": "CVE-2024-10206",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-10206",
+        "sha256": "c0909432fd29d43d4d4969afcac799e2efd47afaefd4d4f77b5d5f1e85d0b1c9",
+        "record_updated_at": "2025-03-25",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 110,
+      "fields": {
+        "cve_id": "CVE-2024-10207",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-10207",
+        "sha256": "1088890fbb20bebb099ba8e6497ad784a728dca57c8a2430df911032bb7747b1",
+        "record_updated_at": "2025-03-25",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 111,
+      "fields": {
+        "cve_id": "CVE-2024-10208",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-10208",
+        "sha256": "b5438a287f8c128cafb370ae2be94bd94ff356de79bd1de7b1bee8b843b66f41",
+        "record_updated_at": "2025-03-25",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 112,
+      "fields": {
+        "cve_id": "CVE-2024-10209",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-10209",
+        "sha256": "8b7e90110183fb8505c695cae9285c55c4ac29f0343c191caa3677bfc2b021e0",
+        "record_updated_at": "2025-03-25",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 113,
+      "fields": {
+        "cve_id": "CVE-2024-10210",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-10210",
+        "sha256": "562aaa94851c9efbd7bc2f87dd9bbc3aa77f2d70ecc4bc88b57e1f3f4b5131f6",
+        "record_updated_at": "2025-03-31",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 114,
+      "fields": {
+        "cve_id": "CVE-2024-10497",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-10497",
+        "sha256": "bf020348b9897e8e57e9c804555093c459437b443e804fcf58d4fe369427124d",
+        "record_updated_at": "2025-02-12",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 115,
+      "fields": {
+        "cve_id": "CVE-2024-10498",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-10498",
+        "sha256": "4c14443af45c83d52a77ea04e4246ff5c8991bfaa7634d3c62224d50f7bcc6e4",
+        "record_updated_at": "2025-02-12",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 116,
+      "fields": {
+        "cve_id": "CVE-2024-10511",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-10511",
+        "sha256": "79aad991ed8b090353a24ca42d99729ac488e9e04dfa1ab29221334d968c5004",
+        "record_updated_at": "2024-12-11",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 117,
+      "fields": {
+        "cve_id": "CVE-2024-11316",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-11316",
+        "sha256": "134f986e6162bcb081f92ecee5fc3dca3c106e9dfa2a7e4fd193262824fa0d1f",
+        "record_updated_at": "2024-12-05",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 118,
+      "fields": {
+        "cve_id": "CVE-2024-11317",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-11317",
+        "sha256": "1d60907e5d9801ead8c288b1765d918e0d7163af305f74b42fa42c7197ecf81d",
+        "record_updated_at": "2024-12-05",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 119,
+      "fields": {
+        "cve_id": "CVE-2024-11999",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-11999",
+        "sha256": "acf95919246c2a8761dbe242f516fdbe70e0154f00d2a8b6cc3c4706a5bd19f6",
+        "record_updated_at": "2024-12-17",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 120,
+      "fields": {
+        "cve_id": "CVE-2024-12757",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-12757",
+        "sha256": "ad9bfaf6a8f3e1a0c8fb6f8d649db8e0e3430fc41439842d020dfebc5114e9b7",
+        "record_updated_at": "2025-01-21",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 121,
+      "fields": {
+        "cve_id": "CVE-2024-1480",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-1480",
+        "sha256": "f28b72f33c6bf0bbbb48d2f117e9d5ed24b17c6fe6f23bcf252bb234b98f5558",
+        "record_updated_at": "2024-08-01",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 122,
+      "fields": {
+        "cve_id": "CVE-2024-23814",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-23814",
+        "sha256": "1ee98ac85ac8be077ba4906d2e91994268b5156b121a97871675a73d0cf4a0ed",
+        "record_updated_at": "2025-07-10",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 123,
+      "fields": {
+        "cve_id": "CVE-2024-2511",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-2511",
+        "sha256": "5a544d7a9bc1f1449130e011d328f275e8b09b3bf2484f56e7a41940991b5640",
+        "record_updated_at": "2026-10-15",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 124,
+      "fields": {
+        "cve_id": "CVE-2024-26306",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-26306",
+        "sha256": "de165f9e213bc708ccaa6a4267226851a39337a2b82b609f19878f57d2eefb23",
+        "record_updated_at": "2025-11-03",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 125,
+      "fields": {
+        "cve_id": "CVE-2024-28757",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-28757",
+        "sha256": "7dda5b9395f23537b1ce36c1043ec4b4f992385872a39f939555ba7d186015fd",
+        "record_updated_at": "2026-10-15",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 126,
+      "fields": {
+        "cve_id": "CVE-2024-33016",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-33016",
+        "sha256": "2593e26052b25ebc6d2a418b4b87a8ce542c010cc9356e23594147cce9b7f5b2",
+        "record_updated_at": "2024-09-03",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 127,
+      "fields": {
+        "cve_id": "CVE-2024-37036",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-37036",
+        "sha256": "f81c3729fcb6570df65492f06810b5c43bd80e930b1f116517b4def45615e9d4",
+        "record_updated_at": "2024-08-02",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 128,
+      "fields": {
+        "cve_id": "CVE-2024-37037",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-37037",
+        "sha256": "82f5d8f53d61a2f130abc88aa7060f37b06ee92b1a04d02a9eb812d43f5660c6",
+        "record_updated_at": "2024-08-02",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 129,
+      "fields": {
+        "cve_id": "CVE-2024-37038",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-37038",
+        "sha256": "574ed0ff49ced7fa7732c1f74532f6857946076db95a5b9bb917550f3a9f6719",
+        "record_updated_at": "2024-08-02",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 130,
+      "fields": {
+        "cve_id": "CVE-2024-37039",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-37039",
+        "sha256": "069adee7e3a08693bbc6725a7b150733c552134b9e3225451ed28beab5d4af28",
+        "record_updated_at": "2024-08-02",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 131,
+      "fields": {
+        "cve_id": "CVE-2024-37040",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-37040",
+        "sha256": "8c498874c08d3f3e4bc05e89259761e1c836ca0d268e0afc1b1e4c9f77e9cb61",
+        "record_updated_at": "2024-08-02",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 132,
+      "fields": {
+        "cve_id": "CVE-2024-41788",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-41788",
+        "sha256": "045d0aae8b83b36cb0d4d65166f9020b5c1dc0c7e7ed3650588d3fdf9580b92b",
+        "record_updated_at": "2025-04-08",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 133,
+      "fields": {
+        "cve_id": "CVE-2024-41789",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-41789",
+        "sha256": "dcc4b7e2bd74bc05cc1ffe2754cc16a7c66d8a3914efb5eb2cfbb85b9ce69d48",
+        "record_updated_at": "2025-04-08",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 134,
+      "fields": {
+        "cve_id": "CVE-2024-41790",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-41790",
+        "sha256": "1203f62fa19e1a90b647a703de863e9e5ae7a4d5773a4f8fc15b77ae0a413329",
+        "record_updated_at": "2025-04-08",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 135,
+      "fields": {
+        "cve_id": "CVE-2024-41791",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-41791",
+        "sha256": "402d9f57f43e6d1aecee3b4ffaeea7dfe0753de5e98e429132ecd01f0be127bd",
+        "record_updated_at": "2025-04-08",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 136,
+      "fields": {
+        "cve_id": "CVE-2024-41792",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-41792",
+        "sha256": "e6ec7f9ee1d92955d3286875dbc7ce01450d11efd8d63a47d1bf7bf5786d9614",
+        "record_updated_at": "2025-04-08",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 137,
+      "fields": {
+        "cve_id": "CVE-2024-41793",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-41793",
+        "sha256": "ac32efd3ca7f4ed3089d0bc05e89111538be1f8997669f8b959aa276d3ab3e12",
+        "record_updated_at": "2025-04-08",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 138,
+      "fields": {
+        "cve_id": "CVE-2024-41794",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-41794",
+        "sha256": "effec3f9916aaba8279362a9614896c15696820d532a6987ff5622f9c7d300c7",
+        "record_updated_at": "2025-04-08",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 139,
+      "fields": {
+        "cve_id": "CVE-2024-41795",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-41795",
+        "sha256": "607d1d86051d8d39c19cd46ec476c231317c2d7d8a48a93d863a79cb3c0dfc36",
+        "record_updated_at": "2025-04-08",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 140,
+      "fields": {
+        "cve_id": "CVE-2024-41796",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-41796",
+        "sha256": "8a0fb9fcda1170c48f44cb06f5cac080a47d41310b4177e212c5c93c5be33e54",
+        "record_updated_at": "2025-04-08",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 141,
+      "fields": {
+        "cve_id": "CVE-2024-45480",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-45480",
+        "sha256": "6c02c76bf62544f71cf61c93ae108702a4fef139d24161c79500a9b438a64fa3",
+        "record_updated_at": "2025-03-25",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 142,
+      "fields": {
+        "cve_id": "CVE-2024-45481",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-45481",
+        "sha256": "cc542a4675eb3ccbebd5ccae811e0c7b12c68c99c3e3f7046fb94c46420142d7",
+        "record_updated_at": "2025-03-25",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 143,
+      "fields": {
+        "cve_id": "CVE-2024-45482",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-45482",
+        "sha256": "dc1b9314d1fc82fd9299507942ac8758bab2e595dea724d3ff60b3f40c7dc03a",
+        "record_updated_at": "2025-03-25",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 144,
+      "fields": {
+        "cve_id": "CVE-2024-45483",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-45483",
+        "sha256": "9c5b17a516dc1528c2029b70e2a6df374b4aff5bc0b86e1556a9b16cb0ddbd75",
+        "record_updated_at": "2025-03-25",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 145,
+      "fields": {
+        "cve_id": "CVE-2024-45484",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-45484",
+        "sha256": "20e5271e1023a5666e0a2369c9bb8e4b284a0a09f587c460e4dab629b9eb6464",
+        "record_updated_at": "2025-03-31",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 146,
+      "fields": {
+        "cve_id": "CVE-2024-45490",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-45490",
+        "sha256": "3264c7ae251df3a5a07757c0edc013f0192a50ebd91ffc0a8e302ab34d45f726",
+        "record_updated_at": "2026-10-15",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 147,
+      "fields": {
+        "cve_id": "CVE-2024-45491",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-45491",
+        "sha256": "d71e0bbc04e93a894f8b926241b25e5a74d1713b3947b4ca62a9dc3fb5cff44f",
+        "record_updated_at": "2026-10-15",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 148,
+      "fields": {
+        "cve_id": "CVE-2024-45492",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-45492",
+        "sha256": "4330ae7f2ec00a3e46df6841d129bda6de5fe17fef534bbdef7ba0ffbac197d8",
+        "record_updated_at": "2026-10-15",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 149,
+      "fields": {
+        "cve_id": "CVE-2024-4603",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-4603",
+        "sha256": "4e1d54fdb190a2c5ae6efa94e88d78c2a45bea419db5022848d674771a3b2ab7",
+        "record_updated_at": "2024-10-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 150,
+      "fields": {
+        "cve_id": "CVE-2024-4741",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-4741",
+        "sha256": "723c3dff4f829bac466451260e593c0d6f44b51758057e792a2e4fd303e0e3f3",
+        "record_updated_at": "2026-11-06",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 151,
+      "fields": {
+        "cve_id": "CVE-2024-48839",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-48839",
+        "sha256": "429d42daf69df54fe1324e272371ba812a7734581906ff8cc470cc5f5b9816db",
+        "record_updated_at": "2024-12-05",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 152,
+      "fields": {
+        "cve_id": "CVE-2024-48840",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-48840",
+        "sha256": "9112f0e81f262d52f4810913b40b139b142fa14aed257aecadf2f75e673b158d",
+        "record_updated_at": "2024-12-05",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 153,
+      "fields": {
+        "cve_id": "CVE-2024-48843",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-48843",
+        "sha256": "24403b5fdd3b6cbb8f60ce5c3d18aae516d7e1fa8c269f363f2ccbfa40bd4426",
+        "record_updated_at": "2024-12-05",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 154,
+      "fields": {
+        "cve_id": "CVE-2024-48844",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-48844",
+        "sha256": "2edaf6b8e105186a4f6949c284b6fac48b877904a82dfa337463364b7128adbf",
+        "record_updated_at": "2024-12-05",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 155,
+      "fields": {
+        "cve_id": "CVE-2024-48845",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-48845",
+        "sha256": "7e4a41370f1465f6d0da0a1fac12b7587afb3278abfef3e0b0e8525b2d32eb49",
+        "record_updated_at": "2024-12-05",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 156,
+      "fields": {
+        "cve_id": "CVE-2024-48846",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-48846",
+        "sha256": "335e0f8a07237abddef44d3a5fd1fab3f70f9c9cf7691a988f761651dbace89c",
+        "record_updated_at": "2024-12-05",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 157,
+      "fields": {
+        "cve_id": "CVE-2024-48847",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-48847",
+        "sha256": "e1891839fe42339ebeaf4943241babb36e09a831a0565683a28b4b68f6c3b78c",
+        "record_updated_at": "2024-12-05",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 158,
+      "fields": {
+        "cve_id": "CVE-2024-50560",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-50560",
+        "sha256": "559de1ccf175267e1e73d0fa99df2e7b979e4e67d3b4bb3b2c9fa0d8d80fcea3",
+        "record_updated_at": "2025-02-11",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 159,
+      "fields": {
+        "cve_id": "CVE-2024-50561",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-50561",
+        "sha256": "03aac98cb8b83cf94d5143e28b68773165127ec0d76818f2324b9c25ad7345a0",
+        "record_updated_at": "2025-02-11",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 160,
+      "fields": {
+        "cve_id": "CVE-2024-50572",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-50572",
+        "sha256": "bb301103e9b5b304fc903d24b160a3c7d2a0a134de153b090cb48048d9c21a2d",
+        "record_updated_at": "2025-02-11",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 161,
+      "fields": {
+        "cve_id": "CVE-2024-51541",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-51541",
+        "sha256": "fa41c01ba19f70f2713274213f490f0070a462f069d688bcdd9b7cae6ea3d316",
+        "record_updated_at": "2024-12-05",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 162,
+      "fields": {
+        "cve_id": "CVE-2024-51542",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-51542",
+        "sha256": "a4769a1eb5a2cfe12aa4fbd1b1092bfa1abcf62bc5107c89ada76460caac04cd",
+        "record_updated_at": "2024-12-05",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 163,
+      "fields": {
+        "cve_id": "CVE-2024-51543",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-51543",
+        "sha256": "d79f7905020e83cd6828600547bdd6fdbf5bf39f625f3fea1b4dae82941ad7b9",
+        "record_updated_at": "2024-12-05",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 164,
+      "fields": {
+        "cve_id": "CVE-2024-51544",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-51544",
+        "sha256": "43491359a9b91abb59ada793817919a2d6dad38964a343df23769a06a47102b2",
+        "record_updated_at": "2024-12-05",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 165,
+      "fields": {
+        "cve_id": "CVE-2024-51545",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-51545",
+        "sha256": "6205850d2e08d15f8ae7a3efeaab755c61579275235eb38aeb02a6f8c0cdd8ec",
+        "record_updated_at": "2024-12-05",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 166,
+      "fields": {
+        "cve_id": "CVE-2024-51546",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-51546",
+        "sha256": "c98d332a3225ef477476c3c6249d3b6bf39ec2ff0bf3015d71de53564fcc6992",
+        "record_updated_at": "2024-12-05",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 167,
+      "fields": {
+        "cve_id": "CVE-2024-51548",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-51548",
+        "sha256": "9e170b9f0c63dab8ca30fc5f71f1b6c9dd1f481b4cb45e0b5d3d9c7b0c85da48",
+        "record_updated_at": "2024-12-05",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 168,
+      "fields": {
+        "cve_id": "CVE-2024-51549",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-51549",
+        "sha256": "02c85aeea3d07506cf4a5decbaf309e97ffd7233655ca87d112aebe58f75e142",
+        "record_updated_at": "2024-12-05",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 169,
+      "fields": {
+        "cve_id": "CVE-2024-51550",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-51550",
+        "sha256": "5e590b28794fa31ab2886340e34922d42191437e30c4ad768169e138346c458e",
+        "record_updated_at": "2024-12-05",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 170,
+      "fields": {
+        "cve_id": "CVE-2024-51551",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-51551",
+        "sha256": "598188e89a8b7ce0dd9914b48603fb80d6f1ae5afc348a97f5b9885fe4bace3a",
+        "record_updated_at": "2024-12-05",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 171,
+      "fields": {
+        "cve_id": "CVE-2024-51554",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-51554",
+        "sha256": "3d3b5e1bd0d98b53ad7dad7474559e4bc367a8980bc84c1270b1ee1586370b7d",
+        "record_updated_at": "2024-12-05",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 172,
+      "fields": {
+        "cve_id": "CVE-2024-51555",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-51555",
+        "sha256": "e6b69ab8d894c573fa8179ffc7a16de3945d2a9a1d75630ba5196a6b0daa8e29",
+        "record_updated_at": "2025-08-28",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 173,
+      "fields": {
+        "cve_id": "CVE-2024-53649",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-53649",
+        "sha256": "863ce6adcb948553f2a154ab5d4beb7329924a5e0841472f0e5c3f0757e991aa",
+        "record_updated_at": "2025-11-11",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 174,
+      "fields": {
+        "cve_id": "CVE-2024-5410",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-5410",
+        "sha256": "c239be659a045b37e121ad3db1abc7e4ac357ff2f8be2379fea83409437c36d3",
+        "record_updated_at": "2025-02-13",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 175,
+      "fields": {
+        "cve_id": "CVE-2024-5411",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-5411",
+        "sha256": "8daa318b040654064bb33144fb19db7c32ae74338e7f39b166d58b4da0ca5206",
+        "record_updated_at": "2025-10-08",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 176,
+      "fields": {
+        "cve_id": "CVE-2024-5535",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-5535",
+        "sha256": "ba450552a5fe82f1713b16920ce774380b81b17cf1b1a7b98a1f63057ad44773",
+        "record_updated_at": "2026-10-15",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 177,
+      "fields": {
+        "cve_id": "CVE-2024-5560",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-5560",
+        "sha256": "4774ee36eb0a644abcfc54243ba229f71a21ecf720b50ec716e4a06107deffd2",
+        "record_updated_at": "2024-08-01",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 178,
+      "fields": {
+        "cve_id": "CVE-2024-6119",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-6119",
+        "sha256": "658e214986cf3ddab73c33800b0da23d45aaadf6fb583e56cc31156525a53e56",
+        "record_updated_at": "2026-10-15",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 179,
+      "fields": {
+        "cve_id": "CVE-2024-6209",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-6209",
+        "sha256": "82b0254a03e1f5dfb312abf40145597062fdbf3ea8b8d86338f71fe1d9651628",
+        "record_updated_at": "2024-12-05",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 180,
+      "fields": {
+        "cve_id": "CVE-2024-6298",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-6298",
+        "sha256": "5a1fa86888527f0e1a61b3fde69c06593bdb937130b7505f7048e648f86fc2dc",
+        "record_updated_at": "2024-12-05",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 181,
+      "fields": {
+        "cve_id": "CVE-2024-6387",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-6387",
+        "sha256": "8d6784bc3f8c65405d487f61a428195f4203774def9f0864b7004a776492dcdf",
+        "record_updated_at": "2026-11-06",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 182,
+      "fields": {
+        "cve_id": "CVE-2024-6407",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-6407",
+        "sha256": "72b6e246ee84fbdabfd4eae4399d395ae998c6972b68f7e9a9c0c0cedc21c445",
+        "record_updated_at": "2024-08-01",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 183,
+      "fields": {
+        "cve_id": "CVE-2024-6515",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-6515",
+        "sha256": "1ab7e7edbddfcc1a6764bf8878d404ff70fdc8a153404a8c5eaab089f04420b3",
+        "record_updated_at": "2024-12-05",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 184,
+      "fields": {
+        "cve_id": "CVE-2024-6516",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-6516",
+        "sha256": "65641abe08f1d76accae727cd41794236758706bf3fcecb8b689554ad5f0266b",
+        "record_updated_at": "2024-12-05",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 185,
+      "fields": {
+        "cve_id": "CVE-2024-6784",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-6784",
+        "sha256": "987f9a44c5da89ef93b91dad686d3b96f42f2687499851e94404c3960d72b6a2",
+        "record_updated_at": "2024-12-05",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 186,
+      "fields": {
+        "cve_id": "CVE-2024-8313",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-8313",
+        "sha256": "7eb84d72f9ad29b7c0fa9ef998edf038b781be740c06770adfe54b4ea1a05146",
+        "record_updated_at": "2025-03-25",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 187,
+      "fields": {
+        "cve_id": "CVE-2024-8314",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-8314",
+        "sha256": "0f82c08be81221363d363dad4fb6b56d00a5599537e69564bd21409aa6b59668",
+        "record_updated_at": "2025-03-25",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 188,
+      "fields": {
+        "cve_id": "CVE-2024-8315",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-8315",
+        "sha256": "e2a4c839508c21622c4ab492c278d5a304961157499f36f852d33bfa05605e52",
+        "record_updated_at": "2025-03-25",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 189,
+      "fields": {
+        "cve_id": "CVE-2024-8603",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-8603",
+        "sha256": "6df8bffed2455a47ecfa5fbb4fa8ae2d56781297f89b263a8be6dc10e0f0107c",
+        "record_updated_at": "2025-01-15",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 190,
+      "fields": {
+        "cve_id": "CVE-2024-9143",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-9143",
+        "sha256": "98855438bd49f514415adb244abbd98d9e64dec815c7d6a0f42a1ddf558ba630",
+        "record_updated_at": "2026-11-06",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 191,
+      "fields": {
+        "cve_id": "CVE-2024-9441",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-9441",
+        "sha256": "30a2a99ba61e12c11180ea0d3fad27a7c4ab1734cb6bfc8dfda46f5fa1dce445",
+        "record_updated_at": "2024-10-02",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 192,
+      "fields": {
+        "cve_id": "CVE-2025-0477",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-0477",
+        "sha256": "76d5f0168c10c02c8c62266b3c55cb5923e20be2c404fadc1dc3a7a51c7774d2",
+        "record_updated_at": "2025-02-12",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 193,
+      "fields": {
+        "cve_id": "CVE-2025-0497",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-0497",
+        "sha256": "561662a8aa766e9bb8ddc0aa7185b03be87ea174e4cdb2343d67d67f86ee3f54",
+        "record_updated_at": "2025-02-12",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 194,
+      "fields": {
+        "cve_id": "CVE-2025-0498",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-0498",
+        "sha256": "600d2682eb897f5c452e4e267e4990cd74889902851b5a9d08e796d074083201",
+        "record_updated_at": "2025-02-12",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 195,
+      "fields": {
+        "cve_id": "CVE-2025-0630",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-0630",
+        "sha256": "71c18438b5f5cf40628546b7ac0e6a070b1ff0efa97c0f63d41b8e553ce7c3f7",
+        "record_updated_at": "2025-02-12",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 196,
+      "fields": {
+        "cve_id": "CVE-2025-0631",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-0631",
+        "sha256": "93a78f154755b95ba90d12c10650697ac9c5024f433aee4471ead1fed8013b2a",
+        "record_updated_at": "2025-02-06",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 197,
+      "fields": {
+        "cve_id": "CVE-2025-0814",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-0814",
+        "sha256": "5b40e71cdd820dff97b9cb6fcef4685552d0a33f34d19318c1e375d7db69c802",
+        "record_updated_at": "2025-02-13",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 198,
+      "fields": {
+        "cve_id": "CVE-2025-0815",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-0815",
+        "sha256": "f7e92b806d418daab9637afda8b7a194892efedba22c169a0afe96f8fb00f869",
+        "record_updated_at": "2025-02-13",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 199,
+      "fields": {
+        "cve_id": "CVE-2025-0816",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-0816",
+        "sha256": "4add51e3dca6edcba19b38fa0f689ec0134ae0ed5ce5003c5a6794856d2dfcbc",
+        "record_updated_at": "2025-02-13",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 200,
+      "fields": {
+        "cve_id": "CVE-2025-0896",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-0896",
+        "sha256": "9d989ab5a855eefa6b6db1193a42b4f62e1ecd60a2dee79649385ace7317b361",
+        "record_updated_at": "2025-02-13",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 201,
+      "fields": {
+        "cve_id": "CVE-2025-0960",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-0960",
+        "sha256": "70e17a81a7cf2a92bfecddb63e06e89b4ba989a2ee6e96ef61563fbc528d8432",
+        "record_updated_at": "2025-02-04",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 202,
+      "fields": {
+        "cve_id": "CVE-2025-0994",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-0994",
+        "sha256": "1f47c6761048efae53444f7a9502ffd1f824acfbbe4c6ffb128e8c4a84b29a39",
+        "record_updated_at": "2025-10-21",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 203,
+      "fields": {
+        "cve_id": "CVE-2025-1058",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-1058",
+        "sha256": "e1a73f895e78e4917d96f1cb1e4c0aca26bdeb2ff2cf006fc7a41617cf390494",
+        "record_updated_at": "2025-02-13",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 204,
+      "fields": {
+        "cve_id": "CVE-2025-1059",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-1059",
+        "sha256": "4ac9ba89ef457a12ad021434e36f43f4eaab6111e27153f411b760e664562168",
+        "record_updated_at": "2025-02-13",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 205,
+      "fields": {
+        "cve_id": "CVE-2025-1060",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-1060",
+        "sha256": "22b77822db39edcdfe4439aa97b9f8a23eeb6ea554096860c9f0d6e701df0693",
+        "record_updated_at": "2025-02-13",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 206,
+      "fields": {
+        "cve_id": "CVE-2025-1070",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-1070",
+        "sha256": "10a693c08215141aa73e51affd7f4fd8ea202af373f42e3dcc206603cccfb76c",
+        "record_updated_at": "2025-02-13",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 207,
+      "fields": {
+        "cve_id": "CVE-2025-10879",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-10879",
+        "sha256": "6f37f1c80bcca4f6567890a3ae74e77a1d2fc87c093503918db5dd67180648ee",
+        "record_updated_at": "2025-09-25",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 208,
+      "fields": {
+        "cve_id": "CVE-2025-10880",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-10880",
+        "sha256": "b7d7a4f53a26d86187806ca0d0892314b9e1b0255f73de1400519cd16a9b77d2",
+        "record_updated_at": "2025-09-25",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 209,
+      "fields": {
+        "cve_id": "CVE-2025-2002",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-2002",
+        "sha256": "0a818840a23fdfecb049d9a1f574dbf76263a1f3313ce97f9b030349ff1a1c45",
+        "record_updated_at": "2025-05-12",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 210,
+      "fields": {
+        "cve_id": "CVE-2025-2185",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-2185",
+        "sha256": "ae20fefafb13c7d3c2202ab6426e33d7509738f42d41d9e55e3c7de59c5b025c",
+        "record_updated_at": "2025-04-25",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 211,
+      "fields": {
+        "cve_id": "CVE-2025-22896",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-22896",
+        "sha256": "f67c5b48be6e330292562c62dcd9a7a0bacf759fd7f1cf1c3622ef286efaf6ed",
+        "record_updated_at": "2025-02-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 212,
+      "fields": {
+        "cve_id": "CVE-2025-23384",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-23384",
+        "sha256": "8d11d62526b75d75348f80371530c5a1c1814c56e79e8576fd60725cdfb4d0d3",
+        "record_updated_at": "2026-05-12",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 213,
+      "fields": {
+        "cve_id": "CVE-2025-23411",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-23411",
+        "sha256": "2b45e0744f274d90677d3140976a42464764d7b4f1eaf9d6a8837cd7cb5c0f17",
+        "record_updated_at": "2025-02-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 214,
+      "fields": {
+        "cve_id": "CVE-2025-2440",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-2440",
+        "sha256": "e907001aaeb29b0189bc54cb8d2c98ef2acfb704da120306324413b3d80edf28",
+        "record_updated_at": "2025-04-09",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 215,
+      "fields": {
+        "cve_id": "CVE-2025-2441",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-2441",
+        "sha256": "10e839ee96ca923b87eeda53240ebfb7d3fdc9cc983087e5ca8cb1407e94d0e7",
+        "record_updated_at": "2025-04-09",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 216,
+      "fields": {
+        "cve_id": "CVE-2025-2442",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-2442",
+        "sha256": "0bcbf04fd7318e56a5789cbc54ac2bcaadabd166155f268cce3ede77444af829",
+        "record_updated_at": "2025-04-09",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 217,
+      "fields": {
+        "cve_id": "CVE-2025-24481",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-24481",
+        "sha256": "74944c9fd4eb05ca3090e4230ab168df9b20d8d04e7afe35b47112a6fccb8474",
+        "record_updated_at": "2025-02-12",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 218,
+      "fields": {
+        "cve_id": "CVE-2025-24482",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-24482",
+        "sha256": "c7e7b22dd5322ad1052e23437c55c46235d60b10eff9ec061de913ef3503742f",
+        "record_updated_at": "2025-01-28",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 219,
+      "fields": {
+        "cve_id": "CVE-2025-24489",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-24489",
+        "sha256": "a07654b45528adacf79babf1ddbcaf394cca86a34d600b282223086c17a782a9",
+        "record_updated_at": "2025-08-21",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 220,
+      "fields": {
+        "cve_id": "CVE-2025-24499",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-24499",
+        "sha256": "2f31e4cb275745a5db8342e4e8ac62d14835c29abab05d8f353f2d8c30e34a68",
+        "record_updated_at": "2025-02-12",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 221,
+      "fields": {
+        "cve_id": "CVE-2025-24522",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-24522",
+        "sha256": "d7cc831da9ea0acba681340188df7527513ff0fbe24dee80db2158eb3fff4154",
+        "record_updated_at": "2025-05-01",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 222,
+      "fields": {
+        "cve_id": "CVE-2025-24532",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-24532",
+        "sha256": "30b2b9374fe83c5ec3f42ff0294dd1769ad5b0bb729dd7beb2bf2c715fa388c7",
+        "record_updated_at": "2025-02-12",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 223,
+      "fields": {
+        "cve_id": "CVE-2025-24861",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-24861",
+        "sha256": "70a007490252675a892278403a322f439880caf293ebe1e9328c9cf24694c0d5",
+        "record_updated_at": "2025-02-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 224,
+      "fields": {
+        "cve_id": "CVE-2025-24865",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-24865",
+        "sha256": "15984cb084562e7ef9db2c7e7cd4e26ccaefb0a83ffd80ecdaf0014cb05825c9",
+        "record_updated_at": "2025-02-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 225,
+      "fields": {
+        "cve_id": "CVE-2025-25067",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-25067",
+        "sha256": "256dae0f18bd933776b70c20e16b1b49f1995f44464d96b68ad17341837dc492",
+        "record_updated_at": "2025-02-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 226,
+      "fields": {
+        "cve_id": "CVE-2025-2520",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-2520",
+        "sha256": "5ee3f9b6ad4e1808e8e20cecb123b388bbb98384c09d947cacd5d61cc77239ff",
+        "record_updated_at": "2025-08-04",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 227,
+      "fields": {
+        "cve_id": "CVE-2025-2521",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-2521",
+        "sha256": "2f6b0ed5fe39dfd447f4d9102920c7341ee84d6e20632a0d9665808d1916f2b3",
+        "record_updated_at": "2025-08-04",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 228,
+      "fields": {
+        "cve_id": "CVE-2025-2522",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-2522",
+        "sha256": "71b009ea8c8b343c28662ce07093676310bb7ad213be57cc1cc4e882b0078210",
+        "record_updated_at": "2025-08-04",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 229,
+      "fields": {
+        "cve_id": "CVE-2025-2523",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-2523",
+        "sha256": "acc9f0a3b4d515373eb6b439482324019afcec5b930987dc7e64ba4d41af16a4",
+        "record_updated_at": "2025-08-04",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 230,
+      "fields": {
+        "cve_id": "CVE-2025-25281",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-25281",
+        "sha256": "02f0660b4039e481cf6a1d480c5223b3dee862a62f7d1e26b31ffd4497cf4088",
+        "record_updated_at": "2025-02-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 231,
+      "fields": {
+        "cve_id": "CVE-2025-2567",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-2567",
+        "sha256": "0b045b8e354a43656101884bd1092fae37cdc2c3222598326ec01fdb592513ac",
+        "record_updated_at": "2025-04-15",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 232,
+      "fields": {
+        "cve_id": "CVE-2025-26389",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-26389",
+        "sha256": "6d425089385e90374eb92a73916fb071a75e4a3e23e3ab4bb98a782afdd9a9a3",
+        "record_updated_at": "2025-05-13",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 233,
+      "fields": {
+        "cve_id": "CVE-2025-26390",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-26390",
+        "sha256": "27897e13b99afafe48f65a0e1fd430e2690cc6878b1374502ccf93a06ce03f0e",
+        "record_updated_at": "2025-05-13",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 234,
+      "fields": {
+        "cve_id": "CVE-2025-26468",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-26468",
+        "sha256": "63297370a3ba0c4ccbe2e21f82cdc1203b34d2cd31c380b19b8d458e91c33d16",
+        "record_updated_at": "2025-06-10",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 235,
+      "fields": {
+        "cve_id": "CVE-2025-26473",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-26473",
+        "sha256": "be2a8f9eceb5d6277907337d7501f9988cd0666ca74b6e49195ff8f3aada29f2",
+        "record_updated_at": "2025-02-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 236,
+      "fields": {
+        "cve_id": "CVE-2025-27714",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-27714",
+        "sha256": "226760e2bc228e6e5101c44bc2cdd06698493cda78d63b9ccaaacfef5ac0c8b4",
+        "record_updated_at": "2025-08-21",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 237,
+      "fields": {
+        "cve_id": "CVE-2025-27721",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-27721",
+        "sha256": "200ec410841fea33ff73921c1c76342c39cc9c9337343f7de26f85f3f1a39568",
+        "record_updated_at": "2025-08-22",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 238,
+      "fields": {
+        "cve_id": "CVE-2025-30183",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-30183",
+        "sha256": "dd3a6066f402dbc2ced038f4bf6f30e0085e812ab86ae92fb8ecd8df713c750a",
+        "record_updated_at": "2025-06-10",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 239,
+      "fields": {
+        "cve_id": "CVE-2025-30184",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-30184",
+        "sha256": "825fdfbd632dcbae9bc1a6576c328759f00e6b2ec7a0e5944b62053719c7ae2e",
+        "record_updated_at": "2025-06-10",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 240,
+      "fields": {
+        "cve_id": "CVE-2025-30507",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-30507",
+        "sha256": "0d0dd73f2cf317ea39aff382ca6d906d56df5f3c9c8a090c05f17a99aa8bba1d",
+        "record_updated_at": "2025-06-10",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 241,
+      "fields": {
+        "cve_id": "CVE-2025-30515",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-30515",
+        "sha256": "2d5218e5491cf37be53da2d7d332da1dacdc969e2b3aadf392bdc793b1ea58d0",
+        "record_updated_at": "2025-06-10",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 242,
+      "fields": {
+        "cve_id": "CVE-2025-30519",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-30519",
+        "sha256": "edf37d22dad104ac1a97235e33fae58842bb32bfa735692af758f6e97c530685",
+        "record_updated_at": "2025-09-19",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 243,
+      "fields": {
+        "cve_id": "CVE-2025-3128",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-3128",
+        "sha256": "68dd11f30d89e4ed9c074e5ca5d36d3a72ffc1bf711126269fe7c96f3ac035d7",
+        "record_updated_at": "2025-08-22",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 244,
+      "fields": {
+        "cve_id": "CVE-2025-31354",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-31354",
+        "sha256": "0d20a540e8585bba4ab387861005a4f6db5bc459a465515bcbf59bfce2cfb141",
+        "record_updated_at": "2025-04-11",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 245,
+      "fields": {
+        "cve_id": "CVE-2025-31929",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-31929",
+        "sha256": "d8a2ab2e596139762e4ffeb3f2e96a93dbbac58d0aa0d4b7d09051868e3885f9",
+        "record_updated_at": "2025-05-13",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 246,
+      "fields": {
+        "cve_id": "CVE-2025-31930",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-31930",
+        "sha256": "435ca0722afb6792182915321213b24a1d20f345366eb04f5fc4d9656c10e718",
+        "record_updated_at": "2025-05-13",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 247,
+      "fields": {
+        "cve_id": "CVE-2025-31935",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-31935",
+        "sha256": "a016ff4add1a6de95136413fed0251488db94757dbb10e53ece76477dbf0a10b",
+        "record_updated_at": "2025-04-11",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 248,
+      "fields": {
+        "cve_id": "CVE-2025-32011",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-32011",
+        "sha256": "8ea5ffe3487b7b90482ed05c644fc28a3e735ed98177595c373a37fd760cf2fb",
+        "record_updated_at": "2025-05-02",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 249,
+      "fields": {
+        "cve_id": "CVE-2025-3232",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-3232",
+        "sha256": "0cc745eba9b4adc058fb64bf5b07b809c9e8f6b1f3f0babcc5e7a49239a8d9db",
+        "record_updated_at": "2025-12-24",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 250,
+      "fields": {
+        "cve_id": "CVE-2025-35996",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-35996",
+        "sha256": "92890f81f91c2922d577eeb67b6311488ad43c4d35c70beeb7aafc3e2e0f82c8",
+        "record_updated_at": "2025-05-02",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 251,
+      "fields": {
+        "cve_id": "CVE-2025-3606",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-3606",
+        "sha256": "0baf1ab5a267ee75af766363a51cc851f6f9610f036769629de334892f022bd5",
+        "record_updated_at": "2025-04-25",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 252,
+      "fields": {
+        "cve_id": "CVE-2025-36535",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-36535",
+        "sha256": "ec9f158713a1d871b0e1400a229e4255f63b0807dcff40879bd0ba12a446f245",
+        "record_updated_at": "2025-05-22",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 253,
+      "fields": {
+        "cve_id": "CVE-2025-36558",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-36558",
+        "sha256": "f8bfb39697b3666b9fe94356daaa52c57aab51dd19ba3ee9421b8783387ed281",
+        "record_updated_at": "2025-05-02",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 254,
+      "fields": {
+        "cve_id": "CVE-2025-39203",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-39203",
+        "sha256": "94494ec78c5783ab0e7638ff3a1bcecb7802128dbc82356e5e281136ac075dad",
+        "record_updated_at": "2025-10-07",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 255,
+      "fields": {
+        "cve_id": "CVE-2025-3946",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-3946",
+        "sha256": "6a6e2e3f823cc1574d15c4f0ee1a85ca3ef65f0bef7e315e184558cf87fd1e67",
+        "record_updated_at": "2025-08-04",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 256,
+      "fields": {
+        "cve_id": "CVE-2025-3947",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-3947",
+        "sha256": "a40c5dd3dd2d4fa0e9b1aaaf9b5c2814fb96c93d99707be307d286af3b296d95",
+        "record_updated_at": "2025-08-04",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 257,
+      "fields": {
+        "cve_id": "CVE-2025-4041",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-4041",
+        "sha256": "039c08796fec01bc96ea00bf0a8681c1849e92939318fb0f8e53634d3b1e2d31",
+        "record_updated_at": "2025-05-06",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 258,
+      "fields": {
+        "cve_id": "CVE-2025-4043",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-4043",
+        "sha256": "f7a58279c2246f77c8a501663122a7caa1a815dfc19369dd6c298d92e0fd1285",
+        "record_updated_at": "2025-05-08",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 259,
+      "fields": {
+        "cve_id": "CVE-2025-40572",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-40572",
+        "sha256": "64953cbd369bb65aa02481be13defc9454ebba4f8541c25cf607e5a00c050082",
+        "record_updated_at": "2025-07-08",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 260,
+      "fields": {
+        "cve_id": "CVE-2025-40573",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-40573",
+        "sha256": "1c20072d4e38c8c9fb1c4b04c10d56f11a76f3b92a6a569b37bd3a685d718e40",
+        "record_updated_at": "2025-07-08",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 261,
+      "fields": {
+        "cve_id": "CVE-2025-40574",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-40574",
+        "sha256": "fa2c9778fc0bca741d07cefae43bf041bf298a1f9212247273b8b305b6a449fe",
+        "record_updated_at": "2025-07-08",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 262,
+      "fields": {
+        "cve_id": "CVE-2025-40575",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-40575",
+        "sha256": "3344f7a73ad7edd08a4f268d39651abcbc3f7d79cc942d0dc6e3e4e77fcbdfc4",
+        "record_updated_at": "2025-07-08",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 263,
+      "fields": {
+        "cve_id": "CVE-2025-40576",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-40576",
+        "sha256": "8e084fde6429b9d775a6f32a29b99b4e0bc2d31a9a44b1fe4356e5a4491a11e3",
+        "record_updated_at": "2025-07-08",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 264,
+      "fields": {
+        "cve_id": "CVE-2025-40577",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-40577",
+        "sha256": "522d5980761da918bade7bc41230981c6c4ed8b61df087a179eb0551c28086a8",
+        "record_updated_at": "2025-07-08",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 265,
+      "fields": {
+        "cve_id": "CVE-2025-40578",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-40578",
+        "sha256": "f24641186a2de7a2c2dcc8d337aa5c7ca268f74c6e3b6c17cac606f90345be55",
+        "record_updated_at": "2025-05-13",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 266,
+      "fields": {
+        "cve_id": "CVE-2025-40579",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-40579",
+        "sha256": "d1a5c5348be99b4ebc6bb6ba6e73ec0540e88e7d4cfbcca938a96449acef8dae",
+        "record_updated_at": "2025-07-08",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 267,
+      "fields": {
+        "cve_id": "CVE-2025-40580",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-40580",
+        "sha256": "1c92141cedae4912c4e01b80a3799717580f91394b12587c14fbac68e991d45e",
+        "record_updated_at": "2025-07-08",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 268,
+      "fields": {
+        "cve_id": "CVE-2025-40581",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-40581",
+        "sha256": "24f4021809e018a3598450d58d5260645ef67f4d0c07b14dc86700c3c6b7ff30",
+        "record_updated_at": "2026-09-08",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 269,
+      "fields": {
+        "cve_id": "CVE-2025-40582",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-40582",
+        "sha256": "e6c0ba8dbea4446a21305cd9818d2837f35182ab87e0e552ecb1ed70e1225260",
+        "record_updated_at": "2026-09-08",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 270,
+      "fields": {
+        "cve_id": "CVE-2025-40583",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-40583",
+        "sha256": "d63862d331b70bfee97cffeb06c9c5f53a98c6af5e1d79987e24d02131ece0bf",
+        "record_updated_at": "2026-09-08",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 271,
+      "fields": {
+        "cve_id": "CVE-2025-40772",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-40772",
+        "sha256": "01e91a779c2184c10fc6314ebaa7fe300d40920ab46b97fb28c82492c08f4957",
+        "record_updated_at": "2026-02-10",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 272,
+      "fields": {
+        "cve_id": "CVE-2025-40773",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-40773",
+        "sha256": "d6a46cabd66b4849867ca70b4c8485645bb728d94e0db928f06dfa896b08507f",
+        "record_updated_at": "2025-10-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 273,
+      "fields": {
+        "cve_id": "CVE-2025-40774",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-40774",
+        "sha256": "ce9d9c3fbecea4cce95e8116f3e092bba28f48ee1a80f15e550aab710c5cd53d",
+        "record_updated_at": "2025-10-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 274,
+      "fields": {
+        "cve_id": "CVE-2025-40818",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-40818",
+        "sha256": "33cf5c59e1e0e611927447e53aa6c44027e68c8e5c12d592d12871b1b09e8787",
+        "record_updated_at": "2025-12-09",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 275,
+      "fields": {
+        "cve_id": "CVE-2025-40819",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-40819",
+        "sha256": "25536872a9b0f077a8cf6c64534a9865faa4d3a1726ec1254076d88d999e2503",
+        "record_updated_at": "2025-12-09",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 276,
+      "fields": {
+        "cve_id": "CVE-2025-41426",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-41426",
+        "sha256": "5fc9af747d44c8a9f9211e2294dad5d97c4dcbb97ae5880d426620f9d80ed6c6",
+        "record_updated_at": "2025-05-21",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 277,
+      "fields": {
+        "cve_id": "CVE-2025-41438",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-41438",
+        "sha256": "4ad3ef4d40333e9031917579e9e0c6831570790ecd6a24a706d50c0fda9e658a",
+        "record_updated_at": "2025-05-30",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 278,
+      "fields": {
+        "cve_id": "CVE-2025-41450",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-41450",
+        "sha256": "f22e6ff5816ea3443aa6795a4167bbde71b4bf377767ef3b8dee35add2b36dab",
+        "record_updated_at": "2026-10-19",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 279,
+      "fields": {
+        "cve_id": "CVE-2025-41451",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-41451",
+        "sha256": "fa736764a4c880eacb9abbd2e1b4e0d49b7f84ee59028d4a78ce2e5303d7f374",
+        "record_updated_at": "2026-10-19",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 280,
+      "fields": {
+        "cve_id": "CVE-2025-41452",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-41452",
+        "sha256": "410236246fcccad2f88c24f7164d0ff2277c0b5e85bb37141a4c054ba42e0207",
+        "record_updated_at": "2026-11-03",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 281,
+      "fields": {
+        "cve_id": "CVE-2025-46271",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-46271",
+        "sha256": "334870179038753ef968f13dc00ad21fac75190fc91128da34af513f7141ea8c",
+        "record_updated_at": "2025-04-25",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 282,
+      "fields": {
+        "cve_id": "CVE-2025-46272",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-46272",
+        "sha256": "c6c4587d0f9ee25dd1e0f5facb7d15e0b94807f04d5912eae88a6d34a170608e",
+        "record_updated_at": "2025-04-25",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 283,
+      "fields": {
+        "cve_id": "CVE-2025-46273",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-46273",
+        "sha256": "9f859ccd28b7792046bb0b2cd7b7840e50048edc01046845174541d7c84ceab5",
+        "record_updated_at": "2025-04-25",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 284,
+      "fields": {
+        "cve_id": "CVE-2025-46274",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-46274",
+        "sha256": "df70d5a3211d2331b82e0e9b6f4c89ed479ca1c318141721ee69999f4f2db500",
+        "record_updated_at": "2025-04-25",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 285,
+      "fields": {
+        "cve_id": "CVE-2025-46275",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-46275",
+        "sha256": "56f4c1a7cb8335a0fd2ad27d7760547dc6e1880978116c93b66b22a678467f74",
+        "record_updated_at": "2025-04-25",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 286,
+      "fields": {
+        "cve_id": "CVE-2025-46352",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-46352",
+        "sha256": "2f35d37425e5137c5147df7a6129b911d2f5a9a6ef7d97fa1071a58b408eb23a",
+        "record_updated_at": "2025-05-30",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 287,
+      "fields": {
+        "cve_id": "CVE-2025-46412",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-46412",
+        "sha256": "65b26dd9eb059b29b98405f2018197600a798bd4bc47e1ca700d595981fbe27c",
+        "record_updated_at": "2025-05-21",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 288,
+      "fields": {
+        "cve_id": "CVE-2025-49851",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-49851",
+        "sha256": "706596cbe5101930364e0cd88a2a9a49aabf30757fb10bf0aefbae564fc980c9",
+        "record_updated_at": "2025-06-27",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 289,
+      "fields": {
+        "cve_id": "CVE-2025-49852",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-49852",
+        "sha256": "9804c0a84d5a84b793d2f673fa59f71acebf1e5ca2366164732d7f4b33447f46",
+        "record_updated_at": "2025-06-27",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 290,
+      "fields": {
+        "cve_id": "CVE-2025-49853",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-49853",
+        "sha256": "e308507b6d8866df0aeb1ee1e784d21a42bd64c204ab6597ffc854447262c01e",
+        "record_updated_at": "2025-06-27",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 291,
+      "fields": {
+        "cve_id": "CVE-2025-50121",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-50121",
+        "sha256": "d799512851c3608a74a04a48c043ce98e87d90996d0afa45b14ffcb0b5240e4d",
+        "record_updated_at": "2025-11-03",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 292,
+      "fields": {
+        "cve_id": "CVE-2025-50122",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-50122",
+        "sha256": "7fcf5bf538d82993c2865e6d4724e6370285312059c694fed76342d74f13eae7",
+        "record_updated_at": "2025-11-03",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 293,
+      "fields": {
+        "cve_id": "CVE-2025-50123",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-50123",
+        "sha256": "dd786072c3c2af79b5d7b34de0fa76aca1be42f634ebfd927e4ae729cbc0dceb",
+        "record_updated_at": "2025-11-04",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 294,
+      "fields": {
+        "cve_id": "CVE-2025-50124",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-50124",
+        "sha256": "46f4e6cab835f05f4d607509d96aa2e9f1df5db51e506114b9a98e2fc0ffc6bf",
+        "record_updated_at": "2025-11-03",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 295,
+      "fields": {
+        "cve_id": "CVE-2025-50125",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-50125",
+        "sha256": "cef93f1e2f82bec6422df4fb51ca36dc195d3c81221b75db10012e044fc66f61",
+        "record_updated_at": "2025-11-03",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 296,
+      "fields": {
+        "cve_id": "CVE-2025-52543",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-52543",
+        "sha256": "07daf96401fcd6978df1ae96125548c7fb61eb94968c57746f31ff9ea90e5b61",
+        "record_updated_at": "2025-09-02",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 297,
+      "fields": {
+        "cve_id": "CVE-2025-52544",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-52544",
+        "sha256": "4409cccd5525af55ca5c60197a8e410e67d2065f6c577276ce18dc48e7003ddc",
+        "record_updated_at": "2025-09-02",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 298,
+      "fields": {
+        "cve_id": "CVE-2025-52545",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-52545",
+        "sha256": "8f844a725f2f1c7445d15599bd946475464d995945b25a0ff23470b0beb03504",
+        "record_updated_at": "2025-09-02",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 299,
+      "fields": {
+        "cve_id": "CVE-2025-52546",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-52546",
+        "sha256": "6e15286748a76bd195d64b603f543bf32977e48821ceaa5aab57f7d3b8269b2f",
+        "record_updated_at": "2025-09-02",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 300,
+      "fields": {
+        "cve_id": "CVE-2025-52547",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-52547",
+        "sha256": "3179672a0ec38ce16dea997f14114452b4f613449bfa0548a3ffe1233faa47a7",
+        "record_updated_at": "2025-09-02",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 301,
+      "fields": {
+        "cve_id": "CVE-2025-52548",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-52548",
+        "sha256": "dae5aae59072a5ec9d4280675214ca3fc89f53a24cf97c9db880233eaa71398a",
+        "record_updated_at": "2025-09-02",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 302,
+      "fields": {
+        "cve_id": "CVE-2025-52549",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-52549",
+        "sha256": "2a2f5524ab1b4317ac934c4306ecf6e5896d4604a8e13c666d33dd1a76360a36",
+        "record_updated_at": "2025-09-02",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 303,
+      "fields": {
+        "cve_id": "CVE-2025-52550",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-52550",
+        "sha256": "a8b9c139ce9a2be682c0059760e0f8779d603a89fd6334553afdc7486bcfca66",
+        "record_updated_at": "2025-09-02",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 304,
+      "fields": {
+        "cve_id": "CVE-2025-52551",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-52551",
+        "sha256": "4a4cf7ddd96096dd6bf095086f6bbb7c9ab4ac7592dd593ee19378ecae1ac042",
+        "record_updated_at": "2025-09-02",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 305,
+      "fields": {
+        "cve_id": "CVE-2025-53077",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-53077",
+        "sha256": "7f62c9ce52f649e7b4478c4286e91b75c6897692721cb60ff20e8eb970afd336",
+        "record_updated_at": "2025-07-29",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 306,
+      "fields": {
+        "cve_id": "CVE-2025-53078",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-53078",
+        "sha256": "7bcddcd6a15df7143e462986797946d0746775ac3eb9a9d935f96df0a5175189",
+        "record_updated_at": "2025-07-29",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 307,
+      "fields": {
+        "cve_id": "CVE-2025-53079",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-53079",
+        "sha256": "56fb3e9e1a7f10b195b854c38e73984c439d0a8ff9c9b07b4ac2f5e2ba290277",
+        "record_updated_at": "2025-07-29",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 308,
+      "fields": {
+        "cve_id": "CVE-2025-53080",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-53080",
+        "sha256": "97d64cb05a41dd81fd4fd486d6cd34f5e53609bc4b077d12e7af1dbf83e3336d",
+        "record_updated_at": "2025-07-29",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 309,
+      "fields": {
+        "cve_id": "CVE-2025-53081",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-53081",
+        "sha256": "f76d8d6289adbe42b7db93a5f59381a9f6d6cdcf1becbe79273791e74f9a909d",
+        "record_updated_at": "2025-07-29",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 310,
+      "fields": {
+        "cve_id": "CVE-2025-53082",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-53082",
+        "sha256": "39a8f93f08775a3f26e8e97dcc56a9eb7c256db7ee9aa127da452fa61b5f6cb8",
+        "record_updated_at": "2025-07-29",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 311,
+      "fields": {
+        "cve_id": "CVE-2025-54807",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-54807",
+        "sha256": "afbcd13ed74ba72dc66d5966a537cf2be6b6fe74d1b76b25b305d1c10ec66ce7",
+        "record_updated_at": "2026-06-04",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 312,
+      "fields": {
+        "cve_id": "CVE-2025-55068",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-55068",
+        "sha256": "74d3fdf7998368d450ae6d25947e2ddba6894f62ec375b07717d45560a6416de",
+        "record_updated_at": "2025-09-19",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 313,
+      "fields": {
+        "cve_id": "CVE-2025-59668",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-59668",
+        "sha256": "62c6bdef16867f416662c452e0bfabd893eef3d02a9bb11571ba240f56978319",
+        "record_updated_at": "2025-10-31",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 314,
+      "fields": {
+        "cve_id": "CVE-2025-6021",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-6021",
+        "sha256": "c5121b27e04c1ce2d1411477e90f51e80c2de28da57eb6ef75b46aa6fa04f6c0",
+        "record_updated_at": "2026-11-05",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 315,
+      "fields": {
+        "cve_id": "CVE-2025-6071",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-6071",
+        "sha256": "cdfb0901539827175c45d231941f83fefec5043d1f467f0dbfbe1083f5e56cc0",
+        "record_updated_at": "2025-07-03",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 316,
+      "fields": {
+        "cve_id": "CVE-2025-6072",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-6072",
+        "sha256": "fb38fbe9466edc55514c97b290dacd66d817852f6e9fff5b2541078d4c91d256",
+        "record_updated_at": "2025-07-03",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 317,
+      "fields": {
+        "cve_id": "CVE-2025-6073",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-6073",
+        "sha256": "fe3d7fb96003ab8056b7d7e67b4450cde9bc9005f79ff9b0a31df249039c461e",
+        "record_updated_at": "2025-07-03",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 318,
+      "fields": {
+        "cve_id": "CVE-2025-6074",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-6074",
+        "sha256": "d7c55bfae766609a968fa6179dc4ec7e66258a1f07076fc183a17c4c11095a31",
+        "record_updated_at": "2025-07-03",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 319,
+      "fields": {
+        "cve_id": "CVE-2025-6438",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-6438",
+        "sha256": "a10a182fcdf70c9f4443243aab21b507382d2693346c877db4beea33f0b577d1",
+        "record_updated_at": "2025-11-03",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 320,
+      "fields": {
+        "cve_id": "CVE-2025-6519",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-6519",
+        "sha256": "cc3e75a36e186ccd7c9801b019332769756dd9efc48c77a609fc3611f100256f",
+        "record_updated_at": "2025-09-02",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 321,
+      "fields": {
+        "cve_id": "CVE-2025-9065",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-9065",
+        "sha256": "fbbd76b5a32784527e44e1f246e96857d92ef0f935fa1bb440c54f14d3cfa4e8",
+        "record_updated_at": "2025-09-09",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 322,
+      "fields": {
+        "cve_id": "CVE-2026-20742",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2026-20742",
+        "sha256": "b456833cce971d909596a42ad33207b600b2476914511748fc4a14227e04ab0d",
+        "record_updated_at": "2026-03-02",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 323,
+      "fields": {
+        "cve_id": "CVE-2026-20764",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2026-20764",
+        "sha256": "6695d4a745326419eb20652985944b38f360b9bf3addc362cb138c6e94006030",
+        "record_updated_at": "2026-03-02",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 324,
+      "fields": {
+        "cve_id": "CVE-2026-20797",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2026-20797",
+        "sha256": "75fcb6f34724671d88af684b32ff3d285a6f327367b80a426369f3322b3c5b1a",
+        "record_updated_at": "2026-05-10",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 325,
+      "fields": {
+        "cve_id": "CVE-2026-20902",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2026-20902",
+        "sha256": "9dc2b4710858c19332fd43c5162c7237100e0b3b2229cd0b6b01e0593f6988b0",
+        "record_updated_at": "2026-03-03",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 326,
+      "fields": {
+        "cve_id": "CVE-2026-20910",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2026-20910",
+        "sha256": "b8a75006ba456b48be12653003dbd20a58606a252e34892c263300e73388d56c",
+        "record_updated_at": "2026-06-04",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 327,
+      "fields": {
+        "cve_id": "CVE-2026-21389",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2026-21389",
+        "sha256": "482100ca6045e05f6c0f5a510db5e21a4d50120eb6dc31e7f61e8ff5e7068c3e",
+        "record_updated_at": "2026-03-02",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 328,
+      "fields": {
+        "cve_id": "CVE-2026-21718",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2026-21718",
+        "sha256": "636f725c31859914171b886db992e292f6e3766ee621f092b86b1c8b37bb0619",
+        "record_updated_at": "2026-03-02",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 329,
+      "fields": {
+        "cve_id": "CVE-2026-22877",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2026-22877",
+        "sha256": "c50a8e6d20c3bf8135190c74c138f47c0d0e587033c141b7caba3c7283c8e8a8",
+        "record_updated_at": "2026-03-02",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 330,
+      "fields": {
+        "cve_id": "CVE-2026-23702",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2026-23702",
+        "sha256": "1d967ea322d930d04ed049a6298065d00451a9850ab3eaadef1be07a90f6dd6d",
+        "record_updated_at": "2026-03-02",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 331,
+      "fields": {
+        "cve_id": "CVE-2026-24452",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2026-24452",
+        "sha256": "d0914b3e448309269f99999b2a5277e0d00dc7ded71336275a61a7fa69a49c03",
+        "record_updated_at": "2026-03-02",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 332,
+      "fields": {
+        "cve_id": "CVE-2026-24517",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2026-24517",
+        "sha256": "61dc11453677e4e43fc5ddcf35ea4a433b1b069bc776ee900f6efbd4c6af5efa",
+        "record_updated_at": "2026-03-02",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 333,
+      "fields": {
+        "cve_id": "CVE-2026-24663",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2026-24663",
+        "sha256": "56bdcb19489a326216891f2ed82ba5cfef46ba7c7e431eabcd257ee319ee6743",
+        "record_updated_at": "2026-03-02",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 334,
+      "fields": {
+        "cve_id": "CVE-2026-24689",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2026-24689",
+        "sha256": "d0f74b73b1eab6ac899e5f939bbde20738c6a96672058a2e1dc92de2e11007f7",
+        "record_updated_at": "2026-03-03",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 335,
+      "fields": {
+        "cve_id": "CVE-2026-24695",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2026-24695",
+        "sha256": "17e853c8f7e96472b601000172ca4751320365f4a5716e80fbf5ba3805b2f2b7",
+        "record_updated_at": "2026-03-02",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 336,
+      "fields": {
+        "cve_id": "CVE-2026-25037",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2026-25037",
+        "sha256": "7b01ed8b675cf65ed44593ace48a6ea683f451622046507dde2c99c34b26087a",
+        "record_updated_at": "2026-03-02",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 337,
+      "fields": {
+        "cve_id": "CVE-2026-25085",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2026-25085",
+        "sha256": "cca71d3cb64e45dd804894fa8b26c8418a3e95cbbc58a756a8992b6a801b7296",
+        "record_updated_at": "2026-03-02",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 338,
+      "fields": {
+        "cve_id": "CVE-2026-25105",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2026-25105",
+        "sha256": "ff1aabe99b7c84825d3dd4c63ec015ee5836a2305a5f572a18c810baa749f414",
+        "record_updated_at": "2026-03-02",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 339,
+      "fields": {
+        "cve_id": "CVE-2026-25109",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2026-25109",
+        "sha256": "8833aa0688d319495a98c297e2259349ac90ec4d8ca13c2c6da7a0a998028a71",
+        "record_updated_at": "2026-06-04",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 340,
+      "fields": {
+        "cve_id": "CVE-2026-25111",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2026-25111",
+        "sha256": "dfd14701b2babd7263d5c6edd97ddcb0359baa993b6fa6a1e42301eb83afeffc",
+        "record_updated_at": "2026-03-02",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 341,
+      "fields": {
+        "cve_id": "CVE-2026-25195",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2026-25195",
+        "sha256": "d23949fc81dd057e3ca7289fa32b17e17b94c9f9686fd58f06a30c55956b72c9",
+        "record_updated_at": "2026-03-02",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 342,
+      "fields": {
+        "cve_id": "CVE-2026-25196",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2026-25196",
+        "sha256": "0330b161ea0d99de12a891fb0d331c4c4206eed17030e43d8e9adb1a2940a90c",
+        "record_updated_at": "2026-03-02",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 343,
+      "fields": {
+        "cve_id": "CVE-2026-25721",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2026-25721",
+        "sha256": "2a040abee155956874ce9ba2e3c558074a1fa9a814d80854b62a5c5acd656ee2",
+        "record_updated_at": "2026-03-02",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 344,
+      "fields": {
+        "cve_id": "CVE-2026-3037",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2026-3037",
+        "sha256": "4be2f95ee8258ade4378b92b71cedab2b3c8d46365f2100dd91c739e3a42d763",
+        "record_updated_at": "2026-02-27",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    },
+    {
+      "row": 345,
+      "fields": {
+        "cve_id": "CVE-2026-34223",
+        "source_type": "CVE/CNA + CISA ADP",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2026-34223",
+        "sha256": "5e8b2f8528fb454849431cf1cc54d7038401bca84923b4b933586b017a89dbb4",
+        "record_updated_at": "2026-09-14",
+        "fetched_at": "2026-11-07",
+        "checked_fields": "SSVC Exploitation, bedömningsdatum och CVE-identitet kontrollerade"
+      },
+      "extra": {}
+    }
+  ]
+}

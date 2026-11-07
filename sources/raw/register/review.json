@@ -1,0 +1,1527 @@
+{
+  "sheet": "Radgranskning",
+  "import_version": "register-import-1.0.0",
+  "file": "OT_IoT_125_poster_losenordsstatus.xlsx",
+  "file_sha256": "2e017d3c9f1c28ea82aa05b474c9388f39db8d7350df00d2b2103741238469f1",
+  "header_row": 1,
+  "headers": [
+    "Produkt-ID",
+    "Produktfamilj",
+    "Granskningsfynd",
+    "Osäkerhet",
+    "Åtgärdsstatus",
+    "Källa"
+  ],
+  "column_map": {
+    "Produkt-ID": "register_id",
+    "Produktfamilj": "name",
+    "Granskningsfynd": "finding",
+    "Osäkerhet": "uncertainty",
+    "Åtgärdsstatus": "status",
+    "Källa": "source_urls"
+  },
+  "missing_headers": [],
+  "extra_headers": [],
+  "records": [
+    {
+      "row": 2,
+      "fields": {
+        "register_id": "OT-001",
+        "name": "Danfoss AK-SM 800",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade. Befintlig dokumentlänk styrker inte exakt modell. EOL och utbyteskrav behöver daterad modellspecifik leverantörskälla.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://www.danfoss.com/en/service-and-support/downloads/dcs/adap-kool-software/ak-sm-800a/"
+      },
+      "extra": {}
+    },
+    {
+      "row": 3,
+      "fields": {
+        "register_id": "OT-002",
+        "name": "Danfoss AK-SM 800A",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade. 58 % av 50 värdar kan inte omverifieras utan observationsdatum, versionsdata och urvalsmetod. Får inte generaliseras.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://www.cve.org/CVERecord?id=CVE-2025-41450; https://www.cve.org/CVERecord?id=CVE-2025-41451; https://www.cve.org/CVERecord?id=CVE-2025-41452"
+      },
+      "extra": {}
+    },
+    {
+      "row": 4,
+      "fields": {
+        "register_id": "OT-003",
+        "name": "Danfoss AK-SC 355",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade. Befintlig dokumentlänk styrker inte exakt modell. EOL och utbyteskrav behöver daterad modellspecifik leverantörskälla.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://www.danfoss.com/en/service-and-support/downloads/dcs/adap-kool-software/ak-sm-800a/"
+      },
+      "extra": {}
+    },
+    {
+      "row": 5,
+      "fields": {
+        "register_id": "OT-004",
+        "name": "Copeland/Dixell XWEB Pro",
+        "finding": "CISA ICSA-26-057-10 verifierad: fler CVE än originalets urval. Exakt fix 1.13 är inte omverifierad; använd modellens officiella uppdateringssida.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://www.cve.org/CVERecord?id=CVE-2026-21718"
+      },
+      "extra": {}
+    },
+    {
+      "row": 6,
+      "fields": {
+        "register_id": "OT-005",
+        "name": "CAREL pCOWeb",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade. Befintlig dokumentlänk styrker inte exakt modell.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://csrc.nist.gov/pubs/sp/800/82/r3/final"
+      },
+      "extra": {}
+    },
+    {
+      "row": 7,
+      "fields": {
+        "register_id": "OT-006",
+        "name": "Copeland E2",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade. EOL och utbyteskrav behöver daterad modellspecifik leverantörskälla.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://www.cve.org/CVERecord?id=CVE-2025-52551"
+      },
+      "extra": {}
+    },
+    {
+      "row": 8,
+      "fields": {
+        "register_id": "OT-007",
+        "name": "Copeland E3",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://www.cve.org/CVERecord?id=CVE-2025-6519; https://www.cve.org/CVERecord?id=CVE-2025-52543; https://www.cve.org/CVERecord?id=CVE-2025-52544; https://www.cve.org/CVERecord?id=CVE-2025-52545; https://www.cve.org/CVERecord?id=CVE-2025-52546; https://www.cve.org/CVERecord?id=CVE-2025-52547; https://www.cve.org/CVERecord?id=CVE-2025-52548; https://www.cve.org/CVERecord?id=CVE-2025-52549; https://www.cve.org/CVERecord?id=CVE-2025-52550"
+      },
+      "extra": {}
+    },
+    {
+      "row": 9,
+      "fields": {
+        "register_id": "OT-008",
+        "name": "Tridium Niagara 4 / AX",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://www.tridium.com/content/dam/tridium/en/documents/document-lists/niagara/tri-Niagara4-Hardening-Guide-en-2025.pdf"
+      },
+      "extra": {}
+    },
+    {
+      "row": 10,
+      "fields": {
+        "register_id": "OT-009",
+        "name": "Johnson Controls Metasys",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://docs.johnsoncontrols.com/bas/r/Metasys/en-US/Network-and-IT-Guidance-Technical-Bulletin/16.0/Introduction?contentId=u1gPxxRzqUJyrJGMHYEgKw"
+      },
+      "extra": {}
+    },
+    {
+      "row": 11,
+      "fields": {
+        "register_id": "OT-010",
+        "name": "Automated Logic WebCTRL",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade. Befintlig dokumentlänk styrker inte exakt modell.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://csrc.nist.gov/pubs/sp/800/82/r3/final"
+      },
+      "extra": {}
+    },
+    {
+      "row": 12,
+      "fields": {
+        "register_id": "OT-011",
+        "name": "Siemens S7-1200",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://cert-portal.siemens.com/productcert/html/ssa-568427.html"
+      },
+      "extra": {}
+    },
+    {
+      "row": 13,
+      "fields": {
+        "register_id": "OT-012",
+        "name": "Schneider Modicon M241/M251 (m.fl.)",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://www.se.com/us/en/download/document/EIO0000004242/"
+      },
+      "extra": {}
+    },
+    {
+      "row": 14,
+      "fields": {
+        "register_id": "OT-013",
+        "name": "Rockwell CompactLogix",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://literature.rockwellautomation.com/idc/groups/literature/documents/um/5069-um001_-en-p.pdf"
+      },
+      "extra": {}
+    },
+    {
+      "row": 15,
+      "fields": {
+        "register_id": "OT-014",
+        "name": "Rockwell Micro850",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade. Befintlig dokumentlänk styrker inte exakt modell.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://csrc.nist.gov/pubs/sp/800/82/r3/final"
+      },
+      "extra": {}
+    },
+    {
+      "row": 16,
+      "fields": {
+        "register_id": "OT-015",
+        "name": "Unitronics Vision",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://www.cve.org/CVERecord?id=CVE-2023-6448; https://www.cve.org/CVERecord?id=CVE-2024-1480"
+      },
+      "extra": {}
+    },
+    {
+      "row": 17,
+      "fields": {
+        "register_id": "OT-016",
+        "name": "Weintek cMT",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://dl.weintek.com/public/Document/UM0/Product-Security-UserManual-eng.pdf"
+      },
+      "extra": {}
+    },
+    {
+      "row": 18,
+      "fields": {
+        "register_id": "OT-017",
+        "name": "Johnson Controls iSTAR",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://www.johnsoncontrols.com/trust-center/cybersecurity/security-advisories"
+      },
+      "extra": {}
+    },
+    {
+      "row": 19,
+      "fields": {
+        "register_id": "OT-018",
+        "name": "Regin Corrigo / EXO",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://www.regincontrols.com/globalassets/pimmediafiles/documents/corrigo-5.0_ma30012_en.pdf"
+      },
+      "extra": {}
+    },
+    {
+      "row": 20,
+      "fields": {
+        "register_id": "OT-019",
+        "name": "Swegon GOLD / IQlogic",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://www.swegon.com/sv/support/hitta-information/hitta-dokument/?q=gold"
+      },
+      "extra": {}
+    },
+    {
+      "row": 21,
+      "fields": {
+        "register_id": "OT-020",
+        "name": "Systemair SAVE / SAVE CONNECT",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://www.systemair.com/sv-se/produkter/ventilationssystem-for-bostader/tillbehor/tillbehor-for-bostadsaggregat/styrutrustning/save-connect"
+      },
+      "extra": {}
+    },
+    {
+      "row": 22,
+      "fields": {
+        "register_id": "OT-021",
+        "name": "Siemens Desigo CC / PXC",
+        "finding": "Rättelse: SSA-330084 omfattar ClickOnce och Installed Client V6/V7. V8/V9 och Flex Client V6/V7 är ej berörda. Lokal angreppsvektor med användarinteraktion; ej direkt nätverks-RCE. Ingen fix för berörda V6/V7 i bulletinen.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://cert-portal.siemens.com/productcert/html/ssa-330084.html"
+      },
+      "extra": {}
+    },
+    {
+      "row": 23,
+      "fields": {
+        "register_id": "OT-022",
+        "name": "Schneider EcoStruxure Building Operation",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://www.se.com/us/en/download/document/AN_EBOCyberSecurity_EN/"
+      },
+      "extra": {}
+    },
+    {
+      "row": 24,
+      "fields": {
+        "register_id": "OT-023",
+        "name": "Axis IP-kameror",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://help.axis.com/en-us/axis-camera-station-system-hardening-guide"
+      },
+      "extra": {}
+    },
+    {
+      "row": 25,
+      "fields": {
+        "register_id": "OT-024",
+        "name": "Hikvision IP-kameror / NVR",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://www.hikvision.com/content/dam/hikvision/eu/support/cybersecurity/Network-Security-Hardening-Guide-new-1.pdf"
+      },
+      "extra": {}
+    },
+    {
+      "row": 26,
+      "fields": {
+        "register_id": "OT-025",
+        "name": "Dahua IP-kameror / NVR",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade. Befintlig dokumentlänk styrker inte exakt modell.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://csrc.nist.gov/pubs/sp/800/82/r3/final"
+      },
+      "extra": {}
+    },
+    {
+      "row": 27,
+      "fields": {
+        "register_id": "OT-026",
+        "name": "RCO R-CARD M5",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://rco.se/mjukvara/grundlicenser/programvare/m5/r-card-m5"
+      },
+      "extra": {}
+    },
+    {
+      "row": 28,
+      "fields": {
+        "register_id": "OT-027",
+        "name": "ASSA ABLOY ARX",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://www.assaabloy.com/se/sv/service/support/access-control-system"
+      },
+      "extra": {}
+    },
+    {
+      "row": 29,
+      "fields": {
+        "register_id": "OT-028",
+        "name": "ASSA ABLOY Aptus",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://www.assaabloy.com/se/sv/service/support/aptus"
+      },
+      "extra": {}
+    },
+    {
+      "row": 30,
+      "fields": {
+        "register_id": "OT-029",
+        "name": "2N IP Verso / Force",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://www.2n.com/en-GB/manuals/intercoms/2n-ip-verso/"
+      },
+      "extra": {}
+    },
+    {
+      "row": 31,
+      "fields": {
+        "register_id": "OT-030",
+        "name": "NIBE S-/F-serien",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade. Befintlig dokumentlänk styrker inte exakt modell.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://csrc.nist.gov/pubs/sp/800/82/r3/final"
+      },
+      "extra": {}
+    },
+    {
+      "row": 32,
+      "fields": {
+        "register_id": "OT-031",
+        "name": "SMA Sunny WebBox",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade. Befintlig dokumentlänk styrker inte exakt modell. EOL och utbyteskrav behöver daterad modellspecifik leverantörskälla.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://csrc.nist.gov/pubs/sp/800/82/r3/final"
+      },
+      "extra": {}
+    },
+    {
+      "row": 33,
+      "fields": {
+        "register_id": "OT-032",
+        "name": "Fronius Datamanager",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://manuals.fronius.com/html/4204260191/sv.html"
+      },
+      "extra": {}
+    },
+    {
+      "row": 34,
+      "fields": {
+        "register_id": "OT-033",
+        "name": "Solar-Log datalogger",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://www.solar-log.com/en/support/firmware-database"
+      },
+      "extra": {}
+    },
+    {
+      "row": 35,
+      "fields": {
+        "register_id": "OT-034",
+        "name": "Sungrow WiNet / Logger1000",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://www.sungrowpower.com/se/en/products/intelligent-gateway/winet-s2"
+      },
+      "extra": {}
+    },
+    {
+      "row": 36,
+      "fields": {
+        "register_id": "OT-035",
+        "name": "Teltonika RUT",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://wiki.teltonika-networks.com/view/Security_Features"
+      },
+      "extra": {}
+    },
+    {
+      "row": 37,
+      "fields": {
+        "register_id": "OT-036",
+        "name": "HMS Ewon Cosy / Flexy",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://support.hms-networks.com/hc/en-us/articles/27420854662290-Ewon-Cosy-Feature-Changes-Introduced-in-Firmware-23-0-RED"
+      },
+      "extra": {}
+    },
+    {
+      "row": 38,
+      "fields": {
+        "register_id": "OT-037",
+        "name": "APC Network Management Card",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://www.se.com/us/en/download/document/SPD_CCON-BDYD7K_EN/"
+      },
+      "extra": {}
+    },
+    {
+      "row": 39,
+      "fields": {
+        "register_id": "OT-038",
+        "name": "Synology DSM",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://kb.synology.com/en-us/DSM/tutorial/How_to_add_extra_security_to_your_Synology_NAS"
+      },
+      "extra": {}
+    },
+    {
+      "row": 40,
+      "fields": {
+        "register_id": "OT-039",
+        "name": "QNAP QTS / QuTS",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://www.qnap.com/sv-se/security"
+      },
+      "extra": {}
+    },
+    {
+      "row": 41,
+      "fields": {
+        "register_id": "OT-040",
+        "name": "Home Assistant",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://www.home-assistant.io/docs/configuration/remote/"
+      },
+      "extra": {}
+    },
+    {
+      "row": 42,
+      "fields": {
+        "register_id": "OT-041",
+        "name": "ABB AC500 V3",
+        "finding": "Originalets tre CVE finns publicerade, men ABB AC500/firmware 3.9.0 är inte bekräftat av den kontrollerade CNA-produktlistan.",
+        "uncertainty": "CVE-poster gäller CODESYS-komponenter. ABB AC500- och 3.9.0-koppling ej verifierad mot specifik ABB-bulletin.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://www.abb.com/global/en/company/about/cybersecurity/alerts-and-notifications"
+      },
+      "extra": {}
+    },
+    {
+      "row": 43,
+      "fields": {
+        "register_id": "OT-042",
+        "name": "ABB System 800xA",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://www.abb.com/global/en/company/about/cybersecurity/alerts-and-notifications"
+      },
+      "extra": {}
+    },
+    {
+      "row": 44,
+      "fields": {
+        "register_id": "OT-043",
+        "name": "Beckhoff CX / TwinCAT 3",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://infosys.beckhoff.com/content/1033/ipc_security_wince/11157442315.html"
+      },
+      "extra": {}
+    },
+    {
+      "row": 45,
+      "fields": {
+        "register_id": "OT-044",
+        "name": "WAGO PFC100 / PFC200 / CC100",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://techdocs.wago.com/io-system/750_753/system/en-US/75536779.html"
+      },
+      "extra": {}
+    },
+    {
+      "row": 46,
+      "fields": {
+        "register_id": "OT-045",
+        "name": "Phoenix Contact PLCnext / AXC",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://engineer.plcnext.help/2024.0_LTS_en/SecurityGeneralInPCWE.htm"
+      },
+      "extra": {}
+    },
+    {
+      "row": 47,
+      "fields": {
+        "register_id": "OT-046",
+        "name": "Siemens S7-1500",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://cert-portal.siemens.com/productcert/html/ssa-568427.html"
+      },
+      "extra": {}
+    },
+    {
+      "row": 48,
+      "fields": {
+        "register_id": "OT-047",
+        "name": "Rockwell ControlLogix",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://www.rockwellautomation.com/en-se/docs/technical/logix5000/_online/1756-um543/controllogix-5580-and-guardlogix-5580-controllers-/develop-secure-applications.html"
+      },
+      "extra": {}
+    },
+    {
+      "row": 49,
+      "fields": {
+        "register_id": "OT-048",
+        "name": "Mitsubishi MELSEC iQ-R / iQ-F",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://fa-faq.mitsubishielectric.com/faq/show/22481?back=front%2Fcategory%3Ashow&category_id=1995&page=21&sort=sort_access&sort_order=desc"
+      },
+      "extra": {}
+    },
+    {
+      "row": 50,
+      "fields": {
+        "register_id": "OT-049",
+        "name": "Omron NX / NJ",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://industrial.omron.eu/en/services-support/support/cybersecurity"
+      },
+      "extra": {}
+    },
+    {
+      "row": 51,
+      "fields": {
+        "register_id": "OT-050",
+        "name": "Inductive Automation Ignition",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://inductiveautomation.com/resources/article/ignition-security-hardening-guide"
+      },
+      "extra": {}
+    },
+    {
+      "row": 52,
+      "fields": {
+        "register_id": "OT-051",
+        "name": "Siemens WinCC / WinCC Unified",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://cache.industry.siemens.com/dl/files/842/109925842/att_1262081/v1/ONE_IndustrialCybersecurity_config_man_0124_en-US.pdf"
+      },
+      "extra": {}
+    },
+    {
+      "row": 53,
+      "fields": {
+        "register_id": "OT-052",
+        "name": "AVEVA InTouch / Plant SCADA",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://docs.aveva.com/bundle/plant-scada/page/1243288.html"
+      },
+      "extra": {}
+    },
+    {
+      "row": 54,
+      "fields": {
+        "register_id": "OT-053",
+        "name": "PTC Kepware KEPServerEX",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://www.ptc.com/help/kepware/kepware_server/en/kepware/server/settings-config-api-configuration.html"
+      },
+      "extra": {}
+    },
+    {
+      "row": 55,
+      "fields": {
+        "register_id": "OT-054",
+        "name": "Moxa NPort / EDR",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://www.moxa.com/getmedia/5c1ddb66-33b7-42d0-8d30-559f34f62753/moxa-nport-6000-series-manual-v17.5.pdf"
+      },
+      "extra": {}
+    },
+    {
+      "row": 56,
+      "fields": {
+        "register_id": "OT-055",
+        "name": "Schneider Easergy / Saitel",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade. Befintlig dokumentlänk styrker inte exakt modell.",
+        "uncertainty": "Exakt modell, firmware, konton och exponering ej inventerade. Originalets riskbeskrivning är inte bevis på sårbar installation.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://csrc.nist.gov/pubs/sp/800/82/r3/final"
+      },
+      "extra": {}
+    },
+    {
+      "row": 57,
+      "fields": {
+        "register_id": "OT-056",
+        "name": "Modbus TCP",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Ska inte räknas som ny produktfamilj. Port eller titel visar inte produkt, sårbarhet eller OT-tillhörighet.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://csrc.nist.gov/pubs/sp/800/82/r3/final"
+      },
+      "extra": {}
+    },
+    {
+      "row": 58,
+      "fields": {
+        "register_id": "OT-057",
+        "name": "EtherNet/IP (CIP)",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Ska inte räknas som ny produktfamilj. Port eller titel visar inte produkt, sårbarhet eller OT-tillhörighet.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://www.rockwellautomation.com/en-us/docs/technical/logix5000/_online/1756-um900/controllogix-5590-controller-user-manual-ditamap/develop-secure-applications.html"
+      },
+      "extra": {}
+    },
+    {
+      "row": 59,
+      "fields": {
+        "register_id": "OT-058",
+        "name": "S7comm (ISO-on-TCP)",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Ska inte räknas som ny produktfamilj. Port eller titel visar inte produkt, sårbarhet eller OT-tillhörighet.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://docs.tia.siemens.cloud/r/simatic_s7_1200_manual_collection_enus_20/device-configuration/protection-security"
+      },
+      "extra": {}
+    },
+    {
+      "row": 60,
+      "fields": {
+        "register_id": "OT-059",
+        "name": "OPC UA",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Ska inte räknas som ny produktfamilj. Port eller titel visar inte produkt, sårbarhet eller OT-tillhörighet.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://reference.opcfoundation.org/specs/OPC-10000-2/1"
+      },
+      "extra": {}
+    },
+    {
+      "row": 61,
+      "fields": {
+        "register_id": "OT-060",
+        "name": "BACnet/IP",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade. Befintlig dokumentlänk styrker inte exakt modell.",
+        "uncertainty": "Ska inte räknas som ny produktfamilj. Port eller titel visar inte produkt, sårbarhet eller OT-tillhörighet.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://csrc.nist.gov/pubs/sp/800/82/r3/final"
+      },
+      "extra": {}
+    },
+    {
+      "row": 62,
+      "fields": {
+        "register_id": "OT-061",
+        "name": "IEC 60870-5-104 / DNP3",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade. Befintlig dokumentlänk styrker inte exakt modell.",
+        "uncertainty": "Ska inte räknas som ny produktfamilj. Port eller titel visar inte produkt, sårbarhet eller OT-tillhörighet.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://csrc.nist.gov/pubs/sp/800/82/r3/final"
+      },
+      "extra": {}
+    },
+    {
+      "row": 63,
+      "fields": {
+        "register_id": "OT-062",
+        "name": "IEC 61850 MMS",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade. Befintlig dokumentlänk styrker inte exakt modell.",
+        "uncertainty": "Ska inte räknas som ny produktfamilj. Port eller titel visar inte produkt, sårbarhet eller OT-tillhörighet.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://csrc.nist.gov/pubs/sp/800/82/r3/final"
+      },
+      "extra": {}
+    },
+    {
+      "row": 64,
+      "fields": {
+        "register_id": "OT-063",
+        "name": "MQTT / MQTT-TLS",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade. Befintlig dokumentlänk styrker inte exakt modell.",
+        "uncertainty": "Ska inte räknas som ny produktfamilj. Port eller titel visar inte produkt, sårbarhet eller OT-tillhörighet.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://csrc.nist.gov/pubs/sp/800/82/r3/final"
+      },
+      "extra": {}
+    },
+    {
+      "row": 65,
+      "fields": {
+        "register_id": "OT-064",
+        "name": "Webbaserad HMI/SCADA",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Ska inte räknas som ny produktfamilj. Port eller titel visar inte produkt, sårbarhet eller OT-tillhörighet.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://inductiveautomation.com/resources/article/ignition-security-hardening-guide"
+      },
+      "extra": {}
+    },
+    {
+      "row": 66,
+      "fields": {
+        "register_id": "OT-065",
+        "name": "Historian / SQL",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Ska inte räknas som ny produktfamilj. Port eller titel visar inte produkt, sårbarhet eller OT-tillhörighet.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://learn.microsoft.com/en-us/sql/relational-databases/security/secure-sql-server?view=sql-server-ver17"
+      },
+      "extra": {}
+    },
+    {
+      "row": 67,
+      "fields": {
+        "register_id": "OT-066",
+        "name": "OT-fjärradministration (RDP/VNC/SSH)",
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Ska inte räknas som ny produktfamilj. Port eller titel visar inte produkt, sårbarhet eller OT-tillhörighet.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://www.cisa.gov/sites/default/files/2023-01/RP_Managing_Remote_Access_S508NC.pdf"
+      },
+      "extra": {}
+    },
+    {
+      "row": 68,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-007-01",
+        "name": "ABB ASPECT",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-007-01.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 69,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-007-02",
+        "name": "Nedap Librix Ecoreader",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-007-02.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 70,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-010-01",
+        "name": "Schneider Electric PowerChute Serial Shutdown",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-010-01.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 71,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-010-02",
+        "name": "Schneider Electric Harmony / Pro-face HMI",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-010-02.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 72,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-016-04",
+        "name": "Siemens SIPROTEC 5",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-016-04.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 73,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-203-06",
+        "name": "Schneider Electric Data Center Expert",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-203-06.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 74,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-044-16",
+        "name": "mySCADA myPRO Manager",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-044-16.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 75,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-259-02",
+        "name": "Hitachi Energy RTU500",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-259-02.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 76,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-028-01",
+        "name": "B&R Automation Runtime",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-028-01.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 77,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-028-02",
+        "name": "Schneider Electric PowerLogic HDPM6000",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-028-02.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 78,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-028-04",
+        "name": "Rockwell FactoryTalk View Site Edition",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts. CVE-urvalet har inte bekräftats med nätverksvektor; lokal/närliggande angreppsväg kan krävas.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-028-04.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 79,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-030-05",
+        "name": "Rockwell FactoryTalk AssetCentre",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-030-05.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 80,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-035-01",
+        "name": "Western Telematic NPS / DSM / CPM",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-035-01.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 81,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-035-08",
+        "name": "AutomationDirect C-more EA9",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-035-08.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 82,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-037-04",
+        "name": "Trimble Cityworks",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-037-04.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 83,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-044-09",
+        "name": "Siemens SCALANCE W700 IEEE 802.11ax",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-044-09.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 84,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-044-15",
+        "name": "ORing IAP-420",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-044-15.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 85,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-044-17",
+        "name": "OutBack Power Mojave",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-044-17.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 86,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-268-01",
+        "name": "Dingtian DT-R0",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-268-01.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 87,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-289-06",
+        "name": "Siemens SiPass Integrated",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts. CVE-urvalet har inte bekräftats med nätverksvektor; lokal/närliggande angreppsväg kan krävas.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-289-06.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 88,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-056-01",
+        "name": "Rockwell PowerFlex 755",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-056-01.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 89,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-345-06",
+        "name": "Siemens SINEMA Remote Connect Server",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-345-06.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 90,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-135-18",
+        "name": "Siemens SCALANCE LPE9403",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts. CVE-urvalet har inte bekräftats med nätverksvektor; lokal/närliggande angreppsväg kan krävas.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-135-18.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 91,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-072-07",
+        "name": "Siemens SCALANCE M-800 / SC-600",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-072-07.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 92,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-077-04",
+        "name": "Schneider Electric EcoStruxure Panel Server",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts. CVE-urvalet har inte bekräftats med nätverksvektor; lokal/närliggande angreppsväg kan krävas.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-077-04.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 93,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-077-05",
+        "name": "Schneider Electric ASCO 5310 / 5350",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-077-05.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 94,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-079-02",
+        "name": "Schneider Electric Enerlin'X IFE / eIFE",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-079-02.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 95,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-196-02",
+        "name": "ABB RMC-100",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-196-02.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 96,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-093-05",
+        "name": "B&R APROL",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-093-05.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 97,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-100-06",
+        "name": "Siemens SENTRON 7KT PAC1260",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-100-06.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 98,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-100-08",
+        "name": "Subnet Solutions PowerSYSTEM Center",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts. CVE-urvalet har inte bekräftats med nätverksvektor; lokal/närliggande angreppsväg kan krävas.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-100-08.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 99,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-100-09",
+        "name": "ABB Arctic Wireless Gateways",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår. Arctic ARG/RAR-gateways skiljs från ARM600 M2M Gateway; matcha exakt modell.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-100-09.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 100,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-105-05",
+        "name": "Lantronix XPort",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-105-05.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 101,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-105-08",
+        "name": "ABB M2M Gateway",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår. M2M/ARM600 är separat produkt från Arctic fältgateways.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-105-08.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 102,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-105-09",
+        "name": "Mitsubishi Electric smartRTU",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-105-09.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 103,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-107-01",
+        "name": "Schneider Electric Trio Q",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts. CVE-urvalet har inte bekräftats med nätverksvektor; lokal/närliggande angreppsväg kan krävas.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-107-01.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 104,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-107-02",
+        "name": "Schneider Electric Sage",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-107-02.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 105,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-112-03",
+        "name": "Schneider Electric Wiser WHC-5918A",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-112-03.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 106,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-114-02",
+        "name": "ALBEDO Net.Time",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-114-02.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 107,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-114-03",
+        "name": "Vestel AC Charger",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-114-03.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 108,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-114-04",
+        "name": "Nice Linear eMerge E3",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-114-04.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 109,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-114-06",
+        "name": "Planet Technology nätverksprodukter",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-114-06.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 110,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-252-01",
+        "name": "Rockwell ThinManager",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-252-01.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 111,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-121-01",
+        "name": "KUNBUS Revolution Pi",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-121-01.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 112,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-126-01",
+        "name": "Optigo Networks ONS NC600",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-126-01.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 113,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-126-02",
+        "name": "Milesight UG65",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-126-02.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 114,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-135-08",
+        "name": "Siemens VersiCharge AC",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts. CVE-urvalet har inte bekräftats med nätverksvektor; lokal/närliggande angreppsväg kan krävas.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-135-08.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 115,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-135-10",
+        "name": "Siemens OZW Web Servers",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-135-10.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 116,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-140-09",
+        "name": "AutomationDirect MB-Gateway",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-140-09.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 117,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-140-10",
+        "name": "Vertiv Liebert RDU101 / UNITY",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-140-10.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 118,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-148-03",
+        "name": "Consilium CS5000",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts. CVE-urvalet har inte bekräftats med nätverksvektor; lokal/närliggande angreppsväg kan krävas.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-148-03.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 119,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-155-01",
+        "name": "CyberData 011209 SIP Emergency Intercom",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-155-01.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 120,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-261-07",
+        "name": "Dover ProGauge MagLink LX",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-261-07.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 121,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-175-05",
+        "name": "ControlID iDSecure On-premises",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-175-05.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 122,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-210-02",
+        "name": "Samsung HVAC DMS",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-210-02.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 123,
+      "fields": {
+        "register_id": "OT-N-ICSA-25-205-03",
+        "name": "Honeywell Experion PKS",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-205-03.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 124,
+      "fields": {
+        "register_id": "OT-N-ICSMA-25-037-02",
+        "name": "Orthanc Server",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsma-25-037-02.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 125,
+      "fields": {
+        "register_id": "OT-N-ICSMA-25-100-01",
+        "name": "INFINITT PACS",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsma-25-100-01.json"
+      },
+      "extra": {}
+    },
+    {
+      "row": 126,
+      "fields": {
+        "register_id": "OT-N-ICSMA-25-296-01",
+        "name": "NIHON KOHDEN CNS-6201",
+        "finding": "Dokumenterad CVE-koppling i CISA CSAF. Familjen räknas som en post även när flera modeller ingår.",
+        "uncertainty": "Modell/version måste matchas mot CVE-raderna. Senaste firmware och fullständigt CVE-bestånd ej fastställda. Ingen faktisk exponering har undersökts.",
+        "status": "Öppen – lokal inventering återstår",
+        "source_urls": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsma-25-296-01.json"
+      },
+      "extra": {}
+    }
+  ]
+}

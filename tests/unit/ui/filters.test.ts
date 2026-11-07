@@ -25,6 +25,28 @@ describe('URL-filter', () => {
     expect(f.dir).toBe('asc');
     expect(countActiveFilters(f)).toBe(0);
   });
+  it('tolkar registerfilter (ursprung, PoC, lösenordstyp, dokumentationslucka, källstatus, materialtyp)', () => {
+    const f = parseFilters(
+      new URLSearchParams(
+        'origin=new&poc=poc_reported&pwdType=shared_default_documented,hardcoded_in_affected_version&docgap=unverified&regstatus=Osäker%20OEM-koppling&material=emulator_or_reconstructed_poc',
+      ),
+    );
+    expect(f.origin).toBe('new');
+    expect(f.poc).toBe('poc_reported');
+    expect(f.pwdType).toEqual(['shared_default_documented', 'hardcoded_in_affected_version']);
+    expect(f.docgap).toBe('unverified');
+    expect(f.regstatus).toEqual(['Osäker OEM-koppling']);
+    expect(f.material).toEqual(['emulator_or_reconstructed_poc']);
+    expect(countActiveFilters(f)).toBe(6);
+    expect(parseFilters(serializeFilters(f))).toEqual(f);
+  });
+  it('ignorerar ogiltiga registerfiltervärden', () => {
+    const f = parseFilters(new URLSearchParams('origin=alien&poc=exploited&docgap=maybe'));
+    expect(f.origin).toBe('all');
+    expect(f.poc).toBe('any');
+    expect(f.docgap).toBe('any');
+    expect(countActiveFilters(f)).toBe(0);
+  });
   it('serialisering är omvändbar', () => {
     const f = {
       ...DEFAULT_FILTERS,

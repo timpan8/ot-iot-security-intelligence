@@ -1,0 +1,93 @@
+{
+  "sheet": "Riskkontroller",
+  "import_version": "register-import-1.0.0",
+  "file": "OT_IoT_125_poster_losenordsstatus.xlsx",
+  "file_sha256": "2e017d3c9f1c28ea82aa05b474c9388f39db8d7350df00d2b2103741238469f1",
+  "header_row": 1,
+  "headers": [
+    "Kontroll-ID",
+    "Kontroll",
+    "Åtgärd",
+    "Verifieringsmetod"
+  ],
+  "column_map": {
+    "Kontroll-ID": "code",
+    "Kontroll": "name",
+    "Åtgärd": "action",
+    "Verifieringsmetod": "verification_method"
+  },
+  "missing_headers": [],
+  "extra_headers": [],
+  "records": [
+    {
+      "row": 2,
+      "fields": {
+        "code": "K1",
+        "name": "Ta bort direkt administration",
+        "action": "Kontrollera egna brandväggar, NAT, IPv6 och publiceringar. Tillåt endast godkända nät.",
+        "verification_method": "Granska regler och auktoriserad anslutningskontroll från utsida. Spara resultat, inga tredjepartsskanningar."
+      },
+      "extra": {}
+    },
+    {
+      "row": 3,
+      "fields": {
+        "code": "K2",
+        "name": "Segmentera OT/IoT",
+        "action": "Skilj styrnät, management, IT och gästnät. Tillåt minsta nödvändiga flöden.",
+        "verification_method": "Regelgranskning och flödesloggar. Bekräfta att skyddet omfattar alternativa vägar."
+      },
+      "extra": {}
+    },
+    {
+      "row": 4,
+      "fields": {
+        "code": "K3",
+        "name": "Säkra fjärrservice",
+        "action": "Använd uppdaterad VPN eller säker åtkomstgateway, MFA där det stöds och tidsstyrda servicekonton.",
+        "verification_method": "Verifiera MFA och behörighet lokalt. En sårbar VPN är inte ett tillräckligt skydd."
+      },
+      "extra": {}
+    },
+    {
+      "row": 5,
+      "fields": {
+        "code": "K4",
+        "name": "Matcha och åtgärda versioner",
+        "action": "Inventera modell, hårdvarurevision, firmware, runtime och moduler. Testa tillverkarens åtgärd i servicefönster.",
+        "verification_method": "Jämför inventering med affected/fixed per CVE. Bekräfta efterversion och funktionstest."
+      },
+      "extra": {}
+    },
+    {
+      "row": 6,
+      "fields": {
+        "code": "K5",
+        "name": "Granska identiteter och standarduppgifter",
+        "action": "Kontrollera lokala-, API-, service- och leverantörskonton. Byt ändringsbara standarduppgifter. Hårdkodade konton kan kräva firmware eller utbyte.",
+        "verification_method": "Använd behörig lokal administration och policy-/konfigurationsgranskning. Spara bekräftelse och datum, inga hemligheter eller gissningsförsök."
+      },
+      "extra": {}
+    },
+    {
+      "row": 7,
+      "fields": {
+        "code": "K6",
+        "name": "Övervaka och återställ",
+        "action": "Samla loggar, skydda konfigurationsbackup, följ ändringar och testa återställning. Planera säker drift vid avbrott.",
+        "verification_method": "Kontrollera loggflöde, larm och återläsning i godkänt test/servicefönster."
+      },
+      "extra": {}
+    },
+    {
+      "row": 8,
+      "fields": {
+        "code": "K7",
+        "name": "Medicinteknik",
+        "action": "Samordna uppdatering och isolering med medicinteknik och vårdverksamhet. Begränsa DICOM/REST till godkända parter.",
+        "verification_method": "Dokumenterad klinisk konsekvensbedömning och leverantörsgodkänt funktionstest före återgång."
+      },
+      "extra": {}
+    }
+  ]
+}

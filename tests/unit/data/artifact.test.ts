@@ -21,7 +21,14 @@ describe('skyddsgräns i källkod och publik data', () => {
     for (const f of readdirSync(dir)) {
       const text = readFileSync(join(dir, f), 'utf8');
       expect(re.test(text), `${f} innehåller förbjuden nyckel`).toBe(false);
-      expect(/"http:\/\//.test(text), `${f} innehåller http-länk`).toBe(false);
+      // Prosa (t.ex. NVD-beskrivningar) får innehålla http://-text; URL-fält måste vara https. link_checks.json lagrar kontrollerade URL:er som ren text.
+      if (f !== 'link_checks.json')
+        expect(
+          /"(url|final_url|poc_url|csaf_url|security_portal_url|psirt_contact_url|vendor_guide_url)": "http:\/\//.test(
+            text,
+          ),
+          `${f} innehåller http-länk i URL-fält`,
+        ).toBe(false);
     }
   });
 

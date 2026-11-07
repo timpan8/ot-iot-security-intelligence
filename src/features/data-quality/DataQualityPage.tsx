@@ -24,6 +24,11 @@ export function DataQualityPage() {
   const staleMatches = d.matches.filter(
     (m) => m.fix.status === 'needs_review' || m.fix.status === 'unknown',
   );
+  const registerConflicts = d.claims.filter((c) => c.id.startsWith('claim-register-conflict-'));
+  const linkChecks = d.link_checks
+    .slice()
+    .sort((a, b) => (a.http_status_text ?? '').localeCompare(b.http_status_text ?? ''));
+  const linkOk = linkChecks.filter((l) => /^2\d\d$/.test(l.http_status_text ?? '')).length;
 
   return (
     <>
@@ -32,6 +37,45 @@ export function DataQualityPage() {
         lead="Varje betydelsefullt påstående ska kunna spåras till en källa. Här listas det som saknar primärkälla, är okänt, kan vara inaktuellt eller behöver mänsklig granskning."
       />
       <div className="grid gap-4 lg:grid-cols-2">
+        {registerConflicts.length ? (
+          <Section
+            title="Registerkonflikter (register vs. projektets kuraterade data)"
+            id="registerkonflikter"
+            description="Avvikelser mellan 125-postregistret och projektets manuella bedömningar. Projektets uppgifter behålls; konflikten redovisas tills en människa avgjort den."
+          >
+            <ul className="space-y-2 text-sm">
+              {registerConflicts.map((c) => {
+                const e = d.entryById.get(c.entity_id);
+                return (
+                  <li key={c.id} className="rounded-lg border border-border p-2">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <VerificationBadge status={c.status} />
+                      {e ? (
+                        <Link
+                          to={isProduct(e) ? `/produkt/${e.id}` : `/protokoll/${e.id}`}
+                          className="font-medium"
+                        >
+                          {e.name}
+                        </Link>
+                      ) : (
+                        <span>{c.entity_id}</span>
+                      )}
+                      {e?.register ? (
+                        <span className="font-mono text-xs text-muted">
+                          {e.register.register_id}
+                        </span>
+                      ) : null}
+                    </div>
+                    <p className="mt-1">{c.text}</p>
+                    {c.conflict_note ? (
+                      <p className="mt-1 text-xs text-danger">{c.conflict_note}</p>
+                    ) : null}
+                  </li>
+                );
+              })}
+            </ul>
+          </Section>
+        ) : null}
         <Section title="Poster per datakvalitetsflagga" id="flaggor">
           {flagged.length === 0 ? (
             <EmptyState>Inga flaggor.</EmptyState>
@@ -161,6 +205,69 @@ export function DataQualityPage() {
             </ul>
           )}
         </Section>
+
+        {linkChecks.length ? (
+          <Section
+            title="Länkkontroll (registrets källmanifest)"
+            id="lankkontroll"
+            description="HTTP-status och svarshash från registrets länkkontroll. URL:er visas som text och är klickbara endast när de är https."
+          >
+            <p className="mb-2 text-xs text-muted">
+              {linkChecks.length} kontrollerade · {linkOk} med 2xx · {linkChecks.length - linkOk}{' '}
+              övriga (403/SSL-fel/404 m.m.). En blockerad eller felande länk betyder att innehållet
+              inte kunde verifieras automatiskt, inte att källan är fel.
+            </p>
+            <details>
+              <summary className="cursor-pointer text-sm">
+                Visa alla {linkChecks.length} länkkontroller
+              </summary>
+              <div className="mt-2 overflow-x-auto">
+                <table className="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Status</th>
+                      <th scope="col">URL</th>
+                      <th scope="col">Tolkning</th>
+                      <th scope="col">Datum</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {linkChecks.map((l) => (
+                      <tr key={l.id}>
+                        <td className="text-xs">
+                          <Badge
+                            tone={
+                              /^2\d\d$/.test(l.http_status_text ?? '')
+                                ? 'ok'
+                                : /403|429/.test(l.http_status_text ?? '')
+                                  ? 'warn'
+                                  : 'danger'
+                            }
+                          >
+                            {l.http_status_text ?? 'okänt'}
+                          </Badge>
+                        </td>
+                        <td className="max-w-md break-all text-xs">
+                          <SafeLink href={l.url}>{l.url}</SafeLink>
+                          {l.final_url && l.final_url !== l.url ? (
+                            <div className="text-muted">→ {l.final_url}</div>
+                          ) : null}
+                          {l.response_sha256 ? (
+                            <div className="font-mono text-muted">
+                              sha256 {l.response_sha256.slice(0, 16)}…
+                            </div>
+                          ) : null}
+                        </td>
+                        <td className="text-xs">{l.interpretation_text ?? '–'}</td>
+                        <td className="text-xs">{fmtDate(l.checked_at)}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </details>
+          </Section>
+        ) : null}
 
         <Section title="Fixuppgifter som inte är bekräftade (möjligt inaktuella)" id="fix">
           {staleMatches.length === 0 ? (

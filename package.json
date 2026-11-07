@@ -22,13 +22,15 @@
     "test:watch": "vitest",
     "test:e2e": "playwright test --trace off",
     "data:import": "tsx scripts/import-xlsx.ts",
+    "data:import:register": "tsx scripts/import-register.ts --file sources/original/OT_IoT_125_poster_losenordsstatus.xlsx",
     "data:build": "tsx scripts/normalize.ts",
     "data:validate": "tsx scripts/validate.ts",
     "data:schemas": "tsx scripts/emit-json-schemas.ts",
     "data:enrich": "tsx scripts/enrich/run.ts",
+    "data:enrich:csaf-register": "tsx scripts/enrich/csaf-register.ts",
     "data:diff": "tsx scripts/enrich/diff.ts",
     "data:check-links": "tsx scripts/check-links.ts",
-    "data:all": "npm run data:import && npm run data:build && npm run data:validate && npm run data:schemas"
+    "data:all": "npm run data:import && npm run data:import:register && npm run data:build && npm run data:validate && npm run data:schemas"
   },
   "dependencies": {
     "minisearch": "^7.2.0",

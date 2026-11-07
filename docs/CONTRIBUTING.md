@@ -6,6 +6,11 @@ gissas.
 
 ## Grundregler för data
 
+Vid registerdata gäller särskilt: importera aldrig lösenordsvärden (endast kontonamn,
+lösenordstyp och bytekrav), dela inte kombinationsposter i flera produkter, tolka ”okänt”/”ej
+verifierat”/”ej undersökt” som okänt och håll isär offentlig PoC, emulatordemonstration,
+detektionsverktyg och aktiv exploatering.
+
 1. **Fabricera aldrig.** Saknas uppgiften: `null` + `verification_status: 'unknown'`. Finns ett
    påstående utan primärkälla: `needs_review`. Motsäger källor varandra: `disputed` med
    `conflict_note`.
@@ -26,17 +31,38 @@ gissas.
 
 ## Lägga till eller ändra kuraterad data
 
-| Vad                   | Fil                                                                  | Kommentar                                                                                                                       |
-| --------------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| Leverantör            | `sources/curated/vendors.json`                                       | PSIRT-länk endast om verifierad                                                                                                 |
-| Bulletin              | `sources/curated/advisories.json`                                    | Ange `advisory_id`, `url`, gärna `csaf_url`, `cve_ids`, `status`                                                                |
-| CVE-annotering        | `sources/curated/vulnerability_overrides.json` (kontrollera filnamn) | `summary_sv`, `advisory_ids`, `exploitation_evidence`, granskningsnoter. Själva CVE-fakta kommer från `sources/enrichment/nvd/` |
-| Produkt–CVE–version   | `sources/curated/matches.json`                                       | En post per komponent och CVE; ange `status`, `version_rule`, `fix`, `evidence`, `source_ids`                                   |
-| Åtgärd                | `sources/curated/controls.json`                                      | `order_hint`, `limitations`, `requires_operational_approval`                                                                    |
-| Radvisa korrigeringar | `sources/curated/overrides.json`                                     | Alias, leverantör, livscykel, OT-roll, protokoll, parsade CVE-ID:n, oexpanderade intervall, riskoverrides med motivering        |
-| Observation           | `sources/curated/observations.json`                                  | Endast aggregerat, `representative: false`, metod/period/urval                                                                  |
+| Vad                               | Fil                                                                  | Kommentar                                                                                                                       |
+| --------------------------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| Leverantör                        | `sources/curated/vendors.json`                                       | PSIRT-länk endast om verifierad                                                                                                 |
+| Bulletin                          | `sources/curated/advisories.json`                                    | Ange `advisory_id`, `url`, gärna `csaf_url`, `cve_ids`, `status`                                                                |
+| CVE-annotering                    | `sources/curated/vulnerability_overrides.json` (kontrollera filnamn) | `summary_sv`, `advisory_ids`, `exploitation_evidence`, granskningsnoter. Själva CVE-fakta kommer från `sources/enrichment/nvd/` |
+| Produkt–CVE–version               | `sources/curated/matches.json`                                       | En post per komponent och CVE; ange `status`, `version_rule`, `fix`, `evidence`, `source_ids`                                   |
+| Åtgärd                            | `sources/curated/controls.json`                                      | `order_hint`, `limitations`, `requires_operational_approval`                                                                    |
+| Radvisa korrigeringar             | `sources/curated/overrides.json`                                     | Alias, leverantör, livscykel, OT-roll, protokoll, parsade CVE-ID:n, oexpanderade intervall, riskoverrides med motivering        |
+| Observation                       | `sources/curated/observations.json`                                  | Endast aggregerat, `representative: false`, metod/period/urval                                                                  |
+| Register-ID-mappning              | `sources/curated/register_id_map.json`                               | Genereras av importen; `OT-…` → `pf-…`/`svc-…`. Ändra aldrig befintliga nycklar (bryter stabila ID:n)                           |
+| Leverantör för nya registerposter | `sources/curated/register_vendors.json`                              | `register_id` → `vendor_id`; krävs för varje ny produktpost, annars stoppar normalize                                           |
+| Kategoriprofil                    | `sources/curated/category_profiles.json`                             | Grupp, `ot_impact`-default och motivering per kategori (fri text i registret); okänd kategori ⇒ `unknown`                       |
 
 Kontrollera faktiska filnamn i `sources/curated/`.
+
+### Importera en ny version av registret
+
+1. Lägg filen i `sources/original/` och uppdatera `CHECKSUMS.txt` (`sha256sum`).
+2. Kör `npm run data:import:register -- --file sources/original/<fil>.xlsx`. Importen är
+   rubrikbaserad: saknas en obligatorisk rubrik stoppar den; extra rubriker och blandade
+   datumformat rapporteras i `sources/raw/register/import-report.json` under `deviations`.
+3. Läs `sources/raw/register/conflicts.json`. Varje post beskriver en skillnad mot projektets
+   kuraterade uppgifter (namn, CVE-mängd). Besluta medvetet: uppdatera `sources/curated/` med källa,
+   eller låt konflikten stå kvar som `disputed`-claim. Importen skriver aldrig över kuraterat.
+4. Nya register-ID:n: lägg `vendor_id` i `register_vendors.json` (skapa leverantören i
+   `vendors.json` om den saknas) och profil för ny kategori i `category_profiles.json`.
+5. Hämta källor: `npm run data:enrich` (NVD/EPSS/KEV) och `npm run data:enrich:csaf-register`
+   (CSAF för bulletinerna) så att relationerna kan verifieras maskinellt.
+6. `npm run data:build && npm run data:validate && npm test`. Kontrollera `workbook_control_totals`
+   i importrapporten mot arbetsbokens Granskningsrapport.
+7. Kör importen en gång till och bekräfta att `git status` inte visar ändringar i
+   `sources/raw/register/` (utöver tidsstämpeln i rapporten) eller `register_id_map.json`.
 
 Arbetsgång:
 

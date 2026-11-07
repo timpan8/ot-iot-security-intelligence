@@ -40,6 +40,7 @@ jobs:
       - name: Import workbook, normalize and validate public data
         run: |
           npm run data:import
+          npm run data:import:register
           npm run data:build
           npm run data:validate
       - name: Build (prebuild validates data, postbuild checks artifact for private fields)

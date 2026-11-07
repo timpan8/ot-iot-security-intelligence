@@ -1,15 +1,18 @@
 import { Link, useParams } from 'react-router';
 import { useDataset } from '@/data/DatasetContext';
-import { Badge, VerificationBadge } from '@/components/Badge';
+import { Badge, OriginBadge, VerificationBadge } from '@/components/Badge';
 import { Callout, DefList, PageHeader, Section, Unknown, Value } from '@/components/ui';
 import { flagLabel, securityPropertyLabel } from '@/lib/labels';
 import {
   ClaimsList,
   ControlsList,
+  CredentialsSection,
   DocumentationList,
   ProvenanceList,
+  RegisterSection,
   ReviewHistory,
   RiskPanel,
+  SetupSection,
   SourcesList,
 } from './shared';
 
@@ -36,6 +39,12 @@ export function ProtocolPage() {
         lead={
           <div className="flex flex-wrap items-center gap-2">
             <Badge>Protokoll / tjänst</Badge>
+            {s.register ? (
+              <>
+                <OriginBadge origin={s.register.origin} />
+                <span className="font-mono text-xs text-muted">{s.register.register_id}</span>
+              </>
+            ) : null}
             <VerificationBadge status={s.verification_status} />
           </div>
         }
@@ -87,6 +96,9 @@ export function ProtocolPage() {
             ]}
           />
         </Section>
+        <RegisterSection d={d} entry={s} />
+        <CredentialsSection d={d} entry={s} />
+        <SetupSection d={d} entry={s} />
         <Section title="Typiska OT-risker (från inventeringen)" id="risker">
           <DefList
             items={[

@@ -58,6 +58,7 @@ jobs:
       - name: Rebuild and validate public data with new cache
         run: |
           npm run data:import
+          npm run data:import:register
           npm run data:build
           npm run data:validate
       - name: Diff report

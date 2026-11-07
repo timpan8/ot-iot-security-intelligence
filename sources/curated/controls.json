@@ -35,7 +35,9 @@
           "status": "informational"
         }
       ],
-      "source_ids": ["src-nist-sp800-82r3"]
+      "source_ids": ["src-nist-sp800-82r3"],
+      "register_code": "K4",
+      "verification_method": "Jämför inventering med affected/fixed per CVE. Bekräfta efterversion och funktionstest."
     },
     {
       "id": "ctl-no-public-admin",
@@ -65,7 +67,9 @@
           "status": "mapped_reference"
         }
       ],
-      "source_ids": ["src-nist-sp800-82r3"]
+      "source_ids": ["src-nist-sp800-82r3"],
+      "register_code": "K1",
+      "verification_method": "Granska regler och auktoriserad anslutningskontroll från utsida. Spara resultat, inga tredjepartsskanningar."
     },
     {
       "id": "ctl-network-segmentation",
@@ -95,7 +99,9 @@
           "status": "mapped_reference"
         }
       ],
-      "source_ids": ["src-nist-sp800-82r3"]
+      "source_ids": ["src-nist-sp800-82r3"],
+      "register_code": "K2",
+      "verification_method": "Regelgranskning och flödesloggar. Bekräfta att skyddet omfattar alternativa vägar."
     },
     {
       "id": "ctl-protocol-firewall-allowlist",
@@ -126,7 +132,9 @@
           "status": "mapped_reference"
         }
       ],
-      "source_ids": ["src-nist-sp800-82r3"]
+      "source_ids": ["src-nist-sp800-82r3"],
+      "register_code": null,
+      "verification_method": null
     },
     {
       "id": "ctl-secure-remote-access",
@@ -156,7 +164,9 @@
           "status": "mapped_reference"
         }
       ],
-      "source_ids": ["src-cisa-remote-access-ics"]
+      "source_ids": ["src-cisa-remote-access-ics"],
+      "register_code": "K3",
+      "verification_method": "Verifiera MFA och behörighet lokalt. En sårbar VPN är inte ett tillräckligt skydd."
     },
     {
       "id": "ctl-change-default-credentials",
@@ -186,7 +196,9 @@
           "status": "mapped_reference"
         }
       ],
-      "source_ids": []
+      "source_ids": [],
+      "register_code": "K5",
+      "verification_method": "Använd behörig lokal administration och policy-/konfigurationsgranskning. Spara bekräftelse och datum, inga hemligheter eller gissningsförsök."
     },
     {
       "id": "ctl-least-privilege-accounts",
@@ -210,7 +222,9 @@
           "status": "mapped_reference"
         }
       ],
-      "source_ids": []
+      "source_ids": [],
+      "register_code": "K5",
+      "verification_method": "Använd behörig lokal administration och policy-/konfigurationsgranskning. Spara bekräftelse och datum, inga hemligheter eller gissningsförsök."
     },
     {
       "id": "ctl-vendor-firmware-update",
@@ -240,7 +254,9 @@
           "status": "mapped_reference"
         }
       ],
-      "source_ids": ["src-nist-sp800-82r3"]
+      "source_ids": ["src-nist-sp800-82r3"],
+      "register_code": "K4",
+      "verification_method": "Jämför inventering med affected/fixed per CVE. Bekräfta efterversion och funktionstest."
     },
     {
       "id": "ctl-https-strict-mode",
@@ -264,7 +280,9 @@
           "status": "mapped_reference"
         }
       ],
-      "source_ids": []
+      "source_ids": [],
+      "register_code": null,
+      "verification_method": null
     },
     {
       "id": "ctl-secure-protocol-features",
@@ -295,7 +313,9 @@
           "status": "mapped_reference"
         }
       ],
-      "source_ids": []
+      "source_ids": [],
+      "register_code": null,
+      "verification_method": null
     },
     {
       "id": "ctl-secure-plc-communication",
@@ -319,7 +339,9 @@
           "status": "mapped_reference"
         }
       ],
-      "source_ids": ["src-siemens-ssa-568427-csaf"]
+      "source_ids": ["src-siemens-ssa-568427-csaf"],
+      "register_code": null,
+      "verification_method": null
     },
     {
       "id": "ctl-protect-engineering-access",
@@ -343,7 +365,9 @@
           "status": "mapped_reference"
         }
       ],
-      "source_ids": []
+      "source_ids": [],
+      "register_code": null,
+      "verification_method": null
     },
     {
       "id": "ctl-disable-unused-services",
@@ -373,7 +397,9 @@
           "status": "mapped_reference"
         }
       ],
-      "source_ids": []
+      "source_ids": [],
+      "register_code": null,
+      "verification_method": null
     },
     {
       "id": "ctl-logging-monitoring",
@@ -403,7 +429,9 @@
           "status": "informational"
         }
       ],
-      "source_ids": ["src-nist-sp800-82r3"]
+      "source_ids": ["src-nist-sp800-82r3"],
+      "register_code": "K6",
+      "verification_method": "Kontrollera loggflöde, larm och återläsning i godkänt test/servicefönster."
     },
     {
       "id": "ctl-backup-restore",
@@ -433,7 +461,9 @@
           "status": "informational"
         }
       ],
-      "source_ids": ["src-nist-sp800-82r3"]
+      "source_ids": ["src-nist-sp800-82r3"],
+      "register_code": "K6",
+      "verification_method": "Kontrollera loggflöde, larm och återläsning i godkänt test/servicefönster."
     },
     {
       "id": "ctl-eol-replacement",
@@ -463,7 +493,9 @@
           "status": "informational"
         }
       ],
-      "source_ids": []
+      "source_ids": [],
+      "register_code": null,
+      "verification_method": null
     },
     {
       "id": "ctl-monitor-remote-service",
@@ -487,7 +519,9 @@
           "status": "mapped_reference"
         }
       ],
-      "source_ids": ["src-cisa-remote-access-ics"]
+      "source_ids": ["src-cisa-remote-access-ics"],
+      "register_code": null,
+      "verification_method": null
     },
     {
       "id": "ctl-cloud-not-inbound",
@@ -511,7 +545,9 @@
           "status": "mapped_reference"
         }
       ],
-      "source_ids": []
+      "source_ids": [],
+      "register_code": null,
+      "verification_method": null
     },
     {
       "id": "ctl-vendor-hardening-guide",
@@ -535,7 +571,9 @@
           "status": "mapped_reference"
         }
       ],
-      "source_ids": []
+      "source_ids": [],
+      "register_code": null,
+      "verification_method": null
     },
     {
       "id": "ctl-supply-chain-vendor-risk",
@@ -565,7 +603,35 @@
           "status": "informational"
         }
       ],
-      "source_ids": []
+      "source_ids": [],
+      "register_code": null,
+      "verification_method": null
+    },
+    {
+      "id": "ctl-medical-device-coordination",
+      "name": "Medicinteknik: samordna uppdatering och isolering med vårdverksamhet",
+      "goal": "Hantera OT-/IoT-risker i medicinteknisk utrustning utan att äventyra patientsäkerhet.",
+      "description": "Samordna uppdatering och isolering med medicinteknik och vårdverksamhet. Begränsa DICOM/REST till godkända parter.",
+      "effect": "Säkerställer att säkerhetsåtgärder inte stör klinisk drift och att nätverksexponering (DICOM/REST) begränsas till godkända parter.",
+      "limitations": "Kräver samverkan med medicinteknik och leverantörsgodkännande; kan fördröja åtgärd.",
+      "ot_suitability": "high",
+      "requires_operational_approval": true,
+      "order_hint": 21,
+      "depends_on_control_ids": ["ctl-asset-version-verification", "ctl-network-segmentation"],
+      "category_scope": ["Medicinsk bild", "Patientövervakning"],
+      "protocol_scope": [],
+      "vendor_guide_url": null,
+      "framework_refs": [
+        {
+          "framework": "NIST CSF 2.0",
+          "reference": "GV.RM / PR.IR",
+          "note": "Klinisk konsekvensbedömning",
+          "status": "informational"
+        }
+      ],
+      "source_ids": [],
+      "register_code": "K7",
+      "verification_method": "Dokumenterad klinisk konsekvensbedömning och leverantörsgodkänt funktionstest före återgång."
     }
   ]
 }
