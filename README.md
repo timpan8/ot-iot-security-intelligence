@@ -128,8 +128,9 @@ Appen använder hash-routing, så djuplänkar fungerar utan 404-fallback på Pag
 
 - **Branch protection / ruleset för `main`:** kräv pull request, minst en granskare, status checks
   från `ci.yml` (lint, typecheck, test, validate, build) och blockera force push.
-- **Security → Code security:** aktivera Dependabot alerts och security updates. Använd CodeQL
-  default setup eller `codeql.yml` i repot, inte båda.
+- **Security → Code security:** aktivera **Dependency graph** (krävs för CI-jobbet Dependency
+  review, som annars rapporterar fel men inte blockerar), Dependabot alerts och security updates.
+  Använd CodeQL default setup eller `codeql.yml` i repot, inte båda.
 - **Actions → General → Workflow permissions:** välj **Read repository contents and packages
   permissions** och kryssa i **Allow GitHub Actions to create and approve pull requests**. Det
   sista krävs för att `data-update.yml` ska kunna öppna granskningsbara pull requests.

@@ -7,6 +7,7 @@ export default defineConfig({
   testDir: 'tests/e2e',
   timeout: 60_000,
   retries: 0,
+  forbidOnly: !!process.env.CI,
   use: {
     baseURL: `http://127.0.0.1:${port}${base}`,
     trace: 'off',
@@ -15,10 +16,14 @@ export default defineConfig({
       : undefined,
   },
   webServer: {
-    command: `npx vite preview --port ${port} --strictPort`,
+    // --host 127.0.0.1: i CI kan "localhost" annars bindas till IPv6 (::1) och hälsokontrollen mot
+    // 127.0.0.1 får "connection refused" tills timeout.
+    command: `npx vite preview --host 127.0.0.1 --port ${port} --strictPort`,
     url: `http://127.0.0.1:${port}${base}`,
-    reuseExistingServer: true,
-    timeout: 60_000,
+    reuseExistingServer: !process.env.CI,
+    timeout: 120_000,
+    stdout: 'pipe',
+    stderr: 'pipe',
   },
   projects: [{ name: 'chromium', use: { browserName: 'chromium' } }],
 });
