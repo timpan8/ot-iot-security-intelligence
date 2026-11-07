@@ -251,3 +251,62 @@ export const securityPropertyLabel: Record<string, string> = {
 export function orMissing(v: string | null | undefined, fallback = MISSING): string {
   return v === null || v === undefined || v === '' ? fallback : v;
 }
+
+export const otSuitabilityLabel: Record<string, string> = {
+  high: 'hög',
+  medium: 'medel',
+  low: 'låg',
+  depends: 'beror på miljön',
+};
+
+export const cveStatusLabel: Record<string, string> = {
+  published: 'Publicerad',
+  reserved: 'Reserverad',
+  rejected: 'Avvisad',
+  disputed: 'Ifrågasatt',
+  unknown: 'Okänd',
+};
+
+export const evidenceTypeLabel: Record<string, string> = {
+  kev: 'CISA KEV',
+  vendor_statement: 'Leverantörsuppgift',
+  cert_report: 'CERT-rapport',
+  public_poc: 'Publik PoC',
+  research_report: 'Forskningsrapport',
+  none_reported: 'Inget rapporterat',
+};
+
+const FIELD_LABEL: Record<string, string> = {
+  '*': 'hela posten',
+  url: 'länk',
+  documentation: 'dokumentation',
+  threat_intel: 'hotunderlag',
+  kev: 'CISA KEV',
+  epss: 'EPSS',
+  exploitation_evidence: 'exploateringsbelägg',
+  references: 'referenser',
+  fix: 'fixstatus',
+  controls: 'åtgärder',
+  methodology: 'metodik',
+  default_ports: 'standardportar',
+  cve_ids: 'CVE-koppling',
+  advisory_ids: 'bulletinkoppling',
+  match_ids: 'produkt–CVE-matchningar',
+  'risk_summary.fix_text': 'fixuppgift',
+  'risk_summary.explanation_text': 'riskförklaring',
+  'risk_summary.affected_firmware_text': 'berörd firmware',
+  'risk_summary.cve_text': 'CVE-uppgift',
+};
+
+/**
+ * Översätter en intern fältsökväg (t.ex. "risk_summary.fix_text" eller
+ * "matches.match-…-cve-2025-1234.fix") till en läsbar svensk etikett.
+ */
+export function fieldLabel(path: string): string {
+  const m = /^matches\.match-.*?-(cve-\d{4}-\d+)\.(\w+)$/i.exec(path);
+  if (m) {
+    const cve = m[1]!.toUpperCase();
+    return `${FIELD_LABEL[m[2]!] ?? m[2]} för ${cve}`;
+  }
+  return FIELD_LABEL[path] ?? path.replace(/[._]/g, ' ');
+}

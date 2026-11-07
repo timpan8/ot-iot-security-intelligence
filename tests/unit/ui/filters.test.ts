@@ -24,6 +24,12 @@ describe('URL-filter', () => {
     expect(countActiveFilters(f)).toBe(1);
     expect(serializeFilters(f).toString()).toBe('has=kev%2Cdefaultpw&sort=severity');
   });
+  it('tolkar visningsläge (view) utan att räkna det som filter', () => {
+    expect(parseFilters(new URLSearchParams('view=fields')).view).toBe('fields');
+    expect(parseFilters(new URLSearchParams('view=cards')).view).toBe('cards');
+    expect(parseFilters(new URLSearchParams('view=evil')).view).toBe('table');
+    expect(countActiveFilters(parseFilters(new URLSearchParams('view=fields')))).toBe(0);
+  });
   it('ignorerar ogiltiga värden', () => {
     const f = parseFilters(new URLSearchParams('kind=hacker&kev=maybe&sort=evil&dir=sideways'));
     expect(f.kind).toBe('all');

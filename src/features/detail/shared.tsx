@@ -38,6 +38,8 @@ import {
   pwdTypeLabel,
   setupDocTypeLabel,
   sourceTypeLabel,
+  fieldLabel,
+  otSuitabilityLabel,
 } from '@/lib/labels';
 import { fmtDate } from '@/lib/format';
 
@@ -409,7 +411,7 @@ export function ControlsList({ d, controlIds }: { d: IndexedDataset; controlIds:
                 ? 'Kräver driftgodkännande'
                 : 'Kan ofta införas utan driftstopp'}
             </Badge>
-            <Badge>OT-lämplighet: {c.ot_suitability}</Badge>
+            <Badge>OT-lämplighet: {otSuitabilityLabel[c.ot_suitability] ?? c.ot_suitability}</Badge>
           </div>
           <p className="mt-1 text-sm">{c.description}</p>
           <dl className="mt-2 grid gap-1 text-xs text-muted sm:grid-cols-2">
@@ -505,8 +507,14 @@ export function SourcesList({ d, sourceIds }: { d: IndexedDataset; sourceIds: st
           </div>
           <p className="mt-1 font-medium">{s.title}</p>
           <p className="text-xs text-muted">
-            {s.publisher} · publicerad {fmtDate(s.published_at)} · kontrollerad{' '}
-            {fmtDate(s.last_checked_at)} · verifierad {fmtDate(s.last_verified_at)}
+            {[
+              s.publisher,
+              s.published_at ? `publicerad ${fmtDate(s.published_at)}` : null,
+              s.last_checked_at ? `kontrollerad ${fmtDate(s.last_checked_at)}` : 'ej kontrollerad',
+              s.last_verified_at ? `verifierad ${fmtDate(s.last_verified_at)}` : null,
+            ]
+              .filter(Boolean)
+              .join(', ')}
           </p>
           <SafeLink href={s.url} className="text-xs underline break-all">
             {s.url}
@@ -515,7 +523,9 @@ export function SourcesList({ d, sourceIds }: { d: IndexedDataset; sourceIds: st
           {s.supports_claims.length ? (
             <p className="mt-1 text-xs text-muted">
               Stödjer:{' '}
-              {s.supports_claims.map((c) => `${c.field}${c.note ? ` (${c.note})` : ''}`).join('; ')}
+              {s.supports_claims
+                .map((c) => `${fieldLabel(c.field)}${c.note ? ` (${c.note})` : ''}`)
+                .join('; ')}
             </p>
           ) : null}
         </li>
@@ -538,7 +548,10 @@ export function ProvenanceList({
       </summary>
       <ul className="mt-2 space-y-1">
         {prov.map((p) => (
-          <li key={`${p.column}-${p.row}`} className="grid grid-cols-[6rem_1fr] gap-2 text-xs">
+          <li
+            key={`${p.column}-${p.row}`}
+            className="grid grid-cols-[6rem_minmax(0,1fr)] gap-2 text-xs [overflow-wrap:anywhere]"
+          >
             <span className="font-mono text-muted">
               {p.column}
               {p.row}
@@ -599,7 +612,7 @@ export function ClaimsList({ claims }: { claims: Claim[] }) {
       {claims.map((c) => (
         <li key={c.id} className="rounded-lg border border-border p-2">
           <div className="flex flex-wrap items-center gap-2">
-            <span className="text-xs font-medium text-muted">{c.field}</span>
+            <span className="text-xs font-medium text-muted">{fieldLabel(c.field)}</span>
             <VerificationBadge status={c.status} />
             {c.reviewed_at ? (
               <span className="text-xs text-muted">granskad {c.reviewed_at}</span>

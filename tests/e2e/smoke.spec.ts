@@ -113,9 +113,68 @@ test.describe('Röktest – publik kunskapsbas', () => {
     await expect(card.getByText('Sökord för egen inventering')).toBeVisible();
     await expect(card.getByRole('link', { name: 'CVE-2023-6448' })).toBeVisible();
     // Växling tillbaka till tabell speglas i URL
-    await page.getByRole('button', { name: 'Tabell' }).click();
+    await page.getByRole('button', { name: 'Tabell', exact: true }).click();
     await expect(page).not.toHaveURL(/view=cards/);
     await expect(page.getByRole('table')).toBeVisible();
+  });
+
+  test('detaljtabellen visar dossierns fält som kolumner, en rad per produkt', async ({ page }) => {
+    await page.goto('#/katalog?view=fields&sort=severity&has=kev');
+    await expect(page.getByRole('status')).toHaveText(/^2 av 125 poster$/);
+    const table = page.getByRole('table');
+    for (const h of [
+      'Produkt',
+      'Standardkonto och initiallösenord',
+      'Sökord (egen inventering)',
+      'Sårbarheter',
+      'PoC-/hotunderlag',
+      'Setup och dokumentation',
+    ])
+      await expect(table.getByRole('columnheader', { name: h })).toBeVisible();
+    await expect(table.getByRole('link', { name: 'Unitronics Vision' })).toBeVisible();
+    await expect(table.getByRole('link', { name: 'CVE-2023-6448' })).toBeVisible();
+    await expect(page.getByRole('button', { name: 'Detaljtabell' })).toHaveAttribute(
+      'aria-pressed',
+      'true',
+    );
+  });
+
+  test('detaljtabellens kolumner kan läggas till och tas bort och valet sparas', async ({
+    page,
+  }) => {
+    await page.goto('#/katalog?view=fields');
+    const table = page.getByRole('table');
+    await expect(
+      table.getByRole('columnheader', { name: 'Sökord (egen inventering)' }),
+    ).toBeVisible();
+    await page.getByText(/^Kolumner \(/).click();
+    // Ta bort en standardkolumn och lägg till en extra
+    await page.getByRole('checkbox', { name: 'Sökord (egen inventering)' }).uncheck();
+    await page.getByRole('checkbox', { name: 'Högsta CVSS' }).check();
+    await expect(
+      table.getByRole('columnheader', { name: 'Sökord (egen inventering)' }),
+    ).toHaveCount(0);
+    await expect(table.getByRole('columnheader', { name: 'Högsta CVSS' })).toBeVisible();
+    // Valet ligger kvar efter omladdning
+    await page.reload();
+    await expect(
+      page.getByRole('table').getByRole('columnheader', { name: 'Högsta CVSS' }),
+    ).toBeVisible();
+    await page.getByText(/^Kolumner \(/).click();
+    await page.getByRole('button', { name: 'Återställ standard' }).click();
+    await expect(
+      page.getByRole('table').getByRole('columnheader', { name: 'Sökord (egen inventering)' }),
+    ).toBeVisible();
+  });
+
+  test('inga sidor blir bredare än skärmen på mobil', async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    for (const r of ['#/bulletiner', '#/konton', '#/atgarder', '#/produkt/pf-abb-aspect']) {
+      await page.goto(r);
+      await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
+      const sw = await page.evaluate<number>('document.documentElement.scrollWidth');
+      expect(sw, r).toBeLessThanOrEqual(390);
+    }
   });
 
   test('inga externa länkar utan säkra attribut', async ({ page }) => {

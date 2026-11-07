@@ -4,20 +4,21 @@ import { Badge } from '@/components/Badge';
 import { SafeLink } from '@/components/SafeLink';
 import { Callout, PageHeader, Section } from '@/components/ui';
 import type { Control } from '@schemas/index';
+import { otSuitabilityLabel } from '@/lib/labels';
 
-function ControlCard({ c, names }: { c: Control; names: Map<string, string> }) {
+function ControlCard({ c, n, names }: { c: Control; n: number; names: Map<string, string> }) {
   return (
     <li className="rounded-lg border border-border p-3 text-sm">
       <div className="flex flex-wrap items-center gap-2">
         <span className="font-semibold">
-          {c.order_hint}. {c.name}
+          {n}. {c.name}
         </span>
         <Badge tone={c.requires_operational_approval ? 'warn' : 'neutral'}>
           {c.requires_operational_approval
             ? 'Kräver driftgodkännande'
             : 'Kan ofta införas utan driftstopp'}
         </Badge>
-        <Badge>OT-lämplighet: {c.ot_suitability}</Badge>
+        <Badge>OT-lämplighet: {otSuitabilityLabel[c.ot_suitability] ?? c.ot_suitability}</Badge>
       </div>
       <p className="mt-1">{c.description}</p>
       <dl className="mt-2 grid gap-1 text-xs text-muted sm:grid-cols-2">
@@ -88,8 +89,8 @@ export function ControlsPage() {
         </Callout>
         <Section title="Generella kontroller (alla kategorier)" id="generella">
           <ol className="space-y-2">
-            {general.map((c) => (
-              <ControlCard key={c.id} c={c} names={names} />
+            {general.map((c, i) => (
+              <ControlCard key={c.id} c={c} n={i + 1} names={names} />
             ))}
           </ol>
         </Section>
@@ -102,8 +103,8 @@ export function ControlsPage() {
               id={`kat-${cat.replace(/[^a-z0-9]/gi, '-').toLowerCase()}`}
             >
               <ol className="space-y-2">
-                {list.map((c) => (
-                  <ControlCard key={c.id} c={c} names={names} />
+                {list.map((c, i) => (
+                  <ControlCard key={c.id} c={c} n={i + 1} names={names} />
                 ))}
               </ol>
               <p className="mt-2 text-xs">
@@ -120,8 +121,8 @@ export function ControlsPage() {
           return (
             <Section key={pid} title={`Protokoll: ${svc?.name ?? pid}`} id={`proto-${pid}`}>
               <ol className="space-y-2">
-                {list.map((c) => (
-                  <ControlCard key={c.id} c={c} names={names} />
+                {list.map((c, i) => (
+                  <ControlCard key={c.id} c={c} n={i + 1} names={names} />
                 ))}
               </ol>
               {svc ? (

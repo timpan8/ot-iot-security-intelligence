@@ -4,7 +4,7 @@ import { isProduct } from '@/data/loader';
 import { Badge, VerificationBadge } from '@/components/Badge';
 import { SafeLink } from '@/components/SafeLink';
 import { EmptyState, PageHeader, Section } from '@/components/ui';
-import { availabilityLabel, flagLabel } from '@/lib/labels';
+import { availabilityLabel, fieldLabel, flagLabel } from '@/lib/labels';
 import { fmtDate } from '@/lib/format';
 import { DataQualityFlag } from '@schemas/index';
 
@@ -115,7 +115,7 @@ export function DataQualityPage() {
                   <li key={c.id} className="rounded-lg border border-border p-2">
                     <div className="flex flex-wrap items-center gap-2">
                       <VerificationBadge status={c.status} />
-                      <span className="text-xs text-muted">{c.field}</span>
+                      <span className="text-xs text-muted">{fieldLabel(c.field)}</span>
                       {e ? (
                         <Link
                           to={isProduct(e) ? `/produkt/${e.id}` : `/protokoll/${e.id}`}
@@ -145,17 +145,25 @@ export function DataQualityPage() {
           {badSources.length === 0 ? (
             <EmptyState>Alla källor är kontrollerade och tillgängliga.</EmptyState>
           ) : (
-            <ul className="space-y-1 text-sm">
+            <ul className="divide-y divide-rule text-sm">
               {badSources.map((s) => (
-                <li key={s.id} className="flex flex-wrap items-center gap-2">
-                  <Badge tone={s.availability === 'broken' ? 'danger' : 'neutral'}>
-                    {availabilityLabel[s.availability]}
-                  </Badge>
-                  <SafeLink href={s.url}>{s.title}</SafeLink>
-                  <span className="text-xs text-muted">
-                    kontrollerad {fmtDate(s.last_checked_at)}
-                    {s.http_status ? ` · HTTP ${s.http_status}` : ''}
-                    {s.access_note ? ` · ${s.access_note}` : ''}
+                <li key={s.id} className="grid grid-cols-[6.5rem_minmax(0,1fr)] gap-x-2 py-1.5">
+                  <span>
+                    <Badge tone={s.availability === 'broken' ? 'danger' : 'neutral'}>
+                      {availabilityLabel[s.availability]}
+                    </Badge>
+                  </span>
+                  <span className="min-w-0">
+                    <SafeLink href={s.url} className="[overflow-wrap:anywhere]">
+                      {s.title}
+                    </SafeLink>
+                    <span className="block text-xs text-muted">
+                      {s.last_checked_at
+                        ? `Kontrollerad ${fmtDate(s.last_checked_at)}`
+                        : 'Inte kontrollerad'}
+                      {s.http_status ? `, HTTP ${s.http_status}` : ''}
+                      {s.access_note ? `. ${s.access_note}` : ''}
+                    </span>
                   </span>
                 </li>
               ))}

@@ -11,7 +11,7 @@ export type EntryKind = 'all' | 'product_family' | 'protocol_service';
 export type OriginFilter = 'all' | RegisterOrigin;
 export type PocFilter = 'any' | PublicPocStatus;
 export type DocGapFilter = 'any' | 'verified' | 'unverified';
-export type ViewMode = 'table' | 'cards';
+export type ViewMode = 'table' | 'fields' | 'cards';
 const POC_VALUES: PublicPocStatus[] = [
   'poc_reported',
   'none_reported_at_assessment',
@@ -136,7 +136,8 @@ export function parseFilters(params: URLSearchParams): CatalogFilters {
   const sort = params.get('sort');
   if (sort && (SORT_KEYS as string[]).includes(sort)) f.sort = sort as SortKey;
   if (params.get('dir') === 'desc') f.dir = 'desc';
-  if (params.get('view') === 'cards') f.view = 'cards';
+  const view = params.get('view');
+  if (view === 'cards' || view === 'fields') f.view = view;
   return f;
 }
 
