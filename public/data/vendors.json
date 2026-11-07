@@ -556,5 +556,361 @@
     "verification_status": "unknown",
     "source_ids": [],
     "notes": null
+  },
+  {
+    "id": "vendor-nedap",
+    "name": "Nedap",
+    "aliases": [
+      "Nedap Identification Systems"
+    ],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": "Tillagd vid registerimport 2026-11-07 (CISA-bulletinunderlag). PSIRT-portal ej verifierad."
+  },
+  {
+    "id": "vendor-myscada",
+    "name": "mySCADA Technologies",
+    "aliases": [
+      "mySCADA"
+    ],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": "Tillagd vid registerimport 2026-11-07 (CISA-bulletinunderlag). PSIRT-portal ej verifierad."
+  },
+  {
+    "id": "vendor-hitachi-energy",
+    "name": "Hitachi Energy",
+    "aliases": [
+      "ABB Power Grids"
+    ],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": "Tillagd vid registerimport 2026-11-07 (CISA-bulletinunderlag). PSIRT-portal ej verifierad."
+  },
+  {
+    "id": "vendor-br-automation",
+    "name": "B&R Industrial Automation",
+    "aliases": [
+      "B&R",
+      "Bernecker + Rainer"
+    ],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": "Tillagd vid registerimport 2026-11-07 (CISA-bulletinunderlag). PSIRT-portal ej verifierad."
+  },
+  {
+    "id": "vendor-western-telematic",
+    "name": "Western Telematic Inc.",
+    "aliases": [
+      "WTI"
+    ],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": "Tillagd vid registerimport 2026-11-07 (CISA-bulletinunderlag). PSIRT-portal ej verifierad."
+  },
+  {
+    "id": "vendor-automationdirect",
+    "name": "AutomationDirect",
+    "aliases": [],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": "Tillagd vid registerimport 2026-11-07 (CISA-bulletinunderlag). PSIRT-portal ej verifierad."
+  },
+  {
+    "id": "vendor-trimble",
+    "name": "Trimble",
+    "aliases": [
+      "Cityworks"
+    ],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": "Tillagd vid registerimport 2026-11-07 (CISA-bulletinunderlag). PSIRT-portal ej verifierad."
+  },
+  {
+    "id": "vendor-oring",
+    "name": "ORing Industrial Networking",
+    "aliases": [
+      "ORing"
+    ],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": "Tillagd vid registerimport 2026-11-07 (CISA-bulletinunderlag). PSIRT-portal ej verifierad."
+  },
+  {
+    "id": "vendor-outback-power",
+    "name": "OutBack Power",
+    "aliases": [
+      "EnerSys"
+    ],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": "Tillagd vid registerimport 2026-11-07 (CISA-bulletinunderlag). PSIRT-portal ej verifierad."
+  },
+  {
+    "id": "vendor-dingtian",
+    "name": "Dingtian",
+    "aliases": [],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": "Tillagd vid registerimport 2026-11-07 (CISA-bulletinunderlag). PSIRT-portal ej verifierad."
+  },
+  {
+    "id": "vendor-subnet-solutions",
+    "name": "Subnet Solutions",
+    "aliases": [],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": "Tillagd vid registerimport 2026-11-07 (CISA-bulletinunderlag). PSIRT-portal ej verifierad."
+  },
+  {
+    "id": "vendor-lantronix",
+    "name": "Lantronix",
+    "aliases": [],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": "Tillagd vid registerimport 2026-11-07 (CISA-bulletinunderlag). PSIRT-portal ej verifierad."
+  },
+  {
+    "id": "vendor-albedo-telecom",
+    "name": "ALBEDO Telecom",
+    "aliases": [],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": "Tillagd vid registerimport 2026-11-07 (CISA-bulletinunderlag). PSIRT-portal ej verifierad."
+  },
+  {
+    "id": "vendor-vestel",
+    "name": "Vestel",
+    "aliases": [],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": "Tillagd vid registerimport 2026-11-07 (CISA-bulletinunderlag). PSIRT-portal ej verifierad."
+  },
+  {
+    "id": "vendor-nice",
+    "name": "Nice",
+    "aliases": [
+      "Linear",
+      "Nortek Security & Control"
+    ],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": "Tillagd vid registerimport 2026-11-07 (CISA-bulletinunderlag). PSIRT-portal ej verifierad."
+  },
+  {
+    "id": "vendor-planet-technology",
+    "name": "Planet Technology",
+    "aliases": [
+      "PLANET"
+    ],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": "Tillagd vid registerimport 2026-11-07 (CISA-bulletinunderlag). PSIRT-portal ej verifierad."
+  },
+  {
+    "id": "vendor-kunbus",
+    "name": "KUNBUS GmbH",
+    "aliases": [
+      "Revolution Pi"
+    ],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": "Tillagd vid registerimport 2026-11-07 (CISA-bulletinunderlag). PSIRT-portal ej verifierad."
+  },
+  {
+    "id": "vendor-optigo-networks",
+    "name": "Optigo Networks",
+    "aliases": [],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": "Tillagd vid registerimport 2026-11-07 (CISA-bulletinunderlag). PSIRT-portal ej verifierad."
+  },
+  {
+    "id": "vendor-milesight",
+    "name": "Milesight",
+    "aliases": [],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": "Tillagd vid registerimport 2026-11-07 (CISA-bulletinunderlag). PSIRT-portal ej verifierad."
+  },
+  {
+    "id": "vendor-vertiv",
+    "name": "Vertiv",
+    "aliases": [
+      "Liebert"
+    ],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": "Tillagd vid registerimport 2026-11-07 (CISA-bulletinunderlag). PSIRT-portal ej verifierad."
+  },
+  {
+    "id": "vendor-consilium-safety",
+    "name": "Consilium Safety",
+    "aliases": [],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": "Tillagd vid registerimport 2026-11-07 (CISA-bulletinunderlag). PSIRT-portal ej verifierad."
+  },
+  {
+    "id": "vendor-cyberdata",
+    "name": "CyberData",
+    "aliases": [],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": "Tillagd vid registerimport 2026-11-07 (CISA-bulletinunderlag). PSIRT-portal ej verifierad."
+  },
+  {
+    "id": "vendor-dover-fueling-solutions",
+    "name": "Dover Fueling Solutions",
+    "aliases": [
+      "ProGauge"
+    ],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": "Tillagd vid registerimport 2026-11-07 (CISA-bulletinunderlag). PSIRT-portal ej verifierad."
+  },
+  {
+    "id": "vendor-controlid",
+    "name": "ControlID",
+    "aliases": [
+      "Control iD"
+    ],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": "Tillagd vid registerimport 2026-11-07 (CISA-bulletinunderlag). PSIRT-portal ej verifierad."
+  },
+  {
+    "id": "vendor-samsung",
+    "name": "Samsung",
+    "aliases": [
+      "Samsung HVAC"
+    ],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": "Tillagd vid registerimport 2026-11-07 (CISA-bulletinunderlag). PSIRT-portal ej verifierad."
+  },
+  {
+    "id": "vendor-honeywell",
+    "name": "Honeywell",
+    "aliases": [
+      "Honeywell Process Solutions"
+    ],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": "Tillagd vid registerimport 2026-11-07 (CISA-bulletinunderlag). PSIRT-portal ej verifierad."
+  },
+  {
+    "id": "vendor-orthanc",
+    "name": "Orthanc (open source)",
+    "aliases": [
+      "Osimis",
+      "Sébastien Jodogne"
+    ],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": "Tillagd vid registerimport 2026-11-07 (CISA-bulletinunderlag). PSIRT-portal ej verifierad."
+  },
+  {
+    "id": "vendor-infinitt-healthcare",
+    "name": "INFINITT Healthcare",
+    "aliases": [],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": "Tillagd vid registerimport 2026-11-07 (CISA-bulletinunderlag). PSIRT-portal ej verifierad."
+  },
+  {
+    "id": "vendor-nihon-kohden",
+    "name": "NIHON KOHDEN",
+    "aliases": [],
+    "security_portal_url": null,
+    "psirt_contact_url": null,
+    "support_urls": [],
+    "verification_status": "unknown",
+    "source_ids": [],
+    "notes": "Tillagd vid registerimport 2026-11-07 (CISA-bulletinunderlag). PSIRT-portal ej verifierad."
   }
 ]

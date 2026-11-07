@@ -1,0 +1,289 @@
+[
+  {
+    "row": 2,
+    "label": "OT/IoT – granskning 7 november 2026",
+    "value": null,
+    "guidance_label": null,
+    "guidance_text": null
+  },
+  {
+    "row": 5,
+    "label": "Omfattning",
+    "value": "Antal / status",
+    "guidance_label": "Läs detta",
+    "guidance_text": "Betydelse"
+  },
+  {
+    "row": 6,
+    "label": "Originalposter",
+    "value": "66",
+    "guidance_label": "Börja i Register",
+    "guidance_text": "Filtrera Ursprung = Ny för de 59 tilläggen. Sårbarheter innehåller exakt CVE- och versionskoppling."
+  },
+  {
+    "row": 7,
+    "label": "Original: produkter",
+    "value": "55",
+    "guidance_label": "Originalet är bevarat",
+    "guidance_text": "De tre ursprungliga bladen har behållits. De är historiskt underlag; uppdaterade bedömningar finns i de nya bladen."
+  },
+  {
+    "row": 8,
+    "label": "Original: protokoll/tjänster",
+    "value": "11",
+    "guidance_label": "Omverifiering av original",
+    "guidance_text": "Alla 66 poster har radvis kvalitetsgranskats. CVE-register och valda bulletiner har kontrollerats; övriga produktspecifika originalpåståenden har markerats som ej fullständigt omverifierade."
+  },
+  {
+    "row": 9,
+    "label": "Nya produktfamiljer",
+    "value": "59",
+    "guidance_label": "Avgränsat källurval",
+    "guidance_text": "59 nya familjer stöds av valda CISA-bulletiner i årsarkivet 2025, hämtade 2026-11-07. Detta är inte ett komplett eller garanterat senaste CVE-/firmwareregister."
+  },
+  {
+    "row": 10,
+    "label": "Totalt i Register",
+    "value": "125",
+    "guidance_label": "Inloggningsuppgifter",
+    "guidance_text": "Inga användarnamn/lösenordspar ingår. Ej fastställt är okänt, inte frånvaro av standarduppgifter. Dokumentlänkens nivå anges på varje rad."
+  },
+  {
+    "row": 11,
+    "label": "Unika CVE i verifierat urval",
+    "value": "344",
+    "guidance_label": "KEV är CVE-baserat",
+    "guidance_text": "Två CVE har träff i hämtad KEV. Det bevisar inte att alla berörda produkter exploaterats. Ingen träff innebär inte att exploatering saknas."
+  },
+  {
+    "row": 12,
+    "label": "CVE-/produktrelationer",
+    "value": "349",
+    "guidance_label": "Prioritering",
+    "guidance_text": "P1: verifierad KEV-träff med relevant nätverksväg. P2: snar inventering/avskärmning. Slutlig prioritet kräver lokal process- och säkerhetsbedömning."
+  },
+  {
+    "row": 13,
+    "label": "Unika CVE med KEV-träff",
+    "value": "2",
+    "guidance_label": "Exponering",
+    "guidance_text": "Ingen enhet, IP-adress eller organisation har kartlagts. Faktisk exponering är Ej undersökt på alla rader."
+  },
+  {
+    "row": 14,
+    "label": "KEV-katalogens datum",
+    "value": "2026-11-06",
+    "guidance_label": "Osäker dokumentåtkomst",
+    "guidance_text": "HTTP 403/404, tidsgräns eller annan åtkomstspärr kan förekomma. Nåbar länk innebär inte verifierat innehåll. CISA CSAF används för verifierade nya CVE-kopplingar."
+  },
+  {
+    "row": 15,
+    "label": "Källdokument i ursprungsmanifest",
+    "value": "82",
+    "guidance_label": "Rättelse: Desigo",
+    "guidance_text": "Klienter V6/V7; användarinteraktion krävs. Ej automatiskt PXC eller direkt nätverks-RCE. Se Radgranskning."
+  },
+  {
+    "row": 16,
+    "label": "Dokumentlänkar kontrollerade",
+    "value": "112",
+    "guidance_label": "Osäkert: ABB AC500",
+    "guidance_text": "Komponent-CVE finns, men ABB-/firmwarekopplingen behöver specifik ABB-bulletin. Dessa CVE räknas inte som verifierade AC500-relationer."
+  },
+  {
+    "row": 17,
+    "label": "Dokumentlänkar HTTP 200",
+    "value": "75",
+    "guidance_label": "Osäkert: patchningsgrad",
+    "guidance_text": "Danfoss 58 % av 50 värdar saknar granskningsbar mätserie i bilagan och får inte generaliseras."
+  },
+  {
+    "row": 18,
+    "label": "Övriga länkresultat",
+    "value": "37",
+    "guidance_label": "Kontroller",
+    "guidance_text": "K1–K6 gäller som defensiv bas; K7 tillkommer för medicinteknik. Verifiera i godkänt servicefönster."
+  },
+  {
+    "row": 20,
+    "label": "Hotunderlag – komplettering",
+    "value": "Antal CVE",
+    "guidance_label": "Tolkning",
+    "guidance_text": "Begränsning"
+  },
+  {
+    "row": 21,
+    "label": "Kontrollerade CVE",
+    "value": "344",
+    "guidance_label": "Öppna Hotunderlag",
+    "guidance_text": "Alla 344 CVE har en källstatus; 10 skilda direktlänkar till PoC, forskarmaterial eller dokumenterade angrepp har tillförts."
+  },
+  {
+    "row": 22,
+    "label": "CISA SSVC = poc",
+    "value": "19",
+    "guidance_label": "PoC är inte aktiv exploatering",
+    "guidance_text": "CISA:s poc är en daterad uppgift om offentlig demonstration. Kodens funktion och säkerhet har inte testats."
+  },
+  {
+    "row": 23,
+    "label": "CISA SSVC = active",
+    "value": "2",
+    "guidance_label": "Danfoss – emulator",
+    "guidance_text": "FROMAGEGATE använder ersättningsalgoritm och rekonstruerat format. Inte verifierad färdig exploit mot riktig hårdvara."
+  },
+  {
+    "row": 24,
+    "label": "CISA SSVC = none",
+    "value": "301",
+    "guidance_label": "Komponenter",
+    "guidance_text": "Linux-, OpenSSH- och CPU-PoC kan kräva lokal åtkomst, agentforwarding eller MitM. Ingen generell produkt-RCE kan sluts här."
+  },
+  {
+    "row": 25,
+    "label": "CISA-bedömning saknas",
+    "value": "22",
+    "guidance_label": "none / saknad bedömning",
+    "guidance_text": "Ingen positiv uppgift i detta underlag är inte ett bevis på att offentlig kod eller angrepp saknas."
+  },
+  {
+    "row": 27,
+    "label": "Setup och konton",
+    "value": "Antal",
+    "guidance_label": "Läsanvisning",
+    "guidance_text": "Omfattning"
+  },
+  {
+    "row": 28,
+    "label": "Poster i dokumentöversikten",
+    "value": "125",
+    "guidance_label": "Öppna Setup och konton",
+    "guidance_text": "Samlad översikt med standardkonton utan lösenord, setup-/manuallänkar, modellgränser och källor."
+  },
+  {
+    "row": 29,
+    "label": "Verifierade kontoprofiler",
+    "value": "19",
+    "guidance_label": "Kontonamn",
+    "guidance_text": "16 produktposter har dokumenterade kontonamn. Uppgiften gäller angiven modell/version och bevisar inte att kontot är aktivt i en installation."
+  },
+  {
+    "row": 30,
+    "label": "Poster med namngivet konto",
+    "value": "16",
+    "guidance_label": "Skapas vid driftsättning",
+    "guidance_text": "Home Assistant, Ignition 8.x och ARM600 har dokumenterade processer där första användaren skapas."
+  },
+  {
+    "row": 31,
+    "label": "Poster med användarskapat konto",
+    "value": "3",
+    "guidance_label": "Okänt är okänt",
+    "guidance_text": "För 95 produktposter är kontonamnet ännu inte verifierat. Inga kontonamn eller lösenord har gissats."
+  },
+  {
+    "row": 32,
+    "label": "Produktposter: kontonamn ej verifierat",
+    "value": "95",
+    "guidance_label": "Manualtyp",
+    "guidance_text": "Direkt manual, produktportal, delavsnitt och säkerhetsguide anges separat. 17 produktposter saknar verifierad exakt setupmanual."
+  },
+  {
+    "row": 33,
+    "label": "Exakt setupmanual ej verifierad",
+    "value": "17",
+    "guidance_label": "Kombinationsposter",
+    "guidance_text": "En manual för en delmodell gäller inte automatiskt alla produkter på raden. Modell-/versionsgränser står i översikten."
+  },
+  {
+    "row": 34,
+    "label": "Dokument-/kontokällor kontrollerade",
+    "value": "132",
+    "guidance_label": "Åtkomst",
+    "guidance_text": "Direkta svar, spärrar och tekniska åtkomstfel redovisas. En säkerhetsguide är inte en fullständig installationsmanual."
+  },
+  {
+    "row": 36,
+    "label": "Lösenordsstatus – komplettering",
+    "value": "Antal poster",
+    "guidance_label": "Lösenordsstatus",
+    "guidance_text": "Tolkning"
+  },
+  {
+    "row": 37,
+    "label": "Gemensamt standardlösenord dokumenterat",
+    "value": "7",
+    "guidance_label": "Filtrera på typ",
+    "guidance_text": "Register AH och Setup och konton O visar initial-/fabrikslösenordets typ. Inga lösenordsvärden ingår."
+  },
+  {
+    "row": 38,
+    "label": "Okänt – initiallösenordets typ ej verifierad",
+    "value": "90",
+    "guidance_label": "Gemensamt eller enhetsunikt",
+    "guidance_text": "Gemensamt initiallösenord skiljs från enhetsunik initialuppgift och från lösenord som installatören själv väljer."
+  },
+  {
+    "row": 39,
+    "label": "Förutsägbar inbyggd lösenordsmekanism i berörd version",
+    "value": "1",
+    "guidance_label": "Modell- och versionsgräns",
+    "guidance_text": "Källans avgränsning står i Register M och översiktens modell-/versionskolumner. En familj kan innehålla flera initialmekanismer."
+  },
+  {
+    "row": 40,
+    "label": "Lösenord väljs/skapas vid driftsättning",
+    "value": "6",
+    "guidance_label": "Ingen enhetskontroll utförd",
+    "guidance_text": "Klassningen beskriver dokumenterad initialmekanism, inte om standardlösenordet fortfarande används på en viss installation. Okänt är inte ett påstående om säkerhet."
+  },
+  {
+    "row": 41,
+    "label": "Modell-/versions-/batchberoende initiallösenord",
+    "value": "2",
+    "guidance_label": null,
+    "guidance_text": null
+  },
+  {
+    "row": 42,
+    "label": "Versionsberoende – gemensamt eller enhetsbundet",
+    "value": "1",
+    "guidance_label": null,
+    "guidance_text": null
+  },
+  {
+    "row": 43,
+    "label": "Enhetsunikt initiallösenord enligt dokumentationen",
+    "value": "1",
+    "guidance_label": null,
+    "guidance_text": null
+  },
+  {
+    "row": 44,
+    "label": "Ej tillämpligt – implementation styr",
+    "value": "11",
+    "guidance_label": null,
+    "guidance_text": null
+  },
+  {
+    "row": 45,
+    "label": "Standardlösenord förekommer – typ ej fastställd",
+    "value": "1",
+    "guidance_label": null,
+    "guidance_text": null
+  },
+  {
+    "row": 46,
+    "label": "Hårdkodade uppgifter i berörd version",
+    "value": "4",
+    "guidance_label": null,
+    "guidance_text": null
+  },
+  {
+    "row": 47,
+    "label": "Enhetsunikt initiallösenord vid normal leverans",
+    "value": "1",
+    "guidance_label": null,
+    "guidance_text": null
+  }
+]

@@ -69,6 +69,6 @@ describe('validate – negativa fall (skyddsgräns och integritet)', () => {
     const ds = clone();
     ds.protocol_services.pop();
     const res = validateDataset(ds);
-    expect(res.errors.some((e) => e.includes('Antal poster 65'))).toBe(true);
+    expect(res.errors.some((e) => /Antal (poster|tjänster) \d+ ≠/.test(e))).toBe(true);
   });
 });

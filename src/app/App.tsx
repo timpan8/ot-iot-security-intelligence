@@ -20,6 +20,7 @@ import { ControlsPage } from '@/features/controls/ControlsPage';
 import { AboutPage } from '@/features/about/AboutPage';
 import { PrioritizationPage } from '@/features/prioritization/PrioritizationPage';
 import { ExportPage } from '@/features/export/ExportPage';
+import { AccountsPage } from '@/features/accounts/AccountsPage';
 import { Callout } from '@/components/ui';
 
 function DataGate({ children }: { children: React.ReactNode }) {
@@ -93,6 +94,7 @@ const router = createHashRouter([
       { path: 'atgarder', element: gate(<ControlsPage />) },
       { path: 'datakvalitet', element: gate(<DataQualityPage />) },
       { path: 'export', element: gate(<ExportPage />) },
+      { path: 'konton', element: gate(<AccountsPage />) },
       { path: 'om', element: <AboutPage /> },
       { path: '*', element: <NotFound /> },
     ],

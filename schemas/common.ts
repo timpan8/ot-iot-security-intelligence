@@ -17,27 +17,18 @@ export const VerificationStatus = z.enum([
 ]);
 export type VerificationStatus = z.infer<typeof VerificationStatus>;
 
-export const Category = z.enum([
-  'BMS',
-  'DCS',
-  'Energi',
-  'Gateway',
-  'HMI',
-  'IoT',
-  'Kamera',
-  'Kraft',
-  'Kyla',
-  'NAS',
-  'OPC',
-  'PLC',
-  'PLC/HMI',
-  'Passer',
-  'RTU',
-  'SCADA',
-  'Tjänst',
-  'Ventilation',
-]);
+/**
+ * Kategori är fri text (registret har 46 kategorier). Kända kategorier får profil i
+ * sources/curated/category_profiles.json; okänd kategori ger ot_impact 'unknown'.
+ * Protokoll/tjänster har alltid kategorin PROTOCOL_CATEGORY.
+ */
+export const PROTOCOL_CATEGORY = 'Tjänst';
+export const Category = z.string().min(1).max(60);
 export type Category = z.infer<typeof Category>;
+
+/** Registrets ursprungsmarkering: Original = fanns i 66-postsinventeringen, new = tillkom i 125-postregistret. */
+export const RegisterOrigin = z.enum(['original', 'new']);
+export type RegisterOrigin = z.infer<typeof RegisterOrigin>;
 
 /** Endast https-länkar tillåts i publik data. */
 export const HttpsUrl = z
@@ -67,6 +58,8 @@ export const IdPrefix = {
   source: 'src-',
   observation: 'obs-',
   claim: 'claim-',
+  link_check: 'lc-',
+  threat_intel: 'ti-',
 } as const;
 
 const slug = /^[a-z0-9]+(?:-[a-z0-9.]+)*$/;
@@ -86,6 +79,8 @@ export const ControlId = idWithPrefix(IdPrefix.control);
 export const SourceId = idWithPrefix(IdPrefix.source);
 export const ObservationId = idWithPrefix(IdPrefix.observation);
 export const ClaimId = idWithPrefix(IdPrefix.claim);
+export const LinkCheckId = idWithPrefix(IdPrefix.link_check);
+export const ThreatIntelId = idWithPrefix(IdPrefix.threat_intel);
 
 /** Ett textpåstående med egen verifieringsstatus och källor. */
 export const VerifiedText = z.strictObject({
@@ -125,6 +120,10 @@ export const DataQualityFlag = z.enum([
   'unexpanded_cve_range',
   'conflicting_sources',
   'broken_link',
+  'setup_manual_unverified',
+  'account_name_unverified',
+  'initial_password_type_unknown',
+  'register_conflict',
 ]);
 export type DataQualityFlag = z.infer<typeof DataQualityFlag>;
 
@@ -163,4 +162,11 @@ export const FORBIDDEN_PUBLIC_KEYS = [
   'actual_version',
   'maintenance_window',
   'risk_acceptance',
+  // Autentiseringsuppgifter får aldrig förekomma som värden i publik data
+  'password',
+  'password_value',
+  'passwd',
+  'secret',
+  'api_key',
+  'credential_value',
 ] as const;

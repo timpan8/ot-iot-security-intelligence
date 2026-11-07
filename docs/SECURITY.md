@@ -61,8 +61,22 @@ förekommer; ta bort det om bygget inte kräver det. Kontrollera den faktiska po
 ## Datapipeline och skyddsgräns
 
 - `scripts/validate.ts` kör Zod på varje publik fil, kontrollerar referensintegritet, räkningar
-  (66/55/11/18), https-krav, protokoll utan CVE och rekursivt alla nycklar mot
+  mot importrapporterna, https-krav i URL-fält, protokoll utan CVE och rekursivt alla nycklar mot
   `FORBIDDEN_PUBLIC_KEYS`. Icke-noll exit stoppar bygget (`prebuild`).
+- **Autentiseringsuppgifter.** Registerimporten tar bara in kontonamn, typ av initiallösenord
+  och bytekrav – underlaget innehåller inga lösenordsvärden och importen har inget fält för dem.
+  Nycklarna `password`, `password_value`, `passwd`, `secret`, `api_key` och `credential_value`
+  ingår i `FORBIDDEN_PUBLIC_KEYS`, så ett lösenordsvärde som smyger in via en framtida arbetsbok
+  stoppar bygget i validate, check-artifact och enhetstester. Kontonamn visas med källa och
+  modellgräns; ”okänt” tolkas aldrig som ”inget standardlösenord”.
+- **Länkkontroll.** `link_checks.json` lagrar kontrollerade URL:er som ren text (två är `http://`).
+  Dessa renderas aldrig som klickbara länkar; `SafeLink` i frontend gör bara https-URL:er klickbara
+  och övriga visas som text. `Source.url` är fortsatt https-only.
+- **Dokumenthashar** (`document_sha256`, `response_sha256`) är metadata om ett hämtat dokument vid
+  en tidpunkt och används aldrig som identitet eller som bevis för innehållets riktighet.
+- **Ingen kod ur hotunderlaget körs.** PoC-länkar lagras och visas med källkritisk kommentar och
+  materialtyp; plattformen hämtar, kör eller testar aldrig länkad kod, och bygget gör inga anrop
+  mot produkter eller styrsystem.
 - `scripts/check-artifact.ts` skannar `dist/` efter förbjudna nycklar och efter `.xlsx`-filer.
   Originalarbetsboken ligger i `sources/original/` och kopieras aldrig till `public/`.
 - `schemas/private/assets.ts` ingår inte i `tsconfig.app.json` och får inte importeras från `src/`;

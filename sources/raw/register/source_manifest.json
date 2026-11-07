@@ -1,0 +1,2811 @@
+{
+  "sheet": "Källmanifest",
+  "import_version": "register-import-1.0.0",
+  "file": "OT_IoT_125_poster_losenordsstatus.xlsx",
+  "file_sha256": "2e017d3c9f1c28ea82aa05b474c9388f39db8d7350df00d2b2103741238469f1",
+  "header_row": 1,
+  "headers": [
+    "Käll-ID",
+    "Utgivare / format",
+    "URL",
+    "SHA-256 av hämtat dokument",
+    "Källdatum",
+    "Hämtningsdatum",
+    "Vad som verifierats"
+  ],
+  "column_map": {
+    "Käll-ID": "source_key",
+    "Utgivare / format": "publisher_format",
+    "URL": "url",
+    "SHA-256 av hämtat dokument": "document_sha256",
+    "Källdatum": "source_date",
+    "Hämtningsdatum": "fetched_at",
+    "Vad som verifierats": "verified_text"
+  },
+  "missing_headers": [],
+  "extra_headers": [],
+  "records": [
+    {
+      "row": 2,
+      "fields": {
+        "source_key": "ICSA-25-007-01",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-007-01.json",
+        "document_sha256": "65261cc96b8a7ea3cef46d1d2a9f1ef12ab28a6f163a3e400d8546069f4c29bc",
+        "source_date": "2024-12-05",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 3,
+      "fields": {
+        "source_key": "ICSA-25-007-02",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-007-02.json",
+        "document_sha256": "d8a1e2468708d7dbdd3870bcf573052c4825f76a041aaee17beddc0e6aa69b18",
+        "source_date": "2025-01-07",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 4,
+      "fields": {
+        "source_key": "ICSA-25-010-01",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-010-01.json",
+        "document_sha256": "df49e825f064a1b7676e4f76ba001ce9a2d5eacb6d5652af1564edcde73fc994",
+        "source_date": "2024-12-10",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 5,
+      "fields": {
+        "source_key": "ICSA-25-010-02",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-010-02.json",
+        "document_sha256": "e14a0d8e9c2ed13c5a3d4b673165fe438da449e3baf95683693eb45669058b18",
+        "source_date": "2024-12-10",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 6,
+      "fields": {
+        "source_key": "ICSA-25-016-04",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-016-04.json",
+        "document_sha256": "74cf8886e0dd61f16ff396cef734ec174d9976f8efaf57a033c4256cc8c4ccc1",
+        "source_date": "2025-11-11",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 7,
+      "fields": {
+        "source_key": "ICSA-25-203-06",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-203-06.json",
+        "document_sha256": "3849999a60ae9bd67c6bce67e2432070f72b76137083952278d845bd6e4b4ea2",
+        "source_date": "2025-07-08",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 8,
+      "fields": {
+        "source_key": "ICSA-25-044-16",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-044-16.json",
+        "document_sha256": "ba780419789f56db59366b9e1df4c20185aa093bed500c91a14c4915a3e9549d",
+        "source_date": "2025-02-13",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 9,
+      "fields": {
+        "source_key": "ICSA-25-259-02",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-259-02.json",
+        "document_sha256": "42e8b02b17cdf732781898f37a74932729734dd2964446a3d74a59e6782c505f",
+        "source_date": "2026-10-08",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 10,
+      "fields": {
+        "source_key": "ICSA-25-028-01",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-028-01.json",
+        "document_sha256": "373a092ae2f4d957b564548c212bb2ee261c012761c68bf1f70666968124567b",
+        "source_date": "2025-01-15",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 11,
+      "fields": {
+        "source_key": "ICSA-25-028-02",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-028-02.json",
+        "document_sha256": "c950d4ef9f43d1016fa1b4abfe30e7e837e2e8a4ed803ccbbefe2871b600e05a",
+        "source_date": "2025-01-28",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 12,
+      "fields": {
+        "source_key": "ICSA-25-028-04",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-028-04.json",
+        "document_sha256": "fc9e650438d22893b2942d68624cc6d13597364b6eff7bfcc5b71394ffc7bdcd",
+        "source_date": "2025-01-28",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 13,
+      "fields": {
+        "source_key": "ICSA-25-030-05",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-030-05.json",
+        "document_sha256": "cb72646b06120abdd9f571867cbf19d637640fd7930a03012d36a06c40eff9ca",
+        "source_date": "2025-01-30",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 14,
+      "fields": {
+        "source_key": "ICSA-25-035-01",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-035-01.json",
+        "document_sha256": "d544b94c89effb49051b6da0b3fa08f4786e94f4da6c5647a132c0891848072f",
+        "source_date": "2025-02-04",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 15,
+      "fields": {
+        "source_key": "ICSA-25-035-08",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-035-08.json",
+        "document_sha256": "bd8deb9a1718b6145d62d8565ced41acb327499b8049750af96537ed2316ce2b",
+        "source_date": "2025-02-04",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 16,
+      "fields": {
+        "source_key": "ICSA-25-037-04",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-037-04.json",
+        "document_sha256": "ccd2e52f6844c1e212c0091b5a71c99bceac4d4a121bcf854cf38f8d4a721d1e",
+        "source_date": "2025-02-11",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 17,
+      "fields": {
+        "source_key": "ICSA-25-044-09",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-044-09.json",
+        "document_sha256": "a42194ee50bc91240671dae5590b2c9372882fb22008d7bb17f9a74e17c24d50",
+        "source_date": "2025-05-06",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 18,
+      "fields": {
+        "source_key": "ICSA-25-044-15",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-044-15.json",
+        "document_sha256": "334b131121ce8700a8b0584836e5491a369d5af88c2e84bbe70944a10198291c",
+        "source_date": "2025-02-13",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 19,
+      "fields": {
+        "source_key": "ICSA-25-044-17",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-044-17.json",
+        "document_sha256": "611391a65ec55d22ba473957785ce4474b8a346424a13b09c2ec7cc44cd1686a",
+        "source_date": "2025-02-13",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 20,
+      "fields": {
+        "source_key": "ICSA-25-268-01",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-268-01.json",
+        "document_sha256": "e1e96a09274baa397d40f0185c280cc37c8cb86006cf1c404bd239521a288b79",
+        "source_date": "2025-09-25",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 21,
+      "fields": {
+        "source_key": "ICSA-25-289-06",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-289-06.json",
+        "document_sha256": "78385088f491bd7c755a098530eeebe12d346e30d6a6eda7cc75390daa54555c",
+        "source_date": "2026-02-12",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 22,
+      "fields": {
+        "source_key": "ICSA-25-056-01",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-056-01.json",
+        "document_sha256": "7a86ff28297852da91ba2b0996fc157fc0258e5c0ebe66ed56459cacb6d74f23",
+        "source_date": "2025-02-25",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 23,
+      "fields": {
+        "source_key": "ICSA-25-345-06",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-345-06.json",
+        "document_sha256": "5fcaa66bc1dacf026cd9e7e68069cafda985a4de3dfaec6c4666314d2027bb9b",
+        "source_date": "2025-12-09",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 24,
+      "fields": {
+        "source_key": "ICSA-25-135-18",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-135-18.json",
+        "document_sha256": "c9b8b00cee2f2b8b237a8bf55f1b5206a0a66f8c8464eb238ac862c97b88a810",
+        "source_date": "2026-09-15",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 25,
+      "fields": {
+        "source_key": "ICSA-25-072-07",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-072-07.json",
+        "document_sha256": "ca10841a90fb556c5fc53745a308fe20e7730178a94f007f64b0339a12a4334d",
+        "source_date": "2026-05-14",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 26,
+      "fields": {
+        "source_key": "ICSA-25-077-04",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-077-04.json",
+        "document_sha256": "16d13228301223757820683e5fae35e662a8eff205ee2761f0fbef653abaf2ed",
+        "source_date": "2025-03-11",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 27,
+      "fields": {
+        "source_key": "ICSA-25-077-05",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-077-05.json",
+        "document_sha256": "2cdcbda0e35eddb0ea53f493f835a90e4d886e0e692551abd232754699aae717",
+        "source_date": "2025-02-11",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 28,
+      "fields": {
+        "source_key": "ICSA-25-079-02",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-079-02.json",
+        "document_sha256": "4491949bb0f4b04ab7135827f960d9a28ee4084c50dd098078d08e2324598973",
+        "source_date": "2025-02-11",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 29,
+      "fields": {
+        "source_key": "ICSA-25-196-02",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-196-02.json",
+        "document_sha256": "48306a43cc8f2170cc448e94dc124493b8b4c233c842a0d5acbbaa888a1124a7",
+        "source_date": "2026-05-14",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 30,
+      "fields": {
+        "source_key": "ICSA-25-093-05",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-093-05.json",
+        "document_sha256": "aa46aef0d5aad16a973ac0a4f95df3cfc79b95fcf39b7f25d75eefa9e047ed69",
+        "source_date": "2025-03-24",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 31,
+      "fields": {
+        "source_key": "ICSA-25-100-06",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-100-06.json",
+        "document_sha256": "2b026a1d10b6a2206272940364e5055b40c53f87960bb4d61440b33f212714be",
+        "source_date": "2025-04-08",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 32,
+      "fields": {
+        "source_key": "ICSA-25-100-08",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-100-08.json",
+        "document_sha256": "75519d81184f09acd1d45938de6efbd2750cae813a59fc66541b9429394c4428",
+        "source_date": "2025-05-06",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 33,
+      "fields": {
+        "source_key": "ICSA-25-100-09",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-100-09.json",
+        "document_sha256": "7f81503b98962318d882d4416e22122cdef983a21a639f3ce8cb7ad5ca0cb795",
+        "source_date": "2025-04-07",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 34,
+      "fields": {
+        "source_key": "ICSA-25-105-05",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-105-05.json",
+        "document_sha256": "8bc78f2deab497e4a9eda4d0413165af753fdb06c3d13edbd009f2beaab0599c",
+        "source_date": "2025-04-29",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 35,
+      "fields": {
+        "source_key": "ICSA-25-105-08",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-105-08.json",
+        "document_sha256": "39674813c44f1a495da600794fe4aa98693b390bdc6c429b6ba3b2a983f889b3",
+        "source_date": "2025-04-07",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 36,
+      "fields": {
+        "source_key": "ICSA-25-105-09",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-105-09.json",
+        "document_sha256": "3f330aee1ab8b8de14fe8c6a93ef2623fa2750eba1ef8fea918c1b579f4a19c3",
+        "source_date": "2025-05-06",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 37,
+      "fields": {
+        "source_key": "ICSA-25-107-01",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-107-01.json",
+        "document_sha256": "6c044d4a4044ba6ea22b042d5157d32e2553eeb64b01737bb8f2553be1aadbab",
+        "source_date": "2025-04-08",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 38,
+      "fields": {
+        "source_key": "ICSA-25-107-02",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-107-02.json",
+        "document_sha256": "e023a5f9b53d684d7758b274ec51b0ab291e4b2a53c4e07264eb05135c258ccd",
+        "source_date": "2024-07-09",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 39,
+      "fields": {
+        "source_key": "ICSA-25-112-03",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-112-03.json",
+        "document_sha256": "ee8ff74d79d6cdaafae48ff298c60e1f5efdff05c129bb317d3e3ed707ff7100",
+        "source_date": "2026-01-30",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 40,
+      "fields": {
+        "source_key": "ICSA-25-114-02",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-114-02.json",
+        "document_sha256": "6d0f2e2170857c8f193c1df180f2495cb04ad3512ccb6084e3a00060ccd2a39a",
+        "source_date": "2025-04-24",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 41,
+      "fields": {
+        "source_key": "ICSA-25-114-03",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-114-03.json",
+        "document_sha256": "38a34da0180931d44bf8e15c306e02c3cb4b4b300d67732ff35c98e302e4169a",
+        "source_date": "2025-04-24",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 42,
+      "fields": {
+        "source_key": "ICSA-25-114-04",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-114-04.json",
+        "document_sha256": "fed210a1e8b937fd9760f233bc969fbee87585c0fdb9b1fd76c16eaef97f8f24",
+        "source_date": "2025-05-06",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 43,
+      "fields": {
+        "source_key": "ICSA-25-114-06",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-114-06.json",
+        "document_sha256": "672458f969730a2b6782e82aeb21d78920ef41e3677ab708242d04b27a4665fb",
+        "source_date": "2025-05-06",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 44,
+      "fields": {
+        "source_key": "ICSA-25-252-01",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-252-01.json",
+        "document_sha256": "029d0092252a1b3b2ba18eceae8a8969db8ef37380312fc629e445237bc79b7b",
+        "source_date": "2025-09-09",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 45,
+      "fields": {
+        "source_key": "ICSA-25-121-01",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-121-01.json",
+        "document_sha256": "2f94bf206931764266ea9c4da243c6f0ccac27a49b8e7f74e9a0c0ae5b4f1bc0",
+        "source_date": "2025-07-10",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 46,
+      "fields": {
+        "source_key": "ICSA-25-126-01",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-126-01.json",
+        "document_sha256": "44c4693cebca3941a53a4764998f9cdb2eec2247c192de1db6953a7902e20882",
+        "source_date": "2025-05-06",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 47,
+      "fields": {
+        "source_key": "ICSA-25-126-02",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-126-02.json",
+        "document_sha256": "9252a8042205fa4b03a52200d7d1f5ac71e132f3aceae2a536b73421640ee0b8",
+        "source_date": "2025-05-06",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 48,
+      "fields": {
+        "source_key": "ICSA-25-135-08",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-135-08.json",
+        "document_sha256": "020d9a1d6e368c685c6a3acb61af2fa658c3ef588e5effae780cb340a149cff8",
+        "source_date": "2025-05-13",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 49,
+      "fields": {
+        "source_key": "ICSA-25-135-10",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-135-10.json",
+        "document_sha256": "ed06a9fea5360e61ce2996e36cee25c355b333e97c9882217cc0ed3866f22bce",
+        "source_date": "2025-05-13",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 50,
+      "fields": {
+        "source_key": "ICSA-25-140-09",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-140-09.json",
+        "document_sha256": "82dab52167434bb40a528800f483b7c442d3e172ba47cd27db151288b22e3e8a",
+        "source_date": "2025-05-20",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 51,
+      "fields": {
+        "source_key": "ICSA-25-140-10",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-140-10.json",
+        "document_sha256": "07094debf51dc3db81dfc96ee69acdabfe622842730c37c613ac7abe9f46c2bd",
+        "source_date": "2025-05-20",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 52,
+      "fields": {
+        "source_key": "ICSA-25-148-03",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-148-03.json",
+        "document_sha256": "4f865f7369fa9daf124a9cfbe0d2132749ed51215e611528ad9d1a640ecc2279",
+        "source_date": "2025-12-04",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 53,
+      "fields": {
+        "source_key": "ICSA-25-155-01",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-155-01.json",
+        "document_sha256": "bd85ef1086a9d428d996477704a4711a4fd6f2fc96d050ce71918da1a98cb12a",
+        "source_date": "2025-06-05",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 54,
+      "fields": {
+        "source_key": "ICSA-25-261-07",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-261-07.json",
+        "document_sha256": "57be211cdf3e664c3543c3e872d913649a2cb7b8a4459381d895c629eea2161a",
+        "source_date": "2025-09-18",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 55,
+      "fields": {
+        "source_key": "ICSA-25-175-05",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-175-05.json",
+        "document_sha256": "717cc5bf1ce56f034eb2362763608ed538659fc04ce87664b5843b2f7a667188",
+        "source_date": "2025-06-24",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 56,
+      "fields": {
+        "source_key": "ICSA-25-210-02",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-210-02.json",
+        "document_sha256": "f780a361cbc759628169cdc212c8b37860d056ea883f6edcec5bf466fd55c27c",
+        "source_date": "2025-07-29",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 57,
+      "fields": {
+        "source_key": "ICSA-25-205-03",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-205-03.json",
+        "document_sha256": "f996dd2d00b2a014b570a03fcc172dd369f464587014e23cd07046eff9b5aeb0",
+        "source_date": "2025-08-04",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 58,
+      "fields": {
+        "source_key": "ICSMA-25-037-02",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsma-25-037-02.json",
+        "document_sha256": "5988ac78213ca29d5a04e22ae5ab7cf6c5e219dedb0504986bec819fba0c2dc3",
+        "source_date": "2025-02-06",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 59,
+      "fields": {
+        "source_key": "ICSMA-25-100-01",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsma-25-100-01.json",
+        "document_sha256": "6a7ebe74f018d1c8ebcca83cac172a81387d27fb532372b0c0a72a9c57228cf8",
+        "source_date": "2025-05-06",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 60,
+      "fields": {
+        "source_key": "ICSMA-25-296-01",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsma-25-296-01.json",
+        "document_sha256": "2850a203c5dc1b45e3d54997c0a751016993f082ee643404951816edbe7f8e0b",
+        "source_date": "2025-10-23",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 61,
+      "fields": {
+        "source_key": "ICSA-26-057-10",
+        "publisher_format": "CISA CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2026/icsa-26-057-10.json",
+        "document_sha256": "7ebfeecf3abf0874fab95dbbe97c919a45ab2ede61e04c40a861a9446fa68c7f",
+        "source_date": "2026-02-26",
+        "fetched_at": "2026-11-07",
+        "verified_text": "JSON läst; produkt/CVE/versionsstatus extraherad"
+      },
+      "extra": {}
+    },
+    {
+      "row": 62,
+      "fields": {
+        "source_key": "CVE-2022-38465",
+        "publisher_format": "CVE/CNA",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2022-38465",
+        "document_sha256": "8ba8f50c6c11cc0feea22f65bc8ac44cf977d28733effbe399d2007f82e5c1fb",
+        "source_date": "2025-04-21",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Publiceringsstatus och produkt-/versionsfält lästa. OEM-koppling ej automatiskt bekräftad."
+      },
+      "extra": {}
+    },
+    {
+      "row": 63,
+      "fields": {
+        "source_key": "CVE-2023-6448",
+        "publisher_format": "CVE/CNA",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2023-6448",
+        "document_sha256": "e46d353069e0acf89925d2045d0c5a2f023b9dea13daca6d0b6cc73d69de6fdb",
+        "source_date": "2025-10-21",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Publiceringsstatus och produkt-/versionsfält lästa. OEM-koppling ej automatiskt bekräftad."
+      },
+      "extra": {}
+    },
+    {
+      "row": 64,
+      "fields": {
+        "source_key": "CVE-2024-1480",
+        "publisher_format": "CVE/CNA",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2024-1480",
+        "document_sha256": "f28b72f33c6bf0bbbb48d2f117e9d5ed24b17c6fe6f23bcf252bb234b98f5558",
+        "source_date": "2024-08-01",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Publiceringsstatus och produkt-/versionsfält lästa. OEM-koppling ej automatiskt bekräftad."
+      },
+      "extra": {}
+    },
+    {
+      "row": 65,
+      "fields": {
+        "source_key": "CVE-2025-2595",
+        "publisher_format": "CVE/CNA",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-2595",
+        "document_sha256": "c6f383c028fbcf4f3452ac220efc5b6a0a050f3d18bdb88d420045e8833c2ff4",
+        "source_date": "2025-04-23",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Publiceringsstatus och produkt-/versionsfält lästa. OEM-koppling ej automatiskt bekräftad."
+      },
+      "extra": {}
+    },
+    {
+      "row": 66,
+      "fields": {
+        "source_key": "CVE-2025-41450",
+        "publisher_format": "CVE/CNA",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-41450",
+        "document_sha256": "f22e6ff5816ea3443aa6795a4167bbde71b4bf377767ef3b8dee35add2b36dab",
+        "source_date": "2026-10-19",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Publiceringsstatus och produkt-/versionsfält lästa. OEM-koppling ej automatiskt bekräftad."
+      },
+      "extra": {}
+    },
+    {
+      "row": 67,
+      "fields": {
+        "source_key": "CVE-2025-41451",
+        "publisher_format": "CVE/CNA",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-41451",
+        "document_sha256": "fa736764a4c880eacb9abbd2e1b4e0d49b7f84ee59028d4a78ce2e5303d7f374",
+        "source_date": "2026-10-19",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Publiceringsstatus och produkt-/versionsfält lästa. OEM-koppling ej automatiskt bekräftad."
+      },
+      "extra": {}
+    },
+    {
+      "row": 68,
+      "fields": {
+        "source_key": "CVE-2025-41452",
+        "publisher_format": "CVE/CNA",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-41452",
+        "document_sha256": "410236246fcccad2f88c24f7164d0ff2277c0b5e85bb37141a4c054ba42e0207",
+        "source_date": "2026-11-03",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Publiceringsstatus och produkt-/versionsfält lästa. OEM-koppling ej automatiskt bekräftad."
+      },
+      "extra": {}
+    },
+    {
+      "row": 69,
+      "fields": {
+        "source_key": "CVE-2025-41659",
+        "publisher_format": "CVE/CNA",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-41659",
+        "document_sha256": "646250f6bb058b1c98e810f0c9a498d517987f7e0e2006b3cde0edacd5e8a9d2",
+        "source_date": "2025-08-04",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Publiceringsstatus och produkt-/versionsfält lästa. OEM-koppling ej automatiskt bekräftad."
+      },
+      "extra": {}
+    },
+    {
+      "row": 70,
+      "fields": {
+        "source_key": "CVE-2025-41691",
+        "publisher_format": "CVE/CNA",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-41691",
+        "document_sha256": "a2f0e83107ab1d9a5fe439bb7c9e2a0ffbf505db39b2e3355008cd0d006a1b88",
+        "source_date": "2025-08-04",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Publiceringsstatus och produkt-/versionsfält lästa. OEM-koppling ej automatiskt bekräftad."
+      },
+      "extra": {}
+    },
+    {
+      "row": 71,
+      "fields": {
+        "source_key": "CVE-2025-52543",
+        "publisher_format": "CVE/CNA",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-52543",
+        "document_sha256": "07daf96401fcd6978df1ae96125548c7fb61eb94968c57746f31ff9ea90e5b61",
+        "source_date": "2025-09-02",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Publiceringsstatus och produkt-/versionsfält lästa. OEM-koppling ej automatiskt bekräftad."
+      },
+      "extra": {}
+    },
+    {
+      "row": 72,
+      "fields": {
+        "source_key": "CVE-2025-52544",
+        "publisher_format": "CVE/CNA",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-52544",
+        "document_sha256": "4409cccd5525af55ca5c60197a8e410e67d2065f6c577276ce18dc48e7003ddc",
+        "source_date": "2025-09-02",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Publiceringsstatus och produkt-/versionsfält lästa. OEM-koppling ej automatiskt bekräftad."
+      },
+      "extra": {}
+    },
+    {
+      "row": 73,
+      "fields": {
+        "source_key": "CVE-2025-52545",
+        "publisher_format": "CVE/CNA",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-52545",
+        "document_sha256": "8f844a725f2f1c7445d15599bd946475464d995945b25a0ff23470b0beb03504",
+        "source_date": "2025-09-02",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Publiceringsstatus och produkt-/versionsfält lästa. OEM-koppling ej automatiskt bekräftad."
+      },
+      "extra": {}
+    },
+    {
+      "row": 74,
+      "fields": {
+        "source_key": "CVE-2025-52546",
+        "publisher_format": "CVE/CNA",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-52546",
+        "document_sha256": "6e15286748a76bd195d64b603f543bf32977e48821ceaa5aab57f7d3b8269b2f",
+        "source_date": "2025-09-02",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Publiceringsstatus och produkt-/versionsfält lästa. OEM-koppling ej automatiskt bekräftad."
+      },
+      "extra": {}
+    },
+    {
+      "row": 75,
+      "fields": {
+        "source_key": "CVE-2025-52547",
+        "publisher_format": "CVE/CNA",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-52547",
+        "document_sha256": "3179672a0ec38ce16dea997f14114452b4f613449bfa0548a3ffe1233faa47a7",
+        "source_date": "2025-09-02",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Publiceringsstatus och produkt-/versionsfält lästa. OEM-koppling ej automatiskt bekräftad."
+      },
+      "extra": {}
+    },
+    {
+      "row": 76,
+      "fields": {
+        "source_key": "CVE-2025-52548",
+        "publisher_format": "CVE/CNA",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-52548",
+        "document_sha256": "dae5aae59072a5ec9d4280675214ca3fc89f53a24cf97c9db880233eaa71398a",
+        "source_date": "2025-09-02",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Publiceringsstatus och produkt-/versionsfält lästa. OEM-koppling ej automatiskt bekräftad."
+      },
+      "extra": {}
+    },
+    {
+      "row": 77,
+      "fields": {
+        "source_key": "CVE-2025-52549",
+        "publisher_format": "CVE/CNA",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-52549",
+        "document_sha256": "2a2f5524ab1b4317ac934c4306ecf6e5896d4604a8e13c666d33dd1a76360a36",
+        "source_date": "2025-09-02",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Publiceringsstatus och produkt-/versionsfält lästa. OEM-koppling ej automatiskt bekräftad."
+      },
+      "extra": {}
+    },
+    {
+      "row": 78,
+      "fields": {
+        "source_key": "CVE-2025-52550",
+        "publisher_format": "CVE/CNA",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-52550",
+        "document_sha256": "a8b9c139ce9a2be682c0059760e0f8779d603a89fd6334553afdc7486bcfca66",
+        "source_date": "2025-09-02",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Publiceringsstatus och produkt-/versionsfält lästa. OEM-koppling ej automatiskt bekräftad."
+      },
+      "extra": {}
+    },
+    {
+      "row": 79,
+      "fields": {
+        "source_key": "CVE-2025-52551",
+        "publisher_format": "CVE/CNA",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-52551",
+        "document_sha256": "4a4cf7ddd96096dd6bf095086f6bbb7c9ab4ac7592dd593ee19378ecae1ac042",
+        "source_date": "2025-09-02",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Publiceringsstatus och produkt-/versionsfält lästa. OEM-koppling ej automatiskt bekräftad."
+      },
+      "extra": {}
+    },
+    {
+      "row": 80,
+      "fields": {
+        "source_key": "CVE-2025-6519",
+        "publisher_format": "CVE/CNA",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2025-6519",
+        "document_sha256": "cc3e75a36e186ccd7c9801b019332769756dd9efc48c77a609fc3611f100256f",
+        "source_date": "2025-09-02",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Publiceringsstatus och produkt-/versionsfält lästa. OEM-koppling ej automatiskt bekräftad."
+      },
+      "extra": {}
+    },
+    {
+      "row": 81,
+      "fields": {
+        "source_key": "CVE-2026-21718",
+        "publisher_format": "CVE/CNA",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2026-21718",
+        "document_sha256": "636f725c31859914171b886db992e292f6e3766ee621f092b86b1c8b37bb0619",
+        "source_date": "2026-03-02",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Publiceringsstatus och produkt-/versionsfält lästa. OEM-koppling ej automatiskt bekräftad."
+      },
+      "extra": {}
+    },
+    {
+      "row": 82,
+      "fields": {
+        "source_key": "CVE-2026-34223",
+        "publisher_format": "CVE/CNA",
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2026-34223",
+        "document_sha256": "5e8b2f8528fb454849431cf1cc54d7038401bca84923b4b933586b017a89dbb4",
+        "source_date": "2026-09-14",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Publiceringsstatus och produkt-/versionsfält lästa. OEM-koppling ej automatiskt bekräftad."
+      },
+      "extra": {}
+    },
+    {
+      "row": 83,
+      "fields": {
+        "source_key": "KEV",
+        "publisher_format": "CISA KEV",
+        "url": "https://raw.githubusercontent.com/cisagov/kev-data/main/known_exploited_vulnerabilities.json",
+        "document_sha256": "47e0406b2be5a40420eff66f3d90e83eb8883dae6ff4d08e1b2a942c366f6cc2",
+        "source_date": "2026-11-06",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Exakt match på CVE-ID. Ingen träff innebär inte frånvaro av exploatering."
+      },
+      "extra": {}
+    },
+    {
+      "row": 84,
+      "fields": {
+        "source_key": "SETUP-001",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://assets.danfoss.com/documents/latest/56759/BC316842192932en-001001.pdf",
+        "document_sha256": "7f7c65686a6b9d8a940102579833002bd939ed680da3ae3354c4eae1744e5b55",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 85,
+      "fields": {
+        "source_key": "SETUP-002",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://blog.albedotelecom.com/ntime-configuration/",
+        "document_sha256": "d7a1dc7c0a95408de455fdf8c5d2834ab389dd2a7f241ecdf9d63ae62b4111e9",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 86,
+      "fields": {
+        "source_key": "SETUP-003",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://cache.industry.siemens.com/dl/files/186/109954186/att_1263824/v1/PH_SCALANCE-SC-600-WBM_76_en-US.pdf",
+        "document_sha256": null,
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
+      },
+      "extra": {}
+    },
+    {
+      "row": 87,
+      "fields": {
+        "source_key": "SETUP-004",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://cache.industry.siemens.com/dl/files/321/109742321/att_1333624/v1/SIP5_Operating_V10.00_Manual_C003-Q_en.pdf",
+        "document_sha256": null,
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
+      },
+      "extra": {}
+    },
+    {
+      "row": 88,
+      "fields": {
+        "source_key": "SETUP-005",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://cache.industry.siemens.com/dl/files/442/109483442/att_916592/v1/MAN_2514374103-04_en_en-US.pdf",
+        "document_sha256": null,
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
+      },
+      "extra": {}
+    },
+    {
+      "row": 89,
+      "fields": {
+        "source_key": "SETUP-006",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://cache.industry.siemens.com/dl/files/635/109751635/att_1080413/v1/PH_SCALANCE-M8x-WBM_76.pdf",
+        "document_sha256": null,
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
+      },
+      "extra": {}
+    },
+    {
+      "row": 90,
+      "fields": {
+        "source_key": "SETUP-007",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://cache.industry.siemens.com/dl/files/884/109976884/att_1305107/v1/PH_SCALANCE-LPE-9000_76_en-US.pdf",
+        "document_sha256": null,
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
+      },
+      "extra": {}
+    },
+    {
+      "row": 91,
+      "fields": {
+        "source_key": "SETUP-008",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://cdn.automationdirect.com/static/manuals/mbgatewaym/mbgatewaym.html",
+        "document_sha256": null,
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
+      },
+      "extra": {}
+    },
+    {
+      "row": 92,
+      "fields": {
+        "source_key": "SETUP-009",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://cityworks.my.site.com/",
+        "document_sha256": "0b9f17cfbf718f864d9f7e383a2d1d47d73245c7f9b9b9dc53b1aa4ddad53051",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 93,
+      "fields": {
+        "source_key": "SETUP-010",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://ckm-content.se.com/ckmContent/sfc/servlet.shepherd/document/download/0698V00000bJgNRQA0",
+        "document_sha256": null,
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: HTTP Error 503: Service Unavailable"
+      },
+      "extra": {}
+    },
+    {
+      "row": 94,
+      "fields": {
+        "source_key": "SETUP-011",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://csrc.nist.gov/pubs/sp/800/82/r3/final",
+        "document_sha256": "06470dac3d9229ede90ecf4ae1c8c702623d9e4f970a5aff37cde27c9a46cd19",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 95,
+      "fields": {
+        "source_key": "SETUP-012",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://dl.weintek.com/public/Document/UM0/cMT-Viewer-UserManual-eng.pdf",
+        "document_sha256": "5439d88defd412f8f6ba0b24540961cc79faa75d53bc94e4b288073e0882fcfb",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 96,
+      "fields": {
+        "source_key": "SETUP-013",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://docs.aveva.com/bundle/plant-scada/page/1243288.html",
+        "document_sha256": "142d32fc73b51c913302001dcfe871d1b025c86806dabddc6feb988c56288f2e",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 97,
+      "fields": {
+        "source_key": "SETUP-014",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://docs.johnsoncontrols.com/bas/api/khub/documents/H04APcCjLovR_YJ5co8puA/content",
+        "document_sha256": "17548cc2b10f048978c17db324fdfa335c0eb34241700ac84768001b42c56f39",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 98,
+      "fields": {
+        "source_key": "SETUP-015",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://docs.qnap.com/operating-system/qts/5.1.x/qts5.1.x-ug-en-us.pdf",
+        "document_sha256": null,
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
+      },
+      "extra": {}
+    },
+    {
+      "row": 99,
+      "fields": {
+        "source_key": "SETUP-016",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://docs.tia.siemens.cloud/r/simatic_s7_1200_manual_collection_enus_20/device-configuration/protection-security",
+        "document_sha256": null,
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
+      },
+      "extra": {}
+    },
+    {
+      "row": 100,
+      "fields": {
+        "source_key": "SETUP-017",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://docs.tia.siemens.cloud/r/simatic_s7_1500_et_200mp_manual_collection_enus_20/basic-information/automation-system/protection",
+        "document_sha256": null,
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
+      },
+      "extra": {}
+    },
+    {
+      "row": 101,
+      "fields": {
+        "source_key": "SETUP-018",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://document.infinitt.com/fr",
+        "document_sha256": "4fdb662295bc8870f74e99fe333b864566459431fae62e9848a4f47060c6ce6b",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 102,
+      "fields": {
+        "source_key": "SETUP-019",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://download.beckhoff.com/download/document/ipc/embedded-pc/embedded-pc-cx/TwinCAT_BSD_en.pdf",
+        "document_sha256": "86a814524f77aff9ed7f18c5020b559b504a62a3d21ad6b4b641f3b55d68714b",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 103,
+      "fields": {
+        "source_key": "SETUP-020",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://download.schneider-electric.com/files?p_Doc_Ref=DOCA0172EN",
+        "document_sha256": null,
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: HTTP Error 403: Forbidden"
+      },
+      "extra": {}
+    },
+    {
+      "row": 104,
+      "fields": {
+        "source_key": "SETUP-021",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://ecostruxure-building-help.se.com/bms/Topics/Show?id=10460&locale=en-US&productversion=7.1",
+        "document_sha256": "baf2d02d64611277fef3decc1830bedca782e86a134f65341829219c04809758",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 105,
+      "fields": {
+        "source_key": "SETUP-022",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://emea.mitsubishielectric.com/fa/products/quality/quality-news-information",
+        "document_sha256": "7ecbb104736429d34b262853c2b4ceb760ce4a2a5abd2f41159df3e935d72fab",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 106,
+      "fields": {
+        "source_key": "SETUP-023",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://en.help.plc.abb.com/",
+        "document_sha256": "27ac869de169b2d266faccfa6b8314a86c12412504ab0be576c4882969dc253d",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 107,
+      "fields": {
+        "source_key": "SETUP-024",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://engineer.plcnext.help/2024.0_LTS_en/Security_ControllerSettingsWBM.htm",
+        "document_sha256": "b2b48d240127f66bbe6dadd3dcb3b3e9b0f9305abdbe9c9ef5c7ca4570c55425",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 108,
+      "fields": {
+        "source_key": "SETUP-025",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://files.sma.de/downloads/SWebBox-BA-en-36.pdf",
+        "document_sha256": "126f52efbfbaa7d82691b505fe4eaae01568786b12d8e5f95e2f29051348d6bb",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 109,
+      "fields": {
+        "source_key": "SETUP-026",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://ftp.wti.com/download/manuals/wti_firmware_guide.pdf",
+        "document_sha256": "7c4d2ce7e5ba94c985b0bdc0d6c1a735274ec9c973aa03dd0d17a101c91cd404",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 110,
+      "fields": {
+        "source_key": "SETUP-027",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://help.axis.com/en-US/access-your-device",
+        "document_sha256": "2a2f043e751cea7161682dafb06c4ff1104680c701b162b35420d7f373984b41",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 111,
+      "fields": {
+        "source_key": "SETUP-028",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://inductiveautomation.com/resources/article/ignition-security-hardening-guide",
+        "document_sha256": "875adf8fb6653ca3fb6af89b61dc5d6163e9afb36fa946f119f3825f47bd5714",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 112,
+      "fields": {
+        "source_key": "SETUP-029",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://infosys.beckhoff.com/content/1033/twincat_bsd/7873137291.html",
+        "document_sha256": "bacf7f4238151b20fe10126e0ab0232067204be77827bac47420e933058d6d6d",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 113,
+      "fields": {
+        "source_key": "SETUP-030",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://kb.synology.com/DSM/tutorial/How_to_install_DSM",
+        "document_sha256": "094b99ab07571e8485201bfae7123d4c223962591624ca9c800588b14159491e",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 114,
+      "fields": {
+        "source_key": "SETUP-031",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://kb.synology.com/en-in/DSM/tutorial/Quick_Start_Security",
+        "document_sha256": "ed7927d3c51088104e3ddab03252ece1bf4c95b41bd490115969bf90240d1ff7",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 115,
+      "fields": {
+        "source_key": "SETUP-032",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://kr.nihonkohden.com/ko/media-center/operation-manuals",
+        "document_sha256": "6318f2bf70e064e9b0103e168712cffd1cc2bf532b8724b1d480b061121b3e6f",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 116,
+      "fields": {
+        "source_key": "SETUP-033",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://learn.microsoft.com/en-us/sql/relational-databases/security/secure-sql-server?view=sql-server-ver17",
+        "document_sha256": "dae40657ac821e0d8e8f05b1d0fc7883b53f55396c31355598d4d68e0263f5da",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 117,
+      "fields": {
+        "source_key": "SETUP-034",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://library.e.abb.com/public/0498e4c0babd46aa9243aedd6f99c375/ARM600_user_758861_ENk.pdf",
+        "document_sha256": "da38413249ceb7b91b040870c97f766abeb5a4ebaaf3de891dce21ba78777af8",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 118,
+      "fields": {
+        "source_key": "SETUP-035",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://library.e.abb.com/public/b1f767ed9c69476485b3119dee32021f/2105551MNAD.pdf",
+        "document_sha256": "fbbe33bb810532303eb78ed77a011ce446865920ca514a908ce81c4c4e876609",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 119,
+      "fields": {
+        "source_key": "SETUP-036",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://library.e.abb.com/public/e1d70a639e6c4f8abae1b7bbc7e2758a/MAN0126%20ASPECT-Enterprise%20Installation.pdf",
+        "document_sha256": "0e3455a001c1556733186e23bef2d2d23632b919e8e9b398880ceac29507631e",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 120,
+      "fields": {
+        "source_key": "SETUP-037",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://linear-solutions.com/wp-content/uploads/pdf/manuals/eMerge-Series_Installation-Guide.pdf",
+        "document_sha256": "c67c965e326b58997838a36a5604e24439e96794928c18117ae0c9798d32c004",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 121,
+      "fields": {
+        "source_key": "SETUP-038",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://literature.rockwellautomation.com/idc/groups/literature/documents/in/ftac-in005_-en-e.pdf",
+        "document_sha256": null,
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: HTTP Error 403: Forbidden"
+      },
+      "extra": {}
+    },
+    {
+      "row": 122,
+      "fields": {
+        "source_key": "SETUP-039",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://literature.rockwellautomation.com/idc/groups/literature/documents/um/2080-um002_-en-e.pdf",
+        "document_sha256": null,
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: HTTP Error 403: Forbidden"
+      },
+      "extra": {}
+    },
+    {
+      "row": 123,
+      "fields": {
+        "source_key": "SETUP-040",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://literature.rockwellautomation.com/idc/groups/literature/documents/um/5069-um001_-en-p.pdf",
+        "document_sha256": null,
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: HTTP Error 403: Forbidden"
+      },
+      "extra": {}
+    },
+    {
+      "row": 124,
+      "fields": {
+        "source_key": "SETUP-041",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://manuals.fronius.com/html/4204260191/sv.html",
+        "document_sha256": "2badf1eededdde02356deb483f9b844ba06ebc6938913ff6f9774c14050d77f6",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 125,
+      "fields": {
+        "source_key": "SETUP-042",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://oringnet.com/en/products/industrial-iot/industrial-wireless-access-point/266-iap-420",
+        "document_sha256": "4cb8c3e2ad7808e5f0d83dcc43599da6954243623529fb49318d57afb5c9445c",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 126,
+      "fields": {
+        "source_key": "SETUP-043",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://orthanc.uclouvain.be/book/users/cookbook.html",
+        "document_sha256": "c5d9123a812fd7e8780f1ee97b5f9a60f5e2bed6855387cec89f74aeedd6a43f",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 127,
+      "fields": {
+        "source_key": "SETUP-044",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://outbackpower.com/downloads/documents/mojave/mojave_inv/mojave_qsg.pdf",
+        "document_sha256": "e8485387e57701fb091ab02472da9e0b7ff7c5c21aa0542bddf1e1a5d5238211",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 128,
+      "fields": {
+        "source_key": "SETUP-045",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://process.honeywell.com/us/en/support/technical-publication?search=SN2025",
+        "document_sha256": "e726b94ca4610e4c6f03539b1c11806a60e917f818b155bfa9630b9bbb0d291c",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 129,
+      "fields": {
+        "source_key": "SETUP-046",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://rco.se/mjukvara/grundlicenser/programvare/m5/r-card-m5",
+        "document_sha256": "bab54e1516620c209d5793c78ba8e8d032759ae7bf063fdb450f7a51d0c644e3",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 130,
+      "fields": {
+        "source_key": "SETUP-047",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://reference.opcfoundation.org/specs/OPC-10000-2/1",
+        "document_sha256": "0476db076c2beb77e321c3a9a7442b6f2cbedb9b6d4ee77fd5e03d7b3bab6d11",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 131,
+      "fields": {
+        "source_key": "SETUP-048",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://resource.milesight.com/milesight/iot/document/ug65-user-guide-en.pdf",
+        "document_sha256": "1a5d3d98ca36277437c87457ed531e80e8b140f0dc1752d9c174a50c3b0189c6",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 132,
+      "fields": {
+        "source_key": "SETUP-049",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://revolutionpi.com/en/getting-started/revpi",
+        "document_sha256": "94d3235546c1178e90290e4cacdcc122c21898f7e6ee5d95f102fc34c893c5c9",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 133,
+      "fields": {
+        "source_key": "SETUP-050",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://search.abb.com/library/Download.aspx?DocumentID=1MRS758860&LanguageCode=en&DocumentPartId=&Action=Launch",
+        "document_sha256": "a8af2e4f537f1daac5d61cb380b7050fcb1bebed622396a2792cee12b84ec51c",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 134,
+      "fields": {
+        "source_key": "SETUP-051",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://sid.siemens.com/r/A6V10506067/18181420683___en-US_18180755211",
+        "document_sha256": null,
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
+      },
+      "extra": {}
+    },
+    {
+      "row": 135,
+      "fields": {
+        "source_key": "SETUP-052",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://sid.siemens.com/r/A6V14948151/29540941067___en-US_29541994379",
+        "document_sha256": null,
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
+      },
+      "extra": {}
+    },
+    {
+      "row": 136,
+      "fields": {
+        "source_key": "SETUP-053",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://sid.siemens.com/v/u/A6V13527998",
+        "document_sha256": null,
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
+      },
+      "extra": {}
+    },
+    {
+      "row": 137,
+      "fields": {
+        "source_key": "SETUP-054",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://statik.vestel.com.tr/webfiles/vestel-evc-kurulum-rehberi-v2.pdf",
+        "document_sha256": "b0d17619186dd731716d111a97aa61aed1e22f99f7f6efbc45e2147d4cc009b6",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 138,
+      "fields": {
+        "source_key": "SETUP-055",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://subnet.com/products/powersystem-center/",
+        "document_sha256": "cba9426a4be64bc6c1c88ded05ff681855d07363bdad87e1be7d989766cd3069",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 139,
+      "fields": {
+        "source_key": "SETUP-056",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://support.automationdirect.com/products/cmore.html",
+        "document_sha256": "37bd4693623240d405a72c7d21d093db958a07f665d3f50288e3ee782fd757c3",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 140,
+      "fields": {
+        "source_key": "SETUP-057",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://support.hms-networks.com/hc/en-us/articles/36118468108690-Setting-up-an-Ewon-for-the-first-time",
+        "document_sha256": "226d7f9439eff65ce819c8e69481dfa56373503c584d1233b06926f57e9c9181",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 141,
+      "fields": {
+        "source_key": "SETUP-058",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://support.industry.siemens.com/cs/attachments/109782228/versicharge_wallbox_operating_instructions_en-US_en-US.pdf?download=true",
+        "document_sha256": null,
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
+      },
+      "extra": {}
+    },
+    {
+      "row": 142,
+      "fields": {
+        "source_key": "SETUP-059",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://support.industry.siemens.com/cs/attachments/109977047/BA_SINEMA-RC-Server_76.pdf",
+        "document_sha256": null,
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
+      },
+      "extra": {}
+    },
+    {
+      "row": 143,
+      "fields": {
+        "source_key": "SETUP-060",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://support.industry.siemens.com/cs/attachments/109977665/PH_SCALANCE-W700ax-WBM_76_en-US.pdf",
+        "document_sha256": null,
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
+      },
+      "extra": {}
+    },
+    {
+      "row": 144,
+      "fields": {
+        "source_key": "SETUP-061",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://support.industry.siemens.com/dl/files/368/109828368/att_1262627/v1/WinCC_VisualizingProcessesUnified_enUS_en-US.pdf",
+        "document_sha256": null,
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
+      },
+      "extra": {}
+    },
+    {
+      "row": 145,
+      "fields": {
+        "source_key": "SETUP-062",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://support.rockwellautomation.com/app/answers/answer_view/a_id/54455/~/factorytalk-view-site-edition-installation-guide-",
+        "document_sha256": "88d86ca08d258ce8acf843c7ea54899f225037be2b75f73a7ae7ab4ddaa88138",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 146,
+      "fields": {
+        "source_key": "SETUP-063",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://thinmanager.com/support/manuals/",
+        "document_sha256": "4a0e1a1dd9f06a17d2da5fc9a3158092a84080db672db90e8a44f4f1e15bc6a4",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 147,
+      "fields": {
+        "source_key": "SETUP-064",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://webapps.copeland.com/Dixell/Content/Pages/Manuals/XWEBPRO/XWEBPROV1.2OPERATION/XWEB-PRO-OPR-EN.pdf",
+        "document_sha256": "605b7316c582b598f33e4a853435de0e371392dae39c8460ddc8af4f502d7b80",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 148,
+      "fields": {
+        "source_key": "SETUP-065",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://wiki.teltonika-networks.com/wikibase/index.php?mobileaction=toggle_view_desktop&title=RUT955_Device_Recovery_Options",
+        "document_sha256": "01860aaf04c33aed01cb5924932a4c15ebf9ac327833a7f8fb1bbe2d300ee1d3",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 149,
+      "fields": {
+        "source_key": "SETUP-066",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://wiki.teltonika-networks.com/wikibase/index.php?title=RUT955_Setup_Wizard",
+        "document_sha256": "c6e9b85b59cde423c98934ba517189fab9a414604e8a2f44049dde391cca2ce9",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 150,
+      "fields": {
+        "source_key": "SETUP-067",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.2n.com/en-GB/manuals/intercoms/2n-ip-verso/",
+        "document_sha256": "1cef945cd5d6f0f459588d6b7439a99d332b6be7fd7791df43e46ae591b09d39",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 151,
+      "fields": {
+        "source_key": "SETUP-068",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.2n.com/en-US/manuals/42754/2_50/device-configuration-interface-access/",
+        "document_sha256": "2bcde6f5aabd769c8e246448134283dbb0af6ccd53ffbed2115680bbe38f7fe5",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 152,
+      "fields": {
+        "source_key": "SETUP-069",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.abb.com/global/en/company/about/cybersecurity/alerts-and-notifications",
+        "document_sha256": "2d2bcc56b1138541711aa090258921360370d456c0123188ade8f6752db5900d",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 153,
+      "fields": {
+        "source_key": "SETUP-070",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.assaabloy.com/se/sv/service/support/access-control-system",
+        "document_sha256": "72463a511a81b38f01530e6c046f00e91a977d4f4f951b5509c1492337454168",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 154,
+      "fields": {
+        "source_key": "SETUP-071",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.assaabloy.com/se/sv/service/support/aptus",
+        "document_sha256": "78b91ea235dc3b346183e9a0a704389945b40cdaf6327b824b02c7b5447f8cb5",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 155,
+      "fields": {
+        "source_key": "SETUP-072",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.automatedlogic.com/en/products/webctrl-building-automation-system/",
+        "document_sha256": null,
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
+      },
+      "extra": {}
+    },
+    {
+      "row": 156,
+      "fields": {
+        "source_key": "SETUP-073",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.br-automation.com/en-ca/downloads/aprol-documentation-44-00p40/",
+        "document_sha256": "5ac0d82a7af9834d45850e75448f0a19e562458e987739469b84606d98f0e25b",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 157,
+      "fields": {
+        "source_key": "SETUP-074",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.br-automation.com/en-us/products/software/automation-runtime/",
+        "document_sha256": "ffb6e0617f7966060cdd3eab4164d15fe91b908b9a0b2fbd5955a8d59c484d24",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 158,
+      "fields": {
+        "source_key": "SETUP-075",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.carel.com/documents/10191/0/%2B030220471/9619472f-f1c0-4ec9-a151-120aaa5e479a?version=1.0",
+        "document_sha256": "ba25a0f05590cd7835618ac6121266ac377cf9764a9e524f441d748a26e11655",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 159,
+      "fields": {
+        "source_key": "SETUP-076",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.cisa.gov/sites/default/files/2023-01/RP_Managing_Remote_Access_S508NC.pdf",
+        "document_sha256": "3ba9ed80c5eeac82df624829621eca145d4fda62207883afdf02fc3916f54456",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 160,
+      "fields": {
+        "source_key": "SETUP-077",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.consiliumsafety.com/en/support/",
+        "document_sha256": "6d86e2cc9933453138b82473043e7e6973ae200aff20f1d39cc5665741867bbe",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 161,
+      "fields": {
+        "source_key": "SETUP-078",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.controlid.com.br/docs/idsecure-en/",
+        "document_sha256": "28d5b9d7e6ccaf3754edaabf193a83b2843c6d0b1efc8cab160a8a1af5ad34f6",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 162,
+      "fields": {
+        "source_key": "SETUP-079",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.copeland.com/en-ca/products/controls-monitoring-systems/facility-controls-electronics/facility-and-system-controls/documents/e2-and-einstein",
+        "document_sha256": "0d69242c41ff264c2f7c0d43a7651f955cf7d08348c7d5c9187f98d6cf722202",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 163,
+      "fields": {
+        "source_key": "SETUP-080",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.copeland.com/en-us/products/controls-monitoring-systems/facility-controls-electronics/facility-and-system-controls/documents/supervisory-e3",
+        "document_sha256": "36f4e4b0cc92fffb2915573670abaf1115de2551685f9a62c1d420d86a787630",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 164,
+      "fields": {
+        "source_key": "SETUP-081",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.cyberdata.net/products/011209",
+        "document_sha256": null,
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: HTTP Error 429: Too Many Requests"
+      },
+      "extra": {}
+    },
+    {
+      "row": 165,
+      "fields": {
+        "source_key": "SETUP-082",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.dahuasecurity.com/asset/upload/uploads/soft/20181120/Initialization_and_password_reset_for_networking_cameras_V1_EN_20171109.pdf",
+        "document_sha256": "e705a0872308a7081c3d5aff9c4c905e430e2d93f184c564913598a73af002eb",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 166,
+      "fields": {
+        "source_key": "SETUP-083",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.danfoss.com/en-us/service-and-support/fix-and-troubleshooting/supporting-supermarkets/",
+        "document_sha256": null,
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: HTTP Error 403: Forbidden"
+      },
+      "extra": {}
+    },
+    {
+      "row": 167,
+      "fields": {
+        "source_key": "SETUP-084",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.danfoss.com/en/service-and-support/downloads/dcs/adap-kool-software/ak-sm-800a/",
+        "document_sha256": null,
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: HTTP Error 403: Forbidden"
+      },
+      "extra": {}
+    },
+    {
+      "row": 168,
+      "fields": {
+        "source_key": "SETUP-085",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.dingtian-tech.com/en_us/relay2.html",
+        "document_sha256": "5f9f5bf22fde9efc821c8b59f030dfa95c3e327f0968b35d4a1742fb1ef0b378",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 169,
+      "fields": {
+        "source_key": "SETUP-086",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.docs.inductiveautomation.com/docs/8.3/getting-started/installing-and-upgrading/ignition-8-upgrade-guide/79to81-upgrade-guide",
+        "document_sha256": "85256d506eb2ee2b2837617dbbf33f7e2bc135d1dce455a4f884ee2d8892e963",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 170,
+      "fields": {
+        "source_key": "SETUP-087",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.docs.inductiveautomation.com/docs/8.3/getting-started/startup-guide/downloading-and-installing-ignition",
+        "document_sha256": "cf9c0ae394cfe2d1ff2d9da3c999041eddebd8728a8fe467d32ec1d80a9b7673",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 171,
+      "fields": {
+        "source_key": "SETUP-088",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.doverfuelingsolutions.com/content/dam/dfs/atg-files/brochures-and-mannuals/M2052%20ProGauge%20MagLink%20Consoles%20User%20Manual.pdf",
+        "document_sha256": null,
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: HTTP Error 403: Forbidden"
+      },
+      "extra": {}
+    },
+    {
+      "row": 172,
+      "fields": {
+        "source_key": "SETUP-089",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.hikvision.com/content/dam/hikvision/products/S000000001/S000000002/S000000016/S000000017/OFR000019/M000000381/User_Manual/UD11733B-D_Baseline_User-Manual-of-Network-Camera_V5.5.85_20221222.pdf",
+        "document_sha256": "abf780a2e3906859f1db6bc3953e1e2cf54bcc181f1a578a13e70381f168645f",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 173,
+      "fields": {
+        "source_key": "SETUP-090",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.hikvision.com/content/dam/hikvision/products/S000000001/S000000313/S000000314/S000000905/OFR000425/M000002510/Quick_Start_Guide/UD22496B_Baseline_Anti-Corrosion-Thermal-Bullet-Camera-Quick-Start-Guide_V5.4.2_20201230.pdf",
+        "document_sha256": "5f935c5fc839170d52cdd995785d89ba971c72da004b6241049c1824d042df0c",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 174,
+      "fields": {
+        "source_key": "SETUP-091",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.hitachienergy.com/products-and-solutions/substation-automation-protection-and-control/products/remote-terminal-units",
+        "document_sha256": "c7acf43affc66690a590354daa81f904ae4b87c8c54e93b407e4198d687b9bf7",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 175,
+      "fields": {
+        "source_key": "SETUP-092",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.hms-networks.com/support/tech-support/kb-articles/12250895874578-How-to-Get-an-Ewon-Backup-from-the-Web-Interface",
+        "document_sha256": "b4be3850187e8d24c1c19f439f6b99587bd3608e93550434f2b221c1052d2b09",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 176,
+      "fields": {
+        "source_key": "SETUP-093",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.home-assistant.io/getting-started/onboarding",
+        "document_sha256": "969c0a5fa98169314394d79d8dd02720d52f64aa3ed47d7c5f29785931199e00",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 177,
+      "fields": {
+        "source_key": "SETUP-094",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.ia.omron.com/product/tool/454/sysmac-studio/e1_doc.html",
+        "document_sha256": null,
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: HTTP Error 403: Forbidden"
+      },
+      "extra": {}
+    },
+    {
+      "row": 178,
+      "fields": {
+        "source_key": "SETUP-095",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.johnsoncontrols.com/Trust-Center/Cybersecurity/Resources",
+        "document_sha256": "63898246a04497b626e8cfd2f68608a2f43f23fdf65512782251e8e7fc58bd20",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 179,
+      "fields": {
+        "source_key": "SETUP-096",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.lantronix.com/products/xport/",
+        "document_sha256": "81635e1e54e8bebc3625ae797608004fb5b6a86f2377c0bf80ce1c61eec8f299",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 180,
+      "fields": {
+        "source_key": "SETUP-097",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.mitsubishielectric.com/fa/download/search.page?kisyu=%2Fplcf&mode=manual",
+        "document_sha256": "9b2fbe9ac47423bea47fa40d72fb36228740e0808f85d3c399e76851cd24767b",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 181,
+      "fields": {
+        "source_key": "SETUP-098",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.mitsubishielectric.com/fa/download/search.page?kisyu=%2Fplcr&mode=manual",
+        "document_sha256": "5baeffe1a96e161263310f5f57f58f9bf0868755a49bbac1b9741524e042adfb",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 182,
+      "fields": {
+        "source_key": "SETUP-099",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.moxa.com/getmedia/5c1ddb66-33b7-42d0-8d30-559f34f62753/moxa-nport-6000-series-manual-v17.5.pdf",
+        "document_sha256": "d8e03b5a9c8540804bb93efa7fff6f13ccb836f35e22453427cc1fc50514a3f5",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 183,
+      "fields": {
+        "source_key": "SETUP-100",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.myscada.org/docs/installation/",
+        "document_sha256": "e615b35ea00b07ba8ea7efbc0a39411ccb431bcfacd120225927ff56a2283db1",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 184,
+      "fields": {
+        "source_key": "SETUP-101",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.nedap.com/en/contact-us",
+        "document_sha256": "d0b80539295aa36d2f084782a085bd17a030f7c4489d9f57f691e1beb0cc66d8",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 185,
+      "fields": {
+        "source_key": "SETUP-102",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.nibe.eu/en-eu/documents",
+        "document_sha256": "2b098aa0893de5c07c5f92fa22d10ddf73b7d089b964d014dc481f44524535b4",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 186,
+      "fields": {
+        "source_key": "SETUP-103",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.optigo.net/webinar/optigo-connect-and-oneview-demo/",
+        "document_sha256": "7cb907340dd7f15d4724bb397aff0f45d832ac158e3e92c6e1dc876fbee56e5a",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 187,
+      "fields": {
+        "source_key": "SETUP-104",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.planet.com.tw/en/product/uni-nms",
+        "document_sha256": "04b0c0f0cd23bdb57fbcf791e6dd4c65b43b85c4de63b1d81dbec3c9d331ada8",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 188,
+      "fields": {
+        "source_key": "SETUP-105",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.pro-face.com/otasuke/download/manual/",
+        "document_sha256": null,
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: <urlopen error [WinError 10061] Det gick inte att göra en anslutning eftersom måldatorn aktivt nekade det>"
+      },
+      "extra": {}
+    },
+    {
+      "row": 189,
+      "fields": {
+        "source_key": "SETUP-106",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.ptc.com/en/support/refdoc/KEPServerEX/6.16/kepserverex_installation_guide",
+        "document_sha256": "2972a546012870d19be45d8370f52a68d01fd857399645410946b90d77a1cff9",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 190,
+      "fields": {
+        "source_key": "SETUP-107",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.qnap.com/en-us/how-to/faq/article/what-is-the-default-system-administrator-password-for-my-nas",
+        "document_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 202"
+      },
+      "extra": {}
+    },
+    {
+      "row": 191,
+      "fields": {
+        "source_key": "SETUP-108",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.regincontrols.com/globalassets/pimmediafiles/documents/corrigo-5.0_ma30012_en.pdf",
+        "document_sha256": "634ff8e84736503c3e8904d9f92abf4805d5609b7475908f24f3c554086e7761",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 192,
+      "fields": {
+        "source_key": "SETUP-109",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.rockwellautomation.com/en-se/docs/technical/logix5000/_online/1756-um543/controllogix-5580-and-guardlogix-5580-controllers-/develop-secure-applications.html",
+        "document_sha256": null,
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: HTTP Error 403: Forbidden"
+      },
+      "extra": {}
+    },
+    {
+      "row": 193,
+      "fields": {
+        "source_key": "SETUP-110",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.rockwellautomation.com/en-us/docs/technical/logix5000/_online/1756-um900/controllogix-5590-controller-user-manual-ditamap/develop-secure-applications.html",
+        "document_sha256": null,
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: HTTP Error 403: Forbidden"
+      },
+      "extra": {}
+    },
+    {
+      "row": 194,
+      "fields": {
+        "source_key": "SETUP-111",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.rockwellautomation.com/en-us/support/documentation/technical/drives/low-voltage-architecture-class-ac-drives.html",
+        "document_sha256": null,
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: HTTP Error 403: Forbidden"
+      },
+      "extra": {}
+    },
+    {
+      "row": 195,
+      "fields": {
+        "source_key": "SETUP-112",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.samsung.com/ie/support/model.MIM-D01AN/",
+        "document_sha256": "e3bc320543ec45ce653e4b4d3ccaae30a385898fe2ebd81147c8394a5a4eacdd",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 196,
+      "fields": {
+        "source_key": "SETUP-113",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.se.com/au/en/product/WHC_5918A/wiser-home-controller/",
+        "document_sha256": "16b99f0bebcdcc312f88127486dffffda91cba4ce7df83d92251fca066ae8da1",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 197,
+      "fields": {
+        "source_key": "SETUP-114",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.se.com/ca/en/download/document/EIO0000005743/",
+        "document_sha256": "70951da4a91d70733f8a3a76fa27b8d4afe898e4a78b4c0dc99dd1c7661932a9",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 198,
+      "fields": {
+        "source_key": "SETUP-115",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.se.com/ca/en/download/document/PCM-UM-5350ATSRA/",
+        "document_sha256": "bbb1f33974a4fa483d7f5faba8a06a2a00ddc0154e4d4b94fe1a104f81e419e6",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 199,
+      "fields": {
+        "source_key": "SETUP-116",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.se.com/in/en/download/document/EIO0000003527/",
+        "document_sha256": "c9952e11bde2777b31e7d8f6478dc4da9f88044f6189dc0f2e190f0c742abae2",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 200,
+      "fields": {
+        "source_key": "SETUP-117",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.se.com/jp/ja/faqs/FA409393/",
+        "document_sha256": "b2861f716c91ce007beeb5dd4022d3c17868fad455b79c737179192f5f49d376",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 201,
+      "fields": {
+        "source_key": "SETUP-118",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.se.com/sg/en/download/document/SE-S856-MSS/",
+        "document_sha256": "842494f0a6f66b3ec301af36d5d1e88ec855981225563f01e64f822fe25a9980",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 202,
+      "fields": {
+        "source_key": "SETUP-119",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.se.com/sg/en/faqs/FAQ000239191/",
+        "document_sha256": "3d96d42e0f1732a452934a200934a51837b169500e9a0b62256c4ad053e43d9b",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 203,
+      "fields": {
+        "source_key": "SETUP-120",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.se.com/sg/en/faqs/FAQ000277565/",
+        "document_sha256": "5caf90f88f2551279290139a54dc901a15917e68abd9e653efc99d93a050c9ed",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 204,
+      "fields": {
+        "source_key": "SETUP-121",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.se.com/us/en/faqs/FA386978/",
+        "document_sha256": "68314fb97a48f9f8bfb76bb8f15224d7d1f860a55b0748f5bc614378f934e649",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 205,
+      "fields": {
+        "source_key": "SETUP-122",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.se.com/us/en/work/products/explore/modicon-plc-pac/modicon-documentation/",
+        "document_sha256": "03392f0b777830c5d78b848b17fbb55abc86f2c1020436ba6bee66879d36f9f5",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 206,
+      "fields": {
+        "source_key": "SETUP-123",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.se.com/ww/en/download/document/DOCA0084EN/",
+        "document_sha256": "efb53ce4f070ce1a41869986c93206dd70a4a2e839159750204589275cdef6c3",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 207,
+      "fields": {
+        "source_key": "SETUP-124",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.se.com/ww/en/download/document/DOCA0122EN/",
+        "document_sha256": "eeb84af0ee0950561b4b79cae9cfd87bd42f03bd2f172c4188ddc9632f9621f4",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 208,
+      "fields": {
+        "source_key": "SETUP-125",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.solar-log.com/fileadmin/user_upload/documents/Handbuecher_und_Inlet/en_GB/SolarLog_Quick_Start_Guide_Kurzanleitung_Solar-Log_Base_DE_EN.pdf",
+        "document_sha256": null,
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1010)>"
+      },
+      "extra": {}
+    },
+    {
+      "row": 209,
+      "fields": {
+        "source_key": "SETUP-126",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.sungrowpower.com/latam/es/products/intelligent-gateway/monitoringlogger1000?tab=2",
+        "document_sha256": "e7734f2b145c2508f76ffba631d571f1c766d1a6f2363025404c100806ef910e",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 210,
+      "fields": {
+        "source_key": "SETUP-127",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.swegon.com/sv/support/hitta-information/hitta-dokument/?q=gold",
+        "document_sha256": "b10c3213ec90511d26762406f9da8e369270152437d4febe8535d6aea72a7009",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 211,
+      "fields": {
+        "source_key": "SETUP-128",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.systemair.com/sv-se/produkter/ventilationssystem-for-bostader/tillbehor/tillbehor-for-bostadsaggregat/styrutrustning/save-connect",
+        "document_sha256": "179012d9edf28c4b5b19afaa8dd717394a36ae40e5ddf0701e6d3414317fceda",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 212,
+      "fields": {
+        "source_key": "SETUP-129",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.tridium.com/content/dam/tridium/en/documents/document-lists/niagara/tri-Niagara4-Hardening-Guide-en-2025.pdf",
+        "document_sha256": "de80380b430d3a24923957ed4ccf999c028629d242ae7a925f01e6b7c3c53ccb",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 213,
+      "fields": {
+        "source_key": "SETUP-130",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.unitronicsplc.com/Download/SoftwareHelp/VisiLogic_Knowledgebase/E-learning.htm",
+        "document_sha256": "406333cf48755bc3d96307325728b7f5e743861a40f614a97a44c7411d8daae5",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 214,
+      "fields": {
+        "source_key": "SETUP-131",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.vertiv.com/48ec29/globalassets/shared/liebert-intellislot-rdu101-communications-card-installeruser-guide.pdf",
+        "document_sha256": "4fc4a1b424aed6f4b180917f65bfe41d603af295639a5e5c3c0f84854d93289a",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    },
+    {
+      "row": 215,
+      "fields": {
+        "source_key": "SETUP-132",
+        "publisher_format": "Officiell leverantörsdokumentation",
+        "url": "https://www.wago.com/us/pfc200",
+        "document_sha256": "3f76eedbf6197f205b93a672564603904b2f1e429141b01243c0c282f9cf941f",
+        "source_date": "Ej enhetligt fastställt",
+        "fetched_at": "2026-11-07",
+        "verified_text": "Dokument-/portalidentifiering och åtkomstkontroll; kontopåståenden endast enligt markerade kontokällor. HTTP-status: 200"
+      },
+      "extra": {}
+    }
+  ]
+}

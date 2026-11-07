@@ -25,26 +25,7 @@
     },
     "category": {
       "type": "string",
-      "enum": [
-        "BMS",
-        "DCS",
-        "Energi",
-        "Gateway",
-        "HMI",
-        "IoT",
-        "Kamera",
-        "Kraft",
-        "Kyla",
-        "NAS",
-        "OPC",
-        "PLC",
-        "PLC/HMI",
-        "Passer",
-        "RTU",
-        "SCADA",
-        "Tjänst",
-        "Ventilation"
-      ]
+      "const": "Tjänst"
     },
     "function_text": {
       "type": "string",
@@ -506,7 +487,11 @@
           "patch_level_unknown",
           "unexpanded_cve_range",
           "conflicting_sources",
-          "broken_link"
+          "broken_link",
+          "setup_manual_unverified",
+          "account_name_unverified",
+          "initial_password_type_unknown",
+          "register_conflict"
         ]
       }
     },
@@ -674,6 +659,566 @@
       ],
       "additionalProperties": false
     },
+    "register": {
+      "default": null,
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "register_id": {
+              "type": "string",
+              "pattern": "^OT-[A-Za-z0-9-]+$"
+            },
+            "origin": {
+              "type": "string",
+              "enum": [
+                "original",
+                "new"
+              ]
+            },
+            "origin_reference": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "normalization_key": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "scope_alias_text": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "source_status_text": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "uncertainty_text": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "exposure_risk_text": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "cve_selection_text": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "kev_text": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "priority_text": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "control_codes": {
+              "default": [],
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^K\\d$"
+              }
+            },
+            "controls_text": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "credentials_status_text": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "change_required_text": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "verify_login_text": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "documentation_limitation_text": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "versions_guidance_text": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "fix_guidance_text": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "source_date_text": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "checked_at": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "date",
+                  "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "observed_exposure_text": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "threat_selection_text": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "threat_links_text": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "threat_tracking_text": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "limitation_text": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "threat_checked_at": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "date",
+                  "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "import": {
+              "type": "object",
+              "properties": {
+                "file": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "file_sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                },
+                "import_version": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "sheet": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "row": {
+                  "type": "integer",
+                  "exclusiveMinimum": 0,
+                  "maximum": 9007199254740991
+                }
+              },
+              "required": [
+                "file",
+                "file_sha256",
+                "import_version",
+                "sheet",
+                "row"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "register_id",
+            "origin",
+            "origin_reference",
+            "normalization_key",
+            "scope_alias_text",
+            "source_status_text",
+            "uncertainty_text",
+            "exposure_risk_text",
+            "cve_selection_text",
+            "kev_text",
+            "priority_text",
+            "control_codes",
+            "controls_text",
+            "credentials_status_text",
+            "change_required_text",
+            "verify_login_text",
+            "documentation_limitation_text",
+            "versions_guidance_text",
+            "fix_guidance_text",
+            "source_date_text",
+            "checked_at",
+            "observed_exposure_text",
+            "threat_selection_text",
+            "threat_links_text",
+            "threat_tracking_text",
+            "limitation_text",
+            "threat_checked_at",
+            "import"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "credentials": {
+      "default": null,
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "account_name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "account_name_text": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "account_status_text": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "account_scope_text": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "account_source_id": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^[a-z0-9]+(?:-[a-z0-9.]+)*$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "initial_password_type": {
+              "type": "string",
+              "enum": [
+                "shared_default_documented",
+                "default_exists_type_unknown",
+                "device_unique_documented",
+                "device_unique_normal_delivery",
+                "model_version_batch_dependent",
+                "version_dependent_shared_or_unique",
+                "set_at_commissioning",
+                "hardcoded_in_affected_version",
+                "predictable_builtin_mechanism",
+                "not_applicable_implementation",
+                "unknown_unverified"
+              ]
+            },
+            "initial_password_type_text": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "change_requirement_text": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "commissioning_action_text": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "password_status_source_id": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^[a-z0-9]+(?:-[a-z0-9.]+)*$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "verification_status": {
+              "type": "string",
+              "enum": [
+                "verified_primary",
+                "corroborated_secondary",
+                "needs_review",
+                "unknown",
+                "disputed"
+              ]
+            },
+            "checked_at": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "date",
+                  "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "note": {
+              "type": "string",
+              "const": "Underlaget innehåller inga lösenordsvärden; endast kontonamn, lösenordstyp och bytekrav."
+            }
+          },
+          "required": [
+            "account_name",
+            "account_name_text",
+            "account_status_text",
+            "account_scope_text",
+            "account_source_id",
+            "initial_password_type",
+            "initial_password_type_text",
+            "change_requirement_text",
+            "commissioning_action_text",
+            "password_status_source_id",
+            "verification_status",
+            "checked_at",
+            "note"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "setup_documentation": {
+      "default": null,
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "url": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "uri"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "title": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "doc_type": {
+              "type": "string",
+              "enum": [
+                "direct_manual",
+                "doc_portal",
+                "online_handbook",
+                "vendor_entry_unverified",
+                "security_guide_unverified",
+                "start_guide",
+                "not_product",
+                "unverified",
+                "other"
+              ]
+            },
+            "doc_type_text": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "scope_text": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "verification_text": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "fetch_status_text": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "identity_verified": {
+              "default": false,
+              "type": "boolean"
+            },
+            "exact_manual_missing": {
+              "default": false,
+              "type": "boolean"
+            },
+            "is_verified_setup_manual": {
+              "type": "boolean"
+            },
+            "source_id": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^[a-z0-9]+(?:-[a-z0-9.]+)*$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "checked_at": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "date",
+                  "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "url",
+            "title",
+            "doc_type",
+            "doc_type_text",
+            "scope_text",
+            "verification_text",
+            "fetch_status_text",
+            "identity_verified",
+            "exact_manual_missing",
+            "is_verified_setup_manual",
+            "source_id",
+            "checked_at"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "review_findings": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "finding": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "uncertainty": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "status_text": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "source_ids": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z0-9]+(?:-[a-z0-9.]+)*$"
+            }
+          },
+          "checked_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date",
+                "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "finding",
+          "uncertainty",
+          "status_text",
+          "source_ids",
+          "checked_at"
+        ],
+        "additionalProperties": false
+      }
+    },
     "typical_use": {
       "type": "string",
       "minLength": 1
@@ -791,6 +1336,10 @@
     "verification_status",
     "source_ids",
     "review",
+    "register",
+    "credentials",
+    "setup_documentation",
+    "review_findings",
     "typical_use",
     "default_ports",
     "authentication",

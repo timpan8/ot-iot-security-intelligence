@@ -40,8 +40,11 @@
       "ctl-network-segmentation",
       "ctl-protocol-firewall-allowlist",
       "ctl-secure-remote-access",
+      "ctl-change-default-credentials",
+      "ctl-least-privilege-accounts",
       "ctl-vendor-firmware-update",
       "ctl-logging-monitoring",
+      "ctl-backup-restore",
       "ctl-vendor-hardening-guide"
     ],
     "advisory_ids": [],
@@ -190,7 +193,8 @@
     "source_ids": [
       "src-workbook",
       "src-nist-sp800-82r3",
-      "src-iana-ports"
+      "src-iana-ports",
+      "src-register-workbook"
     ],
     "review": {
       "reviewed_at": "2026-11-07",
@@ -204,6 +208,89 @@
         }
       ]
     },
+    "register": {
+      "register_id": "OT-056",
+      "origin": "original",
+      "origin_reference": "Original rad 57",
+      "normalization_key": "modbustcp",
+      "scope_alias_text": "Modbus TCP",
+      "source_status_text": "Protokoll/tjänst – ej produktfamilj",
+      "uncertainty_text": "Ska inte räknas som ny produktfamilj. Port eller titel visar inte produkt, sårbarhet eller OT-tillhörighet.",
+      "exposure_risk_text": "Protokoll utan inbyggd autentisering/kryptering – Publik Modbus-tjänst kan exponera styr-/mätfunktioner; beror på tillåten funktionsuppsättning.",
+      "cve_selection_text": "Ej verifierat i denna granskning",
+      "kev_text": "Ej bedömbart – CVE-urval saknas",
+      "priority_text": "P2 – snar verifiering",
+      "control_codes": [
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6"
+      ],
+      "controls_text": "Ingen publik direktadministration; VPN/MFA där möjligt; nätsegmentering; loggning; uppdatera. K1–K6.",
+      "credentials_status_text": "Ej tillämpligt – implementation styr – Protokoll/tjänst har inget universellt fabrikslösenord.",
+      "change_required_text": "Välj konkret implementation och granska dess konton/initialprocess.",
+      "verify_login_text": "K1–K6. Kontrollera konton och policy lokalt i behörig administration. Dokumentera byte utan hemligheter; verifiera att anonym åtkomst är avstängd och att nytt konto fungerar. Inga lösenordsgissningar.",
+      "documentation_limitation_text": "Branschstandard för OT-arkitektur; fabriksuppgifter ej omverifierade",
+      "versions_guidance_text": "Ej verifierat; inventera exakt modell/version",
+      "fix_guidance_text": "Kontrollera produktspecifik bulletin; ingen senaste version fastställd",
+      "source_date_text": "Se CVE-post/bulletin",
+      "checked_at": "2026-11-07",
+      "observed_exposure_text": "Ej undersökt",
+      "threat_selection_text": "Ej bedömbart – inget verifierat CVE-urval",
+      "threat_links_text": "Ingen direkt länk verifierad – se Hotunderlag",
+      "threat_tracking_text": "Hotunderlag och Sårbarheter; matcha CVE och exakt modell/version",
+      "limitation_text": "Publicerad PoC, emulator, detektionsverktyg och aktiv exploatering är olika evidens. Ingen kod funktionstestad.",
+      "threat_checked_at": "2026-11-07",
+      "import": {
+        "file": "OT_IoT_125_poster_losenordsstatus.xlsx",
+        "file_sha256": "2e017d3c9f1c28ea82aa05b474c9388f39db8d7350df00d2b2103741238469f1",
+        "import_version": "register-import-1.0.0",
+        "sheet": "Register",
+        "row": 57
+      }
+    },
+    "credentials": {
+      "account_name": null,
+      "account_name_text": "Ej tillämpligt – implementation styr",
+      "account_status_text": "Protokoll/tjänst är inte en produkt med fabriksanvändare",
+      "account_scope_text": "Modbus TCP",
+      "account_source_id": null,
+      "initial_password_type": "not_applicable_implementation",
+      "initial_password_type_text": "Ej tillämpligt – implementation styr",
+      "change_requirement_text": "Välj konkret implementation och granska dess konton/initialprocess.",
+      "commissioning_action_text": "Välj konkret implementation före konto- och setupgranskning.",
+      "password_status_source_id": "src-nist-sp800-82r3",
+      "verification_status": "verified_primary",
+      "checked_at": "2026-11-07",
+      "note": "Underlaget innehåller inga lösenordsvärden; endast kontonamn, lösenordstyp och bytekrav."
+    },
+    "setup_documentation": {
+      "url": "https://csrc.nist.gov/pubs/sp/800/82/r3/final",
+      "title": "Protokoll-/tjänstvägledning – inte en produktinstallation",
+      "doc_type": "not_product",
+      "doc_type_text": "Ej produkt – implementationsmanual krävs",
+      "scope_text": "Modbus TCP. Välj konkret PLC, server, broker eller klient. Protokoll har inte ett universellt standardkonto eller setup.",
+      "verification_text": "Avgränsning fastställd; implementation ej vald",
+      "fetch_status_text": "200",
+      "identity_verified": false,
+      "exact_manual_missing": false,
+      "is_verified_setup_manual": false,
+      "source_id": "src-nist-sp800-82r3",
+      "checked_at": "2026-11-07"
+    },
+    "review_findings": [
+      {
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Ska inte räknas som ny produktfamilj. Port eller titel visar inte produkt, sårbarhet eller OT-tillhörighet.",
+        "status_text": "Öppen – lokal inventering återstår",
+        "source_ids": [
+          "src-nist-sp800-82r3"
+        ],
+        "checked_at": null
+      }
+    ],
     "typical_use": "Register-/spoleåtkomst mot PLC, energimätare, växelriktare, kylregulatorer.",
     "default_ports": [
       {
@@ -229,7 +316,8 @@
     "aliases": [
       "EtherNet/IP",
       "CIP",
-      "ENIP"
+      "ENIP",
+      "Bevarad kombinationspost"
     ],
     "category": "Tjänst",
     "function_text": "PLC/I-O/SCADA",
@@ -264,9 +352,12 @@
       "ctl-network-segmentation",
       "ctl-protocol-firewall-allowlist",
       "ctl-secure-remote-access",
+      "ctl-change-default-credentials",
+      "ctl-least-privilege-accounts",
       "ctl-vendor-firmware-update",
       "ctl-secure-protocol-features",
       "ctl-logging-monitoring",
+      "ctl-backup-restore",
       "ctl-vendor-hardening-guide"
     ],
     "advisory_ids": [],
@@ -414,7 +505,8 @@
     "source_ids": [
       "src-workbook",
       "src-wb-www.rockwellautomation.com-99d4a550",
-      "src-iana-ports"
+      "src-iana-ports",
+      "src-register-workbook"
     ],
     "review": {
       "reviewed_at": "2026-11-07",
@@ -428,6 +520,89 @@
         }
       ]
     },
+    "register": {
+      "register_id": "OT-057",
+      "origin": "original",
+      "origin_reference": "Original rad 58",
+      "normalization_key": "ethernetipcip",
+      "scope_alias_text": "Bevarad kombinationspost",
+      "source_status_text": "Protokoll/tjänst – ej produktfamilj",
+      "uncertainty_text": "Ska inte räknas som ny produktfamilj. Port eller titel visar inte produkt, sårbarhet eller OT-tillhörighet.",
+      "exposure_risk_text": "Oskyddad CIP-kommunikation vid avsaknad av CIP Security – Portträff identifierar protokollmöjlighet, inte specifik PLC.",
+      "cve_selection_text": "Ej verifierat i denna granskning",
+      "kev_text": "Ej bedömbart – CVE-urval saknas",
+      "priority_text": "P2 – snar verifiering",
+      "control_codes": [
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6"
+      ],
+      "controls_text": "Ingen publik direktadministration; VPN/MFA där möjligt; nätsegmentering; loggning; uppdatera. K1–K6.",
+      "credentials_status_text": "Ej tillämpligt – implementation styr – Protokoll/tjänst har inget universellt fabrikslösenord.",
+      "change_required_text": "Välj konkret implementation och granska dess konton/initialprocess.",
+      "verify_login_text": "K1–K6. Kontrollera konton och policy lokalt i behörig administration. Dokumentera byte utan hemligheter; verifiera att anonym åtkomst är avstängd och att nytt konto fungerar. Inga lösenordsgissningar.",
+      "documentation_limitation_text": "Tillverkarens CIP-/systemsäkert innehåll; fabriksuppgifter ej omverifierade",
+      "versions_guidance_text": "Ej verifierat; inventera exakt modell/version",
+      "fix_guidance_text": "Kontrollera produktspecifik bulletin; ingen senaste version fastställd",
+      "source_date_text": "Se CVE-post/bulletin",
+      "checked_at": "2026-11-07",
+      "observed_exposure_text": "Ej undersökt",
+      "threat_selection_text": "Ej bedömbart – inget verifierat CVE-urval",
+      "threat_links_text": "Ingen direkt länk verifierad – se Hotunderlag",
+      "threat_tracking_text": "Hotunderlag och Sårbarheter; matcha CVE och exakt modell/version",
+      "limitation_text": "Publicerad PoC, emulator, detektionsverktyg och aktiv exploatering är olika evidens. Ingen kod funktionstestad.",
+      "threat_checked_at": "2026-11-07",
+      "import": {
+        "file": "OT_IoT_125_poster_losenordsstatus.xlsx",
+        "file_sha256": "2e017d3c9f1c28ea82aa05b474c9388f39db8d7350df00d2b2103741238469f1",
+        "import_version": "register-import-1.0.0",
+        "sheet": "Register",
+        "row": 58
+      }
+    },
+    "credentials": {
+      "account_name": null,
+      "account_name_text": "Ej tillämpligt – implementation styr",
+      "account_status_text": "Protokoll/tjänst är inte en produkt med fabriksanvändare",
+      "account_scope_text": "EtherNet/IP (CIP)",
+      "account_source_id": null,
+      "initial_password_type": "not_applicable_implementation",
+      "initial_password_type_text": "Ej tillämpligt – implementation styr",
+      "change_requirement_text": "Välj konkret implementation och granska dess konton/initialprocess.",
+      "commissioning_action_text": "Välj konkret implementation före konto- och setupgranskning.",
+      "password_status_source_id": "src-wb-www.rockwellautomation.com-99d4a550",
+      "verification_status": "verified_primary",
+      "checked_at": "2026-11-07",
+      "note": "Underlaget innehåller inga lösenordsvärden; endast kontonamn, lösenordstyp och bytekrav."
+    },
+    "setup_documentation": {
+      "url": "https://www.rockwellautomation.com/en-us/docs/technical/logix5000/_online/1756-um900/controllogix-5590-controller-user-manual-ditamap/develop-secure-applications.html",
+      "title": "Protokoll-/tjänstvägledning – inte en produktinstallation",
+      "doc_type": "not_product",
+      "doc_type_text": "Ej produkt – implementationsmanual krävs",
+      "scope_text": "EtherNet/IP (CIP). Välj konkret PLC, server, broker eller klient. Protokoll har inte ett universellt standardkonto eller setup.",
+      "verification_text": "Avgränsning fastställd; implementation ej vald; direkt hämtning ej verifierad – se åtkomststatus",
+      "fetch_status_text": "HTTP Error 403: Forbidden",
+      "identity_verified": false,
+      "exact_manual_missing": false,
+      "is_verified_setup_manual": false,
+      "source_id": "src-wb-www.rockwellautomation.com-99d4a550",
+      "checked_at": "2026-11-07"
+    },
+    "review_findings": [
+      {
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Ska inte räknas som ny produktfamilj. Port eller titel visar inte produkt, sårbarhet eller OT-tillhörighet.",
+        "status_text": "Öppen – lokal inventering återstår",
+        "source_ids": [
+          "src-wb-www.rockwellautomation.com-99d4a550"
+        ],
+        "checked_at": null
+      }
+    ],
     "typical_use": "PLC-, I/O- och SCADA-kommunikation i Rockwell/ODVA-miljöer.",
     "default_ports": [
       {
@@ -498,10 +673,13 @@
       "ctl-network-segmentation",
       "ctl-protocol-firewall-allowlist",
       "ctl-secure-remote-access",
+      "ctl-change-default-credentials",
+      "ctl-least-privilege-accounts",
       "ctl-vendor-firmware-update",
       "ctl-secure-plc-communication",
       "ctl-protect-engineering-access",
       "ctl-logging-monitoring",
+      "ctl-backup-restore",
       "ctl-vendor-hardening-guide"
     ],
     "advisory_ids": [],
@@ -649,7 +827,8 @@
     "source_ids": [
       "src-workbook",
       "src-wb-docs.tia.siemens.cloud-1bb5baef",
-      "src-iana-ports"
+      "src-iana-ports",
+      "src-register-workbook"
     ],
     "review": {
       "reviewed_at": "2026-11-07",
@@ -663,6 +842,89 @@
         }
       ]
     },
+    "register": {
+      "register_id": "OT-058",
+      "origin": "original",
+      "origin_reference": "Original rad 59",
+      "normalization_key": "s7commisoontcp",
+      "scope_alias_text": "S7comm (ISO-on-TCP)",
+      "source_status_text": "Protokoll/tjänst – ej produktfamilj",
+      "uncertainty_text": "Ska inte räknas som ny produktfamilj. Port eller titel visar inte produkt, sårbarhet eller OT-tillhörighet.",
+      "exposure_risk_text": "Äldre/otillräckligt skyddad PG/HMI-åtkomst – Port 102 används också av IEC 61850 MMS; Shodan-sökning är inte enhetsbevis.",
+      "cve_selection_text": "Ej verifierat i denna granskning",
+      "kev_text": "Ej bedömbart – CVE-urval saknas",
+      "priority_text": "P2 – snar verifiering",
+      "control_codes": [
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6"
+      ],
+      "controls_text": "Ingen publik direktadministration; VPN/MFA där möjligt; nätsegmentering; loggning; uppdatera. K1–K6.",
+      "credentials_status_text": "Ej tillämpligt – implementation styr – Protokoll/tjänst har inget universellt fabrikslösenord.",
+      "change_required_text": "Välj konkret implementation och granska dess konton/initialprocess.",
+      "verify_login_text": "K1–K6. Kontrollera konton och policy lokalt i behörig administration. Dokumentera byte utan hemligheter; verifiera att anonym åtkomst är avstängd och att nytt konto fungerar. Inga lösenordsgissningar.",
+      "documentation_limitation_text": "Siemens säkerhetskonfiguration; fabriksuppgifter ej omverifierade",
+      "versions_guidance_text": "Ej verifierat; inventera exakt modell/version",
+      "fix_guidance_text": "Kontrollera produktspecifik bulletin; ingen senaste version fastställd",
+      "source_date_text": "Se CVE-post/bulletin",
+      "checked_at": "2026-11-07",
+      "observed_exposure_text": "Ej undersökt",
+      "threat_selection_text": "Ej bedömbart – inget verifierat CVE-urval",
+      "threat_links_text": "Ingen direkt länk verifierad – se Hotunderlag",
+      "threat_tracking_text": "Hotunderlag och Sårbarheter; matcha CVE och exakt modell/version",
+      "limitation_text": "Publicerad PoC, emulator, detektionsverktyg och aktiv exploatering är olika evidens. Ingen kod funktionstestad.",
+      "threat_checked_at": "2026-11-07",
+      "import": {
+        "file": "OT_IoT_125_poster_losenordsstatus.xlsx",
+        "file_sha256": "2e017d3c9f1c28ea82aa05b474c9388f39db8d7350df00d2b2103741238469f1",
+        "import_version": "register-import-1.0.0",
+        "sheet": "Register",
+        "row": 59
+      }
+    },
+    "credentials": {
+      "account_name": null,
+      "account_name_text": "Ej tillämpligt – implementation styr",
+      "account_status_text": "Protokoll/tjänst är inte en produkt med fabriksanvändare",
+      "account_scope_text": "S7comm (ISO-on-TCP)",
+      "account_source_id": null,
+      "initial_password_type": "not_applicable_implementation",
+      "initial_password_type_text": "Ej tillämpligt – implementation styr",
+      "change_requirement_text": "Välj konkret implementation och granska dess konton/initialprocess.",
+      "commissioning_action_text": "Välj konkret implementation före konto- och setupgranskning.",
+      "password_status_source_id": "src-wb-docs.tia.siemens.cloud-1bb5baef",
+      "verification_status": "verified_primary",
+      "checked_at": "2026-11-07",
+      "note": "Underlaget innehåller inga lösenordsvärden; endast kontonamn, lösenordstyp och bytekrav."
+    },
+    "setup_documentation": {
+      "url": "https://docs.tia.siemens.cloud/r/simatic_s7_1200_manual_collection_enus_20/device-configuration/protection-security",
+      "title": "Protokoll-/tjänstvägledning – inte en produktinstallation",
+      "doc_type": "not_product",
+      "doc_type_text": "Ej produkt – implementationsmanual krävs",
+      "scope_text": "S7comm (ISO-on-TCP). Välj konkret PLC, server, broker eller klient. Protokoll har inte ett universellt standardkonto eller setup.",
+      "verification_text": "Avgränsning fastställd; implementation ej vald; direkt hämtning ej verifierad – se åtkomststatus",
+      "fetch_status_text": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>",
+      "identity_verified": false,
+      "exact_manual_missing": false,
+      "is_verified_setup_manual": false,
+      "source_id": "src-wb-docs.tia.siemens.cloud-1bb5baef",
+      "checked_at": "2026-11-07"
+    },
+    "review_findings": [
+      {
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Ska inte räknas som ny produktfamilj. Port eller titel visar inte produkt, sårbarhet eller OT-tillhörighet.",
+        "status_text": "Öppen – lokal inventering återstår",
+        "source_ids": [
+          "src-wb-docs.tia.siemens.cloud-1bb5baef"
+        ],
+        "checked_at": null
+      }
+    ],
     "typical_use": "PG/PC- och HMI-kommunikation med Siemens SIMATIC-PLC.",
     "default_ports": [
       {
@@ -722,9 +984,12 @@
       "ctl-network-segmentation",
       "ctl-protocol-firewall-allowlist",
       "ctl-secure-remote-access",
+      "ctl-change-default-credentials",
+      "ctl-least-privilege-accounts",
       "ctl-vendor-firmware-update",
       "ctl-secure-protocol-features",
       "ctl-logging-monitoring",
+      "ctl-backup-restore",
       "ctl-vendor-hardening-guide"
     ],
     "advisory_ids": [],
@@ -870,7 +1135,8 @@
     "source_ids": [
       "src-workbook",
       "src-wb-reference.opcfoundation.org-84dc16b3",
-      "src-iana-ports"
+      "src-iana-ports",
+      "src-register-workbook"
     ],
     "review": {
       "reviewed_at": "2026-11-07",
@@ -884,6 +1150,89 @@
         }
       ]
     },
+    "register": {
+      "register_id": "OT-059",
+      "origin": "original",
+      "origin_reference": "Original rad 60",
+      "normalization_key": "opcua",
+      "scope_alias_text": "OPC UA",
+      "source_status_text": "Protokoll/tjänst – ej produktfamilj",
+      "uncertainty_text": "Ska inte räknas som ny produktfamilj. Port eller titel visar inte produkt, sårbarhet eller OT-tillhörighet.",
+      "exposure_risk_text": "Konfigurerad utan lämplig signering/kryptering eller roller – OPC UA har starka säkerhetsfunktioner men de måste konfigureras.",
+      "cve_selection_text": "Ej verifierat i denna granskning",
+      "kev_text": "Ej bedömbart – CVE-urval saknas",
+      "priority_text": "P2 – snar verifiering",
+      "control_codes": [
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6"
+      ],
+      "controls_text": "Ingen publik direktadministration; VPN/MFA där möjligt; nätsegmentering; loggning; uppdatera. K1–K6.",
+      "credentials_status_text": "Ej tillämpligt – implementation styr – Protokoll/tjänst har inget universellt fabrikslösenord.",
+      "change_required_text": "Välj konkret implementation och granska dess konton/initialprocess.",
+      "verify_login_text": "K1–K6. Kontrollera konton och policy lokalt i behörig administration. Dokumentera byte utan hemligheter; verifiera att anonym åtkomst är avstängd och att nytt konto fungerar. Inga lösenordsgissningar.",
+      "documentation_limitation_text": "OPC Foundation Security Model; fabriksuppgifter ej omverifierade",
+      "versions_guidance_text": "Ej verifierat; inventera exakt modell/version",
+      "fix_guidance_text": "Kontrollera produktspecifik bulletin; ingen senaste version fastställd",
+      "source_date_text": "Se CVE-post/bulletin",
+      "checked_at": "2026-11-07",
+      "observed_exposure_text": "Ej undersökt",
+      "threat_selection_text": "Ej bedömbart – inget verifierat CVE-urval",
+      "threat_links_text": "Ingen direkt länk verifierad – se Hotunderlag",
+      "threat_tracking_text": "Hotunderlag och Sårbarheter; matcha CVE och exakt modell/version",
+      "limitation_text": "Publicerad PoC, emulator, detektionsverktyg och aktiv exploatering är olika evidens. Ingen kod funktionstestad.",
+      "threat_checked_at": "2026-11-07",
+      "import": {
+        "file": "OT_IoT_125_poster_losenordsstatus.xlsx",
+        "file_sha256": "2e017d3c9f1c28ea82aa05b474c9388f39db8d7350df00d2b2103741238469f1",
+        "import_version": "register-import-1.0.0",
+        "sheet": "Register",
+        "row": 60
+      }
+    },
+    "credentials": {
+      "account_name": null,
+      "account_name_text": "Ej tillämpligt – implementation styr",
+      "account_status_text": "Protokoll/tjänst är inte en produkt med fabriksanvändare",
+      "account_scope_text": "OPC UA",
+      "account_source_id": null,
+      "initial_password_type": "not_applicable_implementation",
+      "initial_password_type_text": "Ej tillämpligt – implementation styr",
+      "change_requirement_text": "Välj konkret implementation och granska dess konton/initialprocess.",
+      "commissioning_action_text": "Välj konkret implementation före konto- och setupgranskning.",
+      "password_status_source_id": "src-wb-reference.opcfoundation.org-84dc16b3",
+      "verification_status": "verified_primary",
+      "checked_at": "2026-11-07",
+      "note": "Underlaget innehåller inga lösenordsvärden; endast kontonamn, lösenordstyp och bytekrav."
+    },
+    "setup_documentation": {
+      "url": "https://reference.opcfoundation.org/specs/OPC-10000-2/1",
+      "title": "Protokoll-/tjänstvägledning – inte en produktinstallation",
+      "doc_type": "not_product",
+      "doc_type_text": "Ej produkt – implementationsmanual krävs",
+      "scope_text": "OPC UA. Välj konkret PLC, server, broker eller klient. Protokoll har inte ett universellt standardkonto eller setup.",
+      "verification_text": "Avgränsning fastställd; implementation ej vald",
+      "fetch_status_text": "200",
+      "identity_verified": false,
+      "exact_manual_missing": false,
+      "is_verified_setup_manual": false,
+      "source_id": "src-wb-reference.opcfoundation.org-84dc16b3",
+      "checked_at": "2026-11-07"
+    },
+    "review_findings": [
+      {
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Ska inte räknas som ny produktfamilj. Port eller titel visar inte produkt, sårbarhet eller OT-tillhörighet.",
+        "status_text": "Öppen – lokal inventering återstår",
+        "source_ids": [
+          "src-wb-reference.opcfoundation.org-84dc16b3"
+        ],
+        "checked_at": null
+      }
+    ],
     "typical_use": "Integrationsdata mellan OT och IT/SCADA/MES.",
     "default_ports": [
       {
@@ -909,7 +1258,8 @@
     "aliases": [
       "BACnet/IP",
       "BACnet",
-      "BACnet/SC"
+      "BACnet/SC",
+      "Bevarad kombinationspost"
     ],
     "category": "Tjänst",
     "function_text": "Fastighetsautomation",
@@ -944,9 +1294,12 @@
       "ctl-network-segmentation",
       "ctl-protocol-firewall-allowlist",
       "ctl-secure-remote-access",
+      "ctl-change-default-credentials",
+      "ctl-least-privilege-accounts",
       "ctl-vendor-firmware-update",
       "ctl-secure-protocol-features",
       "ctl-logging-monitoring",
+      "ctl-backup-restore",
       "ctl-vendor-hardening-guide"
     ],
     "advisory_ids": [],
@@ -1095,7 +1448,8 @@
     "source_ids": [
       "src-workbook",
       "src-nist-sp800-82r3",
-      "src-iana-ports"
+      "src-iana-ports",
+      "src-register-workbook"
     ],
     "review": {
       "reviewed_at": "2026-11-07",
@@ -1109,6 +1463,89 @@
         }
       ]
     },
+    "register": {
+      "register_id": "OT-060",
+      "origin": "original",
+      "origin_reference": "Original rad 61",
+      "normalization_key": "bacnetip",
+      "scope_alias_text": "Bevarad kombinationspost",
+      "source_status_text": "Protokoll/tjänst – ej produktfamilj",
+      "uncertainty_text": "Ska inte räknas som ny produktfamilj. Port eller titel visar inte produkt, sårbarhet eller OT-tillhörighet.",
+      "exposure_risk_text": "Brist på inbyggt skydd i klassisk BACnet/IP – Utan skyddad nätzon kan styr- och statusdata exponeras.",
+      "cve_selection_text": "Ej verifierat i denna granskning",
+      "kev_text": "Ej bedömbart – CVE-urval saknas",
+      "priority_text": "P2 – snar verifiering",
+      "control_codes": [
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6"
+      ],
+      "controls_text": "Ingen publik direktadministration; VPN/MFA där möjligt; nätsegmentering; loggning; uppdatera. K1–K6.",
+      "credentials_status_text": "Ej tillämpligt – implementation styr – Protokoll/tjänst har inget universellt fabrikslösenord.",
+      "change_required_text": "Välj konkret implementation och granska dess konton/initialprocess.",
+      "verify_login_text": "K1–K6. Kontrollera konton och policy lokalt i behörig administration. Dokumentera byte utan hemligheter; verifiera att anonym åtkomst är avstängd och att nytt konto fungerar. Inga lösenordsgissningar.",
+      "documentation_limitation_text": "Branschguide – BACnet/SC ej detaljmanual; fabriksuppgifter ej omverifierade",
+      "versions_guidance_text": "Ej verifierat; inventera exakt modell/version",
+      "fix_guidance_text": "Kontrollera produktspecifik bulletin; ingen senaste version fastställd",
+      "source_date_text": "Se CVE-post/bulletin",
+      "checked_at": "2026-11-07",
+      "observed_exposure_text": "Ej undersökt",
+      "threat_selection_text": "Ej bedömbart – inget verifierat CVE-urval",
+      "threat_links_text": "Ingen direkt länk verifierad – se Hotunderlag",
+      "threat_tracking_text": "Hotunderlag och Sårbarheter; matcha CVE och exakt modell/version",
+      "limitation_text": "Publicerad PoC, emulator, detektionsverktyg och aktiv exploatering är olika evidens. Ingen kod funktionstestad.",
+      "threat_checked_at": "2026-11-07",
+      "import": {
+        "file": "OT_IoT_125_poster_losenordsstatus.xlsx",
+        "file_sha256": "2e017d3c9f1c28ea82aa05b474c9388f39db8d7350df00d2b2103741238469f1",
+        "import_version": "register-import-1.0.0",
+        "sheet": "Register",
+        "row": 61
+      }
+    },
+    "credentials": {
+      "account_name": null,
+      "account_name_text": "Ej tillämpligt – implementation styr",
+      "account_status_text": "Protokoll/tjänst är inte en produkt med fabriksanvändare",
+      "account_scope_text": "BACnet/IP",
+      "account_source_id": null,
+      "initial_password_type": "not_applicable_implementation",
+      "initial_password_type_text": "Ej tillämpligt – implementation styr",
+      "change_requirement_text": "Välj konkret implementation och granska dess konton/initialprocess.",
+      "commissioning_action_text": "Välj konkret implementation före konto- och setupgranskning.",
+      "password_status_source_id": "src-nist-sp800-82r3",
+      "verification_status": "verified_primary",
+      "checked_at": "2026-11-07",
+      "note": "Underlaget innehåller inga lösenordsvärden; endast kontonamn, lösenordstyp och bytekrav."
+    },
+    "setup_documentation": {
+      "url": "https://csrc.nist.gov/pubs/sp/800/82/r3/final",
+      "title": "Protokoll-/tjänstvägledning – inte en produktinstallation",
+      "doc_type": "not_product",
+      "doc_type_text": "Ej produkt – implementationsmanual krävs",
+      "scope_text": "BACnet/IP. Välj konkret PLC, server, broker eller klient. Protokoll har inte ett universellt standardkonto eller setup.",
+      "verification_text": "Avgränsning fastställd; implementation ej vald",
+      "fetch_status_text": "200",
+      "identity_verified": false,
+      "exact_manual_missing": false,
+      "is_verified_setup_manual": false,
+      "source_id": "src-nist-sp800-82r3",
+      "checked_at": "2026-11-07"
+    },
+    "review_findings": [
+      {
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade. Befintlig dokumentlänk styrker inte exakt modell.",
+        "uncertainty": "Ska inte räknas som ny produktfamilj. Port eller titel visar inte produkt, sårbarhet eller OT-tillhörighet.",
+        "status_text": "Öppen – lokal inventering återstår",
+        "source_ids": [
+          "src-nist-sp800-82r3"
+        ],
+        "checked_at": null
+      }
+    ],
     "typical_use": "Fastighetsautomation (HVAC, belysning, mätare).",
     "default_ports": [
       {
@@ -1134,7 +1571,8 @@
     "aliases": [
       "IEC 60870-5-104",
       "IEC 104",
-      "DNP3"
+      "DNP3",
+      "Bevarad kombinationspost"
     ],
     "category": "Tjänst",
     "function_text": "El/vatten-RTU-fjärrstyrning",
@@ -1169,9 +1607,12 @@
       "ctl-network-segmentation",
       "ctl-protocol-firewall-allowlist",
       "ctl-secure-remote-access",
+      "ctl-change-default-credentials",
+      "ctl-least-privilege-accounts",
       "ctl-vendor-firmware-update",
       "ctl-secure-protocol-features",
       "ctl-logging-monitoring",
+      "ctl-backup-restore",
       "ctl-vendor-hardening-guide"
     ],
     "advisory_ids": [],
@@ -1320,7 +1761,8 @@
     "source_ids": [
       "src-workbook",
       "src-nist-sp800-82r3",
-      "src-iana-ports"
+      "src-iana-ports",
+      "src-register-workbook"
     ],
     "review": {
       "reviewed_at": "2026-11-07",
@@ -1334,6 +1776,89 @@
         }
       ]
     },
+    "register": {
+      "register_id": "OT-061",
+      "origin": "original",
+      "origin_reference": "Original rad 62",
+      "normalization_key": "iec608705104dnp3",
+      "scope_alias_text": "Bevarad kombinationspost",
+      "source_status_text": "Protokoll/tjänst – ej produktfamilj",
+      "uncertainty_text": "Ska inte räknas som ny produktfamilj. Port eller titel visar inte produkt, sårbarhet eller OT-tillhörighet.",
+      "exposure_risk_text": "OT-protokoll med begränsade ursprungliga skydd – Kontrollera om autentiserade säkerhetsutökningar finns och nätet är zonerat.",
+      "cve_selection_text": "Ej verifierat i denna granskning",
+      "kev_text": "Ej bedömbart – CVE-urval saknas",
+      "priority_text": "P2 – snar verifiering",
+      "control_codes": [
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6"
+      ],
+      "controls_text": "Ingen publik direktadministration; VPN/MFA där möjligt; nätsegmentering; loggning; uppdatera. K1–K6.",
+      "credentials_status_text": "Ej tillämpligt – implementation styr – Protokoll/tjänst har inget universellt fabrikslösenord.",
+      "change_required_text": "Välj konkret implementation och granska dess konton/initialprocess.",
+      "verify_login_text": "K1–K6. Kontrollera konton och policy lokalt i behörig administration. Dokumentera byte utan hemligheter; verifiera att anonym åtkomst är avstängd och att nytt konto fungerar. Inga lösenordsgissningar.",
+      "documentation_limitation_text": "Branschguide – protokollspecifik konfiguration skiljer; fabriksuppgifter ej omverifierade",
+      "versions_guidance_text": "Ej verifierat; inventera exakt modell/version",
+      "fix_guidance_text": "Kontrollera produktspecifik bulletin; ingen senaste version fastställd",
+      "source_date_text": "Se CVE-post/bulletin",
+      "checked_at": "2026-11-07",
+      "observed_exposure_text": "Ej undersökt",
+      "threat_selection_text": "Ej bedömbart – inget verifierat CVE-urval",
+      "threat_links_text": "Ingen direkt länk verifierad – se Hotunderlag",
+      "threat_tracking_text": "Hotunderlag och Sårbarheter; matcha CVE och exakt modell/version",
+      "limitation_text": "Publicerad PoC, emulator, detektionsverktyg och aktiv exploatering är olika evidens. Ingen kod funktionstestad.",
+      "threat_checked_at": "2026-11-07",
+      "import": {
+        "file": "OT_IoT_125_poster_losenordsstatus.xlsx",
+        "file_sha256": "2e017d3c9f1c28ea82aa05b474c9388f39db8d7350df00d2b2103741238469f1",
+        "import_version": "register-import-1.0.0",
+        "sheet": "Register",
+        "row": 62
+      }
+    },
+    "credentials": {
+      "account_name": null,
+      "account_name_text": "Ej tillämpligt – implementation styr",
+      "account_status_text": "Protokoll/tjänst är inte en produkt med fabriksanvändare",
+      "account_scope_text": "IEC 60870-5-104 / DNP3",
+      "account_source_id": null,
+      "initial_password_type": "not_applicable_implementation",
+      "initial_password_type_text": "Ej tillämpligt – implementation styr",
+      "change_requirement_text": "Välj konkret implementation och granska dess konton/initialprocess.",
+      "commissioning_action_text": "Välj konkret implementation före konto- och setupgranskning.",
+      "password_status_source_id": "src-nist-sp800-82r3",
+      "verification_status": "verified_primary",
+      "checked_at": "2026-11-07",
+      "note": "Underlaget innehåller inga lösenordsvärden; endast kontonamn, lösenordstyp och bytekrav."
+    },
+    "setup_documentation": {
+      "url": "https://csrc.nist.gov/pubs/sp/800/82/r3/final",
+      "title": "Protokoll-/tjänstvägledning – inte en produktinstallation",
+      "doc_type": "not_product",
+      "doc_type_text": "Ej produkt – implementationsmanual krävs",
+      "scope_text": "IEC 60870-5-104 / DNP3. Välj konkret PLC, server, broker eller klient. Protokoll har inte ett universellt standardkonto eller setup.",
+      "verification_text": "Avgränsning fastställd; implementation ej vald",
+      "fetch_status_text": "200",
+      "identity_verified": false,
+      "exact_manual_missing": false,
+      "is_verified_setup_manual": false,
+      "source_id": "src-nist-sp800-82r3",
+      "checked_at": "2026-11-07"
+    },
+    "review_findings": [
+      {
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade. Befintlig dokumentlänk styrker inte exakt modell.",
+        "uncertainty": "Ska inte räknas som ny produktfamilj. Port eller titel visar inte produkt, sårbarhet eller OT-tillhörighet.",
+        "status_text": "Öppen – lokal inventering återstår",
+        "source_ids": [
+          "src-nist-sp800-82r3"
+        ],
+        "checked_at": null
+      }
+    ],
     "typical_use": "Fjärrstyrning av RTU:er i el- och vattennät.",
     "default_ports": [
       {
@@ -1404,9 +1929,12 @@
       "ctl-network-segmentation",
       "ctl-protocol-firewall-allowlist",
       "ctl-secure-remote-access",
+      "ctl-change-default-credentials",
+      "ctl-least-privilege-accounts",
       "ctl-vendor-firmware-update",
       "ctl-secure-protocol-features",
       "ctl-logging-monitoring",
+      "ctl-backup-restore",
       "ctl-vendor-hardening-guide"
     ],
     "advisory_ids": [],
@@ -1555,7 +2083,8 @@
     "source_ids": [
       "src-workbook",
       "src-nist-sp800-82r3",
-      "src-iana-ports"
+      "src-iana-ports",
+      "src-register-workbook"
     ],
     "review": {
       "reviewed_at": "2026-11-07",
@@ -1569,6 +2098,89 @@
         }
       ]
     },
+    "register": {
+      "register_id": "OT-062",
+      "origin": "original",
+      "origin_reference": "Original rad 63",
+      "normalization_key": "iec61850mms",
+      "scope_alias_text": "IEC 61850 MMS",
+      "source_status_text": "Protokoll/tjänst – ej produktfamilj",
+      "uncertainty_text": "Ska inte räknas som ny produktfamilj. Port eller titel visar inte produkt, sårbarhet eller OT-tillhörighet.",
+      "exposure_risk_text": "Oskyddade anläggningsprotokoll/åtkomstlistor – Port 102 delas med S7comm; kräver ytterligare produktverifiering.",
+      "cve_selection_text": "Ej verifierat i denna granskning",
+      "kev_text": "Ej bedömbart – CVE-urval saknas",
+      "priority_text": "P2 – snar verifiering",
+      "control_codes": [
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6"
+      ],
+      "controls_text": "Ingen publik direktadministration; VPN/MFA där möjligt; nätsegmentering; loggning; uppdatera. K1–K6.",
+      "credentials_status_text": "Ej tillämpligt – implementation styr – Protokoll/tjänst har inget universellt fabrikslösenord.",
+      "change_required_text": "Välj konkret implementation och granska dess konton/initialprocess.",
+      "verify_login_text": "K1–K6. Kontrollera konton och policy lokalt i behörig administration. Dokumentera byte utan hemligheter; verifiera att anonym åtkomst är avstängd och att nytt konto fungerar. Inga lösenordsgissningar.",
+      "documentation_limitation_text": "Branschguide – protokollspecifik konfiguration skiljer; fabriksuppgifter ej omverifierade",
+      "versions_guidance_text": "Ej verifierat; inventera exakt modell/version",
+      "fix_guidance_text": "Kontrollera produktspecifik bulletin; ingen senaste version fastställd",
+      "source_date_text": "Se CVE-post/bulletin",
+      "checked_at": "2026-11-07",
+      "observed_exposure_text": "Ej undersökt",
+      "threat_selection_text": "Ej bedömbart – inget verifierat CVE-urval",
+      "threat_links_text": "Ingen direkt länk verifierad – se Hotunderlag",
+      "threat_tracking_text": "Hotunderlag och Sårbarheter; matcha CVE och exakt modell/version",
+      "limitation_text": "Publicerad PoC, emulator, detektionsverktyg och aktiv exploatering är olika evidens. Ingen kod funktionstestad.",
+      "threat_checked_at": "2026-11-07",
+      "import": {
+        "file": "OT_IoT_125_poster_losenordsstatus.xlsx",
+        "file_sha256": "2e017d3c9f1c28ea82aa05b474c9388f39db8d7350df00d2b2103741238469f1",
+        "import_version": "register-import-1.0.0",
+        "sheet": "Register",
+        "row": 63
+      }
+    },
+    "credentials": {
+      "account_name": null,
+      "account_name_text": "Ej tillämpligt – implementation styr",
+      "account_status_text": "Protokoll/tjänst är inte en produkt med fabriksanvändare",
+      "account_scope_text": "IEC 61850 MMS",
+      "account_source_id": null,
+      "initial_password_type": "not_applicable_implementation",
+      "initial_password_type_text": "Ej tillämpligt – implementation styr",
+      "change_requirement_text": "Välj konkret implementation och granska dess konton/initialprocess.",
+      "commissioning_action_text": "Välj konkret implementation före konto- och setupgranskning.",
+      "password_status_source_id": "src-nist-sp800-82r3",
+      "verification_status": "verified_primary",
+      "checked_at": "2026-11-07",
+      "note": "Underlaget innehåller inga lösenordsvärden; endast kontonamn, lösenordstyp och bytekrav."
+    },
+    "setup_documentation": {
+      "url": "https://csrc.nist.gov/pubs/sp/800/82/r3/final",
+      "title": "Protokoll-/tjänstvägledning – inte en produktinstallation",
+      "doc_type": "not_product",
+      "doc_type_text": "Ej produkt – implementationsmanual krävs",
+      "scope_text": "IEC 61850 MMS. Välj konkret PLC, server, broker eller klient. Protokoll har inte ett universellt standardkonto eller setup.",
+      "verification_text": "Avgränsning fastställd; implementation ej vald",
+      "fetch_status_text": "200",
+      "identity_verified": false,
+      "exact_manual_missing": false,
+      "is_verified_setup_manual": false,
+      "source_id": "src-nist-sp800-82r3",
+      "checked_at": "2026-11-07"
+    },
+    "review_findings": [
+      {
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade. Befintlig dokumentlänk styrker inte exakt modell.",
+        "uncertainty": "Ska inte räknas som ny produktfamilj. Port eller titel visar inte produkt, sårbarhet eller OT-tillhörighet.",
+        "status_text": "Öppen – lokal inventering återstår",
+        "source_ids": [
+          "src-nist-sp800-82r3"
+        ],
+        "checked_at": null
+      }
+    ],
     "typical_use": "Kommunikation i elstationer (IED, skydd, reläer).",
     "default_ports": [
       {
@@ -1594,7 +2206,8 @@
     "aliases": [
       "MQTT",
       "MQTT over TLS",
-      "MQTTS"
+      "MQTTS",
+      "Bevarad kombinationspost"
     ],
     "category": "Tjänst",
     "function_text": "IoT-/OT-telemetribroker",
@@ -1629,10 +2242,12 @@
       "ctl-network-segmentation",
       "ctl-protocol-firewall-allowlist",
       "ctl-secure-remote-access",
+      "ctl-change-default-credentials",
       "ctl-least-privilege-accounts",
       "ctl-vendor-firmware-update",
       "ctl-secure-protocol-features",
       "ctl-logging-monitoring",
+      "ctl-backup-restore",
       "ctl-vendor-hardening-guide"
     ],
     "advisory_ids": [],
@@ -1781,7 +2396,8 @@
     "source_ids": [
       "src-workbook",
       "src-nist-sp800-82r3",
-      "src-iana-ports"
+      "src-iana-ports",
+      "src-register-workbook"
     ],
     "review": {
       "reviewed_at": "2026-11-07",
@@ -1795,6 +2411,89 @@
         }
       ]
     },
+    "register": {
+      "register_id": "OT-063",
+      "origin": "original",
+      "origin_reference": "Original rad 64",
+      "normalization_key": "mqttmqtttls",
+      "scope_alias_text": "Bevarad kombinationspost",
+      "source_status_text": "Protokoll/tjänst – ej produktfamilj",
+      "uncertainty_text": "Ska inte räknas som ny produktfamilj. Port eller titel visar inte produkt, sårbarhet eller OT-tillhörighet.",
+      "exposure_risk_text": "Anonym publicering / breda topic-behörigheter / avsaknad av TLS – Risk beror på brokerkonfiguration och klientbehörigheter, inte porten i sig.",
+      "cve_selection_text": "Ej verifierat i denna granskning",
+      "kev_text": "Ej bedömbart – CVE-urval saknas",
+      "priority_text": "P2 – snar verifiering",
+      "control_codes": [
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6"
+      ],
+      "controls_text": "Ingen publik direktadministration; VPN/MFA där möjligt; nätsegmentering; loggning; uppdatera. K1–K6.",
+      "credentials_status_text": "Ej tillämpligt – implementation styr – Protokoll/tjänst har inget universellt fabrikslösenord.",
+      "change_required_text": "Välj konkret implementation och granska dess konton/initialprocess.",
+      "verify_login_text": "K1–K6. Kontrollera konton och policy lokalt i behörig administration. Dokumentera byte utan hemligheter; verifiera att anonym åtkomst är avstängd och att nytt konto fungerar. Inga lösenordsgissningar.",
+      "documentation_limitation_text": "Branschguide – broker-manual krävs för exakta steg; fabriksuppgifter ej omverifierade",
+      "versions_guidance_text": "Ej verifierat; inventera exakt modell/version",
+      "fix_guidance_text": "Kontrollera produktspecifik bulletin; ingen senaste version fastställd",
+      "source_date_text": "Se CVE-post/bulletin",
+      "checked_at": "2026-11-07",
+      "observed_exposure_text": "Ej undersökt",
+      "threat_selection_text": "Ej bedömbart – inget verifierat CVE-urval",
+      "threat_links_text": "Ingen direkt länk verifierad – se Hotunderlag",
+      "threat_tracking_text": "Hotunderlag och Sårbarheter; matcha CVE och exakt modell/version",
+      "limitation_text": "Publicerad PoC, emulator, detektionsverktyg och aktiv exploatering är olika evidens. Ingen kod funktionstestad.",
+      "threat_checked_at": "2026-11-07",
+      "import": {
+        "file": "OT_IoT_125_poster_losenordsstatus.xlsx",
+        "file_sha256": "2e017d3c9f1c28ea82aa05b474c9388f39db8d7350df00d2b2103741238469f1",
+        "import_version": "register-import-1.0.0",
+        "sheet": "Register",
+        "row": 64
+      }
+    },
+    "credentials": {
+      "account_name": null,
+      "account_name_text": "Ej tillämpligt – implementation styr",
+      "account_status_text": "Protokoll/tjänst är inte en produkt med fabriksanvändare",
+      "account_scope_text": "MQTT / MQTT-TLS",
+      "account_source_id": null,
+      "initial_password_type": "not_applicable_implementation",
+      "initial_password_type_text": "Ej tillämpligt – implementation styr",
+      "change_requirement_text": "Välj konkret implementation och granska dess konton/initialprocess.",
+      "commissioning_action_text": "Välj konkret implementation före konto- och setupgranskning.",
+      "password_status_source_id": "src-nist-sp800-82r3",
+      "verification_status": "verified_primary",
+      "checked_at": "2026-11-07",
+      "note": "Underlaget innehåller inga lösenordsvärden; endast kontonamn, lösenordstyp och bytekrav."
+    },
+    "setup_documentation": {
+      "url": "https://csrc.nist.gov/pubs/sp/800/82/r3/final",
+      "title": "Protokoll-/tjänstvägledning – inte en produktinstallation",
+      "doc_type": "not_product",
+      "doc_type_text": "Ej produkt – implementationsmanual krävs",
+      "scope_text": "MQTT / MQTT-TLS. Välj konkret PLC, server, broker eller klient. Protokoll har inte ett universellt standardkonto eller setup.",
+      "verification_text": "Avgränsning fastställd; implementation ej vald",
+      "fetch_status_text": "200",
+      "identity_verified": false,
+      "exact_manual_missing": false,
+      "is_verified_setup_manual": false,
+      "source_id": "src-nist-sp800-82r3",
+      "checked_at": "2026-11-07"
+    },
+    "review_findings": [
+      {
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade. Befintlig dokumentlänk styrker inte exakt modell.",
+        "uncertainty": "Ska inte räknas som ny produktfamilj. Port eller titel visar inte produkt, sårbarhet eller OT-tillhörighet.",
+        "status_text": "Öppen – lokal inventering återstår",
+        "source_ids": [
+          "src-nist-sp800-82r3"
+        ],
+        "checked_at": null
+      }
+    ],
     "typical_use": "Telemetri/broker för IoT och OT-integration (t.ex. Sparkplug).",
     "default_ports": [
       {
@@ -1830,7 +2529,8 @@
     "aliases": [
       "Webb-HMI",
       "Web SCADA",
-      "HTTP/HTTPS-administration"
+      "HTTP/HTTPS-administration",
+      "Bevarad kombinationspost"
     ],
     "category": "Tjänst",
     "function_text": "Operatörs- och driftpaneler",
@@ -1865,9 +2565,12 @@
       "ctl-network-segmentation",
       "ctl-protocol-firewall-allowlist",
       "ctl-secure-remote-access",
+      "ctl-change-default-credentials",
+      "ctl-least-privilege-accounts",
       "ctl-vendor-firmware-update",
       "ctl-https-strict-mode",
       "ctl-logging-monitoring",
+      "ctl-backup-restore",
       "ctl-vendor-hardening-guide"
     ],
     "advisory_ids": [],
@@ -2015,7 +2718,8 @@
     "source_ids": [
       "src-workbook",
       "src-wb-inductiveautomation.com-d2d8e128",
-      "src-iana-ports"
+      "src-iana-ports",
+      "src-register-workbook"
     ],
     "review": {
       "reviewed_at": "2026-11-07",
@@ -2029,6 +2733,89 @@
         }
       ]
     },
+    "register": {
+      "register_id": "OT-064",
+      "origin": "original",
+      "origin_reference": "Original rad 65",
+      "normalization_key": "webbaseradhmiscada",
+      "scope_alias_text": "Bevarad kombinationspost",
+      "source_status_text": "Protokoll/tjänst – ej produktfamilj",
+      "uncertainty_text": "Ska inte räknas som ny produktfamilj. Port eller titel visar inte produkt, sårbarhet eller OT-tillhörighet.",
+      "exposure_risk_text": "Autentisering / session / exponerad webbpanel – HTTP-titel är osäker produktsignatur; flera tekniker möjliga.",
+      "cve_selection_text": "Ej verifierat i denna granskning",
+      "kev_text": "Ej bedömbart – CVE-urval saknas",
+      "priority_text": "P2 – snar verifiering",
+      "control_codes": [
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6"
+      ],
+      "controls_text": "Ingen publik direktadministration; VPN/MFA där möjligt; nätsegmentering; loggning; uppdatera. K1–K6.",
+      "credentials_status_text": "Ej tillämpligt – implementation styr – Protokoll/tjänst har inget universellt fabrikslösenord.",
+      "change_required_text": "Välj konkret implementation och granska dess konton/initialprocess.",
+      "verify_login_text": "K1–K6. Kontrollera konton och policy lokalt i behörig administration. Dokumentera byte utan hemligheter; verifiera att anonym åtkomst är avstängd och att nytt konto fungerar. Inga lösenordsgissningar.",
+      "documentation_limitation_text": "Exempelmanual för Ignition – ej alla HMI:er; fabriksuppgifter ej omverifierade",
+      "versions_guidance_text": "Ej verifierat; inventera exakt modell/version",
+      "fix_guidance_text": "Kontrollera produktspecifik bulletin; ingen senaste version fastställd",
+      "source_date_text": "Se CVE-post/bulletin",
+      "checked_at": "2026-11-07",
+      "observed_exposure_text": "Ej undersökt",
+      "threat_selection_text": "Ej bedömbart – inget verifierat CVE-urval",
+      "threat_links_text": "Ingen direkt länk verifierad – se Hotunderlag",
+      "threat_tracking_text": "Hotunderlag och Sårbarheter; matcha CVE och exakt modell/version",
+      "limitation_text": "Publicerad PoC, emulator, detektionsverktyg och aktiv exploatering är olika evidens. Ingen kod funktionstestad.",
+      "threat_checked_at": "2026-11-07",
+      "import": {
+        "file": "OT_IoT_125_poster_losenordsstatus.xlsx",
+        "file_sha256": "2e017d3c9f1c28ea82aa05b474c9388f39db8d7350df00d2b2103741238469f1",
+        "import_version": "register-import-1.0.0",
+        "sheet": "Register",
+        "row": 65
+      }
+    },
+    "credentials": {
+      "account_name": null,
+      "account_name_text": "Ej tillämpligt – implementation styr",
+      "account_status_text": "Protokoll/tjänst är inte en produkt med fabriksanvändare",
+      "account_scope_text": "Webbaserad HMI/SCADA",
+      "account_source_id": null,
+      "initial_password_type": "not_applicable_implementation",
+      "initial_password_type_text": "Ej tillämpligt – implementation styr",
+      "change_requirement_text": "Välj konkret implementation och granska dess konton/initialprocess.",
+      "commissioning_action_text": "Välj konkret implementation före konto- och setupgranskning.",
+      "password_status_source_id": "src-wb-inductiveautomation.com-d2d8e128",
+      "verification_status": "verified_primary",
+      "checked_at": "2026-11-07",
+      "note": "Underlaget innehåller inga lösenordsvärden; endast kontonamn, lösenordstyp och bytekrav."
+    },
+    "setup_documentation": {
+      "url": "https://inductiveautomation.com/resources/article/ignition-security-hardening-guide",
+      "title": "Protokoll-/tjänstvägledning – inte en produktinstallation",
+      "doc_type": "not_product",
+      "doc_type_text": "Ej produkt – implementationsmanual krävs",
+      "scope_text": "Webbaserad HMI/SCADA. Välj konkret PLC, server, broker eller klient. Protokoll har inte ett universellt standardkonto eller setup.",
+      "verification_text": "Avgränsning fastställd; implementation ej vald",
+      "fetch_status_text": "200",
+      "identity_verified": false,
+      "exact_manual_missing": false,
+      "is_verified_setup_manual": false,
+      "source_id": "src-wb-inductiveautomation.com-d2d8e128",
+      "checked_at": "2026-11-07"
+    },
+    "review_findings": [
+      {
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Ska inte räknas som ny produktfamilj. Port eller titel visar inte produkt, sårbarhet eller OT-tillhörighet.",
+        "status_text": "Öppen – lokal inventering återstår",
+        "source_ids": [
+          "src-wb-inductiveautomation.com-d2d8e128"
+        ],
+        "checked_at": null
+      }
+    ],
     "typical_use": "Operatörs- och driftpaneler samt administrationsgränssnitt över HTTP/HTTPS.",
     "default_ports": [
       {
@@ -2063,7 +2850,8 @@
       "Historian",
       "MSSQL",
       "SQL Server",
-      "Processhistorik"
+      "Processhistorik",
+      "Bevarad kombinationspost"
     ],
     "category": "Tjänst",
     "function_text": "Processhistorik, databaser",
@@ -2098,6 +2886,7 @@
       "ctl-network-segmentation",
       "ctl-protocol-firewall-allowlist",
       "ctl-secure-remote-access",
+      "ctl-change-default-credentials",
       "ctl-least-privilege-accounts",
       "ctl-vendor-firmware-update",
       "ctl-logging-monitoring",
@@ -2247,7 +3036,8 @@
     "source_ids": [
       "src-workbook",
       "src-wb-learn.microsoft.com-ded8fec8",
-      "src-iana-ports"
+      "src-iana-ports",
+      "src-register-workbook"
     ],
     "review": {
       "reviewed_at": "2026-11-07",
@@ -2261,6 +3051,89 @@
         }
       ]
     },
+    "register": {
+      "register_id": "OT-065",
+      "origin": "original",
+      "origin_reference": "Original rad 66",
+      "normalization_key": "historiansql",
+      "scope_alias_text": "Bevarad kombinationspost",
+      "source_status_text": "Protokoll/tjänst – ej produktfamilj",
+      "uncertainty_text": "Ska inte räknas som ny produktfamilj. Port eller titel visar inte produkt, sårbarhet eller OT-tillhörighet.",
+      "exposure_risk_text": "Svaga konton / publik SQL / otillräcklig kryptering – Port 1433 kan vara MSSQL men säger inget om applikationens innehåll.",
+      "cve_selection_text": "Ej verifierat i denna granskning",
+      "kev_text": "Ej bedömbart – CVE-urval saknas",
+      "priority_text": "P2 – snar verifiering",
+      "control_codes": [
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6"
+      ],
+      "controls_text": "Ingen publik direktadministration; VPN/MFA där möjligt; nätsegmentering; loggning; uppdatera. K1–K6.",
+      "credentials_status_text": "Ej tillämpligt – implementation styr – Protokoll/tjänst har inget universellt fabrikslösenord.",
+      "change_required_text": "Välj konkret implementation och granska dess konton/initialprocess.",
+      "verify_login_text": "K1–K6. Kontrollera konton och policy lokalt i behörig administration. Dokumentera byte utan hemligheter; verifiera att anonym åtkomst är avstängd och att nytt konto fungerar. Inga lösenordsgissningar.",
+      "documentation_limitation_text": "Microsoft SQL Server Security Guide; fabriksuppgifter ej omverifierade",
+      "versions_guidance_text": "Ej verifierat; inventera exakt modell/version",
+      "fix_guidance_text": "Kontrollera produktspecifik bulletin; ingen senaste version fastställd",
+      "source_date_text": "Se CVE-post/bulletin",
+      "checked_at": "2026-11-07",
+      "observed_exposure_text": "Ej undersökt",
+      "threat_selection_text": "Ej bedömbart – inget verifierat CVE-urval",
+      "threat_links_text": "Ingen direkt länk verifierad – se Hotunderlag",
+      "threat_tracking_text": "Hotunderlag och Sårbarheter; matcha CVE och exakt modell/version",
+      "limitation_text": "Publicerad PoC, emulator, detektionsverktyg och aktiv exploatering är olika evidens. Ingen kod funktionstestad.",
+      "threat_checked_at": "2026-11-07",
+      "import": {
+        "file": "OT_IoT_125_poster_losenordsstatus.xlsx",
+        "file_sha256": "2e017d3c9f1c28ea82aa05b474c9388f39db8d7350df00d2b2103741238469f1",
+        "import_version": "register-import-1.0.0",
+        "sheet": "Register",
+        "row": 66
+      }
+    },
+    "credentials": {
+      "account_name": null,
+      "account_name_text": "Ej tillämpligt – implementation styr",
+      "account_status_text": "Protokoll/tjänst är inte en produkt med fabriksanvändare",
+      "account_scope_text": "Historian / SQL",
+      "account_source_id": null,
+      "initial_password_type": "not_applicable_implementation",
+      "initial_password_type_text": "Ej tillämpligt – implementation styr",
+      "change_requirement_text": "Välj konkret implementation och granska dess konton/initialprocess.",
+      "commissioning_action_text": "Välj konkret implementation före konto- och setupgranskning.",
+      "password_status_source_id": "src-wb-learn.microsoft.com-ded8fec8",
+      "verification_status": "verified_primary",
+      "checked_at": "2026-11-07",
+      "note": "Underlaget innehåller inga lösenordsvärden; endast kontonamn, lösenordstyp och bytekrav."
+    },
+    "setup_documentation": {
+      "url": "https://learn.microsoft.com/en-us/sql/relational-databases/security/secure-sql-server?view=sql-server-ver17",
+      "title": "Protokoll-/tjänstvägledning – inte en produktinstallation",
+      "doc_type": "not_product",
+      "doc_type_text": "Ej produkt – implementationsmanual krävs",
+      "scope_text": "Historian / SQL. Välj konkret PLC, server, broker eller klient. Protokoll har inte ett universellt standardkonto eller setup.",
+      "verification_text": "Avgränsning fastställd; implementation ej vald",
+      "fetch_status_text": "200",
+      "identity_verified": false,
+      "exact_manual_missing": false,
+      "is_verified_setup_manual": false,
+      "source_id": "src-wb-learn.microsoft.com-ded8fec8",
+      "checked_at": "2026-11-07"
+    },
+    "review_findings": [
+      {
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Ska inte räknas som ny produktfamilj. Port eller titel visar inte produkt, sårbarhet eller OT-tillhörighet.",
+        "status_text": "Öppen – lokal inventering återstår",
+        "source_ids": [
+          "src-wb-learn.microsoft.com-ded8fec8"
+        ],
+        "checked_at": null
+      }
+    ],
     "typical_use": "Processhistorik, databaser för SCADA/MES.",
     "default_ports": [
       {
@@ -2287,7 +3160,8 @@
       "RDP",
       "VNC",
       "SSH",
-      "Fjärradministration"
+      "Fjärradministration",
+      "Bevarad kombinationspost"
     ],
     "category": "Tjänst",
     "function_text": "Drift, service och engineering",
@@ -2322,8 +3196,11 @@
       "ctl-network-segmentation",
       "ctl-protocol-firewall-allowlist",
       "ctl-secure-remote-access",
+      "ctl-change-default-credentials",
+      "ctl-least-privilege-accounts",
       "ctl-vendor-firmware-update",
       "ctl-logging-monitoring",
+      "ctl-backup-restore",
       "ctl-monitor-remote-service",
       "ctl-vendor-hardening-guide"
     ],
@@ -2470,7 +3347,8 @@
     "source_ids": [
       "src-workbook",
       "src-cisa-remote-access-ics",
-      "src-iana-ports"
+      "src-iana-ports",
+      "src-register-workbook"
     ],
     "review": {
       "reviewed_at": "2026-11-07",
@@ -2484,6 +3362,89 @@
         }
       ]
     },
+    "register": {
+      "register_id": "OT-066",
+      "origin": "original",
+      "origin_reference": "Original rad 67",
+      "normalization_key": "otfjrradministrationrdpvncssh",
+      "scope_alias_text": "Bevarad kombinationspost",
+      "source_status_text": "Protokoll/tjänst – ej produktfamilj",
+      "uncertainty_text": "Ska inte räknas som ny produktfamilj. Port eller titel visar inte produkt, sårbarhet eller OT-tillhörighet.",
+      "exposure_risk_text": "Gissningsbara uppgifter / direkt admin / stulna konton – Tjänsten kan tillhöra gateway, engineeringsystem eller annat; inte automatiskt OT.",
+      "cve_selection_text": "Ej verifierat i denna granskning",
+      "kev_text": "Ej bedömbart – CVE-urval saknas",
+      "priority_text": "P2 – snar verifiering",
+      "control_codes": [
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6"
+      ],
+      "controls_text": "Ingen publik direktadministration; VPN/MFA där möjligt; nätsegmentering; loggning; uppdatera. K1–K6.",
+      "credentials_status_text": "Ej tillämpligt – implementation styr – Protokoll/tjänst har inget universellt fabrikslösenord.",
+      "change_required_text": "Välj konkret implementation och granska dess konton/initialprocess.",
+      "verify_login_text": "K1–K6. Kontrollera konton och policy lokalt i behörig administration. Dokumentera byte utan hemligheter; verifiera att anonym åtkomst är avstängd och att nytt konto fungerar. Inga lösenordsgissningar.",
+      "documentation_limitation_text": "CISA: Managing Remote Access for ICS; fabriksuppgifter ej omverifierade",
+      "versions_guidance_text": "Ej verifierat; inventera exakt modell/version",
+      "fix_guidance_text": "Kontrollera produktspecifik bulletin; ingen senaste version fastställd",
+      "source_date_text": "Se CVE-post/bulletin",
+      "checked_at": "2026-11-07",
+      "observed_exposure_text": "Ej undersökt",
+      "threat_selection_text": "Ej bedömbart – inget verifierat CVE-urval",
+      "threat_links_text": "Ingen direkt länk verifierad – se Hotunderlag",
+      "threat_tracking_text": "Hotunderlag och Sårbarheter; matcha CVE och exakt modell/version",
+      "limitation_text": "Publicerad PoC, emulator, detektionsverktyg och aktiv exploatering är olika evidens. Ingen kod funktionstestad.",
+      "threat_checked_at": "2026-11-07",
+      "import": {
+        "file": "OT_IoT_125_poster_losenordsstatus.xlsx",
+        "file_sha256": "2e017d3c9f1c28ea82aa05b474c9388f39db8d7350df00d2b2103741238469f1",
+        "import_version": "register-import-1.0.0",
+        "sheet": "Register",
+        "row": 67
+      }
+    },
+    "credentials": {
+      "account_name": null,
+      "account_name_text": "Ej tillämpligt – implementation styr",
+      "account_status_text": "Protokoll/tjänst är inte en produkt med fabriksanvändare",
+      "account_scope_text": "OT-fjärradministration (RDP/VNC/SSH)",
+      "account_source_id": null,
+      "initial_password_type": "not_applicable_implementation",
+      "initial_password_type_text": "Ej tillämpligt – implementation styr",
+      "change_requirement_text": "Välj konkret implementation och granska dess konton/initialprocess.",
+      "commissioning_action_text": "Välj konkret implementation före konto- och setupgranskning.",
+      "password_status_source_id": "src-cisa-remote-access-ics",
+      "verification_status": "verified_primary",
+      "checked_at": "2026-11-07",
+      "note": "Underlaget innehåller inga lösenordsvärden; endast kontonamn, lösenordstyp och bytekrav."
+    },
+    "setup_documentation": {
+      "url": "https://www.cisa.gov/sites/default/files/2023-01/RP_Managing_Remote_Access_S508NC.pdf",
+      "title": "Protokoll-/tjänstvägledning – inte en produktinstallation",
+      "doc_type": "not_product",
+      "doc_type_text": "Ej produkt – implementationsmanual krävs",
+      "scope_text": "OT-fjärradministration (RDP/VNC/SSH). Välj konkret PLC, server, broker eller klient. Protokoll har inte ett universellt standardkonto eller setup.",
+      "verification_text": "Avgränsning fastställd; implementation ej vald",
+      "fetch_status_text": "200",
+      "identity_verified": false,
+      "exact_manual_missing": false,
+      "is_verified_setup_manual": false,
+      "source_id": "src-cisa-remote-access-ics",
+      "checked_at": "2026-11-07"
+    },
+    "review_findings": [
+      {
+        "finding": "Struktur, källnivå och överlapp granskade; produktens riskpåståenden ej fullständigt omverifierade.",
+        "uncertainty": "Ska inte räknas som ny produktfamilj. Port eller titel visar inte produkt, sårbarhet eller OT-tillhörighet.",
+        "status_text": "Öppen – lokal inventering återstår",
+        "source_ids": [
+          "src-cisa-remote-access-ics"
+        ],
+        "checked_at": null
+      }
+    ],
     "typical_use": "Drift, service och engineering via fjärrskrivbord/skal.",
     "default_ports": [
       {

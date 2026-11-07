@@ -5,6 +5,33 @@ nästa datauppdatering, **P2** inom fas 2, **P3** när behov uppstår.
 
 ## P1 – Datakvalitet och källor
 
+### Efter registerimporten (import 2, 2026-11-07)
+
+- [ ] **Svenska sammanfattningar (`summary_sv`)** för de ~300 nya CVE-posterna från registret;
+      i dag visas NVD:s engelska text eller registrets CWE-text.
+- [ ] **PSIRT-/säkerhetsportaler för de 29 nya leverantörerna** i `vendors.json` (Nedap, mySCADA,
+      Hitachi Energy, B&R, Western Telematic, AutomationDirect, Trimble, ORing, OutBack Power,
+      Dingtian, Subnet Solutions, Lantronix, ALBEDO, Vestel, Nice, Planet, KUNBUS, Optigo,
+      Milesight, Vertiv, Consilium, CyberData, Dover, ControlID, Samsung, Honeywell, Orthanc,
+      INFINITT, Nihon Kohden). Endast verifierade länkar.
+- [ ] **Manuell granskning av registerrelationer som inte blev `verified_primary`** (2
+      `corroborated_secondary`) och av `needs_review`-poster i `credentials` (källa saknas).
+- [ ] **Hotunderlag per produkt för de 5 CVE som berör flera produkter.** Registret knyter varje
+      CVE till en produkt (`subject_product_family_id`); bedöm om övriga produkter behöver egna
+      källkritiska kommentarer.
+- [ ] **Registerkonflikt OT-041 (ABB AC500 V3).** Registret saknar projektets tre CODESYS-CVE;
+      behålls som `under_investigation` + `disputed`-claim tills ABB-bulletin hittats.
+- [ ] **Vulnerabilities utan NVD-post** (`nvd_status: 'unknown'`): kör `data:enrich` tills alla
+      347 CVE har cache; posterna byggs tills dess från registrets CVSS med `needs_review`.
+- [ ] **Kontrollera registrets setupdokument** där `is_verified_setup_manual=false` (17 poster) och
+      där direkt hämtning gav 403/SSL-fel – manuell läsning krävs.
+- [ ] **Kategoriprofiler**: granska `ot_impact`-default för de 28 nya kategorierna i
+      `category_profiles.json` med verksamhetsexpert.
+- [ ] **Länkkontroll i CI** även för registrets 210 URL:er (`data:check-links`), så att
+      `availability` uppdateras utan att fälla bygget.
+
+### Tidigare
+
 - [x] **Hämta övriga 22 CVE i CISA ICSA-26-057-10** (Copeland XWEB Pro). Klart 2026-11-07: bulletinens
       23 CVE är importerade som verifierade matchningar (CSAF product_status + NVD). Kvar: svensk
       sammanfattning (`summary_sv`) för de 22 nya posterna.

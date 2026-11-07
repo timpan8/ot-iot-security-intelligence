@@ -21,6 +21,43 @@ export function AboutPage() {
             ursprungliga fält bevaras och är spårbara till blad, rad och kolumn.
           </p>
         </Section>
+        <Section title="Utökat register (125 poster)" id="register">
+          <p>
+            I november 2026 importerades ett utökat register med <strong>125 poster</strong> (66
+            original och 59 nya produktfamiljer från CISA:s ICS-bulletiner),{' '}
+            <strong>344 unika CVE</strong> i 349 produkt–CVE-relationer, ett källmanifest med
+            SHA-256 för hämtade dokument, länkkontroll, radgranskning, hotunderlag och
+            konto-/lösenordsstatus. Produkt-ID:n (OT-…) bevaras som stabila identifierare och
+            importen är idempotent. Registrets uppgifter läggs till vid sidan av projektets manuella
+            bedömningar; avvikelser redovisas som konflikter i stället för att skrivas över.
+          </p>
+          <ul className="list-disc pl-5">
+            <li>
+              <strong>Lösenordsstatus utan värden:</strong> underlaget innehåller kontonamn, typ av
+              initialt/fabrikslösenord och bytekrav – aldrig lösenord. Ett gemensamt
+              standardlösenord, ett enhetsunikt initiallösenord och ett lösenord som installatören
+              skapar är olika uppgifter; hårdkodade eller förutsägbara mekanismer kan kräva
+              firmwareåtgärd eller utbyte.
+            </li>
+            <li>
+              <strong>Evidensnivåer för PoC:</strong> offentlig PoC, emulatordemonstration,
+              detektionsverktyg och aktiv exploatering är olika uppgifter. CISA:s daterade
+              SSVC-värde <code>none</code> bevisar inte att offentlig kod eller exploatering saknas
+              i dag, och en komponent-PoC bevisar inte att en viss OT-produkt kan fjärrexploateras.
+              Ingen länkad kod har körts.
+            </li>
+            <li>
+              <strong>Dokumentation:</strong> en dokumentportal eller säkerhetsguide är inte
+              automatiskt en verifierad installationsmanual; detta visas per post.
+            </li>
+            <li>
+              <strong>Exponering:</strong> ”Observerad internetexponering” är ”Ej undersökt” för
+              samtliga poster och registrets prioritet (P1/P2) gäller vid <em>konstaterad</em>{' '}
+              exponering. Dokumenterad risk är inte bevis på faktisk exponering eller
+              kompromettering.
+            </li>
+          </ul>
+        </Section>
         <Section title="Källhierarki" id="kallor">
           <ol className="list-decimal pl-5">
             <li>

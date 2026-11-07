@@ -4,6 +4,7 @@ import {
   Advisory,
   Claim,
   Control,
+  LinkCheck,
   Observation,
   ProductFamily,
   ProductVulnerabilityMatch,
@@ -41,7 +42,29 @@ export const Manifest = z.strictObject({
     entries_with_cve_reference: z.number().int(),
     entries_with_security_source_url: z.number().int(),
     kev_listed_vulnerabilities: z.number().int(),
+    register_entries: z.number().int().default(0),
+    register_original: z.number().int().default(0),
+    register_new: z.number().int().default(0),
+    register_cve_unique: z.number().int().default(0),
+    register_relations: z.number().int().default(0),
+    link_checks: z.number().int().default(0),
+    threat_intel: z.number().int().default(0),
   }),
+  imports: z
+    .array(
+      z.strictObject({
+        file: z.string(),
+        sha256: z.string().regex(/^[a-f0-9]{64}$/),
+        imported_at: IsoDateTime,
+        import_version: z.string(),
+        sheets: z.array(z.string()),
+        counts: z.record(
+          z.string(),
+          z.union([z.number(), z.string(), z.array(z.string()), z.record(z.string(), z.number())]),
+        ),
+      }),
+    )
+    .default([]),
   files: z.record(z.string(), z.string()),
   notes: z.array(z.string()).default([]),
 });
@@ -59,6 +82,7 @@ export const Dataset = z.strictObject({
   sources: z.array(Source),
   observations: z.array(Observation),
   claims: z.array(Claim),
+  link_checks: z.array(LinkCheck).default([]),
 });
 export type Dataset = z.infer<typeof Dataset>;
 
@@ -74,4 +98,5 @@ export const DATA_FILES = {
   sources: 'sources.json',
   observations: 'observations.json',
   claims: 'claims.json',
+  link_checks: 'link_checks.json',
 } as const;

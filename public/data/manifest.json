@@ -1,7 +1,7 @@
 {
   "dataset_tier": "public",
   "schema_version": "1.0.0",
-  "generated_at": "2026-11-07T21:20:14.078Z",
+  "generated_at": "2026-11-07T22:36:03.526Z",
   "workbook": {
     "filename": "OT_IoT_sarbarhetsoversikt_66_system_2026-11-07.xlsx",
     "sha256": "1a09ad42eb3590bdb6be2f79b61a84b617657228e2ff678d2e932ca8a3242d0d",
@@ -15,22 +15,83 @@
     "data_rows": 66
   },
   "counts": {
-    "total_entries": 66,
-    "product_families": 55,
+    "total_entries": 125,
+    "product_families": 114,
     "protocol_services": 11,
-    "categories": 18,
-    "vendors": 40,
-    "vulnerabilities": 43,
-    "advisories": 11,
-    "matches": 51,
-    "controls": 20,
-    "sources": 118,
+    "categories": 46,
+    "vendors": 69,
+    "vulnerabilities": 347,
+    "advisories": 70,
+    "matches": 359,
+    "controls": 21,
+    "sources": 1332,
     "observations": 1,
-    "claims": 37,
+    "claims": 38,
     "entries_with_cve_reference": 8,
     "entries_with_security_source_url": 10,
-    "kev_listed_vulnerabilities": 1
+    "kev_listed_vulnerabilities": 2,
+    "register_entries": 125,
+    "register_original": 66,
+    "register_new": 59,
+    "register_cve_unique": 344,
+    "register_relations": 349,
+    "link_checks": 210,
+    "threat_intel": 344
   },
+  "imports": [
+    {
+      "file": "OT_IoT_125_poster_losenordsstatus.xlsx",
+      "sha256": "2e017d3c9f1c28ea82aa05b474c9388f39db8d7350df00d2b2103741238469f1",
+      "imported_at": "2026-11-07T22:33:31.651Z",
+      "import_version": "register-import-1.0.0",
+      "sheets": [
+        "66 system och tjänster",
+        "Läs först",
+        "Sammanställning",
+        "Granskningsrapport",
+        "Register",
+        "Sårbarheter",
+        "Radgranskning",
+        "Riskkontroller",
+        "Källmanifest",
+        "Länkkontroll",
+        "Hotunderlag",
+        "Hotkällor",
+        "Setup och konton"
+      ],
+      "counts": {
+        "register_entries": 125,
+        "register_products": 114,
+        "register_services": 11,
+        "register_origin": {
+          "Original": 66,
+          "Ny": 59
+        },
+        "categories": 46,
+        "vulnerability_relations": 349,
+        "unique_cves": 344,
+        "products_with_cves": 67,
+        "cves_in_multiple_products": 5,
+        "kev_rows": 2,
+        "kev_cves": [
+          "CVE-2023-6448",
+          "CVE-2025-0994"
+        ],
+        "review_rows": 125,
+        "controls": 7,
+        "source_manifest": 214,
+        "link_checks": 210,
+        "threat_intel": 344,
+        "threat_sources": 344,
+        "setup_accounts": 125,
+        "register_matches_annotated": 41,
+        "register_matches_created": 308,
+        "register_matches_verified_primary": 308,
+        "register_matches_corroborated": 0,
+        "register_matches_needs_review": 0
+      }
+    }
+  ],
   "files": {
     "manifest": "manifest.json",
     "vendors": "vendors.json",
@@ -42,7 +103,8 @@
     "controls": "controls.json",
     "sources": "sources.json",
     "observations": "observations.json",
-    "claims": "claims.json"
+    "claims": "claims.json",
+    "link_checks": "link_checks.json"
   },
   "notes": [
     "Publik produkt- och hotkunskapsbas. Innehåller inga anläggningsunika uppgifter.",

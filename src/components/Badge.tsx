@@ -1,5 +1,21 @@
-import type { FactorLevel, VerificationStatus } from '@schemas/index';
-import { factorLabel, verificationDescription, verificationLabel } from '@/lib/labels';
+import type {
+  FactorLevel,
+  InitialPasswordType,
+  PublicPocStatus,
+  RegisterOrigin,
+  VerificationStatus,
+} from '@schemas/index';
+import {
+  factorLabel,
+  originLabel,
+  originShort,
+  pocStatusLabel,
+  pocStatusShort,
+  pwdTypeDescription,
+  pwdTypeLabel,
+  verificationDescription,
+  verificationLabel,
+} from '@/lib/labels';
 
 type Tone = 'ok' | 'info' | 'warn' | 'neutral' | 'danger';
 
@@ -65,4 +81,48 @@ const matchTone: Record<string, Tone> = {
 };
 export function MatchStatusBadge({ status, label }: { status: string; label: string }) {
   return <Badge tone={matchTone[status] ?? 'neutral'}>{label}</Badge>;
+}
+
+const pwdTone: Record<InitialPasswordType, Tone> = {
+  shared_default_documented: 'warn',
+  default_exists_type_unknown: 'warn',
+  device_unique_documented: 'ok',
+  device_unique_normal_delivery: 'ok',
+  model_version_batch_dependent: 'warn',
+  version_dependent_shared_or_unique: 'warn',
+  set_at_commissioning: 'ok',
+  hardcoded_in_affected_version: 'danger',
+  predictable_builtin_mechanism: 'danger',
+  not_applicable_implementation: 'neutral',
+  unknown_unverified: 'neutral',
+};
+/** Typ av initiallösenord – alltid med text, aldrig bara färg. Inga lösenordsvärden. */
+export function PwdTypeBadge({ type }: { type: InitialPasswordType }) {
+  return (
+    <Badge tone={pwdTone[type]} title={pwdTypeDescription[type]}>
+      {pwdTypeLabel[type]}
+    </Badge>
+  );
+}
+
+const pocTone: Record<PublicPocStatus, Tone> = {
+  poc_reported: 'warn',
+  none_reported_at_assessment: 'neutral',
+  unknown_missing: 'neutral',
+  active_reported: 'danger',
+};
+export function PocBadge({ status, short = false }: { status: PublicPocStatus; short?: boolean }) {
+  return (
+    <Badge tone={pocTone[status]} title={pocStatusLabel[status]}>
+      {short ? pocStatusShort[status] : pocStatusLabel[status]}
+    </Badge>
+  );
+}
+
+export function OriginBadge({ origin }: { origin: RegisterOrigin }) {
+  return (
+    <Badge tone={origin === 'new' ? 'info' : 'neutral'} title={originLabel[origin]}>
+      {originShort[origin]}
+    </Badge>
+  );
 }

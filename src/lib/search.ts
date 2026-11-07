@@ -11,6 +11,9 @@ export interface SearchDoc {
   function_text: string;
   risk: string;
   cves: string;
+  register_id: string;
+  account: string;
+  scope: string;
 }
 
 export function buildSearchDocs(d: IndexedDataset): SearchDoc[] {
@@ -29,16 +32,30 @@ export function buildSearchDocs(d: IndexedDataset): SearchDoc[] {
       function_text: e.function_text,
       risk: [e.risk_summary.type_text, e.risk_summary.explanation_text].filter(Boolean).join(' '),
       cves,
+      register_id: e.register?.register_id ?? '',
+      account: e.credentials?.account_name ?? '',
+      scope: e.register?.scope_alias_text ?? '',
     };
   });
 }
 
 export function buildSearchIndex(docs: SearchDoc[]): MiniSearch<SearchDoc> {
   const ms = new MiniSearch<SearchDoc>({
-    fields: ['name', 'aliases', 'vendor', 'category', 'function_text', 'risk', 'cves'],
+    fields: [
+      'name',
+      'aliases',
+      'vendor',
+      'category',
+      'function_text',
+      'risk',
+      'cves',
+      'register_id',
+      'account',
+      'scope',
+    ],
     storeFields: ['id'],
     searchOptions: {
-      boost: { name: 4, vendor: 3, aliases: 3, cves: 3, category: 2 },
+      boost: { name: 4, register_id: 4, vendor: 3, aliases: 3, cves: 3, scope: 2, category: 2 },
       prefix: true,
       fuzzy: 0.15,
       combineWith: 'AND',

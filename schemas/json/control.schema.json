@@ -58,26 +58,8 @@
       "type": "array",
       "items": {
         "type": "string",
-        "enum": [
-          "BMS",
-          "DCS",
-          "Energi",
-          "Gateway",
-          "HMI",
-          "IoT",
-          "Kamera",
-          "Kraft",
-          "Kyla",
-          "NAS",
-          "OPC",
-          "PLC",
-          "PLC/HMI",
-          "Passer",
-          "RTU",
-          "SCADA",
-          "Tjänst",
-          "Ventilation"
-        ]
+        "minLength": 1,
+        "maxLength": 60
       }
     },
     "protocol_scope": {
@@ -151,6 +133,25 @@
         "type": "string",
         "pattern": "^[a-z0-9]+(?:-[a-z0-9.]+)*$"
       }
+    },
+    "register_code": {
+      "default": null,
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^K\\d$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "verification_method": {
+      "default": null,
+      "type": [
+        "string",
+        "null"
+      ]
     }
   },
   "required": [
@@ -168,7 +169,9 @@
     "protocol_scope",
     "vendor_guide_url",
     "framework_refs",
-    "source_ids"
+    "source_ids",
+    "register_code",
+    "verification_method"
   ],
   "additionalProperties": false
 }

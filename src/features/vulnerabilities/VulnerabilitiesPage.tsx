@@ -1,40 +1,66 @@
 import { useMemo, useState } from 'react';
 import { Link } from 'react-router';
 import { useDataset } from '@/data/DatasetContext';
-import { Badge, VerificationBadge } from '@/components/Badge';
+import { Badge, PocBadge, VerificationBadge } from '@/components/Badge';
 import { EmptyState, PageHeader } from '@/components/ui';
 import { fmtDate, fmtPct, fmtScore } from '@/lib/format';
+import { materialTypeLabel, nvdStatusLabel, pocStatusLabel } from '@/lib/labels';
+import { MaterialTypeCode, PublicPocStatus } from '@schemas/index';
 
-function bestCvss(v: { cvss: Array<{ version: string; base_score: number; type: string }> }) {
+function bestCvss(v: {
+  cvss: Array<{ version: string; base_score: number; type: string }>;
+  register_cvss: { version: string; base_score: number | null } | null;
+}) {
   const order = ['4.0', '3.1', '3.0', '2.0'];
   const sorted = v.cvss.slice().sort((a, b) => {
     const t = (a.type === 'Primary' ? 0 : 1) - (b.type === 'Primary' ? 0 : 1);
     return t || order.indexOf(a.version) - order.indexOf(b.version);
   });
-  return sorted[0] ?? null;
+  const first = sorted[0];
+  if (first) return { ...first, from: 'NVD' as const };
+  if (v.register_cvss && v.register_cvss.base_score !== null)
+    return {
+      version: v.register_cvss.version,
+      base_score: v.register_cvss.base_score,
+      from: 'register' as const,
+    };
+  return null;
 }
 
 export function VulnerabilitiesPage() {
   const d = useDataset();
   const [q, setQ] = useState('');
   const [onlyKev, setOnlyKev] = useState(false);
+  const [poc, setPoc] = useState<'any' | PublicPocStatus>('any');
+  const [material, setMaterial] = useState<'any' | MaterialTypeCode>('any');
   const rows = useMemo(() => {
     const needle = q.trim().toLowerCase();
     return d.vulnerabilities
       .filter(
         (v) =>
           (!onlyKev || v.kev.listed) &&
+          (poc === 'any' || v.threat_intel?.public_poc_status === poc) &&
+          (material === 'any' || v.threat_intel?.material_type_code === material) &&
           (!needle ||
-            `${v.cve_id} ${v.summary} ${v.summary_sv ?? ''}`.toLowerCase().includes(needle)),
+            `${v.cve_id} ${v.summary} ${v.summary_sv ?? ''} ${v.register_cvss?.cwe_text ?? ''}`
+              .toLowerCase()
+              .includes(needle)),
       )
       .sort((a, b) => b.cve_id.localeCompare(a.cve_id));
-  }, [d, q, onlyKev]);
+  }, [d, q, onlyKev, poc, material]);
+  const pocCounts = useMemo(() => {
+    const m = new Map<string, number>();
+    for (const v of d.vulnerabilities)
+      if (v.threat_intel)
+        m.set(v.threat_intel.public_poc_status, (m.get(v.threat_intel.public_poc_status) ?? 0) + 1);
+    return m;
+  }, [d]);
 
   return (
     <>
       <PageHeader
         title="Sårbarheter (CVE)"
-        lead="Endast CVE:er som verifierats individuellt mot NVD eller en primär bulletin. CVSS, EPSS och KEV är separata signaler och ersätter inte en OT-konsekvensbedömning."
+        lead="CVE:er med källbelagd produktkoppling (NVD, CISA CSAF eller primär bulletin). CVSS, EPSS, KEV och PoC-status är separata signaler och ersätter inte en OT-konsekvensbedömning. Poster märkta ”NVD-post ej hämtad” bygger på registrets källtext."
       />
       <div className="card flex flex-wrap items-end gap-3 p-3">
         <div className="grow">
@@ -53,6 +79,42 @@ export function VulnerabilitiesPage() {
           <input type="checkbox" checked={onlyKev} onChange={(e) => setOnlyKev(e.target.checked)} />
           Endast CISA KEV
         </label>
+        <div>
+          <label htmlFor="vpoc" className="block text-xs font-medium text-muted">
+            PoC-status (hotunderlag)
+          </label>
+          <select
+            id="vpoc"
+            className="input mt-1"
+            value={poc}
+            onChange={(e) => setPoc(e.target.value as typeof poc)}
+          >
+            <option value="any">Oavsett</option>
+            {PublicPocStatus.options.map((s) => (
+              <option key={s} value={s}>
+                {pocStatusLabel[s]} ({pocCounts.get(s) ?? 0})
+              </option>
+            ))}
+          </select>
+        </div>
+        <div>
+          <label htmlFor="vmat" className="block text-xs font-medium text-muted">
+            Materialtyp
+          </label>
+          <select
+            id="vmat"
+            className="input mt-1"
+            value={material}
+            onChange={(e) => setMaterial(e.target.value as typeof material)}
+          >
+            <option value="any">Oavsett</option>
+            {MaterialTypeCode.options.map((s) => (
+              <option key={s} value={s}>
+                {materialTypeLabel[s]}
+              </option>
+            ))}
+          </select>
+        </div>
         <span className="text-sm text-muted" role="status">
           {rows.length} poster
         </span>
@@ -71,6 +133,7 @@ export function VulnerabilitiesPage() {
                 <th scope="col">CVSS</th>
                 <th scope="col">EPSS</th>
                 <th scope="col">KEV</th>
+                <th scope="col">PoC</th>
                 <th scope="col">Berörda produkter</th>
                 <th scope="col">Verifiering</th>
               </tr>
@@ -88,12 +151,19 @@ export function VulnerabilitiesPage() {
                       <Link to={`/sarbarheter/${v.cve_id}`} className="font-mono text-sm">
                         {v.cve_id}
                       </Link>
-                      <div className="text-xs text-muted">{v.nvd_status}</div>
+                      <div className="text-xs text-muted">
+                        {nvdStatusLabel[v.nvd_status] ?? v.nvd_status}
+                      </div>
                     </td>
                     <td className="max-w-md text-xs">{v.summary_sv ?? v.summary}</td>
                     <td className="text-sm tabular-nums">
                       {c ? (
-                        `${fmtScore(c.base_score)} (v${c.version})`
+                        <>
+                          {fmtScore(c.base_score)} (v{c.version})
+                          {c.from === 'register' ? (
+                            <div className="text-xs text-muted">registret</div>
+                          ) : null}
+                        </>
                       ) : (
                         <span className="text-muted">Okänt</span>
                       )}
@@ -113,6 +183,20 @@ export function VulnerabilitiesPage() {
                         <Badge tone="danger">KEV {fmtDate(v.kev.date_added)}</Badge>
                       ) : (
                         <Badge>Ej i KEV</Badge>
+                      )}
+                    </td>
+                    <td className="text-xs">
+                      {v.threat_intel ? (
+                        <>
+                          <PocBadge status={v.threat_intel.public_poc_status} short />
+                          {v.threat_intel.material_type_code !== 'none_verified' ? (
+                            <div className="mt-1 text-muted">
+                              {materialTypeLabel[v.threat_intel.material_type_code]}
+                            </div>
+                          ) : null}
+                        </>
+                      ) : (
+                        <span className="text-muted">–</span>
                       )}
                     </td>
                     <td className="text-xs">

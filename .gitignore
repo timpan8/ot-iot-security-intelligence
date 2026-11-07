@@ -14,3 +14,6 @@ playwright-report/
 sources/enrichment/diff-report.md
 sources/enrichment/diff-report.json
 sources/enrichment/last-run.json
+
+# TypeScript build info
+*.tsbuildinfo

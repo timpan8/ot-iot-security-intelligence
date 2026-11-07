@@ -1,0 +1,2720 @@
+[
+  {
+    "id": "lc-c41858cc-2",
+    "url": "http://packages.revolutionpi.de/pool/main/p/pictory/",
+    "http_status_text": "200",
+    "final_url": "http://packages.revolutionpi.de/pool/main/p/pictory/",
+    "response_sha256": "4d4d4c3636789881ef91df58587e0aafbb1ec686e7d348e33b0cb403a78c3c93",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-7e0bc56e-3",
+    "url": "https://cache.industry.siemens.com/dl/files/842/109925842/att_1262081/v1/ONE_IndustrialCybersecurity_config_man_0124_en-US.pdf",
+    "http_status_text": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)>",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Ej nåbar från granskningsmiljön; påståendet varken bekräftat eller motbevisat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-wb-cache.industry.siemens.com-01b0497b"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-b730889b-4",
+    "url": "https://cert-portal.siemens.com/productcert/html/ssa-047424.html",
+    "http_status_text": "200",
+    "final_url": "https://cert-portal.siemens.com/productcert/html/ssa-047424.html",
+    "response_sha256": "9a3adcde22bbdaa2c4552cc58de360f1d1bae6738f1873487143f13bc25aef3f",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-url-cert-portal.siemens.com-b730889b"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-9223635b-5",
+    "url": "https://cert-portal.siemens.com/productcert/html/ssa-187636.html",
+    "http_status_text": "200",
+    "final_url": "https://cert-portal.siemens.com/productcert/html/ssa-187636.html",
+    "response_sha256": "a3173eecdc8f28ac978addef21e3b5e804ce601257c5dc1a212817294df19893",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-url-cert-portal.siemens.com-9223635b"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-c4d68223-6",
+    "url": "https://cert-portal.siemens.com/productcert/html/ssa-194557.html",
+    "http_status_text": "200",
+    "final_url": "https://cert-portal.siemens.com/productcert/html/ssa-194557.html",
+    "response_sha256": "ec1038d18acf09546838f71850d2eee56e1cc88565e1171cd1312b9b4b23f890",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-url-cert-portal.siemens.com-c4d68223"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-6849bc5f-7",
+    "url": "https://cert-portal.siemens.com/productcert/html/ssa-280834.html",
+    "http_status_text": "200",
+    "final_url": "https://cert-portal.siemens.com/productcert/html/ssa-280834.html",
+    "response_sha256": "be29ee02278e74ae23bea2a18239c6c21c631f1cffdb96f8e97f95948b93db97",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-url-cert-portal.siemens.com-6849bc5f"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-a213c5ff-8",
+    "url": "https://cert-portal.siemens.com/productcert/html/ssa-327438.html",
+    "http_status_text": "200",
+    "final_url": "https://cert-portal.siemens.com/productcert/html/ssa-327438.html",
+    "response_sha256": "4a758bf28b14f761418e10452c913f22b131feed5d90e873d3f53ce3c9f2bd4c",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-url-cert-portal.siemens.com-a213c5ff"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-41101c76-9",
+    "url": "https://cert-portal.siemens.com/productcert/html/ssa-330084.html",
+    "http_status_text": "200",
+    "final_url": "https://cert-portal.siemens.com/productcert/html/ssa-330084.html",
+    "response_sha256": "4bfc05c1443c1fe4fdd97a5b6b5a07bcf47c4320db030086addff38d84394cb4",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-siemens-ssa-330084-html"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-3a863edf-10",
+    "url": "https://cert-portal.siemens.com/productcert/html/ssa-556937.html",
+    "http_status_text": "200",
+    "final_url": "https://cert-portal.siemens.com/productcert/html/ssa-556937.html",
+    "response_sha256": "de21310a4dfcb27fea36c3fefbaf9dd9d8429e489d6691f042a37f569d795fcd",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-url-cert-portal.siemens.com-3a863edf"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-7b79b150-11",
+    "url": "https://cert-portal.siemens.com/productcert/html/ssa-568427.html",
+    "http_status_text": "200",
+    "final_url": "https://cert-portal.siemens.com/productcert/html/ssa-568427.html",
+    "response_sha256": "7af037854bd916d93aace257bfe5f4422471d6ac010a749a4a8c1b438b9eee04",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-siemens-ssa-568427-html"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-cc064fcf-12",
+    "url": "https://cert-portal.siemens.com/productcert/html/ssa-599451.html",
+    "http_status_text": "200",
+    "final_url": "https://cert-portal.siemens.com/productcert/html/ssa-599451.html",
+    "response_sha256": "db524cf38daa3f5c3d32b20782d4818cfe8a7878f86fcad63b41e522ea2ba282",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-url-cert-portal.siemens.com-cc064fcf"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-f19b47c7-13",
+    "url": "https://cert-portal.siemens.com/productcert/html/ssa-626856.html",
+    "http_status_text": "200",
+    "final_url": "https://cert-portal.siemens.com/productcert/html/ssa-626856.html",
+    "response_sha256": "47ba513f56ff1e0bdac1b1dfdfccb1d1e5881ab482c7c1e195f198fd9dca0827",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-url-cert-portal.siemens.com-f19b47c7"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-b6e49189-14",
+    "url": "https://cert-portal.siemens.com/productcert/html/ssa-769027.html",
+    "http_status_text": "200",
+    "final_url": "https://cert-portal.siemens.com/productcert/html/ssa-769027.html",
+    "response_sha256": "48e8529ad49b9ba91c592a3b04be8ec597ce1d9bbeb78c79656acb16c4e514a6",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-url-cert-portal.siemens.com-b6e49189"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-c51b7c23-15",
+    "url": "https://cityworks.my.site.com/",
+    "http_status_text": "200",
+    "final_url": "https://cityworks.my.site.com/",
+    "response_sha256": "0b9f17cfbf718f864d9f7e383a2d1d47d73245c7f9b9b9dc53b1aa4ddad53051",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-009"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-dd8d5e6d-16",
+    "url": "https://community.automationdirect.com/s/cybersecurity/security-advisories",
+    "http_status_text": "200",
+    "final_url": "https://community.automationdirect.com/s/cybersecurity/security-advisories",
+    "response_sha256": "7ce2a1b4101865dc7c5a72c6863d6fa5a372aa3997e908e9ed472eb9e8ac5621",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-url-community.automationdirect.com-dd8d5e6d"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-8a9755d5-17",
+    "url": "https://community.se.com/t5/DCE-Security/EcoStruxure-IT-Data-Center-Expert-Security-Handbook/ta-p/446553",
+    "http_status_text": "HTTP Error 403: Forbidden",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Ej nåbar från granskningsmiljön; påståendet varken bekräftat eller motbevisat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-url-community.se.com-8a9755d5"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-f29f0b65-18",
+    "url": "https://csrc.nist.gov/pubs/sp/800/82/r3/final",
+    "http_status_text": "200",
+    "final_url": "https://csrc.nist.gov/pubs/sp/800/82/r3/final",
+    "response_sha256": "7cf54149878e79f9c53bcb694f9272da3292f225eda095f29e1718d21fb89fd9",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-nist-sp800-82r3"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-d6c02b8f-19",
+    "url": "https://dl.weintek.com/public/Document/UM0/Product-Security-UserManual-eng.pdf",
+    "http_status_text": "200",
+    "final_url": "https://dl.weintek.com/public/Document/UM0/Product-Security-UserManual-eng.pdf",
+    "response_sha256": "9ce753fad401eb2ee7a2cd9fe98f1f066c521672240fb2dde2a0de529904ccdf",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-wb-dl.weintek.com-f3c9f035"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-a06c9e45-20",
+    "url": "https://docs.aveva.com/bundle/plant-scada/page/1243288.html",
+    "http_status_text": "200",
+    "final_url": "https://docs.aveva.com/bundle/plant-scada/page/1243288.html",
+    "response_sha256": "d30bd4c854ff6b400f7a0dee28839c25823c18f229cf6ee2696dcf99089ebb7d",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-wb-docs.aveva.com-e77d8496"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-f35bc083-21",
+    "url": "https://docs.johnsoncontrols.com/bas/r/Metasys/en-US/Network-and-IT-Guidance-Technical-Bulletin/16.0/Introduction?contentId=u1gPxxRzqUJyrJGMHYEgKw",
+    "http_status_text": "200",
+    "final_url": "https://docs.johnsoncontrols.com/bas/r/Metasys/en-US/Network-and-IT-Guidance-Technical-Bulletin/16.0/Introduction?contentId=u1gPxxRzqUJyrJGMHYEgKw",
+    "response_sha256": "e0d1a056af59e3fe21ec4654384c2fff77ef3627627819ebfa6641cfe396884a",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-wb-docs.johnsoncontrols.com-f98ca8fe"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-f6c7a97b-22",
+    "url": "https://docs.tia.siemens.cloud/r/simatic_s7_1200_manual_collection_enus_20/device-configuration/protection-security",
+    "http_status_text": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)>",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Ej nåbar från granskningsmiljön; påståendet varken bekräftat eller motbevisat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-wb-docs.tia.siemens.cloud-1bb5baef"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-ec977a63-23",
+    "url": "https://docs.tia.siemens.cloud/r/simatic_s7_1500_et_200mp_manual_collection_enus_20/basic-information/automation-system/protection",
+    "http_status_text": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)>",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Ej nåbar från granskningsmiljön; påståendet varken bekräftat eller motbevisat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-wb-docs.tia.siemens.cloud-0f3d7d67"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-cf79b210-24",
+    "url": "https://download.schneider-electric.com/files?p_Doc_Ref=SEVD-2024-163-05&p_enDocType=Security+and+Safety+Notice&p_File_Name=sevd-2024-163-05.json",
+    "http_status_text": "HTTP Error 403: Forbidden",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Ej nåbar från granskningsmiljön; påståendet varken bekräftat eller motbevisat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-url-download.schneider-electric.com-cf79b210"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-69af0294-25",
+    "url": "https://download.schneider-electric.com/files?p_Doc_Ref=SEVD-2024-191-01&p_enDocType=Security+and+Safety+Notice&p_File_Name=sevd-2024-191-01.json",
+    "http_status_text": "HTTP Error 403: Forbidden",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Ej nåbar från granskningsmiljön; påståendet varken bekräftat eller motbevisat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-url-download.schneider-electric.com-69af0294"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-ee9301dc-26",
+    "url": "https://download.schneider-electric.com/files?p_Doc_Ref=SEVD-2024-345-02&p_enDocType=Security+and+Safety+Notice&p_File_Name=sevd-2024-345-02.json",
+    "http_status_text": "HTTP Error 403: Forbidden",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Ej nåbar från granskningsmiljön; påståendet varken bekräftat eller motbevisat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-url-download.schneider-electric.com-ee9301dc"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-85587974-27",
+    "url": "https://download.schneider-electric.com/files?p_Doc_Ref=SEVD-2025-014-08&p_enDocType=Security+and+Safety+Notice&p_File_Name=SEVD-2025-014-08.pdf",
+    "http_status_text": "HTTP Error 403: Forbidden",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Ej nåbar från granskningsmiljön; påståendet varken bekräftat eller motbevisat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-url-download.schneider-electric.com-85587974"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-14ec2e1c-28",
+    "url": "https://download.schneider-electric.com/files?p_Doc_Ref=SEVD-2025-042-01&p_enDocType=Security+and+Safety+Notice&p_File_Name=sevd-2025-042-01.json",
+    "http_status_text": "HTTP Error 403: Forbidden",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Ej nåbar från granskningsmiljön; påståendet varken bekräftat eller motbevisat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-url-download.schneider-electric.com-14ec2e1c"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-36186540-29",
+    "url": "https://download.schneider-electric.com/files?p_Doc_Ref=SEVD-2025-070-01&p_enDocType=Security+and+Safety+Notice&p_File_Name=sevd-2025-070-01.json",
+    "http_status_text": "HTTP Error 403: Forbidden",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Ej nåbar från granskningsmiljön; påståendet varken bekräftat eller motbevisat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-url-download.schneider-electric.com-36186540"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-8074e8dd-30",
+    "url": "https://download.schneider-electric.com/files?p_Doc_Ref=SPD_CCON-PCSSSH_EN&p_enDocType=User+guide&p_File_Name=PCSS-Security-Handbook.pdf",
+    "http_status_text": "HTTP Error 403: Forbidden",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Ej nåbar från granskningsmiljön; påståendet varken bekräftat eller motbevisat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-url-download.schneider-electric.com-8074e8dd"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-f92ccf5e-31",
+    "url": "https://download.schneider-electric.com/files?p_Doc_Ref=Trio+Q+Data+Radio+User+Manual&p_enDocType=User+guide&p_File_Name=Trio+Q+Data+Radio+User+Manual.pdf",
+    "http_status_text": "HTTP Error 403: Forbidden",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Ej nåbar från granskningsmiljön; påståendet varken bekräftat eller motbevisat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-url-download.schneider-electric.com-f92ccf5e"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-95653b0a-32",
+    "url": "https://downloads.unitronicsplc.com/Sites/plc/support-tools-and-applications/Cyber-Protection-Samba-Vision.pdf",
+    "http_status_text": "200",
+    "final_url": "https://downloads.unitronicsplc.com/Sites/plc/support-tools-and-applications/Cyber-Protection-Samba-Vision.pdf",
+    "response_sha256": "c24c3c8d2176ac73a0ea23aaef53e16f2721b97666dd969104e0bde048e54957",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-wb-downloads.unitronicsplc.com-ea3ec37f"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-460c8259-33",
+    "url": "https://emea.mitsubishielectric.com/fa/products/quality/quality-news-information",
+    "http_status_text": "200",
+    "final_url": "https://emea-fa.mitsubishielectric.com/fa/products/quality/quality-news-information?redirect_from_legacy=1",
+    "response_sha256": "7ecbb104736429d34b262853c2b4ceb760ce4a2a5abd2f41159df3e935d72fab",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-022"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-8e76b875-34",
+    "url": "https://engineer.plcnext.help/2024.0_LTS_en/SecurityGeneralInPCWE.htm",
+    "http_status_text": "200",
+    "final_url": "https://engineer.plcnext.help/2024.0_LTS_en/SecurityGeneralInPCWE.htm",
+    "response_sha256": "9cb9f72d1c2f1096689182b6a1af22a660c6541cb353b84b552dba19cc11fe6b",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-wb-engineer.plcnext.help-0babe484"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-9cf72f7e-35",
+    "url": "https://fa-faq.mitsubishielectric.com/faq/show/22481?back=front%2Fcategory%3Ashow&category_id=1995&page=21&sort=sort_access&sort_order=desc",
+    "http_status_text": "200",
+    "final_url": "https://fa-faq.mitsubishielectric.com/faq/show/22481?back=front%2Fcategory%3Ashow&category_id=1995&page=21&sort=sort_access&sort_order=desc",
+    "response_sha256": "5ad43499539c30877137a5309fdc50a1b9b5344811226c6b5652dadaf2e41d43",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-wb-fa-faq.mitsubishielectric.com-75511429"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-a0a214cf-36",
+    "url": "https://firebasestorage.googleapis.com/v0/b/vestel-shield.firebasestorage.app/o/PRODUCTION%2F1%2FVSA-1_R2.pdf?alt=media&token=8201f299-5014-4720-9200-f1b335736ac1",
+    "http_status_text": "200",
+    "final_url": "https://firebasestorage.googleapis.com/v0/b/vestel-shield.firebasestorage.app/o/PRODUCTION%2F1%2FVSA-1_R2.pdf?alt=media&token=8201f299-5014-4720-9200-f1b335736ac1",
+    "response_sha256": "1b4b812926a72a014139427e3cfc8ee29aefbd12316e5bf89c57700ce8ac2e8a",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-url-firebasestorage.googleapis.com-a0a214cf"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-914c32e4-37",
+    "url": "https://ftp.wti.com/pub/TechSupport/Firmware_ARM/",
+    "http_status_text": "200",
+    "final_url": "https://ftp.wti.com/pub/TechSupport/Firmware_ARM/",
+    "response_sha256": "a6ea7a11b98acfca458a9d8d6e89d46bcd55aa46ab539479ed8d1268e6b6751e",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-url-ftp.wti.com-914c32e4"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-bcf25785-38",
+    "url": "https://help.axis.com/en-us/axis-camera-station-system-hardening-guide",
+    "http_status_text": "200",
+    "final_url": "https://help.axis.com/en-us/axis-camera-station-system-hardening-guide",
+    "response_sha256": "1a4023c87ad68fd141323ee7419cd93f10bb87718ca5a5a55d97eebce7b445d5",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-wb-help.axis.com-0e4fb5c0"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-a548ed95-39",
+    "url": "https://help.axis.com/en-us/axis-os-hardening-guide",
+    "http_status_text": "200",
+    "final_url": "https://help.axis.com/en-us/axis-os-hardening-guide",
+    "response_sha256": "53aa6d654d8d8a2e7b044fdacb1a6bdf23fa464bdba54dd53a101e6c405ff8cd",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-8699f2df-40",
+    "url": "https://inductiveautomation.com/resources/article/ignition-security-hardening-guide",
+    "http_status_text": "200",
+    "final_url": "https://inductiveautomation.com/resources/article/ignition-security-hardening-guide",
+    "response_sha256": "875adf8fb6653ca3fb6af89b61dc5d6163e9afb36fa946f119f3825f47bd5714",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-wb-inductiveautomation.com-d2d8e128"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-34f1a51d-41",
+    "url": "https://industrial.omron.eu/en/services-support/support/cybersecurity",
+    "http_status_text": "HTTP Error 404: Not Found",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Ej nåbar från granskningsmiljön; påståendet varken bekräftat eller motbevisat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-wb-industrial.omron.eu-80cff25c"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-742aebaf-42",
+    "url": "https://infosys.beckhoff.com/content/1033/ipc_security_wince/11157442315.html",
+    "http_status_text": "200",
+    "final_url": "https://infosys.beckhoff.com/content/1033/ipc_security_wince/11157442315.html",
+    "response_sha256": "9e8eae82a6e0011ef3244bc95cfa9efc0f12331cbf46ad6e660aaf4dd7308728",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-wb-infosys.beckhoff.com-05594f9e"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-692c96a2-43",
+    "url": "https://kb.synology.com/en-us/DSM/tutorial/How_to_add_extra_security_to_your_Synology_NAS",
+    "http_status_text": "200",
+    "final_url": "https://kb.synology.com/en-us/DSM/tutorial/How_to_add_extra_security_to_your_Synology_NAS",
+    "response_sha256": "4e007a0d9e11da720957d2ed2a73eaf681381cae1742b035a800a7180fb22c91",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-wb-kb.synology.com-f73857fe"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-5e20fb09-44",
+    "url": "https://learn.microsoft.com/en-us/sql/relational-databases/security/secure-sql-server?view=sql-server-ver17",
+    "http_status_text": "200",
+    "final_url": "https://learn.microsoft.com/en-us/sql/relational-databases/security/secure-sql-server?view=sql-server-ver17",
+    "response_sha256": "dae40657ac821e0d8e8f05b1d0fc7883b53f55396c31355598d4d68e0263f5da",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-wb-learn.microsoft.com-ded8fec8"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-1c8fb37c-45",
+    "url": "https://library.e.abb.com/public/ffab1a14a42646c6adee38fc3de61dad/Arctic_csdepl_758860_ENf.pdf",
+    "http_status_text": "200",
+    "final_url": "https://library.e.abb.com/public/ffab1a14a42646c6adee38fc3de61dad/Arctic_csdepl_758860_ENf.pdf",
+    "response_sha256": "a8af2e4f537f1daac5d61cb380b7050fcb1bebed622396a2792cee12b84ec51c",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-ed1437c2-46",
+    "url": "https://linear-solutions.com/wp-content/uploads/E3-Bulletin-06-27-2023.pdf",
+    "http_status_text": "200",
+    "final_url": "https://linear-solutions.com/wp-content/uploads/E3-Bulletin-06-27-2023.pdf",
+    "response_sha256": "7d712bf4db906ec730690acc57b91ddd1014231ce74e541ca585cda2ad2ca4f0",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-2f8ae4ff-47",
+    "url": "https://literature.rockwellautomation.com/idc/groups/literature/documents/um/5069-um001_-en-p.pdf",
+    "http_status_text": "HTTP Error 403: Forbidden",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Ej nåbar från granskningsmiljön; påståendet varken bekräftat eller motbevisat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-wb-literature.rockwellautomation.com-0abd3124"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-824f0c52-48",
+    "url": "https://ltrxdev.atlassian.net/wiki/x/E4H_BQ",
+    "http_status_text": "202",
+    "final_url": "https://ltrxdev.atlassian.net/wiki/pages/tinyurl.action?urlIdentifier=E4H_BQ",
+    "response_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-url-ltrxdev.atlassian.net-824f0c52"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-32f043d9-49",
+    "url": "https://manuals.fronius.com/html/4204260191/sv.html",
+    "http_status_text": "200",
+    "final_url": "https://manuals.fronius.com/html/4204260191/sv.html",
+    "response_sha256": "2badf1eededdde02356deb483f9b844ba06ebc6938913ff6f9774c14050d77f6",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-wb-manuals.fronius.com-0dccad81"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-e8ee12b5-50",
+    "url": "https://orthanc.uclouvain.be/book/faq/security.html",
+    "http_status_text": "200",
+    "final_url": "https://orthanc.uclouvain.be/book/faq/security.html",
+    "response_sha256": "50d5a12a0fc2d9d44425edd4e13f3ae5efa3bdaa55689268a5ec84160a3ecde8",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-url-orthanc.uclouvain.be-e8ee12b5"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-cb8b3cc9-51",
+    "url": "https://process.honeywell.com/us/en/support/technical-publication?search=SN2025",
+    "http_status_text": "200",
+    "final_url": "https://process.honeywell.com/portal/us/en/technical-publication?q=SN2025",
+    "response_sha256": "76123424f6183fa0f3bb1156f9e9bcb4732a4dbd2f7b25dd71c12d84748d1217",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-045"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-8fb39637-52",
+    "url": "https://psirt.abb.com/csaf/2025/9akk108471a3623.json",
+    "http_status_text": "200",
+    "final_url": "https://psirt.abb.com/csaf/2025/9akk108471a3623.json",
+    "response_sha256": "83b9d04e83a9a163d909822052b90e98bd4fcad0af5e5df169da3a31af6ba0f2",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-url-psirt.abb.com-8fb39637"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-9cc0f687-53",
+    "url": "https://publisher.hitachienergy.com/preview?DocumentID=8DBD000235&LanguageCode=en&DocumentPartId=&Action=Launch",
+    "http_status_text": "200",
+    "final_url": "https://publisher.hitachienergy.com/preview?DocumentID=8DBD000235&LanguageCode=en&DocumentPartId=&Action=Launch",
+    "response_sha256": "62a276f80184c6b9ab8ebd445673f2c10ed5be6d3594033547e2027febe912e3",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-url-publisher.hitachienergy.com-9cc0f687"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-3e0213c9-54",
+    "url": "https://rco.se/mjukvara/grundlicenser/programvare/m5/r-card-m5",
+    "http_status_text": "200",
+    "final_url": "https://rco.se/mjukvara/grundlicenser/programvare/m5/r-card-m5",
+    "response_sha256": "120c44637b4d42c17047d99b8606310cc4f4a537b1703dcc4b4599f47d704a8f",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-wb-rco.se-d98177e3"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-4795bd41-55",
+    "url": "https://reference.opcfoundation.org/specs/OPC-10000-2/1",
+    "http_status_text": "200",
+    "final_url": "https://reference.opcfoundation.org/specs/OPC-10000-2/1",
+    "response_sha256": "0476db076c2beb77e321c3a9a7442b6f2cbedb9b6d4ee77fd5e03d7b3bab6d11",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-wb-reference.opcfoundation.org-84dc16b3"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-593d8434-56",
+    "url": "https://rockwellautomation.custhelp.com/app/answers/answer_view/a_id/1085012/loc/en_US",
+    "http_status_text": "200",
+    "final_url": "https://support.rockwellautomation.com/app/answers/answer_view/a_id/1085012/loc/en_US",
+    "response_sha256": "daa9f3c5c330e293e6b58be58f9728871e5d9f2bf11ce9e6897d9ce968aea324",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-url-rockwellautomation.custhelp.com-593d8434"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-5369b419-57",
+    "url": "https://rockwellautomation.custhelp.com/app/answers/answer_view/a_id/1085012/loc/en_US#__highlight",
+    "http_status_text": "200",
+    "final_url": "https://support.rockwellautomation.com/app/answers/answer_view/a_id/1085012/loc/en_US",
+    "response_sha256": "0073cc306b3f1444bc31e0a844aa3ea12ac82297ec4b1b03052b93a09313f5fa",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-url-rockwellautomation.custhelp.com-5369b419"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-237cea77-58",
+    "url": "https://search.abb.com/library/Download.aspx?DocumentID=1MRS758860&LanguageCode=en&DocumentPartId=&Action=Launch",
+    "http_status_text": "200",
+    "final_url": "https://library.e.abb.com/public/ffab1a14a42646c6adee38fc3de61dad/Arctic_csdepl_758860_ENf.pdf?x-sign=9tHaM%2fxBdFwalbDSQ1vPIg9cpVcyEkNmaOzKCnvaDxGjikXdBRm7fV1u2D20YOnM",
+    "response_sha256": "a8af2e4f537f1daac5d61cb380b7050fcb1bebed622396a2792cee12b84ec51c",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-050"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-0b78d90b-59",
+    "url": "https://search.abb.com/library/Download.aspx?DocumentID=HT0038&LanguageCode=en&DocumentPartId=&Action=Launch",
+    "http_status_text": "200",
+    "final_url": "https://library.e.abb.com/public/98525e4e5ddb41529d425b54d61f3a62/Network%20Security%20Best%20Practice%20Aspect_FBXi_CBXi_CB_Unitron_System_Application%20note%28HT0038_EN_Rev19%29.pdf?x-sign=SYxaJPbyL2eMEqnw4COcIG9UG2iGcTRbPP%2bRwLsBlBlU4EJQiiD3cN3oopS0cnWf",
+    "response_sha256": "9e6cfe3222726fd75f388144976be51393b7c57cf5621327b214a32d6cf800e3",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-url-search.abb.com-0b78d90b"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-8cdef865-60",
+    "url": "https://sid.siemens.com/r/A6V14948151/29540941067___en-US_29541994379",
+    "http_status_text": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)>",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Ej nåbar från granskningsmiljön; påståendet varken bekräftat eller motbevisat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-wb-sid.siemens.com-2e7a9d34"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-4ff5732c-61",
+    "url": "https://support.hms-networks.com/hc/en-us/articles/27420854662290-Ewon-Cosy-Feature-Changes-Introduced-in-Firmware-23-0-RED",
+    "http_status_text": "HTTP Error 403: Forbidden",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Ej nåbar från granskningsmiljön; påståendet varken bekräftat eller motbevisat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-wb-support.hms-networks.com-69523668"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-56e072d0-62",
+    "url": "https://techdocs.wago.com/io-system/750_753/system/en-US/75536779.html",
+    "http_status_text": "200",
+    "final_url": "https://techdocs.wago.com/io-system/750_753/system/en-US/75536779.html",
+    "response_sha256": "7869799ed24f21290d28f7ba8d734495820c887dc02e03f6f4708e62ab0a6d57",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-wb-techdocs.wago.com-76f87f4b"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-2a6dc3d2-63",
+    "url": "https://webapps.copeland.com/Dixell/Content/Pages/Manuals/XWEBPRO/XWEBPROV1.2OPERATION/XWEB-PRO-OPR-EN.pdf",
+    "http_status_text": "200",
+    "final_url": "https://webapps.copeland.com/Dixell/Content/Pages/Manuals/XWEBPRO/XWEBPROV1.2OPERATION/XWEB-PRO-OPR-EN.pdf",
+    "response_sha256": "605b7316c582b598f33e4a853435de0e371392dae39c8460ddc8af4f502d7b80",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-wb-webapps.copeland.com-94c8bb33"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-89314ccb-64",
+    "url": "https://wiki.teltonika-networks.com/view/Security_Features",
+    "http_status_text": "200",
+    "final_url": "https://wiki.teltonika-networks.com/view/Security_Features",
+    "response_sha256": "ec25e295849803960ae56ee6f0ad52b8897b1199b88c3aa8cd615e8d2917b5ae",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-wb-wiki.teltonika-networks.com-1be49e41"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-67e873ce-65",
+    "url": "https://www.2n.com/en-GB/manuals/intercoms/2n-ip-verso/",
+    "http_status_text": "200",
+    "final_url": "https://www.2n.com/en-GB/manuals/intercoms/2n-ip-verso/",
+    "response_sha256": "a436829023643990c5d3a20388845a2dbf009268b3ec764d7244587c1b5eb24e",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-wb-www.2n.com-aa0fd96d"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-03e65df4-66",
+    "url": "https://www.abb.com/global/en/company/about/cybersecurity/alerts-and-notifications",
+    "http_status_text": "200",
+    "final_url": "https://www.abb.com/global/en/company/about/cybersecurity/alerts-and-notifications",
+    "response_sha256": "2d2bcc56b1138541711aa090258921360370d456c0123188ade8f6752db5900d",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-wb-www.abb.com-a03c04fc"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-dd8df37c-67",
+    "url": "https://www.armis.com/research/frostbyte10/",
+    "http_status_text": "HTTP Error 403: Forbidden",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Ej nåbar från granskningsmiljön; påståendet varken bekräftat eller motbevisat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-armis-frostbyte10"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-acb16389-68",
+    "url": "https://www.assaabloy.com/se/sv/service/support/access-control-system",
+    "http_status_text": "200",
+    "final_url": "https://www.assaabloy.com/se/sv/service/support/access-control-system",
+    "response_sha256": "72463a511a81b38f01530e6c046f00e91a977d4f4f951b5509c1492337454168",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-wb-www.assaabloy.com-0fa3c1b3"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-04779bf6-69",
+    "url": "https://www.assaabloy.com/se/sv/service/support/aptus",
+    "http_status_text": "200",
+    "final_url": "https://www.assaabloy.com/se/sv/service/support/aptus",
+    "response_sha256": "78b91ea235dc3b346183e9a0a704389945b40cdaf6327b824b02c7b5447f8cb5",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-wb-www.assaabloy.com-61cbebaa"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-e00ef200-70",
+    "url": "https://www.automationdirect.com/adc/shopping/catalog/communications/protocol_gateways/modbus_gateways/eki-1221-ce",
+    "http_status_text": "HTTP Error 301: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\n301",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Ej nåbar från granskningsmiljön; påståendet varken bekräftat eller motbevisat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-url-www.automationdirect.com-e00ef200"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-53ef55c0-71",
+    "url": "https://www.br-automation.com/en/about-us/locations/",
+    "http_status_text": "200",
+    "final_url": "https://www.br-automation.com/en/about-us/locations/",
+    "response_sha256": "5ea3997c36ef5ef676484411f6ac725bd6e862fe27705ec2d8d678dc70c082d5",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-url-www.br-automation.com-53ef55c0"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-7d93998f-72",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-007-02",
+    "http_status_text": "HTTP Error 403: Forbidden",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Ej nåbar från granskningsmiljön; påståendet varken bekräftat eller motbevisat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-url-www.cisa.gov-7d93998f"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-65bbe784-73",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-044-15",
+    "http_status_text": "HTTP Error 403: Forbidden",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Ej nåbar från granskningsmiljön; påståendet varken bekräftat eller motbevisat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-url-www.cisa.gov-65bbe784"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-67bbeaaa-74",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-044-17",
+    "http_status_text": "HTTP Error 403: Forbidden",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Ej nåbar från granskningsmiljön; påståendet varken bekräftat eller motbevisat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-url-www.cisa.gov-67bbeaaa"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-bd084a9f-75",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-100-08",
+    "http_status_text": "HTTP Error 403: Forbidden",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Ej nåbar från granskningsmiljön; påståendet varken bekräftat eller motbevisat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-url-www.cisa.gov-bd084a9f"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-b337b836-76",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-114-02",
+    "http_status_text": "HTTP Error 403: Forbidden",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Ej nåbar från granskningsmiljön; påståendet varken bekräftat eller motbevisat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-url-www.cisa.gov-b337b836"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-de4c43c4-77",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-126-01",
+    "http_status_text": "HTTP Error 403: Forbidden",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Ej nåbar från granskningsmiljön; påståendet varken bekräftat eller motbevisat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-url-www.cisa.gov-de4c43c4"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-2ce38df5-78",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-210-02",
+    "http_status_text": "HTTP Error 403: Forbidden",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Ej nåbar från granskningsmiljön; påståendet varken bekräftat eller motbevisat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-url-www.cisa.gov-2ce38df5"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-8cd92811-79",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-268-01",
+    "http_status_text": "HTTP Error 403: Forbidden",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Ej nåbar från granskningsmiljön; påståendet varken bekräftat eller motbevisat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-url-www.cisa.gov-8cd92811"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-2da1fe54-80",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-057-10",
+    "http_status_text": "HTTP Error 403: Forbidden",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Ej nåbar från granskningsmiljön; påståendet varken bekräftat eller motbevisat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-cisa-icsa-26-057-10"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-c0f40d07-81",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsma-25-100-01",
+    "http_status_text": "HTTP Error 403: Forbidden",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Ej nåbar från granskningsmiljön; påståendet varken bekräftat eller motbevisat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-url-www.cisa.gov-c0f40d07"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-6b1f98ae-82",
+    "url": "https://www.cisa.gov/sites/default/files/2023-01/RP_Managing_Remote_Access_S508NC.pdf",
+    "http_status_text": "HTTP Error 403: Forbidden",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Ej nåbar från granskningsmiljön; påståendet varken bekräftat eller motbevisat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-cisa-remote-access-ics"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-8bf93cf7-83",
+    "url": "https://www.consiliumsafety.com/en/support/",
+    "http_status_text": "200",
+    "final_url": "https://www.consiliumsafety.com/en/support/",
+    "response_sha256": "fa82f07d886fe2ff0cec938ad5aabe62970a2449741adb57514557342e729577",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-077"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-56c366a8-84",
+    "url": "https://www.controlid.com.br/en/access-control/idsecure/",
+    "http_status_text": "200",
+    "final_url": "https://www.controlid.com.br/en/access-control/idsecure/",
+    "response_sha256": "afd97a4a43607226cad0ef544939774df304aab25280474c64244c1f99ebdbb1",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-url-www.controlid.com.br-56c366a8"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-f73456b7-85",
+    "url": "https://www.copeland.com/en-us/products/controls-monitoring-systems/facility-controls-electronics/facility-and-system-controls/documents/supervisory-e3",
+    "http_status_text": "200",
+    "final_url": "https://www.copeland.com/en-us/products/controls-monitoring-systems/facility-controls-electronics/facility-and-system-controls/documents/supervisory-e3",
+    "response_sha256": "36f4e4b0cc92fffb2915573670abaf1115de2551685f9a62c1d420d86a787630",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-wb-www.copeland.com-4466a190"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-50e765f2-86",
+    "url": "https://www.cyberdata.net/products/011209",
+    "http_status_text": "HTTP Error 429: Too Many Requests",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Ej nåbar från granskningsmiljön; påståendet varken bekräftat eller motbevisat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-081"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-c114c548-87",
+    "url": "https://www.danfoss.com/en/service-and-support/coordinated-vulnerability-disclosure/danfoss-security-advisories/dsa-2025-08-01",
+    "http_status_text": "HTTP Error 403: Forbidden",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Ej nåbar från granskningsmiljön; påståendet varken bekräftat eller motbevisat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-danfoss-dsa-2025-08-01"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-4357a492-88",
+    "url": "https://www.danfoss.com/en/service-and-support/downloads/dcs/adap-kool-software/ak-sm-800a/",
+    "http_status_text": "HTTP Error 403: Forbidden",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Ej nåbar från granskningsmiljön; påståendet varken bekräftat eller motbevisat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-danfoss-ak-sm-800a-downloads"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-066a7865-89",
+    "url": "https://www.doverfuelingsolutions.com/mea/en/products-and-solutions/automatic-tank-gauging/consoles/progauge-maglink-lx-4-console.html",
+    "http_status_text": "HTTP Error 403: Forbidden",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Ej nåbar från granskningsmiljön; påståendet varken bekräftat eller motbevisat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-url-www.doverfuelingsolutions.com-066a7865"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-5881aa38-90",
+    "url": "https://www.hikvision.com/content/dam/hikvision/eu/support/cybersecurity/Network-Security-Hardening-Guide-new-1.pdf",
+    "http_status_text": "200",
+    "final_url": "https://www.hikvision.com/content/dam/hikvision/eu/support/cybersecurity/Network-Security-Hardening-Guide-new-1.pdf",
+    "response_sha256": "29bb7ddffb7e46e659a15fa09912e9a76e2da004521361e96e50dac46525cb0a",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-wb-www.hikvision.com-7fcaea8f"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-a94c02c5-91",
+    "url": "https://www.home-assistant.io/docs/configuration/remote/",
+    "http_status_text": "200",
+    "final_url": "https://www.home-assistant.io/docs/configuration/remote/",
+    "response_sha256": "0fe3086788cede0bddff5f7cac52e52d8522837d09df020ab290fd4e5e01fdef",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-wb-www.home-assistant.io-9021e8c0"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-534d1b47-92",
+    "url": "https://www.johnsoncontrols.com/trust-center/cybersecurity/security-advisories",
+    "http_status_text": "200",
+    "final_url": "https://www.johnsoncontrols.com/trust-center/cybersecurity/security-advisories",
+    "response_sha256": "f4d3a50c3cb68229453f084a71268611e4ecd295115f28008b09e0c610d1579a",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-wb-www.johnsoncontrols.com-e9bba107"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-371a1e05-93",
+    "url": "https://www.milesight.com/iot/resources/download-center/#firmware-ug65",
+    "http_status_text": "200",
+    "final_url": "https://www.milesight.com/iot/resources/download-center/#firmware-ug65",
+    "response_sha256": "8d0ef0b9b485c915533a8f3ec3d1c98ee6f7ed8c0095a101157ddff86ec5fa82",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-4a52dc53-94",
+    "url": "https://www.moxa.com/getmedia/5c1ddb66-33b7-42d0-8d30-559f34f62753/moxa-nport-6000-series-manual-v17.5.pdf",
+    "http_status_text": "200",
+    "final_url": "https://www.moxa.com/getmedia/5c1ddb66-33b7-42d0-8d30-559f34f62753/moxa-nport-6000-series-manual-v17.5.pdf",
+    "response_sha256": "d7c7fe31defc686c5add2f151608c809716eb85e515daeecbed3663912c93543",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-wb-www.moxa.com-e4cf4926"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-5d1dbef0-95",
+    "url": "https://www.myscada.org/downloads/mySCADAPROManager/",
+    "http_status_text": "200",
+    "final_url": "https://www.myscada.org/downloads/mySCADAPROManager/",
+    "response_sha256": "da218fd6f15fbe38732957bc5c60973297d282cb466d1164422ccb340e33c826",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-url-www.myscada.org-5d1dbef0"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-3be1c909-96",
+    "url": "https://www.nihonkohden.com/security.html",
+    "http_status_text": "200",
+    "final_url": "https://www.nihonkohden.com/security.html",
+    "response_sha256": "20638c46819658b6c520d24688a6252eb362dd7469e87b7f82f856af8858e35b",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-url-www.nihonkohden.com-3be1c909"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-fb5ad169-97",
+    "url": "https://www.planet.com.tw/en/product/uni-nms",
+    "http_status_text": "200",
+    "final_url": "https://www.planet.com.tw/en/product/uni-nms",
+    "response_sha256": "2018adefa32f43ca694e63db89baf1c9b2de5cfed005b8494019bd82599a6542",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-104"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-6256c7c6-98",
+    "url": "https://www.ptc.com/en/support/refdoc/KepwareServer/7_0/Secure_Deployment_Guide_for_Kepware_Server",
+    "http_status_text": "200",
+    "final_url": "https://www.ptc.com/en/support/refdoc/KepwareServer/7_0/Secure_Deployment_Guide_for_Kepware_Server",
+    "response_sha256": "ff95667d2b0a1f2949458ea008bf79f62feca8f489edaa09d056b87effbdfbf9",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-wb-www.ptc.com-2190de32"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-66af9d47-99",
+    "url": "https://www.ptc.com/help/kepware/kepware_server/en/kepware/server/settings-config-api-configuration.html",
+    "http_status_text": "200",
+    "final_url": "https://www.ptc.com/help/kepware/kepware_server/en/kepware/server/settings-config-api-configuration.html",
+    "response_sha256": "35f5a1e2364643a3781364b42ae854ab047a06003bcac28df7469d696bad5074",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-wb-www.ptc.com-58a78e6c"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-01eb95ae-100",
+    "url": "https://www.qnap.com/sv-se/security",
+    "http_status_text": "200",
+    "final_url": "https://www.qnap.com/sv-se/security",
+    "response_sha256": "8a2c624444b935ffa470296291dfe9501cc14beb83f9c80f57e7e4d51a8449c3",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-wb-www.qnap.com-b89adcc6"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-a1cc4f48-101",
+    "url": "https://www.regincontrols.com/globalassets/pimmediafiles/documents/corrigo-5.0_ma30012_en.pdf",
+    "http_status_text": "200",
+    "final_url": "https://www.regincontrols.com/globalassets/pimmediafiles/documents/corrigo-5.0_ma30012_en.pdf",
+    "response_sha256": "14bc0492aba1fefcedeef44edce212d5bbd40f80305f7bcb665791d53048e9df",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-wb-www.regincontrols.com-d4e01f30"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-2ca22ecc-102",
+    "url": "https://www.rockwellautomation.com/en-se/docs/technical/logix5000/_online/1756-um543/controllogix-5580-and-guardlogix-5580-controllers-/develop-secure-applications.html",
+    "http_status_text": "HTTP Error 403: Forbidden",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Ej nåbar från granskningsmiljön; påståendet varken bekräftat eller motbevisat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-wb-www.rockwellautomation.com-457996fe"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-1ecb397a-103",
+    "url": "https://www.rockwellautomation.com/en-us/docs/technical/logix5000/_online/1756-um900/controllogix-5590-controller-user-manual-ditamap/develop-secure-applications.html",
+    "http_status_text": "HTTP Error 403: Forbidden",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Ej nåbar från granskningsmiljön; påståendet varken bekräftat eller motbevisat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-wb-www.rockwellautomation.com-99d4a550"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-5b968886-104",
+    "url": "https://www.se.com/us/en/download/document/AN_EBOCyberSecurity_EN/",
+    "http_status_text": "200",
+    "final_url": "https://www.se.com/us/en/download/document/AN_EBOCyberSecurity_EN/",
+    "response_sha256": "84da1bb155840f0466b360281ce76e53a5b9d2d7ec7143d29ddd4798e00e1dbc",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-wb-www.se.com-4fb7abd9"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-0befc64c-105",
+    "url": "https://www.se.com/us/en/download/document/EIO0000004242/",
+    "http_status_text": "200",
+    "final_url": "https://www.se.com/us/en/download/document/EIO0000004242/",
+    "response_sha256": "6b08d578b9064faf7686fa7a2486cf070d3774726b94d2b219a7a4d09252bd2b",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-wb-www.se.com-a89e80a6"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-caa436b8-106",
+    "url": "https://www.se.com/us/en/download/document/SPD_CCON-BDYD7K_EN/",
+    "http_status_text": "200",
+    "final_url": "https://www.se.com/us/en/download/document/SPD_CCON-BDYD7K_EN/",
+    "response_sha256": "36ab7ddfad6851622b221ec8db23c8ce43f3c32b1dac14bb6c3458d27de554f6",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-wb-www.se.com-889a0204"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-f7cdae15-107",
+    "url": "https://www.se.com/ww/en/download/document/DOCA0084EN/",
+    "http_status_text": "200",
+    "final_url": "https://www.se.com/ww/en/download/document/DOCA0084EN/",
+    "response_sha256": "3ba580d0f812120091695af63dc930a76b0e3f8bb1f77e3321b50d94b1895626",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-123"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-76a518ee-108",
+    "url": "https://www.solar-log.com/en/support/firmware-database",
+    "http_status_text": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1032)>",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Ej nåbar från granskningsmiljön; påståendet varken bekräftat eller motbevisat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-wb-www.solar-log.com-1ce5537a"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-5553fdbb-109",
+    "url": "https://www.sungrowpower.com/se/en/products/intelligent-gateway/winet-s2",
+    "http_status_text": "200",
+    "final_url": "https://www.sungrowpower.com/se/en/products/intelligent-gateway/winet-s2",
+    "response_sha256": "22f4644613b0e9eda9ce2c8a3555d6ac87df22dd5e71f08e04485382be88231b",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-wb-www.sungrowpower.com-61a78c95"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-f02a1358-110",
+    "url": "https://www.swegon.com/sv/support/hitta-information/hitta-dokument/?q=gold",
+    "http_status_text": "200",
+    "final_url": "https://www.swegon.com/sv/support/hitta-information/hitta-dokument/?q=gold",
+    "response_sha256": "b10c3213ec90511d26762406f9da8e369270152437d4febe8535d6aea72a7009",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-wb-www.swegon.com-f8b85081"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-820ef65a-111",
+    "url": "https://www.systemair.com/sv-se/produkter/ventilationssystem-for-bostader/tillbehor/tillbehor-for-bostadsaggregat/styrutrustning/save-connect",
+    "http_status_text": "200",
+    "final_url": "https://www.systemair.com/sv-se/produkter/ventilationssystem-for-bostader/tillbehor/tillbehor-for-bostadsaggregat/styrutrustning/save-connect",
+    "response_sha256": "c717fe5fb60e4a5f4553edfaa58717112523e2f86fbd293102bcb8555b16b5bb",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-wb-www.systemair.com-5b8e0fdf"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-6fbdedf5-112",
+    "url": "https://www.tridium.com/content/dam/tridium/en/documents/document-lists/niagara/tri-Niagara4-Hardening-Guide-en-2025.pdf",
+    "http_status_text": "200",
+    "final_url": "https://www.tridium.com/content/dam/tridium/en/documents/document-lists/niagara/tri-Niagara4-Hardening-Guide-en-2025.pdf",
+    "response_sha256": "de80380b430d3a24923957ed4ccf999c028629d242ae7a925f01e6b7c3c53ccb",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-wb-www.tridium.com-368754de"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-440dd6de-113",
+    "url": "https://www.vertiv.com/en-us/support/security-support-center/",
+    "http_status_text": "200",
+    "final_url": "https://www.vertiv.com/en-us/support/security-support-center/",
+    "response_sha256": "f50f0ab2b4f801e7e656f7d9be0a8f3c627169a6921fe842fbedf65f1324a854",
+    "interpretation_text": "Nåbar; innehåll ej fullständigt verifierat",
+    "checked_at": "2026-11-07",
+    "source_ids": [],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-483c8758-114",
+    "url": "https://assets.danfoss.com/documents/latest/56759/BC316842192932en-001001.pdf",
+    "http_status_text": "200",
+    "final_url": "https://assets.danfoss.com/documents/latest/56759/BC316842192932en-001001.pdf",
+    "response_sha256": "7f7c65686a6b9d8a940102579833002bd939ed680da3ae3354c4eae1744e5b55",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-001"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-34d9389a-115",
+    "url": "https://blog.albedotelecom.com/ntime-configuration/",
+    "http_status_text": "200",
+    "final_url": "https://blog.albedotelecom.com/ntime-configuration/",
+    "response_sha256": "d7a1dc7c0a95408de455fdf8c5d2834ab389dd2a7f241ecdf9d63ae62b4111e9",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-002"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-a333afdf-116",
+    "url": "https://cache.industry.siemens.com/dl/files/186/109954186/att_1263824/v1/PH_SCALANCE-SC-600-WBM_76_en-US.pdf",
+    "http_status_text": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Åtkomst ej verifierad från granskningsmiljön; inte bevis på att dokument saknas",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-003"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-d0817a8e-117",
+    "url": "https://cache.industry.siemens.com/dl/files/321/109742321/att_1333624/v1/SIP5_Operating_V10.00_Manual_C003-Q_en.pdf",
+    "http_status_text": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Åtkomst ej verifierad från granskningsmiljön; inte bevis på att dokument saknas",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-004"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-cf1de6fa-118",
+    "url": "https://cache.industry.siemens.com/dl/files/442/109483442/att_916592/v1/MAN_2514374103-04_en_en-US.pdf",
+    "http_status_text": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Åtkomst ej verifierad från granskningsmiljön; inte bevis på att dokument saknas",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-005"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-ceef31de-119",
+    "url": "https://cache.industry.siemens.com/dl/files/635/109751635/att_1080413/v1/PH_SCALANCE-M8x-WBM_76.pdf",
+    "http_status_text": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Åtkomst ej verifierad från granskningsmiljön; inte bevis på att dokument saknas",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-006"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-c12297ed-120",
+    "url": "https://cache.industry.siemens.com/dl/files/884/109976884/att_1305107/v1/PH_SCALANCE-LPE-9000_76_en-US.pdf",
+    "http_status_text": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Åtkomst ej verifierad från granskningsmiljön; inte bevis på att dokument saknas",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-007"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-5d3ee50c-121",
+    "url": "https://cdn.automationdirect.com/static/manuals/mbgatewaym/mbgatewaym.html",
+    "http_status_text": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Åtkomst ej verifierad från granskningsmiljön; inte bevis på att dokument saknas",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-008"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-aecd9af5-122",
+    "url": "https://ckm-content.se.com/ckmContent/sfc/servlet.shepherd/document/download/0698V00000bJgNRQA0",
+    "http_status_text": "HTTP Error 503: Service Unavailable",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Åtkomst ej verifierad från granskningsmiljön; inte bevis på att dokument saknas",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-010"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-41c78640-123",
+    "url": "https://dl.weintek.com/public/Document/UM0/cMT-Viewer-UserManual-eng.pdf",
+    "http_status_text": "200",
+    "final_url": "https://dl.weintek.com/public/Document/UM0/cMT-Viewer-UserManual-eng.pdf",
+    "response_sha256": "5439d88defd412f8f6ba0b24540961cc79faa75d53bc94e4b288073e0882fcfb",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-012"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-eae34eeb-124",
+    "url": "https://docs.johnsoncontrols.com/bas/api/khub/documents/H04APcCjLovR_YJ5co8puA/content",
+    "http_status_text": "200",
+    "final_url": "https://docs.johnsoncontrols.com/bas/api/khub/documents/H04APcCjLovR_YJ5co8puA/content",
+    "response_sha256": "17548cc2b10f048978c17db324fdfa335c0eb34241700ac84768001b42c56f39",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-014"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-d8996921-125",
+    "url": "https://docs.qnap.com/operating-system/qts/5.1.x/qts5.1.x-ug-en-us.pdf",
+    "http_status_text": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Åtkomst ej verifierad från granskningsmiljön; inte bevis på att dokument saknas",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-015"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-a33bb76c-126",
+    "url": "https://document.infinitt.com/fr",
+    "http_status_text": "200",
+    "final_url": "https://document.infinitt.com/fr",
+    "response_sha256": "4fdb662295bc8870f74e99fe333b864566459431fae62e9848a4f47060c6ce6b",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-018"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-d7c3cf3c-127",
+    "url": "https://download.beckhoff.com/download/document/ipc/embedded-pc/embedded-pc-cx/TwinCAT_BSD_en.pdf",
+    "http_status_text": "200",
+    "final_url": "https://download.beckhoff.com/download/document/ipc/embedded-pc/embedded-pc-cx/TwinCAT_BSD_en.pdf",
+    "response_sha256": "86a814524f77aff9ed7f18c5020b559b504a62a3d21ad6b4b641f3b55d68714b",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-019"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-8919fec3-128",
+    "url": "https://download.schneider-electric.com/files?p_Doc_Ref=DOCA0172EN",
+    "http_status_text": "HTTP Error 403: Forbidden",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Åtkomst ej verifierad från granskningsmiljön; inte bevis på att dokument saknas",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-020"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-84668f20-129",
+    "url": "https://ecostruxure-building-help.se.com/bms/Topics/Show?id=10460&locale=en-US&productversion=7.1",
+    "http_status_text": "200",
+    "final_url": "https://ecostruxure-building-help.se.com/bms/Topics/Show?id=10460&locale=en-US&productversion=7.1",
+    "response_sha256": "baf2d02d64611277fef3decc1830bedca782e86a134f65341829219c04809758",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-021"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-30791ce7-130",
+    "url": "https://en.help.plc.abb.com/",
+    "http_status_text": "200",
+    "final_url": "https://en.help.plc.abb.com/",
+    "response_sha256": "27ac869de169b2d266faccfa6b8314a86c12412504ab0be576c4882969dc253d",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-023"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-ed61b9d7-131",
+    "url": "https://engineer.plcnext.help/2024.0_LTS_en/Security_ControllerSettingsWBM.htm",
+    "http_status_text": "200",
+    "final_url": "https://engineer.plcnext.help/2024.0_LTS_en/Security_ControllerSettingsWBM.htm",
+    "response_sha256": "b2b48d240127f66bbe6dadd3dcb3b3e9b0f9305abdbe9c9ef5c7ca4570c55425",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-024"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-fda5bfa6-132",
+    "url": "https://files.sma.de/downloads/SWebBox-BA-en-36.pdf",
+    "http_status_text": "200",
+    "final_url": "https://files.sma.de/downloads/SWebBox-BA-en-36.pdf",
+    "response_sha256": "126f52efbfbaa7d82691b505fe4eaae01568786b12d8e5f95e2f29051348d6bb",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-025"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-6696fe38-133",
+    "url": "https://ftp.wti.com/download/manuals/wti_firmware_guide.pdf",
+    "http_status_text": "200",
+    "final_url": "https://ftp.wti.com/download/manuals/wti_firmware_guide.pdf",
+    "response_sha256": "7c4d2ce7e5ba94c985b0bdc0d6c1a735274ec9c973aa03dd0d17a101c91cd404",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-026"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-145a1c6c-134",
+    "url": "https://help.axis.com/en-US/access-your-device",
+    "http_status_text": "200",
+    "final_url": "https://help.axis.com/en-us/access-your-device",
+    "response_sha256": "2a2f043e751cea7161682dafb06c4ff1104680c701b162b35420d7f373984b41",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-027"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-2bde83f3-135",
+    "url": "https://infosys.beckhoff.com/content/1033/twincat_bsd/7873137291.html",
+    "http_status_text": "200",
+    "final_url": "https://infosys.beckhoff.com/content/1033/twincat_bsd/7873137291.html",
+    "response_sha256": "bacf7f4238151b20fe10126e0ab0232067204be77827bac47420e933058d6d6d",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-029"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-c082df40-136",
+    "url": "https://kb.synology.com/DSM/tutorial/How_to_install_DSM",
+    "http_status_text": "200",
+    "final_url": "https://kb.synology.com/en-global/DSM/tutorial/How_to_install_DSM",
+    "response_sha256": "094b99ab07571e8485201bfae7123d4c223962591624ca9c800588b14159491e",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-030"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-5d6857c8-137",
+    "url": "https://kb.synology.com/en-in/DSM/tutorial/Quick_Start_Security",
+    "http_status_text": "200",
+    "final_url": "https://kb.synology.com/en-in/DSM/tutorial/Quick_Start_Security",
+    "response_sha256": "ed7927d3c51088104e3ddab03252ece1bf4c95b41bd490115969bf90240d1ff7",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-031"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-c19b42e7-138",
+    "url": "https://kr.nihonkohden.com/ko/media-center/operation-manuals",
+    "http_status_text": "200",
+    "final_url": "https://kr.nihonkohden.com/ko/media-center/operation-manuals",
+    "response_sha256": "6318f2bf70e064e9b0103e168712cffd1cc2bf532b8724b1d480b061121b3e6f",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-032"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-82dccd11-139",
+    "url": "https://library.e.abb.com/public/0498e4c0babd46aa9243aedd6f99c375/ARM600_user_758861_ENk.pdf",
+    "http_status_text": "200",
+    "final_url": "https://library.e.abb.com/public/0498e4c0babd46aa9243aedd6f99c375/ARM600_user_758861_ENk.pdf",
+    "response_sha256": "da38413249ceb7b91b040870c97f766abeb5a4ebaaf3de891dce21ba78777af8",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-034"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-ff903066-140",
+    "url": "https://library.e.abb.com/public/b1f767ed9c69476485b3119dee32021f/2105551MNAD.pdf",
+    "http_status_text": "200",
+    "final_url": "https://library.e.abb.com/public/b1f767ed9c69476485b3119dee32021f/2105551MNAD.pdf",
+    "response_sha256": "fbbe33bb810532303eb78ed77a011ce446865920ca514a908ce81c4c4e876609",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-035"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-f673ea06-141",
+    "url": "https://library.e.abb.com/public/e1d70a639e6c4f8abae1b7bbc7e2758a/MAN0126%20ASPECT-Enterprise%20Installation.pdf",
+    "http_status_text": "200",
+    "final_url": "https://library.e.abb.com/public/e1d70a639e6c4f8abae1b7bbc7e2758a/MAN0126%20ASPECT-Enterprise%20Installation.pdf",
+    "response_sha256": "0e3455a001c1556733186e23bef2d2d23632b919e8e9b398880ceac29507631e",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-036"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-7a39d511-142",
+    "url": "https://linear-solutions.com/wp-content/uploads/pdf/manuals/eMerge-Series_Installation-Guide.pdf",
+    "http_status_text": "200",
+    "final_url": "https://linear-solutions.com/wp-content/uploads/pdf/manuals/eMerge-Series_Installation-Guide.pdf",
+    "response_sha256": "c67c965e326b58997838a36a5604e24439e96794928c18117ae0c9798d32c004",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-037"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-7c49deaa-143",
+    "url": "https://literature.rockwellautomation.com/idc/groups/literature/documents/in/ftac-in005_-en-e.pdf",
+    "http_status_text": "HTTP Error 403: Forbidden",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Åtkomst ej verifierad från granskningsmiljön; inte bevis på att dokument saknas",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-038"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-1ae8135f-144",
+    "url": "https://literature.rockwellautomation.com/idc/groups/literature/documents/um/2080-um002_-en-e.pdf",
+    "http_status_text": "HTTP Error 403: Forbidden",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Åtkomst ej verifierad från granskningsmiljön; inte bevis på att dokument saknas",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-039"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-5617d281-145",
+    "url": "https://oringnet.com/en/products/industrial-iot/industrial-wireless-access-point/266-iap-420",
+    "http_status_text": "200",
+    "final_url": "https://oringnet.com/en/products/industrial-iot/industrial-wireless-access-point/266-iap-420",
+    "response_sha256": "4cb8c3e2ad7808e5f0d83dcc43599da6954243623529fb49318d57afb5c9445c",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-042"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-d83e9e98-146",
+    "url": "https://orthanc.uclouvain.be/book/users/cookbook.html",
+    "http_status_text": "200",
+    "final_url": "https://orthanc.uclouvain.be/book/users/cookbook.html",
+    "response_sha256": "c5d9123a812fd7e8780f1ee97b5f9a60f5e2bed6855387cec89f74aeedd6a43f",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-043"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-e499c7cb-147",
+    "url": "https://outbackpower.com/downloads/documents/mojave/mojave_inv/mojave_qsg.pdf",
+    "http_status_text": "200",
+    "final_url": "https://outbackpower.com/downloads/documents/mojave/mojave_inv/mojave_qsg.pdf",
+    "response_sha256": "e8485387e57701fb091ab02472da9e0b7ff7c5c21aa0542bddf1e1a5d5238211",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-044"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-01fd8dac-148",
+    "url": "https://resource.milesight.com/milesight/iot/document/ug65-user-guide-en.pdf",
+    "http_status_text": "200",
+    "final_url": "https://resource.milesight.com/milesight/iot/document/ug65-user-guide-en.pdf",
+    "response_sha256": "1a5d3d98ca36277437c87457ed531e80e8b140f0dc1752d9c174a50c3b0189c6",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-048"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-e5f72cbf-149",
+    "url": "https://revolutionpi.com/en/getting-started/revpi",
+    "http_status_text": "200",
+    "final_url": "https://revolutionpi.com/en/getting-started/revpi",
+    "response_sha256": "94d3235546c1178e90290e4cacdcc122c21898f7e6ee5d95f102fc34c893c5c9",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-049"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-6df01641-150",
+    "url": "https://sid.siemens.com/r/A6V10506067/18181420683___en-US_18180755211",
+    "http_status_text": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Åtkomst ej verifierad från granskningsmiljön; inte bevis på att dokument saknas",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-051"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-cd54a18a-151",
+    "url": "https://sid.siemens.com/v/u/A6V13527998",
+    "http_status_text": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Åtkomst ej verifierad från granskningsmiljön; inte bevis på att dokument saknas",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-053"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-5422030e-152",
+    "url": "https://statik.vestel.com.tr/webfiles/vestel-evc-kurulum-rehberi-v2.pdf",
+    "http_status_text": "200",
+    "final_url": "https://statik.vestel.com.tr/webfiles/vestel-evc-kurulum-rehberi-v2.pdf",
+    "response_sha256": "b0d17619186dd731716d111a97aa61aed1e22f99f7f6efbc45e2147d4cc009b6",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-054"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-e5337c40-153",
+    "url": "https://subnet.com/products/powersystem-center/",
+    "http_status_text": "200",
+    "final_url": "https://subnet.com/products/powersystem-center/",
+    "response_sha256": "cba9426a4be64bc6c1c88ded05ff681855d07363bdad87e1be7d989766cd3069",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-055"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-37a5a9f1-154",
+    "url": "https://support.automationdirect.com/products/cmore.html",
+    "http_status_text": "200",
+    "final_url": "https://support.automationdirect.com/products/cmore.html",
+    "response_sha256": "37bd4693623240d405a72c7d21d093db958a07f665d3f50288e3ee782fd757c3",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-056"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-4e0e666d-155",
+    "url": "https://support.hms-networks.com/hc/en-us/articles/36118468108690-Setting-up-an-Ewon-for-the-first-time",
+    "http_status_text": "200",
+    "final_url": "https://support.hms-networks.com/hc/en-us/articles/36118468108690-Setting-up-an-Ewon-for-the-first-time",
+    "response_sha256": "226d7f9439eff65ce819c8e69481dfa56373503c584d1233b06926f57e9c9181",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-057"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-061a2458-156",
+    "url": "https://support.industry.siemens.com/cs/attachments/109782228/versicharge_wallbox_operating_instructions_en-US_en-US.pdf?download=true",
+    "http_status_text": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Åtkomst ej verifierad från granskningsmiljön; inte bevis på att dokument saknas",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-058"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-9e2aaa7b-157",
+    "url": "https://support.industry.siemens.com/cs/attachments/109977047/BA_SINEMA-RC-Server_76.pdf",
+    "http_status_text": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Åtkomst ej verifierad från granskningsmiljön; inte bevis på att dokument saknas",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-059"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-987b198d-158",
+    "url": "https://support.industry.siemens.com/cs/attachments/109977665/PH_SCALANCE-W700ax-WBM_76_en-US.pdf",
+    "http_status_text": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Åtkomst ej verifierad från granskningsmiljön; inte bevis på att dokument saknas",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-060"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-6d6b34eb-159",
+    "url": "https://support.industry.siemens.com/dl/files/368/109828368/att_1262627/v1/WinCC_VisualizingProcessesUnified_enUS_en-US.pdf",
+    "http_status_text": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Åtkomst ej verifierad från granskningsmiljön; inte bevis på att dokument saknas",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-061"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-39e46d23-160",
+    "url": "https://support.rockwellautomation.com/app/answers/answer_view/a_id/54455/~/factorytalk-view-site-edition-installation-guide-",
+    "http_status_text": "200",
+    "final_url": "https://support.rockwellautomation.com/app/answers/answer_view/a_id/54455/~/factorytalk-view-site-edition-installation-guide-",
+    "response_sha256": "88d86ca08d258ce8acf843c7ea54899f225037be2b75f73a7ae7ab4ddaa88138",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-062"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-d9f9d7af-161",
+    "url": "https://thinmanager.com/support/manuals/",
+    "http_status_text": "200",
+    "final_url": "https://thinmanager.com/support/manuals/",
+    "response_sha256": "4a0e1a1dd9f06a17d2da5fc9a3158092a84080db672db90e8a44f4f1e15bc6a4",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-063"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-989190f9-162",
+    "url": "https://wiki.teltonika-networks.com/wikibase/index.php?mobileaction=toggle_view_desktop&title=RUT955_Device_Recovery_Options",
+    "http_status_text": "200",
+    "final_url": "https://wiki.teltonika-networks.com/wikibase/index.php?mobileaction=toggle_view_desktop&title=RUT955_Device_Recovery_Options",
+    "response_sha256": "01860aaf04c33aed01cb5924932a4c15ebf9ac327833a7f8fb1bbe2d300ee1d3",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-065"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-d25c69b5-163",
+    "url": "https://wiki.teltonika-networks.com/wikibase/index.php?title=RUT955_Setup_Wizard",
+    "http_status_text": "200",
+    "final_url": "https://wiki.teltonika-networks.com/wikibase/index.php?title=RUT955_Setup_Wizard",
+    "response_sha256": "c6e9b85b59cde423c98934ba517189fab9a414604e8a2f44049dde391cca2ce9",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-066"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-ee5204f2-164",
+    "url": "https://www.2n.com/en-US/manuals/42754/2_50/device-configuration-interface-access/",
+    "http_status_text": "200",
+    "final_url": "https://www.2n.com/en-US/manuals/42754/2_50/device-configuration-interface-access/",
+    "response_sha256": "2bcde6f5aabd769c8e246448134283dbb0af6ccd53ffbed2115680bbe38f7fe5",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-068"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-7445a7be-165",
+    "url": "https://www.automatedlogic.com/en/products/webctrl-building-automation-system/",
+    "http_status_text": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Åtkomst ej verifierad från granskningsmiljön; inte bevis på att dokument saknas",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-072"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-887ff269-166",
+    "url": "https://www.br-automation.com/en-ca/downloads/aprol-documentation-44-00p40/",
+    "http_status_text": "200",
+    "final_url": "https://www.br-automation.com/en-ca/downloads/aprol-documentation-44-00p40/",
+    "response_sha256": "5ac0d82a7af9834d45850e75448f0a19e562458e987739469b84606d98f0e25b",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-073"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-d3996e79-167",
+    "url": "https://www.br-automation.com/en-us/products/software/automation-runtime/",
+    "http_status_text": "200",
+    "final_url": "https://www.br-automation.com/en-us/products/software/automation-runtime/",
+    "response_sha256": "ffb6e0617f7966060cdd3eab4164d15fe91b908b9a0b2fbd5955a8d59c484d24",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-074"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-eb983bfd-168",
+    "url": "https://www.carel.com/documents/10191/0/%2B030220471/9619472f-f1c0-4ec9-a151-120aaa5e479a?version=1.0",
+    "http_status_text": "200",
+    "final_url": "https://www.carel.com/documents/10191/0/%2B030220471/9619472f-f1c0-4ec9-a151-120aaa5e479a?version=1.0",
+    "response_sha256": "ba25a0f05590cd7835618ac6121266ac377cf9764a9e524f441d748a26e11655",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-075"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-e6a5730f-169",
+    "url": "https://www.controlid.com.br/docs/idsecure-en/",
+    "http_status_text": "200",
+    "final_url": "https://www.controlid.com.br/docs/idsecure-en/",
+    "response_sha256": "28d5b9d7e6ccaf3754edaabf193a83b2843c6d0b1efc8cab160a8a1af5ad34f6",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-078"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-a33a5796-170",
+    "url": "https://www.copeland.com/en-ca/products/controls-monitoring-systems/facility-controls-electronics/facility-and-system-controls/documents/e2-and-einstein",
+    "http_status_text": "200",
+    "final_url": "https://www.copeland.com/en-ca/products/controls-monitoring-systems/facility-controls-electronics/facility-and-system-controls/documents/e2-and-einstein",
+    "response_sha256": "0d69242c41ff264c2f7c0d43a7651f955cf7d08348c7d5c9187f98d6cf722202",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-079"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-e282a2eb-171",
+    "url": "https://www.dahuasecurity.com/asset/upload/uploads/soft/20181120/Initialization_and_password_reset_for_networking_cameras_V1_EN_20171109.pdf",
+    "http_status_text": "200",
+    "final_url": "https://www.dahuasecurity.com/asset/upload/uploads/soft/20181120/Initialization_and_password_reset_for_networking_cameras_V1_EN_20171109.pdf",
+    "response_sha256": "e705a0872308a7081c3d5aff9c4c905e430e2d93f184c564913598a73af002eb",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-082"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-1448b3a9-172",
+    "url": "https://www.danfoss.com/en-us/service-and-support/fix-and-troubleshooting/supporting-supermarkets/",
+    "http_status_text": "HTTP Error 403: Forbidden",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Åtkomst ej verifierad från granskningsmiljön; inte bevis på att dokument saknas",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-083"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-98614a77-173",
+    "url": "https://www.dingtian-tech.com/en_us/relay2.html",
+    "http_status_text": "200",
+    "final_url": "https://www.dingtian-tech.com/en_us/relay2.html",
+    "response_sha256": "5f9f5bf22fde9efc821c8b59f030dfa95c3e327f0968b35d4a1742fb1ef0b378",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-085"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-85201df8-174",
+    "url": "https://www.docs.inductiveautomation.com/docs/8.3/getting-started/installing-and-upgrading/ignition-8-upgrade-guide/79to81-upgrade-guide",
+    "http_status_text": "200",
+    "final_url": "https://www.docs.inductiveautomation.com/docs/8.3/getting-started/installing-and-upgrading/ignition-8-upgrade-guide/79to81-upgrade-guide",
+    "response_sha256": "85256d506eb2ee2b2837617dbbf33f7e2bc135d1dce455a4f884ee2d8892e963",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-086"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-7c6286f2-175",
+    "url": "https://www.docs.inductiveautomation.com/docs/8.3/getting-started/startup-guide/downloading-and-installing-ignition",
+    "http_status_text": "200",
+    "final_url": "https://www.docs.inductiveautomation.com/docs/8.3/getting-started/startup-guide/downloading-and-installing-ignition",
+    "response_sha256": "cf9c0ae394cfe2d1ff2d9da3c999041eddebd8728a8fe467d32ec1d80a9b7673",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-087"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-55d779e8-176",
+    "url": "https://www.doverfuelingsolutions.com/content/dam/dfs/atg-files/brochures-and-mannuals/M2052%20ProGauge%20MagLink%20Consoles%20User%20Manual.pdf",
+    "http_status_text": "HTTP Error 403: Forbidden",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Åtkomst ej verifierad från granskningsmiljön; inte bevis på att dokument saknas",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-088"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-aac5a212-177",
+    "url": "https://www.hikvision.com/content/dam/hikvision/products/S000000001/S000000002/S000000016/S000000017/OFR000019/M000000381/User_Manual/UD11733B-D_Baseline_User-Manual-of-Network-Camera_V5.5.85_20221222.pdf",
+    "http_status_text": "200",
+    "final_url": "https://www.hikvision.com/content/dam/hikvision/products/S000000001/S000000002/S000000016/S000000017/OFR000019/M000000381/User_Manual/UD11733B-D_Baseline_User-Manual-of-Network-Camera_V5.5.85_20221222.pdf",
+    "response_sha256": "abf780a2e3906859f1db6bc3953e1e2cf54bcc181f1a578a13e70381f168645f",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-089"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-14e6f613-178",
+    "url": "https://www.hikvision.com/content/dam/hikvision/products/S000000001/S000000313/S000000314/S000000905/OFR000425/M000002510/Quick_Start_Guide/UD22496B_Baseline_Anti-Corrosion-Thermal-Bullet-Camera-Quick-Start-Guide_V5.4.2_20201230.pdf",
+    "http_status_text": "200",
+    "final_url": "https://www.hikvision.com/content/dam/hikvision/products/S000000001/S000000313/S000000314/S000000905/OFR000425/M000002510/Quick_Start_Guide/UD22496B_Baseline_Anti-Corrosion-Thermal-Bullet-Camera-Quick-Start-Guide_V5.4.2_20201230.pdf",
+    "response_sha256": "5f935c5fc839170d52cdd995785d89ba971c72da004b6241049c1824d042df0c",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-090"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-d3a400f6-179",
+    "url": "https://www.hitachienergy.com/products-and-solutions/substation-automation-protection-and-control/products/remote-terminal-units",
+    "http_status_text": "200",
+    "final_url": "https://www.hitachienergy.com/products-and-solutions/substation-automation-protection-and-control/products/remote-terminal-units",
+    "response_sha256": "c7acf43affc66690a590354daa81f904ae4b87c8c54e93b407e4198d687b9bf7",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-091"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-a67bced6-180",
+    "url": "https://www.hms-networks.com/support/tech-support/kb-articles/12250895874578-How-to-Get-an-Ewon-Backup-from-the-Web-Interface",
+    "http_status_text": "200",
+    "final_url": "https://www.hms-networks.com/support/tech-support/kb-articles/12250895874578-How-to-Get-an-Ewon-Backup-from-the-Web-Interface",
+    "response_sha256": "b4be3850187e8d24c1c19f439f6b99587bd3608e93550434f2b221c1052d2b09",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-092"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-56ec3e9c-181",
+    "url": "https://www.home-assistant.io/getting-started/onboarding",
+    "http_status_text": "200",
+    "final_url": "https://www.home-assistant.io/getting-started/onboarding",
+    "response_sha256": "969c0a5fa98169314394d79d8dd02720d52f64aa3ed47d7c5f29785931199e00",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-093"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-3d6f4635-182",
+    "url": "https://www.ia.omron.com/product/tool/454/sysmac-studio/e1_doc.html",
+    "http_status_text": "HTTP Error 403: Forbidden",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Åtkomst ej verifierad från granskningsmiljön; inte bevis på att dokument saknas",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-094"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-04750668-183",
+    "url": "https://www.johnsoncontrols.com/Trust-Center/Cybersecurity/Resources",
+    "http_status_text": "200",
+    "final_url": "https://www.johnsoncontrols.com/Trust-Center/Cybersecurity/Resources",
+    "response_sha256": "63898246a04497b626e8cfd2f68608a2f43f23fdf65512782251e8e7fc58bd20",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-095"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-2b512a2a-184",
+    "url": "https://www.lantronix.com/products/xport/",
+    "http_status_text": "200",
+    "final_url": "https://www.lantronix.com/products/xport/",
+    "response_sha256": "81635e1e54e8bebc3625ae797608004fb5b6a86f2377c0bf80ce1c61eec8f299",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-096"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-d3c6f0e0-185",
+    "url": "https://www.mitsubishielectric.com/fa/download/search.page?kisyu=%2Fplcf&mode=manual",
+    "http_status_text": "200",
+    "final_url": "https://www.mitsubishielectric.com/fa/download/search.page?kisyu=%2Fplcf&mode=manual",
+    "response_sha256": "9b2fbe9ac47423bea47fa40d72fb36228740e0808f85d3c399e76851cd24767b",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-097"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-0bfa7bc4-186",
+    "url": "https://www.mitsubishielectric.com/fa/download/search.page?kisyu=%2Fplcr&mode=manual",
+    "http_status_text": "200",
+    "final_url": "https://www.mitsubishielectric.com/fa/download/search.page?kisyu=%2Fplcr&mode=manual",
+    "response_sha256": "5baeffe1a96e161263310f5f57f58f9bf0868755a49bbac1b9741524e042adfb",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-098"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-85dc2dc0-187",
+    "url": "https://www.myscada.org/docs/installation/",
+    "http_status_text": "200",
+    "final_url": "https://docs.myscada.tech/myaccess-new/installation/",
+    "response_sha256": "e615b35ea00b07ba8ea7efbc0a39411ccb431bcfacd120225927ff56a2283db1",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-100"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-bff1c1be-188",
+    "url": "https://www.nedap.com/en/contact-us",
+    "http_status_text": "200",
+    "final_url": "https://www.nedap.com/en/contact-us",
+    "response_sha256": "d0b80539295aa36d2f084782a085bd17a030f7c4489d9f57f691e1beb0cc66d8",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-101"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-fd50652d-189",
+    "url": "https://www.nibe.eu/en-eu/documents",
+    "http_status_text": "200",
+    "final_url": "https://www.nibe.eu/en-eu/documents",
+    "response_sha256": "2b098aa0893de5c07c5f92fa22d10ddf73b7d089b964d014dc481f44524535b4",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-102"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-7271fa7f-190",
+    "url": "https://www.optigo.net/webinar/optigo-connect-and-oneview-demo/",
+    "http_status_text": "200",
+    "final_url": "https://www.optigo.net/ot-insights-library/",
+    "response_sha256": "7cb907340dd7f15d4724bb397aff0f45d832ac158e3e92c6e1dc876fbee56e5a",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-103"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-387474c8-191",
+    "url": "https://www.pro-face.com/otasuke/download/manual/",
+    "http_status_text": "<urlopen error [WinError 10061] Det gick inte att göra en anslutning eftersom måldatorn aktivt nekade det>",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Åtkomst ej verifierad från granskningsmiljön; inte bevis på att dokument saknas",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-105"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-109097fd-192",
+    "url": "https://www.ptc.com/en/support/refdoc/KEPServerEX/6.16/kepserverex_installation_guide",
+    "http_status_text": "200",
+    "final_url": "https://www.ptc.com/en/support/refdoc/KEPServerEX/6.16/kepserverex_installation_guide",
+    "response_sha256": "2972a546012870d19be45d8370f52a68d01fd857399645410946b90d77a1cff9",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-106"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-9e2ab864-193",
+    "url": "https://www.qnap.com/en-us/how-to/faq/article/what-is-the-default-system-administrator-password-for-my-nas",
+    "http_status_text": "202",
+    "final_url": "https://www.qnap.com/en-us/how-to/faq/article/what-is-the-default-system-administrator-password-for-my-nas",
+    "response_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "interpretation_text": "Åtkomst ej verifierad från granskningsmiljön; inte bevis på att dokument saknas",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-107"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-9ba1c04f-194",
+    "url": "https://www.rockwellautomation.com/en-us/support/documentation/technical/drives/low-voltage-architecture-class-ac-drives.html",
+    "http_status_text": "HTTP Error 403: Forbidden",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Åtkomst ej verifierad från granskningsmiljön; inte bevis på att dokument saknas",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-111"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-527a3077-195",
+    "url": "https://www.samsung.com/ie/support/model.MIM-D01AN/",
+    "http_status_text": "200",
+    "final_url": "https://www.samsung.com/ie/support/model.MIM-D01AN/",
+    "response_sha256": "e3bc320543ec45ce653e4b4d3ccaae30a385898fe2ebd81147c8394a5a4eacdd",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-112"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-c6f44bb5-196",
+    "url": "https://www.se.com/au/en/product/WHC_5918A/wiser-home-controller/",
+    "http_status_text": "200",
+    "final_url": "https://www.se.com/au/en/product/WHC_5918A/wiser-home-controller/",
+    "response_sha256": "16b99f0bebcdcc312f88127486dffffda91cba4ce7df83d92251fca066ae8da1",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-113"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-3b1ed0d9-197",
+    "url": "https://www.se.com/ca/en/download/document/EIO0000005743/",
+    "http_status_text": "200",
+    "final_url": "https://www.se.com/ca/en/download/document/EIO0000005743/",
+    "response_sha256": "70951da4a91d70733f8a3a76fa27b8d4afe898e4a78b4c0dc99dd1c7661932a9",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-114"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-df811051-198",
+    "url": "https://www.se.com/ca/en/download/document/PCM-UM-5350ATSRA/",
+    "http_status_text": "200",
+    "final_url": "https://www.se.com/ca/en/download/document/PCM-UM-5350ATSRA/",
+    "response_sha256": "bbb1f33974a4fa483d7f5faba8a06a2a00ddc0154e4d4b94fe1a104f81e419e6",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-115"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-ea343fc2-199",
+    "url": "https://www.se.com/in/en/download/document/EIO0000003527/",
+    "http_status_text": "200",
+    "final_url": "https://www.se.com/in/en/download/document/EIO0000003527/",
+    "response_sha256": "c9952e11bde2777b31e7d8f6478dc4da9f88044f6189dc0f2e190f0c742abae2",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-116"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-9b8d8393-200",
+    "url": "https://www.se.com/jp/ja/faqs/FA409393/",
+    "http_status_text": "200",
+    "final_url": "https://www.se.com/jp/ja/faqs/FA409393/",
+    "response_sha256": "b2861f716c91ce007beeb5dd4022d3c17868fad455b79c737179192f5f49d376",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-117"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-01b16d1a-201",
+    "url": "https://www.se.com/sg/en/download/document/SE-S856-MSS/",
+    "http_status_text": "200",
+    "final_url": "https://www.se.com/sg/en/download/document/SE-S856-MSS/",
+    "response_sha256": "842494f0a6f66b3ec301af36d5d1e88ec855981225563f01e64f822fe25a9980",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-118"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-f6c63e57-202",
+    "url": "https://www.se.com/sg/en/faqs/FAQ000239191/",
+    "http_status_text": "200",
+    "final_url": "https://www.se.com/sg/en/faqs/FAQ000239191/",
+    "response_sha256": "3d96d42e0f1732a452934a200934a51837b169500e9a0b62256c4ad053e43d9b",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-119"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-b846ca62-203",
+    "url": "https://www.se.com/sg/en/faqs/FAQ000277565/",
+    "http_status_text": "200",
+    "final_url": "https://www.se.com/sg/en/faqs/FAQ000277565/",
+    "response_sha256": "5caf90f88f2551279290139a54dc901a15917e68abd9e653efc99d93a050c9ed",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-120"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-b5521e36-204",
+    "url": "https://www.se.com/us/en/faqs/FA386978/",
+    "http_status_text": "200",
+    "final_url": "https://www.se.com/us/en/faqs/FA386978/",
+    "response_sha256": "68314fb97a48f9f8bfb76bb8f15224d7d1f860a55b0748f5bc614378f934e649",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-121"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-b470d58c-205",
+    "url": "https://www.se.com/us/en/work/products/explore/modicon-plc-pac/modicon-documentation/",
+    "http_status_text": "200",
+    "final_url": "https://www.se.com/us/en/work/products/explore/modicon-plc-pac/modicon-documentation/",
+    "response_sha256": "03392f0b777830c5d78b848b17fbb55abc86f2c1020436ba6bee66879d36f9f5",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-122"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-876cf892-206",
+    "url": "https://www.se.com/ww/en/download/document/DOCA0122EN/",
+    "http_status_text": "200",
+    "final_url": "https://www.se.com/ww/en/download/document/DOCA0122EN/",
+    "response_sha256": "eeb84af0ee0950561b4b79cae9cfd87bd42f03bd2f172c4188ddc9632f9621f4",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-124"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-3246c7e3-207",
+    "url": "https://www.solar-log.com/fileadmin/user_upload/documents/Handbuecher_und_Inlet/en_GB/SolarLog_Quick_Start_Guide_Kurzanleitung_Solar-Log_Base_DE_EN.pdf",
+    "http_status_text": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1010)>",
+    "final_url": null,
+    "response_sha256": null,
+    "interpretation_text": "Åtkomst ej verifierad från granskningsmiljön; inte bevis på att dokument saknas",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-125"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-aebcc6fc-208",
+    "url": "https://www.sungrowpower.com/latam/es/products/intelligent-gateway/monitoringlogger1000?tab=2",
+    "http_status_text": "200",
+    "final_url": "https://www.sungrowpower.com/latam/es/products/intelligent-gateway/monitoringlogger1000?tab=2",
+    "response_sha256": "e7734f2b145c2508f76ffba631d571f1c766d1a6f2363025404c100806ef910e",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-126"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-6853f2b5-209",
+    "url": "https://www.unitronicsplc.com/Download/SoftwareHelp/VisiLogic_Knowledgebase/E-learning.htm",
+    "http_status_text": "200",
+    "final_url": "https://www.unitronicsplc.com/Download/SoftwareHelp/VisiLogic_Knowledgebase/E-learning.htm",
+    "response_sha256": "406333cf48755bc3d96307325728b7f5e743861a40f614a97a44c7411d8daae5",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-130"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-9dc48f0d-210",
+    "url": "https://www.vertiv.com/48ec29/globalassets/shared/liebert-intellislot-rdu101-communications-card-installeruser-guide.pdf",
+    "http_status_text": "200",
+    "final_url": "https://www.vertiv.com/493ca1/globalassets/shared/liebert-intellislot-rdu101-communications-card-installeruser-guide.pdf",
+    "response_sha256": "4fc4a1b424aed6f4b180917f65bfe41d603af295639a5e5c3c0f84854d93289a",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-131"
+    ],
+    "entity_ids": []
+  },
+  {
+    "id": "lc-11b3df65-211",
+    "url": "https://www.wago.com/us/pfc200",
+    "http_status_text": "200",
+    "final_url": "https://www.wago.com/us/pfc200",
+    "response_sha256": "3f76eedbf6197f205b93a672564603904b2f1e429141b01243c0c282f9cf941f",
+    "interpretation_text": "Åtkomligt svar; fullständig procedur ej funktionstestad",
+    "checked_at": "2026-11-07",
+    "source_ids": [
+      "src-reg-setup-132"
+    ],
+    "entity_ids": []
+  }
+]

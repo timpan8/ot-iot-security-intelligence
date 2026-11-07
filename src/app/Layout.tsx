@@ -10,6 +10,7 @@ const NAV: Array<{ to: string; label: string }> = [
   { to: '/bulletiner', label: 'Bulletiner' },
   { to: '/prioritering', label: 'Prioritering' },
   { to: '/atgarder', label: 'Åtgärder' },
+  { to: '/konton', label: 'Konton' },
   { to: '/datakvalitet', label: 'Datakvalitet' },
   { to: '/export', label: 'Export' },
   { to: '/om', label: 'Om / metodik' },

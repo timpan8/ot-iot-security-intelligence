@@ -1,0 +1,183 @@
+{
+  "_comment": "Kategoriprofiler (kategori är fri text i registret). ot_impact = generell OT-konsekvens per produkttyp (high/medium/low/unknown) med motivering; faktisk konsekvens beror alltid på anläggning. group används för gruppering i UI.",
+  "categories": {
+    "BMS": { "group": "Fastighet", "ot_impact": "high", "basis": "Central byggnadsstyrning." },
+    "BMS-nät": {
+      "group": "Fastighet",
+      "ot_impact": "high",
+      "basis": "Nätverksutrustning för fastighetsautomation; nätgräns."
+    },
+    "HVAC": { "group": "Fastighet", "ot_impact": "medium", "basis": "Klimatstyrning." },
+    "Ventilation": { "group": "Fastighet", "ot_impact": "medium", "basis": "Inomhusklimat." },
+    "Kyla": {
+      "group": "Fastighet",
+      "ot_impact": "high",
+      "basis": "Kylkedja/livsmedelssäkerhet och larm."
+    },
+    "Brandlarm": {
+      "group": "Säkerhet",
+      "ot_impact": "high",
+      "basis": "Personsäkerhet; brandlarmfunktion."
+    },
+    "Passer": { "group": "Säkerhet", "ot_impact": "high", "basis": "Fysisk åtkomstkontroll." },
+    "Porttelefoni": {
+      "group": "Säkerhet",
+      "ot_impact": "high",
+      "basis": "Dörrstyrning/nödkommunikation."
+    },
+    "Kamera": {
+      "group": "Säkerhet",
+      "ot_impact": "medium",
+      "basis": "Övervakning/integritet, språngbräda."
+    },
+    "RFID": {
+      "group": "Säkerhet",
+      "ot_impact": "medium",
+      "basis": "Identifiering/åtkomst beroende på användning."
+    },
+    "PLC": { "group": "Styrsystem", "ot_impact": "high", "basis": "Direkt processtyrning." },
+    "PLC/HMI": {
+      "group": "Styrsystem",
+      "ot_impact": "high",
+      "basis": "Direkt processtyrning med operatörsgränssnitt."
+    },
+    "DCS": {
+      "group": "Styrsystem",
+      "ot_impact": "high",
+      "basis": "Anläggningsomfattande processtyrning."
+    },
+    "RTU": {
+      "group": "Styrsystem",
+      "ot_impact": "high",
+      "basis": "Fjärrstyrning av el-/vatteninfrastruktur."
+    },
+    "Fjärr-I/O": {
+      "group": "Styrsystem",
+      "ot_impact": "high",
+      "basis": "Reläer/I/O som styr fysiska objekt."
+    },
+    "Drivsystem": {
+      "group": "Styrsystem",
+      "ot_impact": "high",
+      "basis": "Motorstyrning; maskinsäkerhet."
+    },
+    "SCADA": {
+      "group": "Styrsystem",
+      "ot_impact": "high",
+      "basis": "Operatörskommandon och övervakning."
+    },
+    "HMI": {
+      "group": "Styrsystem",
+      "ot_impact": "medium",
+      "basis": "HMI med möjlig skrivåtkomst."
+    },
+    "HMI-förvaltning": {
+      "group": "Styrsystem",
+      "ot_impact": "high",
+      "basis": "Central distribution av HMI-sessioner."
+    },
+    "OT-förvaltning": {
+      "group": "Styrsystem",
+      "ot_impact": "high",
+      "basis": "Central hantering av styrsystemsprojekt/backuper."
+    },
+    "OPC": { "group": "Integration", "ot_impact": "high", "basis": "Nav mellan PLC och IT." },
+    "Modbus-gateway": {
+      "group": "Integration",
+      "ot_impact": "high",
+      "basis": "Protokollöversättning mot styrenheter."
+    },
+    "Serie-till-IP": {
+      "group": "Integration",
+      "ot_impact": "high",
+      "basis": "Åtkomst till seriella fältenheter."
+    },
+    "IoT-gateway": {
+      "group": "Integration",
+      "ot_impact": "medium",
+      "basis": "Telemetri/LoRaWAN-gateway; beroende på styrfunktioner."
+    },
+    "Industriell gateway": { "group": "Nät", "ot_impact": "high", "basis": "Nätgräns mot OT." },
+    "Gateway": { "group": "Nät", "ot_impact": "high", "basis": "Nätgräns mot OT." },
+    "Industriellt nät": {
+      "group": "Nät",
+      "ot_impact": "high",
+      "basis": "Switchar/routrar/accesspunkter i OT-nät."
+    },
+    "Industriell radio": {
+      "group": "Nät",
+      "ot_impact": "high",
+      "basis": "Radiolänk för SCADA/RTU-trafik."
+    },
+    "Fjärråtkomst": { "group": "Nät", "ot_impact": "high", "basis": "Fjärråtkomstserver till OT." },
+    "Fjärradministration": {
+      "group": "Nät",
+      "ot_impact": "high",
+      "basis": "Konsol-/strömstyrning av utrustning."
+    },
+    "Tidssynkronisering": {
+      "group": "Nät",
+      "ot_impact": "medium",
+      "basis": "Tidkälla; påverkar loggar och tidskritiska protokoll."
+    },
+    "Infrastruktur": {
+      "group": "Verksamhetssystem",
+      "ot_impact": "medium",
+      "basis": "Verksamhetsnära system för infrastrukturförvaltning."
+    },
+    "Energi": {
+      "group": "Energi",
+      "ot_impact": "medium",
+      "basis": "Lokal energiproduktion/övervakning."
+    },
+    "Solenergi": { "group": "Energi", "ot_impact": "medium", "basis": "Växelriktare/produktion." },
+    "Kraft": {
+      "group": "Energi",
+      "ot_impact": "high",
+      "basis": "Strömförsörjning/eldistribution."
+    },
+    "UPS": {
+      "group": "Energi",
+      "ot_impact": "high",
+      "basis": "Avbrottsfri kraft till kritisk utrustning."
+    },
+    "Reläskydd": { "group": "Energi", "ot_impact": "high", "basis": "Skyddsreläer i elstationer." },
+    "Mätning": {
+      "group": "Energi",
+      "ot_impact": "medium",
+      "basis": "Energimätning/datainsamling."
+    },
+    "EV-laddning": {
+      "group": "Energi",
+      "ot_impact": "medium",
+      "basis": "Laddinfrastruktur; eleffekt och betalning."
+    },
+    "Tankövervakning": {
+      "group": "Energi",
+      "ot_impact": "high",
+      "basis": "Bränslelager; läckage-/nivålarm."
+    },
+    "NAS": { "group": "IT-stöd", "ot_impact": "medium", "basis": "Backup/återställning." },
+    "IoT": {
+      "group": "IT-stöd",
+      "ot_impact": "low",
+      "basis": "Hem-/byggnadsautomation med begränsad räckvidd."
+    },
+    "Hemautomation": { "group": "IT-stöd", "ot_impact": "low", "basis": "Hemstyrning." },
+    "Medicinsk bild": {
+      "group": "Medicinteknik",
+      "ot_impact": "high",
+      "basis": "Patientdata och klinisk tillgänglighet; K7 krävs."
+    },
+    "Patientövervakning": {
+      "group": "Medicinteknik",
+      "ot_impact": "high",
+      "basis": "Patientsäkerhet; K7 krävs."
+    },
+    "Tjänst": {
+      "group": "Protokoll/tjänst",
+      "ot_impact": "medium",
+      "basis": "Beror på bakomliggande system."
+    }
+  }
+}

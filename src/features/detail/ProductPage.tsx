@@ -1,16 +1,19 @@
 import { Link, useParams } from 'react-router';
 import { useDataset } from '@/data/DatasetContext';
-import { Badge, VerificationBadge } from '@/components/Badge';
+import { Badge, OriginBadge, VerificationBadge } from '@/components/Badge';
 import { Callout, DefList, PageHeader, Section, Unknown, Value } from '@/components/ui';
 import { flagLabel, lifecycleLabel } from '@/lib/labels';
 import {
   ClaimsList,
   ControlsList,
+  CredentialsSection,
   DocumentationList,
   MatchesTable,
   ProvenanceList,
+  RegisterSection,
   ReviewHistory,
   RiskPanel,
+  SetupSection,
   SourcesList,
   UnverifiedWarning,
 } from './shared';
@@ -52,6 +55,12 @@ export function ProductPage() {
             <span>{vendor?.name ?? 'Okänd leverantör'}</span>
             <Badge>{p.category}</Badge>
             <Badge>Produktfamilj</Badge>
+            {p.register ? (
+              <>
+                <OriginBadge origin={p.register.origin} />
+                <span className="font-mono text-xs text-muted">{p.register.register_id}</span>
+              </>
+            ) : null}
             <VerificationBadge status={p.verification_status} />
             <Badge
               tone={
@@ -128,6 +137,10 @@ export function ProductPage() {
             ]}
           />
         </Section>
+
+        <RegisterSection d={d} entry={p} />
+        <CredentialsSection d={d} entry={p} />
+        <SetupSection d={d} entry={p} />
 
         <Section
           title="Typiska OT-risker (från inventeringen)"

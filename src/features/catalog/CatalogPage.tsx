@@ -3,19 +3,35 @@ import { Link } from 'react-router';
 import { useCatalogFilters } from './useCatalogFilters';
 import { useDataset } from '@/data/DatasetContext';
 import { isProduct } from '@/data/loader';
-import { Badge, VerificationBadge } from '@/components/Badge';
+import { Badge, OriginBadge, PocBadge, PwdTypeBadge, VerificationBadge } from '@/components/Badge';
 import { EmptyState, PageHeader } from '@/components/ui';
 import {
   applyFilters,
   countActiveFilters,
   DEFAULT_FILTERS,
   deriveEntry,
+  strongestPoc,
   type CatalogFilters,
 } from '@/lib/filters';
 import { buildSearchDocs, buildSearchIndex, searchIds } from '@/lib/search';
-import { actionLabel, fixLabel, flagLabel, verificationLabel } from '@/lib/labels';
+import {
+  actionLabel,
+  fixLabel,
+  flagLabel,
+  materialTypeLabel,
+  pocStatusLabel,
+  pwdTypeLabel,
+  verificationLabel,
+} from '@/lib/labels';
 import { buildExportBundle, downloadBlob, toCsv } from '@/lib/export';
-import { Category, DataQualityFlag, RecommendedAction, VerificationStatus } from '@schemas/index';
+import {
+  DataQualityFlag,
+  InitialPasswordType,
+  MaterialTypeCode,
+  PublicPocStatus,
+  RecommendedAction,
+  VerificationStatus,
+} from '@schemas/index';
 
 function MultiSelect({
   id,
@@ -63,7 +79,32 @@ export function CatalogPage() {
     .slice()
     .sort((a, b) => a.name.localeCompare(b.name, 'sv'))
     .map((v) => ({ value: v.id, label: v.name }));
-  const categoryOptions = Category.options.map((c) => ({ value: c, label: c }));
+  // Kategori är fri text i registret – alternativen byggs ur datan (med antal)
+  const categoryOptions = useMemo(() => {
+    const counts = new Map<string, number>();
+    for (const e of d.entries) counts.set(e.category, (counts.get(e.category) ?? 0) + 1);
+    return [...counts.entries()]
+      .sort((a, b) => a[0].localeCompare(b[0], 'sv'))
+      .map(([c, n]) => ({ value: c, label: `${c} (${n})` }));
+  }, [d]);
+  const regstatusOptions = useMemo(() => {
+    const counts = new Map<string, number>();
+    for (const e of d.entries) {
+      const st = e.register?.source_status_text;
+      if (st) counts.set(st, (counts.get(st) ?? 0) + 1);
+    }
+    return [...counts.entries()]
+      .sort((a, b) => b[1] - a[1])
+      .map(([c, n]) => ({ value: c, label: `${c} (${n})` }));
+  }, [d]);
+  const pwdTypeOptions = InitialPasswordType.options.map((t) => ({
+    value: t,
+    label: pwdTypeLabel[t],
+  }));
+  const materialOptions = MaterialTypeCode.options.map((t) => ({
+    value: t,
+    label: materialTypeLabel[t],
+  }));
   const verificationOptions = VerificationStatus.options.map((s) => ({
     value: s,
     label: verificationLabel[s],
@@ -102,13 +143,14 @@ export function CatalogPage() {
         <div className="grid gap-3 md:grid-cols-3">
           <div className="md:col-span-2">
             <label htmlFor="q" className="block text-xs font-medium text-muted">
-              Fulltextsökning (namn, leverantör, funktion, risktyp, CVE)
+              Fulltextsökning (namn, register-ID, alias, leverantör, funktion, risktyp, CVE,
+              kontonamn)
             </label>
             <input
               id="q"
               type="search"
               className="input mt-1"
-              placeholder="t.ex. Danfoss, Modbus, CVE-2025-41450"
+              placeholder="t.ex. Danfoss, OT-002, Modbus, CVE-2025-41450"
               value={filters.q}
               onChange={(e) => upd({ q: e.target.value })}
             />
@@ -176,6 +218,71 @@ export function CatalogPage() {
               value={filters.fix}
               onChange={(v) => upd({ fix: v })}
             />
+            <MultiSelect
+              id="f-pwdtype"
+              label="Typ av initiallösenord (registret)"
+              options={pwdTypeOptions}
+              value={filters.pwdType}
+              onChange={(v) => upd({ pwdType: v })}
+            />
+            <MultiSelect
+              id="f-material"
+              label="PoC-materialtyp (hotunderlag)"
+              options={materialOptions}
+              value={filters.material}
+              onChange={(v) => upd({ material: v })}
+            />
+            <MultiSelect
+              id="f-regstatus"
+              label="Källstatus i registret"
+              options={regstatusOptions}
+              value={filters.regstatus}
+              onChange={(v) => upd({ regstatus: v })}
+            />
+            <div>
+              <label htmlFor="f-origin" className="block text-xs font-medium text-muted">
+                Ursprung
+              </label>
+              <select
+                id="f-origin"
+                className="input mt-1"
+                value={filters.origin}
+                onChange={(e) => upd({ origin: e.target.value as CatalogFilters['origin'] })}
+              >
+                <option value="all">Alla poster</option>
+                <option value="original">Original (66-postsinventeringen)</option>
+                <option value="new">Nya (125-postregistret)</option>
+              </select>
+              <label htmlFor="f-poc" className="mt-2 block text-xs font-medium text-muted">
+                PoC-/exploateringsstatus (någon CVE)
+              </label>
+              <select
+                id="f-poc"
+                className="input mt-1"
+                value={filters.poc}
+                onChange={(e) => upd({ poc: e.target.value as CatalogFilters['poc'] })}
+              >
+                <option value="any">Oavsett</option>
+                {PublicPocStatus.options.map((s) => (
+                  <option key={s} value={s}>
+                    {pocStatusLabel[s]}
+                  </option>
+                ))}
+              </select>
+              <label htmlFor="f-docgap" className="mt-2 block text-xs font-medium text-muted">
+                Setupmanual (dokumentationslucka)
+              </label>
+              <select
+                id="f-docgap"
+                className="input mt-1"
+                value={filters.docgap}
+                onChange={(e) => upd({ docgap: e.target.value as CatalogFilters['docgap'] })}
+              >
+                <option value="any">Oavsett</option>
+                <option value="verified">Verifierad setupmanual</option>
+                <option value="unverified">Ej verifierad (portal/säkerhetsguide/saknas)</option>
+              </select>
+            </div>
             <div>
               <label htmlFor="f-cve" className="block text-xs font-medium text-muted">
                 CVE-id (delsträng)
@@ -286,7 +393,8 @@ export function CatalogPage() {
                   <th scope="col">Leverantör</th>
                   <th scope="col">Kategori</th>
                   <th scope="col">Risktyp</th>
-                  <th scope="col">CVE</th>
+                  <th scope="col">CVE / PoC</th>
+                  <th scope="col">Initiallösenord</th>
                   <th scope="col">Åtgärd</th>
                   <th scope="col">Verifiering</th>
                 </tr>
@@ -304,6 +412,14 @@ export function CatalogPage() {
                           {e.name}
                         </Link>
                         <div className="text-xs text-muted">{e.function_text}</div>
+                        <div className="mt-1 flex flex-wrap gap-1">
+                          {der.origin ? <OriginBadge origin={der.origin} /> : null}
+                          {e.register ? (
+                            <span className="font-mono text-xs text-muted">
+                              {e.register.register_id}
+                            </span>
+                          ) : null}
+                        </div>
                       </td>
                       <td>{der.vendorName ?? <span className="text-muted">–</span>}</td>
                       <td>{e.category}</td>
@@ -315,12 +431,28 @@ export function CatalogPage() {
                       <td className="text-xs">
                         {der.cveIds.length ? (
                           <>
-                            {der.cveIds.slice(0, 3).join(', ')}
-                            {der.cveIds.length > 3 ? ` +${der.cveIds.length - 3}` : ''}
-                            {der.kevListed ? <Badge tone="danger">KEV</Badge> : null}
+                            <span className="tabular-nums">{der.cveIds.length} CVE</span>{' '}
+                            <span className="text-muted">
+                              ({der.cveIds.slice(0, 2).join(', ')}
+                              {der.cveIds.length > 2 ? ', …' : ''})
+                            </span>
+                            <div className="mt-1 flex flex-wrap gap-1">
+                              {der.kevListed ? <Badge tone="danger">KEV</Badge> : null}
+                              {(() => {
+                                const p = strongestPoc(der.pocStatuses);
+                                return p ? <PocBadge status={p} short /> : null;
+                              })()}
+                            </div>
                           </>
                         ) : (
                           <span className="text-muted">Ingen verifierad</span>
+                        )}
+                      </td>
+                      <td className="text-xs">
+                        {der.pwdType ? (
+                          <PwdTypeBadge type={der.pwdType} />
+                        ) : (
+                          <span className="text-muted">–</span>
                         )}
                       </td>
                       <td className="text-xs">{actionLabel[e.risk.recommended_action]}</td>
@@ -353,9 +485,15 @@ export function CatalogPage() {
                     {e.risk_summary.type_text ?? 'Risktyp: uppgift saknas'}
                   </p>
                   <div className="mt-2 flex flex-wrap gap-1">
+                    {der.origin ? <OriginBadge origin={der.origin} /> : null}
                     <VerificationBadge status={e.verification_status} />
                     {der.kevListed ? <Badge tone="danger">KEV</Badge> : null}
                     {der.cveIds.length ? <Badge tone="info">{der.cveIds.length} CVE</Badge> : null}
+                    {(() => {
+                      const p = strongestPoc(der.pocStatuses);
+                      return p ? <PocBadge status={p} short /> : null;
+                    })()}
+                    {der.pwdType ? <PwdTypeBadge type={der.pwdType} /> : null}
                     <Badge>{actionLabel[e.risk.recommended_action]}</Badge>
                   </div>
                 </li>

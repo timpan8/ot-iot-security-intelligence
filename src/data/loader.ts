@@ -5,6 +5,7 @@ import {
   Control,
   DATA_FILES,
   Dataset,
+  LinkCheck,
   Manifest,
   Observation,
   ProductFamily,
@@ -19,6 +20,7 @@ import type {
   Claim as TClaim,
   Control as TControl,
   Dataset as TDataset,
+  LinkCheck as TLinkCheck,
   Observation as TObservation,
   ProductFamily as TProductFamily,
   ProductVulnerabilityMatch as TMatch,
@@ -47,6 +49,12 @@ export interface IndexedDataset extends TDataset {
   observationById: Map<string, TObservation>;
   claimsByEntity: Map<string, TClaim[]>;
   entries: CatalogEntry[];
+  /** Registerimport: OT-… → katalogpost */
+  entryByRegisterId: Map<string, CatalogEntry>;
+  linkCheckById: Map<string, TLinkCheck>;
+  linkChecksByUrl: Map<string, TLinkCheck[]>;
+  /** Poster med konto-/lösenordsstatus (credentials ≠ null) */
+  credentialEntries: CatalogEntry[];
 }
 
 export function dataBase(): string {
@@ -84,6 +92,7 @@ export async function loadDataset(fetcher: typeof fetch = fetch): Promise<Indexe
     sources,
     observations,
     claims,
+    link_checks,
   ] = await Promise.all([
     loadFile(DATA_FILES.manifest, Manifest, fetcher),
     loadFile(DATA_FILES.vendors, z.array(Vendor), fetcher),
@@ -96,6 +105,7 @@ export async function loadDataset(fetcher: typeof fetch = fetch): Promise<Indexe
     loadFile(DATA_FILES.sources, z.array(Source), fetcher),
     loadFile(DATA_FILES.observations, z.array(Observation), fetcher),
     loadFile(DATA_FILES.claims, z.array(Claim), fetcher),
+    loadOptionalFile(DATA_FILES.link_checks, z.array(LinkCheck), fetcher),
   ]);
   const dataset: TDataset = Dataset.parse({
     manifest,
@@ -109,8 +119,26 @@ export async function loadDataset(fetcher: typeof fetch = fetch): Promise<Indexe
     sources,
     observations,
     claims,
+    link_checks,
   });
   return indexDataset(dataset);
+}
+
+/** Filer som kan saknas i äldre datauppsättningar (404 ⇒ tom lista). */
+async function loadOptionalFile<T>(
+  file: string,
+  schema: z.ZodType<T[]>,
+  fetcher: typeof fetch,
+): Promise<T[]> {
+  const url = `${dataBase()}${file}`;
+  const res = await fetcher(url, { headers: { Accept: 'application/json' } });
+  if (res.status === 404) return [];
+  if (!res.ok) throw new Error(`Kunde inte hämta ${file} (HTTP ${res.status})`);
+  const json: unknown = await res.json();
+  const parsed = schema.safeParse(json);
+  if (!parsed.success)
+    throw new Error(`Ogiltig data i ${file}: ${parsed.error.issues[0]?.message}`);
+  return parsed.data;
 }
 
 function groupBy<T>(items: T[], key: (t: T) => string | null): Map<string, T[]> {
@@ -148,7 +176,18 @@ export function indexDataset(d: TDataset): IndexedDataset {
     observationById: byId(d.observations),
     claimsByEntity: groupBy(d.claims, (c) => c.entity_id),
     entries,
+    entryByRegisterId: new Map(
+      entries.filter((e) => e.register).map((e) => [e.register!.register_id, e] as const),
+    ),
+    linkCheckById: byId(d.link_checks),
+    linkChecksByUrl: groupBy(d.link_checks, (l) => l.url.trim().replace(/\/+$/, '').toLowerCase()),
+    credentialEntries: entries.filter((e) => e.credentials),
   };
+}
+
+/** Normaliserad URL-nyckel för uppslag i linkChecksByUrl. */
+export function urlKey(url: string): string {
+  return url.trim().replace(/\/+$/, '').toLowerCase();
 }
 
 export function isProduct(e: CatalogEntry): e is TProductFamily {
