@@ -6,6 +6,7 @@ import { useDatasetState } from '@/data/DatasetContext';
 const NAV: Array<{ to: string; label: string }> = [
   { to: '/', label: 'Översikt' },
   { to: '/katalog', label: 'Katalog' },
+  { to: '/oversikt', label: 'Snabböversikt' },
   { to: '/sarbarheter', label: 'Sårbarheter' },
   { to: '/bulletiner', label: 'Bulletiner' },
   { to: '/prioritering', label: 'Prioritering' },

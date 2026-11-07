@@ -83,6 +83,24 @@ test.describe('Röktest – publik kunskapsbas', () => {
     await expect(page.getByText(/bevisar inte att offentlig/).first()).toBeVisible();
   });
 
+  test('snabböversikten samlar allt per produkt och KEV-filtret begränsar urvalet', async ({
+    page,
+  }) => {
+    await page.goto('#/oversikt?sort=severity');
+    await expect(
+      page.getByRole('heading', { level: 1, name: /Snabböversikt per produkt/ }),
+    ).toBeVisible();
+    await expect(page.getByText('125 av 125 poster')).toBeVisible();
+    // Defensiv disciplin: tydlig text om att inga lösenordsvärden finns
+    await expect(page.getByText(/Inga lösenordsvärden finns i underlaget/).first()).toBeVisible();
+    // KEV-filtret ska minska antalet poster
+    await page.getByRole('button', { name: 'KEV' }).click();
+    await expect(page.getByText(/^2 av 125 poster$/)).toBeVisible();
+    // Första kortet (KEV-sorterat) visar en KEV-badge och en CVE-länk
+    await expect(page.getByText('KEV ×1').first()).toBeVisible();
+    await expect(page.getByRole('link', { name: 'CVE-2023-6448' }).first()).toBeVisible();
+  });
+
   test('inga externa länkar utan säkra attribut', async ({ page }) => {
     await page.goto('#/produkt/pf-danfoss-ak-sm-800a');
     const external = page.locator('a[href^="http"]');

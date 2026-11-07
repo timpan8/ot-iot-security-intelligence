@@ -168,6 +168,12 @@ signaler (offentlig PoC, daterat SSVC-råvärde, aktiv exploatering, materialtyp
 sammanställer kontonamn och lösenordstyp per post. Datakvalitetsvyn listar länkkontroller och
 registerkonflikter. Kontrollera faktiska filnamn under `src/features/`.
 
+Vyn `/oversikt` (_Snabböversikt per produkt_) ger en rad per post med allt dokumenterat samlat:
+verifierade CVE-kopplingar med KEV-/PoC-status, dokumenterat standardkonto och typ av
+initiallösenord (aldrig lösenordsvärden), upptäcktsheuristik (Shodan-sökord, för egen auktoriserad
+inventering), PoC-/hotunderlag som evidensnivå och rekommenderad åtgärd. Snabbfilter för CVE, KEV,
+PoC-länk, namngivet konto och svag standarduppgift; sortering KEV/CVSS först.
+
 ## Publicering på GitHub Pages
 
 Sajten publiceras på `https://timpan8.github.io/ot-iot-security-intelligence/`.
