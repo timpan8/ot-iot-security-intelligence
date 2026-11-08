@@ -174,14 +174,33 @@ function CvssCell({ der }: { der: EntryDerived }) {
   );
 }
 
+const RAIL_KEY = 'otsi-filter-rail';
+
 export function CatalogPage() {
   const d = useDataset();
   const [filters, setFilters] = useCatalogFilters();
   const [open, setOpen] = useState<Set<string>>(() => new Set());
   const [allOpen, setAllOpen] = useState(false);
   const [moreFilters, setMoreFilters] = useState(false);
+  // Filterkolumnen kan döljas på stora skärmar så att resultatet får hela bredden.
+  const [railOpen, setRailOpen] = useState<boolean>(() => {
+    try {
+      return localStorage.getItem(RAIL_KEY) !== 'closed';
+    } catch {
+      return true;
+    }
+  });
+  const toggleRail = () =>
+    setRailOpen((open) => {
+      try {
+        localStorage.setItem(RAIL_KEY, open ? 'closed' : 'open');
+      } catch {
+        /* lagring kan vara blockerad */
+      }
+      return !open;
+    });
   // Dossiervyn visar en sida i taget; nytt urval börjar om från första sidan.
-  const CARD_PAGE = 20;
+  const CARD_PAGE = 24;
   const [cardLimit, setCardLimit] = useState(CARD_PAGE);
   const [limitKey, setLimitKey] = useState('');
   const filterKey = serializeFilters(filters).toString();
@@ -315,9 +334,12 @@ export function CatalogPage() {
         }
       />
 
-      <div className="grid grid-cols-1 items-start gap-4 lg:grid-cols-[17rem_minmax(0,1fr)]">
+      <div
+        className={`grid grid-cols-1 items-start gap-4 ${railOpen ? 'lg:grid-cols-[17rem_minmax(0,1fr)]' : ''}`}
+      >
         <form
-          className="card space-y-4 p-3 lg:sticky lg:top-16 lg:max-h-[calc(100vh-5rem)] lg:overflow-y-auto"
+          id="filter-rail"
+          className={`card space-y-4 p-3 lg:sticky lg:top-16 lg:max-h-[calc(100vh-5rem)] lg:overflow-y-auto ${railOpen ? '' : 'lg:hidden'}`}
           role="search"
           aria-label="Filtrera katalogen"
           onSubmit={(e) => e.preventDefault()}
@@ -562,6 +584,16 @@ export function CatalogPage() {
 
         <section aria-label="Resultat" className="min-w-0">
           <div className="mb-2 flex flex-wrap items-center gap-2 text-sm">
+            <button
+              type="button"
+              className="btn hidden lg:inline-flex"
+              aria-expanded={railOpen}
+              aria-controls="filter-rail"
+              onClick={toggleRail}
+            >
+              {railOpen ? 'Dölj filter' : 'Visa filter'}
+              {!railOpen && active > 0 ? ` (${active} aktiva)` : ''}
+            </button>
             <span role="status" aria-live="polite" className="font-medium">
               {rows.length} av {d.entries.length} poster
             </span>
@@ -662,7 +694,7 @@ export function CatalogPage() {
             <DetailTable d={d} rows={rows} derived={derived} />
           ) : filters.view === 'cards' ? (
             <>
-              <ul className="grid grid-cols-1 gap-3 2xl:grid-cols-2">
+              <ul className="grid grid-cols-[repeat(auto-fill,minmax(min(100%,40rem),1fr))] gap-3">
                 {rows.slice(0, cardLimit).map((e) => (
                   <li key={e.id}>
                     <ProductCard d={d} e={e} />

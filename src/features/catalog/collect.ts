@@ -44,3 +44,29 @@ export function collect(d: IndexedDataset, e: CatalogEntry): { cves: CveRow[]; p
   );
   return { cves: sorted, pocs: [...pocs.values()] };
 }
+
+export interface PortGroup {
+  service: string;
+  serviceId: string;
+  ports: Array<{ port: number; transport: string; note: string | null }>;
+}
+
+/** Standardportar via postens protokoll (för ett protokoll: dess egna portar). */
+export function portsFor(d: IndexedDataset, e: CatalogEntry): PortGroup[] {
+  const services = isProduct(e)
+    ? e.protocol_service_ids
+        .map((id) => d.protocolById.get(id))
+        .filter((x): x is NonNullable<typeof x> => Boolean(x))
+    : [e];
+  return services
+    .filter((svc) => svc.default_ports.length > 0)
+    .map((svc) => ({
+      service: svc.name,
+      serviceId: svc.id,
+      ports: svc.default_ports.map((p) => ({
+        port: p.port,
+        transport: p.transport,
+        note: p.note ?? null,
+      })),
+    }));
+}

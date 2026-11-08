@@ -6,7 +6,10 @@ import { SafeLink } from '@/components/SafeLink';
 import { fmtScore } from '@/lib/format';
 import { actionLabel, flagLabel, orMissing } from '@/lib/labels';
 import { strongestPoc, type EntryDerived } from '@/lib/filters';
-import { collect, type CveRow, type PocRow } from './collect';
+import { collect, portsFor, type CveRow, type PocRow, type PortGroup } from './collect';
+import { OwnCredentialsCell } from './OwnCredentials';
+import { collectOwnCreds, importOwnCreds } from './own-creds-store';
+import { downloadBlob } from '@/lib/export';
 
 const CVE_PREVIEW = 5;
 const STORAGE_KEY = 'otsi-detail-columns';
@@ -30,7 +33,9 @@ interface Ctx {
   der: EntryDerived;
   cves: CveRow[];
   pocs: PocRow[];
+  ports: PortGroup[];
   detail: string;
+  credsVersion: number;
 }
 
 interface Column {
@@ -49,26 +54,46 @@ const Missing = ({ children = 'Uppgift saknas' }: { children?: string }) => (
 /** Valbara kolumner. Produktkolumnen visas alltid och ingår inte här. */
 const COLUMNS: Column[] = [
   {
+    key: 'mina',
+    label: 'Mina uppgifter (endast denna enhet)',
+    standard: true,
+    width: 'min-w-[11rem]',
+    cell: ({ e, credsVersion }) => (
+      <OwnCredentialsCell key={credsVersion} id={e.id} name={e.name} />
+    ),
+  },
+  {
     key: 'konto',
     label: 'Standardkonto och initiallösenord',
     standard: true,
-    width: 'min-w-[10rem]',
-    cell: ({ e }) => (
-      <>
-        {e.credentials?.account_name ? (
-          <code className="rounded-[3px] bg-surface-2 px-1 py-0.5">
-            {e.credentials.account_name}
-          </code>
-        ) : (
-          <Missing>{orMissing(e.credentials?.account_name_text, 'Ej verifierat')}</Missing>
-        )}
-        {e.credentials ? (
-          <div className="mt-1">
+    width: 'min-w-[12rem]',
+    cell: ({ e }) =>
+      e.credentials ? (
+        <>
+          <span className="flex flex-wrap items-center gap-x-2 gap-y-1">
+            <span className="whitespace-nowrap">
+              <span className="text-muted">Konto: </span>
+              {e.credentials.account_name ? (
+                <code className="rounded-[3px] bg-surface-2 px-1 py-0.5">
+                  {e.credentials.account_name}
+                </code>
+              ) : (
+                <span className="italic text-muted">
+                  {orMissing(e.credentials.account_name_text, 'ej verifierat')}
+                </span>
+              )}
+            </span>
             <PwdTypeBadge type={e.credentials.initial_password_type} />
-          </div>
-        ) : null}
-      </>
-    ),
+          </span>
+          {e.credentials.change_requirement_text ? (
+            <span className="mt-0.5 block text-xs text-muted">
+              {e.credentials.change_requirement_text}
+            </span>
+          ) : null}
+        </>
+      ) : (
+        <Missing>Ej tillämpligt</Missing>
+      ),
   },
   {
     key: 'sokord',
@@ -80,6 +105,37 @@ const COLUMNS: Column[] = [
         <code className="text-xs [overflow-wrap:anywhere]">{e.discovery_heuristic.query}</code>
       ) : (
         <Missing />
+      ),
+  },
+  {
+    key: 'portar',
+    label: 'Standardportar (via protokoll)',
+    standard: true,
+    width: 'min-w-[10rem]',
+    cell: ({ ports }) =>
+      ports.length === 0 ? (
+        <Missing>Ej angivet</Missing>
+      ) : (
+        <ul className="space-y-0.5 text-xs">
+          {ports.map((g) => (
+            <li key={g.serviceId} className="flex flex-wrap items-baseline gap-x-2">
+              <span className="flex flex-wrap gap-x-1.5">
+                {g.ports.map((p) => (
+                  <span
+                    key={`${p.port}-${p.transport}`}
+                    className="font-mono whitespace-nowrap"
+                    title={p.note ?? undefined}
+                  >
+                    {p.port}/{p.transport}
+                  </span>
+                ))}
+              </span>
+              <Link to={`/protokoll/${g.serviceId}`} className="text-muted">
+                {g.service}
+              </Link>
+            </li>
+          ))}
+        </ul>
       ),
   },
   {
@@ -128,10 +184,10 @@ const COLUMNS: Column[] = [
       ) : (
         <ul className="space-y-1 text-xs">
           {pocs.map((p) => (
-            <li key={p.url}>
-              <span className="font-mono">{p.cve}</span>
-              <span className="block text-muted">{p.material}</span>
-              <SafeLink href={p.url} className="underline">
+            <li key={p.url} className="flex flex-wrap items-baseline gap-x-2">
+              <span className="font-mono whitespace-nowrap">{p.cve}</span>
+              <span className="text-muted">{p.material}</span>
+              <SafeLink href={p.url} className="whitespace-nowrap underline">
                 {host(p.url)}
               </SafeLink>
             </li>
@@ -149,14 +205,14 @@ const COLUMNS: Column[] = [
       return (
         <span className="text-xs">
           {s?.url ? (
-            <SafeLink href={s.url} className="underline [overflow-wrap:anywhere]">
+            <SafeLink href={s.url} className="underline">
               {s.title ?? 'Installationsdokument'}
             </SafeLink>
           ) : (
             <Missing />
           )}
           {s && !s.is_verified_setup_manual ? (
-            <span className="block text-warn">Ej verifierad manual</span>
+            <span className="ml-2 whitespace-nowrap text-warn">Ej verifierad manual</span>
           ) : null}
         </span>
       );
@@ -165,7 +221,7 @@ const COLUMNS: Column[] = [
   {
     key: 'atgard',
     label: 'Rekommenderad åtgärd',
-    standard: false,
+    standard: true,
     width: 'min-w-[9rem]',
     cell: ({ e }) => <span className="text-xs">{actionLabel[e.risk.recommended_action]}</span>,
   },
@@ -189,23 +245,31 @@ const COLUMNS: Column[] = [
     standard: false,
     width: 'min-w-[9rem]',
     cell: ({ e }) => (
-      <dl className="grid grid-cols-[auto_auto] items-center justify-start gap-x-2 gap-y-0.5 text-xs">
-        <dt className="text-muted">Hot</dt>
-        <dd>
-          <FactorBadge level={e.risk.threat.level} />
-        </dd>
-        <dt className="text-muted">Allvarlighet</dt>
-        <dd>
-          <FactorBadge level={e.risk.severity.level} />
-        </dd>
-        <dt className="text-muted">OT-konsekvens</dt>
-        <dd>
-          <FactorBadge level={e.risk.ot_impact.level} />
-        </dd>
-        <dt className="text-muted">Exponering</dt>
-        <dd>
-          <FactorBadge level={e.risk.exposure.level} />
-        </dd>
+      <dl className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs [&>div]:flex [&>div]:items-center [&>div]:gap-1 [&>div]:whitespace-nowrap">
+        <div>
+          <dt className="text-muted">Hot</dt>
+          <dd>
+            <FactorBadge level={e.risk.threat.level} />
+          </dd>
+        </div>
+        <div>
+          <dt className="text-muted">Allvarlighet</dt>
+          <dd>
+            <FactorBadge level={e.risk.severity.level} />
+          </dd>
+        </div>
+        <div>
+          <dt className="text-muted">OT-konsekvens</dt>
+          <dd>
+            <FactorBadge level={e.risk.ot_impact.level} />
+          </dd>
+        </div>
+        <div>
+          <dt className="text-muted">Exponering</dt>
+          <dd>
+            <FactorBadge level={e.risk.exposure.level} />
+          </dd>
+        </div>
       </dl>
     ),
   },
@@ -266,13 +330,44 @@ const COLUMNS: Column[] = [
 const STANDARD = COLUMNS.filter((c) => c.standard).map((c) => c.key);
 const KNOWN = new Set(COLUMNS.map((c) => c.key));
 
+/** Kolumner som fanns innan valet började sparas med kolumnlistan (första versionen). */
+const LEGACY_KNOWN = [
+  'konto',
+  'sokord',
+  'cve',
+  'poc',
+  'setup',
+  'atgard',
+  'cvss',
+  'risk',
+  'risktyp',
+  'verifiering',
+  'luckor',
+  'register',
+];
+
+/**
+ * Läser sparat kolumnval. Standardkolumner som tillkommit efter att valet
+ * sparades läggs till, så att nya kolumner syns även för den som anpassat tabellen.
+ */
 function readColumns(): string[] {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) return STANDARD;
     const v = JSON.parse(raw) as unknown;
-    if (!Array.isArray(v)) return STANDARD;
-    return v.filter((k): k is string => typeof k === 'string' && KNOWN.has(k));
+    let shown: unknown[];
+    let known: unknown[];
+    if (Array.isArray(v)) {
+      shown = v;
+      known = LEGACY_KNOWN;
+    } else if (v && typeof v === 'object' && Array.isArray((v as { shown?: unknown }).shown)) {
+      shown = (v as { shown: unknown[] }).shown;
+      const k = (v as { known?: unknown }).known;
+      known = Array.isArray(k) ? k : LEGACY_KNOWN;
+    } else return STANDARD;
+    const out = shown.filter((k): k is string => typeof k === 'string' && KNOWN.has(k));
+    for (const k of STANDARD) if (!known.includes(k) && !out.includes(k)) out.push(k);
+    return out;
   } catch {
     return STANDARD;
   }
@@ -280,7 +375,7 @@ function readColumns(): string[] {
 
 function storeColumns(cols: string[]): void {
   try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(cols));
+    localStorage.setItem(STORAGE_KEY, JSON.stringify({ shown: cols, known: [...KNOWN] }));
   } catch {
     /* lagring kan vara blockerad – valet gäller då bara denna visning */
   }
@@ -365,6 +460,71 @@ function ColumnPicker({
   );
 }
 
+/** Export/import av egna uppgifter till en lokal fil – aldrig till servern eller GitHub. */
+function OwnCredsTools({ onImported }: { onImported: () => void }) {
+  const [msg, setMsg] = useState<string | null>(null);
+
+  const doExport = () => {
+    const data = collectOwnCreds();
+    const n = Object.keys(data).length;
+    if (n === 0) {
+      setMsg('Du har inga egna uppgifter att exportera än.');
+      return;
+    }
+    const stamp = new Date().toISOString().slice(0, 10);
+    downloadBlob(
+      `mina-ot-uppgifter-${stamp}.json`,
+      JSON.stringify(data, null, 2),
+      'application/json',
+    );
+    setMsg(`Exporterade ${n} poster till en fil på den här datorn.`);
+  };
+
+  const onFile = (file: File) => {
+    const reader = new FileReader();
+    reader.onload = () => {
+      try {
+        const data = JSON.parse(String(reader.result));
+        const replace = window.confirm(
+          'Ersätt dina nuvarande egna uppgifter med filens innehåll?\n\nOK = ersätt allt, Avbryt = slå ihop (filens poster skriver över samma system).',
+        );
+        const n = importOwnCreds(data, replace);
+        setMsg(`Importerade ${n} poster från filen.`);
+        onImported();
+      } catch {
+        setMsg('Kunde inte läsa filen. Den ska vara en JSON-fil exporterad härifrån.');
+      }
+    };
+    reader.readAsText(file);
+  };
+
+  return (
+    <div className="flex flex-wrap items-center gap-2">
+      {msg ? (
+        <span role="status" className="text-xs text-muted">
+          {msg}
+        </span>
+      ) : null}
+      <button type="button" className="btn" onClick={doExport}>
+        Exportera mina uppgifter
+      </button>
+      <label className="btn cursor-pointer">
+        Importera
+        <input
+          type="file"
+          accept="application/json,.json"
+          className="sr-only"
+          onChange={(e) => {
+            const f = e.target.files?.[0];
+            if (f) onFile(f);
+            e.target.value = '';
+          }}
+        />
+      </label>
+    </div>
+  );
+}
+
 /**
  * Samma fält som dossiervyn, en rad per produkt: konto och lösenordstyp
  * (aldrig värde), sökord för egen inventering, CVE, PoC-underlag och setup.
@@ -380,6 +540,7 @@ export function DetailTable({
   derived: Map<string, EntryDerived>;
 }) {
   const [shown, setShown] = useState<string[]>(readColumns);
+  const [credsVersion, setCredsVersion] = useState(0);
   const update = (next: string[]) => {
     setShown(next);
     storeColumns(next);
@@ -389,8 +550,15 @@ export function DetailTable({
 
   return (
     <>
-      <div className="mb-2 flex justify-end">
-        <ColumnPicker shown={shown} onChange={update} />
+      <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
+        <p className="text-xs text-muted">
+          Kolumnen <strong>Mina uppgifter</strong> sparas bara i din webbläsare på den här enheten.
+          Export och import går mot en lokal fil – inget laddas upp till sajten eller GitHub.
+        </p>
+        <div className="flex flex-wrap items-center gap-2">
+          <OwnCredsTools onImported={() => setCredsVersion((v) => v + 1)} />
+          <ColumnPicker shown={shown} onChange={update} />
+        </div>
       </div>
       <div className="card overflow-x-auto">
         <table className="table">
@@ -410,23 +578,36 @@ export function DetailTable({
               const { cves, pocs } = collect(d, e);
               const detail = isProduct(e) ? `/produkt/${e.id}` : `/protokoll/${e.id}`;
               const poc = strongestPoc(der.pocStatuses);
-              const ctx: Ctx = { e, der, cves, pocs, detail };
+              const ctx: Ctx = {
+                e,
+                der,
+                cves,
+                pocs,
+                ports: portsFor(d, e),
+                detail,
+                credsVersion,
+              };
               return (
                 <tr key={e.id}>
-                  <td className={`min-w-[11rem] ${alarm(der)}`}>
-                    <Link to={detail} className="font-medium">
-                      {e.name}
-                    </Link>
-                    <div className="text-xs text-muted">
-                      {der.vendorName ?? 'Protokoll/tjänst'}, {e.category}
-                    </div>
-                    {showActionUnderName ? (
-                      <div className="mt-1 text-xs">{actionLabel[e.risk.recommended_action]}</div>
-                    ) : null}
-                    <div className="mt-1 flex flex-wrap gap-1">
+                  <td className={`min-w-[16rem] ${alarm(der)}`}>
+                    <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+                      <Link to={detail} className="font-medium">
+                        {e.name}
+                      </Link>
                       {der.kevCount > 0 ? <Badge tone="danger">KEV ×{der.kevCount}</Badge> : null}
                       {poc === 'active_reported' || poc === 'poc_reported' ? (
-                        <PocBadge status={poc} short />
+                        <span className="whitespace-nowrap">
+                          <PocBadge status={poc} short />
+                        </span>
+                      ) : null}
+                    </div>
+                    <div className="text-xs text-muted">
+                      {der.vendorName ?? 'Protokoll/tjänst'}, {e.category}
+                      {showActionUnderName ? (
+                        <span className="text-text">
+                          {' – '}
+                          {actionLabel[e.risk.recommended_action]}
+                        </span>
                       ) : null}
                     </div>
                   </td>

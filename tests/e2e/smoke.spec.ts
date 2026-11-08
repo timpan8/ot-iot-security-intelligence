@@ -167,6 +167,44 @@ test.describe('Röktest – publik kunskapsbas', () => {
     ).toBeVisible();
   });
 
+  test('detaljtabellen har kolumner för konto och standardportar', async ({ page }) => {
+    await page.goto('#/katalog?view=fields');
+    const table = page.getByRole('table');
+    await expect(
+      table.getByRole('columnheader', { name: 'Standardkonto och initiallösenord' }),
+    ).toBeVisible();
+    await expect(
+      table.getByRole('columnheader', { name: 'Standardportar (via protokoll)' }),
+    ).toBeVisible();
+    // En post med känt protokoll visar sin port
+    await page.getByLabel(/Fulltextsökning/).fill('Danfoss AK-SM');
+    await expect(table.getByText('502/tcp').first()).toBeVisible();
+  });
+
+  test('egen konto-/lösenordskolumn sparas lokalt och överlever omladdning', async ({ page }) => {
+    await page.goto('#/katalog?view=fields');
+    await page.getByLabel(/Fulltextsökning/).fill('Danfoss AK-SM');
+    const row = page.getByRole('table').locator('tbody tr').first();
+    await row.getByRole('button', { name: /Lägg till egna inloggningsuppgifter/ }).click();
+    await row.getByPlaceholder('Användarnamn').fill('driftkonto');
+    await row.getByPlaceholder('Lösenord').fill('ange-eget');
+    await row.getByRole('button', { name: 'Spara' }).click();
+    await expect(row.getByText('driftkonto')).toBeVisible();
+    await expect(row.getByText('ange-eget')).toBeVisible();
+    // Ligger kvar efter omladdning (localStorage, bara denna enhet)
+    await page.reload();
+    await page.getByLabel(/Fulltextsökning/).fill('Danfoss AK-SM');
+    const row2 = page.getByRole('table').locator('tbody tr').first();
+    await expect(row2.getByText('driftkonto')).toBeVisible();
+    await expect(row2.getByText('ange-eget')).toBeVisible();
+    // Städa upp så testdata inte ligger kvar
+    await row2.getByRole('button', { name: /Redigera egna inloggningsuppgifter/ }).click();
+    await row2.getByRole('button', { name: 'Ta bort' }).click();
+    await expect(
+      row2.getByRole('button', { name: /Lägg till egna inloggningsuppgifter/ }),
+    ).toBeVisible();
+  });
+
   test('inga sidor blir bredare än skärmen på mobil', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     for (const r of ['#/bulletiner', '#/konton', '#/atgarder', '#/produkt/pf-abb-aspect']) {
