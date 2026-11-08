@@ -7,6 +7,9 @@ import { fmtScore } from '@/lib/format';
 import { actionLabel, flagLabel, orMissing } from '@/lib/labels';
 import { strongestPoc, type EntryDerived } from '@/lib/filters';
 import { collect, portsFor, type CveRow, type PocRow, type PortGroup } from './collect';
+import { OwnCredentialsCell } from './OwnCredentials';
+import { collectOwnCreds, importOwnCreds } from './own-creds-store';
+import { downloadBlob } from '@/lib/export';
 
 const CVE_PREVIEW = 5;
 const STORAGE_KEY = 'otsi-detail-columns';
@@ -32,6 +35,7 @@ interface Ctx {
   pocs: PocRow[];
   ports: PortGroup[];
   detail: string;
+  credsVersion: number;
 }
 
 interface Column {
@@ -49,6 +53,15 @@ const Missing = ({ children = 'Uppgift saknas' }: { children?: string }) => (
 
 /** Valbara kolumner. Produktkolumnen visas alltid och ingår inte här. */
 const COLUMNS: Column[] = [
+  {
+    key: 'mina',
+    label: 'Mina uppgifter (endast denna enhet)',
+    standard: true,
+    width: 'min-w-[11rem]',
+    cell: ({ e, credsVersion }) => (
+      <OwnCredentialsCell key={credsVersion} id={e.id} name={e.name} />
+    ),
+  },
   {
     key: 'konto',
     label: 'Standardkonto och initiallösenord',
@@ -447,6 +460,71 @@ function ColumnPicker({
   );
 }
 
+/** Export/import av egna uppgifter till en lokal fil – aldrig till servern eller GitHub. */
+function OwnCredsTools({ onImported }: { onImported: () => void }) {
+  const [msg, setMsg] = useState<string | null>(null);
+
+  const doExport = () => {
+    const data = collectOwnCreds();
+    const n = Object.keys(data).length;
+    if (n === 0) {
+      setMsg('Du har inga egna uppgifter att exportera än.');
+      return;
+    }
+    const stamp = new Date().toISOString().slice(0, 10);
+    downloadBlob(
+      `mina-ot-uppgifter-${stamp}.json`,
+      JSON.stringify(data, null, 2),
+      'application/json',
+    );
+    setMsg(`Exporterade ${n} poster till en fil på den här datorn.`);
+  };
+
+  const onFile = (file: File) => {
+    const reader = new FileReader();
+    reader.onload = () => {
+      try {
+        const data = JSON.parse(String(reader.result));
+        const replace = window.confirm(
+          'Ersätt dina nuvarande egna uppgifter med filens innehåll?\n\nOK = ersätt allt, Avbryt = slå ihop (filens poster skriver över samma system).',
+        );
+        const n = importOwnCreds(data, replace);
+        setMsg(`Importerade ${n} poster från filen.`);
+        onImported();
+      } catch {
+        setMsg('Kunde inte läsa filen. Den ska vara en JSON-fil exporterad härifrån.');
+      }
+    };
+    reader.readAsText(file);
+  };
+
+  return (
+    <div className="flex flex-wrap items-center gap-2">
+      {msg ? (
+        <span role="status" className="text-xs text-muted">
+          {msg}
+        </span>
+      ) : null}
+      <button type="button" className="btn" onClick={doExport}>
+        Exportera mina uppgifter
+      </button>
+      <label className="btn cursor-pointer">
+        Importera
+        <input
+          type="file"
+          accept="application/json,.json"
+          className="sr-only"
+          onChange={(e) => {
+            const f = e.target.files?.[0];
+            if (f) onFile(f);
+            e.target.value = '';
+          }}
+        />
+      </label>
+    </div>
+  );
+}
+
 /**
  * Samma fält som dossiervyn, en rad per produkt: konto och lösenordstyp
  * (aldrig värde), sökord för egen inventering, CVE, PoC-underlag och setup.
@@ -462,6 +540,7 @@ export function DetailTable({
   derived: Map<string, EntryDerived>;
 }) {
   const [shown, setShown] = useState<string[]>(readColumns);
+  const [credsVersion, setCredsVersion] = useState(0);
   const update = (next: string[]) => {
     setShown(next);
     storeColumns(next);
@@ -471,8 +550,15 @@ export function DetailTable({
 
   return (
     <>
-      <div className="mb-2 flex justify-end">
-        <ColumnPicker shown={shown} onChange={update} />
+      <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
+        <p className="text-xs text-muted">
+          Kolumnen <strong>Mina uppgifter</strong> sparas bara i din webbläsare på den här enheten.
+          Export och import går mot en lokal fil – inget laddas upp till sajten eller GitHub.
+        </p>
+        <div className="flex flex-wrap items-center gap-2">
+          <OwnCredsTools onImported={() => setCredsVersion((v) => v + 1)} />
+          <ColumnPicker shown={shown} onChange={update} />
+        </div>
       </div>
       <div className="card overflow-x-auto">
         <table className="table">
@@ -492,7 +578,15 @@ export function DetailTable({
               const { cves, pocs } = collect(d, e);
               const detail = isProduct(e) ? `/produkt/${e.id}` : `/protokoll/${e.id}`;
               const poc = strongestPoc(der.pocStatuses);
-              const ctx: Ctx = { e, der, cves, pocs, ports: portsFor(d, e), detail };
+              const ctx: Ctx = {
+                e,
+                der,
+                cves,
+                pocs,
+                ports: portsFor(d, e),
+                detail,
+                credsVersion,
+              };
               return (
                 <tr key={e.id}>
                   <td className={`min-w-[16rem] ${alarm(der)}`}>
