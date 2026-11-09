@@ -407,7 +407,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.045 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.045 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -1171,7 +1171,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.037 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.037 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -1957,7 +1957,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.003 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.003 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -2328,7 +2328,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.005 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.005 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -3758,7 +3758,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.002 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.002 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -7104,7 +7104,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.002 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.002 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -15204,7 +15204,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.002 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.002 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -18500,7 +18500,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.190 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.190 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -19020,7 +19020,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.005 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.005 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -19517,7 +19517,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.010 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.010 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -20016,7 +20016,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.006 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.006 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -20514,7 +20514,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.006 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.006 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -21018,7 +21018,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.221 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.221 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -21522,7 +21522,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.072 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.072 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -22030,7 +22030,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.020 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.020 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -22533,7 +22533,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.003 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.003 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -23033,7 +23033,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.006 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.006 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -23533,7 +23533,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.003 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.003 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -24034,7 +24034,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.004 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.004 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -24534,7 +24534,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.004 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.004 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -25033,7 +25033,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.009 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.009 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -26098,7 +26098,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.935 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.935 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -26666,7 +26666,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.234 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.234 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -27167,7 +27167,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.005 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.005 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -27668,7 +27668,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.003 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.003 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -28168,7 +28168,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.014 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.014 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -28669,7 +28669,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.003 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.003 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -29166,7 +29166,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.002 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.002 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -29674,7 +29674,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.005 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.005 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -30183,7 +30183,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.003 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.003 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -30680,7 +30680,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.002 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.002 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -31181,7 +31181,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.005 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.005 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -31684,7 +31684,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.004 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.004 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -32187,7 +32187,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.004 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.004 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -32699,7 +32699,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.005 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.005 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -33217,7 +33217,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.009 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.009 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -33721,7 +33721,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.002 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.002 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -34226,7 +34226,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.995 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.995 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -34731,7 +34731,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.005 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.005 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -35268,7 +35268,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.935 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.935 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -35806,7 +35806,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.007 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.007 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -36307,7 +36307,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.003 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.003 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -36813,7 +36813,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.010 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.010 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -37316,7 +37316,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.004 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.004 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -37814,7 +37814,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.003 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.003 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -38310,7 +38310,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.004 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.004 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -38806,7 +38806,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.535 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.535 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -39305,7 +39305,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.020 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.020 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -39805,7 +39805,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.005 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.005 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -40307,7 +40307,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.287 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.287 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -40803,7 +40803,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.007 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.007 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -41301,7 +41301,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.004 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.004 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -41797,7 +41797,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.003 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.003 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -42295,7 +42295,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.010 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.010 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -42792,7 +42792,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.012 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.012 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -43291,7 +43291,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.008 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.008 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -43788,7 +43788,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.007 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.007 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -44288,7 +44288,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.006 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.006 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -44791,7 +44791,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.007 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.007 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -45291,7 +45291,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.006 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.006 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -45794,7 +45794,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.005 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.005 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -46303,7 +46303,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.008 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.008 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -46805,7 +46805,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.025 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.025 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -47307,7 +47307,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.004 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.004 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
@@ -47809,7 +47809,7 @@
     "risk": {
       "threat": {
         "level": "medium",
-        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.005 (2026-11-07). EPSS är en sannolikhetsindikator, inte bevis.",
+        "basis": "Verifierade CVE-kopplingar utan KEV-notering. Högsta EPSS 0.005 (2026-11-08). EPSS är en sannolikhetsindikator, inte bevis.",
         "source_ids": [
           "src-first-epss",
           "src-cisa-kev"
