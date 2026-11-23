@@ -1,8 +1,8 @@
 {
   "title": "CISA Catalog of Known Exploited Vulnerabilities",
-  "catalogVersion": "2026.11.06",
-  "dateReleased": "2026-11-06T19:44:45.1797Z",
-  "count_total": 1769,
+  "catalogVersion": "2026.11.23",
+  "dateReleased": "2026-11-23T12:54:37.9646Z",
+  "count_total": 1790,
   "checked_cve_ids": [
     "CVE-1999-0524",
     "CVE-2012-4929",
@@ -352,7 +352,7 @@
     "CVE-2026-3037",
     "CVE-2026-34223"
   ],
-  "fetched_at": "2026-11-07T22:26:35.275Z",
+  "fetched_at": "2026-11-23T15:56:39.574Z",
   "vulnerabilities": [
     {
       "cveID": "CVE-2023-6448",
